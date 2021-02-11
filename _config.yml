@@ -21,7 +21,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://foundations.projectpythia.org  # Online location of your book
+  url: https://projectpythia.github.io/pythia-foundations  # Online location of your book
   #path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
