@@ -12,6 +12,8 @@
   chapters:
   - file: foundations/overview
   - file: foundations/basic-python
+    sections:
+      - file: foundations/Hello
   - file: foundations/jupyter
   - file: foundations/markdown
   - file: foundations/conda
