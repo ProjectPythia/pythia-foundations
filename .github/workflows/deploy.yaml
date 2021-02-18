@@ -16,6 +16,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
     if: github.repository == 'ProjectPythia/pythia-foundations'
     steps:
       - uses: actions/checkout@v2 
@@ -32,19 +35,20 @@ jobs:
         run: |
           jupyter-book build .
 
-      - name: Docs Preview
-        uses: nwtgck/actions-netlify@v1.1.13
+      - name: Zip-book
+        run: |
+          set -x
+          set -e
+
+          if [ -f book.zip ]; then
+              rm -rf book.zip
+          fi
+          zip -r book.zip ./_build/html
+
+      - uses: actions/upload-artifact@v2
         with:
-          publish-dir: ./_build/html
-          production-branch: main
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "Deploy from GitHub Actions"
-          enable-pull-request-comment: true
-          enable-commit-comment: false
-          overwrites-pull-request-comment: true
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          name: book-zip
+          path: ./book.zip
       # Push the book's HTML to github-pages
       - name: Deploy to GitHub pages
         if: github.ref == 'refs/heads/main'

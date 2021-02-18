@@ -1,0 +1,42 @@
+name: preview-book
+on:
+  workflow_run:
+    workflows:
+      - deploy-book
+    types: 
+      - completed
+jobs:
+  deploy:
+    if: github.repository == 'ProjectPythia/pythia-foundations'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download Artifact Book
+        uses: dawidd6/action-download-artifact@v2.9.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: deploy.yaml
+          run_id: ${{ github.event.workflow_run.id }}
+          name: book-zip
+      - name: Unzip book
+        run: |
+          rm -rf ./_build/html
+          unzip book.zip
+          rm -f book.zip
+      - name: Book Preview
+        uses: nwtgck/actions-netlify@v1.1.13
+        with:
+          publish-dir: ./_build/html
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: true
+          enable-commit-comment: false
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+     
