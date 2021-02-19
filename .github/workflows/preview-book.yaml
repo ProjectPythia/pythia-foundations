@@ -3,7 +3,7 @@ on:
   workflow_run:
     workflows:
       - deploy-book
-    types: 
+    types:
       - completed
 jobs:
   deploy:
@@ -28,7 +28,7 @@ jobs:
           rm -f book.zip
       - name: Deploy to Netlify
         id: netlify
-        uses: nwtgck/actions-netlify@v1.1.5
+        uses: nwtgck/actions-netlify@v1.1.13
         with:
           publish-dir: ./_build/html
           production-deploy: false
@@ -37,10 +37,9 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 5
       - name: Jupyter Book Preview
         uses: ProjectPythia/actions/comment-netlify-preview-in-pr@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy_url: "${{ steps.netlify.outputs.deploy-url }}"
-
-     
+          deploy_url: '${{ steps.netlify.outputs.deploy-url }}'
