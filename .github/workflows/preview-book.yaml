@@ -42,4 +42,4 @@ jobs:
         uses: ProjectPythia/actions/comment-netlify-preview-in-pr@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy_url: ${{ steps.netlify.outputs.deploy-url }}
+          deploy-url: ${{ steps.netlify.outputs.deploy-url }}
