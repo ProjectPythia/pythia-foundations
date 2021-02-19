@@ -3,7 +3,7 @@ on:
   workflow_run:
     workflows:
       - deploy-book
-    types: 
+    types:
       - completed
 jobs:
   deploy:
@@ -42,7 +42,4 @@ jobs:
         uses: ProjectPythia/actions/comment-netlify-preview-in-pr@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy_url: "${{ steps.netlify.outputs.deploy-url }}"
-        
-
-     
+          deploy_url: ${{ steps.netlify.outputs.deploy-url }}

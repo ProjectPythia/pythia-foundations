@@ -5,30 +5,30 @@
 
 - part: Preamble
   chapters:
-  - file: preamble/how-to-use
-  - file: preamble/how-to-contribute
+    - file: preamble/how-to-use
+    - file: preamble/how-to-contribute
 
 - part: Foundational skills
   chapters:
-  - file: foundations/overview
-  - file: foundations/basic-python
-    sections:
-      - file: foundations/Hello
-  - file: foundations/jupyter
-  - file: foundations/markdown
-  - file: foundations/conda
-  - file: foundations/version-control
-    sections:
-      - file: foundations/git
-      - file: foundations/github
+    - file: foundations/overview
+    - file: foundations/basic-python
+      sections:
+        - file: foundations/Hello
+    - file: foundations/jupyter
+    - file: foundations/markdown
+    - file: foundations/conda
+    - file: foundations/version-control
+      sections:
+        - file: foundations/git
+        - file: foundations/github
 
 - part: Core Scientific Python packages
   chapters:
-  - file: core/overview
-  - file: core/numpy
-  - file: core/matplotlib
-  - file: core/cartopy
-  - file: core/datetime
-  - file: core/pandas
-  - file: core/data-formats
-  - file: core/xarray
+    - file: core/overview
+    - file: core/numpy
+    - file: core/matplotlib
+    - file: core/cartopy
+    - file: core/datetime
+    - file: core/pandas
+    - file: core/data-formats
+    - file: core/xarray

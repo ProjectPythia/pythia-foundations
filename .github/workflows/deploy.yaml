@@ -3,8 +3,8 @@ name: deploy-book
 # Only run this when the master branch changes
 on:
   push:
-  pull_request:
-  workflow_dispatch:
+    branches:
+      - main
     # If your git repository has the Jupyter Book within some-subfolder next to
     # unrelated files, you can make this run only if a file within that specific
     # folder has been modified.
@@ -21,37 +21,25 @@ jobs:
         shell: bash
     if: github.repository == 'ProjectPythia/pythia-foundations'
     steps:
-      - uses: actions/checkout@v2 
+      - uses: actions/checkout@v2
+
+      # Install dependencies
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
         with:
           python-version: 3.7
+
       - name: Install dependencies
         run: |
-          python -m pip install -r requirements.txt
+          pip install -r requirements.txt
 
       # Build the book
       - name: Build the book
         run: |
           jupyter-book build .
 
-      - name: Zip-book
-        run: |
-          set -x
-          set -e
-
-          if [ -f book.zip ]; then
-              rm -rf book.zip
-          fi
-          zip -r book.zip ./_build/html
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: book-zip
-          path: ./book.zip
       # Push the book's HTML to github-pages
-      - name: Deploy to GitHub pages
-        if: github.ref == 'refs/heads/main'
+      - name: GitHub Pages action
         uses: peaceiris/actions-gh-pages@v3.6.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
