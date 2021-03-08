@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        shell: bash
+        shell: bash -l {0}
     if: github.repository == 'ProjectPythia/pythia-foundations'
     steps:
       - name: Cancel previous runs
@@ -36,7 +36,6 @@ jobs:
           environment-file: environment.yml
           mamba-version: '*'
           use-mamba: true
-          miniforge-variant: Mambaforge
 
       # Build the book
       - name: Build the book
