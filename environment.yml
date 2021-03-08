@@ -1,0 +1,9 @@
+name: pythia-book-dev
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - jupyter-book
+  - matplotlib
+  - numpy
+  - pre-commmit
