@@ -6,4 +6,4 @@ dependencies:
   - jupyter-book
   - matplotlib
   - numpy
-  - pre-commmit
+  - pre-commit
