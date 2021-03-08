@@ -5,7 +5,6 @@ Brought to you by [Project Pythia](https://projectpythia.org), this collection w
 All code is licensed under Apache-2.0. All other content is licensed
 under Creative Commons BY 4.0 [(CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
-
 ```{note}
 This content is under construction!
 ```
