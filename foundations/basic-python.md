@@ -122,147 +122,146 @@ In building your first Python script we will set up our workspace and read a `.t
 
 5. And create a data directory:
 
-```
-mkdir data
-```
+   ```
+   mkdir data
+   ```
 
 6. Go into the data directory:
-   `
 
-```
-$ cd data
-```
+   ```
+   $ cd data
+   ```
 
 7. Download sample data from the CU Boulder weather station:
 
-```
-$ curl -kO https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt
-```
+   ```
+   $ curl -kO https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt
+   ```
 
-This weather station is a Davis Instruments wireless Vantage Pro2 located on the CU-Boulder east campus at the SEEC building (40.01 N, 05.24 W, 5250 ft elevation). The station is monitored by the Atmospheric and Oceanic Sciences (ATOC) department and is part of the larger University of Colorado ATOC Weather Network.
+   This weather station is a Davis Instruments wireless Vantage Pro2 located on the CU-Boulder east campus at the SEEC building (40.01 N, 05.24 W, 5250 ft elevation). The station is monitored by the Atmospheric and Oceanic Sciences (ATOC) department and is part of the larger University of Colorado ATOC Weather Network.
 
-7. Go back to the top-level directory:
+8. Go back to the top-level directory:
 
-```
-$ cd ..
-```
+   ```
+   $ cd ..
+   ```
 
-8. And now that you've set up our workspace, create a blank Python script, called `mysci.py`:
+9. And now that you've set up our workspace, create a blank Python script, called `mysci.py`:
 
-```
-$ touch mysci.py
-```
+   ```
+   $ touch mysci.py
+   ```
 
-If you are working on a Windows machine it is possible that `touch` will not be recognized as an internal or external command. If this is the case, run `conda install m2-base` to enable unix commands such as `touch`.
+   If you are working on a Windows machine it is possible that `touch` will not be recognized as an internal or external command. If this is the case, run `conda install m2-base` to enable unix commands such as `touch`.
 
-9. Edit the `mysci.py` file using nano, vim, or your favorite text editor to include the classic first command - printing, "Hello, world!".
+10. Edit the `mysci.py` file using nano, vim, or your favorite text editor to include the classic first command - printing, "Hello, world!".
 
-```python
-print("Hello, world!")
-```
+    ```python
+    print("Hello, world!")
+    ```
 
-On a Windows machine, it is possible `nano` or `vim` are not recognized as text editors within your terminal. In this case simply try to run `mysci.py` to open a notepad editor.
+    On a Windows machine, it is possible `nano` or `vim` are not recognized as text editors within your terminal. In this case simply try to run `mysci.py` to open a notepad editor.
 
-10. To run a Python script from the command line type, "python" and then the name of your script:
+11. To run a Python script from the command line type, "python" and then the name of your script:
 
-```
-$ python mysci.py
-```
+    ```
+    $ python mysci.py
+    ```
 
-11. You probably won't need to run your Hello World script again, so delete the `print("Hello, world!")` line and start over with something more useful - we'll read the first 4 lines from our datafile.
+12. You probably won't need to run your Hello World script again, so delete the `print("Hello, world!")` line and start over with something more useful - we'll read the first 4 lines from our datafile.
 
-Change the `mysci.py` script to read:
+    Change the `mysci.py` script to read:
 
-```python
-# Read the data file
-filename = "data/wxobs20170821.txt"
-datafile = open(filename, 'r')
+    ```python
+    # Read the data file
+    filename = "data/wxobs20170821.txt"
+    datafile = open(filename, 'r')
 
-print(datafile.readline())
-print(datafile.readline())
-print(datafile.readline())
-print(datafile.readline())
+    print(datafile.readline())
+    print(datafile.readline())
+    print(datafile.readline())
+    print(datafile.readline())
 
-datafile.close()
+    datafile.close()
 
-```
+    ```
 
-First create a variable for your datafile name, which is a string - this can be in single or double quotes.
+    First create a variable for your datafile name, which is a string - this can be in single or double quotes.
 
-Then create a variable associated with the opened file, here it is called `datafile`.
+    Then create a variable associated with the opened file, here it is called `datafile`.
 
-The `'r'` argument in the open command indicates that we are opening the file for reading capabilities. Other input arguments for open include `'w'`, for example, if you wanted to write to the file.
+    The `'r'` argument in the open command indicates that we are opening the file for reading capabilities. Other input arguments for open include `'w'`, for example, if you wanted to write to the file.
 
-The readline command moves through the open file, always reading the next line.
+    The readline command moves through the open file, always reading the next line.
 
-And remember to close your datafile.
+    And remember to close your datafile.
 
-Comments in Python are indicated with a hash, as you can see in the first line `# Read the data file`. Comments are ignored by the interpreter.
+    Comments in Python are indicated with a hash, as you can see in the first line `# Read the data file`. Comments are ignored by the interpreter.
 
-12. Run your script by typing:
+13. Run your script by typing:
 
-```
-$ python mysci.py
-```
+    ```
+    $ python mysci.py
+    ```
 
-Testing of your script with `python mysci.py` should be done every time you wish to execute the script. This will no longer be specified as a unique step in between every change to our script.
+    Testing of your script with `python mysci.py` should be done every time you wish to execute the script. This will no longer be specified as a unique step in between every change to our script.
 
-13. Change the `mysci.py` script to read your whole data file:
+14. Change the `mysci.py` script to read your whole data file:
 
-```python
-# Read the data file
-filename = "data/wxobs20170821.txt"
-datafile = open(filename, 'r')
+    ```python
+    # Read the data file
+    filename = "data/wxobs20170821.txt"
+    datafile = open(filename, 'r')
 
-data = datafile.read()
-
-datafile.close()
-
-# DEBUG
-print(data)
-print('data')
-```
-
-Our code is similar as before, but now we've read the entire file. To test that this worked. We'll `print(data)`. Print statements in python require parenthesis around the object you wish to print, in this scenario the data object.
-
-Try `print('data')` as well. Now Python will print the string `data`, as it did for the hello world function, instead of the information stored in the variable data.
-
-Don't forget to execute with :bash:`python mysci.py`.
-
-14. Change the `mysci.py` script to read your whole data file using a context
-    manager with:
-
-```python
-# Read the data file
-filename = "data/wxobs20170821.txt"
-with open(filename, 'r') as datafile:
     data = datafile.read()
 
-# DEBUG
-print(data)
-```
+    datafile.close()
 
-Again this is a similar method of opening the datafile, but we now use `with open`. The `with` statement is a context manager that provides clean-up and assures that the file is automatically closed after you've read it.
+    # DEBUG
+    print(data)
+    print('data')
+    ```
 
-The indendation of the line `data = datafile.read()` is very important. Python is sensitive to white space and will not work if you mix spaces and tabs (Python does not know your tab width). It is best practice to use four spaces as opposed to tabs (tab width is not consistent between editors).
+    Our code is similar as before, but now we've read the entire file. To test that this worked. We'll `print(data)`. Print statements in python require parenthesis around the object you wish to print, in this scenario the data object.
 
-Combined these two lines mean: with the datafile opened, I'd like to read it.
+    Try `print('data')` as well. Now Python will print the string `data`, as it did for the hello world function, instead of the information stored in the variable data.
 
-And execute with `python mysci.py`.
+    Don't forget to execute with :bash:`python mysci.py`.
 
-15. What did we just see? What is the data object? What type is data? How do we find out?
+15. Change the `mysci.py` script to read your whole data file using a context
+    manager with:
 
-Change the DEBUG section of our script to:
+    ```python
+    # Read the data file
+    filename = "data/wxobs20170821.txt"
+    with open(filename, 'r') as datafile:
+        data = datafile.read()
 
-```python
-# DEBUG
-print(type(data))
-```
+    # DEBUG
+    print(data)
+    ```
 
-And execute with `python mysci.py`.
+    Again this is a similar method of opening the datafile, but we now use `with open`. The `with` statement is a context manager that provides clean-up and assures that the file is automatically closed after you've read it.
 
-Object types refer to `float`, `integer`, `string` or other types that you can create.
+    The indendation of the line `data = datafile.read()` is very important. Python is sensitive to white space and will not work if you mix spaces and tabs (Python does not know your tab width). It is best practice to use four spaces as opposed to tabs (tab width is not consistent between editors).
 
-Python is a dynamically typed language, which means you don't have to explicitly specify the datatype when you name a variable, Python will automatically figure it out by the nature of the data.
+    Combined these two lines mean: with the datafile opened, I'd like to read it.
+
+    And execute with `python mysci.py`.
+
+16. What did we just see? What is the data object? What type is data? How do we find out?
+
+    Change the DEBUG section of our script to:
+
+    ```python
+    # DEBUG
+    print(type(data))
+    ```
+
+    And execute with `python mysci.py`.
+
+    Object types refer to `float`, `integer`, `string` or other types that you can create.
+
+    Python is a dynamically typed language, which means you don't have to explicitly specify the datatype when you name a variable, Python will automatically figure it out by the nature of the data.
 
 In this section you set up a workspace by creating your directory and activating your conda environment. You downloaded a .txt file and read it using the Python commands of `open()`, `readline()`, `read()`, `close()`, and `print()`, as well as the context manager `with`. You should be familiar with the `str` datatype.
