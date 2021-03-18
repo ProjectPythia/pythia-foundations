@@ -2,7 +2,7 @@
 
 This is the source repository for the Project Pythia Foundations content collection.
 
-The rendered site can be found (for now) at https://projectpythia.org/pythia-foundations/
+The rendered site can be found at https://foundations.projectpythia.org
 
 The book is powered by [Jupyter Book](https://jupyterbook.org/intro.html).
 
@@ -37,3 +37,5 @@ To build the book locally, run the following:
 $ conda activate pythia-book-dev
 $ jupyter-book build .
 ```
+
+All code is licensed under Apache 2.0 (including both infrastructure code and example code in the rendered Pythia Foundations book). All other content in Pythia Foundations is licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)

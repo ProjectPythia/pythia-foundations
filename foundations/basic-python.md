@@ -1,4 +1,4 @@
-# Basic Python Syntax
+# Quickstart: what is Python?
 
 ```{note}
 This content is under construction!
