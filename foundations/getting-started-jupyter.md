@@ -1,4 +1,4 @@
-# Version Control with git and GitHub
+# Getting started with Jupyter
 
 ```{note}
 This content is under construction!

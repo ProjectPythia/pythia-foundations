@@ -1,4 +1,4 @@
-# Getting started with GitHub
+# What is GitHub?
 
 ```{note}
 This content is under construction!
