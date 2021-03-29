@@ -5,10 +5,14 @@ title: Project Pythia Foundations
 author: The Project Pythia community
 logo: images/ProjectPythia_Logo_Final-01-Blue.png
 
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force
+  execute_notebooks: cache
+#   auto will only execute those notebooks that don't have output in all cells.
+#     but that may not apply for notebooks that have errors??
+#   Other option for execute_notebook: force : force execution of all notebooks
+#   cache: Cache output of notebooks on each build.
+#   Do not abort notebook execution for errors, since they may be intentional.
+#   See https://jupyterbook.org/content/execute.html
   timeout: 600
   allow_errors: True
 
