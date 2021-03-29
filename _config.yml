@@ -9,6 +9,8 @@ logo: images/ProjectPythia_Logo_Final-01-Blue.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
+  timeout: 600
+  allow_errors: True
 
 # Define the name of the latex output file for PDF builds
 latex:
