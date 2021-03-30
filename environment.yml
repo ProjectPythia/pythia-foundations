@@ -7,3 +7,4 @@ dependencies:
   - matplotlib
   - numpy
   - pre-commit
+  - sqlalchemy<1.4
