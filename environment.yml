@@ -8,3 +8,4 @@ dependencies:
   - numpy
   - pre-commit
   - sqlalchemy<1.4
+  - cartopy
