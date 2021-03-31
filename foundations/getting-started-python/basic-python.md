@@ -86,7 +86,7 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
     print("Hello, world!")
     ```
 
-You'll see that the cell output is executed right below each cell.
+    You'll see that the cell output is executed right below each cell.
 
 11. In a new cell, let's read the first 4 lines from our datafile.
 
@@ -156,7 +156,7 @@ You'll see that the cell output is executed right below each cell.
 
 14. What did we just see? What is the data object? What type is data? How do we find out?
 
-In a new cell print the type of our data:
+    In a new cell print the type of our data:
 
     ```python
     print(type(data))
@@ -167,3 +167,5 @@ In a new cell print the type of our data:
     Python is a dynamically typed language, which means you don't have to explicitly specify the datatype when you name a variable, Python will automatically figure it out by the nature of the data.
 
 In this section you set up a workspace by creating your directory and activating your conda environment. You downloaded a .txt file and read it using the Python commands of `open()`, `readline()`, `read()`, `close()`, and `print()`, as well as the context manager `with`. You should be familiar with the `str` datatype.
+
+---
