@@ -11,14 +11,18 @@
 - part: Foundational skills
   chapters:
     - file: foundations/overview
-    - file: foundations/getting-started-python
+    - file: foundations/getting-started-python/getting-started-python
       sections:
-        - file: foundations/basic-python
+        - file: foundationsgetting-started-python/why-python
           sections:
-            - file: foundations/Hello
-        - file: foundations/how-to-run-python
+            - file: foundations/getting-started-python/Hello
+        - file: foundations/getting-started-python/how-to-run-python
           sections:
-            - file: foundations/conda
+            - file: foundations/getting-started-python/conda
+            - file: foundations/getting-started-python/terminal
+            - file: foundations/getting-started-python/jupyter
+            - file: foundations/getting-started-python/ides
+        - file: foundations/getting-started-python/basic-python
     - file: foundations/getting-started-jupyter
       sections:
         - file: foundations/jupyter-notebooks
