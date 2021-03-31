@@ -72,15 +72,15 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
    $ cd ..
    ```
 
-9. And now that you've set up our workspace, open a Jupyter notebook.
+9. And now that you've set up our workspace, open a Jupyter notebook called `mysci.ipynb`.
 
    ```
    jupyter lab
    ```
 
-10. In the Jupyter session, create a blank Python script, called `mysci.ipynb`, you can do this from the "File" drop-down menu.
+   Then, in the Jupyter session, create a blank notebook from the "File" drop-down menu.
 
-11. In a code cell enter and execute the classic first command - printing, "Hello, world!".
+10. In a code cell enter and execute the classic first command - printing, "Hello, world!".
 
     ```python
     print("Hello, world!")
@@ -88,7 +88,7 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
 
 You'll see that the cell output is executed right below each cell.
 
-12. In a new cell, let's read the first 4 lines from our datafile.
+11. In a new cell, let's read the first 4 lines from our datafile.
 
     ```python
     # Read the data file
@@ -116,7 +116,7 @@ You'll see that the cell output is executed right below each cell.
 
     Comments in Python are indicated with a hash, as you can see in the first line `# Read the data file`. Comments are ignored by the interpreter.
 
-13. In a new cell, read your whole data file:
+12. In a new cell, read your whole data file:
 
     ```python
     # Read the data file
@@ -136,7 +136,7 @@ You'll see that the cell output is executed right below each cell.
 
     Try `print('data')` as well. Now Python will print the string `data`, as it did for the hello world function, instead of the information stored in the variable data.
 
-14. Let's read your whole data file using a context manager `with`, in a new cell:
+13. Let's read your whole data file using a context manager `with`, in a new cell:
 
     ```python
     # Read the data file
@@ -154,7 +154,7 @@ You'll see that the cell output is executed right below each cell.
 
     Combined these two lines mean: with the datafile opened, I'd like to read it.
 
-15. What did we just see? What is the data object? What type is data? How do we find out?
+14. What did we just see? What is the data object? What type is data? How do we find out?
 
 In a new cell print the type of our data:
 
