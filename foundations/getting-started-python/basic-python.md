@@ -14,7 +14,9 @@ Here's a minimal example:
 
 ## An introduction to Python.
 
-This section of the tutorial will focus on teaching you Python through the
+This section of the tutorial will focus on teaching you Python through in a Jupyter notebook.
+
+If you are using a terminal, you will need to edit your script in a text editor and execute with the command "python SCRIPTNAME.PY".
 
 ### Reading a .txt File
 
@@ -76,7 +78,7 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
    jupyter lab
    ```
 
-10. In the Jupyter session, create a blank Python script, called `mysci.py`, you can do this from the "File" drop-down menu.
+10. In the Jupyter session, create a blank Python script, called `mysci.ipynb`, you can do this from the "File" drop-down menu.
 
 11. In a code cell enter and execute the classic first command - printing, "Hello, world!".
 
