@@ -28,10 +28,11 @@
         - file: foundations/jupyter-notebooks
         - file: foundations/how-to-run-notebooks
         - file: foundations/markdown
-    - file: foundations/getting-started-community
+    - file: foundations/getting-started-github
       sections:
-        - file: foundations/github
+        - file: foundations/what-is-github
         - file: foundations/git
+        - file: foundations/github-pull-request
 
 - part: Core Scientific Python packages
   chapters:
