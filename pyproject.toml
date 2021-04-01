@@ -10,6 +10,7 @@ black = "pyproject.toml"
 [tool.nbqa.mutate]
 black = 1
 pyupgrade = 1
+isort = 1
 
 [tool.nbqa.addopts]
 pyupgrade = ["--py36-plus"]
