@@ -13,7 +13,7 @@
     - file: foundations/overview
     - file: foundations/getting-started-python/getting-started-python
       sections:
-        - file: foundationsgetting-started-python/why-python
+        - file: foundations/getting-started-python/why-python
           sections:
             - file: foundations/getting-started-python/Hello
         - file: foundations/getting-started-python/how-to-run-python

@@ -2,7 +2,7 @@
 
 This section provides an overview of different ways to run Python code, and quickstart guides for
 
-- Chosing a Python platform
+- Choosing a Python platform
 - Installing and running Python on various local platforms
 - Running Python in the cloud
 
@@ -13,16 +13,17 @@ There is no single official platform for the Python language. Here we provide a 
 1. The terminal,
 2. Jupyter notebooks, and
 3. IDEs (integrated development environment).
-   We highly encourage the use of Jupyter notebooks; all of our tutorials will be in a Jupyter notebook format. Here we hope to provide you with enough information to understand the differences and similarities between each platform so that you can make the best chose for your work environment and learn along effectively, regardless of your Python platform preference.
 
-In general, it is always best to test your programs in the same environment in which they will be run. The biggest factors to consider when chosing your platform are:
+We highly encourage the use of Jupyter notebooks; all of our tutorials will be in a Jupyter notebook format. Here we hope to provide you with enough information to understand the differences and similarities between each platform so that you can make the best chose for your work environment and learn along effectively, regardless of your Python platform preference.
+
+In general, it is always best to test your programs in the same environment in which they will be run. The biggest factors to consider when choosing your platform are:
 
 - What are you already comfortable with?
 - What are the people around you using (peers, coworkers, instructors, etc)?
 
 ### Terminal
 
-For learners who are familiar with basic [Linix commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/).and text editors, learning Python in the terminal is the quickest route straight to learning Python syntax without the covering the bells and whistles of your new platform. If you are runing Python on a super computer, through an HTTP request, or ssh tunneling you might want to consider learning in the terminal.
+For learners who are familiar with basic [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/).and text editors, learning Python in the terminal is the quickest route straight to learning Python syntax without the covering the bells and whistles of your new platform. If you are runing Python on a super computer, through an HTTP request, or ssh tunneling you might want to consider learning in the terminal.
 
 ### Jupyter Session
 
@@ -30,7 +31,7 @@ Jupyter Notebooks are very popular among data scientists. It is a free, open-sou
 
 ### Other IDEs
 
-If you already code in other languages you might already have a favorite IDE that will work just as well in Python. Spyder is a Python specific IDE that comes with the Anaconda download. It is perhaps the most familiar IDE if you are coming from languages such as Matlab that have a language specific platform and display a list of variables. PyCharm and Visual Studio Code are also popular IDEs. Many IDEs offer support for terminal execution, scripts, and Jupyter display. To learn about your specific IDE visit its official documentation.
+If you already code in other languages you might already have a favorite IDE that will work just as well in Python. [Spyder](https://www.spyder-ide.org) is a Python specific IDE that comes with the [Anaconda download](https://www.anaconda.com/products/individual). It is perhaps the most familiar IDE if you are coming from languages such as [Matlab](https://www.mathworks.com/products/matlab.html) that have a language specific platform and display a list of variables. [PyCharm](https://www.jetbrains.com/pycharm/) and [Visual Studio Code](https://code.visualstudio.com) are also popular IDEs. Many IDEs offer support for terminal execution, scripts, and Jupyter display. To learn about your specific IDE visit its official documentation.
 
 ---
 
