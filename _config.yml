@@ -33,5 +33,6 @@ launch_buttons:
 html:
   use_issues_button: true
   use_repository_button: true
+  use_edit_page_button: true
   extra_footer: |
     All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.
