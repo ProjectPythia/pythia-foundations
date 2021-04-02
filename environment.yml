@@ -7,5 +7,5 @@ dependencies:
   - matplotlib
   - numpy
   - pre-commit
-  - xarrray
+  - xarray
   - cartopy
