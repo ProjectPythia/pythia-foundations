@@ -10,3 +10,5 @@ This is the starting point for a new user who wants to learn how to get started.
 
 - [Quickstart: what is Python?](basic-python): Basic tutorials on the Python language
 - [How to run Python code](how-to-run-python): Instructions for installing Python on a laptop or running in the cloud
+
+This is John's test of suggested edits. 
