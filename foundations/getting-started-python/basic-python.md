@@ -308,7 +308,7 @@ You have just commited your new script file that reads in the data from a file a
 
 7. `print(data['tempout'])`
 
-Do you see a difference? It should now be a list of floats.
+   Do you see a difference? It should now be a list of floats.
 
 8. This seems great, so far! But what if you want to read more columns to ourdata later? You would have to change the initialization of the data variable (at the top of `mysci.py`\) and have to add the appropriate line in the "read and parse" section. Essentially, that means you need to maintain 2 parts of the code and make sure that both remain consistent with each other.
 
