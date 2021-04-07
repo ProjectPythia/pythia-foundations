@@ -356,8 +356,132 @@ You have just commited your new script file that reads in the data from a file a
 
 ---
 
-That concludes the second lesson of this virtual tutorial.
-
 In this section you saved the variables of date, time, and tempout in a data dictionary.
 
 You should now be familiar with the data structures `list`\s (as well as list indexing, nested lists, and the command `list.append()`), `dict`\s (their keys and the command `dict.get()`), and `range`\s. You also learned to write `for` loops, about the `float` datatype, and using the Python commands `str.split()`.
+
+## Writing Functions
+
+You have just commited your new script that reads the file, saving the variables of date, time, and tempout in a data dictionary. In this section you will compute wind chill index by writing your first function and learning about basic math operators.
+
+1. Now that you've read the data in a way that is easy to modify later, it is time to actually do something with the data.
+
+   Compute the wind chill factor, which is the cooling effect of the wind. As wind speed increases the rate at which a body loses heat increases. The formula for this is:
+
+   .. math::
+
+   WCI = a + (b _ t) - (c _ v^{0.16}) + (d _ t _ v^{0.16})
+
+   ..
+
+   Where _WCI_ refers to the Wind Chill in degrees F, _t_ is temperature in degrees F, _v_ is wind speed in mph, and the other variables are as follows: _a_ = 35.74, _b_ = 0.6215, _c_ = 35.75, and _d_ = 0.4275. Wind Chill Index is only defined for temperatures within the range -45 to +45 degrees F.
+
+   You've read the temperature data into the tempout variable, but to do this calculation, you also need to read the windspeed variable from column 7.
+
+   With your terminal open and :code:`python_tutorial` environment activated, modify columns variable in :code:`mysci.py` to read:
+
+   ```
+   # Column names and column indices to read
+   columns = {'date': 0, 'time': 1, 'tempout': 2, 'windspeed': 7}
+   ```
+
+   and modify the types variable to be:
+
+   ```
+   # Data types for each column (only if non-string)
+   types = {'tempout': float, 'windspeed': float}
+   ```
+
+2. Now, let's write our first function to compute the wind chill factor. We'll add this function to the bottom of the file.
+
+   ```
+   # Compute the wind chill temperature
+   def compute_windchill(t, v):
+      a = 35.74
+      b = 0.6215
+      c = 35.75
+      d = 0.4275
+
+      v2 = v ** 2
+      wci = a + (b * t) - (c * v2) + (d * t * v2)
+      return wci
+   ```
+
+   To indicate a function in python you type `def` for define, the name of your function, and then in parenthesis the input arguments of that function, followed by a colon. The preceding lines,the code of your function, are all tab-indented. If necessary specify your return value.
+
+   Here is your first introduction to math operators in Python. Addition, subtraction, and multiplication look much like you'd expect. A double astericks, `**`, indicates an exponential. A backslash, `/`, is for division, and a double backslash, `//`, is for integer division.
+
+   And then let's compute a new list with windchill data at the bottom of `mysci.ipynb`\:
+
+   ```
+   # Compute the wind chill factor
+   windchill = []
+   for temp, windspeed in zip(data['tempout'], data['windspeed']):
+      windchill.append(compute_windchill(temp, windspeed))
+   ```
+
+   Now we'll call our function. Initialize a `list` for wind chill with empty square brackets, `[]`. And in a `for` loop, loop through our temperature and wind speed data, applying the function to each `tuple` data pair. `tuple`\s are ordered like `list`\s, but they are indicated by parenthesis, `()`, instead of square brackets and cannot be changed or appended. `tuple`\s are generally faster than `list`\s.
+
+   We use the `zip` function in Python to automatically unravel the `tuple`\s. Take a look at `zip([1,2], [3,4,5])`. What is the result?
+
+   And finally, add a DEBUG section to see the results:
+
+   ```
+   # DEBUG
+   print(windchill)
+   ```
+
+3. Now, the wind chill factor is actually in the datafile, so we can read it from the file and compare that value to our computed values. To do this, we need to read the windchill from column 12 as a `float`:
+
+   Edit the columns and types `dict`:
+
+   ```
+   # Column names and column indices to read
+   columns = {'date': 0, 'time': 1, 'tempout': 2, 'windspeed': 7, 'windchill': 12}
+   ```
+
+   and
+
+   ```
+   # Data types for each column (only if non-string)
+   types = {'tempout': float, 'windspeed': float, 'windchill': float}
+   ```
+
+   Then, in a DEBUG section at the end of your script, compare the twomdifferent values (one from data and one computed by our function):
+
+   ```
+   # DEBUG
+   for wc_data, wc_comp in zip(data['windchill'], windchill):
+      print(f'{wc_data:.5f}   {wc_comp:.5f}   {wc_data - wc_comp:.5f}')
+   ```
+
+   Using an `f-string` with float formatting you can determine the precision to which to print the values. The `.5f` means you want 5 places after the decimal point.
+
+   Test the results. What do you see?
+
+4. Now, format the output so that it's easy to understand and rename this script to something indicative of what it actually does.
+
+   In a new cell, add:
+
+   ```
+   # Output comparison of data
+   print('                ORIGINAL  COMPUTED')
+   print(' DATE    TIME  WINDCHILL WINDCHILL DIFFERENCE')
+   print('------- ------ --------- --------- ----------')
+   zip_data = zip(data['date'], data['time'], data['windchill'], windchill)
+   for date, time, wc_orig, wc_comp in zip_data:
+      wc_diff = wc_orig - wc_comp
+      print(f'{date} {time:>6} {wc_orig:9.6f} {wc_comp:9.6f} {wc_diff:10.6f}')
+   ```
+
+   Here you used f-string formatting with more f-string formatting options. The `>6` indicates that you'd like the characters of the string to be right-justified and to take up 6 spaces.
+
+   The `9f` specifies that you want the value to fill 9 spaces, so `9.6f` indicates you'd like the value to fill 9 spaces with 6 of them being after the decimal point. Same concept for `10.6f`.
+
+   You now have your first complete Python script!
+
+---
+
+That concludes the "First Python Script" virtual tutorial where you learned to write your first Python script.
+
+In this section you calculated wind chill index by writing and calling your first function. You also learned about Python math operators, the `zip()` command, `tuple` datastructure, f-string formatting, and how to push your repository to GitHub.
