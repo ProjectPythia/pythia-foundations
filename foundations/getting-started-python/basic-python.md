@@ -174,9 +174,9 @@ In this section you set up a workspace by creating your directory and activating
 
 You have just commited your new script file that reads in the data from a file as a string. You will now manipulate your data into a more usable format - a dictionary. In doing so you will learn how to write iterative for loops and about Python data structures.
 
-1. One big string isn't very useful, so use :python:`str.split()` to parse the data file into a data structure you can use.
+1. One big string isn't very useful, so use `str.split()` to parse the data file into a data structure you can use.
 
-   With your `mysci.ipynb` Jupyter notebook open and :code:`python_tutorial` environment activated, add a new code cell:
+   With your `mysci.ipynb` Jupyter notebook open and `python_tutorial` environment activated, add a new code cell:
 
    ```python
    # Initialize my data variable
@@ -368,11 +368,7 @@ You have just commited your new script that reads the file, saving the variables
 
    Compute the wind chill factor, which is the cooling effect of the wind. As wind speed increases the rate at which a body loses heat increases. The formula for this is:
 
-   .. math::
-
-   WCI = a + (b _ t) - (c _ v^{0.16}) + (d _ t _ v^{0.16})
-
-   ..
+   $$WCI = a + (b t) - (c v^{0.16}) + (d t v^{0.16})$$
 
    Where _WCI_ refers to the Wind Chill in degrees F, _t_ is temperature in degrees F, _v_ is wind speed in mph, and the other variables are as follows: _a_ = 35.74, _b_ = 0.6215, _c_ = 35.75, and _d_ = 0.4275. Wind Chill Index is only defined for temperatures within the range -45 to +45 degrees F.
 
