@@ -4,8 +4,6 @@ This section will contain cross-referenced tutorial material for foundational co
 
 ## Topics
 
-- [Basic Python Syntax](basic-python): Getting started with Python
-- [Computing with Jupyter](jupyter): An introduction to Jupyter environments for interactive, reproducible computing
-- [Markdown](markdown): The simple, human-readable text language used extensively in Jupyter notebooks, GitHub discussions, and elsewhere.
-- [Using the conda package manager](conda): Set up self-contained Python environments on your own machines.
-- [Version control with git and GitHub](version-control): Getting started with version control and collaboration tools
+- [Getting started with Python](getting-started-python): Start here to learn about the Python language and how/where to get some Python code running.
+- [Getting started with Jupyter](getting-started-jupyter): All about the Jupyter ecosystem which provides tools and environments for interactive, reproducible computing with Python.
+- [Getting started with the Python community](getting-started-community): Learn about the collaboration tools (GitHub) and version control (git) that enables the open-source community.

@@ -12,16 +12,24 @@
   chapters:
     - file: foundations/overview
     - file: foundations/why-python
-    - file: foundations/basic-python
+    - file: foundations/getting-started-python
       sections:
-        - file: foundations/Hello
-    - file: foundations/jupyter
-    - file: foundations/markdown
-    - file: foundations/conda
-    - file: foundations/version-control
+        - file: foundations/basic-python
+          sections:
+            - file: foundations/Hello
+        - file: foundations/how-to-run-python
+          sections:
+            - file: foundations/conda
+    - file: foundations/getting-started-jupyter
       sections:
+        - file: foundations/jupyter-notebooks
+        - file: foundations/how-to-run-notebooks
+        - file: foundations/markdown
+    - file: foundations/getting-started-github
+      sections:
+        - file: foundations/what-is-github
         - file: foundations/git
-        - file: foundations/github
+        - file: foundations/github-pull-request
 
 - part: Core Scientific Python packages
   chapters:
