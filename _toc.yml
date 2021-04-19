@@ -38,5 +38,7 @@
     - file: core/cartopy
     - file: core/datetime
     - file: core/pandas
+      sections:
+        - file: core/pandas/pandas
     - file: core/data-formats
     - file: core/xarray
