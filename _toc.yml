@@ -37,6 +37,8 @@
     - file: core/matplotlib
     - file: core/cartopy
     - file: core/datetime
+      section:
+        - file: core/datetime/datetime
     - file: core/pandas
     - file: core/data-formats
     - file: core/xarray
