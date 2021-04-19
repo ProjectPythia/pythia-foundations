@@ -40,5 +40,5 @@
     - file: core/pandas
     - file: core/data-formats
     - file: core/xarray
-      sections: 
-      - file: core/xarray/xarray-nc-cf
+      sections:
+        - file: core/xarray/xarray-nc-cf
