@@ -7,3 +7,7 @@ dependencies:
   - matplotlib
   - numpy
   - pre-commit
+  - xarray
+  - netcdf4
+  - scipy
+  - pyproj
