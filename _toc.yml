@@ -49,3 +49,5 @@
         - file: core/pandas/pandas_fullNotebook
     - file: core/data-formats
     - file: core/xarray
+      sections: 
+      - file: core/xarray/xarray-nc-cf
