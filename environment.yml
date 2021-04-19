@@ -11,6 +11,9 @@ dependencies:
   - sqlalchemy<1.4
   - cartopy
   - xarray
+  - netcdf4
+  - scipy
+  - pyproj
   - pip
   - pip:
       # works for regular pip packages
