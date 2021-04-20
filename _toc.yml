@@ -39,4 +39,6 @@
     - file: core/datetime
     - file: core/pandas
     - file: core/data-formats
+      sections:
+        - file: core/data-formats/netcdf-cf
     - file: core/xarray
