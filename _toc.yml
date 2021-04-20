@@ -35,6 +35,8 @@
     - file: core/overview
     - file: core/numpy
     - file: core/matplotlib
+      sections:
+        - file: core/matplotlib/matplotlib
     - file: core/cartopy
     - file: core/datetime
     - file: core/pandas
