@@ -2,7 +2,7 @@
 
 You're already here because you want to learn to use Python for your data analysis and visualizations.
 
-Perhaps the #1 reason to use Python is because it is so widely used in the scientific community!
+**Perhaps the #1 reason to use Python is because it is so widely used in the scientific community!**
 
 Python can be compared to other high-level, interpreted, object-oriented languages, but is especially great because it is free and open source!
 
@@ -22,6 +22,6 @@ Objects are custom datatypes. For every custom datatype, you usually have a set 
 
 ## Open source
 
-Python as a language is open source which means that there is a community of developers behind its codebase. Anyone can join the developer community and contribute to deciding the future of the language. When someone identifies gaps to Python's abilities, they can write up the code to fill these gaps. The open source nature of Python means that Python as a language is very adaptable to shifting needs of the user community.
+Python as a language is open source which means that there is a community of developers behind its codebase. Anyone can join the developer community and contribute to deciding the future of the language. When someone identifies gaps to Python's abilities, they can write up the code to fill these gaps. The open source nature of Python means that Python as a language is very adaptable to shifting needs of the user community. This harks back to the idea that the wide-use of Python within the scientific community is a benefit to you! The large Python user base within your field has established high level community Python packages that are available to you in your workflow.
 
 Python is a language designed for rapid prototyping and efficient programming. It is easy to write new code quickly with less typing.
