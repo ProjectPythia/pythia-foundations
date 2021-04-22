@@ -11,6 +11,7 @@
 - part: Foundational skills
   chapters:
     - file: foundations/overview
+    - file: foundations/why-python
     - file: foundations/getting-started-python
       sections:
         - file: foundations/basic-python
