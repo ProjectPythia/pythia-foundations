@@ -7,5 +7,6 @@ dependencies:
   - matplotlib
   - numpy
   - pre-commit
-  - xarray
+  - sqlalchemy<1.4
   - cartopy
+  - xarray
