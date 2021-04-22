@@ -1,0 +1,1267 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01_Cartopy_Introduction &#8212; Project Pythia Foundations</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Datetime" href="../datetime.html" />
+    <link rel="prev" title="Cartopy" href="../cartopy.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/ProjectPythia_Logo_Final-01-Blue.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Project Pythia Foundations</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   Project Pythia Foundations
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/how-to-use.html">
+   How to Use This Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/how-to-contribute.html">
+   How to Contribute
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Foundational skills
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../foundations/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../foundations/getting-started-python.html">
+   Getting started with Python
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../foundations/basic-python.html">
+     Quickstart: what is Python?
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../foundations/Hello.html">
+       Fun with Python
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../foundations/how-to-run-python.html">
+     How to run Python
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../foundations/conda.html">
+       Using the conda package manager
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../foundations/getting-started-jupyter.html">
+   Getting started with Jupyter
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/jupyter-notebooks.html">
+     What is a Jupyter notebook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/how-to-run-notebooks.html">
+     Running a Jupyter notebook: local vs. remote
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/markdown.html">
+     Formatted text in the notebook with Markdown
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../foundations/getting-started-github.html">
+   Getting started with GitHub
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/what-is-github.html">
+     What is GitHub?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/git.html">
+     Basic version control with git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github-pull-request.html">
+     Opening a Pull Request on GitHub
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Core Scientific Python packages
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matplotlib.html">
+   Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../cartopy.html">
+   Cartopy
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     <span style="color:purple">
+      01_Cartopy_Introduction
+     </span>
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../datetime.html">
+   Datetime
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pandas.html">
+   Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data-formats.html">
+   Data Formats
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../xarray.html">
+   Xarray
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/core/cartopy/01_Cartopy_Intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ProjectPythia/pythia-foundations"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/cartopy/01_Cartopy_Intro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/cartopy/01_Cartopy_Intro.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=tree/core/cartopy/01_Cartopy_Intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-this-notebook-we-ll-cover-the-following">
+   In this notebook, we’ll cover the following:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-purple-0-preliminaries-span">
+   <span style="color:purple">
+    0) Preliminaries
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-purple-1-extend-matplotlib-s-axes-into-georeferenced-geoaxes-span">
+   <span style="color:purple">
+    1) Extend Matplotlib’s
+    <code class="docutils literal notranslate">
+     <span class="pre">
+      axes
+     </span>
+    </code>
+    into georeferenced
+    <code class="docutils literal notranslate">
+     <span class="pre">
+      GeoAxes
+     </span>
+    </code>
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recall-that-in-matplotlib-what-we-might-tradtionally-term-a-figure-consists-of-two-key-components-a-figure-and-an-associated-subplot-axes-instance">
+     Recall that in Matplotlib, what we might tradtionally term a
+     <em>
+      figure
+     </em>
+     consists of two key components: a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       figure
+      </span>
+     </code>
+     and an associated subplot
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       axes
+      </span>
+     </code>
+     instance.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#by-virtue-of-importing-cartopy-we-can-now-convert-the-axes-into-a-geoaxes-by-specifying-a-projection-that-we-have-imported-from-cartopy-s-coordinate-reference-system-class-as-ccrs-this-will-effectively-georeference-the-subplot">
+       By virtue of importing Cartopy, we can now convert the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         axes
+        </span>
+       </code>
+       into a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         GeoAxes
+        </span>
+       </code>
+       by specifying a projection that we have imported from
+       <em>
+        Cartopy’s Coordinate Reference System
+       </em>
+       class as
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         ccrs
+        </span>
+       </code>
+       . This will effectively
+       <em>
+        georeference
+       </em>
+       the subplot.
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-purple-2-create-a-map-with-a-specified-projection-and-add-various-cartographic-features-to-it-span">
+   <span style="color:purple">
+    2) Create a map with a specified projection and add various cartographic features to it.
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#full-list-of-projections-in-cartopy-https-scitools-org-uk-cartopy-docs-latest-crs-projections-html">
+     Full list of projections in Cartopy: https://scitools.org.uk/cartopy/docs/latest/crs/projections.html
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#although-the-figure-seems-empty-it-has-in-fact-been-georeferenced-using-one-of-cartopy-s-map-projections-that-is-provided-by-cartopy-s-crs-coordinate-reference-system-class-we-can-now-add-in-cartographic-features-in-the-form-of-shapefiles-to-our-subplot-one-of-them-is-coastlines-which-is-a-callable-geoaxes-method-that-can-be-plotted-directly-on-our-subplot">
+     Although the figure seems empty, it has in fact been georeferenced, using one of Cartopy’s map projections that is provided by Cartopy’s
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       crs
+      </span>
+     </code>
+     (coordinate reference system) class. We can now add in cartographic features, in the form of
+     <em>
+      shapefiles
+     </em>
+     , to our subplot. One of them is
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       coastlines
+      </span>
+     </code>
+     , which is a callable
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       GeoAxes
+      </span>
+     </code>
+     method that can be plotted directly on our subplot.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cartopy-provides-other-cartographic-features-via-its-features-class-which-we-ve-imported-as-cfeature-these-are-also-shapefiles-downloaded-on-initial-request-from-http-www-naturalearthdata-com-once-downloaded-they-live-in-your-local-share-cartopy-directory">
+     Cartopy provides other cartographic features via its
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       features
+      </span>
+     </code>
+     class, which we’ve imported as
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       cfeature
+      </span>
+     </code>
+     . These are also shapefiles, downloaded on initial request from http://www.naturalearthdata.com/ . Once downloaded, they “live” in your
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ~/.local/share/cartopy
+      </span>
+     </code>
+     directory.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#we-add-them-to-our-subplot-via-the-add-feature-method-we-can-define-attributes-for-them-in-a-manner-similar-to-matplotlib-s-plot-method-a-list-of-the-various-natural-earth-shapefiles-appears-in-https-scitools-org-uk-cartopy-docs-latest-matplotlib-feature-interface-html">
+       We add them to our subplot via the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         add_feature
+        </span>
+       </code>
+       method. We can define attributes for them in a manner similar to Matplotlib’s
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         plot
+        </span>
+       </code>
+       method. A list of the various Natural Earth shapefiles appears in https://scitools.org.uk/cartopy/docs/latest/matplotlib/feature_interface.html .
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-purple-3-explore-some-of-cartopy-s-map-projections-span">
+   <span style="color:purple">
+    3) Explore some of Cartopy’s map projections
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mollweide-projection-often-used-with-global-satellite-mosaics">
+     Mollweide Projection (often used with global satellite mosaics)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#this-time-we-ll-define-an-object-to-store-our-projection-definition-any-time-we-wish-to-use-this-particular-projection-later-in-the-notebook-we-can-use-the-object-name-rather-than-repeating-the-same-call-to-ccrs">
+       This time, we’ll define an object to store our projection definition. Any time we wish to use this particular projection later in the notebook, we can use the object name rather than repeating the same call to
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         ccrs
+        </span>
+       </code>
+       .
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#add-a-fancy-background-image-to-the-map">
+       Add a fancy background image to the map.
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lambert-azimuthal-equal-area-projection">
+     Lambert Azimuthal Equal Area Projection
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-purple-4-create-regional-maps-span">
+   <span style="color:purple">
+    4) Create regional maps
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now-let-s-go-back-to-platecarree-but-let-s-use-cartopy-s-set-extent-method-to-restrict-the-map-coverage-to-a-north-american-view-let-s-also-choose-a-lower-resolution-for-coastlines-just-to-illustrate-how-one-can-specify-that-plot-lat-lon-lines-as-well">
+     Now, let’s go back to PlateCarree, but let’s use Cartopy’s
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       set_extent
+      </span>
+     </code>
+     method to restrict the map coverage to a North American view. Let’s also choose a lower resolution for coastlines, just to illustrate how one can specify that. Plot lat/lon lines as well.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reference-for-natural-earth-s-three-resolutions-10m-50m-110m-higher-is-coarser-http-www-naturalearthdata-com-downloads">
+     Reference for Natural Earth’s three resolutions (10m, 50m, 110m; higher is coarser): http://www.naturalearthdata.com/downloads/
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#did-you-notice-the-output-above-the-map-about-cartopy-mpl-feature-artist-we-can-eliminate-that-in-one-of-two-ways">
+       Did you notice the output above the map about
+       <em>
+        cartopy.mpl.feature_artist
+       </em>
+       ? We can eliminate that in one of two ways:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-platecarree-projection-exaggerates-the-spatial-extent-of-regions-closer-to-the-poles-let-s-try-a-couple-different-projections">
+       The PlateCarree projection exaggerates the spatial extent of regions closer to the poles. Let’s try a couple different projections.
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-regional-map-centered-over-new-york-state-and-add-in-some-more-natural-earth-geographic-features">
+     Create a regional map, centered over New York State and add in some more Natural Earth geographic features.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#some-pre-defined-features-exist-as-cartopy-feature-constants-the-resolution-of-these-pre-defined-features-will-depend-on-the-areal-extent-of-your-map-which-you-specify-via-set-extent">
+       Some pre-defined Features exist as
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         cartopy.feature
+        </span>
+       </code>
+       constants. The resolution of these pre-defined Features will depend on the areal extent of your map, which you specify via
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         set_extent
+        </span>
+       </code>
+       .
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#let-s-create-a-new-map-but-this-time-use-lower-resolution-shapefiles-from-natural-earth-and-also-eliminate-plotting-the-country-borders">
+     Let’s create a new map, but this time use lower-resolution shapefiles from Natural Earth, and also eliminate plotting the country borders.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notice-this-is-a-bit-more-involved-first-we-create-objects-for-our-lower-resolution-shapefiles-via-the-naturalearthfeature-method-from-cartopy-s-feature-class-and-then-we-add-them-to-the-map-with-add-feature">
+     Notice this is a bit more involved. First we create objects for our lower-resolution shapefiles via the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       NaturalEarthFeature
+      </span>
+     </code>
+     method from Cartopy’s
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       feature
+      </span>
+     </code>
+     class, and then we add them to the map with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       add_feature
+      </span>
+     </code>
+     .
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finally-let-s-create-a-figure-with-two-subplots-on-one-we-ll-repeat-our-hi-res-nys-map-on-the-second-we-ll-plot-over-a-different-part-of-the-world">
+     Finally, let’s create a figure with two subplots. On one, we’ll repeat our hi-res NYS map; on the second, we’ll plot over a different part of the world.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="span-style-color-purple-01-cartopy-introduction-span">
+<h1><span style="color:purple">01_Cartopy_Introduction</span><a class="headerlink" href="#span-style-color-purple-01-cartopy-introduction-span" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="in-this-notebook-we-ll-cover-the-following">
+<h2>In this notebook, we’ll cover the following:<a class="headerlink" href="#in-this-notebook-we-ll-cover-the-following" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Extend Matplotlib’s <code class="docutils literal notranslate"><span class="pre">axes</span></code> into georeferenced <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code></p></li>
+<li><p>Create a map with a specified projection and add various cartographic features to it.</p></li>
+<li><p>Explore some of Cartopy’s map projections</p></li>
+<li><p>Create regional maps</p></li>
+</ol>
+<div class="section" id="references">
+<h3>References:<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><a class="reference external" href="https://scitools.org.uk/cartopy/docs/latest/">Cartopy Documentation</a></p></li>
+<li><p><a class="reference external" href="https://rabernat.github.io/research_computing_2018/maps-with-cartopy.html"><em>Maps with Cartopy</em>(Ryan Abernathey)</a></p></li>
+<li><p><a class="reference external" href="https://geocat-examples.readthedocs.io/en/latest/gallery/index.html#map-projections">Map Projections (GeoCAT)</a></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="span-style-color-purple-0-preliminaries-span">
+<h2><span style="color:purple">0) Preliminaries</span><a class="headerlink" href="#span-style-color-purple-0-preliminaries-span" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">cartopy</span> <span class="kn">import</span> <span class="n">crs</span> <span class="k">as</span> <span class="n">ccrs</span><span class="p">,</span> <span class="n">feature</span> <span class="k">as</span> <span class="n">cfeature</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-purple-1-extend-matplotlib-s-axes-into-georeferenced-geoaxes-span">
+<h2><span style="color:purple">1) Extend Matplotlib’s <code class="docutils literal notranslate"><span class="pre">axes</span></code> into georeferenced <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code></span><a class="headerlink" href="#span-style-color-purple-1-extend-matplotlib-s-axes-into-georeferenced-geoaxes-span" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="recall-that-in-matplotlib-what-we-might-tradtionally-term-a-figure-consists-of-two-key-components-a-figure-and-an-associated-subplot-axes-instance">
+<h3>Recall that in Matplotlib, what we might tradtionally term a <em>figure</em> consists of two key components: a <code class="docutils literal notranslate"><span class="pre">figure</span></code> and an associated subplot <code class="docutils literal notranslate"><span class="pre">axes</span></code> instance.<a class="headerlink" href="#recall-that-in-matplotlib-what-we-might-tradtionally-term-a-figure-consists-of-two-key-components-a-figure-and-an-associated-subplot-axes-instance" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="by-virtue-of-importing-cartopy-we-can-now-convert-the-axes-into-a-geoaxes-by-specifying-a-projection-that-we-have-imported-from-cartopy-s-coordinate-reference-system-class-as-ccrs-this-will-effectively-georeference-the-subplot">
+<h4>By virtue of importing Cartopy, we can now convert the <code class="docutils literal notranslate"><span class="pre">axes</span></code> into a <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code> by specifying a projection that we have imported from <em>Cartopy’s Coordinate Reference System</em> class as <code class="docutils literal notranslate"><span class="pre">ccrs</span></code>. This will effectively <em>georeference</em> the subplot.<a class="headerlink" href="#by-virtue-of-importing-cartopy-we-can-now-convert-the-axes-into-a-geoaxes-by-specifying-a-projection-that-we-have-imported-from-cartopy-s-coordinate-reference-system-class-as-ccrs-this-will-effectively-georeference-the-subplot" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-purple-2-create-a-map-with-a-specified-projection-and-add-various-cartographic-features-to-it-span">
+<h2><span style="color:purple">2) Create a map with a specified projection and add various cartographic features to it.</span><a class="headerlink" href="#span-style-color-purple-2-create-a-map-with-a-specified-projection-and-add-various-cartographic-features-to-it-span" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="full-list-of-projections-in-cartopy-https-scitools-org-uk-cartopy-docs-latest-crs-projections-html">
+<h3>Full list of projections in Cartopy: <a class="reference external" href="https://scitools.org.uk/cartopy/docs/latest/crs/projections.html">https://scitools.org.uk/cartopy/docs/latest/crs/projections.html</a><a class="headerlink" href="#full-list-of-projections-in-cartopy-https-scitools-org-uk-cartopy-docs-latest-crs-projections-html" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">))</span>
+<span class="c1"># Create a GeoAxes that uses the PlateCarree projection</span>
+<span class="c1"># (basically a global lat-lon map projection, which translates from French to &quot;flat square&quot; in English,</span>
+<span class="c1"># where each point is equally spaced in terms of degrees)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=-</span><span class="mi">75</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;A Geo-referenced subplot, Plate Carree projection&quot;</span><span class="p">)</span>
+<span class="c1"># adding a trailing semicolon to the last line prevents output from the deployed axes method from appearing</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;A Geo-referenced subplot, Plate Carree projection&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/01_Cartopy_Intro_8_1.png" src="../../_images/01_Cartopy_Intro_8_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="although-the-figure-seems-empty-it-has-in-fact-been-georeferenced-using-one-of-cartopy-s-map-projections-that-is-provided-by-cartopy-s-crs-coordinate-reference-system-class-we-can-now-add-in-cartographic-features-in-the-form-of-shapefiles-to-our-subplot-one-of-them-is-coastlines-which-is-a-callable-geoaxes-method-that-can-be-plotted-directly-on-our-subplot">
+<h3>Although the figure seems empty, it has in fact been georeferenced, using one of Cartopy’s map projections that is provided by Cartopy’s <code class="docutils literal notranslate"><span class="pre">crs</span></code> (coordinate reference system) class. We can now add in cartographic features, in the form of <em>shapefiles</em>, to our subplot. One of them is <code class="docutils literal notranslate"><span class="pre">coastlines</span></code>, which is a callable <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code> method that can be plotted directly on our subplot.<a class="headerlink" href="#although-the-figure-seems-empty-it-has-in-fact-been-georeferenced-using-one-of-cartopy-s-map-projections-that-is-provided-by-cartopy-s-crs-coordinate-reference-system-class-we-can-now-add-in-cartographic-features-in-the-form-of-shapefiles-to-our-subplot-one-of-them-is-coastlines-which-is-a-callable-geoaxes-method-that-can-be-plotted-directly-on-our-subplot" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7f07e4503160&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-info">When using the `%matplotlib inline` notebook magic, to get the figure to display again with the features that we've added since the original display, just type the name of the Figure object in its own cell.</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/110m/physical/ne_110m_coastline.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<img alt="../../_images/01_Cartopy_Intro_12_1.png" src="../../_images/01_Cartopy_Intro_12_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="cartopy-provides-other-cartographic-features-via-its-features-class-which-we-ve-imported-as-cfeature-these-are-also-shapefiles-downloaded-on-initial-request-from-http-www-naturalearthdata-com-once-downloaded-they-live-in-your-local-share-cartopy-directory">
+<h3>Cartopy provides other cartographic features via its <code class="docutils literal notranslate"><span class="pre">features</span></code> class, which we’ve imported as <code class="docutils literal notranslate"><span class="pre">cfeature</span></code>. These are also shapefiles, downloaded on initial request from <a class="reference external" href="http://www.naturalearthdata.com/">http://www.naturalearthdata.com/</a> . Once downloaded, they “live” in your <code class="docutils literal notranslate"><span class="pre">~/.local/share/cartopy</span></code> directory.<a class="headerlink" href="#cartopy-provides-other-cartographic-features-via-its-features-class-which-we-ve-imported-as-cfeature-these-are-also-shapefiles-downloaded-on-initial-request-from-http-www-naturalearthdata-com-once-downloaded-they-live-in-your-local-share-cartopy-directory" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="we-add-them-to-our-subplot-via-the-add-feature-method-we-can-define-attributes-for-them-in-a-manner-similar-to-matplotlib-s-plot-method-a-list-of-the-various-natural-earth-shapefiles-appears-in-https-scitools-org-uk-cartopy-docs-latest-matplotlib-feature-interface-html">
+<h4>We add them to our subplot via the <code class="docutils literal notranslate"><span class="pre">add_feature</span></code> method. We can define attributes for them in a manner similar to Matplotlib’s <code class="docutils literal notranslate"><span class="pre">plot</span></code> method. A list of the various Natural Earth shapefiles appears in <a class="reference external" href="https://scitools.org.uk/cartopy/docs/latest/matplotlib/feature_interface.html">https://scitools.org.uk/cartopy/docs/latest/matplotlib/feature_interface.html</a> .<a class="headerlink" href="#we-add-them-to-our-subplot-via-the-add-feature-method-we-can-define-attributes-for-them-in-a-manner-similar-to-matplotlib-s-plot-method-a-list-of-the-various-natural-earth-shapefiles-appears-in-https-scitools-org-uk-cartopy-docs-latest-matplotlib-feature-interface-html" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">STATES</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;brown&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7f07ccd474f0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once again, referencing the <code class="docutils literal notranslate"><span class="pre">Figure</span></code> object will re-render the figure in the notebook, now including the two features</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_boundary_lines_land.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_1_states_provinces_lakes.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<img alt="../../_images/01_Cartopy_Intro_17_2.png" src="../../_images/01_Cartopy_Intro_17_2.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-purple-3-explore-some-of-cartopy-s-map-projections-span">
+<h2><span style="color:purple">3) Explore some of Cartopy’s map projections</span><a class="headerlink" href="#span-style-color-purple-3-explore-some-of-cartopy-s-map-projections-span" title="Permalink to this headline">¶</a></h2>
+<div class="alert: alert-info"> You can find a list of supported projections in Cartopy, with examples, at <a href="https://scitools.org.uk/cartopy/docs/latest/crs/projections.html">https://scitools.org.uk/cartopy/docs/latest/crs/projections.html</a></div><div class="section" id="mollweide-projection-often-used-with-global-satellite-mosaics">
+<h3>Mollweide Projection (often used with global satellite mosaics)<a class="headerlink" href="#mollweide-projection-often-used-with-global-satellite-mosaics" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="this-time-we-ll-define-an-object-to-store-our-projection-definition-any-time-we-wish-to-use-this-particular-projection-later-in-the-notebook-we-can-use-the-object-name-rather-than-repeating-the-same-call-to-ccrs">
+<h4>This time, we’ll define an object to store our projection definition. Any time we wish to use this particular projection later in the notebook, we can use the object name rather than repeating the same call to <code class="docutils literal notranslate"><span class="pre">ccrs</span></code>.<a class="headerlink" href="#this-time-we-ll-define-an-object-to-store-our-projection-definition-any-time-we-wish-to-use-this-particular-projection-later-in-the-notebook-we-can-use-the-object-name-rather-than-repeating-the-same-call-to-ccrs" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">))</span>
+<span class="n">projMoll</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">Mollweide</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projMoll</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Mollweide Projection&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Mollweide Projection&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/01_Cartopy_Intro_21_1.png" src="../../_images/01_Cartopy_Intro_21_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add in the cartographic shapefiles</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/01_Cartopy_Intro_22_0.png" src="../../_images/01_Cartopy_Intro_22_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="add-a-fancy-background-image-to-the-map">
+<h4>Add a fancy background image to the map.<a class="headerlink" href="#add-a-fancy-background-image-to-the-map" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">stock_img</span><span class="p">()</span>
+<span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/01_Cartopy_Intro_24_0.png" src="../../_images/01_Cartopy_Intro_24_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="lambert-azimuthal-equal-area-projection">
+<h3>Lambert Azimuthal Equal Area Projection<a class="headerlink" href="#lambert-azimuthal-equal-area-projection" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">))</span>
+<span class="n">projLae</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">LambertAzimuthalEqualArea</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">central_latitude</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projLae</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Lambert Azimuthal Equal Area Projection&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7f07cc39f880&gt;
+</pre></div>
+</div>
+<img alt="../../_images/01_Cartopy_Intro_26_1.png" src="../../_images/01_Cartopy_Intro_26_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-purple-4-create-regional-maps-span">
+<h2><span style="color:purple">4) Create regional maps</span><a class="headerlink" href="#span-style-color-purple-4-create-regional-maps-span" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="now-let-s-go-back-to-platecarree-but-let-s-use-cartopy-s-set-extent-method-to-restrict-the-map-coverage-to-a-north-american-view-let-s-also-choose-a-lower-resolution-for-coastlines-just-to-illustrate-how-one-can-specify-that-plot-lat-lon-lines-as-well">
+<h3>Now, let’s go back to PlateCarree, but let’s use Cartopy’s <code class="docutils literal notranslate"><span class="pre">set_extent</span></code> method to restrict the map coverage to a North American view. Let’s also choose a lower resolution for coastlines, just to illustrate how one can specify that. Plot lat/lon lines as well.<a class="headerlink" href="#now-let-s-go-back-to-platecarree-but-let-s-use-cartopy-s-set-extent-method-to-restrict-the-map-coverage-to-a-north-american-view-let-s-also-choose-a-lower-resolution-for-coastlines-just-to-illustrate-how-one-can-specify-that-plot-lat-lon-lines-as-well" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="reference-for-natural-earth-s-three-resolutions-10m-50m-110m-higher-is-coarser-http-www-naturalearthdata-com-downloads">
+<h3>Reference for Natural Earth’s three resolutions (10m, 50m, 110m; higher is coarser): <a class="reference external" href="http://www.naturalearthdata.com/downloads/">http://www.naturalearthdata.com/downloads/</a><a class="headerlink" href="#reference-for-natural-earth-s-three-resolutions-10m-50m-110m-higher-is-coarser-http-www-naturalearthdata-com-downloads" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">projPC</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
+<span class="n">lonW</span> <span class="o">=</span> <span class="o">-</span><span class="mi">140</span>
+<span class="n">lonE</span> <span class="o">=</span> <span class="o">-</span><span class="mi">40</span>
+<span class="n">latS</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">latN</span> <span class="o">=</span> <span class="mi">65</span>
+<span class="n">cLat</span> <span class="o">=</span> <span class="p">(</span><span class="n">latN</span> <span class="o">+</span> <span class="n">latS</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">cLon</span> <span class="o">=</span> <span class="p">(</span><span class="n">lonW</span> <span class="o">+</span> <span class="n">lonE</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">res</span> <span class="o">=</span> <span class="s1">&#39;110m&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projPC</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Plate Carree&#39;</span><span class="p">)</span>
+<span class="n">gl</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span>
+    <span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">lonW</span><span class="p">,</span> <span class="n">lonE</span><span class="p">,</span> <span class="n">latS</span><span class="p">,</span> <span class="n">latN</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">projPC</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="n">res</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">STATES</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;brown&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7f07cc321dc0&gt;
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/50m/cultural/ne_50m_admin_1_states_provinces_lakes.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/50m/cultural/ne_50m_admin_0_boundary_lines_land.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<img alt="../../_images/01_Cartopy_Intro_31_3.png" src="../../_images/01_Cartopy_Intro_31_3.png" />
+</div>
+</div>
+<div class="section" id="did-you-notice-the-output-above-the-map-about-cartopy-mpl-feature-artist-we-can-eliminate-that-in-one-of-two-ways">
+<h4>Did you notice the output above the map about <em>cartopy.mpl.feature_artist</em>? We can eliminate that in one of two ways:<a class="headerlink" href="#did-you-notice-the-output-above-the-map-about-cartopy-mpl-feature-artist-we-can-eliminate-that-in-one-of-two-ways" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Use a generic object name, <code class="docutils literal notranslate"><span class="pre">_</span></code>, to assign that last feature to.</p></li>
+<li><p>Add a semicolon at the end of the last line in the cell.</p></li>
+</ol>
+<div class="alert alert-info">Note the in the `set_extent` call, we specified <strong>PlateCarree</strong>. This ensures that the values we passed into `set_extent` will be <i>transformed</i> from degrees into the values appropriate for the projection we use for the map.</div></div>
+<div class="section" id="the-platecarree-projection-exaggerates-the-spatial-extent-of-regions-closer-to-the-poles-let-s-try-a-couple-different-projections">
+<h4>The PlateCarree projection exaggerates the spatial extent of regions closer to the poles. Let’s try a couple different projections.<a class="headerlink" href="#the-platecarree-projection-exaggerates-the-spatial-extent-of-regions-closer-to-the-poles-let-s-try-a-couple-different-projections" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">projStr</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">Stereographic</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="n">cLon</span><span class="p">,</span> <span class="n">central_latitude</span><span class="o">=</span><span class="n">cLat</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projStr</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Stereographic&#39;</span><span class="p">)</span>
+<span class="n">gl</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span>
+    <span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">lonW</span><span class="p">,</span> <span class="n">lonE</span><span class="p">,</span> <span class="n">latS</span><span class="p">,</span> <span class="n">latN</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">projPC</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="n">res</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">STATES</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;brown&#39;</span><span class="p">)</span>
+<span class="c1"># Use generic object name to suppress text output to the screen</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/01_Cartopy_Intro_35_0.png" src="../../_images/01_Cartopy_Intro_35_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">projLcc</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">LambertConformal</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="n">cLon</span><span class="p">,</span> <span class="n">central_latitude</span><span class="o">=</span><span class="n">cLat</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projLcc</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Lambert Conformal&#39;</span><span class="p">)</span>
+<span class="n">gl</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span>
+    <span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">lonW</span><span class="p">,</span> <span class="n">lonE</span><span class="p">,</span> <span class="n">latS</span><span class="p">,</span> <span class="n">latN</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">projPC</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="s1">&#39;110m&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">STATES</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;brown&#39;</span><span class="p">)</span>
+<span class="c1"># End last line with a semicolon to suppress text output to the screen</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/01_Cartopy_Intro_36_0.png" src="../../_images/01_Cartopy_Intro_36_0.png" />
+</div>
+</div>
+<div class="alert alert-info">Lat/lon labeling for projections other than Mercator and PlateCarree is a recent addition to Cartopy. As you can see, work still needs to be done to improve the placement of labels.</div></div>
+</div>
+<div class="section" id="create-a-regional-map-centered-over-new-york-state-and-add-in-some-more-natural-earth-geographic-features">
+<h3>Create a regional map, centered over New York State and add in some more Natural Earth geographic features.<a class="headerlink" href="#create-a-regional-map-centered-over-new-york-state-and-add-in-some-more-natural-earth-geographic-features" title="Permalink to this headline">¶</a></h3>
+<p>Set the domain for defining the plot region. We will use this in the <code class="docutils literal notranslate"><span class="pre">set_extent</span></code> line below. Since these coordinates are expressed in degrees, they correspond to the PlateCarree projection.</p>
+<div class="alert alert-warning">Be patient: with a limited regional extent as specified here, the highest resolution (10m) shapefiles are used; as a result (as with any `GeoAxes` object that must be transformed from one coordinate system to another), this will take some time to plot (could be several minutes), and even longer if you haven't previously retrieved these features from the Natural Earth shapefile server.</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">latN</span> <span class="o">=</span> <span class="mf">45.2</span>
+<span class="n">latS</span> <span class="o">=</span> <span class="mf">40.2</span>
+<span class="n">lonW</span> <span class="o">=</span> <span class="o">-</span><span class="mf">80.0</span>
+<span class="n">lonE</span> <span class="o">=</span> <span class="o">-</span><span class="mf">71.5</span>
+<span class="n">cLat</span> <span class="o">=</span> <span class="p">(</span><span class="n">latN</span> <span class="o">+</span> <span class="n">latS</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">cLon</span> <span class="o">=</span> <span class="p">(</span><span class="n">lonW</span> <span class="o">+</span> <span class="n">lonE</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">projLccNY</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">LambertConformal</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="n">cLon</span><span class="p">,</span> <span class="n">central_latitude</span><span class="o">=</span><span class="n">cLat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="some-pre-defined-features-exist-as-cartopy-feature-constants-the-resolution-of-these-pre-defined-features-will-depend-on-the-areal-extent-of-your-map-which-you-specify-via-set-extent">
+<h4>Some pre-defined Features exist as <code class="docutils literal notranslate"><span class="pre">cartopy.feature</span></code> constants. The resolution of these pre-defined Features will depend on the areal extent of your map, which you specify via <code class="docutils literal notranslate"><span class="pre">set_extent</span></code>.<a class="headerlink" href="#some-pre-defined-features-exist-as-cartopy-feature-constants-the-resolution-of-these-pre-defined-features-will-depend-on-the-areal-extent-of-your-map-which-you-specify-via-set-extent" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projLccNY</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">lonW</span><span class="p">,</span> <span class="n">lonE</span><span class="p">,</span> <span class="n">latS</span><span class="p">,</span> <span class="n">latN</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">projPC</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAND</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">OCEAN</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAKES</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">STATES</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">RIVERS</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;New York and Vicinity&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/10m/physical/ne_10m_land.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/10m/physical/ne_10m_ocean.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/10m/physical/ne_10m_coastline.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_boundary_lines_land.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/10m/physical/ne_10m_lakes.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_1_states_provinces_lakes.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/10m/physical/ne_10m_rivers_lake_centerlines.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<img alt="../../_images/01_Cartopy_Intro_43_7.png" src="../../_images/01_Cartopy_Intro_43_7.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="let-s-create-a-new-map-but-this-time-use-lower-resolution-shapefiles-from-natural-earth-and-also-eliminate-plotting-the-country-borders">
+<h3>Let’s create a new map, but this time use lower-resolution shapefiles from Natural Earth, and also eliminate plotting the country borders.<a class="headerlink" href="#let-s-create-a-new-map-but-this-time-use-lower-resolution-shapefiles-from-natural-earth-and-also-eliminate-plotting-the-country-borders" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="notice-this-is-a-bit-more-involved-first-we-create-objects-for-our-lower-resolution-shapefiles-via-the-naturalearthfeature-method-from-cartopy-s-feature-class-and-then-we-add-them-to-the-map-with-add-feature">
+<h3>Notice this is a bit more involved. First we create objects for our lower-resolution shapefiles via the <code class="docutils literal notranslate"><span class="pre">NaturalEarthFeature</span></code> method from Cartopy’s <code class="docutils literal notranslate"><span class="pre">feature</span></code> class, and then we add them to the map with <code class="docutils literal notranslate"><span class="pre">add_feature</span></code>.<a class="headerlink" href="#notice-this-is-a-bit-more-involved-first-we-create-objects-for-our-lower-resolution-shapefiles-via-the-naturalearthfeature-method-from-cartopy-s-feature-class-and-then-we-add-them-to-the-map-with-add-feature" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projLccNY</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">((</span><span class="n">lonW</span><span class="p">,</span> <span class="n">lonE</span><span class="p">,</span> <span class="n">latS</span><span class="p">,</span> <span class="n">latN</span><span class="p">),</span> <span class="n">crs</span><span class="o">=</span><span class="n">projPC</span><span class="p">)</span>
+
+<span class="c1"># The features with names such as cfeature.LAND, cfeature.OCEAN, are higher-resolution (10m)</span>
+<span class="c1"># shapefiles from the Naturalearth repository.  Lower resolution shapefiles (50m, 110m) can be</span>
+<span class="c1"># used by using the cfeature.NaturalEarthFeature method as illustrated below.</span>
+
+<span class="n">resolution</span> <span class="o">=</span> <span class="s1">&#39;110m&#39;</span>
+
+<span class="n">land_mask</span> <span class="o">=</span> <span class="n">cfeature</span><span class="o">.</span><span class="n">NaturalEarthFeature</span><span class="p">(</span>
+    <span class="s1">&#39;physical&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;land&#39;</span><span class="p">,</span>
+    <span class="n">scale</span><span class="o">=</span><span class="n">resolution</span><span class="p">,</span>
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;face&#39;</span><span class="p">,</span>
+    <span class="n">facecolor</span><span class="o">=</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COLORS</span><span class="p">[</span><span class="s1">&#39;land&#39;</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="n">sea_mask</span> <span class="o">=</span> <span class="n">cfeature</span><span class="o">.</span><span class="n">NaturalEarthFeature</span><span class="p">(</span>
+    <span class="s1">&#39;physical&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ocean&#39;</span><span class="p">,</span>
+    <span class="n">scale</span><span class="o">=</span><span class="n">resolution</span><span class="p">,</span>
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;face&#39;</span><span class="p">,</span>
+    <span class="n">facecolor</span><span class="o">=</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COLORS</span><span class="p">[</span><span class="s1">&#39;water&#39;</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="n">lake_mask</span> <span class="o">=</span> <span class="n">cfeature</span><span class="o">.</span><span class="n">NaturalEarthFeature</span><span class="p">(</span>
+    <span class="s1">&#39;physical&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;lakes&#39;</span><span class="p">,</span>
+    <span class="n">scale</span><span class="o">=</span><span class="n">resolution</span><span class="p">,</span>
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;face&#39;</span><span class="p">,</span>
+    <span class="n">facecolor</span><span class="o">=</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COLORS</span><span class="p">[</span><span class="s1">&#39;water&#39;</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="n">state_borders</span> <span class="o">=</span> <span class="n">cfeature</span><span class="o">.</span><span class="n">NaturalEarthFeature</span><span class="p">(</span>
+    <span class="n">category</span><span class="o">=</span><span class="s1">&#39;cultural&#39;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;admin_1_states_provinces_lakes&#39;</span><span class="p">,</span>
+    <span class="n">scale</span><span class="o">=</span><span class="n">resolution</span><span class="p">,</span>
+    <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">land_mask</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">sea_mask</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">lake_mask</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">state_borders</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;New York and Vicinity; lower resolution&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/110m/physical/ne_110m_land.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/110m/physical/ne_110m_ocean.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/110m/physical/ne_110m_lakes.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<img alt="../../_images/01_Cartopy_Intro_45_3.png" src="../../_images/01_Cartopy_Intro_45_3.png" />
+</div>
+</div>
+</div>
+<div class="section" id="finally-let-s-create-a-figure-with-two-subplots-on-one-we-ll-repeat-our-hi-res-nys-map-on-the-second-we-ll-plot-over-a-different-part-of-the-world">
+<h3>Finally, let’s create a figure with two subplots. On one, we’ll repeat our hi-res NYS map; on the second, we’ll plot over a different part of the world.<a class="headerlink" href="#finally-let-s-create-a-figure-with-two-subplots-on-one-we-ll-repeat-our-hi-res-nys-map-on-the-second-we-ll-plot-over-a-different-part-of-the-world" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the figure object</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
+<span class="p">)</span>  <span class="c1"># Notice we need a bigger &quot;canvas&quot; so these two maps will be of a decent size</span>
+
+<span class="c1"># First subplot</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projLccNY</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">lonW</span><span class="p">,</span> <span class="n">lonE</span><span class="p">,</span> <span class="n">latS</span><span class="p">,</span> <span class="n">latN</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">projPC</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAND</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">OCEAN</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAKES</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">STATES</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;New York and Vicinity&#39;</span><span class="p">)</span>
+
+<span class="c1"># Set the domain for defining the second plot region.</span>
+<span class="n">latN</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">latS</span> <span class="o">=</span> <span class="mf">30.2</span>
+<span class="n">lonW</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
+<span class="n">lonE</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">cLat</span> <span class="o">=</span> <span class="p">(</span><span class="n">latN</span> <span class="o">+</span> <span class="n">latS</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">cLon</span> <span class="o">=</span> <span class="p">(</span><span class="n">lonW</span> <span class="o">+</span> <span class="n">lonE</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+
+<span class="n">projLccEur</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">LambertConformal</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="n">cLon</span><span class="p">,</span> <span class="n">central_latitude</span><span class="o">=</span><span class="n">cLat</span><span class="p">)</span>
+
+<span class="c1"># Second subplot</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projLccEur</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">lonW</span><span class="p">,</span> <span class="n">lonE</span><span class="p">,</span> <span class="n">latS</span><span class="p">,</span> <span class="n">latN</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">projPC</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAND</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">OCEAN</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAKES</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">STATES</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Europe&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/50m/physical/ne_50m_land.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/50m/physical/ne_50m_ocean.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/50m/physical/ne_50m_coastline.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/cartopy/io/__init__.py:260: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/50m/physical/ne_50m_lakes.zip
+  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
+</pre></div>
+</div>
+<img alt="../../_images/01_Cartopy_Intro_47_4.png" src="../../_images/01_Cartopy_Intro_47_4.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./core/cartopy"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../cartopy.html" title="previous page">Cartopy</a>
+    <a class='right-next' id="next-link" href="../datetime.html" title="next page">Datetime</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Project Pythia community<br/>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.
+We want your feedback! See the "open issue" and "suggest edit" buttons under the GitHub logo at the top of this page.
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
