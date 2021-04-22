@@ -1,4 +1,4 @@
-# Basic Python Syntax
+# Quickstart: what is Python?
 
 ```{note}
 This content is under construction!
@@ -11,3 +11,5 @@ We can use [Jupyter](jupyter) notebooks for much of the content, which will be r
 Here's a minimal example:
 
 - [Fun with Python](Hello)
+
+This is a test. This is only a test. Had this been...
