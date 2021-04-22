@@ -1,6 +1,6 @@
 # Python in the Terminal
 
-You'd like to learn Python in the terminal. Here we will cover:
+You'd like to learn to run Python in the terminal. Here we will cover:
 
 - Installing Python in the terminal
 - Running Python code in the terminal
