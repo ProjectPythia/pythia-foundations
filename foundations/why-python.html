@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fun with Python &#8212; Project Pythia Foundations</title>
+    <title>Why Python? &#8212; Project Pythia Foundations</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="How to run Python" href="how-to-run-python.html" />
-    <link rel="prev" title="Quickstart: what is Python?" href="basic-python.html" />
+    <link rel="next" title="Getting started with Python" href="getting-started-python.html" />
+    <link rel="prev" title="Overview" href="overview.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -120,23 +120,23 @@
    Overview
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="why-python.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Why Python?
   </a>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="getting-started-python.html">
    Getting started with Python
   </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2 current active collapsible-parent">
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="basic-python.html">
      Quickstart: what is Python?
     </a>
-    <ul class="current collapse-ul">
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="Hello.html">
        Fun with Python
       </a>
      </li>
@@ -308,9 +308,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/foundations/Hello.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/foundations/why-python.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -328,10 +328,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Ffoundations/Hello.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Ffoundations/why-python.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/foundations/Hello.ipynb"><button
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/foundations/why-python.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -346,28 +346,41 @@
 
             <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=tree/foundations/Hello.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#high-level-languages">
+   High level languages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreted-languages">
+   Interpreted languages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#object-oriented-languages">
+   Object Oriented languages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#open-source">
+   Open source
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
         </div>
     </div>
 </div>
@@ -376,23 +389,29 @@
         
               <div>
                 
-  <div class="section" id="fun-with-python">
-<h1>Fun with Python<a class="headerlink" href="#fun-with-python" title="Permalink to this headline">¶</a></h1>
-<p>A very minimal example for the Pythia Foundations collection.</p>
-<p>A Python program can be a single line:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello interweb&#39;</span><span class="p">)</span>
-</pre></div>
+  <div class="section" id="why-python">
+<h1>Why Python?<a class="headerlink" href="#why-python" title="Permalink to this headline">¶</a></h1>
+<p>You’re already here because you want to learn to use Python for your data analysis and visualizations.</p>
+<p><strong>Perhaps the #1 reason to use Python is because it is so widely used in the scientific community!</strong></p>
+<p>Python can be compared to other high-level, interpreted, object-oriented languages, but is especially great because it is free and open source!</p>
+<p>Want to know what these terms mean for you and your work? Read on!</p>
+<div class="section" id="high-level-languages">
+<h2>High level languages<a class="headerlink" href="#high-level-languages" title="Permalink to this headline">¶</a></h2>
+<p>Other high level languages include MatLab, IDL, and NCL. The advantage of high level languages is that the provide functions, data structures, and other utilities that are commonly used, which means it takes less code to get real work done. The disadvantage of high level languages is that they tend to obscure the low level aspects of the machine such as: memory use, how many floating point operations are happening, and other information related to performance. C, C++, and Fortran are all examples of lower level languages. The “higher” the level of language, the more computing fundamentals are abstracted.</p>
 </div>
+<div class="section" id="interpreted-languages">
+<h2>Interpreted languages<a class="headerlink" href="#interpreted-languages" title="Permalink to this headline">¶</a></h2>
+<p>Most of your work is probably already in interpreted languages if you’ve ever used IDL, NCL, or MatLab (interpreted languages are typically also high level). So you are already familiar with the advantages of this: you don’t have to worry about compiling or machine compatibility (it is portable). And you are probably familiar with their deficiencies: sometimes they can be slower than compiled languages and potentially more memory intensive.</p>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello interweb
-</pre></div>
+<div class="section" id="object-oriented-languages">
+<h2>Object Oriented languages<a class="headerlink" href="#object-oriented-languages" title="Permalink to this headline">¶</a></h2>
+<p>Objects are custom datatypes. For every custom datatype, you usually have a set of operations you might want to conduct. For example, if you have an object that is a list of numbers you might want to apply a mathematical operation, such as sum, onto this list object in bulk. Not every function can be applied to every datatype; it wouldn’t make sense to apply a logarithm to a string of letters or to capitalize a list of numbers. Data and the operations applied to them are grouped together into one object.</p>
 </div>
+<div class="section" id="open-source">
+<h2>Open source<a class="headerlink" href="#open-source" title="Permalink to this headline">¶</a></h2>
+<p>Python as a language is open source which means that there is a community of developers behind its codebase. Anyone can join the developer community and contribute to deciding the future of the language. When someone identifies gaps to Python’s abilities, they can write up the code to fill these gaps. The open source nature of Python means that Python as a language is very adaptable to shifting needs of the user community. This harks back to the idea that the wide-use of Python within the scientific community is a benefit to you! The large Python user base within your field has established high level community Python packages that are available to you in your workflow.</p>
+<p>Python is a language designed for rapid prototyping and efficient programming. It is easy to write new code quickly with less typing.</p>
 </div>
-</div>
-<p>Try it out in Binder and run it yourself!</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -420,8 +439,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="basic-python.html" title="previous page">Quickstart: what is Python?</a>
-    <a class='right-next' id="next-link" href="how-to-run-python.html" title="next page">How to run Python</a>
+    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">Overview</a>
+    <a class='right-next' id="next-link" href="getting-started-python.html" title="next page">Getting started with Python</a>
 
         </div>
         
