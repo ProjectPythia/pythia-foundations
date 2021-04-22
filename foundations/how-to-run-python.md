@@ -14,7 +14,7 @@ There is no single official platform for the Python language. Here we provide a 
 2. Jupyter notebooks, and
 3. IDEs (integrated development environment).
 
-We highly encourage the use of Jupyter notebooks; all of our tutorials will be in a Jupyter notebook format. Here we hope to provide you with enough information to understand the differences and similarities between each platform so that you can make the best chose for your work environment and learn along effectively, regardless of your Python platform preference.
+Here we hope to provide you with enough information to understand the differences and similarities between each platform so that you can make the best chose for your work environment and learn along effectively, regardless of your Python platform preference.
 
 In general, it is always best to test your programs in the same environment in which they will be run. The biggest factors to consider when choosing your platform are:
 
@@ -27,7 +27,7 @@ For learners who are familiar with basic [Linux commands](https://cheatography.c
 
 ### Jupyter Session
 
-Jupyter Notebooks are very popular among data scientists. It is a free, open-source, interactive tool that allows you to run Python code in "cells." This means that your workflow can alternate between code, output, and even Markdown-formatted explanatory sections that create an easy to follow analysis from start to finish. Jupyter notebooks are a great option for presentations or learning tools. For these reasons the lessons in this book will be taught via Jupyter notebooks.
+We highly encourage the use of Jupyter notebooks; a free, open-source, interactive tool that allows you to run Python code in "cells." This means that your workflow can alternate between code, output, and even Markdown-formatted explanatory sections that create an easy to follow analysis from start to finish. Jupyter notebooks are a great option for presentations or learning tools. For these reasons Jupyter is very popular among scientists.We highly recommend the use of Jupyter notebooks, and the majority of lessons in this book will be taught via Jupyter notebooks.
 
 ### Other IDEs
 
