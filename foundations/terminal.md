@@ -18,3 +18,51 @@ conda create --name pythia_foundations python
 You can test that this by running `python` in the command line.
 
 ## Running Python in the Terminal
+
+1. Create a directory to store your work. We'll use the name `pythia_foundations`.
+
+The following steps will assume you are using a Jupyter notebook. Open your Open a terminal.
+
+On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **Terminal**.
+
+1. Activate your Conda environment:
+
+   ```
+   $ conda activate pythia_foundations
+   ```
+
+2. Create a directory to store our work. Let's call it `pythia-foundations`.
+
+   ```
+   $ mkdir pythia-foundations
+   ```
+
+3. Go into the directory:
+
+   ```
+   $ cd pythia-foundations
+   ```
+
+4. Create a new Python file:
+
+   ```
+   $ touch mysci.py
+   ```
+
+5. And now that you've set up our workspace, edit the `mysci.py` script using your favorite text editor (nano, e.g.):
+
+   ```
+   nano mysci.py
+   ```
+
+6. Change the script to include the classic first command - printing, "Hello, world!".
+
+   ```python
+   print("Hello, world!")
+   ```
+
+7. In the terminal, execute your script:
+
+   ```
+   python mysci.py
+   ```
