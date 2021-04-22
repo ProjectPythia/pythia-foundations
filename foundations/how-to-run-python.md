@@ -25,6 +25,8 @@ In general, it is always best to test your programs in the same environment in w
 
 For learners who are familiar with basic [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/).and text editors, learning Python in the terminal is the quickest route straight to learning Python syntax without the covering the bells and whistles of your new platform. If you are runing Python on a super computer, through an HTTP request, or ssh tunneling you might want to consider learning in the terminal.
 
+[How to Run Python in the Terminal](terminal.md)
+
 ### Jupyter Session
 
 We highly encourage the use of Jupyter notebooks; a free, open-source, interactive tool that allows you to run Python code in "cells." This means that your workflow can alternate between code, output, and even Markdown-formatted explanatory sections that create an easy to follow analysis from start to finish. Jupyter notebooks are a great option for presentations or learning tools. For these reasons Jupyter is very popular among scientists.We highly recommend the use of Jupyter notebooks, and the majority of lessons in this book will be taught via Jupyter notebooks.
