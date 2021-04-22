@@ -6,11 +6,11 @@ You're already here because you want to learn to use Python for your data analys
 
 Python can be compared to other high-level, interpreted, object-oriented languages, but is especially great because it is free and open source!
 
-Unsure what these terms mean for you and your work:
+Want to know what these terms mean for you and your work? Read on!
 
 ## High level languages
 
-Other high level languages include MatLab, IDL, and NCL. The advantage of high level languages is that the provide functions, data structures, and other utilities that are commonly used, which means it takes less code to get real work done. The disadvantage of high level languages is that they tend to obscure the low level aspects of the machine such as: memory use, how many floating point operations are happening, and other information related to performance. C and C++ are all examples of lower level languages. The "higher" the level of language, the more computing fundamentals are abstracted.
+Other high level languages include MatLab, IDL, and NCL. The advantage of high level languages is that the provide functions, data structures, and other utilities that are commonly used, which means it takes less code to get real work done. The disadvantage of high level languages is that they tend to obscure the low level aspects of the machine such as: memory use, how many floating point operations are happening, and other information related to performance. C, C++, and Fortran are all examples of lower level languages. The "higher" the level of language, the more computing fundamentals are abstracted.
 
 ## Interpreted languages
 
