@@ -20,3 +20,5 @@ You should have a basic familiarity with Matplotlib prior to working through the
 
 Key features of cartopy are its object-oriented [projection definitions](https://scitools.org.uk/cartopy/docs/latest/crs/projections.html#cartopy-projections),
 and its ability to transform points, lines, vectors, polygons and images between those projections.
+
+Cartopy's cartographic features library includes shapefiles directly served by [Natural Earth](https://www.naturalearthdata.com/).
