@@ -31,6 +31,8 @@ For learners who are familiar with basic [Linux commands](https://cheatography.c
 
 We highly encourage the use of Jupyter notebooks; a free, open-source, interactive tool that allows you to run Python code in "cells." This means that your workflow can alternate between code, output, and even Markdown-formatted explanatory sections that create an easy to follow analysis from start to finish. Jupyter notebooks are a great option for presentations or learning tools. For these reasons Jupyter is very popular among scientists.We highly recommend the use of Jupyter notebooks, and the majority of lessons in this book will be taught via Jupyter notebooks.
 
+[How to Run Python in a Jupyter Session](jupyter.md)
+
 ### Other IDEs
 
 If you already code in other languages you might already have a favorite IDE that will work just as well in Python. [Spyder](https://www.spyder-ide.org) is a Python specific IDE that comes with the [Anaconda download](https://www.anaconda.com/products/individual). It is perhaps the most familiar IDE if you are coming from languages such as [Matlab](https://www.mathworks.com/products/matlab.html) that have a language specific platform and display a list of variables. [PyCharm](https://www.jetbrains.com/pycharm/) and [Visual Studio Code](https://code.visualstudio.com) are also popular IDEs. Many IDEs offer support for terminal execution, scripts, and Jupyter display. To learn about your specific IDE visit its official documentation.
