@@ -10,24 +10,24 @@ You'd like to learn to run Python in a Jupyter session. Here we will cover:
 To run a Jupyter session you will need to install some necessary packages into your Conda environment.
 You can install `miniconda`. You can do that by following the [instructions for you machine](https://docs.conda.io/en/latest/miniconda.html).
 
-Then create a Conda environment with Python installed.
+Then create a Conda environment with Python installed. In the terminal type:
 
 ```
 conda create --name pythia_foundations python jupyterlab nb_conda_kernels
 ```
 
-Or you can install the full [Anaconda](https://www.anaconda.com/products/individual), and select **LAUNCH** under the Jupyter panel in the GUI.
-
-![Anaconda Navigator](../images/Anaconda.png)
-
-Test that you have installed everything correctly by first activating your environment:
+Test that you have installed everything correctly by first activating your environment and then launching a Jupyter Lab session:
 
 ```
 conda activate pythia_foundations
 jupyter lab
 ```
 
-A new window should open automatically in your default browser. You can change the browser with (for example):
+Or you can install the full [Anaconda](https://www.anaconda.com/products/individual), and select **LAUNCH** under the Jupyter panel in the GUI.
+
+![Anaconda Navigator](../images/Anaconda.png)
+
+In both methods, a new window should open automatically in your default browser. You can change the browser when launching from the terminal with (for example):
 
 ```
 jupyter lab —browser=chrome
@@ -35,52 +35,46 @@ jupyter lab —browser=chrome
 
 ## Running Python in Jupyter
 
-You can test that this by running `python` in the command line.
+1. With your Conda environment activated and Jupyter session launched (see above),create a directory to store our work. Let's call it `pythia-foundations`.
 
-## Running Python in Jupyter
+   You can do this either in the GUI left side bar
 
-On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **Terminal**.
+   ![Jupyter GUI](../images/jupyter_gui.png)
 
-1. Activate your Conda environment:
+OR in the Jupyter terminal with:
 
-   ```
-   $ conda activate pythia_foundations
-   ```
+![Jupyter Terminal](../images/jupyter_terminal.png)
 
-2. Create a directory to store our work. Let's call it `pythia-foundations`.
+```
+$ mkdir pythia-foundations
+```
 
-   ```
-   $ mkdir pythia-foundations
-   ```
-
-3. Go into the directory:
+2. Go into the directory:
 
    ```
    $ cd pythia-foundations
    ```
 
-4. Create a new Python file:
+3. Create a new `.ipynb` file:
+
+   Again this can be done in the GUI or the terminal.
+
+   ![Jupyter GUI](../images/jupyter_gui.png)
 
    ```
    $ touch mysci.py
    ```
 
-5. And now that you've set up our workspace, edit the `mysci.py` script using your favorite text editor (nano, e.g.):
+4. And now that you've set up our workspace, edit the `mysci.ipynb` notebook by opening it in your Jupyter session:
 
-   ```
-   nano mysci.py
-   ```
+   ![Jupyter Notebook](../images/jupyter_notebook.png)
 
-6. Change the script to include the classic first command - printing, "Hello, world!".
+5. Change the script to include the classic first command - printing, "Hello, world!".
 
    ```python
    print("Hello, world!")
    ```
 
-7. In the terminal, execute your script:
+6. Run your cell with **SHIFT ENTER** and see that the results are printed below the cell.
 
-   ```
-   python mysci.py
-   ```
-
-**Congratulations!** You have just set up your first Python environment and run your first Python script in the terminal.
+**Congratulations!** You have just set up your first Python environment and run your first Python code in a Jupyter notebook.
