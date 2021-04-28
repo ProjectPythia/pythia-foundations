@@ -1,23 +1,43 @@
-# Python in the Terminal
+# Python in Jupyter
 
-You'd like to learn to run Python in the terminal. Here we will cover:
+You'd like to learn to run Python in a Jupyter session. Here we will cover:
 
-- Installing Python in the terminal
-- Running Python code in the terminal
+- Installing Python in Jupyter
+- Running Python code in Jupyter
 
-## Installing Python in the Terminal
+## Installing Python in Jupyter
 
-If running Python in the terminal, it is best to install Miniconda. You can do that by following the [instructions for you machine](https://docs.conda.io/en/latest/miniconda.html).
+To run a Jupyter session you will need to install some necessary packages into your Conda environment.
+You can install `miniconda`. You can do that by following the [instructions for you machine](https://docs.conda.io/en/latest/miniconda.html).
 
-Then create a Conda environment with Python installed by typing the following into your terminal:
+Then create a Conda environment with Python installed.
 
 ```
-conda create --name pythia_foundations python
+conda create --name pythia_foundations python jupyterlab nb_conda_kernels
 ```
+
+Or you can install the full [Anaconda](https://www.anaconda.com/products/individual), and select **LAUNCH** under the Jupyter panel in the GUI.
+
+![Anaconda Navigator](../images/Anaconda.png)
+
+Test that you have installed everything correctly by first activating your environment:
+
+```
+conda activate pythia_foundations
+jupyter lab
+```
+
+A new window should open automatically in your default browser. You can change the browser with (for example):
+
+```
+jupyter lab —browser=chrome
+```
+
+## Running Python in Jupyter
 
 You can test that this by running `python` in the command line.
 
-## Running Python in the Terminal
+## Running Python in Jupyter
 
 On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **Terminal**.
 
