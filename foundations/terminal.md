@@ -19,10 +19,6 @@ You can test that this by running `python` in the command line.
 
 ## Running Python in the Terminal
 
-1. Create a directory to store your work. We'll use the name `pythia_foundations`.
-
-The following steps will assume you are using a Jupyter notebook. Open your Open a terminal.
-
 On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **Terminal**.
 
 1. Activate your Conda environment:
@@ -66,3 +62,5 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
    ```
    python mysci.py
    ```
+
+**Congratulations!** You have just set up your first Python environment and run your first Python script in the terminal.
