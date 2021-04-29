@@ -12,7 +12,7 @@ If running Python in the terminal, it is best to install Miniconda. You can do t
 Then create a Conda environment with Python installed by typing the following into your terminal:
 
 ```
-conda create --name pythia_foundations python
+$ conda create --name pythia_foundations python
 ```
 
 You can test that this by running `python` in the command line.
@@ -48,7 +48,7 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
 5. And now that you've set up our workspace, edit the `mysci.py` script using your favorite text editor (nano, e.g.):
 
    ```
-   nano mysci.py
+   $ nano mysci.py
    ```
 
 6. Change the script to include the classic first command - printing, "Hello, world!".
@@ -60,7 +60,7 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
 7. In the terminal, execute your script:
 
    ```
-   python mysci.py
+   $ python mysci.py
    ```
 
 **Congratulations!** You have just set up your first Python environment and run your first Python script in the terminal.
