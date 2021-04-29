@@ -14,7 +14,10 @@ dependencies:
   - netcdf4
   - scipy
   - pyproj
+<<<<<<< HEAD
   - pip
   - pip:
       # works for regular pip packages
       - pythia-datasets
+=======
+>>>>>>> Update environment.yml
