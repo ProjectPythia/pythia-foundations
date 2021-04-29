@@ -11,6 +11,7 @@
 - part: Foundational skills
   chapters:
     - file: foundations/overview
+    - file: foundations/why-python
     - file: foundations/getting-started-python
       sections:
         - file: foundations/basic-python
@@ -36,6 +37,8 @@
     - file: core/numpy
     - file: core/matplotlib
     - file: core/cartopy
+      sections:
+        - file: core/cartopy/01_Cartopy_Intro
     - file: core/datetime
     - file: core/pandas
     - file: core/data-formats

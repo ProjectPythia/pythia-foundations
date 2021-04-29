@@ -5,10 +5,15 @@ title: Project Pythia Foundations
 author: The Project Pythia community
 logo: images/ProjectPythia_Logo_Final-01-Blue.png
 
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force
+  # See https://jupyterbook.org/content/execute.html
+  execute_notebooks: cache
+  #   "auto" should only execute those notebooks that don't have output in all cells.
+  #   "force" : force execution of all notebooks
+  #   "cache": Cache output of notebooks on each build.
+  timeout: 600
+  # Do not abort notebook execution for errors, since they may be intentional.
+  allow_errors: True
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -33,5 +38,7 @@ launch_buttons:
 html:
   use_issues_button: true
   use_repository_button: true
+  use_edit_page_button: true
   extra_footer: |
     All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.
+    We want your feedback! See the "open issue" and "suggest edit" buttons under the GitHub logo at the top of this page.
