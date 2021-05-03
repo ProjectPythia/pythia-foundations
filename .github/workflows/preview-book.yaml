@@ -28,7 +28,7 @@ jobs:
           rm -f book.zip
       - name: Deploy to Netlify
         id: netlify
-        uses: nwtgck/actions-netlify@v1.1.13
+        uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: ./_build/html
           production-deploy: false
