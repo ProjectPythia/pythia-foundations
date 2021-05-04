@@ -13,13 +13,13 @@ You can install `miniconda`. You can do that by following the [instructions for 
 Then create a Conda environment with Python installed. In the terminal type:
 
 ```
-$ conda create --name pythia_foundations python jupyterlab nb_conda_kernels
+$ conda create --name pythia_foundations_env python jupyterlab nb_conda_kernels
 ```
 
 Test that you have installed everything correctly by first activating your environment and then launching a Jupyter Lab session:
 
 ```
-$ conda activate pythia_foundations
+$ conda activate pythia_foundations_env
 $ jupyter lab
 ```
 

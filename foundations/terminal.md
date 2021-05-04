@@ -12,7 +12,7 @@ If running Python in the terminal, it is best to install Miniconda. You can do t
 Then create a Conda environment with Python installed by typing the following into your terminal:
 
 ```
-$ conda create --name pythia_foundations python
+$ conda create --name pythia_foundations_env python
 ```
 
 You can test that this by running `python` in the command line.
@@ -24,7 +24,7 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
 1. Activate your Conda environment:
 
    ```
-   $ conda activate pythia_foundations
+   $ conda activate pythia_foundations_env
    ```
 
 2. Create a directory to store our work. Let's call it `pythia-foundations`.
