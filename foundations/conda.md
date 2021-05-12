@@ -12,9 +12,9 @@ Package management is useful because you may want to update a package for one of
 
 We recommend you install Miniconda. You can do that by following the [instructions for you machine](https://docs.conda.io/en/latest/miniconda.html).
 
-Miniconda only comes with the package management system; it is a paired down version of Anaconda. 
+Miniconda only comes with the package management system; it is a paired down version of Anaconda.
 
-[Installing Anaconda](https://docs.anaconda.com/anaconda/install/) takes longer and takes up more disk space, but provides you with more functionality: Jupyter, Spyder (a Python-specific integrated development platform or IDE), as well as other immediately installed packages. The interface of Anaconda is great if you are uncomfortable with the terminal. 
+[Installing Anaconda](https://docs.anaconda.com/anaconda/install/) takes longer and takes up more disk space, but provides you with more functionality: Jupyter, Spyder (a Python-specific integrated development platform or IDE), as well as other immediately installed packages. The interface of Anaconda is great if you are uncomfortable with the terminal.
 
 Miniconda is recommended because it takes up less disc space when installing packages in isolated environments.
 
