@@ -29,7 +29,7 @@ For learners who are familiar with basic [Linux commands](https://cheatography.c
 
 ### Jupyter Notebooks
 
-We highly encourage the use of Jupyter notebooks; a free, open-source, interactive tool running inside a web browser that allows you to run Python code in "cells."  This means that your workflow can alternate between code, output, and even Markdown-formatted explanatory sections that create an easy to follow analysis or "computational narrative" from start to finish. Jupyter notebooks are a great option for presentations or learning tools. For these reasons Jupyter is very popular among scientists. Most lessons in this book will be taught via Jupyter notebooks.
+We highly encourage the use of Jupyter notebooks; a free, open-source, interactive tool running inside a web browser that allows you to run Python code in "cells." This means that your workflow can alternate between code, output, and even Markdown-formatted explanatory sections that create an easy to follow analysis or "computational narrative" from start to finish. Jupyter notebooks are a great option for presentations or learning tools. For these reasons Jupyter is very popular among scientists. Most lessons in this book will be taught via Jupyter notebooks.
 
 [How to Run Python in a Jupyter Session](jupyter.md)
 
