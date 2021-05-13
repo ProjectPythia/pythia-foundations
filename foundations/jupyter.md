@@ -41,7 +41,7 @@ jupyter lab —browser=chrome
 
    You can do this in the GUI left side bar by clicking the new-folder icon. If you prefer to use the command line you can access a terminal by clicking the icon under the "Other" heading in the Launcher.
 
-2. Create a new `mysci.ipynb` file within the pythia-foundations folder:
+2. Create a new `mysci.ipynb` file within the `pythia-foundations` folder:
 
    Do this in the GUI on the left side bar by clicking the "+" icon.
 
