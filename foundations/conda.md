@@ -17,6 +17,7 @@ Miniconda only comes with the `conda` package management system; it is a pared-d
 [Installing Anaconda](https://docs.anaconda.com/anaconda/install/) takes longer and takes up more disk space, but provides you with more functionality: Jupyter, Spyder (a Python-specific integrated development platform or IDE), as well as other immediately installed packages. The interface of Anaconda is great if you are uncomfortable with the terminal.
 
 We recommend Miniconda for two reasons:
+
 1. It's quicker and takes up less disk space.
 2. It encourages you to install only the packages you need in reproducible isolated environments for specific projects. This is generally a more robust way to work with open source tools.
 
@@ -32,7 +33,7 @@ To create a new Conda environment, type `conda create --name` and the name of yo
 conda create --name sample_environment python jupyterlab
 ```
 
-Once the environment is created, you need to *activate* it in the current terminal session (see below)
+Once the environment is created, you need to _activate_ it in the current terminal session (see below)
 
 It is a good idea to create new environments for different projects because since Python is open source, new versions of the tools are released very frequently. Isolated environments help guarantee that your script will use the same versions of packages and libraries and should run the same as you expect it to.
 
