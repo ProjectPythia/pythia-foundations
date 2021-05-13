@@ -25,7 +25,7 @@ $ jupyter lab
 
 Or you can install the full [Anaconda](https://www.anaconda.com/products/individual), and select **LAUNCH** under the Jupyter panel in the GUI.
 
-![Anaconda Navigaror](https://i.imgur.com/9Zy1YWM.png)
+![Anaconda Navigaror](../images/Anaconda.png)
 
 In both methods, a new window should open automatically in your default browser. You can change the browser when launching from the terminal with (for example):
 
@@ -37,7 +37,7 @@ jupyter lab —browser=chrome
 
 1. With your Conda environment activated and Jupyter session launched (see above), create a directory to store our work. Let's call it `pythia-foundations`.
 
-   ![Jupyter GUI](https://i.imgur.com/J5l9f9l.png)
+   ![Jupyter GUI](../images/jupyter_gui.png)
 
    You can do this in the GUI left side bar by clicking the new-folder icon. If you prefer to use the command line you can access a terminal by clicking the icon under the "Other" heading in the Launcher.
 
@@ -59,7 +59,7 @@ jupyter lab —browser=chrome
 
 4. Run your cell with **SHIFT ENTER** and see that the results are printed below the cell.
 
-   ![Jupyter - Hello World](https://i.imgur.com/InDEyPn.png)
+   ![Jupyter - Hello World](../images/mysci.png)
 
 **Congratulations!** You have just set up your first Python environment and run your first Python code in a Jupyter notebook.
 
