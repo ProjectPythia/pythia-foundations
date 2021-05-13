@@ -35,7 +35,7 @@ jupyter lab —browser=chrome
 
 ## Running Python in Jupyter
 
-1. With your Conda environment activated and Jupyter session launched (see above),create a directory to store our work. Let's call it `pythia-foundations`.
+1. With your Conda environment activated and Jupyter session launched (see above), create a directory to store our work. Let's call it `pythia-foundations`.
 
    ![Jupyter GUI](https://i.imgur.com/J5l9f9l.png)
 
@@ -45,9 +45,11 @@ jupyter lab —browser=chrome
 
    Do this in the GUI on the left side bar by clicking the "+" icon.
 
-   This will open a new launcher window where you can select the desired Python kernel under the "Notebooks" heading for your project. Typically you can select "Python 3" or the name of a specific kernel.
+   This will open a new launcher window where you can select a Python kernel under the "Notebooks" heading for your project. _You should see "Python 3" as in the screenshot above._ Depending on the details of your system, you might see some additional buttons with different kernels.
 
    Selecting a kernel will open a Jupyter notebook instance and add an untitled file to the left side bar navigator, which you can then rename to `mysci.ipynb`.
+
+   Select "Python 3" to use the Python version you just installed in the `pythia_foundations_env` conda environment.
 
 3. Change the first notebook cell to include the classic first command - printing, "Hello, world!".
 
@@ -60,3 +62,7 @@ jupyter lab —browser=chrome
    ![Jupyter - Hello World](https://i.imgur.com/InDEyPn.png)
 
 **Congratulations!** You have just set up your first Python environment and run your first Python code in a Jupyter notebook.
+
+## Saving your notebook and exiting
+
+_To be filled in..._
