@@ -15,7 +15,7 @@ Then create a Conda environment with Python installed by typing the following in
 $ conda create --name pythia_foundations_env python
 ```
 
-You can test that this by running `python` in the command line.
+You can test this by running `python` in the command line.
 
 ## Running Python in the Terminal
 
