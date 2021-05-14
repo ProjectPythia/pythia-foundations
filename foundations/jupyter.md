@@ -4,6 +4,7 @@ You'd like to learn to run Python in a Jupyter session. Here we will cover:
 
 - Installing Python in Jupyter
 - Running Python code in Jupyter
+- Saving your notebook and exiting
 
 ## Installing Python in Jupyter
 
