@@ -9,7 +9,10 @@ You'd like to learn to run Python in a Jupyter session. Here we will cover:
 ## Installing Python in Jupyter
 
 To run a Jupyter session you will need to install some necessary packages into your Conda environment.
+
 You can install `miniconda`. You can do that by following the [instructions for you machine](https://docs.conda.io/en/latest/miniconda.html).
+
+[Learn more about Conda here](conda.md)
 
 Then create a Conda environment with Jupyter Lab installed. In the terminal type:
 
