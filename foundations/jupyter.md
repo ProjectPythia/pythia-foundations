@@ -65,4 +65,8 @@ jupyter lab —browser=chrome
 
 ## Saving your notebook and exiting
 
-_To be filled in..._
+When you are done with your work, it is time to save and exit.
+
+To save your file, you can click the disc icon in the upper left Jupyter toolbar or use keyboard shortcuts.
+
+Jupyter allows you to close the broser tab without shutting down the server. It is important to click the "Shutdown" button on the dashboard. Then you can quit Jupyter in a number of ways: clicking the "Quit" button on the top right, typig `exit` into the terminal. Alternatively you can shutdown and exit the Jupyter session by typing `Ctrl-C` in the terminal and confirming that you do want to "shutdown this notebook server."
