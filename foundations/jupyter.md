@@ -29,7 +29,7 @@ $ jupyter lab
 
 Or you can install the full [Anaconda](https://www.anaconda.com/products/individual), and select **LAUNCH** under the Jupyter panel in the GUI.
 
-![Anaconda Navigaror](../images/Anaconda.png)
+![Anaconda Navigator](../images/Anaconda.png)
 
 In both methods, a new window should open automatically in your default browser. You can change the browser when launching from the terminal with (for example):
 

@@ -59,7 +59,11 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
    print("Hello, world!")
    ```
 
-7. In the terminal, execute your script:
+7. Save your file and exit the navigator.
+
+   How to do this is dependent on your chosen text editor. In Vim the command is `:wq`. in Nano it is `Ctrl + O` to save and `Ctrl + X` to exit (where you will be prompted if you want to save it, if modified).
+
+8. In the terminal, execute your script:
 
    ```
    $ python mysci.py

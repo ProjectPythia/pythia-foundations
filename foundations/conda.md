@@ -11,13 +11,13 @@ Here we will cover:
 
 ## What are Packages?
 
-A Python package is a collection of modules, which in turn, are essentially Python files that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules.
+A Python package is a collection of modules, which in turn, are essentially Python scripts that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules.
 
 Package management is useful because you may want to update a package for one of your projects, but keep it at the same version in other projects to ensure that they continue to run as expected.
 
 ## Installing Conda
 
-We recommend you install Miniconda. You can do that by following the [instructions for you machine](https://docs.conda.io/en/latest/miniconda.html).
+We recommend you install Miniconda. You can do that by following the [instructions for you machine](https://docs.conda.io/en/latest/miniconda.html.
 
 Miniconda only comes with the `conda` package management system; it is a pared-down version of the full Anaconda Python distribution.
 
@@ -42,7 +42,7 @@ conda create --name sample_environment python jupyterlab
 
 Once the environment is created, you need to _activate_ it in the current terminal session (see below)
 
-It is a good idea to create new environments for different projects because since Python is open source, new versions of the tools are released very frequently. Isolated environments help guarantee that your script will use the same versions of packages and libraries and should run the same as you expect it to.
+It is a good idea to create new environments for different projects because since Python is open source, new versions of the tools are released very frequently. Isolated environments help guarantee that your script will use the same versions of packages and libraries and should run the same as you expect it to. Similarly, it is best practice to NOT modify your `base` environment.
 
 ## Useful Conda commands
 

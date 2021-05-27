@@ -23,7 +23,7 @@ In general, it is always best to test your programs in the same environment in w
 
 ### Terminal
 
-For learners who are familiar with basic [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/) and text editors, running Python in the terminal is the quickest route straight to learning Python syntax without the covering the bells and whistles of a new platform. If you are running Python on a super computer, through an HTTP request, or ssh tunneling you might want to consider learning in the terminal.
+For learners who are familiar with basic [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/) and text editors (such as Vi/Cim or Nano), running Python in the terminal is the quickest route straight to learning Python syntax without the covering the bells and whistles of a new platform. If you are running Python on a super computer, through an HTTP request, or ssh tunneling you might want to consider learning in the terminal.
 
 [How to Run Python in the Terminal](terminal.md)
 
