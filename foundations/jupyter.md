@@ -70,9 +70,10 @@ When you are done with your work, it is time to save and exit.
 
 To save your file, you can click the disc icon in the upper left Jupyter toolbar or use keyboard shortcuts.
 
-Jupyter allows you to close the browser tab without shutting down the server. When you're done working on your notebook, *it's important to* ***click the "Shutdown" button*** *on the dashboard* to free up memory, especially on a shared system.
+Jupyter allows you to close the browser tab without shutting down the server. When you're done working on your notebook, _it's important to **click the "Shutdown" button** on the dashboard_ to free up memory, especially on a shared system.
 
 Then you can quit Jupyter by:
+
 - clicking the "Quit" button on the top right, or
 - typing `exit` into the terminal
 
