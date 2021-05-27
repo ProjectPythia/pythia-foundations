@@ -7,6 +7,8 @@
   chapters:
     - file: preamble/how-to-use
     - file: preamble/how-to-contribute
+      sections:
+        - file: preamble/template
 
 - part: Foundational skills
   chapters:
