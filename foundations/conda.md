@@ -1,8 +1,15 @@
-# Using the Conda Package Manager
+# Installnig and Managing Python with Conda
 
 Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s).
 
-## What are packages?
+Here we will cover:
+
+- What are packages?
+- Installing Conda
+- Creating a Conda environment
+- Useful Conda commands
+
+## What are Packages?
 
 A Python package is a collection of modules, which in turn, are essentially Python files that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules.
 
@@ -23,7 +30,7 @@ We recommend Miniconda for two reasons:
 
 Once you have `conda` via the Miniconda installer, the next step is to create an environment and install packages.
 
-## Creating a Conda environment
+## Creating a Conda Environment
 
 A conda environment is an interoperable collection of specific versions of packages or libraries that you install and use for a specific workflow. The conda package manager takes care of dependencies so everything works together in a predictable way. One huge advantage of using environments is that any changes you make to one environment will not affect your other environments at all, so you are much less likely to "break" something!
 
@@ -37,7 +44,9 @@ Once the environment is created, you need to _activate_ it in the current termin
 
 It is a good idea to create new environments for different projects because since Python is open source, new versions of the tools are released very frequently. Isolated environments help guarantee that your script will use the same versions of packages and libraries and should run the same as you expect it to.
 
-## Some other useful Conda commands:
+## Useful Conda commands
+
+Some other Conda commands that you will find useful include:
 
 - Activating a specific environment: `conda activate sample_environment`
 - Deactivating the current environment: `conda deactivate`

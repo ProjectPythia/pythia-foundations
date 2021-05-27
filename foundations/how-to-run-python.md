@@ -1,10 +1,10 @@
-# How to run Python
+# Installing and Running Python
 
 This section provides an overview of different ways to run Python code, and quickstart guides for
 
 - Choosing a Python platform
 - Installing and running Python on various local platforms
-- Running Python in the cloud
+- Installing and managing Python with Conda
 
 ## Choosing a Python Platform
 
@@ -37,6 +37,10 @@ We highly encourage the use of Jupyter notebooks; a free, open-source, interacti
 
 If you code in other languages you might already have a favorite IDE that will work just as well in Python. [Spyder](https://www.spyder-ide.org) is a Python specific IDE that comes with the [Anaconda download](https://www.anaconda.com/products/individual). It is perhaps the most familiar IDE if you are coming from languages such as [Matlab](https://www.mathworks.com/products/matlab.html) that have a language specific platform and display a list of variables. [PyCharm](https://www.jetbrains.com/pycharm/) and [Visual Studio Code](https://code.visualstudio.com) are also popular IDEs. Many IDEs offer support for terminal execution, scripts, and Jupyter display. To learn about your specific IDE visit its official documentation.
 
----
+_We recommend eventually learning how to develop and run Python code in each of these platforms._
 
-We recommend eventually learning how to develop and run Python code in each of these platforms.
+## Installing and managing Python with Conda
+
+Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). Conda is a vital component of the Python ecosystem, and understanding it is important regardless of the platform you chose to run your Python code.
+
+[Learn more about Conda here](conda.md)
