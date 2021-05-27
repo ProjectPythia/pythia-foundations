@@ -19,6 +19,8 @@
             - file: foundations/Hello
         - file: foundations/how-to-run-python
           sections:
+            - file: foundations/terminal
+            - file: foundations/jupyter
             - file: foundations/conda
     - file: foundations/getting-started-jupyter
       sections:
