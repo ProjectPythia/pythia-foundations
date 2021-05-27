@@ -1,4 +1,4 @@
-# Quickstart: what is Python?
+# Quickstart: zero to Python
 
 ```{note}
 This content is under construction!
