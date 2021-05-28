@@ -11,7 +11,7 @@ Here we will cover:
 
 ## What are Packages?
 
-A Python package is a collection of modules, which in turn, are essentially Python files that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules.
+A Python package is a collection of modules, which in turn, are essentially Python scripts that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules.
 
 Package management is useful because you may want to update a package for one of your projects, but keep it at the same version in other projects to ensure that they continue to run as expected.
 
@@ -42,19 +42,53 @@ conda create --name sample_environment python jupyterlab
 
 Once the environment is created, you need to _activate_ it in the current terminal session (see below)
 
-It is a good idea to create new environments for different projects because since Python is open source, new versions of the tools are released very frequently. Isolated environments help guarantee that your script will use the same versions of packages and libraries and should run the same as you expect it to.
+It is a good idea to create new environments for different projects because since Python is open source, new versions of the tools are released very frequently. Isolated environments help guarantee that your script will use the same versions of packages and libraries and should run the same as you expect it to. Similarly, it is best practice to NOT modify your `base` environment.
 
 ## Useful Conda commands
 
 Some other Conda commands that you will find useful include:
 
-- Activating a specific environment: `conda activate sample_environment`
-- Deactivating the current environment: `conda deactivate`
-- Checking what packages and versions are installed inside your current environment: `conda list`
-- Installing a new package into current environment: `conda install somepackage`
-- Installing a specific version of a package: `conda install somepackage=0.17`
-- Checking what conda environments you have: `conda env list`
-- Deleting an environment: `conda env remove --name sample_environment`
+- Activating a specific environment
+
+```
+conda activate sample_environment
+```
+
+- Deactivating the current environment
+
+```
+conda deactivate
+```
+
+- Checking what packages/versions are installed in the current environment
+
+```
+conda list
+```
+
+- Installing a new package into current environment
+
+```
+conda install somepackage
+```
+
+- Installing a specific version of a package
+
+```
+conda install somepackage=0.17
+```
+
+- Checking what conda environments you have
+
+```
+conda env list
+```
+
+- Deleting an environment
+
+```
+conda env remove --name sample_environment
+```
 
 Lots more information is in the [conda documentation](https://docs.conda.io/) or this handy [conda cheat sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
 
