@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How to run Python &#8212; Project Pythia Foundations</title>
+    <title>Installing and Running Python &#8212; Project Pythia Foundations</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -54,7 +54,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using the conda package manager" href="conda.html" />
+    <link rel="next" title="Python in the Terminal" href="terminal.html" />
     <link rel="prev" title="Fun with Python" href="Hello.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -146,12 +146,22 @@
    </li>
    <li class="toctree-l2 current active collapsible-parent">
     <a class="current reference internal" href="#">
-     How to run Python
+     Installing and Running Python
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
+      <a class="reference internal" href="terminal.html">
+       Python in the Terminal
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="jupyter.html">
+       Python in Jupyter
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="conda.html">
-       Using the conda package manager
+       Installing and Managing Python with Conda
       </a>
      </li>
     </ul>
@@ -351,6 +361,43 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choosing-a-python-platform">
+   Choosing a Python Platform
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#terminal">
+     Terminal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-notebooks">
+     Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-ides">
+     Other IDEs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-and-managing-python-with-conda">
+   Installing and managing Python with Conda
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
         </div>
     </div>
 </div>
@@ -359,18 +406,50 @@
         
               <div>
                 
-  <div class="section" id="how-to-run-python">
-<h1>How to run Python<a class="headerlink" href="#how-to-run-python" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This content is under construction!</p>
-</div>
-<p>This section will give an overview of different ways to run Python code, and quickstart guides for</p>
+  <div class="section" id="installing-and-running-python">
+<h1>Installing and Running Python<a class="headerlink" href="#installing-and-running-python" title="Permalink to this headline">¶</a></h1>
+<p>This section provides an overview of different ways to run Python code, and quickstart guides for</p>
 <ul class="simple">
-<li><p>Installing Python on a laptop with the conda package manager</p></li>
-<li><p>Running Python in the cloud</p></li>
+<li><p>Choosing a Python platform</p></li>
+<li><p>Installing and running Python on various local platforms</p></li>
+<li><p>Installing and managing Python with Conda</p></li>
 </ul>
+<div class="section" id="choosing-a-python-platform">
+<h2>Choosing a Python Platform<a class="headerlink" href="#choosing-a-python-platform" title="Permalink to this headline">¶</a></h2>
+<p>There is no single official platform for the Python language. Here we provide a brief rundown of 3 popular platforms:</p>
+<ol class="simple">
+<li><p>The terminal,</p></li>
+<li><p>Jupyter notebooks, and</p></li>
+<li><p>IDEs (integrated development environment).</p></li>
+</ol>
+<p>Here we hope to provide you with enough information to understand the differences and similarities between each platform so that you can make the best chose for your work environment and learn along effectively, regardless of your Python platform preference.</p>
+<p>In general, it is always best to test your programs in the same environment in which they will be run. The biggest factors to consider when choosing your platform are:</p>
+<ul class="simple">
+<li><p>What are you already comfortable with?</p></li>
+<li><p>What are the people around you using (peers, coworkers, instructors, etc)?</p></li>
+</ul>
+<div class="section" id="terminal">
+<h3>Terminal<a class="headerlink" href="#terminal" title="Permalink to this headline">¶</a></h3>
+<p>For learners who are familiar with basic <a class="reference external" href="https://cheatography.com/davechild/cheat-sheets/linux-command-line/">Linux commands</a> and text editors (such as Vi/Cim or Nano), running Python in the terminal is the quickest route straight to learning Python syntax without the covering the bells and whistles of a new platform. If you are running Python on a super computer, through an HTTP request, or ssh tunneling you might want to consider learning in the terminal.</p>
+<p><a class="reference internal" href="terminal.html"><span class="doc std std-doc">How to Run Python in the Terminal</span></a></p>
+</div>
+<div class="section" id="jupyter-notebooks">
+<h3>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h3>
+<p>We highly encourage the use of Jupyter notebooks; a free, open-source, interactive tool running inside a web browser that allows you to run Python code in “cells.” This means that your workflow can alternate between code, output, and even Markdown-formatted explanatory sections that create an easy to follow analysis or “computational narrative” from start to finish. Jupyter notebooks are a great option for presentations or learning tools. For these reasons Jupyter is very popular among scientists. Most lessons in this book will be taught via Jupyter notebooks.</p>
+<p><a class="reference internal" href="jupyter.html"><span class="doc std std-doc">How to Run Python in a Jupyter Session</span></a></p>
+</div>
+<div class="section" id="other-ides">
+<h3>Other IDEs<a class="headerlink" href="#other-ides" title="Permalink to this headline">¶</a></h3>
+<p>If you code in other languages you might already have a favorite IDE that will work just as well in Python. <a class="reference external" href="https://www.spyder-ide.org">Spyder</a> is a Python specific IDE that comes with the <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda download</a>. It is perhaps the most familiar IDE if you are coming from languages such as <a class="reference external" href="https://www.mathworks.com/products/matlab.html">Matlab</a> that have a language specific platform and display a list of variables. <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> and <a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a> are also popular IDEs. Many IDEs offer support for terminal execution, scripts, and Jupyter display. To learn about your specific IDE visit its official documentation.</p>
+<p><em>We recommend eventually learning how to develop and run Python code in each of these platforms.</em></p>
+</div>
+</div>
+<div class="section" id="installing-and-managing-python-with-conda">
+<h2>Installing and managing Python with Conda<a class="headerlink" href="#installing-and-managing-python-with-conda" title="Permalink to this headline">¶</a></h2>
+<p>Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). Conda is a vital component of the Python ecosystem, and understanding it is important regardless of the platform you chose to run your Python code.</p>
+<p><a class="reference internal" href="conda.html"><span class="doc std std-doc">Learn more about Conda here</span></a></p>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 
@@ -400,7 +479,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="Hello.html" title="previous page">Fun with Python</a>
-    <a class='right-next' id="next-link" href="conda.html" title="next page">Using the conda package manager</a>
+    <a class='right-next' id="next-link" href="terminal.html" title="next page">Python in the Terminal</a>
 
         </div>
         
