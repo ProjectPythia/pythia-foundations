@@ -17,7 +17,7 @@ Package management is useful because you may want to update a package for one of
 
 ## Installing Conda
 
-We recommend you install Miniconda. You can do that by following the [instructions for you machine](https://docs.conda.io/en/latest/miniconda.html.
+We recommend you install Miniconda. You can do that by following the [instructions for you machine](https://docs.conda.io/en/latest/miniconda.html).
 
 Miniconda only comes with the `conda` package management system; it is a pared-down version of the full Anaconda Python distribution.
 
@@ -48,13 +48,47 @@ It is a good idea to create new environments for different projects because sinc
 
 Some other Conda commands that you will find useful include:
 
-- Activating a specific environment: `conda activate sample_environment`
-- Deactivating the current environment: `conda deactivate`
-- Checking what packages and versions are installed inside your current environment: `conda list`
-- Installing a new package into current environment: `conda install somepackage`
-- Installing a specific version of a package: `conda install somepackage=0.17`
-- Checking what conda environments you have: `conda env list`
-- Deleting an environment: `conda env remove --name sample_environment`
+- Activating a specific environment
+
+```
+conda activate sample_environment
+```
+
+- Deactivating the current environment
+
+```
+conda deactivate
+```
+
+- Checking what packages/versions are installed in the current environment
+
+```
+conda list
+```
+
+- Installing a new package into current environment
+
+```
+conda install somepackage
+```
+
+- Installing a specific version of a package
+
+```
+conda install somepackage=0.17
+```
+
+- Checking what conda environments you have
+
+```
+conda env list
+```
+
+- Deleting an environment
+
+```
+conda env remove --name sample_environment
+```
 
 Lots more information is in the [conda documentation](https://docs.conda.io/) or this handy [conda cheat sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
 
