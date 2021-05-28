@@ -38,4 +38,10 @@ $ conda activate pythia-book-dev
 $ jupyter-book build .
 ```
 
+Finally, you can view the book by opening the file `_build/html/index.html` with your favorite web browser. On most platforms you can simply run:
+
+```
+open _build/html/index.html
+```
+
 All code is licensed under Apache 2.0 (including both infrastructure code and example code in the rendered Pythia Foundations book). All other content in Pythia Foundations is licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
