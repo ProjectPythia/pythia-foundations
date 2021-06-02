@@ -14,9 +14,7 @@
     - file: foundations/why-python
     - file: foundations/getting-started-python
       sections:
-        - file: foundations/basic-python
-          sections:
-            - file: foundations/Hello
+        - file: foundations/quickstart
         - file: foundations/how-to-run-python
           sections:
             - file: foundations/terminal
