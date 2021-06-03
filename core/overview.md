@@ -6,7 +6,7 @@ We suggest that new users start with the [Foundational Skills](../foundations/ov
 
 ## Packages
 
-- [Numpy](numpy): Core package for array computing, the workhorse of the Scientific Python stack
+- [NumPy](numpy): Core package for array computing, the workhorse of the Scientific Python stack
 - [Matplotlib](matplotlib): Basic plotting
 - [Cartopy](cartopy): Plotting on map projections
 - [Datetime](datetime): Dealing with time and calendar data
