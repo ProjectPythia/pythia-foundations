@@ -2,7 +2,7 @@
 
 This section contains cross-referenced tutorial material for foundational computing skills that are needed to work effectively with the open-source Scientific Python stack.
 
-_Mastering these topics first_ will allow a new user to get the most out the Python-specific material in the [Core Scientific Python Packages](../core/overview) section of the book!
+Familiarizing yourself with these topics first will allow a new user to get the most out the Python-specific material in the [Core Scientific Python Packages](../core/overview) section of the book!
 
 ## Topics
 
