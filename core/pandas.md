@@ -10,6 +10,6 @@ This content is under construction!
 
 From the [Pandas documentation](https://pandas.pydata.org/) "is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language."
 
-Pandas can be a useful library when working with tabular data, which is a common data type in the geosciences. You should have basic familiarity with NumPy and Matplotlib prior to working through the Pandas notebooks presented here.
+Pandas is a very powerful library for working with tabular data (i.e. anything you might put in a spreadsheet -- a common data type in the geosciences). It allows us to use labels for our data so that we can write expressive and robust code to manipulate the data.
 
 Key features of Pandas are the ability to read in tabular data, slice and dice data, and exploratory analysis tools native to the library.
