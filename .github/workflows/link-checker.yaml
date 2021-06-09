@@ -37,7 +37,7 @@ jobs:
           with open('_config.yml') as f:
             data = yaml.safe_load(f)
           data['execute']['execute_notebooks'] = 'off'
-          with open('_config.yml', 'w') as:
+          with open('_config.yml', 'w') as f:
             yaml.dump(data, f)
       - name: Check external links
         run: |
