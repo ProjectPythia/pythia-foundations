@@ -7,17 +7,20 @@
   chapters:
     - file: preamble/how-to-use
     - file: preamble/how-to-contribute
+      sections:
+        - file: preamble/template
 
 - part: Foundational skills
   chapters:
     - file: foundations/overview
+    - file: foundations/why-python
     - file: foundations/getting-started-python
       sections:
-        - file: foundations/basic-python
-          sections:
-            - file: foundations/Hello
+        - file: foundations/quickstart
         - file: foundations/how-to-run-python
           sections:
+            - file: foundations/terminal
+            - file: foundations/jupyter
             - file: foundations/conda
     - file: foundations/getting-started-jupyter
       sections:
@@ -36,9 +39,13 @@
     - file: core/numpy
     - file: core/matplotlib
     - file: core/cartopy
+      sections:
+        - file: core/cartopy/01_Cartopy_Intro
     - file: core/datetime
       sections:
         - file: core/datetime/datetime
     - file: core/pandas
+      sections:
+        - file: core/pandas/pandas_fullNotebook
     - file: core/data-formats
     - file: core/xarray
