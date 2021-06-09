@@ -41,5 +41,4 @@ jobs:
             yaml.dump(data, f)
       - name: Check external links
         run: |
-          cat _config.yml
           jupyter-book build --builder linkcheck .
