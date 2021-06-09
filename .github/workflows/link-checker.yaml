@@ -30,6 +30,16 @@ jobs:
           mamba-version: '*'
           use-mamba: true
 
+      - name: Disable notebook execution
+        shell: python
+        run: |
+          import yaml
+          with open('_config.yml') as f:
+            data = yaml.safe_load(f)
+          data['execute']['execute_notebooks'] = 'off'
+          with open('_config.yml', 'w') as:
+            yaml.dump(data, f)
       - name: Check external links
         run: |
+          cat _config.yml
           jupyter-book build --builder linkcheck .
