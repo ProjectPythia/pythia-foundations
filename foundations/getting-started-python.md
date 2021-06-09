@@ -1,12 +1,8 @@
 # Getting started with Python
 
-```{note}
-This content is under construction!
-```
-
-This is the starting point for a new user who wants to learn how to get started.
+**_New Python users, start here!_**
 
 ## Topics
 
-- [Quickstart: what is Python?](basic-python): Basic tutorials on the Python language
-- [Installing and Running Python](how-to-run-python): Instructions for installing Python on a laptop
+- [Quickstart: zero to Python](quickstart): For the impatient among us: run your first Python code in the cloud!
+- [Installing and Running Python](how-to-run-python): Detailed instructions for choosing a Python platform and getting up and running on a laptop, including using the conda package manager.
