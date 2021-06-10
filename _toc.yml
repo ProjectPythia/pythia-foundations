@@ -1,4 +1,4 @@
-# Table of content
+# Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 - file: landing-page
@@ -46,4 +46,6 @@
       sections:
         - file: core/pandas/pandas_fullNotebook
     - file: core/data-formats
+      sections:
+        - file: core/data-formats/netcdf-cf
     - file: core/xarray
