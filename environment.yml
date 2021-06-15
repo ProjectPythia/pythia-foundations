@@ -4,6 +4,7 @@ channels:
 dependencies:
   - python=3.8
   - jupyter-book
+  - jupyterlab
   - matplotlib
   - numpy
   - pre-commit
@@ -12,3 +13,7 @@ dependencies:
   - xarray
   - netcdf4
   - pyproj
+  - pip
+  - pip:
+      # works for regular pip packages
+      - pythia-datasets
