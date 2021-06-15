@@ -42,6 +42,8 @@
       sections:
         - file: core/cartopy/01_Cartopy_Intro
     - file: core/datetime
+      sections:
+        - file: core/datetime/datetime
     - file: core/pandas
       sections:
         - file: core/pandas/pandas_fullNotebook
