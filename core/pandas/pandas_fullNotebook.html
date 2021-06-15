@@ -256,10 +256,19 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../datetime.html">
    Datetime
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../datetime/datetime.html">
+     Times and dates in Python
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="../pandas.html">
@@ -584,6 +593,7 @@
     <b>Tip:</b> You will often see the nickname <code> pd </code> used as an abbreviation for pandas in the import statement, just like numpy is often imported as <code>np</code></div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pythia_datasets</span> <span class="kn">import</span> <span class="n">DATASETS</span>  <span class="c1"># Project Pythia&#39;s custom store of example data</span>
 </pre></div>
 </div>
 </div>
@@ -595,9 +605,24 @@
 <p><img alt="dataframe schematic" src="https://github.com/pandas-dev/pandas/raw/master/doc/source/_static/schemas/01_table_dataframe.svg" /></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">columns</span></code> that make up our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be lists, dictionaries, NumPy arrays, pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code>, or more. Within these <code class="docutils literal notranslate"><span class="pre">columns</span></code> our data can be any texts, numbers, dates and times, or many other data types you may have encountered in Python and NumPy. Shown here on the left in dark gray, our very first <code class="docutils literal notranslate"><span class="pre">column</span></code>  is uniquely referrred to as an <code class="docutils literal notranslate"><span class="pre">Index</span></code>, and this contains information characterizing each row of our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. Similar to any other <code class="docutils literal notranslate"><span class="pre">column</span></code>, the <code class="docutils literal notranslate"><span class="pre">index</span></code> can label our rows by text, numbers, <code class="docutils literal notranslate"><span class="pre">datetime</span></code>s (a popular one!), or more.</p>
 <p>Let’s take a look by reading in some <code class="docutils literal notranslate"><span class="pre">.csv</span></code> data, which comes from the NCDC teleconnections database, including various El Niño Southern Oscillation (ENSO) indices! [<a class="reference external" href="https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/">ref</a>].</p>
+<div class="alert alert-block alert-info">
+    <b>Tip:</b> Here we're getting the data from Project Pythia's custom library of example data, which we already imported above with <code>from pythia_datasets import DATASETS</code>. The <code>DATASETS.fetch()</code> method will automatically download and cache our example data file <code>enso_data.csv</code> locally.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="n">DATASETS</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">&#39;enso_data.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;enso_data.csv&#39; from &#39;https://github.com/ProjectPythia/pythia-datasets/raw/main/data/enso_data.csv&#39; to &#39;/home/runner/.cache/pythia-datasets&#39;.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once we have a valid path to a data file that Pandas knows how to read, we can open it like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;enso_data.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -832,7 +857,7 @@
 <p>Our indexing column isn’t particularly helpful currently. Pandas is clever! A few optional keyword arguments later, and…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;enso_data.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">df</span>
 </pre></div>
@@ -1350,7 +1375,7 @@ Name: Nino34, dtype: float64
 <span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
 
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">21</span><span class="o">-</span><span class="mi">865480</span><span class="n">cd374e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="mi">865480</span><span class="n">cd374e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;1982-01-01&quot;</span><span class="p">]</span>
 
 <span class="nn">/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/pandas/core/frame.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
@@ -1399,7 +1424,7 @@ Name: Nino34, dtype: float64
 <span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
 
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="n">ad11118bc8f3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">23</span><span class="o">-</span><span class="n">ad11118bc8f3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="nn">/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/pandas/core/frame.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
@@ -2252,7 +2277,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_fullNotebook_63_0.png" src="../../_images/pandas_fullNotebook_63_0.png" />
+<img alt="../../_images/pandas_fullNotebook_66_0.png" src="../../_images/pandas_fullNotebook_66_0.png" />
 </div>
 </div>
 <p>Before, we called <code class="docutils literal notranslate"><span class="pre">.plot()</span></code> which generated a single line plot. This is helpful, but there are other plots which can also help with understanding your data! Let’s try using a histogram to understand distributions…</p>
@@ -2264,7 +2289,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_fullNotebook_65_0.png" src="../../_images/pandas_fullNotebook_65_0.png" />
+<img alt="../../_images/pandas_fullNotebook_68_0.png" src="../../_images/pandas_fullNotebook_68_0.png" />
 </div>
 </div>
 <p>We can see some clear differences in the distributions, which is helpful! Another plot one might like to use would be a <code class="docutils literal notranslate"><span class="pre">boxplot</span></code>. Here, we replace <code class="docutils literal notranslate"><span class="pre">hist</span></code> with <code class="docutils literal notranslate"><span class="pre">box</span></code></p>
@@ -2275,7 +2300,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_fullNotebook_67_0.png" src="../../_images/pandas_fullNotebook_67_0.png" />
+<img alt="../../_images/pandas_fullNotebook_70_0.png" src="../../_images/pandas_fullNotebook_70_0.png" />
 </div>
 </div>
 <p>Here, we again see a clear difference in the distributions. These are not the only plots you can use within pandas! For more examples of plotting choices, check out <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">the pandas plot documentation</a></p>
@@ -2295,7 +2320,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_fullNotebook_70_0.png" src="../../_images/pandas_fullNotebook_70_0.png" />
+<img alt="../../_images/pandas_fullNotebook_73_0.png" src="../../_images/pandas_fullNotebook_73_0.png" />
 </div>
 </div>
 <p>This can be a great way to take a quick look at your data, but what if you wanted a more <em><strong>quantitative</strong></em> perspective? We can use the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method on our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>; this returns a table of summary statistics for all columns in the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></p>
@@ -2979,7 +3004,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_fullNotebook_82_0.png" src="../../_images/pandas_fullNotebook_82_0.png" />
+<img alt="../../_images/pandas_fullNotebook_85_0.png" src="../../_images/pandas_fullNotebook_85_0.png" />
 </div>
 </div>
 </div>
@@ -3640,7 +3665,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_fullNotebook_91_0.png" src="../../_images/pandas_fullNotebook_91_0.png" />
+<img alt="../../_images/pandas_fullNotebook_94_0.png" src="../../_images/pandas_fullNotebook_94_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3650,7 +3675,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_fullNotebook_92_0.png" src="../../_images/pandas_fullNotebook_92_0.png" />
+<img alt="../../_images/pandas_fullNotebook_95_0.png" src="../../_images/pandas_fullNotebook_95_0.png" />
 </div>
 </div>
 </div>
