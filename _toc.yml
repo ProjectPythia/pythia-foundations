@@ -6,9 +6,6 @@
 - part: Preamble
   chapters:
     - file: preamble/how-to-use
-    - file: preamble/how-to-contribute
-      sections:
-        - file: preamble/template
 
 - part: Foundational skills
   chapters:
@@ -51,3 +48,9 @@
         - file: core/pandas/pandas_fullNotebook
     - file: core/data-formats
     - file: core/xarray
+
+- part: Appendix
+  chapters:
+    - file: preamble/how-to-contribute
+      sections:
+        - file: preamble/template
