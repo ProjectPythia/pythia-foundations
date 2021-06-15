@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How to Contribute &#8212; Project Pythia Foundations</title>
+    <title>Pythia Foundations contributor’s guide &#8212; Project Pythia Foundations</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -105,7 +105,7 @@
  </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="current reference internal" href="#">
-   How to Contribute
+   Pythia Foundations contributor’s guide
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -386,6 +386,49 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contributing-a-new-jupyter-notebook">
+   Contributing a new Jupyter Notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-the-site">
+   Building the site
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-conda-environment">
+     Create a conda environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-pre-commit-hooks">
+     Install
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pre-commit
+      </span>
+     </code>
+     hooks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#building-the-book-locally">
+     Building the book locally
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
         </div>
     </div>
 </div>
@@ -394,18 +437,57 @@
         
               <div>
                 
-  <div class="section" id="how-to-contribute">
-<h1>How to Contribute<a class="headerlink" href="#how-to-contribute" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pythia-foundations-contributors-guide">
+<h1>Pythia Foundations contributor’s guide<a class="headerlink" href="#pythia-foundations-contributors-guide" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This content is under construction!</p>
 </div>
-<p>This site is built with <a class="reference external" href="https://jupyterbook.org">JupyterBook</a>.</p>
+<p>General information on how to contribute to any Project Pythia repository
+may be found <a class="reference external" href="https://projectpythia.org/pages/contributing.html">here</a>.</p>
 <p>A full contributor’s guide will appear here, cross-referencing our tutorials on open Pull Requests on GitHub.</p>
-<p>A simple way to comment on anything you find in this book is to use the “open issue” and “suggest edit” buttons under the GitHub Octocat logo at the top of each page. These links will take you to GitHub where the source material for the book is hosted. You’ll need a free (and broadly useful) GitHub account.</p>
+<p>A simple way to comment on anything you find in this book is to use the “open issue” and “suggest edit” buttons under the GitHub Octocat logo at the top of each page. These links will take you to GitHub where the source material for the book is hosted. You’ll need a free (and broadly useful) GitHub account. See
+the main <a class="reference external" href="https://projectpythia.org/pages/contributing.html">Project Pythia Contributor’s Guide</a>.</p>
+<div class="section" id="contributing-a-new-jupyter-notebook">
+<h2>Contributing a new Jupyter Notebook<a class="headerlink" href="#contributing-a-new-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
 <p>If you’d like to contribute a Jupyter Notebook to these materials, please reference our <a class="reference internal" href="template.html"><span class="doc std std-doc">template</span></a> viewable on the next page. This template is available to you in <code class="docutils literal notranslate"><span class="pre">preamble/template.ipynb</span></code> if you’ve cloned the repository, or available as a download <a class="reference external" href="https://github.com/ProjectPythia/pythia-foundations/raw/main/preamble/template.ipynb">directly from GitHub</a>.</p>
 <p>Basic instructions on how to build the JupyterBook locally can be found on the README page of the book’s <a class="reference external" href="https://github.com/ProjectPythia/pythia-foundations">source repository on GitHub</a>.</p>
+</div>
+<div class="section" id="building-the-site">
+<h2>Building the site<a class="headerlink" href="#building-the-site" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-a-conda-environment">
+<h3>Create a conda environment<a class="headerlink" href="#create-a-conda-environment" title="Permalink to this headline">¶</a></h3>
+<p>The first time you check out this repository, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda env update -f environment.yml
+</pre></div>
+</div>
+<p>This will create or update the dev environment (<code class="docutils literal notranslate"><span class="pre">pythia-book-dev</span></code>).</p>
+</div>
+<div class="section" id="install-pre-commit-hooks">
+<h3>Install <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> hooks<a class="headerlink" href="#install-pre-commit-hooks" title="Permalink to this headline">¶</a></h3>
+<p>This repository includes <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> hooks (defined in <code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code>). To activate/install these pre-commit hooks, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate pythia-book-dev
+$ pre-commit install
+</pre></div>
+</div>
+<p>This is also a one-time step.</p>
+<p><em>NOTE</em>: The <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> package is already installed via the <code class="docutils literal notranslate"><span class="pre">pythia-book-dev</span></code> conda environment.</p>
+</div>
+<div class="section" id="building-the-book-locally">
+<h3>Building the book locally<a class="headerlink" href="#building-the-book-locally" title="Permalink to this headline">¶</a></h3>
+<p>To build the book locally, run the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate pythia-book-dev
+$ jupyter-book build .
+</pre></div>
+</div>
+<p>Finally, you can view the book by opening the file <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> with your favorite web browser. On most platforms you can simply run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>All code is licensed under Apache 2.0 (including both infrastructure code and example code in the rendered Pythia Foundations book). All other content in Pythia Foundations is licensed under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p>
 <div class="toctree-wrapper compound">
+</div>
+</div>
 </div>
 </div>
 
