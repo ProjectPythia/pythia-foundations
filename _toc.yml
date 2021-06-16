@@ -6,9 +6,6 @@
 - part: Preamble
   chapters:
     - file: preamble/how-to-use
-    - file: preamble/how-to-contribute
-      sections:
-        - file: preamble/template
 
 - part: Foundational skills
   chapters:
@@ -58,4 +55,11 @@
         - file: core/data-formats/netcdf-cf
     - file: core/xarray
       sections:
-        - file: core/xarray/xarray-nc-cf
+        - file: core/xarray/xarray-intro
+
+- part: Appendix
+  chapters:
+    - file: appendix/how-to-contribute
+      sections:
+        - file: appendix/template
+        
