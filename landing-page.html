@@ -386,9 +386,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/landing-page.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/landing-page.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -409,7 +409,7 @@
             href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Flanding-page.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/landing-page.md"><button
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/landing-page.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -424,11 +424,45 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=tree/landing-page.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-community-learning-resource-for-python-based-computing-in-the-geosciences">
+   A community learning resource for Python-based computing in the geosciences
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
         </div>
     </div>
 </div>
@@ -439,11 +473,10 @@
                 
   <div class="section" id="project-pythia-foundations">
 <h1>Project Pythia Foundations<a class="headerlink" href="#project-pythia-foundations" title="Permalink to this headline">¶</a></h1>
-<p>Brought to you by <a class="reference external" href="https://projectpythia.org">Project Pythia</a>, this collection will cover the foundational skills everyone needs to get started with scientific computing in the open-source Python ecosystem.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This content is under construction!</p>
-</div>
+<div class="section" id="a-community-learning-resource-for-python-based-computing-in-the-geosciences">
+<h2>A community learning resource for Python-based computing in the geosciences<a class="headerlink" href="#a-community-learning-resource-for-python-based-computing-in-the-geosciences" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/pretty-earth.png"><img alt="Pretty Earth" src="_images/pretty-earth.png" style="width: 600px;" /></a>
+<p>Brought to you by <a class="reference external" href="https://projectpythia.org">Project Pythia</a>, this growing collection covers the foundational skills everyone needs to get started with scientific computing in the open-source Python ecosystem.</p>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -451,6 +484,7 @@
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 
