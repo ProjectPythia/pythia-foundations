@@ -234,10 +234,29 @@
    Overview
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../core/numpy.html">
    NumPy
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../core/numpy/numpy-basics.html">
+     NumPy Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../core/numpy/intermediate-numpy.html">
+     Intermediate NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../core/numpy/numpy-broadcasting.html">
+     NumPy Broadcasting
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../core/matplotlib.html">
@@ -497,14 +516,14 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#whats-next">
-     What’s Next?
+     What’s next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#resources-and-references">
-   Resources and References
+   Resources and references
   </a>
  </li>
 </ul>
@@ -531,6 +550,7 @@
 <hr class="docutils" />
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>If you have an introductory paragraph, lead with it here! Keep it short and tied to your material, then be sure to continue into the required list of topics below,</p>
 <ol class="simple">
 <li><p>This is a numbered list of the specific topics</p></li>
 <li><p>These should map approximately to your main sections of content</p></li>
@@ -567,7 +587,7 @@
 </tbody>
 </table>
 <ul class="simple">
-<li><p><strong>Experience level</strong>: with relevant packages or general self-assessed experience as <strong>beginner/user/expert</strong></p></li>
+<li><p><strong>Experience level</strong>: with relevant packages or general self-assessed experience as <strong>beginner/intermediate/advanced</strong></p></li>
 <li><p><strong>Time to learn</strong>: estimate in minutes or qualitatively as <strong>long/medium/short</strong></p></li>
 <li><p><strong>System requirements</strong>:</p>
 <ul>
@@ -635,8 +655,8 @@
 <div class="section" id="header-levels">
 <h6>header levels<a class="headerlink" href="#header-levels" title="Permalink to this headline">¶</a></h6>
 <p>as well <span class="math notranslate nohighlight">\(m = a * t / h\)</span> text! Similarly, you have access to other <span class="math notranslate nohighlight">\(\LaTeX\)</span> equation <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Typesetting%20Equations.html"><strong>functionality</strong></a> via MathJax (demo below from link),</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bc8e5125-8d45-43e7-82fd-a6412bfc2c07">
-<span class="eqno">(1)<a class="headerlink" href="#equation-bc8e5125-8d45-43e7-82fd-a6412bfc2c07" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ceb7e961-6a29-45e9-8e0a-74d217eaf90f">
+<span class="eqno">(1)<a class="headerlink" href="#equation-ceb7e961-6a29-45e9-8e0a-74d217eaf90f" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{x} &amp; = \sigma(y-x) \\
 \dot{y} &amp; = \rho x - y - xz \\
 \dot{z} &amp; = -\beta z + xy
@@ -674,12 +694,12 @@
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p>Add one final <code class="docutils literal notranslate"><span class="pre">---</span></code> marking the end of your body of content, and then conclude with a brief single paragraph summarizing at a high level the key pieces that were learned and how they tied to your objectives. Look to reiterate what the most important takeaways were.</p>
 <div class="section" id="whats-next">
-<h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline">¶</a></h3>
+<h3>What’s next?<a class="headerlink" href="#whats-next" title="Permalink to this headline">¶</a></h3>
 <p>Let Jupyter book tie this to the next (sequential) piece of content that people could move on to down below and in the sidebar. However, if this page uniquely enables your reader to tackle other nonsequential concepts throughout this book, or even external content, link to it here!</p>
 </div>
 </div>
 <div class="section" id="resources-and-references">
-<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline">¶</a></h2>
+<h2>Resources and references<a class="headerlink" href="#resources-and-references" title="Permalink to this headline">¶</a></h2>
 <p>Finally, be rigorous in your citations and references as necessary. Give credit where credit is due. Also, feel free to link to relevant external material, further reading, documentation, etc. Then you’re done! Give yourself a quick review, a high five, and send us a pull request. A few final notes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">&gt;</span> <span class="pre">Restart</span> <span class="pre">Kernel</span> <span class="pre">and</span> <span class="pre">Run</span> <span class="pre">All</span> <span class="pre">Cells...</span></code> to confirm that your notebook will cleanly run from start to finish</p></li>
