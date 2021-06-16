@@ -1,4 +1,4 @@
-# Table of content
+# Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 - file: landing-page
@@ -34,6 +34,10 @@
   chapters:
     - file: core/overview
     - file: core/numpy
+      sections:
+        - file: core/numpy/numpy-basics
+        - file: core/numpy/intermediate-numpy
+        - file: core/numpy/numpy-broadcasting
     - file: core/matplotlib
       sections:
         - file: core/matplotlib/matplotlib
@@ -47,6 +51,8 @@
       sections:
         - file: core/pandas/pandas_fullNotebook
     - file: core/data-formats
+      sections:
+        - file: core/data-formats/netcdf-cf
     - file: core/xarray
 
 - part: Appendix
