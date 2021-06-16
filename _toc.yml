@@ -1,4 +1,4 @@
-# Table of content
+# Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 - file: landing-page
@@ -42,12 +42,18 @@
         - file: core/numpy/intermediate-numpy
         - file: core/numpy/numpy-broadcasting
     - file: core/matplotlib
+      sections:
+        - file: core/matplotlib/matplotlib
     - file: core/cartopy
       sections:
         - file: core/cartopy/01_Cartopy_Intro
     - file: core/datetime
+      sections:
+        - file: core/datetime/datetime
     - file: core/pandas
       sections:
         - file: core/pandas/pandas_fullNotebook
     - file: core/data-formats
+      sections:
+        - file: core/data-formats/netcdf-cf
     - file: core/xarray

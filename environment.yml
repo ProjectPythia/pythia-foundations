@@ -11,3 +11,9 @@ dependencies:
   - sqlalchemy<1.4
   - cartopy
   - xarray
+  - netcdf4
+  - pyproj
+  - pip
+  - pip:
+      # works for regular pip packages
+      - pythia-datasets
