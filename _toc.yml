@@ -43,13 +43,13 @@
         - file: core/matplotlib/matplotlib
     - file: core/cartopy
       sections:
-        - file: core/cartopy/01_Cartopy_Intro
+        - file: core/cartopy/cartopy
     - file: core/datetime
       sections:
         - file: core/datetime/datetime
     - file: core/pandas
       sections:
-        - file: core/pandas/pandas_fullNotebook
+        - file: core/pandas/pandas
     - file: core/data-formats
       sections:
         - file: core/data-formats/netcdf-cf
