@@ -13,6 +13,7 @@ dependencies:
   - xarray
   - netcdf4
   - pyproj
+  - scipy
   - pip
   - pip:
       # works for regular pip packages
