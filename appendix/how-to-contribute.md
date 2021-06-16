@@ -14,7 +14,7 @@ the main [Project Pythia Contributor's Guide](https://projectpythia.org/pages/co
 
 ## Contributing a new Jupyter Notebook
 
-If you'd like to contribute a Jupyter Notebook to these materials, please reference our [template](template) viewable on the next page. This template is available to you in `preamble/template.ipynb` if you've cloned the repository, or available as a download [directly from GitHub](https://github.com/ProjectPythia/pythia-foundations/raw/main/preamble/template.ipynb).
+If you'd like to contribute a Jupyter Notebook to these materials, please reference our [template](template) viewable on the next page. This template is available to you in `appendix/template.ipynb` if you've cloned the repository, or available as a download [directly from GitHub](https://github.com/ProjectPythia/pythia-foundations/raw/main/appendix/template.ipynb).
 
 Basic instructions on how to build the JupyterBook locally can be found on the README page of the book's [source repository on GitHub](https://github.com/ProjectPythia/pythia-foundations).
 

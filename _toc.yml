@@ -51,6 +51,6 @@
 
 - part: Appendix
   chapters:
-    - file: preamble/how-to-contribute
+    - file: appendix/how-to-contribute
       sections:
-        - file: preamble/template
+        - file: appendix/template
