@@ -55,7 +55,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Project Pythia Notebook Template" href="template.html" />
-    <link rel="prev" title="How to Use This Book" href="how-to-use.html" />
+    <link rel="prev" title="Xarray" href="../core/xarray.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -97,25 +97,11 @@
   Preamble
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="how-to-use.html">
+  <a class="reference internal" href="../preamble/how-to-use.html">
    How to Use This Book
   </a>
- </li>
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="current reference internal" href="#">
-   Pythia Foundations contributor’s guide
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="template.html">
-     Project Pythia Notebook Template
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -332,6 +318,27 @@
   </a>
  </li>
 </ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="current reference internal" href="#">
+   Pythia Foundations contributor’s guide
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="template.html">
+     Project Pythia Notebook Template
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
 
 </nav> <!-- To handle the deprecated key -->
 
@@ -371,7 +378,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/preamble/how-to-contribute.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/appendix/how-to-contribute.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -391,10 +398,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fpreamble/how-to-contribute.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fappendix/how-to-contribute.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/preamble/how-to-contribute.md"><button
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/appendix/how-to-contribute.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -478,7 +485,7 @@ may be found <a class="reference external" href="https://projectpythia.org/pages
 the main <a class="reference external" href="https://projectpythia.org/pages/contributing.html">Project Pythia Contributor’s Guide</a>.</p>
 <div class="section" id="contributing-a-new-jupyter-notebook">
 <h2>Contributing a new Jupyter Notebook<a class="headerlink" href="#contributing-a-new-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
-<p>If you’d like to contribute a Jupyter Notebook to these materials, please reference our <a class="reference internal" href="template.html"><span class="doc std std-doc">template</span></a> viewable on the next page. This template is available to you in <code class="docutils literal notranslate"><span class="pre">preamble/template.ipynb</span></code> if you’ve cloned the repository, or available as a download <a class="reference external" href="https://github.com/ProjectPythia/pythia-foundations/raw/main/preamble/template.ipynb">directly from GitHub</a>.</p>
+<p>If you’d like to contribute a Jupyter Notebook to these materials, please reference our <a class="reference internal" href="template.html"><span class="doc std std-doc">template</span></a> viewable on the next page. This template is available to you in <code class="docutils literal notranslate"><span class="pre">appendix/template.ipynb</span></code> if you’ve cloned the repository, or available as a download <a class="reference external" href="https://github.com/ProjectPythia/pythia-foundations/raw/main/appendix/template.ipynb">directly from GitHub</a>.</p>
 <p>Basic instructions on how to build the JupyterBook locally can be found on the README page of the book’s <a class="reference external" href="https://github.com/ProjectPythia/pythia-foundations">source repository on GitHub</a>.</p>
 </div>
 <div class="section" id="building-the-site">
@@ -532,7 +539,7 @@ $ jupyter-book build .
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./preamble"
+            path: "./appendix"
         },
         predefinedOutput: true
     }
@@ -544,7 +551,7 @@ $ jupyter-book build .
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="how-to-use.html" title="previous page">How to Use This Book</a>
+    <a class='left-prev' id="prev-link" href="../core/xarray.html" title="previous page">Xarray</a>
     <a class='right-next' id="next-link" href="template.html" title="next page">Project Pythia Notebook Template</a>
 
         </div>
