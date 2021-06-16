@@ -12,8 +12,8 @@ dependencies:
   - cartopy
   - xarray
   - netcdf4
-  - scipy
   - pyproj
+  - scipy
   - pip
   - pip:
       # works for regular pip packages
