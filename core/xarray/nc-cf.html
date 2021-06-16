@@ -1,0 +1,1019 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to Climate and Forecasting Metadata Conventions &#8212; Project Pythia Foundations</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/ProjectPythia_Logo_Final-01-Blue.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Project Pythia Foundations</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   Project Pythia Foundations
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/how-to-use.html">
+   How to Use This Book
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Foundational skills
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../foundations/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../foundations/why-python.html">
+   Why Python?
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../foundations/getting-started-python.html">
+   Getting started with Python
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/quickstart.html">
+     Quickstart: zero to Python
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../foundations/how-to-run-python.html">
+     Installing and Running Python
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../foundations/terminal.html">
+       Python in the Terminal
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../foundations/jupyter.html">
+       Python in Jupyter
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../foundations/conda.html">
+       Installing and Managing Python with Conda
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../foundations/getting-started-jupyter.html">
+   Getting started with Jupyter
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/jupyter-notebooks.html">
+     What is a Jupyter notebook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/how-to-run-notebooks.html">
+     Running a Jupyter notebook: local vs. remote
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/markdown.html">
+     Formatted text in the notebook with Markdown
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../foundations/getting-started-github.html">
+   Getting started with GitHub
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/what-is-github.html">
+     What is GitHub?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/git.html">
+     Basic version control with git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github-pull-request.html">
+     Opening a Pull Request on GitHub
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Core Scientific Python packages
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../numpy.html">
+   NumPy
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../numpy/numpy-basics.html">
+     NumPy Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../numpy/intermediate-numpy.html">
+     Intermediate NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../numpy/numpy-broadcasting.html">
+     NumPy Broadcasting
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../matplotlib.html">
+   Matplotlib
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matplotlib/matplotlib.html">
+     Matplotlib Basics
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../cartopy.html">
+   Cartopy
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cartopy/01_Cartopy_Intro.html">
+     Introduction to Cartopy
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../datetime.html">
+   Datetime
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../datetime/datetime.html">
+     Times and dates in Python
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../pandas.html">
+   Pandas
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pandas/pandas_fullNotebook.html">
+     Introduction to Pandas
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../data-formats.html">
+   Data Formats
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data-formats/netcdf-cf.html">
+     NetCDF and CF: The Basics
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../xarray.html">
+   Xarray
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="xarray-intro.html">
+     Introduction to Xarray
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../appendix/how-to-contribute.html">
+   Pythia Foundations contributor’s guide
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/template.html">
+     Project Pythia Notebook Template
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/core/xarray/nc-cf.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ProjectPythia/pythia-foundations"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/xarray/nc-cf.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/xarray/nc-cf.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=tree/core/xarray/nc-cf.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gridded-data">
+   Gridded Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convert-arrays-into-xarray-dataset">
+     Convert arrays into Xarray Dataset
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coordinate-variables">
+     Coordinate variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#auxilliary-coordinates">
+     Auxilliary Coordinates
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coordinate-system-information">
+     Coordinate System Information
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#write-to-netcdf">
+     Write to NetCDF
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduction-to-climate-and-forecasting-metadata-conventions">
+<h1>Introduction to Climate and Forecasting Metadata Conventions<a class="headerlink" href="#introduction-to-climate-and-forecasting-metadata-conventions" title="Permalink to this headline">¶</a></h1>
+<p>In order to better enable reproducible data and research, the Climate and Forecasting (CF) metadata convention was created to have proper metadata in atmospheric data files. In the remainder of this notebook, we will introduce the CF data model and discuss some netCDF implementation details to consider when deciding how to write data with CF and netCDF. We will cover gridded data in this notebook, with more in depth examples provided in the full <a class="reference external" href="https://github.com/Unidata/python-workshop/blob/master/notebooks/CF%20Conventions/NetCDF%20and%20CF%20-%20The%20Basics.ipynb">CF notebook</a>. Xarray makes the creation of netCDFs with proper metadata simple and straightforward, so we will use that, instead of the netCDF-Python library.</p>
+<p>This assumes a basic understanding of netCDF.</p>
+<p><a name="gridded"></a></p>
+<div class="section" id="gridded-data">
+<h2>Gridded Data<a class="headerlink" href="#gridded-data" title="Permalink to this headline">¶</a></h2>
+<p>Let’s say we’re working with some numerical weather forecast model output. Let’s walk through the steps necessary to store this data in netCDF, using the Climate and Forecasting metadata conventions to ensure that our data are available to as many tools as possible.</p>
+<p>To start, let’s assume the following about our data:</p>
+<ul class="simple">
+<li><p>It corresponds to forecast three dimensional temperature at several times</p></li>
+<li><p>The native coordinate system of the model is on a regular grid that represents the Earth on a Lambert conformal projection.</p></li>
+</ul>
+<p>We’ll also go ahead and generate some arrays of data below to get started:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import some useful Python tools</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="c1"># Twelve hours of hourly output starting at 22Z today</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="mi">22</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">microsecond</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">times</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">start</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="n">h</span><span class="p">)</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">13</span><span class="p">)])</span>
+
+<span class="c1"># 3km spacing in x and y</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">150</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Standard pressure levels in hPa</span>
+<span class="n">press</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">925</span><span class="p">,</span> <span class="mi">850</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">250</span><span class="p">])</span>
+
+<span class="n">temps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">times</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">press</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">c4ad81d258ab</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Twelve hours of hourly output starting at 22Z today</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">start</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="mi">22</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">microsecond</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="nn">----&gt; 6 times = np.array([start + timedelta(hours=h) for h</span> in <span class="ni">range</span><span class="nt">(13)])</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> 
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># 3km spacing in x and y</span>
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Time coordinates must contain a <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute with a string value with a form similar to <code class="docutils literal notranslate"><span class="pre">'seconds</span> <span class="pre">since</span> <span class="pre">2019-01-06</span> <span class="pre">12:00:00.00'</span></code>. ‘seconds’, ‘minutes’, ‘hours’, and ‘days’ are the most commonly used units for time. Due to the variable length of months and years, they are not recommended.</p>
+<p>Before we can write data, we need to first need to convert our list of Python <code class="docutils literal notranslate"><span class="pre">datetime</span></code> instances to numeric values. We can use the <code class="docutils literal notranslate"><span class="pre">cftime</span></code> library to make this easy to convert using the unit string as defined above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cftime</span> <span class="kn">import</span> <span class="n">date2num</span>
+
+<span class="n">time_units</span> <span class="o">=</span> <span class="s1">&#39;hours since {:%Y-%m-</span><span class="si">%d</span><span class="s1"> 00:00}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">times</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">time_vals</span> <span class="o">=</span> <span class="n">date2num</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">time_units</span><span class="p">)</span>
+<span class="n">time_vals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">6</span><span class="n">df58794f5a2</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">cftime</span> <span class="kn">import</span> <span class="n">date2num</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">time_units</span> <span class="o">=</span> <span class="s1">&#39;hours since {:%Y-%m-</span><span class="si">%d</span><span class="s1"> 00:00}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">times</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">time_vals</span> <span class="o">=</span> <span class="n">date2num</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">time_units</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">time_vals</span>
+
+<span class="ne">NameError</span>: name &#39;times&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can create the <code class="docutils literal notranslate"><span class="pre">forecast_time</span></code> variable just as we did before for the other coordinate variables:</p>
+<div class="section" id="convert-arrays-into-xarray-dataset">
+<h3>Convert arrays into Xarray Dataset<a class="headerlink" href="#convert-arrays-into-xarray-dataset" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span>
+    <span class="p">{</span><span class="s1">&#39;temperature&#39;</span><span class="p">:</span> <span class="p">([</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">temps</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;Kelvin&#39;</span><span class="p">})},</span>
+    <span class="n">coords</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;x_dist&#39;</span><span class="p">:</span> <span class="p">([</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;km&#39;</span><span class="p">}),</span>
+        <span class="s1">&#39;y_dist&#39;</span><span class="p">:</span> <span class="p">([</span><span class="s1">&#39;y&#39;</span><span class="p">],</span> <span class="n">y</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;km&#39;</span><span class="p">}),</span>
+        <span class="s1">&#39;pressure&#39;</span><span class="p">:</span> <span class="p">([</span><span class="s1">&#39;z&#39;</span><span class="p">],</span> <span class="n">press</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;hPa&#39;</span><span class="p">}),</span>
+        <span class="s1">&#39;forecast_time&#39;</span><span class="p">:</span> <span class="p">([</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="n">times</span><span class="p">),</span>
+    <span class="p">},</span>
+<span class="p">)</span>
+<span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">93</span><span class="n">cbb5a39d9e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="p">{</span><span class="s1">&#39;temperature&#39;</span><span class="p">:</span> <span class="p">([</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">temps</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;Kelvin&#39;</span><span class="p">})},</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">coords</span><span class="o">=</span><span class="p">{</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="s1">&#39;x_dist&#39;</span><span class="p">:</span> <span class="p">([</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;km&#39;</span><span class="p">}),</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="s1">&#39;y_dist&#39;</span><span class="p">:</span> <span class="p">([</span><span class="s1">&#39;y&#39;</span><span class="p">],</span> <span class="n">y</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;km&#39;</span><span class="p">}),</span>
+
+<span class="ne">NameError</span>: name &#39;xr&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Due to how xarray handles time units, we need to encode the units in the <code class="docutils literal notranslate"><span class="pre">forecast_time</span></code> coordinate.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">forecast_time</span><span class="o">.</span><span class="n">encoding</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">time_units</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">dc77d1f8045b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span><span class="o">.</span><span class="n">forecast_time</span><span class="o">.</span><span class="n">encoding</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">time_units</span>
+
+<span class="ne">NameError</span>: name &#39;time_units&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we look at our data variable, we can see the units printed out, so they were attached properly!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">temperature</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">e19865245ec8</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span><span class="o">.</span><span class="n">temperature</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’re going to start by adding some global attribute metadata. These are recommendations from the standard (not required), but they’re easy to add and help users keep the data straight, so let’s go ahead and do it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;Conventions&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;CF-1.7&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Forecast model run&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;nc.institution&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Unidata&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;WRF-1.5&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;history&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">())</span> <span class="o">+</span> <span class="s1">&#39; Python&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;references&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;comment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="n">db84bc50b7f5</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;Conventions&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;CF-1.7&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Forecast model run&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;nc.institution&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Unidata&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;WRF-1.5&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;history&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">())</span> <span class="o">+</span> <span class="s1">&#39; Python&#39;</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also add attributes to this variable to define metadata. The CF conventions require a <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute to be set for all variables that represent a dimensional quantity. The value of this attribute needs to be parsable by the UDUNITS library. Here we have already set it to a value of <code class="docutils literal notranslate"><span class="pre">'Kelvin'</span></code>. We also set the standard (optional) attributes of <code class="docutils literal notranslate"><span class="pre">long_name</span></code> and <code class="docutils literal notranslate"><span class="pre">standard_name</span></code>. The former contains a longer description of the variable, while the latter comes from a controlled vocabulary in the CF conventions. This allows users of data to understand, in a standard fashion, what a variable represents. If we had missing values, we could also set the <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> attribute to an appropriate value.</p>
+<blockquote>
+<div><p><strong>NASA Dataset Interoperability Recommendations:</strong></p>
+<p>Section 2.2 - Include Basic CF Attributes</p>
+<p>Include where applicable: <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">long_name</span></code>, <code class="docutils literal notranslate"><span class="pre">standard_name</span></code>, <code class="docutils literal notranslate"><span class="pre">valid_min</span></code> / <code class="docutils literal notranslate"><span class="pre">valid_max</span></code>, <code class="docutils literal notranslate"><span class="pre">scale_factor</span></code> / <code class="docutils literal notranslate"><span class="pre">add_offset</span></code> and others.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;standard_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;air_temperature&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Forecast air temperature&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;missing_value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">9999</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">temperature</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mf">9e447386</span><span class="n">aa8f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;standard_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;air_temperature&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">ds</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Forecast air temperature&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ds</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;missing_value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">9999</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">ds</span><span class="o">.</span><span class="n">temperature</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="coordinate-variables">
+<h3>Coordinate variables<a class="headerlink" href="#coordinate-variables" title="Permalink to this headline">¶</a></h3>
+<p>To properly orient our data in time and space, we need to go beyond dimensions (which define common sizes and alignment) and include values along these dimensions, which are called “Coordinate Variables”. Generally, these are defined by creating a one dimensional variable with the same name as the respective dimension.</p>
+<p>To start, we define variables which define our <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinate values. These variables include <code class="docutils literal notranslate"><span class="pre">standard_name</span></code>s which allow associating them with projections (more on this later) as well as an optional <code class="docutils literal notranslate"><span class="pre">axis</span></code> attribute to make clear what standard direction this coordinate refers to.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;axis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span>  <span class="c1"># Optional</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;standard_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;projection_x_coordinate&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;x-coordinate in projected coordinate system&#39;</span>
+
+<span class="n">ds</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;axis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>  <span class="c1"># Optional</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;standard_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;projection_y_coordinate&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;y-coordinate in projected coordinate system&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">1</span><span class="n">eeeb2f1a1e2</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;axis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span>  <span class="c1"># Optional</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">ds</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;standard_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;projection_x_coordinate&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ds</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;x-coordinate in projected coordinate system&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ds</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;axis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>  <span class="c1"># Optional</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>We also define a coordinate variable <code class="docutils literal notranslate"><span class="pre">pressure</span></code> to reference our data in the vertical dimension. The <code class="docutils literal notranslate"><span class="pre">standard_name</span></code> of <code class="docutils literal notranslate"><span class="pre">'air_pressure'</span></code> is sufficient to identify this coordinate variable as the vertical axis, but let’s go ahead and specify the <code class="docutils literal notranslate"><span class="pre">axis</span></code> as well. We also specify the attribute <code class="docutils literal notranslate"><span class="pre">positive</span></code> to indicate whether the variable increases when going up or down. In the case of pressure, this is technically optional.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">pressure</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;axis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Z&#39;</span>  <span class="c1"># Optional</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">pressure</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;standard_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;air_pressure&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">pressure</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;positive&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;down&#39;</span>  <span class="c1"># Optional</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="n">ecae9714b327</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span><span class="o">.</span><span class="n">pressure</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;axis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Z&#39;</span>  <span class="c1"># Optional</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">ds</span><span class="o">.</span><span class="n">pressure</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;standard_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;air_pressure&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ds</span><span class="o">.</span><span class="n">pressure</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;positive&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;down&#39;</span>  <span class="c1"># Optional</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">forecast_time</span><span class="p">[</span><span class="s1">&#39;axis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;T&#39;</span>  <span class="c1"># Optional</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">forecast_time</span><span class="p">[</span><span class="s1">&#39;standard_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span>  <span class="c1"># Optional</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">forecast_time</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">28</span><span class="n">bd156a67d6</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span><span class="o">.</span><span class="n">forecast_time</span><span class="p">[</span><span class="s1">&#39;axis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;T&#39;</span>  <span class="c1"># Optional</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">ds</span><span class="o">.</span><span class="n">forecast_time</span><span class="p">[</span><span class="s1">&#39;standard_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span>  <span class="c1"># Optional</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ds</span><span class="o">.</span><span class="n">forecast_time</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="auxilliary-coordinates">
+<h3>Auxilliary Coordinates<a class="headerlink" href="#auxilliary-coordinates" title="Permalink to this headline">¶</a></h3>
+<p>Our data are still not CF-compliant because they do not contain latitude and longitude information, which is needed to properly locate the data. To solve this, we need to add variables with latitude and longitude. These are called “auxillary coordinate variables”, not because they are extra, but because they are not simple one dimensional variables.</p>
+<p>Below, we first generate longitude and latitude values from our projected coordinates using the <code class="docutils literal notranslate"><span class="pre">pyproj</span></code> library.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyproj</span> <span class="kn">import</span> <span class="n">Proj</span>
+
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">lcc</span> <span class="o">=</span> <span class="n">Proj</span><span class="p">({</span><span class="s1">&#39;proj&#39;</span><span class="p">:</span> <span class="s1">&#39;lcc&#39;</span><span class="p">,</span> <span class="s1">&#39;lon_0&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">105</span><span class="p">,</span> <span class="s1">&#39;lat_0&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mf">6371000.0</span><span class="p">,</span> <span class="s1">&#39;lat_1&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">})</span>
+<span class="n">lon</span><span class="p">,</span> <span class="n">lat</span> <span class="o">=</span> <span class="n">lcc</span><span class="p">(</span><span class="n">X</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">Y</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">inverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="n">c603fb549360</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pyproj</span> <span class="kn">import</span> <span class="n">Proj</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">lcc</span> <span class="o">=</span> <span class="n">Proj</span><span class="p">({</span><span class="s1">&#39;proj&#39;</span><span class="p">:</span> <span class="s1">&#39;lcc&#39;</span><span class="p">,</span> <span class="s1">&#39;lon_0&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">105</span><span class="p">,</span> <span class="s1">&#39;lat_0&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mf">6371000.0</span><span class="p">,</span> <span class="s1">&#39;lat_1&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">})</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span> <span class="o">=</span> <span class="n">lcc</span><span class="p">(</span><span class="n">X</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">Y</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">inverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can create the needed variables. Both are dimensioned on <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">x</span></code> and are two-dimensional. The longitude variable is identified as actually containing such information by its required units of <code class="docutils literal notranslate"><span class="pre">'degrees_east'</span></code>, as well as the optional <code class="docutils literal notranslate"><span class="pre">'longitude'</span></code> <code class="docutils literal notranslate"><span class="pre">standard_name</span></code> attribute. The case is the same for latitude, except the units are <code class="docutils literal notranslate"><span class="pre">'degrees_north'</span></code> and the <code class="docutils literal notranslate"><span class="pre">standard_name</span></code> is <code class="docutils literal notranslate"><span class="pre">'latitude'</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="p">([</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">lon</span><span class="p">))</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="p">([</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">lat</span><span class="p">))</span>
+<span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">602</span><span class="n">c60cae24f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="p">([</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">lon</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="p">([</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">lat</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ds</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;degrees_east&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;standard_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;longitude&#39;</span>  <span class="c1"># Optional</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;longitude&#39;</span>
+
+<span class="n">ds</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;degrees_north&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;standard_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;latitude&#39;</span>  <span class="c1"># Optional</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;latitude&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">13</span><span class="o">-</span><span class="mi">96910</span><span class="n">ea73011</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;degrees_east&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">ds</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;standard_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;longitude&#39;</span>  <span class="c1"># Optional</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ds</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;longitude&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ds</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;degrees_north&#39;</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>With the variables created, we identify these variables as containing coordinates for the <code class="docutils literal notranslate"><span class="pre">Temperature</span></code> variable by setting the <code class="docutils literal notranslate"><span class="pre">coordinates</span></code> value to a space-separated list of the names of the auxilliary coordinate variables:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">14</span><span class="o">-</span><span class="mi">6</span><span class="n">f4a4004dcca</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="coordinate-system-information">
+<h3>Coordinate System Information<a class="headerlink" href="#coordinate-system-information" title="Permalink to this headline">¶</a></h3>
+<p>With our data specified on a Lambert conformal projected grid, it would be good to include this information in our metadata. We can do this using a “grid mapping” variable. This uses a dummy scalar variable as a namespace for holding all of the required information. Relevant variables then reference the dummy variable with their <code class="docutils literal notranslate"><span class="pre">grid_mapping</span></code> attribute.</p>
+<p>Below we create a variable and set it up for a Lambert conformal conic projection on a spherical earth. The <code class="docutils literal notranslate"><span class="pre">grid_mapping_name</span></code> attribute describes which of the CF-supported grid mappings we are specifying. The names of additional attributes vary between the mappings.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;lambert_projection&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">()</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">lambert_projection</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;grid_mapping_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lambert_conformal_conic&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">lambert_projection</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;standard_parallel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">25.0</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">lambert_projection</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;latitude_of_projection_origin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">40.0</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">lambert_projection</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;longitude_of_central_meridian&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mf">105.0</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">lambert_projection</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;semi_major_axis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">6371000.0</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">lambert_projection</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">15</span><span class="o">-</span><span class="mi">9</span><span class="n">af893f659c6</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;lambert_projection&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">ds</span><span class="o">.</span><span class="n">lambert_projection</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;grid_mapping_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lambert_conformal_conic&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ds</span><span class="o">.</span><span class="n">lambert_projection</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;standard_parallel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">25.0</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">ds</span><span class="o">.</span><span class="n">lambert_projection</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;latitude_of_projection_origin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">40.0</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ds</span><span class="o">.</span><span class="n">lambert_projection</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;longitude_of_central_meridian&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mf">105.0</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we created the variable, all that’s left is to set the <code class="docutils literal notranslate"><span class="pre">grid_mapping</span></code> attribute on our <code class="docutils literal notranslate"><span class="pre">Temperature</span></code> variable to the name of our dummy variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;grid_mapping&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lambert_projection&#39;</span>  <span class="c1"># or proj_var.name</span>
+<span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">16</span><span class="o">-</span><span class="mi">96</span><span class="n">f3eb3aa098</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;grid_mapping&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lambert_projection&#39;</span>  <span class="c1"># or proj_var.name</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">ds</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="write-to-netcdf">
+<h3>Write to NetCDF<a class="headerlink" href="#write-to-netcdf" title="Permalink to this headline">¶</a></h3>
+<p>Xarray has built-in support for a few flavors of netCDF. Here we’ll write a netCDF4 file from our Dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;test_netcdf.nc&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;NETCDF4&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="n">ee021817f20b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;test_netcdf.nc&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;NETCDF4&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ncdump -h test_netcdf.nc
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ncdump: test_netcdf.nc: No such file or directory
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./core/xarray"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Project Pythia community<br/>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.
+We want your feedback! See the "open issue" and "suggest edit" buttons under the GitHub logo at the top of this page.
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
