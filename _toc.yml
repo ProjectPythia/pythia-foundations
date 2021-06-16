@@ -37,6 +37,10 @@
   chapters:
     - file: core/overview
     - file: core/numpy
+      sections:
+        - file: core/numpy/numpy-basics
+        - file: core/numpy/intermediate-numpy
+        - file: core/numpy/numpy-broadcasting
     - file: core/matplotlib
       sections:
         - file: core/matplotlib/matplotlib
