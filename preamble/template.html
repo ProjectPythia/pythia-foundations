@@ -295,10 +295,19 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../core/data-formats.html">
    Data Formats
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../core/data-formats/netcdf-cf.html">
+     NetCDF and CF: The Basics
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../core/xarray.html">
@@ -591,6 +600,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello world!
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="a-content-subsection">
 <h3>A content subsection<a class="headerlink" href="#a-content-subsection" title="Permalink to this headline">¶</a></h3>
@@ -621,8 +635,8 @@
 <div class="section" id="header-levels">
 <h6>header levels<a class="headerlink" href="#header-levels" title="Permalink to this headline">¶</a></h6>
 <p>as well <span class="math notranslate nohighlight">\(m = a * t / h\)</span> text! Similarly, you have access to other <span class="math notranslate nohighlight">\(\LaTeX\)</span> equation <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Typesetting%20Equations.html"><strong>functionality</strong></a> via MathJax (demo below from link),</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0cf73124-8d94-4862-86ad-34d0e616ffd0">
-<span class="eqno">(1)<a class="headerlink" href="#equation-0cf73124-8d94-4862-86ad-34d0e616ffd0" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bc8e5125-8d45-43e7-82fd-a6412bfc2c07">
+<span class="eqno">(1)<a class="headerlink" href="#equation-bc8e5125-8d45-43e7-82fd-a6412bfc2c07" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{x} &amp; = \sigma(y-x) \\
 \dot{y} &amp; = \rho x - y - xz \\
 \dot{z} &amp; = -\beta z + xy
@@ -687,16 +701,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "conda-env-pythia-book-dev-py"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "conda-env-pythia-book-dev-py",
+            kernelName: "python3",
             path: "./preamble"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'conda-env-pythia-book-dev-py'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
