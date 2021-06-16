@@ -290,7 +290,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../pandas/pandas_fullNotebook.html">
+    <a class="reference internal" href="../pandas/pandas.html">
      Introduction to Pandas
     </a>
    </li>
@@ -318,7 +318,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../xarray/xarray-intro.html">
+    <a class="reference internal" href="../xarray/xarray.html">
      Introduction to Xarray
     </a>
    </li>
@@ -387,7 +387,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/core/cartopy/01_Cartopy_Intro.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/core/cartopy/cartopy.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -407,10 +407,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/cartopy/01_Cartopy_Intro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/cartopy/cartopy.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/cartopy/01_Cartopy_Intro.ipynb"><button
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/cartopy/cartopy.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -430,7 +430,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=tree/core/cartopy/01_Cartopy_Intro.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=tree/core/cartopy/cartopy.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -600,7 +600,7 @@
         
               <div>
                 
-  <div class="cell tag_hide_input docutils container">
+  <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  Suppress warnings issued by Cartopy when downloading data files</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
@@ -657,7 +657,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01_Cartopy_Intro_0_0.png" src="../../_images/01_Cartopy_Intro_0_0.png" />
+<img alt="../../_images/cartopy_0_0.png" src="../../_images/cartopy_0_0.png" />
 </div>
 </div>
 <div class="section" id="introduction-to-cartopy">
@@ -690,8 +690,8 @@
 </tbody>
 </table>
 <ul class="simple">
-<li><p><strong>Experience level</strong>: <strong>beginner</strong></p></li>
-<li><p><strong>Time to learn</strong>: <strong>medium</strong></p></li>
+<li><p><strong>Experience level</strong>: beginner</p></li>
+<li><p><strong>Time to learn</strong>: medium</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -726,7 +726,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01_Cartopy_Intro_13_0.png" src="../../_images/01_Cartopy_Intro_13_0.png" />
+<img alt="../../_images/cartopy_13_0.png" src="../../_images/cartopy_13_0.png" />
 </div>
 </div>
 <p>Although the figure seems empty, it has in fact been georeferenced, using one of Cartopy’s map projections that is provided by Cartopy’s <code class="docutils literal notranslate"><span class="pre">crs</span></code> (coordinate reference system) class. We can now add in cartographic features, in the form of <em>shapefiles</em>, to our subplot. One of them is <code class="docutils literal notranslate"><span class="pre">coastlines</span></code>, which is a callable <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code> method that can be plotted directly on our subplot.</p>
@@ -737,7 +737,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7f8bb85ca100&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7fcd0c5cecd0&gt;
 </pre></div>
 </div>
 </div>
@@ -753,7 +753,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01_Cartopy_Intro_17_0.png" src="../../_images/01_Cartopy_Intro_17_0.png" />
+<img alt="../../_images/cartopy_17_0.png" src="../../_images/cartopy_17_0.png" />
 </div>
 </div>
 </div>
@@ -769,7 +769,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7f8bd4205c70&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7fcd0c5c3190&gt;
 </pre></div>
 </div>
 </div>
@@ -782,7 +782,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01_Cartopy_Intro_23_0.png" src="../../_images/01_Cartopy_Intro_23_0.png" />
+<img alt="../../_images/cartopy_23_0.png" src="../../_images/cartopy_23_0.png" />
 </div>
 </div>
 </div>
@@ -809,7 +809,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Mollweide Projection&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/01_Cartopy_Intro_27_1.png" src="../../_images/01_Cartopy_Intro_27_1.png" />
+<img alt="../../_images/cartopy_27_1.png" src="../../_images/cartopy_27_1.png" />
 </div>
 </div>
 <div class="section" id="add-in-the-cartographic-shapefiles">
@@ -823,7 +823,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01_Cartopy_Intro_29_0.png" src="../../_images/01_Cartopy_Intro_29_0.png" />
+<img alt="../../_images/cartopy_29_0.png" src="../../_images/cartopy_29_0.png" />
 </div>
 </div>
 </div>
@@ -837,7 +837,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01_Cartopy_Intro_31_0.png" src="../../_images/01_Cartopy_Intro_31_0.png" />
+<img alt="../../_images/cartopy_31_0.png" src="../../_images/cartopy_31_0.png" />
 </div>
 </div>
 </div>
@@ -856,7 +856,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01_Cartopy_Intro_33_0.png" src="../../_images/01_Cartopy_Intro_33_0.png" />
+<img alt="../../_images/cartopy_33_0.png" src="../../_images/cartopy_33_0.png" />
 </div>
 </div>
 </div>
@@ -897,7 +897,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01_Cartopy_Intro_38_0.png" src="../../_images/01_Cartopy_Intro_38_0.png" />
+<img alt="../../_images/cartopy_38_0.png" src="../../_images/cartopy_38_0.png" />
 </div>
 </div>
 <div class="admonition alert alert-info">
@@ -922,7 +922,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01_Cartopy_Intro_41_0.png" src="../../_images/01_Cartopy_Intro_41_0.png" />
+<img alt="../../_images/cartopy_41_0.png" src="../../_images/cartopy_41_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -943,7 +943,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01_Cartopy_Intro_42_0.png" src="../../_images/01_Cartopy_Intro_42_0.png" />
+<img alt="../../_images/cartopy_42_0.png" src="../../_images/cartopy_42_0.png" />
 </div>
 </div>
 <div class="admonition alert alert-info">
@@ -992,7 +992,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01_Cartopy_Intro_49_0.png" src="../../_images/01_Cartopy_Intro_49_0.png" />
+<img alt="../../_images/cartopy_49_0.png" src="../../_images/cartopy_49_0.png" />
 </div>
 </div>
 </div>
@@ -1049,7 +1049,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01_Cartopy_Intro_51_0.png" src="../../_images/01_Cartopy_Intro_51_0.png" />
+<img alt="../../_images/cartopy_51_0.png" src="../../_images/cartopy_51_0.png" />
 </div>
 </div>
 </div>
@@ -1098,7 +1098,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01_Cartopy_Intro_53_0.png" src="../../_images/01_Cartopy_Intro_53_0.png" />
+<img alt="../../_images/cartopy_53_0.png" src="../../_images/cartopy_53_0.png" />
 </div>
 </div>
 </div>

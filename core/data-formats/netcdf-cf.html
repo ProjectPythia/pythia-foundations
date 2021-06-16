@@ -262,7 +262,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../cartopy/01_Cartopy_Intro.html">
+    <a class="reference internal" href="../cartopy/cartopy.html">
      Introduction to Cartopy
     </a>
    </li>
@@ -290,7 +290,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../pandas/pandas_fullNotebook.html">
+    <a class="reference internal" href="../pandas/pandas.html">
      Introduction to Pandas
     </a>
    </li>
@@ -318,7 +318,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../xarray/xarray-intro.html">
+    <a class="reference internal" href="../xarray/xarray.html">
      Introduction to Xarray
     </a>
    </li>
@@ -531,11 +531,13 @@
   <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#whats-next">
-   What’s Next?
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#whats-next">
+     What’s Next?
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#resources-and-references">
@@ -560,12 +562,11 @@
 <hr class="docutils" />
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This notebook will introduce you to the basics of Climate and Forecasting (CF) metadata for netCDF data files. Along with an introduction to netCDF, we will introduce the CF data model and discuss some netCDF implementation details to consider when deciding how to write data with CF and netCDF. We will cover the following,</p>
 <ol class="simple">
-<li><p><a class="reference external" href="#gridded">Gridded Data</a></p></li>
-<li><p><a class="reference external" href="#obs">Observation Data</a></p></li>
-<li><p><a class="reference external" href="#references">References</a></p></li>
+<li><p>Demonstrating gridded data</p></li>
+<li><p>Demonstrating observational data</p></li>
 </ol>
-<p>This notebook will introduce you to the basics of Climate and Forecasting (CF) metadata for netCDF data files. Along with an introduction to netCDF, we will introduce the CF data model and discuss some netCDF implementation details to consider when deciding how to write data with CF and netCDF. We will cover gridded data as well as in situ data, and touch on storing geometries data in CF.</p>
 </div>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
@@ -577,19 +578,19 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="../datetime.html"><span class="doc std std-doc">Datetime</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../numpy/numpy-basics.html"><span class="doc std std-doc">Numpy Basics</span></a></p></td>
 <td><p>Necessary</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../numpy.html"><span class="doc std std-doc">Numpy</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../datetime.html"><span class="doc std std-doc">Datetime</span></a></p></td>
 <td><p>Necessary</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p><strong>Experience level</strong>: <strong>beginner</strong></p></li>
-<li><p><strong>Time to learn</strong>: <strong>medium</strong></p></li>
+<li><p><strong>Experience level</strong>: beginner</p></li>
+<li><p><strong>Time to learn</strong>: medium</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -679,11 +680,8 @@
 </pre></div>
 </div>
 <div class="admonition alert alert-info">
-<p class="admonition-title">Note</p>
-<p>Info</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>This plain-text representation is known as netCDF Common Data Format Language, or &lt;strong&gt;CDL&lt;/strong&gt;.
-</pre></div>
-</div>
+<p class="admonition-title">Info</p>
+<p>This plain-text representation is known as netCDF Common Data Format Language, or <strong>CDL</strong>.</p>
 </div>
 <p>Next, before adding variables to the file to define each of the data fields in this file, we need to define the dimensions that exist in this data set. We set each of <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">pressure</span></code> to the size of the corresponding array. We set <code class="docutils literal notranslate"><span class="pre">forecast_time</span></code> to be an “unlimited” dimension, which allows the dataset to grow along that dimension if we write additional data to it later.</p>
 <div class="cell docutils container">
@@ -703,7 +701,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
     title: Forecast model run
     institution: Unidata
     source: WRF-1.5
-    history: 2021-06-16 18:01:42.950110 Python
+    history: 2021-06-16 18:40:43.519104 Python
     references: 
     comment: 
     dimensions(sizes): forecast_time(0), x(101), y(67), pressure(7)
@@ -1265,13 +1263,11 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p>We have discussed and created examples of <strong>netCDF</strong> <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>s, both gridded and in-situ, that follow the Climate and Forecast (<strong>CF</strong>) Conventions. These <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>s are <em>self-describing</em>, in that their attributes, or <em>metadata</em>, are included. Other libraries in the Python scientific software ecosystem, such as <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and <code class="docutils literal notranslate"><span class="pre">MetPy</span></code> can thus easily read in (and write to) and analyze these <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>s.</p>
-</div>
-<hr class="docutils" />
 <div class="section" id="whats-next">
-<h2>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline">¶</a></h2>
+<h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline">¶</a></h3>
 <p>In subsequent notebooks, we will work with netCDF <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>s culled from “real-life” model and in-situ sources.</p>
-<hr class="docutils" />
 <p><a name="references"></a></p>
+</div>
 </div>
 <div class="section" id="resources-and-references">
 <h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline">¶</a></h2>

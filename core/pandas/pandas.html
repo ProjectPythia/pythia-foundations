@@ -262,7 +262,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../cartopy/01_Cartopy_Intro.html">
+    <a class="reference internal" href="../cartopy/cartopy.html">
      Introduction to Cartopy
     </a>
    </li>
@@ -318,7 +318,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../xarray/xarray-intro.html">
+    <a class="reference internal" href="../xarray/xarray.html">
      Introduction to Xarray
     </a>
    </li>
@@ -387,7 +387,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/core/pandas/pandas_fullNotebook.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/core/pandas/pandas.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -407,10 +407,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/pandas/pandas_fullNotebook.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/pandas/pandas.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/pandas/pandas_fullNotebook.ipynb"><button
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/pandas/pandas.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -430,7 +430,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=tree/core/pandas/pandas_fullNotebook.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=tree/core/pandas/pandas.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -464,8 +464,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#import-library">
-   Import library
+  <a class="reference internal nav-link" href="#imports">
+   Imports
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -507,18 +507,13 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#numpy-like-interval-slices">
-     Numpy-like Interval Slices
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#label-based-slicing">
-     Label-based Slicing
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#another-way-of-slicing">
-     Another Way of Slicing
+    <a class="reference internal nav-link" href="#indexing-a-series">
+     Indexing a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Series
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -536,6 +531,16 @@
       </span>
      </code>
      to index
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extending-to-the-dataframe">
+     Extending to the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       DataFrame
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -598,11 +603,13 @@
   <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#whats-next">
-   What’s Next?
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#whats-next">
+     What’s Next?
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#resources-and-references">
@@ -624,6 +631,7 @@
   <center><img src="https://github.com/pandas-dev/pandas/raw/master/web/pandas/static/img/pandas.svg" alt="pandas Logo" style="width: 800px;"/></center>
 <div class="section" id="introduction-to-pandas">
 <h1>Introduction to Pandas<a class="headerlink" href="#introduction-to-pandas" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
@@ -634,19 +642,37 @@
 </div>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>NumPy</p></li>
-<li><p>Matplotlib</p></li>
-</ol>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concepts</p></th>
+<th class="head"><p>Importance</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../../foundations/quickstart.html"><span class="doc std std-doc">Python Quickstart</span></a></p></td>
+<td><p>Necessary</p></td>
+<td><p>Intro to <code class="docutils literal notranslate"><span class="pre">dict</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../numpy/numpy-basics.html"><span class="doc std std-doc">Numpy basics</span></a></p></td>
+<td><p>Necessary</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>Experience level</strong>: intermediate</p></li>
+<li><p><strong>Time to learn</strong>: medium</p></li>
+</ul>
 </div>
 <hr class="docutils" />
-<div class="section" id="import-library">
-<h2>Import library<a class="headerlink" href="#import-library" title="Permalink to this headline">¶</a></h2>
-<div class="alert alert-block alert-info">
-    <b>Tip:</b> You will often see the nickname <code> pd </code> used as an abbreviation for pandas in the import statement, just like numpy is often imported as <code>np</code></div><div class="cell docutils container">
+<div class="section" id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<p>You will often see the nickname <code class="docutils literal notranslate"><span class="pre">pd</span></code> used as an abbreviation for pandas in the import statement, just like <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is often imported as <code class="docutils literal notranslate"><span class="pre">np</span></code>. Here we will also be importing <code class="docutils literal notranslate"><span class="pre">pythia_datasets</span></code>, our tool for accessing example data we provide for our materials.</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">pythia_datasets</span> <span class="kn">import</span> <span class="n">DATASETS</span>  <span class="c1"># Project Pythia&#39;s custom store of example data</span>
+<span class="kn">from</span> <span class="nn">pythia_datasets</span> <span class="kn">import</span> <span class="n">DATASETS</span>
 </pre></div>
 </div>
 </div>
@@ -658,9 +684,11 @@
 <p><img alt="dataframe schematic" src="https://github.com/pandas-dev/pandas/raw/master/doc/source/_static/schemas/01_table_dataframe.svg" /></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">columns</span></code> that make up our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be lists, dictionaries, NumPy arrays, pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code>, or more. Within these <code class="docutils literal notranslate"><span class="pre">columns</span></code> our data can be any texts, numbers, dates and times, or many other data types you may have encountered in Python and NumPy. Shown here on the left in dark gray, our very first <code class="docutils literal notranslate"><span class="pre">column</span></code>  is uniquely referrred to as an <code class="docutils literal notranslate"><span class="pre">Index</span></code>, and this contains information characterizing each row of our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. Similar to any other <code class="docutils literal notranslate"><span class="pre">column</span></code>, the <code class="docutils literal notranslate"><span class="pre">index</span></code> can label our rows by text, numbers, <code class="docutils literal notranslate"><span class="pre">datetime</span></code>s (a popular one!), or more.</p>
 <p>Let’s take a look by reading in some <code class="docutils literal notranslate"><span class="pre">.csv</span></code> data, which comes from the NCDC teleconnections database, including various El Niño Southern Oscillation (ENSO) indices! [<a class="reference external" href="https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/">ref</a>].</p>
-<div class="alert alert-block alert-info">
-    <b>Tip:</b> Here we're getting the data from Project Pythia's custom library of example data, which we already imported above with <code>from pythia_datasets import DATASETS</code>. The <code>DATASETS.fetch()</code> method will automatically download and cache our example data file <code>enso_data.csv</code> locally.
-</div><div class="cell docutils container">
+<div class="admonition alert alert-info">
+<p class="admonition-title">Info</p>
+<p>Here we’re getting the data from Project Pythia’s custom library of example data, which we already imported above with <code>from pythia_datasets import DATASETS</code>. The <code>DATASETS.fetch()</code> method will automatically download and cache our example data file <code>enso_data.csv</code> locally.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="n">DATASETS</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">&#39;enso_data.csv&#39;</span><span class="p">)</span>
 </pre></div>
@@ -1180,6 +1208,8 @@ Name: Nino34, Length: 472, dtype: float64
 <div><p><strong>Everything in pandas can be accessed with its label</strong>,</p>
 </div></blockquote>
 <p>no matter how your data is organized.</p>
+<div class="section" id="indexing-a-series">
+<h3>Indexing a <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#indexing-a-series" title="Permalink to this headline">¶</a></h3>
 <p>Let’s back up a bit here. Once more, let’s pull out one <code class="docutils literal notranslate"><span class="pre">Series</span></code> from our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using its column label, and we’ll start there.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1233,12 +1263,8 @@ Name: Nino34, Length: 472, dtype: float64
 </div>
 </div>
 </div>
-<p>and these can be extended in ways that you might expect, but perhaps also in unexpected ways:</p>
-<div class="section" id="numpy-like-interval-slices">
-<h3>Numpy-like Interval Slices<a class="headerlink" href="#numpy-like-interval-slices" title="Permalink to this headline">¶</a></h3>
-<div class="alert alert-block alert-info">
-    <b>Tip:</b> Index-based slices are <b>exclusive</b> of the final value similar to 
-    typical Python indexing rules.</div><div class="cell docutils container">
+<p>These two can be extended in ways that you might expect,</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">12</span><span class="p">]</span>
 </pre></div>
@@ -1263,11 +1289,12 @@ Name: Nino34, dtype: float64
 </div>
 </div>
 </div>
+<div class="admonition alert alert-info">
+<p class="admonition-title">Info</p>
+<p>Index-based slices are <b>exclusive</b> of the final value, similar to Python’s usual indexing rules.</p>
 </div>
-<div class="section" id="label-based-slicing">
-<h3>Label-based Slicing<a class="headerlink" href="#label-based-slicing" title="Permalink to this headline">¶</a></h3>
-<div class="alert alert-block alert-info">
-    <b>Tip:</b> Label-based slices are <b>inclusive</b> of the final value, unlike usual Python indexing rules.</div><div class="cell docutils container">
+<p>as well as potentially unexpected ways,</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="p">[</span><span class="s2">&quot;1982-01-01&quot;</span><span class="p">:</span><span class="s2">&quot;1982-12-01&quot;</span><span class="p">]</span>
 </pre></div>
@@ -1292,9 +1319,12 @@ Name: Nino34, dtype: float64
 </div>
 </div>
 </div>
+<p>That’s right, label-based slicing! Pandas will do the work under the hood for you to find this range of values according to your labels.</p>
+<div class="admonition alert alert-info">
+<p class="admonition-title">Info</p>
+<p>label-based slices are <b>inclusive</b> of the final value, different from above!</p>
 </div>
-<div class="section" id="another-way-of-slicing">
-<h3>Another Way of Slicing<a class="headerlink" href="#another-way-of-slicing" title="Permalink to this headline">¶</a></h3>
+<p>If you are familiar with <a class="reference internal" href="../xarray.html"><span class="doc std std-doc">xarray</span></a>, you might also already have a comfort with creating your own <code class="docutils literal notranslate"><span class="pre">slice</span></code> objects by hand, and that works here!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="p">[</span><span class="nb">slice</span><span class="p">(</span><span class="s2">&quot;1982-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;1982-12-01&quot;</span><span class="p">)]</span>
@@ -1398,10 +1428,11 @@ Name: Nino34, dtype: float64
 </div>
 </div>
 </div>
-<p>These capabilities extend back to our original <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, as well! :</p>
-<div class="alert alert-block alert-danger">
-<b>Danger:</b> Note there are limitations of the `dict` label notation: for example, neither of the two following code cells will work
-</div><div class="cell tag_raises-exception docutils container">
+</div>
+<div class="section" id="extending-to-the-dataframe">
+<h3>Extending to the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#extending-to-the-dataframe" title="Permalink to this headline">¶</a></h3>
+<p>These capabilities extend back to our original <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, as well!</p>
+<div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;1982-01-01&quot;</span><span class="p">]</span>
 </pre></div>
@@ -1450,6 +1481,36 @@ Name: Nino34, dtype: float64
 </div>
 </div>
 </div>
+<div class="admonition alert alert-danger">
+<p class="admonition-title">Danger</p>
+<p>Or do they?</p>
+</div>
+<p>They do! Importantly however, indexing a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be more strict, and pandas will try not to too heavily assume what you are looking for. So, by default we can’t pull out a row within <code class="docutils literal notranslate"><span class="pre">df</span></code> by its label alone, and <strong>instead labels are for identifying columns within <code class="docutils literal notranslate"><span class="pre">df</span></code></strong>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Nino34&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime
+1982-01-01    26.72
+1982-02-01    26.70
+1982-03-01    27.20
+1982-04-01    28.02
+1982-05-01    28.54
+              ...  
+2020-12-01    25.53
+2021-01-01    25.58
+2021-02-01    25.81
+2021-03-01    26.75
+2021-04-01    27.40
+Name: Nino34, Length: 472, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>and integer indexing will similarly get us nothing,</p>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1477,7 +1538,7 @@ Name: Nino34, dtype: float64
 <span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
 
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">23</span><span class="o">-</span><span class="n">ad11118bc8f3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">24</span><span class="o">-</span><span class="n">ad11118bc8f3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="nn">/usr/share/miniconda/envs/pythia-book-dev/lib/python3.8/site-packages/pandas/core/frame.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
@@ -1499,34 +1560,10 @@ Name: Nino34, dtype: float64
 </div>
 </div>
 </div>
+<p>Knowing now that we can pull out one of our columns as a series with its label, plus our experience interacting with the <code class="docutils literal notranslate"><span class="pre">Series</span></code> <code class="docutils literal notranslate"><span class="pre">df[&quot;Nino34&quot;]</span></code> gives us, we can chain our brackets to pull out any value from any of our columns in <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Nino34&quot;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime
-1982-01-01    26.72
-1982-02-01    26.70
-1982-03-01    27.20
-1982-04-01    28.02
-1982-05-01    28.54
-              ...  
-2020-12-01    25.53
-2021-01-01    25.58
-2021-02-01    25.81
-2021-03-01    26.75
-2021-04-01    27.40
-Name: Nino34, Length: 472, dtype: float64
-</pre></div>
-</div>
-</div>
-</div>
-<p>With this plus our knowledge of the <code class="docutils literal notranslate"><span class="pre">Series</span></code> <code class="docutils literal notranslate"><span class="pre">df[&quot;Nino34&quot;]</span></code> gives us, we can chain our brackets to pull out any value from any of our columns in <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Nino34&quot;</span><span class="p">][</span><span class="s2">&quot;1982-04-01&quot;</span><span class="p">]</span>  <span class="c1"># selecting the Series, then selecting a label within</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Nino34&quot;</span><span class="p">][</span><span class="s2">&quot;1982-04-01&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1551,7 +1588,7 @@ Name: Nino34, Length: 472, dtype: float64
 <p>However, this is not a pandas-preferred way to index and subset our data, and has limited capabilities for us. As we touched on before, <code class="docutils literal notranslate"><span class="pre">.loc</span></code> and <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> give us more to work with, and their functionality grows further for <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;1982-04-01&quot;</span><span class="p">,</span> <span class="s2">&quot;Nino34&quot;</span><span class="p">]</span>  <span class="c1"># note [&lt;row&gt;, &lt;column&gt;] ordering</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;1982-04-01&quot;</span><span class="p">,</span> <span class="s2">&quot;Nino34&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1560,6 +1597,10 @@ Name: Nino34, Length: 472, dtype: float64
 </pre></div>
 </div>
 </div>
+</div>
+<div class="admonition alert alert-info">
+<p class="admonition-title">Info</p>
+<p>Note the <code>[<i>row</i>, <i>column</i>]</code> ordering!</p>
 </div>
 <p>These allow us to pull out entire rows of <code class="docutils literal notranslate"><span class="pre">df</span></code>,</p>
 <div class="cell docutils container">
@@ -2099,8 +2140,11 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </table>
 </div></div></div>
 </div>
-<div class="alert alert-block alert-info">
-    <b>Tip:</b> For a more comprehensive explanation, which includes additional examples, limitations, and compares indexing methods between DataFrame and Series see <a href="https://pandas.pydata.org/docs/user_guide/indexing.html">pandas' rules for indexing.</a> </div></div>
+<div class="admonition alert alert-info">
+<p class="admonition-title">Info</p>
+<p>For a more comprehensive explanation, which includes additional examples, limitations, and compares indexing methods between DataFrame and Series see <a href="https://pandas.pydata.org/docs/user_guide/indexing.html">pandas’ rules for indexing.</a></p>
+</div>
+</div>
 </div>
 <div class="section" id="exploratory-data-analysis">
 <h2>Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h2>
@@ -2330,7 +2374,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_fullNotebook_66_0.png" src="../../_images/pandas_fullNotebook_66_0.png" />
+<img alt="../../_images/pandas_72_0.png" src="../../_images/pandas_72_0.png" />
 </div>
 </div>
 <p>Before, we called <code class="docutils literal notranslate"><span class="pre">.plot()</span></code> which generated a single line plot. This is helpful, but there are other plots which can also help with understanding your data! Let’s try using a histogram to understand distributions…</p>
@@ -2342,7 +2386,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_fullNotebook_68_0.png" src="../../_images/pandas_fullNotebook_68_0.png" />
+<img alt="../../_images/pandas_74_0.png" src="../../_images/pandas_74_0.png" />
 </div>
 </div>
 <p>We can see some clear differences in the distributions, which is helpful! Another plot one might like to use would be a <code class="docutils literal notranslate"><span class="pre">boxplot</span></code>. Here, we replace <code class="docutils literal notranslate"><span class="pre">hist</span></code> with <code class="docutils literal notranslate"><span class="pre">box</span></code></p>
@@ -2353,7 +2397,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_fullNotebook_70_0.png" src="../../_images/pandas_fullNotebook_70_0.png" />
+<img alt="../../_images/pandas_76_0.png" src="../../_images/pandas_76_0.png" />
 </div>
 </div>
 <p>Here, we again see a clear difference in the distributions. These are not the only plots you can use within pandas! For more examples of plotting choices, check out <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">the pandas plot documentation</a></p>
@@ -2373,7 +2417,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_fullNotebook_73_0.png" src="../../_images/pandas_fullNotebook_73_0.png" />
+<img alt="../../_images/pandas_79_0.png" src="../../_images/pandas_79_0.png" />
 </div>
 </div>
 <p>This can be a great way to take a quick look at your data, but what if you wanted a more <em><strong>quantitative</strong></em> perspective? We can use the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method on our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>; this returns a table of summary statistics for all columns in the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></p>
@@ -3057,7 +3101,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_fullNotebook_85_0.png" src="../../_images/pandas_fullNotebook_85_0.png" />
+<img alt="../../_images/pandas_91_0.png" src="../../_images/pandas_91_0.png" />
 </div>
 </div>
 </div>
@@ -3718,7 +3762,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_fullNotebook_94_0.png" src="../../_images/pandas_fullNotebook_94_0.png" />
+<img alt="../../_images/pandas_100_0.png" src="../../_images/pandas_100_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3728,7 +3772,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_fullNotebook_95_0.png" src="../../_images/pandas_fullNotebook_95_0.png" />
+<img alt="../../_images/pandas_101_0.png" src="../../_images/pandas_101_0.png" />
 </div>
 </div>
 </div>
@@ -3838,8 +3882,11 @@ Name: Nino34, Length: 472, dtype: float64
 </div>
 </div>
 <p>If we include <code class="docutils literal notranslate"><span class="pre">.values</span></code>, it returns a <code class="docutils literal notranslate"><span class="pre">numpy</span> <span class="pre">array</span></code></p>
-<div class="alert alert-block alert-warning">
-<b>Warning:</b> We don't usually recommend converting to numpy arrays unless you need to - once you convert to numpy arrays, the helpful label information is lost... so beware! </div><div class="cell docutils container">
+<div class="admonition alert alert-warning">
+<p class="admonition-title">Warning</p>
+<p>We don’t usually recommend converting to NumPy arrays unless you need to - once you convert to NumPy arrays, the helpful label information is lost… so beware!</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">convert_degc_to_kelvin</span><span class="p">(</span><span class="n">nino34_series</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
 </pre></div>
@@ -4160,10 +4207,10 @@ Name: Nino34_degK, Length: 472, dtype: float64
 <li><p>Pandas can be helpful for exploratory data analysis, including plotting and basic statistics</p></li>
 <li><p>One can apply calculations to pandas dataframes and save the output via <code class="docutils literal notranslate"><span class="pre">csv</span></code> files</p></li>
 </ul>
-</div>
 <div class="section" id="whats-next">
-<h2>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline">¶</a></h2>
+<h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline">¶</a></h3>
 <p>In the next notebook, we will look more into using pandas for more in-depth data analysis.</p>
+</div>
 </div>
 <div class="section" id="resources-and-references">
 <h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline">¶</a></h2>

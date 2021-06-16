@@ -264,7 +264,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../cartopy/01_Cartopy_Intro.html">
+    <a class="reference internal" href="../cartopy/cartopy.html">
      Introduction to Cartopy
     </a>
    </li>
@@ -292,7 +292,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../pandas/pandas_fullNotebook.html">
+    <a class="reference internal" href="../pandas/pandas.html">
      Introduction to Pandas
     </a>
    </li>
@@ -320,7 +320,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../xarray/xarray-intro.html">
+    <a class="reference internal" href="../xarray/xarray.html">
      Introduction to Xarray
     </a>
    </li>
@@ -519,11 +519,6 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#thirty-second-introduction-to-object-oriented-programming">
-   Thirty second introduction to Object-Oriented programming
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reading-and-writing-dates-and-times">
    Reading and writing dates and times
   </a>
@@ -662,7 +657,6 @@
 <p>In this notebook, we will:</p>
 <ol class="simple">
 <li><p>Introduce the <a class="reference external" href="https://docs.python.org/3/library/time.html">time</a> and <a class="reference external" href="https://docs.python.org/3/library/datetime.html">datetime</a> modules from the Python Standard Library</p></li>
-<li><p>Take a brief aside into Object-Oriented programming and Python classes</p></li>
 <li><p>Look at formatted input and output of dates and times</p></li>
 <li><p>See how we can do simple arithmetic on date/time data, making use of the <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> object</p></li>
 <li><p>Briefly make use of the <a class="reference external" href="https://pypi.org/project/pytz/">pytz</a> module to handle some thorny time zone issues in Python.</p></li>
@@ -670,7 +664,6 @@
 </div>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
-<p>Label the importance of each concept explicitly as <strong>helpful/necessary</strong>.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Concepts</p></th>
@@ -679,15 +672,19 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Basic Python string formatting</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../foundations/quickstart.html"><span class="doc std std-doc">Python Quickstart</span></a></p></td>
+<td><p>Necessary</p></td>
+<td><p>Understanding strings</p></td>
+</tr>
+<tr class="row-odd"><td><p>Basic Python string formatting</p></td>
 <td><p>Helpful</p></td>
 <td><p>Try this <a class="reference external" href="https://realpython.com/python-string-formatting/">Real Python string formatting tutorial</a></p></td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p><strong>Experience level</strong>: <strong>beginner</strong></p></li>
-<li><p><strong>Time to learn</strong>: <strong>medium</strong></p></li>
+<li><p><strong>Experience level</strong>: beginner</p></li>
+<li><p><strong>Time to learn</strong>: medium</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -749,7 +746,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1623866492.2757385
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1623869016.0226102
 </pre></div>
 </div>
 </div>
@@ -770,7 +767,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The benchmark took 1.0013797283172607 seconds
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The benchmark took 1.0013999938964844 seconds
 </pre></div>
 </div>
 </div>
@@ -815,73 +812,6 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="thirty-second-introduction-to-object-oriented-programming">
-<h2>Thirty second introduction to Object-Oriented programming<a class="headerlink" href="#thirty-second-introduction-to-object-oriented-programming" title="Permalink to this headline">¶</a></h2>
-<p>We have been talking about object-oriented (OO) programming by mentioning terms like “class”, “object”, and “method”, but never really explaining what they mean. A class is a collection of related variables, similar to a <a class="reference external" href="https://en.wikipedia.org/wiki/Struct_(C_programming_language)">struct</a>, in the C programming language or even a tuple in Python) coupled with functions, or “methods” in OO parlance, that can act on those variables. An object is a concrete example of a class.</p>
-<p>For example, suppose we wanted a class to represent a location on Earth with latitude, and longitude, and along with those data we want a method to compute the <a class="reference external" href="https://en.wikipedia.org/wiki/Great-circle_distance">great-circle distance</a> between this location and another point on the sphere:</p>
-<div class="math notranslate nohighlight">
-\[ d = R~\arccos\Big(  \sin(\phi_1)\sin(\phi_2) + \cos(\phi_1)\cos(\phi_2)\cos(\lambda_1-\lambda_2) \Big) \]</div>
-<p>where <span class="math notranslate nohighlight">\(\phi_1, \lambda_1\)</span> and <span class="math notranslate nohighlight">\(\phi_2, \lambda_2\)</span> are the <em>latitude</em> and <em>longitude</em> of points 1 and 2 in <em>radians</em>, and <span class="math notranslate nohighlight">\(R\)</span> is the radius of the Earth.</p>
-<p>In the next cell, we first <em>define</em> our custom class called <code class="docutils literal notranslate"><span class="pre">Coord</span></code> (including the code to implement the great-circle calculation). In subsequent cells we’ll show how to use our new class by creating objects of type <code class="docutils literal notranslate"><span class="pre">Coord</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Coord</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Earth location identified by (latitude, longitude) coordinates.</span>
-<span class="sd">    distancekm  -- distance between two points in kilometers</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">latitude</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lat</span> <span class="o">=</span> <span class="n">latitude</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lon</span> <span class="o">=</span> <span class="n">longitude</span>
-
-    <span class="k">def</span> <span class="nf">distancekm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Distance between two points in kilometers.&quot;&quot;&quot;</span>
-        <span class="n">DEGREES_TO_RADIANS</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">180.0</span>
-        <span class="n">EARTH_RADIUS</span> <span class="o">=</span> <span class="mi">6373</span>  <span class="c1"># in KMs</span>
-        <span class="n">phi1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lat</span> <span class="o">*</span> <span class="n">DEGREES_TO_RADIANS</span>
-        <span class="n">phi2</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">lat</span> <span class="o">*</span> <span class="n">DEGREES_TO_RADIANS</span>
-        <span class="n">lambda1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lon</span> <span class="o">*</span> <span class="n">DEGREES_TO_RADIANS</span>
-        <span class="n">lambda2</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">lon</span> <span class="o">*</span> <span class="n">DEGREES_TO_RADIANS</span>
-        <span class="n">cosarc</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi1</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi2</span><span class="p">)</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi1</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span>
-            <span class="n">phi2</span>
-        <span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">lambda1</span> <span class="o">-</span> <span class="n">lambda2</span><span class="p">)</span>
-        <span class="n">arc</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">acos</span><span class="p">(</span><span class="n">cosarc</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">arc</span> <span class="o">*</span> <span class="n">EARTH_RADIUS</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>To create a concrete example of a <strong>class</strong>, also known as an <strong>object</strong>, initialize the object with some data:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">timbuktu</span> <span class="o">=</span> <span class="n">Coord</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="mf">16.77</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=</span><span class="mf">3.00</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Here, <code class="docutils literal notranslate"><span class="pre">timbuktu</span></code> is an <strong>object</strong> of the <strong>class</strong> <code class="docutils literal notranslate"><span class="pre">Coord</span></code> initialized with a latitude of <code class="docutils literal notranslate"><span class="pre">16.77</span></code> and a longitude of <code class="docutils literal notranslate"><span class="pre">3.00</span></code>. Great!</p>
-<p>Next, we create two <code class="docutils literal notranslate"><span class="pre">Coord</span></code> objects: <code class="docutils literal notranslate"><span class="pre">ny</span></code> and <code class="docutils literal notranslate"><span class="pre">paris</span></code>. We will invoke the <code class="docutils literal notranslate"><span class="pre">distancekm()</span></code> method on the <code class="docutils literal notranslate"><span class="pre">ny</span></code> object and pass the <code class="docutils literal notranslate"><span class="pre">paris</span></code> object as an argument to determine the distance between New York and Paris in kilometers.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ny</span> <span class="o">=</span> <span class="n">Coord</span><span class="p">(</span>
-    <span class="mf">40.71</span><span class="p">,</span> <span class="mf">74.01</span>
-<span class="p">)</span>  <span class="c1"># note that using the keywords for latitude and longitude is optional</span>
-<span class="n">paris</span> <span class="o">=</span> <span class="n">Coord</span><span class="p">(</span>
-    <span class="n">latitude</span><span class="o">=</span><span class="mf">48.86</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=</span><span class="mf">2.35</span>
-<span class="p">)</span>  <span class="c1"># but tends to make the code more readable!</span>
-<span class="n">distance</span> <span class="o">=</span> <span class="n">ny</span><span class="o">.</span><span class="n">distancekm</span><span class="p">(</span><span class="n">paris</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The distance from New York to Paris is </span><span class="si">{</span><span class="n">distance</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> kilometers.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The distance from New York to Paris is 5517.0 kilometers.
-</pre></div>
-</div>
-</div>
-</div>
-<p>The old joke about OO programming is that they simply moved the struct that the function takes as an argument and put it first because it is special. So instead of having <code class="docutils literal notranslate"><span class="pre">distancekm(ny,</span> <span class="pre">paris)</span></code>, you have <code class="docutils literal notranslate"><span class="pre">ny.distancekm(paris)</span></code>. We have not talked about inheritance or polymorphism but that is OO in a nutshell: packaging together the data and the methods that operate on the data.</p>
 </div>
 <div class="section" id="reading-and-writing-dates-and-times">
 <h2>Reading and writing dates and times<a class="headerlink" href="#reading-and-writing-dates-and-times" title="Permalink to this headline">¶</a></h2>
@@ -1037,8 +967,8 @@ The type of the &#39;tide_length&#39; variable is &lt;class &#39;datetime.timede
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive 2021-06-16 18:01:33.353793.
-I am time zone aware 2021-06-16 18:01:33.353823+00:00.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive 2021-06-16 18:43:37.070833.
+I am time zone aware 2021-06-16 18:43:37.070862+00:00.
 </pre></div>
 </div>
 </div>
@@ -1061,8 +991,8 @@ I am time zone aware 2021-06-16 18:01:33.353823+00:00.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive: 2021-06-16 18:01:33.359882.
-I am time zone aware: 2021-06-16 12:01:33.372141-06:00.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive: 2021-06-16 18:43:37.075711.
+I am time zone aware: 2021-06-16 12:43:37.086698-06:00.
 </pre></div>
 </div>
 </div>
@@ -1084,8 +1014,8 @@ I am time zone aware: 2021-06-16 12:01:33.372141-06:00.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The UTC time is June 16, 2021, 6:01PM.
-The &#39;US/Mountain&#39; time is June 16, 2021, 12:01PM.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The UTC time is June 16, 2021, 6:43PM.
+The &#39;US/Mountain&#39; time is June 16, 2021, 12:43PM.
 </pre></div>
 </div>
 </div>

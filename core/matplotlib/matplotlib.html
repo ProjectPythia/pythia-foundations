@@ -262,7 +262,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../cartopy/01_Cartopy_Intro.html">
+    <a class="reference internal" href="../cartopy/cartopy.html">
      Introduction to Cartopy
     </a>
    </li>
@@ -290,7 +290,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../pandas/pandas_fullNotebook.html">
+    <a class="reference internal" href="../pandas/pandas.html">
      Introduction to Pandas
     </a>
    </li>
@@ -318,7 +318,7 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../xarray/xarray-intro.html">
+    <a class="reference internal" href="../xarray/xarray.html">
      Introduction to Xarray
     </a>
    </li>
@@ -608,13 +608,13 @@
 <hr class="docutils" />
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>We will cover the basics of plotting within Python, using the Matplotlib library, including a few different plots available within the library.</p>
 <ol class="simple">
 <li><p>Create a basic line plot.</p></li>
 <li><p>Add labels and grid lines to the plot.</p></li>
 <li><p>Plot multiple series of data.</p></li>
 <li><p>Plot image, contour, and filled contour plots.</p></li>
 </ol>
-<p>We will cover the basics of plotting within Python, using the Matplotlib library, including a few different plots available within the library.</p>
 </div>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
@@ -626,11 +626,11 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>NumPy</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../numpy/numpy-basics.html"><span class="doc std std-doc">NumPy basics</span></a></p></td>
 <td><p>Necessary</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p>Matlab plots</p></td>
+<tr class="row-odd"><td><p>MATLAB plotting experience</p></td>
 <td><p>Helpful</p></td>
 <td><p></p></td>
 </tr>
@@ -655,7 +655,7 @@
 </div>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Info</p>
-<p>Matplotlib is a python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.</p>
+<p>Matplotlib is a python 2D plotting library which produces publication quality figures in a variety of hard-copy formats and interactive environments across platforms.</p>
 </div>
 </div>
 <div class="section" id="generate-test-data-using-numpy">
@@ -750,7 +750,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f1cf0560f10&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f078c34bf10&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_15_1.png" src="../../_images/matplotlib_15_1.png" />
@@ -851,7 +851,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f1cf0458fa0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f078c249040&gt;
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_25_1.png" src="../../_images/matplotlib_25_1.png" />
@@ -890,7 +890,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f1cf03e9bb0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f078c1d5c70&gt;
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_28_1.png" src="../../_images/matplotlib_28_1.png" />
@@ -930,7 +930,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f1cf033bd30&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f078c127dc0&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_34_1.png" src="../../_images/matplotlib_34_1.png" />
@@ -1027,7 +1027,7 @@
 <h3>Putting this all together<a class="headerlink" href="#putting-this-all-together" title="Permalink to this headline">¶</a></h3>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Info</p>
-<p>You may wish to move around the location of your legend - you can do this by changing the <code> loc </code> arguement in <code> ax.legend() </code></p>
+<p>You may wish to move around the location of your legend - you can do this by changing the <code>loc</code> argument in <code>ax.legend()</code></p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1107,7 +1107,7 @@
 </div>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Info</p>
-<p>You can also use the <code> scatter </code> method, which is slower, but will give you more control, such as being able to color the points individually based upon a third variable.</p>
+<p>You can also use the <code>scatter</code> method, which is slower, but will give you more control, such as being able to color the points individually based upon a third variable.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1201,7 +1201,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.contour.QuadContourSet at 0x7f1cdbf269a0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.contour.QuadContourSet at 0x7f0772d28a60&gt;
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_56_1.png" src="../../_images/matplotlib_56_1.png" />
