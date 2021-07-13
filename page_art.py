@@ -1,13 +1,12 @@
 ###############################################################################
 # Import packages
-import os
+
 from netCDF4 import Dataset
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.ticker as mticker
 import matplotlib.image as mpimg
 import cartopy.crs as ccrs
-from cartopy import config
+
 from wrf import (getvar, latlon_coords)
 
 ###############################################################################
@@ -53,7 +52,7 @@ contours = plt.contour(lons,
 plt.clabel(contours, inline=1, fontsize=10, fmt="%i")
 
 # Add the wind speed filled contours
-levels = [52, 54, 60, 64, 70, 76, 80, 88] # Why not use np.arange/np.linspace?
+levels = [52, 54, 60, 64, 70, 76, 80, 88]
 
 wspd_contours = plt.contourf(lons,
                              lats,
