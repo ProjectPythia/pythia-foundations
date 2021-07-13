@@ -14,6 +14,8 @@ dependencies:
   - netcdf4
   - pyproj
   - scipy
+  - wrf-python
+  - netcdf4
   - pip
   - pip:
       # works for regular pip packages
