@@ -5,12 +5,12 @@ This content is under construction!
 ```
 
 General information on how to contribute to any Project Pythia repository
-may be found [here](https://projectpythia.org/pages/contributing.html).
+may be found [here][pythia contributor's guide].
 
 A full contributor's guide will appear here, cross-referencing our tutorials on open Pull Requests on GitHub.
 
 A simple way to comment on anything you find in this book is to use the "open issue" and "suggest edit" buttons under the GitHub Octocat logo at the top of each page. These links will take you to GitHub where the source material for the book is hosted. You'll need a free (and broadly useful) GitHub account. See
-the main [Project Pythia Contributor's Guide](https://projectpythia.org/pages/contributing.html).
+the main [Project Pythia Contributor's Guide][pythia contributor's guide].
 
 ## Contributing a new Jupyter Notebook
 
@@ -59,3 +59,5 @@ open _build/html/index.html
 ```
 
 All code is licensed under Apache 2.0 (including both infrastructure code and example code in the rendered Pythia Foundations book). All other content in Pythia Foundations is licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+[pythia contributor's guide]: https://projectpythia.org/contributing.html
