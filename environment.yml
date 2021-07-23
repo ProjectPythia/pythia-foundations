@@ -4,7 +4,6 @@ channels:
 dependencies:
   - python=3.8
   - jupyter-book
-  - importlib_resources # temporary workaround
   - jupyterlab
   - matplotlib
   - numpy
