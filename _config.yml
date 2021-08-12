@@ -51,7 +51,7 @@ launch_buttons:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  google_analytics_id: G-G57FLM9M46
+  google_analytics_id: 'G-G57FLM9M46'
   use_issues_button: true
   use_repository_button: true
   use_edit_page_button: true
