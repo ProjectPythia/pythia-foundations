@@ -52,6 +52,9 @@ parts:
       - file: core/xarray
         sections:
           - file: core/xarray/xarray
+      - file: core/dask
+          - file: core/dask/dask-overview
+          - file: core/dask/dask-arrays-xarray
   - caption: Appendix
     chapters:
       - file: appendix/how-to-contribute
