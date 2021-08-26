@@ -11,4 +11,4 @@ pyproject.toml @ProjectPythia/infrastructure
 setup.cfg @ProjectPythia/infrastructure
 
 # JupyterBook configuration
-_config.yml @ProjectPythia/infrastructure 
+_config.yml @ProjectPythia/infrastructure
