@@ -9,3 +9,6 @@
 .prettierrc.toml @ProjectPythia/infrastructure
 pyproject.toml @ProjectPythia/infrastructure
 setup.cfg @ProjectPythia/infrastructure
+
+# JupyterBook configuration
+_config.yml @ProjectPythia/infrastructure 
