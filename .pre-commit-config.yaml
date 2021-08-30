@@ -37,6 +37,7 @@ repos:
     rev: v2.2.1
     hooks:
       - id: prettier
+        exclude: '_templates/layout.html'
 
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 0.5.7
