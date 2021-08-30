@@ -108,4 +108,4 @@ Then follow the instructions in our Getting Started with GitHub
 [guide](https://foundations.projectpythia.org/foundations/getting-started-github.html#)
 for cloning a repository.
 
-![Annotated Pythia Foundations home pate](../images/foundations_diagram.png)
+![Annotated Pythia Foundations home page](../images/foundations_diagram.png)
