@@ -28,7 +28,7 @@ results.
 Pythia Foundations is organized into two main sections as seen in
 the sidebar on the left: Foundational Skills, and Core Scientific
 Python Packages. The first, Foundational Skills, covers essential
-material that all users of the Project Pythia are expected to feel
+material that all users of Project Pythia are expected to feel
 comfortable with in order to make the most of the rest of the Project
 Pythia content. The second, Core Scientific Python Packages, covers
 what we believe are the most important and “foundational” packages
