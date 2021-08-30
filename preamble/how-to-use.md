@@ -15,8 +15,9 @@ and being comfortable using a computer, including the command line
 terminal (i.e. the [Unix shell](https://en.wikipedia.org/wiki/Unix_shell)).
 Prior programming experience is not required.
 
-Lastly, we note that Pythia Foundations covers two topics that are
-not technically part of the SPE, but that we believe are essential
+Lastly, in addition to the Python language and a number of fundamental
+scientific Python packages, Pythia Foundations covers two topics
+that we believe are essential
 to effectively using the SPE: GitHub, for sharing workflows and
 managing code; and Jupyter Notebooks, the technology by which all
 Pythia Foundations material is presented and which is quickly
