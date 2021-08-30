@@ -33,7 +33,7 @@ comfortable with in order to make the most of the rest of the Project
 Pythia content. The second, Core Scientific Python Packages, covers
 what we believe are the most important and “foundational” packages
 in the Scientific Python Ecosystem. These packages serve as the
-building blocks for many of the more geo-science focused components
+building blocks for many of the more geoscience focused components
 of the Scientific Python Ecosystem.
 
 ## Running Pythia Foundation examples
