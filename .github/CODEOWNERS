@@ -12,3 +12,6 @@ setup.cfg @ProjectPythia/infrastructure
 
 # JupyterBook configuration
 _config.yml @ProjectPythia/infrastructure
+
+# Sphinx template
+_templates/ @ProjectPythia/infrastructure
