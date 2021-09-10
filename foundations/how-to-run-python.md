@@ -1,10 +1,24 @@
 # Installing and Running Python
 
+---
+
+## Overview
+
 This section provides an overview of different ways to run Python code, and quickstart guides for
 
-- Choosing a Python platform
-- Installing and running Python on various local platforms
-- Installing and managing Python with Conda
+1.  Choosing a Python platform
+2.  Installing and managing Python with Conda
+
+## Prerequisites
+
+| Concepts                                                                         | Importance | Notes |
+| -------------------------------------------------------------------------------- | ---------- | ----- |
+| [Why Python?](https://foundations.projectpythia.org/foundations/why-python.html) | Helpful    |       |
+
+- **Experience level**: **beginner**
+- **Time to learn**: **medium**
+
+---
 
 ## Choosing a Python Platform
 
@@ -44,3 +58,24 @@ _We recommend eventually learning how to develop and run Python code in each of 
 Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). Conda is a vital component of the Python ecosystem, and understanding it is important regardless of the platform you chose to run your Python code.
 
 [Learn more about Conda here](conda.md)
+
+---
+
+## Summary
+
+Python can be run on many different platforms. You may choose where to run Python based on a number of factors. The tutorials in this book will be formatted as Jupyter Notebooks.
+
+### What's Next?
+
+- [How to Run Python in the Terminal](terminal.md)
+- [How to Run Python in a Jupyter Session](jupyter.md)
+- [Learn more about Conda here](conda.md)
+
+## Resources and References
+
+- [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
+- [Spyder](https://www.spyder-ide.org)
+- [Anaconda](https://www.anaconda.com/products/individual)
+- [Matlab](https://www.mathworks.com/products/matlab.html)
+- [PyCharm](https://www.jetbrains.com/pycharm/)
+- [Visual Studio Code](https://code.visualstudio.com)
