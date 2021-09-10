@@ -15,8 +15,8 @@ This section provides an overview of different ways to run Python code, and quic
 | -------------------------------------------------------------------------------- | ---------- | ----- |
 | [Why Python?](https://foundations.projectpythia.org/foundations/why-python.html) | Helpful    |       |
 
-- **Experience level**: **beginner**
-- **Time to learn**: **medium**
+- **Experience level**: **Beginner**
+- **Time to learn**: **Medium**
 
 ---
 
