@@ -19,8 +19,8 @@ Here we will cover:
 | --------------------------------------------------------------------------------------------------------- | ---------- | ----- |
 | [Installing and Running Python](https://foundations.projectpythia.org/foundations/how-to-run-python.html) | Helpful    |       |
 
-- **Experience level**: **beginner**
-- **Time to learn**: **medium**
+- **Experience level**: **Beginner**
+- **Time to learn**: **Medium**
 
 ---
 
