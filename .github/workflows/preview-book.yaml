@@ -51,6 +51,7 @@ jobs:
 
       - name: Find Comment
         uses: peter-evans/find-comment@v1
+        if: steps.find-pull-request.outputs.number  != ''
         id: fc
         with:
           issue-number: '${{ steps.find-pull-request.outputs.number }}'

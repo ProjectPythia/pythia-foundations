@@ -29,6 +29,7 @@ jobs:
         run: |
           echo "comment_message=This pull request is being automatically built with GitHub Action + Netlify. To see the status of your deployment, click below." >> $GITHUB_ENV
       - name: Find Comment
+        if: ${{ github.event_name }} == 'pull_request'
         uses: peter-evans/find-comment@v1
         id: fc
         with:
@@ -36,7 +37,7 @@ jobs:
           comment-author: 'github-actions[bot]'
           body-includes: '${{ env.comment_message }}'
       - name: Create comment
-        if: steps.fc.outputs.comment-id == ''
+        if: ${{ github.event_name }} == 'pull_request' && steps.fc.outputs.comment-id == ''
         uses: peter-evans/create-or-update-comment@v1
         with:
           issue-number: ${{ github.event.number }}
@@ -45,7 +46,7 @@ jobs:
             🚧 Deployment in progress for git commit SHA: ${{ github.event.pull_request.head.sha }}
 
       - name: Update comment
-        if: steps.fc.outputs.comment-id != ''
+        if: ${{ github.event_name }} == 'pull_request' && steps.fc.outputs.comment-id != ''
         uses: peter-evans/create-or-update-comment@v1
         with:
           comment-id: ${{ steps.fc.outputs.comment-id }}
