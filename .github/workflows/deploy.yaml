@@ -45,6 +45,7 @@ jobs:
           issue-number: ${{ github.event.number }}
           body: |
             ${{ env.comment_message }}
+
             🚧 Deployment in progress for git commit SHA: ${{ github.event.pull_request.head.sha }}
 
       - name: Update comment
@@ -57,6 +58,7 @@ jobs:
           edit-mode: replace
           body: |
             ${{ env.comment_message }}
+
             🚧 Deployment in progress for git commit SHA: ${{ github.event.pull_request.head.sha }}
 
       - uses: actions/checkout@v2

@@ -67,5 +67,5 @@ jobs:
           body: |
             ${{ env.comment_message }}
 
-            📚 Commit SHA:  ${{ steps.find-pull-request.outputs.head-sha }}
+            📚 Git commit SHA:  ${{ steps.find-pull-request.outputs.head-sha }}
             ✅ Deployment Preview URL: ${{ steps.netlify.outputs.deploy-url }}
