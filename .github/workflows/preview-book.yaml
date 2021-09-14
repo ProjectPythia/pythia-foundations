@@ -38,8 +38,33 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 5
-      - name: Jupyter Book Preview
-        uses: ProjectPythia/actions/comment-netlify-preview-in-pr@main
+
+      - name: Set message value
+        run: |
+          echo "comment_message=This pull request is being automatically built with GitHub Action + Netlify. To see the status of your deployment, click below." >> $GITHUB_ENV
+
+      - name: Find Pull Request
+        uses: juliangruber/find-pull-request-action@v1
+        id: find-pull-request
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-url: ${{ steps.netlify.outputs.deploy-url }}
+          branch: ${{ github.event.workflow_run.head_branch }}
+
+      - name: Find Comment
+        uses: peter-evans/find-comment@v1
+        id: fc
+        with:
+          issue-number: '${{ steps.find-pull-request.outputs.number }}'
+          comment-author: 'github-actions[bot]'
+          body-includes: '${{ env.comment_message }}'
+
+      - name: Update Jupyter Book Preview comment
+        if: steps.fc.outputs.comment-id != ''
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          edit-mode: replace
+          body: |
+            ${{ env.comment_message }}
+
+            📚 Commit SHA:  ${{ steps.find-pull-request.outputs.head-sha }}
+            ✅ Deployment Preview URL: ${{ steps.netlify.outputs.deploy-url }}
