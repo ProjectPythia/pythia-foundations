@@ -1,9 +1,23 @@
 # Python in the Terminal
 
+---
+
+## Overview
+
 You'd like to learn to run Python in the terminal. Here we will cover:
 
-- Installing Python in the terminal
-- Running Python code in the terminal
+1.  Installing Python in the terminal
+2.  Running Python code in the terminal
+
+## Prerequisites
+
+| Concepts                                                                                                  | Importance | Notes |
+| --------------------------------------------------------------------------------------------------------- | ---------- | ----- |
+| [Installing and Running Python](https://foundations.projectpythia.org/foundations/how-to-run-python.html) | Helpful    |       |
+
+- **Time to learn**: 20 minutes
+
+---
 
 ## Installing Python in the Terminal
 
@@ -71,3 +85,18 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
    ```
 
 **Congratulations!** You have just set up your first Python environment and run your first Python script in the terminal.
+
+---
+
+## Summary
+
+Running Python in the Terminal is a good option if you are familiar with Linux commands or scripting on a super computer. It requires the use of a text editor.
+
+### What's Next?
+
+- [How to Run Python in a Jupyter Session](jupyter.md)
+- [Learn more about Conda here](conda.md)
+
+## Resources and References
+
+- [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
