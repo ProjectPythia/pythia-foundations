@@ -25,7 +25,6 @@ parse:
     - dollarmath
     - html_admonition
     - html_image
-    - linkify
     - replacements
     - smartquotes
     - substitution
