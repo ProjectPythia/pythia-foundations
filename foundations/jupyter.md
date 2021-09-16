@@ -1,10 +1,24 @@
 # Python in Jupyter
 
+---
+
+## Overview
+
 You'd like to learn to run Python in a Jupyter session. Here we will cover:
 
-- Installing Python in Jupyter
-- Running Python code in Jupyter
-- Saving your notebook and exiting
+1.  Installing Python in Jupyter
+2.  Running Python code in Jupyter
+3.  Saving your notebook and exiting
+
+## Prerequisites
+
+| Concepts                                                                                                  | Importance | Notes |
+| --------------------------------------------------------------------------------------------------------- | ---------- | ----- |
+| [Installing and Running Python](https://foundations.projectpythia.org/foundations/how-to-run-python.html) | Helpful    |       |
+
+- **Time to learn**: 20 minutes
+
+---
 
 ## Installing Python in Jupyter
 
@@ -81,3 +95,19 @@ Then you can quit Jupyter by:
 - typing `exit` into the terminal
 
 Alternatively you can simultaneously shutdown and exit the Jupyter session by typing `Ctrl-C` in the terminal and confirming that you do want to "shutdown this notebook server."
+
+---
+
+## Summary
+
+Jupyter notebooks are a free, open-source, interactive tool running inside a web browser that allows you to run Python code in "cells." To run a Jupyter session you will need to install `jupyterlab` into your Conda environment. Jupyter sessions need to be shutdown, not just exited.
+
+### What's Next?
+
+- [How to Run Python in the Terminal](terminal.md)
+- [Learn more about Conda here](conda.md)
+- [Getting Started with Jupyter](getting-started-jupyter)
+
+## Resources and References
+
+- [Anaconda](https://www.anaconda.com/products/individual)
