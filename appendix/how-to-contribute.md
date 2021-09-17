@@ -1,7 +1,7 @@
 # Pythia Foundations contributor's guide
 
 ```{note}
-This content is under construction!
+Hi! This content is under construction!
 ```
 
 General information on how to contribute to any Project Pythia repository
