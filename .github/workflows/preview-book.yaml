@@ -15,20 +15,40 @@ jobs:
         shell: bash
     steps:
       - uses: actions/checkout@v2
-
       - name: Set message value
         run: |
-          echo "comment_message=This pull request is being automatically built with GitHub Action + Netlify. To see the status of your deployment, click below." >> $GITHUB_ENV
-
+          echo "comment_message=This pull request is being automatically built with [GitHub Actions](https://github.com/features/actions) and [Netlify](https://www.netlify.com/). To see the status of your deployment, click below." >> $GITHUB_ENV
       - name: Find Pull Request
-        uses: juliangruber/find-pull-request-action@v1
+        uses: actions/github-script@v4
         id: find-pull-request
         with:
-          branch: ${{ github.event.workflow_run.head_branch }}
+          script: |
+            let pullRequestNumber = ''
+            let pullRequestHeadSHA = ''
+            core.info('Finding pull request...')
+
+            const pullRequests = await github.pulls.list({owner: context.repo.owner, repo: context.repo.repo})
+            for (let pullRequest of pullRequests.data) {
+              if(pullRequest.head.sha === context.payload.workflow_run.head_commit.id) {
+                  pullRequestHeadSHA = pullRequest.head.sha
+                  pullRequestNumber = pullRequest.number
+                  break
+              }
+            }
+            core.setOutput('number', pullRequestNumber)
+            core.setOutput('sha', pullRequestHeadSHA)
+            if(pullRequestNumber === '') {
+              core.info(
+                 `No pull request associated with git commit SHA: ${context.payload.workflow_run.head_commit.id}`
+              )
+            }
+            else{
+              core.info(`Found pull request ${pullRequestNumber}, with head sha: ${pullRequestHeadSHA}`)
+            }
 
       - name: Find Comment
         uses: peter-evans/find-comment@v1
-        if: steps.find-pull-request.outputs.number  != ''
+        if: steps.find-pull-request.outputs.number != ''
         id: fc
         with:
           issue-number: '${{ steps.find-pull-request.outputs.number }}'
@@ -38,26 +58,27 @@ jobs:
       - name: Create comment
         if: |
           github.event.workflow_run.conclusion != 'success'
+          && steps.find-pull-request.outputs.number != ''
           && steps.fc.outputs.comment-id == ''
         uses: peter-evans/create-or-update-comment@v1
         with:
           issue-number: ${{ steps.find-pull-request.outputs.number }}
           body: |
             ${{ env.comment_message }}
-            🚧 Deployment in progress for git commit SHA: ${{ steps.find-pull-request.outputs.head-sha }}
+            🚧 Deployment in progress for git commit SHA: ${{ steps.find-pull-request.outputs.sha }}
 
       - name: Update comment
         if: |
           github.event.workflow_run.conclusion != 'success'
+          && steps.find-pull-request.outputs.number != ''
           && steps.fc.outputs.comment-id != ''
         uses: peter-evans/create-or-update-comment@v1
         with:
-          token: ${{ steps.generate-token.outputs.token }}
           comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: replace
           body: |
             ${{ env.comment_message }}
-            🚧 Deployment in progress for git commit SHA: ${{ steps.find-pull-request.outputs.head-sha }}
+            🚧 Deployment in progress for git commit SHA: ${{ steps.find-pull-request.outputs.sha }}
 
       - name: Download Artifact Book
         uses: dawidd6/action-download-artifact@v2.14.1
@@ -90,6 +111,7 @@ jobs:
       - name: Update Jupyter Book Preview comment
         if: |
           github.event.workflow_run.conclusion == 'success'
+          && steps.find-pull-request.outputs.number != ''
           && steps.fc.outputs.comment-id != ''
         uses: peter-evans/create-or-update-comment@v1
         with:
@@ -98,5 +120,5 @@ jobs:
           body: |
             ${{ env.comment_message }}
 
-            📚 Git commit SHA:  ${{ steps.find-pull-request.outputs.head-sha }}
+            🔍 Git commit SHA:  ${{ steps.find-pull-request.outputs.sha }}
             ✅ Deployment Preview URL: ${{ steps.netlify.outputs.deploy-url }}
