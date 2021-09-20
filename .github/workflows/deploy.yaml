@@ -25,42 +25,6 @@ jobs:
         uses: styfle/cancel-workflow-action@0.9.1
         with:
           access_token: ${{ github.token }}
-      - name: Set message value
-        run: |
-          echo "comment_message=This pull request is being automatically built with GitHub Action + Netlify. To see the status of your deployment, click below." >> $GITHUB_ENV
-      - name: Find Comment
-        if: github.event_name == 'pull_request'
-        uses: peter-evans/find-comment@v1
-        id: fc
-        with:
-          issue-number: '${{ github.event.number }}'
-          comment-author: 'github-actions[bot]'
-          body-includes: '${{ env.comment_message }}'
-      - name: Create comment
-        if: |
-          github.event_name == 'pull_request'
-          && steps.fc.outputs.comment-id == ''
-        uses: peter-evans/create-or-update-comment@v1
-        with:
-          issue-number: ${{ github.event.number }}
-          body: |
-            ${{ env.comment_message }}
-
-            🚧 Deployment in progress for git commit SHA: ${{ github.event.pull_request.head.sha }}
-
-      - name: Update comment
-        if: |
-          github.event_name == 'pull_request'
-          && steps.fc.outputs.comment-id != ''
-        uses: peter-evans/create-or-update-comment@v1
-        with:
-          comment-id: ${{ steps.fc.outputs.comment-id }}
-          edit-mode: replace
-          body: |
-            ${{ env.comment_message }}
-
-            🚧 Deployment in progress for git commit SHA: ${{ github.event.pull_request.head.sha }}
-
       - uses: actions/checkout@v2
       - uses: conda-incubator/setup-miniconda@master
         with:
