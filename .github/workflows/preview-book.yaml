@@ -4,6 +4,7 @@ on:
     workflows:
       - deploy-book
     types:
+      - requested
       - completed
 jobs:
   deploy:
@@ -14,30 +15,6 @@ jobs:
         shell: bash
     steps:
       - uses: actions/checkout@v2
-      - name: Download Artifact Book
-        uses: dawidd6/action-download-artifact@v2.14.1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          workflow: deploy.yaml
-          run_id: ${{ github.event.workflow_run.id }}
-          name: book-zip
-      - name: Unzip book
-        run: |
-          rm -rf ./_build/html
-          unzip book.zip
-          rm -f book.zip
-      - name: Deploy to Netlify
-        id: netlify
-        uses: nwtgck/actions-netlify@v1.2
-        with:
-          publish-dir: ./_build/html
-          production-deploy: false
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          enable-commit-comment: false
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        timeout-minutes: 5
 
       - name: Set message value
         run: |
@@ -58,8 +35,62 @@ jobs:
           comment-author: 'github-actions[bot]'
           body-includes: '${{ env.comment_message }}'
 
+      - name: Create comment
+        if: |
+          github.event.workflow_run.conclusion != 'success'
+          && steps.fc.outputs.comment-id == ''
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          issue-number: ${{ steps.find-pull-request.outputs.number }}
+          body: |
+            ${{ env.comment_message }}
+            🚧 Deployment in progress for git commit SHA: ${{ steps.find-pull-request.outputs.head-sha }}
+
+      - name: Update comment
+        if: |
+          github.event.workflow_run.conclusion != 'success'
+          && steps.fc.outputs.comment-id != ''
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          edit-mode: replace
+          body: |
+            ${{ env.comment_message }}
+            🚧 Deployment in progress for git commit SHA: ${{ steps.find-pull-request.outputs.head-sha }}
+
+      - name: Download Artifact Book
+        uses: dawidd6/action-download-artifact@v2.14.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: deploy.yaml
+          run_id: ${{ github.event.workflow_run.id }}
+          name: book-zip
+
+      - name: Unzip book
+        run: |
+          rm -rf ./_build/html
+          unzip book.zip
+          rm -f book.zip
+
+      # Push the book's HTML to Netlify and get the preview URL
+      - name: Deploy to Netlify
+        id: netlify
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: ./_build/html
+          production-deploy: false
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          enable-commit-comment: false
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 5
+
       - name: Update Jupyter Book Preview comment
-        if: steps.fc.outputs.comment-id != ''
+        if: |
+          github.event.workflow_run.conclusion == 'success'
+          && steps.fc.outputs.comment-id != ''
         uses: peter-evans/create-or-update-comment@v1
         with:
           comment-id: ${{ steps.fc.outputs.comment-id }}
