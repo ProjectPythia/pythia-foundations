@@ -13,8 +13,5 @@ dependencies:
   - xarray
   - netcdf4
   - pyproj
+  - pythia-datasets
   - scipy
-  - pip
-  - pip:
-      # works for regular pip packages
-      - pythia-datasets
