@@ -18,8 +18,7 @@ parts:
               - file: foundations/conda
       - file: foundations/getting-started-jupyter
         sections:
-          - file: foundations/jupyter-notebooks
-          - file: foundations/how-to-run-notebooks
+          - file: foundations/jupyterlab
           - file: foundations/markdown
       - file: foundations/getting-started-github
         sections:
