@@ -86,10 +86,16 @@ conda list
 conda install somepackage
 ```
 
-- Installing a specific version of a package
+- Installing a specific version of a package into current environment
 
 ```
 conda install somepackage=0.17
+```
+
+- Updating all packages in the current environment to the latest versions
+
+```
+conda update --all
 ```
 
 - Checking what conda environments you have

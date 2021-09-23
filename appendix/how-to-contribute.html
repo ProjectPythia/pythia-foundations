@@ -505,6 +505,11 @@
      Building the book locally
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keeping-your-dev-environment-up-to-date">
+     Keeping your dev environment up to date
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -538,7 +543,7 @@ the main <a class="reference external" href="https://projectpythia.org/contribut
 <div class="section" id="create-a-conda-environment">
 <h3>Create a conda environment<a class="headerlink" href="#create-a-conda-environment" title="Permalink to this headline">¶</a></h3>
 <p>The first time you check out this repository, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda env update -f environment.yml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env update -f environment.yml
 </pre></div>
 </div>
 <p>This will create or update the dev environment (<code class="docutils literal notranslate"><span class="pre">pythia-book-dev</span></code>).</p>
@@ -546,8 +551,8 @@ the main <a class="reference external" href="https://projectpythia.org/contribut
 <div class="section" id="install-pre-commit-hooks">
 <h3>Install <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> hooks<a class="headerlink" href="#install-pre-commit-hooks" title="Permalink to this headline">¶</a></h3>
 <p>This repository includes <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> hooks (defined in <code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code>). To activate/install these pre-commit hooks, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate pythia-book-dev
-$ pre-commit install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate pythia-book-dev
+pre-commit install
 </pre></div>
 </div>
 <p>This is also a one-time step.</p>
@@ -556,15 +561,22 @@ $ pre-commit install
 <div class="section" id="building-the-book-locally">
 <h3>Building the book locally<a class="headerlink" href="#building-the-book-locally" title="Permalink to this headline">¶</a></h3>
 <p>To build the book locally, run the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate pythia-book-dev
-$ jupyter-book build .
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate pythia-book-dev
+jupyter-book build .
 </pre></div>
 </div>
 <p>Finally, you can view the book by opening the file <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> with your favorite web browser. On most platforms you can simply run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>open _build/html/index.html
 </pre></div>
 </div>
-<p>All code is licensed under Apache 2.0 (including both infrastructure code and example code in the rendered Pythia Foundations book). All other content in Pythia Foundations is licensed under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p>
+</div>
+<div class="section" id="keeping-your-dev-environment-up-to-date">
+<h3>Keeping your dev environment up to date<a class="headerlink" href="#keeping-your-dev-environment-up-to-date" title="Permalink to this headline">¶</a></h3>
+<p>It’s good practice to update the packages in your <code class="docutils literal notranslate"><span class="pre">pythia-book-dev</span></code> conda environment frequently to their latest versions, especially if it’s been a while since you used it. If the <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">.</span></code> command above generates error messages, that is a good indication that your conda environment may be out of date.</p>
+<p>To update all packages in the currently activated environment to their latest versions, do this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update --all
+</pre></div>
+</div>
 </div>
 </div>
 <div class="toctree-wrapper compound">
