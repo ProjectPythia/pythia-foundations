@@ -27,7 +27,7 @@ jobs:
             let pullRequestHeadSHA = ''
             core.info('Finding pull request...')
 
-            const pullRequests = await github.pulls.list({owner: context.repo.owner, repo: context.repo.repo})
+            const pullRequests = await github.rest.pulls.list({owner: context.repo.owner, repo: context.repo.repo})
             for (let pullRequest of pullRequests.data) {
               if(pullRequest.head.sha === context.payload.workflow_run.head_commit.id) {
                   pullRequestHeadSHA = pullRequest.head.sha
