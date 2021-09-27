@@ -1,13 +1,27 @@
 # Installing and Managing Python with Conda
 
+---
+
+## Overview
+
 Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s).
 
 Here we will cover:
 
-- What are packages?
-- Installing Conda
-- Creating a Conda environment
-- Useful Conda commands
+1.  What are packages?
+2.  Installing Conda
+3.  Creating a Conda environment
+4.  Useful Conda commands
+
+## Prerequisites
+
+| Concepts                                                                                                  | Importance | Notes |
+| --------------------------------------------------------------------------------------------------------- | ---------- | ----- |
+| [Installing and Running Python](https://foundations.projectpythia.org/foundations/how-to-run-python.html) | Helpful    |       |
+
+- **Time to learn**: 20 minutes
+
+---
 
 ## What are Packages?
 
@@ -72,10 +86,16 @@ conda list
 conda install somepackage
 ```
 
-- Installing a specific version of a package
+- Installing a specific version of a package into current environment
 
 ```
 conda install somepackage=0.17
+```
+
+- Updating all packages in the current environment to the latest versions
+
+```
+conda update --all
 ```
 
 - Checking what conda environments you have
@@ -93,3 +113,22 @@ conda env remove --name sample_environment
 Lots more information is in the [conda documentation](https://docs.conda.io/) or this handy [conda cheat sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
 
 If you're not a command line user, the Anaconda navigator offers GUI functionality for selecting environments and installing packages.
+
+---
+
+## Summary
+
+Conda is a package and environment management system that allows you to quickly install, run, and update packages within your work environment(s). This is important for gathering all of the tools necessary for your workflow. Conda can be managed in the command line or in the Anacond GUI.
+
+### What's Next?
+
+- [How to Run Python in the Terminal](terminal.md)
+- [How to Run Python in a Jupyter Session](jupyter.md)
+
+## Resources and References
+
+- [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
+- [conda documentation](https://docs.conda.io/)
+- [conda cheat sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
+- [Anaconda](https://docs.anaconda.com/anaconda/install/)
+- [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
