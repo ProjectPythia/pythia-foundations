@@ -65,6 +65,7 @@ jobs:
           issue-number: ${{ steps.find-pull-request.outputs.number }}
           body: |
             ${{ env.comment_message }}
+
             🚧 Deployment in progress for git commit SHA: ${{ steps.find-pull-request.outputs.sha }}
 
       - name: Update comment
@@ -78,9 +79,14 @@ jobs:
           edit-mode: replace
           body: |
             ${{ env.comment_message }}
+
             🚧 Deployment in progress for git commit SHA: ${{ steps.find-pull-request.outputs.sha }}
 
       - name: Download Artifact Book
+        if: |
+          github.event.workflow_run.conclusion == 'success'
+          && steps.find-pull-request.outputs.number != ''
+          && steps.fc.outputs.comment-id != ''
         uses: dawidd6/action-download-artifact@v2.14.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -89,6 +95,10 @@ jobs:
           name: book-zip
 
       - name: Unzip book
+        if: |
+          github.event.workflow_run.conclusion == 'success'
+          && steps.find-pull-request.outputs.number != ''
+          && steps.fc.outputs.comment-id != ''
         run: |
           rm -rf ./_build/html
           unzip book.zip
@@ -96,6 +106,10 @@ jobs:
 
       # Push the book's HTML to Netlify and get the preview URL
       - name: Deploy to Netlify
+        if: |
+          github.event.workflow_run.conclusion == 'success'
+          && steps.find-pull-request.outputs.number != ''
+          && steps.fc.outputs.comment-id != ''
         id: netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
