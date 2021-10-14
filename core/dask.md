@@ -27,6 +27,6 @@ Dask emphasizes the following virtues:
 - Scales down: Trivial to set up and run on a laptop in a single process
 - Responsive: Designed with interactive computing in mind, it provides rapid feedback and diagnostics to aid humans
 
-You should have a basic familiarity with [Numpy arrays](numpy), [Xarray](xarray), and [Pandas]\*\*\*(pandas) prior to working through the Dask notebooks presented here.
+You should have a basic familiarity with [Numpy arrays](numpy), [Xarray](xarray), and [Pandas](pandas) prior to working through the Dask notebooks presented here.
 
 [Dask home](https://dask.org/)
