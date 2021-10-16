@@ -66,7 +66,8 @@ jobs:
           body: |
             ${{ env.comment_message }}
 
-            🚧 Deployment in progress for git commit SHA: ${{ steps.find-pull-request.outputs.sha }}
+            🔍 Git commit SHA: ${{ steps.find-pull-request.outputs.sha }}
+            ✅ Deployment Preview URL: In Progress
 
       - name: Update comment
         if: |
@@ -80,7 +81,8 @@ jobs:
           body: |
             ${{ env.comment_message }}
 
-            🚧 Deployment in progress for git commit SHA: ${{ steps.find-pull-request.outputs.sha }}
+            🔍 Git commit SHA: ${{ steps.find-pull-request.outputs.sha }}
+            ✅ Deployment Preview URL: In Progress
 
       - name: Download Artifact Book
         if: |
@@ -134,5 +136,5 @@ jobs:
           body: |
             ${{ env.comment_message }}
 
-            🔍 Git commit SHA:  ${{ steps.find-pull-request.outputs.sha }}
+            🔍 Git commit SHA: ${{ steps.find-pull-request.outputs.sha }}
             ✅ Deployment Preview URL: ${{ steps.netlify.outputs.deploy-url }}
