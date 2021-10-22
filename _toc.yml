@@ -51,6 +51,8 @@ parts:
       - file: core/xarray
         sections:
           - file: core/xarray/xarray
+          - file: core/xarray/computation-masking
+          - file: core/xarray/enso-xarray
       - file: core/dask
         sections:
           - file: core/dask/dask-overview
