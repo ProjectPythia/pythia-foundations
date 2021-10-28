@@ -1,7 +1,6 @@
 name: pythia-book-dev
 channels:
   - conda-forge
-  - ncar
 dependencies:
   - python=3.8
   - jupyter-book
