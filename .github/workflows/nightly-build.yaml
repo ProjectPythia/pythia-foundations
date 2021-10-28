@@ -33,7 +33,7 @@ jobs:
           jupyter-book build .
 
       - name: Report status
-        if: steps.build.outcome != 'success' || steps.conda.status != 'success'
+        if: steps.build.outcome != 'success' || steps.conda.outcome != 'success'
         uses: actions/github-script@v5
         with:
           script: |
@@ -42,7 +42,7 @@ jobs:
             const creator = 'github-actions[bot]'
             const issueLabel = 'CI'
             const workflow_url = `https://github.com/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`
-            const issue_body = `[Workflow Run URL](${workflow_url})\n\n---\n\nCc @ProjectPythia/core`
+            const issue_body = `[Workflow Run URL](${workflow_url})\n\n---\n\nCc @ProjectPythia/core `
 
             let foundIssue = false
             const issues = await github.rest.issues.listForRepo({
@@ -68,12 +68,12 @@ jobs:
             }
 
             if (!foundIssue) {
-              const issue = await github.rest.issues.create({
+              await github.rest.issues.create({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 title: title,
                 body: issue_body,
                 labels: [issueLabel],
               })
-              core.info(`Opened a new issue: ${issue.number}`)
+              core.info('Opened a new issue')
             }
