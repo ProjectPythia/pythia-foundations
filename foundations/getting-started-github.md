@@ -14,7 +14,7 @@ We will walk users through things like
 - Registering for a free GitHub account
 - How (and why) to open an issue on GitHub
 - Cloning and pulling; what's the difference?
-- What is a git *branch*?
+- What is a git _branch_?
 - Don't be reluctant to contribute to a project!
 - What's a Pull Request, and how do you open one?
 - The need for version control
