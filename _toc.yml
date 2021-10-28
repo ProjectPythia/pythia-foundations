@@ -1,64 +1,60 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-#
-- file: landing-page
-
-- part: Preamble
-  chapters:
-    - file: preamble/how-to-use
-
-- part: Foundational skills
-  chapters:
-    - file: foundations/overview
-    - file: foundations/why-python
-    - file: foundations/getting-started-python
-      sections:
-        - file: foundations/quickstart
-        - file: foundations/how-to-run-python
-          sections:
-            - file: foundations/terminal
-            - file: foundations/jupyter
-            - file: foundations/conda
-    - file: foundations/getting-started-jupyter
-      sections:
-        - file: foundations/jupyter-notebooks
-        - file: foundations/how-to-run-notebooks
-        - file: foundations/markdown
-    - file: foundations/getting-started-github
-      sections:
-        - file: foundations/what-is-github
-        - file: foundations/git
-        - file: foundations/github-pull-request
-
-- part: Core Scientific Python packages
-  chapters:
-    - file: core/overview
-    - file: core/numpy
-      sections:
-        - file: core/numpy/numpy-basics
-        - file: core/numpy/intermediate-numpy
-        - file: core/numpy/numpy-broadcasting
-    - file: core/matplotlib
-      sections:
-        - file: core/matplotlib/matplotlib
-    - file: core/cartopy
-      sections:
-        - file: core/cartopy/cartopy
-    - file: core/datetime
-      sections:
-        - file: core/datetime/datetime
-    - file: core/pandas
-      sections:
-        - file: core/pandas/pandas
-    - file: core/data-formats
-      sections:
-        - file: core/data-formats/netcdf-cf
-    - file: core/xarray
-      sections:
-        - file: core/xarray/xarray
-
-- part: Appendix
-  chapters:
-    - file: appendix/how-to-contribute
-      sections:
-        - file: appendix/template
+format: jb-book
+root: landing-page
+parts:
+  - caption: Preamble
+    chapters:
+      - file: preamble/how-to-use
+  - caption: Foundational skills
+    chapters:
+      - file: foundations/overview
+      - file: foundations/why-python
+      - file: foundations/getting-started-python
+        sections:
+          - file: foundations/quickstart
+          - file: foundations/how-to-run-python
+            sections:
+              - file: foundations/terminal
+              - file: foundations/jupyter
+              - file: foundations/conda
+      - file: foundations/getting-started-jupyter
+        sections:
+          - file: foundations/jupyterlab
+          - file: foundations/markdown
+      - file: foundations/getting-started-github
+        sections:
+          - file: foundations/what-is-github
+          - file: foundations/git
+          - file: foundations/github-pull-request
+  - caption: Core Scientific Python packages
+    chapters:
+      - file: core/overview
+      - file: core/numpy
+        sections:
+          - file: core/numpy/numpy-basics
+          - file: core/numpy/intermediate-numpy
+          - file: core/numpy/numpy-broadcasting
+      - file: core/matplotlib
+        sections:
+          - file: core/matplotlib/matplotlib
+      - file: core/cartopy
+        sections:
+          - file: core/cartopy/cartopy
+      - file: core/datetime
+        sections:
+          - file: core/datetime/datetime
+      - file: core/pandas
+        sections:
+          - file: core/pandas/pandas
+      - file: core/data-formats
+        sections:
+          - file: core/data-formats/netcdf-cf
+      - file: core/xarray
+        sections:
+          - file: core/xarray/xarray
+          - file: core/xarray/computation-masking
+          - file: core/xarray/enso-xarray
+  - caption: Appendix
+    chapters:
+      - file: appendix/how-to-contribute
+        sections:
+          - file: appendix/template

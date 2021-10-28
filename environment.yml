@@ -11,10 +11,8 @@ dependencies:
   - sqlalchemy<1.4
   - cartopy
   - xarray
+  - nc-time-axis
   - netcdf4
   - pyproj
+  - pythia-datasets
   - scipy
-  - pip
-  - pip:
-      # works for regular pip packages
-      - pythia-datasets

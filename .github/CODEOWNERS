@@ -1,0 +1,17 @@
+# By default, everything in the repo is "content"
+* @ProjectPythia/education
+
+# Call all workflows as "infrastructure"
+.github/ @ProjectPythia/infrastructure
+
+# Also pre-commit stuff
+.pre-commit-config.yaml @ProjectPythia/infrastructure
+.prettierrc.toml @ProjectPythia/infrastructure
+pyproject.toml @ProjectPythia/infrastructure
+setup.cfg @ProjectPythia/infrastructure
+
+# JupyterBook configuration
+_config.yml @ProjectPythia/infrastructure
+
+# Sphinx template
+_templates/ @ProjectPythia/infrastructure
