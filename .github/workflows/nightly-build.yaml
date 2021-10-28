@@ -33,11 +33,6 @@ jobs:
         run: |
           jupyter-book build .
 
-      - name: Testing
-        run: |
-          echo ${{ steps.build.outcome }}
-          echo ${{ steps.conda.outcome }}
-
       - name: Report status
         if: steps.build.outcome != 'success' || steps.conda.outcome != 'success'
         uses: actions/github-script@v5
