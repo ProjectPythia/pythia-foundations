@@ -4,6 +4,8 @@
 This content is under construction!
 ```
 
-Description and history
-Other similar web-based code-sharing/version control platforms: gitlab, bitbucket
-Distinguish between git and GitHub
+- Intro: Project Pythia itself is a GitHub project! (to be fleshed out more in section 2, github-repos)
+- Description and history
+- Distinguish between git and GitHub
+- References
+

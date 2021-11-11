@@ -24,9 +24,10 @@ parts:
         sections:
           - file: foundations/github/what-is-github
           - file: foundations/github/github-repos
-          - file: foundations/github/github-setup
+          - file: foundations/github/github-setup-basic
           - file: foundations/github/github-issues
           - file: foundations/github/github-cloning-forking
+          - file: foundations/github/github-setup-advanced
           - file: foundations/github/what-is-git
           - file: foundations/github/git-branches
           - file: foundations/github/github-pull-request
