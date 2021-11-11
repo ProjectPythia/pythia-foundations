@@ -5,14 +5,15 @@ This content is under construction!
 ```
 
 ## What is a GitHub repository?
-- Tour of a GH repo. 
-    - Project Pythia itself? Or one of the foundational repos, which have a longer history? 
-    - Typical features of a repo:
-        - Code
-        - Issues
-        - Discussions
-        - Pull requests
-        
+
+- Tour of a GH repo.
+  - Project Pythia itself? Or one of the foundational repos, which have a longer history?
+  - Typical features of a repo:
+    - Code
+    - Issues
+    - Discussions
+    - Pull requests
+
 ## What are some examples of repositories?
 
 - Pythia-specific: e.g. NumPy, Pandas, Xarray
@@ -21,4 +22,3 @@ This content is under construction!
 - CS-specific: Git
 - Anything worth sharing! Not just code!
 - Project Pythia itself
-

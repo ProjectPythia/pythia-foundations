@@ -8,4 +8,3 @@ This content is under construction!
 - Description and history
 - Distinguish between git and GitHub
 - References
-
