@@ -8,7 +8,7 @@ dependencies:
   - matplotlib
   - numpy
   - pre-commit
-  - pydata-sphinx-theme>0.6.3
+  - pydata-sphinx-theme>=0.7.1
   - sqlalchemy<1.4
   - cartopy
   - xarray
