@@ -14,7 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: conda-incubator/setup-miniconda@master
-        continue-on-error: true
         id: conda
         with:
           channels: conda-forge
@@ -27,13 +26,14 @@ jobs:
           use-mamba: true
 
       - name: Build the book
-        continue-on-error: true
         id: build
         run: |
           jupyter-book build .
 
       - name: Report status
-        if: steps.build.outcome != 'success' || steps.conda.outcome != 'success'
+        if: |
+          always()
+          && (steps.build.outcome != 'success' || steps.conda.outcome != 'success')
         uses: actions/github-script@v5
         with:
           script: |
@@ -42,7 +42,7 @@ jobs:
             const creator = 'github-actions[bot]'
             const issueLabel = 'CI'
             const workflow_url = `https://github.com/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`
-            const issue_body = `[Workflow Run URL](${workflow_url})\n\n---\n\nCc @ProjectPythia/core `
+            const issue_body = `[Workflow Run URL](${workflow_url})\n\n`
 
             let foundIssue = false
             const issues = await github.rest.issues.listForRepo({
