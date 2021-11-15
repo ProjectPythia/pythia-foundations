@@ -3,6 +3,7 @@
 ```{note}
 This content is under construction!
 ```
+
 ## Overview:
 
 1. Overview 1
@@ -10,12 +11,13 @@ This content is under construction!
 
 ## Prerequisites
 
-| Concepts | Importance | Notes |
-| --- | --- | --- |
-| GitHub Parts 1-4  |Necessary | |
+| Concepts         | Importance | Notes |
+| ---------------- | ---------- | ----- |
+| GitHub Parts 1-4 | Necessary  |       |
 
-* **Time to learn**: 30 minutes
-***
+- **Time to learn**: 30 minutes
+
+---
 
 - Cloning
   - Why would you want to clone a repo?
@@ -23,14 +25,19 @@ This content is under construction!
   - Now that you've cloned a repo, what can you do with it?
 - Forking
   - Why would you want to fork a repo? See the github-pull-request section.
+
 ---
+
 ## Summary
-* Sum 1
-* Sum 2
+
+- Sum 1
+- Sum 2
 
 ### What's Next?
+
 Next lesson
 
 ## References
+
 1. Ref 1
 1. Ref 2

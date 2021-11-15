@@ -3,6 +3,7 @@
 ```{note}
 This content is under construction!
 ```
+
 ## Overview:
 
 1. Overview 1
@@ -10,21 +11,28 @@ This content is under construction!
 
 ## Prerequisites
 
-| Concepts | Importance | Notes |
-| --- | --- | --- |
-| GitHub Parts 1-9  |Necessary | |
+| Concepts         | Importance | Notes |
+| ---------------- | ---------- | ----- |
+| GitHub Parts 1-9 | Necessary  |       |
 
-* **Time to learn**: 30 minutes
-***
-## Content Section
+- **Time to learn**: 30 minutes
+
 ---
+
+## Content Section
+
+---
+
 ## Summary
-* Sum 1
-* Sum 2
+
+- Sum 1
+- Sum 2
 
 ### What's Next?
+
 Next lesson
 
 ## References
+
 1. Ref 1
 1. Ref 2

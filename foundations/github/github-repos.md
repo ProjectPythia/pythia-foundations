@@ -3,19 +3,20 @@
 ```{note}
 This content is under construction!
 ```
+
 ## Overview:
 
 1. Explore a GitHub repository
 
 ## Prerequisites
 
-| Concepts | Importance | Notes |
-| --- | --- | --- |
-| GitHub Part 1  |Necessary | |
+| Concepts      | Importance | Notes |
+| ------------- | ---------- | ----- |
+| GitHub Part 1 | Necessary  |       |
 
-* **Time to learn**: 30 minutes
-***
+- **Time to learn**: 30 minutes
 
+---
 
 ## What is a GitHub repository?
 
@@ -37,13 +38,17 @@ This content is under construction!
 - Project Pythia itself
 
 ---
+
 ## Summary
-* Summary 1
-* Summary 2
+
+- Summary 1
+- Summary 2
 
 ### What's Next?
+
 You will set up an account on GitHub.
 
 ## References
+
 1. Ref 1
 1. Ref 2
