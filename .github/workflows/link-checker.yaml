@@ -27,7 +27,7 @@ jobs:
           auto-update-conda: false
           python-version: 3.8
           environment-file: environment.yml
-          mamba-version: 0.17.0
+          mamba-version: '*'
           use-mamba: true
 
       - name: Disable notebook execution
