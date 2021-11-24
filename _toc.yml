@@ -22,9 +22,17 @@ parts:
           - file: foundations/markdown
       - file: foundations/getting-started-github
         sections:
-          - file: foundations/what-is-github
-          - file: foundations/git
-          - file: foundations/github-pull-request
+          - file: foundations/github/what-is-github
+          - file: foundations/github/github-repos
+          - file: foundations/github/github-setup-basic
+          - file: foundations/github/github-issues
+          - file: foundations/github/github-cloning-forking
+          - file: foundations/github/github-setup-advanced
+          - file: foundations/github/what-is-git
+          - file: foundations/github/git-branches
+          - file: foundations/github/github-pull-request
+          - file: foundations/github/contribute-to-pythia
+          - file: foundations/github/github-advanced
   - caption: Core Scientific Python packages
     chapters:
       - file: core/overview
