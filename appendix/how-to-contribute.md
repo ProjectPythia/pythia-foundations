@@ -12,6 +12,8 @@ A full contributor's guide will appear here, cross-referencing our tutorials on 
 A simple way to comment on anything you find in this book is to use the "open issue" and "suggest edit" buttons under the GitHub Octocat logo at the top of each page. These links will take you to GitHub where the source material for the book is hosted. You'll need a free (and broadly useful) GitHub account. See
 the main [Project Pythia Contributor's Guide][pythia contributor's guide].
 
+You may also quickly provide feedback via this [Google form](https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link).
+
 ## Contributing a new Jupyter Notebook
 
 If you'd like to contribute a Jupyter Notebook to these materials, please reference our [template](template) viewable on the next page. This template is available to you in `appendix/template.ipynb` if you've cloned the [source repository](https://github.com/ProjectPythia/pythia-foundations), or available as a download [directly from GitHub](https://github.com/ProjectPythia/pythia-foundations/raw/main/appendix/template.ipynb).
