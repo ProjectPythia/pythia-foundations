@@ -37,7 +37,7 @@ in the Scientific Python Ecosystem. These packages serve as the
 building blocks for many of the more geoscience focused components
 of the Scientific Python Ecosystem.
 
-## Running Pythia Foundation examples
+## Running Pythia Foundations examples
 
 All of the content in Pythia Foundations is authored in Markdown
 and presented in the form of [Jupyter
@@ -55,7 +55,7 @@ can run, and even modify, the example code in real time!! This
 interaction allows you to experiment with different parameters and
 observe instantly how results change.
 
-There are two ways that you can execute the Pythia Foundation book
+There are two ways that you can execute the Pythia Foundations book
 chapters. Both are described below.
 
 ### Interacting with Jupyter Notebooks in the cloud via Binder
