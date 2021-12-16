@@ -2,8 +2,8 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Pythia Foundations
-author: the <a href="https://projectpythia.org/">Project Pythia</a> community
-logo: images/ProjectPythia_Logo_Final-01-Blue.png
+author: The <a href="https://projectpythia.org/">Project Pythia</a> Community
+logo: images/logos/pythia_logo-white-rtext.svg
 
 execute:
   # See https://jupyterbook.org/content/execute.html
@@ -43,6 +43,7 @@ repository:
   url: https://github.com/ProjectPythia/pythia-foundations # Online location of your book
   #path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: main # Which branch of the repository should be used when creating links (optional)
+
 # Configure your Binder links, such as the URL of the BinderHub.
 launch_buttons:
   binderhub_url: https://mybinder.org
@@ -51,6 +52,7 @@ launch_buttons:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
+  favicon: images/icons/favicon.ico
   google_analytics_id: 'G-G57FLM9M46'
   use_issues_button: true
   use_repository_button: true
@@ -58,3 +60,32 @@ html:
   extra_footer: |
     All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.
     We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a> or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
+
+sphinx:
+  config:
+    html_theme: sphinx_pythia_theme
+    html_permalinks_icon: '<i class="bi bi-link"></i>'
+    html_theme_options:
+      page_layouts:
+      domnav:
+        - content: Start Learning
+          url: https://projectpythia.org/index.html#start-learning
+        - content: Join us!
+          url: https://projectpythia.org/index.html#join-us
+        - content: Team
+          url: https://projectpythia.org/index.html#the-project-pythia-team
+        - content: About
+          url: https://projectpythia.org/about.html
+      footer:
+        logos:
+          NCAR: images/logos/NCAR-contemp-logo-blue.svg
+          Unidata: images/logos/Unidata_logo_horizontal_1200x300.svg
+          UAlbany: images/logos/UAlbany-A2-logo-purple-gold.svg
+        acknowledgement:
+          content: >-
+            This material is based upon work supported by the National
+            Science Foundation under Grant Nos. 2026863 and 2026899. Any
+            opinions, findings, and conclusions or recommendations expressed
+            in this material are those of the author(s) and do not necessarily
+            reflect the views of the National Science Foundation.
+          image: images/logos/footer-logo-nsf.png
