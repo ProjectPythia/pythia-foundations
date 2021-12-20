@@ -64,7 +64,7 @@ html:
 sphinx:
   config:
     html_theme: sphinx_pythia_theme
-    html_permalinks_icon: '<i class="bi bi-link"></i>'
+    html_permalinks_icon: '<i class="fas fa-link"></i>'
     html_theme_options:
       page_layouts:
       domnav:
