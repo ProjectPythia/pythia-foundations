@@ -97,7 +97,7 @@ environment and one to activate it:
 
 ```
 conda env create --force -f https://raw.githubusercontent.com/ProjectPythia/pythia-foundations/main/environment.yml
-conda activate pythia-foundations
+conda activate pythia-book-dev
 ```
 
 You should only need to create the environment once (run the first
