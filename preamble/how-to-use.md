@@ -102,13 +102,13 @@ conda activate pythia-book-dev
 
 You should only need to create the environment once (run the first
 command above). But if you download another notebook later, you will
-need to activate *pythia-book-dev* if
+need to activate _pythia-book-dev_ if
 it is not currently active, for example if you open up a new
-terminal window, or deactivate *pythia-book-dev* explicitly with
+terminal window, or deactivate _pythia-book-dev_ explicitly with
 the `conda` command. Again, more information on Conda can be
 found [here](https://foundations.projectpythia.org/foundations/conda.html).
 
-Now that your *pythia-book-dev* environment is activated,
+Now that your _pythia-book-dev_ environment is activated,
 change your working directory to the
 location where you downloaded the notebook (.ipynb file) and start
 the Jupyter Notebook server. For example if you downloaded the
