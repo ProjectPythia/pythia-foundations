@@ -651,11 +651,26 @@ located in the top right corner of the book chapter you are viewing,
 and select “.ipynb”.</p>
 <p>That was the easy part. Getting the notebook to execute locally may
 take a little more work. The book was created to run in a particular
-Python environment, managed with Conda. To ensure success you should
-follow the instructions in the Pythia Foundations contributor’s
-<a class="reference external" href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">guide</a>
-on how to configure your Python environment. Once your environment
-is configured and “activated”, change your working directory to the
+Python environment, managed with Conda. If you don’t have a up-to-date
+version of Conda on your machine, you’ll want to install one. A brief
+introduction to installing Conda is available <a class="reference external" href="https://foundations.projectpythia.org/foundations/conda.html">here</a>.</p>
+<p>Once you’ve installed Conda you will need to create and activate a Conda environment
+that is compatible with Pythia Foundation’s notebooks. This
+can be done with two commands from the terminal, one to create the
+environment and one to activate it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">--</span><span class="n">force</span> <span class="o">-</span><span class="n">f</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ProjectPythia</span><span class="o">/</span><span class="n">pythia</span><span class="o">-</span><span class="n">foundations</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">pythia</span><span class="o">-</span><span class="n">book</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
+<p>You should only need to create the environment once (run the first
+command above). But if you download another notebook later, you will
+need to activate <em>pythia-book-dev</em> if
+it is not currently active, for example if you open up a new
+terminal window, or deactivate <em>pythia-book-dev</em> explicitly with
+the <code class="docutils literal notranslate"><span class="pre">conda</span></code> command. Again, more information on Conda can be
+found <a class="reference external" href="https://foundations.projectpythia.org/foundations/conda.html">here</a>.</p>
+<p>Now that your <em>pythia-book-dev</em> environment is activated,
+change your working directory to the
 location where you downloaded the notebook (.ipynb file) and start
 the Jupyter Notebook server. For example if you downloaded the
 notebook file to your home directory you would do:</p>
@@ -665,12 +680,14 @@ notebook file to your home directory you would do:</p>
 </div>
 <p>A local Jupyter Notebook server should open in your web browser.
 Simply open the .ipynb file using the Notebook server’s file browser
-and you are good to go. Alternatively, you could “clone the site”
+and you are good to go. If you want to work with many Pythia Foundations
+notebooks, you might want to “clone the site”
 and download all of the notebooks. First click on the Pythia
 Foundations GitHub icon (see figure below) and select repository.
 Then follow the instructions in our Getting Started with GitHub
 <a class="reference external" href="https://foundations.projectpythia.org/foundations/getting-started-github.html">guide</a>
-for cloning a repository.</p>
+for cloning a repository. The steps used above for configuring your
+Conda environment should work for this method as well.</p>
 <p><img alt="Annotated Pythia Foundations home page" src="../_images/foundations_diagram.png" /></p>
 </div>
 </div>
