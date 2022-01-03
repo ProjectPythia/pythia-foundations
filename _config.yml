@@ -97,19 +97,19 @@ sphinx:
         Unidata: images/logos/Unidata_logo_horizontal_1200x300.svg
         UAlbany: images/logos/UAlbany-A2-logo-purple-gold.svg
       footer_menu:
-        "More about...":
+        'More about...':
           - name: Project Pythia
             url: https://projectpythia.org/about
           - name: Pangeo
             url: https://pangeo.io
           - name: Project Jupyter
             url: https://jupyter.org
-        "Let us know...":
+        'Let us know...':
           - name: Submit an issue on GitHub
             url: https://github.com/ProjectPythia/sphinx-pythia-theme/issues/new?title=Issue%20with%20Sphinx%20Pythia%20Theme&body=Your%20issue%20content%20here.
           - name: Feedback to Project Pythia
             url: https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link
-        "Join the community":
+        'Join the community':
           - name: Contributor's Guide
             url: https://foundations.projectpythia.org/appendix/how-to-contribute.html
           - name: Our GitHub Organization
