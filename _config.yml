@@ -91,7 +91,7 @@ sphinx:
           url: https://foundations.projectpythia.org
         - name: Gallery
           url: https://projectpythia.org/gallery.html
-        - name: Join
+        - name: Join us!
           url: https://projectpythia.org/index.html#join-us
       footer_logos:
         NCAR: images/logos/NCAR-contemp-logo-blue.svg
