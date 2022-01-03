@@ -65,6 +65,7 @@ html:
 
 sphinx:
   config:
+    html_last_updated_fmt: '%-d %B %Y'
     html_theme: sphinx_pythia_theme
     html_permalinks_icon: '<i class="fas fa-link"></i>'
     html_theme_options:
