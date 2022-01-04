@@ -40,6 +40,18 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
+# WARNING:
+# All of the remaining settings have been moved to the sphinx: config: ...
+# section below.  This is because anything you set in the sphinx: config: ...
+# section will overwrite (without recursive updating) any Sphinx config setting
+# created by Jupyter Book.  For example, the `html_theme_options` Sphinx config
+# setting gets replaced entirely by what is found in the sphinx: config: ...
+# section below.  Thus, to use the new theme, all of these setting need to be
+# set in the sphinx: config: ... section below.
+#
+# see: https://github.com/ProjectPythia/pythia-foundations/pull/196
+#      https://github.com/executablebooks/jupyter-book/issues/1588
+
 # Information about where the book exists on the web
 # repository:
 #   url: https://github.com/ProjectPythia/pythia-foundations # Online location of your book
