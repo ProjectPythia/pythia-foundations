@@ -1,13 +1,15 @@
 <img src="../../images/GitHub-logo.png" alt="Github Logo" width="600px">
 
-# GitHub Part 1: What is GitHub?
+# What is GitHub?
 
 ## Overview:
 
 1.  What is GitHub?
+1.  No experience necessary!
 1.  Free- and open-source software (FOSS)
 1.  Version control systems (VCS)
 1.  GitHub = FOSS + VCS + Web
+1.  Register for a free GitHub account
 
 ## Prerequisites
 
@@ -15,7 +17,7 @@
 | -------- | ---------- | ----- |
 | None     |            |       |
 
-- **Time to learn**: 10 minutes
+- **Time to learn**: 15 minutes
 
 ---
 
@@ -35,6 +37,10 @@ GitHub provides the following:
 1. An environment that fosters _collaboration_
 
 Although GitHub can host any digital asset, the most common use case for GitHub is for individuals or organizations to house _repositories_ of _free-_ and _open-source software_:
+
+## No experience necessary!
+
+You do not need to be an experienced software developer or be proficient in version control to make use of GitHub! Perhaps, though, you have used a particular package (e.g., Xarray or Matplotlib) and have had questions about its usage, noticed a bug, or had an idea for a new feature for the package! You can participate in a project's development via GitHub the same way you might have interacted with its developers via email in the past.
 
 ## Free- and open-source software (FOSS)
 
@@ -81,7 +87,7 @@ Linus Torvalds, the original developer (and still the lead maintainer) of **Linu
 We will discuss version control and the use of **Git** via the command line later in this series.
 ```
 
-## FOSS + VCS = GitHub
+## FOSS + VCS + Web = GitHub
 
 Perhaps the most popular web-based platform that uses Git for FOSS VCS is [GitHub](https://github.com). GitHub hosts all of the Python software packages that Project Pythia covers as code repositories (we'll use the term <i>Git repo</i>, or more generally just <i>repo</i> henceforth to represent a GitHub code repository).
 
@@ -89,12 +95,23 @@ For example, here is a screenshot from [Xarray's GitHub](https://github.com/pyda
 
 <img src="../../images/XarrayGithub.png" alt="Xarray GitHub" width="600px">
 
+## Register for a free GitHub account
+
+While one can browse GitHub to explore repositories such as Xarray, it's necessary to register for a free user account in order to take advantage of GitHub's full capabilities. As with many online services, you will choose a user id, password, and specify an email address to use with your account.
+
+To do so, simply point your browser to the [GitHub sign-up page](https://github.com/join):
+
+<img src="../../images/GitHubJoin.png" alt="GitHub Signup" width="600px">
+
+While GitHub offers paid options, a free account is typically all that is needed!
+
 ---
 
 ## Summary
 
 - GitHub serves as a web-based platform for digital assets, particularly FOSS.
 - GitHub uses Git as its version control system.
+- You can set up a free user account on GitHub.
 
 ### What's Next?
 
