@@ -47,7 +47,7 @@ As you can see by the recent timestamps, these repositories are actively changin
 :class: tip
 Notice that each of the three *Repositories* each exist as part of their own *Organization*. In other words, the NumPy repository exists within the NumPy organization; the Xarray repo exists within the Pydata org, and so forth.
 
-When you [created your own GitHub account](https://foundations.projectpythia.org/foundations/github/what-is-github.html#register-for-a-free-github-account), your user id functions as the *organization*. Any repositories you create (and therefore, *own*) will exist within that org.
+When you [created your own GitHub account](https://foundations.projectpythia.org/foundations/github/what-is-github.html), your user id functions as the *organization*. Any repositories you create (and therefore, *own*) will exist within that org.
 ```
 
 Another example is this project's [Pythia Foundations repository](https://github.com/ProjectPythia/pythia-foundations), on which this tutorial is stored. It is owned by the [Project Pythia organization](https://github.com/ProjectPythia), which also owns several other repositories that store the files needed to generate <https://projectpythia.org/>, among other things.
