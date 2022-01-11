@@ -107,55 +107,19 @@ sphinx:
         binderhub_url: https://mybinder.org
         notebook_interface: jupyterlab
       extra_navbar: |
-        Theme by <a href="https://projectpythia.org">Project Pythia</a>.<br>
+        Theme by <a href="https://projectpythia.org">Project Pythia</a>.<br><br>
         All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.
-      footer_items: footer-logos.html, footer-menu.html, footer-info.html, footer-nsf.html
-      logo_only: True
       logo_link: https://projectpythia.org
       navbar_links:
         - name: Home
-          url: /
+          url: https://projectpythia.org
         - name: Foundations
           url: https://foundations.projectpythia.org
         - name: Gallery
           url: https://projectpythia.org/gallery.html
         - name: Community
           url: https://projectpythia.org/index.html#join-us
-      navbar_align: left
       footer_logos:
         NCAR: images/logos/NCAR-contemp-logo-blue.svg
         Unidata: images/logos/Unidata_logo_horizontal_1200x300.svg
         UAlbany: images/logos/UAlbany-A2-logo-purple-gold.svg
-      footer_menu:
-        - title: Column A
-          class: col-8 col-sm-4 col-md-3 col-lg-2
-          items:
-            - name: Link 1
-              url: https://google.com
-            - name: Link 2
-              url: https://google.com
-            - name: Link 3
-              url: https://google.com
-            - name: Link 4
-              url: https://google.com
-        - title: Column B
-          class: col-8 col-sm-4 col-md-3 col-lg-2
-          items:
-            - name: Link 1
-              url: https://google.com
-            - name: Link 2
-              url: https://google.com
-            - name: Link 3
-              url: https://google.com
-            - name: Link 4
-              url: https://google.com
-        - title: Column C
-          class: col-8 col-sm-4 col-md-3 col-lg-2
-          items:
-            - name: Just some text!
-            - name: |
-                Another paragraph of text.
-                This has a lot more information
-                in it than the previous paragraph.
-            - name: And finally a link
-              url: https://google.com
