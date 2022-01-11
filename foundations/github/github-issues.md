@@ -10,7 +10,7 @@
 | --------------------- | ---------- | ----- |
 | Prior GitHub Sections | Necessary  |       |
 
-- **Time to learn**: 15 minutes
+- **Time to learn**: 5 minutes
 
 ---
 
