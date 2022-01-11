@@ -93,15 +93,25 @@ Perhaps the most popular web-based platform that uses Git for FOSS VCS is [GitHu
 
 For example, here is a screenshot from [Xarray's GitHub](https://github.com/pydata/xarray) Git repo:
 
-<img src="../../images/XarrayGithub.png" alt="Xarray GitHub" width="600px">
+<img src="../../images/XarrayGithub.png" alt="Xarray GitHub">
+
+```{note}
+The above screenshot is from <i>one moment in time</i>. When you visit the Xarray GitHub link above, it will no doubt look different!
+```
 
 ## Register for a free GitHub account
 
-While one can browse GitHub to explore repositories such as Xarray, it's necessary to register for a free user account in order to take advantage of GitHub's full capabilities. As with many online services, you will choose a user id, password, and specify an email address to use with your account.
+While one can freely browse GitHub repositories such as Xarray anonymously, it's necessary to log into a unique (and free) user account in order to take advantage of GitHub's full capabilities, such as:
+
+1. Opening issues and pull requests
+1. Participate in discussions
+1. Host your own repository
+
+Your next step (if you haven't already) should be to register for your free GitHub account. As with many online services, you will choose a user id, password, and specify an email address to use with your account.
 
 To do so, simply point your browser to the [GitHub sign-up page](https://github.com/join):
 
-<img src="../../images/GitHubJoin.png" alt="GitHub Signup" width="600px">
+<img src="../../images/GitHubJoin.png" alt="GitHub Signup">
 
 While GitHub offers paid options, a free account is typically all that is needed!
 
@@ -119,5 +129,4 @@ In the next lesson, we will explore some GitHub repositories.
 
 ## References
 
-1. Ref 1
-1. Ref 2
+1. [GitHub (Wikipedia)](https://en.wikipedia.org/wiki/GitHub)
