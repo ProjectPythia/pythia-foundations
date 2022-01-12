@@ -24,7 +24,9 @@ By default, it shows all open issues, but we can see all [closed issues](https:/
 
 <img src="../../images/GitHubPythiaIssuesClosed.png" alt="Pythia Closed Issues">
 
-Issues, Discussions, and Pull Requests are all numbered for easy reference. By opening, resolving, and then closing an issue, we are leaving behind a searchable public record of what the issue was, why we thought it was important, and how we resolved it. This is great for project management, since it gets old issues out of the way without actually deleting them. Let's examine [Issue \#144](https://github.com/ProjectPythia/pythia-foundations/issues/144).
+Issues, Discussions, and Pull Requests are all numbered for easy reference. By opening, resolving, and then closing an issue, we are leaving behind a searchable public record of what the issue was, why we thought it was important, and how we resolved it. This is great for project management, since it gets old issues out of the way without actually deleting them.
+
+Let's now examine [Issue \#144](https://github.com/ProjectPythia/pythia-foundations/issues/144).
 
 <img src="../../images/GitHubPythiaIssue144.png" alt="Pythia Issue 144">
 
