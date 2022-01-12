@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -49,6 +49,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Xarray" href="../xarray.html" />
@@ -68,33 +69,99 @@
                 </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="132">
+    <div class="container-fluid" id="shim"></div>
     <div class="container-fluid" id="banner"></div>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
 
+  <div id="navbar-start">
+    
     
 
+<a class="navbar-brand" href="https://projectpythia.org">
+  <img src="../../_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/gallery.html">Gallery</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ProjectPythia" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/project_pythia" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
     <div class="container-xl">
       <div class="row">
-          
+        
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
-      
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
-      <img src="../../_static/ProjectPythia_Logo_Final-01-Blue.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Pythia Foundations</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -441,19 +508,18 @@
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
+  Theme by <a href="https://projectpythia.org">Project Pythia</a>.<br><br>
+All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.<br><br>
+We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
+or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
 
 </div>
 
+</div>
 
-          
+        
 
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
+        <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main"><div class="topbar container-xl fixed-top">
     <div class="topbar-contents row">
         <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
         <div class="col pl-md-4 topbar-main">
@@ -537,7 +603,7 @@
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+                <i class="fas fa-list"></i> On this page
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -638,126 +704,17 @@
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>NetCDF and CF: The Basics</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#imports">
-   Imports
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gridded-data">
-   Gridded Data
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-the-file-and-dimensions">
-     Creating the file and dimensions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-and-filling-a-variable">
-     Creating and filling a variable
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#coordinate-variables">
-     Coordinate variables
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#auxilliary-coordinates">
-     Auxilliary Coordinates
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#coordinate-system-information">
-     Coordinate System Information
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cell-bounds">
-     Cell Bounds
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#observational-data">
-   Observational Data
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creation-and-basic-setup">
-     Creation and basic setup
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#station-ids">
-     Station IDs
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#writing-the-field">
-     Writing the field
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#whats-next">
-     What’s Next?
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#resources-and-references">
-   Resources and References
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+          <div id="main-content" class="row">
+            <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+              
               <div>
                 
   <p><img alt="NetCDF Logo" src="https://www.unidata.ucar.edu/images/logos/netcdf-400x400.png" /></p>
 <div class="tex2jax_ignore mathjax_ignore section" id="netcdf-and-cf-the-basics">
-<h1>NetCDF and CF: The Basics<a class="headerlink" href="#netcdf-and-cf-the-basics" title="Permalink to this headline">¶</a></h1>
+<h1>NetCDF and CF: The Basics<a class="headerlink" href="#netcdf-and-cf-the-basics" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
 <div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>This notebook will introduce you to the basics of Climate and Forecasting (CF) metadata for netCDF data files. Along with an introduction to netCDF, we will introduce the CF data model and discuss some netCDF implementation details to consider when deciding how to write data with CF and netCDF. We will cover the following,</p>
 <ol class="simple">
 <li><p>Demonstrating gridded data</p></li>
@@ -765,7 +722,7 @@
 </ol>
 </div>
 <div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Concepts</p></th>
@@ -790,7 +747,7 @@
 </div>
 <hr class="docutils" />
 <div class="section" id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
@@ -806,7 +763,7 @@
 <p><a name="gridded"></a></p>
 </div>
 <div class="section" id="gridded-data">
-<h2>Gridded Data<a class="headerlink" href="#gridded-data" title="Permalink to this headline">¶</a></h2>
+<h2>Gridded Data<a class="headerlink" href="#gridded-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Let’s say we’re working with some numerical weather forecast model output. Let’s walk through the steps necessary to store this data in netCDF, using the Climate and Forecasting metadata conventions to ensure that our data are available to as many tools as possible.</p>
 <p>To start, let’s assume the following about our data:</p>
 <ul class="simple">
@@ -838,7 +795,7 @@
 </div>
 </div>
 <div class="section" id="creating-the-file-and-dimensions">
-<h3>Creating the file and dimensions<a class="headerlink" href="#creating-the-file-and-dimensions" title="Permalink to this headline">¶</a></h3>
+<h3>Creating the file and dimensions<a class="headerlink" href="#creating-the-file-and-dimensions" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>The first step is to create a new file in netCDF format and set up the shared dimensions we’ll be using in the file. We’ll be using the <code class="docutils literal notranslate"><span class="pre">netCDF4</span></code> library to do all of the requisite netCDF API calls.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -896,7 +853,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
     title: Forecast model run
     institution: Unidata
     source: WRF-1.5
-    history: 2022-01-12 19:56:19.758337 Python
+    history: 2022-01-12 23:45:34.069158 Python
     references: 
     comment: 
     dimensions(sizes): forecast_time(0), x(101), y(67), pressure(7)
@@ -926,7 +883,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 </div>
 </div>
 <div class="section" id="creating-and-filling-a-variable">
-<h3>Creating and filling a variable<a class="headerlink" href="#creating-and-filling-a-variable" title="Permalink to this headline">¶</a></h3>
+<h3>Creating and filling a variable<a class="headerlink" href="#creating-and-filling-a-variable" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>So far, all we’ve done is outlined basic information about our dataset: broad metadata and the dimensions of our dataset. Now we create a <code class="docutils literal notranslate"><span class="pre">netCDF4</span> <span class="pre">variable</span></code> to hold one particular data field for our dataset, in this case the forecast air temperature. When defining this variable, we specify the datatype for the values being stored, the relevant dimensions, as well as enable optional <code class="docutils literal notranslate"><span class="pre">zlib</span></code>-based compression.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1030,7 +987,7 @@ filling on, default _FillValue of 9.969209968386869e+36 used
 </div>
 </div>
 <div class="section" id="coordinate-variables">
-<h3>Coordinate variables<a class="headerlink" href="#coordinate-variables" title="Permalink to this headline">¶</a></h3>
+<h3>Coordinate variables<a class="headerlink" href="#coordinate-variables" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>To properly orient our data in time and space, we need to go beyond dimensions (which define common sizes and alignment) and include values along these dimensions, which are called “Coordinate Variables”. Generally, these are defined by creating a one dimensional variable with the same name as the respective dimension.</p>
 <p>To start, we define variables which define our <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinate values. These variables include <code class="docutils literal notranslate"><span class="pre">standard_name</span></code>s which allow associating them with projections (more on this later) as well as an optional <code class="docutils literal notranslate"><span class="pre">axis</span></code> attribute to make clear what standard direction this coordinate refers to.</p>
 <div class="cell docutils container">
@@ -1130,7 +1087,7 @@ filling on, default _FillValue of 9.969209968386869e+36 used
 </div>
 </div>
 <div class="section" id="auxilliary-coordinates">
-<h3>Auxilliary Coordinates<a class="headerlink" href="#auxilliary-coordinates" title="Permalink to this headline">¶</a></h3>
+<h3>Auxilliary Coordinates<a class="headerlink" href="#auxilliary-coordinates" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Our data are still not CF-compliant because they do not contain latitude and longitude information, which is needed to properly locate the data. To solve this, we need to add variables with latitude and longitude. These are called “auxillary coordinate variables”, not because they are extra, but because they are not simple one-dimensional variables.</p>
 <p>Below, we first generate longitude and latitude values from our projected coordinates using the <code class="docutils literal notranslate"><span class="pre">pyproj</span></code> library.</p>
 <div class="cell docutils container">
@@ -1187,7 +1144,7 @@ filling on, default _FillValue of 9.969209968386869e+36 used
 </div>
 </div>
 <div class="section" id="coordinate-system-information">
-<h3>Coordinate System Information<a class="headerlink" href="#coordinate-system-information" title="Permalink to this headline">¶</a></h3>
+<h3>Coordinate System Information<a class="headerlink" href="#coordinate-system-information" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>With our data specified on a Lambert conformal projected grid, it would be good to include this information in our metadata. We can do this using a “grid mapping” variable. This uses a dummy scalar variable as a namespace for holding all of the required information. Relevant variables then reference the dummy variable with their <code class="docutils literal notranslate"><span class="pre">grid_mapping</span></code> attribute.</p>
 <p>Below we create a variable and set it up for a Lambert conformal conic projection on a spherical earth. The <code class="docutils literal notranslate"><span class="pre">grid_mapping_name</span></code> attribute describes which of the CF-supported grid mappings we are specifying. The names of additional attributes vary between the mappings.</p>
 <div class="cell docutils container">
@@ -1244,7 +1201,7 @@ filling on, default _FillValue of -2147483647 used
 </div>
 </div>
 <div class="section" id="cell-bounds">
-<h3>Cell Bounds<a class="headerlink" href="#cell-bounds" title="Permalink to this headline">¶</a></h3>
+<h3>Cell Bounds<a class="headerlink" href="#cell-bounds" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <blockquote>
 <div><p><strong>NASA Dataset Interoperability Recommendations:</strong></p>
 <p>Section 2.3 - Use CF “bounds” attributes</p>
@@ -1288,7 +1245,7 @@ filling on, default _FillValue of -2147483647 used
 </div>
 </div>
 <div class="section" id="observational-data">
-<h2>Observational Data<a class="headerlink" href="#observational-data" title="Permalink to this headline">¶</a></h2>
+<h2>Observational Data<a class="headerlink" href="#observational-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>So far we’ve focused on how to handle storing data that are arranged in a grid. What about in-situ data, often termed “observational” data? CF describes this as <em>Conventions for Discrete Sampling Geometeries (DSG)</em>.</p>
 <p>For data that are regularly sampled (e.g., from a vertical profiler site), this is straightforward. First, let’s define some sample profile data for three hypothetical profilers located at Boulder, Norman, and Albany. We’ll assume that the profiler reports data every 10m, from 10 m up to (but not including) 1000 m.</p>
 <div class="cell docutils container">
@@ -1303,7 +1260,7 @@ filling on, default _FillValue of -2147483647 used
 </div>
 </div>
 <div class="section" id="creation-and-basic-setup">
-<h3>Creation and basic setup<a class="headerlink" href="#creation-and-basic-setup" title="Permalink to this headline">¶</a></h3>
+<h3>Creation and basic setup<a class="headerlink" href="#creation-and-basic-setup" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>First we create a new file and define some dimensions. Since this is profile data, heights will be one dimension. We use station as our other dimension. We also set the global <code class="docutils literal notranslate"><span class="pre">featureType</span></code> attribute to <code class="docutils literal notranslate"><span class="pre">'profile'</span></code> to indicate that this file holds “an ordered set of data points along a vertical line at a fixed horizontal position and fixed time”. We also add a dimension to assist in storing our string station ids.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1370,7 +1327,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 </div>
 </div>
 <div class="section" id="station-ids">
-<h3>Station IDs<a class="headerlink" href="#station-ids" title="Permalink to this headline">¶</a></h3>
+<h3>Station IDs<a class="headerlink" href="#station-ids" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Now we can also write our station IDs to a variable. This is a 2D variable, but one of the dimensions is simply there to facilitate treating strings as character arrays. We also assign this an attribute <code class="docutils literal notranslate"><span class="pre">cf_role</span></code> with a value of <code class="docutils literal notranslate"><span class="pre">'profile_id'</span></code> to facilitate software to identify individual profiles:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1410,7 +1367,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 </div>
 </div>
 <div class="section" id="writing-the-field">
-<h3>Writing the field<a class="headerlink" href="#writing-the-field" title="Permalink to this headline">¶</a></h3>
+<h3>Writing the field<a class="headerlink" href="#writing-the-field" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Now all that’s left is to write our profile data, which looks fairly standard. We also add a scalar variable for the time at which these profiles were captured:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1456,16 +1413,16 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 </div>
 <hr class="docutils" />
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>We have discussed and created examples of <strong>netCDF</strong> <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>s, both gridded and in-situ, that follow the Climate and Forecast (<strong>CF</strong>) Conventions. These <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>s are <em>self-describing</em>, in that their attributes, or <em>metadata</em>, are included. Other libraries in the Python scientific software ecosystem, such as <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and <code class="docutils literal notranslate"><span class="pre">MetPy</span></code> can thus easily read in (and write to) and analyze these <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>s.</p>
 <div class="section" id="whats-next">
-<h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline">¶</a></h3>
+<h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>In subsequent notebooks, we will work with netCDF <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>s culled from “real-life” model and in-situ sources.</p>
 <p><a name="references"></a></p>
 </div>
 </div>
 <div class="section" id="resources-and-references">
-<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline">¶</a></h2>
+<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p>CF Conventions doc (<a class="reference external" href="http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/cf-conventions.html">1.7</a>)</p></li>
 <li><p>Jonathan Gregory’s old <a class="reference external" href="http://cfconventions.org/Data/cf-documents/overview/viewgraphs.pdf">CF presentation</a></p></li>
@@ -1497,9 +1454,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
     <script>kernelName = 'python3'</script>
 
               </div>
-              
-            
-                <!-- Previous / next buttons -->
+              <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../data-formats.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1516,29 +1471,155 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By the <a href="https://projectpythia.org/">Project Pythia</a> community<br/>
-    
-        &copy; Copyright 2021.<br/>
-      <div class="extra_footer">
-        All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.
-We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a> or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
-
-      </div>
-  </p>
-</footer>
-</main>
-
+            </div>
+          </div>
+        </main>
 
       </div>
     </div>
   
   <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
+<footer class="footer">
+  <div class="container-fluid m-0 p-0">
+  
+    <div class="footer-item">
+    
+  <div class="container-fluid footer-logos">
+    <div class="container-xl">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="NCAR" src="../../_images/NCAR-contemp-logo-blue.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="Unidata" src="../../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="UAlbany" src="../../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-menu pt-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>About</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/about.html"
+              >About Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/preamble/how-to-use.html"
+              >How to use Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#the-project-pythia-team"
+              >The Project Team</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Give Feedback</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="mailto:projectpythia@ucar.edu">Email us!</a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/projectpythia.github.io/discussions"
+              >Project Pythia Discussions</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/pythia-foundations/discussions"
+              >Pythia Foundations Discussions</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Contribute</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/contributing.html"
+              >How to contribute to Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/appendix/how-to-contribute.html"
+              >How to contribute to Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/code_of_conduct.html"
+              >Our code of conduct</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#weekly-working-group-meetings"
+              >Join our weekly meetings</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/ProjectPythia"
+              >Join us on GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  
+    <div class="footer-item">
+      <div class="container-fluid footer-info">
+    <div class="container-xl">
+      <div class="d-flex justify-content-center">
+        <p class="py-1 m-0">
+            &copy;&nbsp;2022.
+        
+          By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
+        
+          Last updated on 12 January 2022.
+        </p>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-extra">
+  <div class="container">
+    <div class="row">
+      <p class="m-0">
+        <img
+          src="../../_static/footer-logo-nsf.png"
+          style="float: left; width: 60px; height: 60px; margin-right: 1rem"
+        />
+        This material is based upon work supported by the National Science
+        Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those
+        of the author(s) and do not necessarily reflect the views of the
+        National Science Foundation.
+      </p>
+    </div>
+  </div>
+</div>
+    </div>
+  
+  </div>
+</footer>
   </body>
 </html>

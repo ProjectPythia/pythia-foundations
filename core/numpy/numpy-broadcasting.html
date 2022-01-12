@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -51,6 +51,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Matplotlib" href="../matplotlib.html" />
@@ -70,33 +71,99 @@
                 </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="132">
+    <div class="container-fluid" id="shim"></div>
     <div class="container-fluid" id="banner"></div>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
 
+  <div id="navbar-start">
+    
     
 
+<a class="navbar-brand" href="https://projectpythia.org">
+  <img src="../../_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/gallery.html">Gallery</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ProjectPythia" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/project_pythia" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
     <div class="container-xl">
       <div class="row">
-          
+        
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
-      
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
-      <img src="../../_static/ProjectPythia_Logo_Final-01-Blue.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Pythia Foundations</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -443,19 +510,18 @@
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
+  Theme by <a href="https://projectpythia.org">Project Pythia</a>.<br><br>
+All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.<br><br>
+We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
+or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
 
 </div>
 
+</div>
 
-          
+        
 
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
+        <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main"><div class="topbar container-xl fixed-top">
     <div class="topbar-contents row">
         <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
         <div class="col pl-md-4 topbar-main">
@@ -539,7 +605,7 @@
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+                <i class="fas fa-list"></i> On this page
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -632,118 +698,17 @@
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>NumPy Broadcasting</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#imports">
-   Imports
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-broadcasting-to-implicitly-loop-over-data">
-   Using broadcasting to implicitly loop over data
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-is-broadcasting">
-     What is broadcasting?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#giving-numpy-room-for-broadcasting">
-     Giving NumPy room for broadcasting
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extending-to-higher-dimensions">
-     Extending to higher dimensions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vectorize-calculations-to-avoid-explicit-loops">
-   Vectorize calculations to avoid explicit loops
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#look-ahead-behind">
-     Look ahead/behind
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#nd-derivative">
-       2nd Derivative
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#blocking">
-     Blocking
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#finding-the-difference-between-min-and-max">
-     Finding the difference between min and max
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#whats-next">
-     What’s next
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#resources-and-references">
-     Resources and references
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+          <div id="main-content" class="row">
+            <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+              
               <div>
                 
   <p><a class="reference internal" href="https://github.com/numpy/numpy/raw/main/branding/logo/primary/numpylogo.svg"><img alt="NumPy Logo" src="https://github.com/numpy/numpy/raw/main/branding/logo/primary/numpylogo.svg" width="250" /></a></img></p>
 <div class="tex2jax_ignore mathjax_ignore section" id="numpy-broadcasting">
-<h1>NumPy Broadcasting<a class="headerlink" href="#numpy-broadcasting" title="Permalink to this headline">¶</a></h1>
+<h1>NumPy Broadcasting<a class="headerlink" href="#numpy-broadcasting" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
 <div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Before we begin, broadcasting is a valuable part of the power that NumPy provides. However, there’s no looking past the fact that broadcasting can be conceptually difficult to digest. This information can be helpful and very powerful, but we also suggest moving on to take a look at some of the label-based corners of the Python ecosystem, namely <a class="reference internal" href="../pandas.html"><span class="doc std std-doc">pandas</span></a> and <a class="reference internal" href="../xarray.html"><span class="doc std std-doc">xarray</span></a> for the ways that they make some of these concepts simpler or easier to use for real-world data.</p>
 <ol class="simple">
 <li><p>An introduction to broadcasting</p></li>
@@ -751,7 +716,7 @@
 </ol>
 </div>
 <div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Concepts</p></th>
@@ -780,7 +745,7 @@
 </div>
 <hr class="docutils" />
 <div class="section" id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -790,9 +755,9 @@
 </div>
 </div>
 <div class="section" id="using-broadcasting-to-implicitly-loop-over-data">
-<h2>Using broadcasting to implicitly loop over data<a class="headerlink" href="#using-broadcasting-to-implicitly-loop-over-data" title="Permalink to this headline">¶</a></h2>
+<h2>Using broadcasting to implicitly loop over data<a class="headerlink" href="#using-broadcasting-to-implicitly-loop-over-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <div class="section" id="what-is-broadcasting">
-<h3>What is broadcasting?<a class="headerlink" href="#what-is-broadcasting" title="Permalink to this headline">¶</a></h3>
+<h3>What is broadcasting?<a class="headerlink" href="#what-is-broadcasting" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Broadcasting is a useful NumPy tool that allows us to perform operations between arrays with different shapes, provided that they are compatible with each other in certain ways. To start, we can create an array below and add 5 to it:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -939,7 +904,7 @@
 </div>
 </div>
 <div class="section" id="giving-numpy-room-for-broadcasting">
-<h3>Giving NumPy room for broadcasting<a class="headerlink" href="#giving-numpy-room-for-broadcasting" title="Permalink to this headline">¶</a></h3>
+<h3>Giving NumPy room for broadcasting<a class="headerlink" href="#giving-numpy-room-for-broadcasting" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>We can also do this using broadcasting, which is where NumPy implicitly repeats the array without using additional memory. With broadcasting, NumPy takes care of repeating for you, provided dimensions are “compatible”. This works as:</p>
 <ol class="simple">
 <li><p>Check the number of dimensions of the arrays. If they are different, <em>prepend</em> size one dimensions</p></li>
@@ -1030,7 +995,7 @@
 </div>
 </div>
 <div class="section" id="extending-to-higher-dimensions">
-<h3>Extending to higher dimensions<a class="headerlink" href="#extending-to-higher-dimensions" title="Permalink to this headline">¶</a></h3>
+<h3>Extending to higher dimensions<a class="headerlink" href="#extending-to-higher-dimensions" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>This also works for higher dimensions. <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">z</span></code> are here different dimensions, and we can broadcast to perform <span class="math notranslate nohighlight">\(x^2 + y^2 + z^2\)</span>,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1172,10 +1137,10 @@
 </div>
 </div>
 <div class="section" id="vectorize-calculations-to-avoid-explicit-loops">
-<h2>Vectorize calculations to avoid explicit loops<a class="headerlink" href="#vectorize-calculations-to-avoid-explicit-loops" title="Permalink to this headline">¶</a></h2>
+<h2>Vectorize calculations to avoid explicit loops<a class="headerlink" href="#vectorize-calculations-to-avoid-explicit-loops" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>When working with arrays of data, loops over the individual array elements is a fact of life. However, for improved runtime performance, it is important to avoid performing these loops in Python as much as possible, and let NumPy handle the looping for you. Avoiding these loops frequently, but not always, results in shorter and clearer code as well.</p>
 <div class="section" id="look-ahead-behind">
-<h3>Look ahead/behind<a class="headerlink" href="#look-ahead-behind" title="Permalink to this headline">¶</a></h3>
+<h3>Look ahead/behind<a class="headerlink" href="#look-ahead-behind" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>One common pattern for vectorizing is in converting loops that work over the current point as well as the previous and/or next point. This comes up when doing finite-difference calculations, e.g. approximating derivatives,</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -1282,7 +1247,7 @@ f'(x) = f_{i+1} - f_{i}
 </div>
 <p>It should be noted that using slices in this way returns only a <strong>view</strong> on the original array. This means not only can you use the slices to modify the original data (even accidentally), but that this is also a quick operation that does not involve a copy and does not bloat memory usage.</p>
 <div class="section" id="nd-derivative">
-<h4>2nd Derivative<a class="headerlink" href="#nd-derivative" title="Permalink to this headline">¶</a></h4>
+<h4>2nd Derivative<a class="headerlink" href="#nd-derivative" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
 <p>A finite difference estimate of the 2nd derivative is given by:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -1306,7 +1271,7 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="section" id="blocking">
-<h3>Blocking<a class="headerlink" href="#blocking" title="Permalink to this headline">¶</a></h3>
+<h3>Blocking<a class="headerlink" href="#blocking" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Another application where vectorization comes into play to make operations more efficient is when operating on blocks of data. Let’s start by creating some temperature data (rounding to make it easier to see/recognize the values).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1316,7 +1281,7 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([31.9, 24.4, 15.8, 13.8, 16.2, 19.7, 23.3, 25.5, 20.3, 15.4])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([21.3, 25.2, 22.2, 16.5, 19.2, 12.8, 15.2, 20.1, 16.9, 22.1])
 </pre></div>
 </div>
 </div>
@@ -1339,8 +1304,8 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.        , 24.03333333, 18.        , 15.26666667, 16.56666667,
-       19.73333333, 22.83333333, 23.03333333, 20.4       ,  0.        ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.        , 22.9       , 21.3       , 19.3       , 16.16666667,
+       15.73333333, 16.03333333, 17.4       , 19.7       ,  0.        ])
 </pre></div>
 </div>
 </div>
@@ -1354,8 +1319,8 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([24.03333333, 18.        , 15.26666667, 16.56666667, 19.73333333,
-       22.83333333, 23.03333333, 20.4       ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([22.9       , 21.3       , 19.3       , 16.16666667, 15.73333333,
+       16.03333333, 17.4       , 19.7       ])
 </pre></div>
 </div>
 </div>
@@ -1368,7 +1333,7 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([31.9, 24.4, 15.8, 13.8, 16.2, 19.7, 23.3, 25.5, 20.3, 15.4])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([21.3, 25.2, 22.2, 16.5, 19.2, 12.8, 15.2, 20.1, 16.9, 22.1])
 </pre></div>
 </div>
 </div>
@@ -1387,14 +1352,14 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[31.9, 24.4, 15.8],
-       [24.4, 15.8, 13.8],
-       [15.8, 13.8, 16.2],
-       [13.8, 16.2, 19.7],
-       [16.2, 19.7, 23.3],
-       [19.7, 23.3, 25.5],
-       [23.3, 25.5, 20.3],
-       [25.5, 20.3, 15.4]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[21.3, 25.2, 22.2],
+       [25.2, 22.2, 16.5],
+       [22.2, 16.5, 19.2],
+       [16.5, 19.2, 12.8],
+       [19.2, 12.8, 15.2],
+       [12.8, 15.2, 20.1],
+       [15.2, 20.1, 16.9],
+       [20.1, 16.9, 22.1]])
 </pre></div>
 </div>
 </div>
@@ -1407,8 +1372,8 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([24.03333333, 18.        , 15.26666667, 16.56666667, 19.73333333,
-       22.83333333, 23.03333333, 20.4       ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([22.9       , 21.3       , 19.3       , 16.16666667, 15.73333333,
+       16.03333333, 17.4       , 19.7       ])
 </pre></div>
 </div>
 </div>
@@ -1422,21 +1387,21 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[  31.9,   24.4, 2000. ],
-       [  24.4, 2000. ,   13.8],
-       [2000. ,   13.8,   16.2],
-       [  13.8,   16.2,   19.7],
-       [  16.2,   19.7,   23.3],
-       [  19.7,   23.3,   25.5],
-       [  23.3,   25.5,   20.3],
-       [  25.5,   20.3,   15.4]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[  21.3,   25.2, 2000. ],
+       [  25.2, 2000. ,   16.5],
+       [2000. ,   16.5,   19.2],
+       [  16.5,   19.2,   12.8],
+       [  19.2,   12.8,   15.2],
+       [  12.8,   15.2,   20.1],
+       [  15.2,   20.1,   16.9],
+       [  20.1,   16.9,   22.1]])
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="finding-the-difference-between-min-and-max">
-<h3>Finding the difference between min and max<a class="headerlink" href="#finding-the-difference-between-min-and-max" title="Permalink to this headline">¶</a></h3>
+<h3>Finding the difference between min and max<a class="headerlink" href="#finding-the-difference-between-min-and-max" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Another operation that crops up when slicing and dicing data is trying to identify a set of indexes, along a particular axis, within a larger multidimensional array. For instance, say we have a 3-D array of temperatures, and want to identify the location of the <span class="math notranslate nohighlight">\(-10^oC\)</span> isotherm within each column:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1456,13 +1421,13 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[7, 7, 6, ..., 7, 6, 6],
-       [7, 7, 7, ..., 7, 7, 6],
-       [6, 6, 6, ..., 7, 7, 7],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[7, 7, 7, ..., 7, 6, 7],
+       [7, 6, 7, ..., 8, 6, 7],
+       [5, 7, 7, ..., 8, 7, 7],
        ...,
-       [7, 7, 7, ..., 6, 6, 7],
-       [7, 8, 7, ..., 7, 7, 7],
-       [6, 6, 6, ..., 7, 7, 7]])
+       [7, 7, 7, ..., 5, 7, 7],
+       [7, 7, 7, ..., 7, 7, 7],
+       [7, 7, 7, ..., 6, 7, 7]])
 </pre></div>
 </div>
 </div>
@@ -1487,13 +1452,13 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[737.5, 737.5, 775. , ..., 737.5, 775. , 775. ],
-       [737.5, 737.5, 737.5, ..., 737.5, 737.5, 775. ],
-       [775. , 775. , 775. , ..., 737.5, 737.5, 737.5],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[737.5, 737.5, 737.5, ..., 737.5, 775. , 737.5],
+       [737.5, 775. , 737.5, ..., 700. , 775. , 737.5],
+       [812.5, 737.5, 737.5, ..., 700. , 737.5, 737.5],
        ...,
-       [737.5, 737.5, 737.5, ..., 775. , 775. , 737.5],
-       [737.5, 700. , 737.5, ..., 737.5, 737.5, 737.5],
-       [775. , 775. , 775. , ..., 737.5, 737.5, 737.5]])
+       [737.5, 737.5, 737.5, ..., 812.5, 737.5, 737.5],
+       [737.5, 737.5, 737.5, ..., 737.5, 737.5, 737.5],
+       [737.5, 737.5, 737.5, ..., 775. , 737.5, 737.5]])
 </pre></div>
 </div>
 </div>
@@ -1522,19 +1487,19 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ -8.7447961 , -11.95042143,  -8.6582026 , ...,  -8.93155005,
-         -6.77244288,  -6.32720391],
-       [ -6.7880449 , -11.78080333, -10.62282708, ...,  -8.46930715,
-        -11.25861637,  -8.54011975],
-       [-10.02918849,  -6.70314811, -11.45018624, ..., -14.15548952,
-         -8.40261062, -15.81798051],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-11.2059853 , -10.47319849, -10.65671048, ...,  -9.37918433,
+         -7.33230957,  -8.17212509],
+       [-13.12670684, -10.33051162,  -6.2381237 , ..., -12.96854958,
+         -4.65238797,  -9.81632617],
+       [ -8.52339696, -10.51567102, -12.97723774, ...,  -9.51543948,
+        -13.94464   , -14.7185456 ],
        ...,
-       [-10.72911935,  -9.54732785, -10.64031468, ..., -11.27500456,
-         -9.59770733, -11.91855921],
-       [-12.57166404,  -7.9017819 ,  -2.45833727, ...,  -9.64603786,
-         -9.72822052, -12.18094401],
-       [-10.79323151,  -4.74853796,  -7.43478917, ..., -11.40797604,
-        -11.67850705,  -8.7857797 ]])
+       [ -7.68261236, -10.84904101, -14.55437772, ...,  -8.58231665,
+        -10.77546953,  -6.45454808],
+       [-10.00628455,  -9.88552021, -11.73544557, ..., -11.08039724,
+        -12.37400681,  -7.19589065],
+       [ -6.4303576 , -12.05211573, -10.66336848, ..., -10.29819189,
+        -13.65217467,  -8.75126772]])
 </pre></div>
 </div>
 </div>
@@ -1578,19 +1543,19 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ -8.7447961 , -11.95042143,  -8.6582026 , ...,  -8.93155005,
-         -6.77244288,  -6.32720391],
-       [ -6.7880449 , -11.78080333, -10.62282708, ...,  -8.46930715,
-        -11.25861637,  -8.54011975],
-       [-10.02918849,  -6.70314811, -11.45018624, ..., -14.15548952,
-         -8.40261062, -15.81798051],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-11.2059853 , -10.47319849, -10.65671048, ...,  -9.37918433,
+         -7.33230957,  -8.17212509],
+       [-13.12670684, -10.33051162,  -6.2381237 , ..., -12.96854958,
+         -4.65238797,  -9.81632617],
+       [ -8.52339696, -10.51567102, -12.97723774, ...,  -9.51543948,
+        -13.94464   , -14.7185456 ],
        ...,
-       [-10.72911935,  -9.54732785, -10.64031468, ..., -11.27500456,
-         -9.59770733, -11.91855921],
-       [-12.57166404,  -7.9017819 ,  -2.45833727, ...,  -9.64603786,
-         -9.72822052, -12.18094401],
-       [-10.79323151,  -4.74853796,  -7.43478917, ..., -11.40797604,
-        -11.67850705,  -8.7857797 ]])
+       [ -7.68261236, -10.84904101, -14.55437772, ...,  -8.58231665,
+        -10.77546953,  -6.45454808],
+       [-10.00628455,  -9.88552021, -11.73544557, ..., -11.08039724,
+        -12.37400681,  -7.19589065],
+       [ -6.4303576 , -12.05211573, -10.66336848, ..., -10.29819189,
+        -13.65217467,  -8.75126772]])
 </pre></div>
 </div>
 </div>
@@ -1612,14 +1577,14 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 <hr class="docutils" />
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>We’ve previewed some advanced NumPy capabilities with a focus on <em>vectorization</em>, or using clever broadcasting and windows of our data to enhance the speed and readability of our calculations. Doing so can reduce explicit construction of loops in your code and keep calculations running quickly!</p>
 <div class="section" id="whats-next">
-<h3>What’s next<a class="headerlink" href="#whats-next" title="Permalink to this headline">¶</a></h3>
+<h3>What’s next<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>This is an advanced NumPy topic, and important to designing your own calculations in a way for them to be as scalable and quick as possible. Please check out some of the following links to explore this topic further. We also suggest diving into label-based indexing and subsetting with <a class="reference internal" href="../pandas.html"><span class="doc std std-doc">pandas</span></a> and <a class="reference internal" href="../xarray.html"><span class="doc std std-doc">xarray</span></a>, where some of this broadcasting can be simplified or have added context.</p>
 </div>
 <div class="section" id="resources-and-references">
-<h3>Resources and references<a class="headerlink" href="#resources-and-references" title="Permalink to this headline">¶</a></h3>
+<h3>Resources and references<a class="headerlink" href="#resources-and-references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/user/basics.broadcasting.html">NumPy Broadcasting Documentation</a></p></li>
 <li><p><a class="reference external" href="https://numpy.org/devdocs/user/theory.broadcasting.html">NumPy Broadcasting Article</a></p></li>
@@ -1649,9 +1614,7 @@ f_i - f_{i+1} - f_{i-1}
     <script>kernelName = 'python3'</script>
 
               </div>
-              
-            
-                <!-- Previous / next buttons -->
+              <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="intermediate-numpy.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1668,29 +1631,155 @@ f_i - f_{i+1} - f_{i-1}
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By the <a href="https://projectpythia.org/">Project Pythia</a> community<br/>
-    
-        &copy; Copyright 2021.<br/>
-      <div class="extra_footer">
-        All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.
-We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a> or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
-
-      </div>
-  </p>
-</footer>
-</main>
-
+            </div>
+          </div>
+        </main>
 
       </div>
     </div>
   
   <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
+<footer class="footer">
+  <div class="container-fluid m-0 p-0">
+  
+    <div class="footer-item">
+    
+  <div class="container-fluid footer-logos">
+    <div class="container-xl">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="NCAR" src="../../_images/NCAR-contemp-logo-blue.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="Unidata" src="../../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="UAlbany" src="../../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-menu pt-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>About</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/about.html"
+              >About Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/preamble/how-to-use.html"
+              >How to use Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#the-project-pythia-team"
+              >The Project Team</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Give Feedback</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="mailto:projectpythia@ucar.edu">Email us!</a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/projectpythia.github.io/discussions"
+              >Project Pythia Discussions</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/pythia-foundations/discussions"
+              >Pythia Foundations Discussions</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Contribute</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/contributing.html"
+              >How to contribute to Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/appendix/how-to-contribute.html"
+              >How to contribute to Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/code_of_conduct.html"
+              >Our code of conduct</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#weekly-working-group-meetings"
+              >Join our weekly meetings</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/ProjectPythia"
+              >Join us on GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  
+    <div class="footer-item">
+      <div class="container-fluid footer-info">
+    <div class="container-xl">
+      <div class="d-flex justify-content-center">
+        <p class="py-1 m-0">
+            &copy;&nbsp;2022.
+        
+          By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
+        
+          Last updated on 12 January 2022.
+        </p>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-extra">
+  <div class="container">
+    <div class="row">
+      <p class="m-0">
+        <img
+          src="../../_static/footer-logo-nsf.png"
+          style="float: left; width: 60px; height: 60px; margin-right: 1rem"
+        />
+        This material is based upon work supported by the National Science
+        Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those
+        of the author(s) and do not necessarily reflect the views of the
+        National Science Foundation.
+      </p>
+    </div>
+  </div>
+</div>
+    </div>
+  
+  </div>
+</footer>
   </body>
 </html>

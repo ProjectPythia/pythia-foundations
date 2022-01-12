@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -49,6 +49,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Cartopy" href="../cartopy.html" />
@@ -68,33 +69,99 @@
                 </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="132">
+    <div class="container-fluid" id="shim"></div>
     <div class="container-fluid" id="banner"></div>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
 
+  <div id="navbar-start">
+    
     
 
+<a class="navbar-brand" href="https://projectpythia.org">
+  <img src="../../_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/gallery.html">Gallery</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ProjectPythia" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/project_pythia" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
     <div class="container-xl">
       <div class="row">
-          
+        
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
-      
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
-      <img src="../../_static/ProjectPythia_Logo_Final-01-Blue.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Pythia Foundations</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -441,19 +508,18 @@
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
+  Theme by <a href="https://projectpythia.org">Project Pythia</a>.<br><br>
+All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.<br><br>
+We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
+or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
 
 </div>
 
+</div>
 
-          
+        
 
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
+        <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main"><div class="topbar container-xl fixed-top">
     <div class="topbar-contents row">
         <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
         <div class="col pl-md-4 topbar-main">
@@ -537,7 +603,7 @@
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+                <i class="fas fa-list"></i> On this page
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -685,172 +751,16 @@
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Matplotlib Basics</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#imports">
-   Imports
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generate-test-data-using-numpy">
-   Generate test data using
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     NumPy
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#figure-and-axes">
-   Figure and Axes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#line-plots">
-   Line plots
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-axes-labels">
-     Adding axes labels
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-labels-and-a-grid">
-     Adding labels and a grid
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#customizing-colors">
-     Customizing colors
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#working-with-multiple-panels-in-a-figure">
-   Working with multiple panels in a figure
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-add-subplot-to-create-two-different-subplots-within-the-figure">
-     Using add_subplot to create two different subplots within the figure
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-titles-to-each-subplot">
-     Adding titles to each subplot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-ax-set-xlim-and-ax-set-ylim-to-control-the-plot-boundaries">
-     Using
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       ax.set_xlim
-      </span>
-     </code>
-     and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       ax.set_ylim
-      </span>
-     </code>
-     to control the plot boundaries
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-sharex-and-sharey-to-share-plot-limits">
-     Using
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       sharex
-      </span>
-     </code>
-     and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       sharey
-      </span>
-     </code>
-     to share plot limits
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#putting-this-all-together">
-     Putting this all together
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scatterplot">
-   Scatterplot
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#imshow">
-   imshow
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contour-contourf">
-   contour/contourf
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#whats-next">
-   What’s Next?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#resources-and-references">
-   Resources and References
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+          <div id="main-content" class="row">
+            <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+              
               <div>
                 
   <center><img src="https://matplotlib.org/_static/logo2.png" width=600 alt="Matplotlib Logo"></img></center><div class="tex2jax_ignore mathjax_ignore section" id="matplotlib-basics">
-<h1>Matplotlib Basics<a class="headerlink" href="#matplotlib-basics" title="Permalink to this headline">¶</a></h1>
+<h1>Matplotlib Basics<a class="headerlink" href="#matplotlib-basics" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
 <div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>We will cover the basics of plotting within Python, using the Matplotlib library, including a few different plots available within the library.</p>
 <ol class="simple">
 <li><p>Create a basic line plot.</p></li>
@@ -860,7 +770,7 @@
 </ol>
 </div>
 <div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Concepts</p></th>
@@ -885,7 +795,7 @@
 </div>
 <hr class="docutils" />
 <div class="section" id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Let’s import the matplotlib library’s <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> interface; this interface is the simplest way to create new Matplotlib figures. To shorten this long name, we import it as <code class="docutils literal notranslate"><span class="pre">plt</span></code> to keep things short but clear.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -901,7 +811,7 @@
 </div>
 </div>
 <div class="section" id="generate-test-data-using-numpy">
-<h2>Generate test data using <code class="docutils literal notranslate"><span class="pre">NumPy</span></code><a class="headerlink" href="#generate-test-data-using-numpy" title="Permalink to this headline">¶</a></h2>
+<h2>Generate test data using <code class="docutils literal notranslate"><span class="pre">NumPy</span></code><a class="headerlink" href="#generate-test-data-using-numpy" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Now we generate some data to use while experimenting with plotting:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -967,12 +877,12 @@
 </div>
 </div>
 <div class="section" id="figure-and-axes">
-<h2>Figure and Axes<a class="headerlink" href="#figure-and-axes" title="Permalink to this headline">¶</a></h2>
+<h2>Figure and Axes<a class="headerlink" href="#figure-and-axes" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Now let’s make our first plot with Matplotlib. Matplotlib has two core objects: the <code class="docutils literal notranslate"><span class="pre">Figure</span></code> and the <code class="docutils literal notranslate"><span class="pre">Axes</span></code>. The <code class="docutils literal notranslate"><span class="pre">Axes</span></code> is an individual plot with an x-axis, a y-axis, labels, etc; it has all of the various plotting methods we use. A <code class="docutils literal notranslate"><span class="pre">Figure</span></code> holds one or more <code class="docutils literal notranslate"><span class="pre">Axes</span></code> on which we draw; think of the <code class="docutils literal notranslate"><span class="pre">Figure</span></code> as the level at which things are saved to files (e.g. PNG, SVG)</p>
 <p><img alt="anatomy of a figure" src="https://matplotlib.org/stable/_images/sphx_glr_anatomy_001.png" /></p>
 </div>
 <div class="section" id="line-plots">
-<h2>Line plots<a class="headerlink" href="#line-plots" title="Permalink to this headline">¶</a></h2>
+<h2>Line plots<a class="headerlink" href="#line-plots" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Let’s create a <code class="docutils literal notranslate"><span class="pre">Figure</span></code> whose dimensions, if printed out on hardcopy, would be 10 inches wide and 6 inches long (assuming a landscape orientation). We then create an <code class="docutils literal notranslate"><span class="pre">Axes</span></code>, consisting of a single subplot, on the <code class="docutils literal notranslate"><span class="pre">Figure</span></code>. After that, we call <code class="docutils literal notranslate"><span class="pre">plot</span></code>, with <code class="docutils literal notranslate"><span class="pre">times</span></code> as the data along the x-axis (independent values) and <code class="docutils literal notranslate"><span class="pre">temps</span></code> as the data along the y-axis (the dependent values).</p>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Info</p>
@@ -992,14 +902,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fa458374730&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f6ed4018cd0&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_15_1.png" src="../../_images/matplotlib_15_1.png" />
 </div>
 </div>
 <div class="section" id="adding-axes-labels">
-<h3>Adding axes labels<a class="headerlink" href="#adding-axes-labels" title="Permalink to this headline">¶</a></h3>
+<h3>Adding axes labels<a class="headerlink" href="#adding-axes-labels" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Next, add x- and y-axis labels to our <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1067,7 +977,7 @@
 </div>
 </div>
 <div class="section" id="adding-labels-and-a-grid">
-<h3>Adding labels and a grid<a class="headerlink" href="#adding-labels-and-a-grid" title="Permalink to this headline">¶</a></h3>
+<h3>Adding labels and a grid<a class="headerlink" href="#adding-labels-and-a-grid" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Here we call <code class="docutils literal notranslate"><span class="pre">plot</span></code> more than once to plot multiple series of temperature on the same plot; when plotting we pass <code class="docutils literal notranslate"><span class="pre">label</span></code> to <code class="docutils literal notranslate"><span class="pre">plot</span></code> to facilitate automatic creation of legend labels. This is added with the <code class="docutils literal notranslate"><span class="pre">legend</span></code> call. We also add gridlines to the plot using the <code class="docutils literal notranslate"><span class="pre">grid()</span></code> call.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1093,7 +1003,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa4582d4bb0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f6ec0dc1af0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_25_1.png" src="../../_images/matplotlib_25_1.png" />
@@ -1101,7 +1011,7 @@
 </div>
 </div>
 <div class="section" id="customizing-colors">
-<h3>Customizing colors<a class="headerlink" href="#customizing-colors" title="Permalink to this headline">¶</a></h3>
+<h3>Customizing colors<a class="headerlink" href="#customizing-colors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>We’re not restricted to the default look of the plots, but rather we can override style attributes, such as <code class="docutils literal notranslate"><span class="pre">linestyle</span></code> and <code class="docutils literal notranslate"><span class="pre">color</span></code>. <code class="docutils literal notranslate"><span class="pre">color</span></code> can accept a wide array of options for color, such as <code class="docutils literal notranslate"><span class="pre">red</span></code> or <code class="docutils literal notranslate"><span class="pre">blue</span></code> or HTML color codes. Here we use some different shades of red taken from the Tableau color set in matplotlib, by using <code class="docutils literal notranslate"><span class="pre">tab:red</span></code> for color.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1132,7 +1042,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa4581d6220&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f6ec0d4fe80&gt;
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_28_1.png" src="../../_images/matplotlib_28_1.png" />
@@ -1141,7 +1051,7 @@
 </div>
 </div>
 <div class="section" id="working-with-multiple-panels-in-a-figure">
-<h2>Working with multiple panels in a figure<a class="headerlink" href="#working-with-multiple-panels-in-a-figure" title="Permalink to this headline">¶</a></h2>
+<h2>Working with multiple panels in a figure<a class="headerlink" href="#working-with-multiple-panels-in-a-figure" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Start first with some more fake data - in this case, we add dewpoint data!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1153,7 +1063,7 @@
 </div>
 <p>Now, let’s plot it up, with the other temperature data!</p>
 <div class="section" id="using-add-subplot-to-create-two-different-subplots-within-the-figure">
-<h3>Using add_subplot to create two different subplots within the figure<a class="headerlink" href="#using-add-subplot-to-create-two-different-subplots-within-the-figure" title="Permalink to this headline">¶</a></h3>
+<h3>Using add_subplot to create two different subplots within the figure<a class="headerlink" href="#using-add-subplot-to-create-two-different-subplots-within-the-figure" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">.add_subplot()</span></code> method to add subplots to our figure! The subplot arguements are formatted as follows:
 <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">columns,</span> <span class="pre">subplot_number)</span></code></p>
 <p>For example, if we want a single row, with two columns, we use the following code block</p>
@@ -1172,7 +1082,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fa4581bab20&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f6ec0c9c2b0&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_34_1.png" src="../../_images/matplotlib_34_1.png" />
@@ -1180,7 +1090,7 @@
 </div>
 </div>
 <div class="section" id="adding-titles-to-each-subplot">
-<h3>Adding titles to each subplot<a class="headerlink" href="#adding-titles-to-each-subplot" title="Permalink to this headline">¶</a></h3>
+<h3>Adding titles to each subplot<a class="headerlink" href="#adding-titles-to-each-subplot" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>We can add titles to these plots too - notice how these subplots are titled separately, each using <code class="docutils literal notranslate"><span class="pre">ax.set_title</span></code> after each subplot</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1207,7 +1117,7 @@
 </div>
 </div>
 <div class="section" id="using-ax-set-xlim-and-ax-set-ylim-to-control-the-plot-boundaries">
-<h3>Using <code class="docutils literal notranslate"><span class="pre">ax.set_xlim</span></code> and <code class="docutils literal notranslate"><span class="pre">ax.set_ylim</span></code> to control the plot boundaries<a class="headerlink" href="#using-ax-set-xlim-and-ax-set-ylim-to-control-the-plot-boundaries" title="Permalink to this headline">¶</a></h3>
+<h3>Using <code class="docutils literal notranslate"><span class="pre">ax.set_xlim</span></code> and <code class="docutils literal notranslate"><span class="pre">ax.set_ylim</span></code> to control the plot boundaries<a class="headerlink" href="#using-ax-set-xlim-and-ax-set-ylim-to-control-the-plot-boundaries" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>You may want to limit the extent of each plot, which you can do by using <code class="docutils literal notranslate"><span class="pre">.set_xlim</span></code> and <code class="docutils literal notranslate"><span class="pre">set_ylim</span></code> on the axes you are editing</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1237,7 +1147,7 @@
 </div>
 </div>
 <div class="section" id="using-sharex-and-sharey-to-share-plot-limits">
-<h3>Using <code class="docutils literal notranslate"><span class="pre">sharex</span></code> and <code class="docutils literal notranslate"><span class="pre">sharey</span></code> to share plot limits<a class="headerlink" href="#using-sharex-and-sharey-to-share-plot-limits" title="Permalink to this headline">¶</a></h3>
+<h3>Using <code class="docutils literal notranslate"><span class="pre">sharex</span></code> and <code class="docutils literal notranslate"><span class="pre">sharey</span></code> to share plot limits<a class="headerlink" href="#using-sharex-and-sharey-to-share-plot-limits" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>You may want to have both subplots share the same x/y axis limits - you can do this by adding <code class="docutils literal notranslate"><span class="pre">sharex=ax</span></code> and <code class="docutils literal notranslate"><span class="pre">sharey=ax</span></code> as arguments when adding a new axis (ex. <code class="docutils literal notranslate"><span class="pre">ax2</span> <span class="pre">=</span> <span class="pre">fig.add_subplot()</span></code>) where <code class="docutils literal notranslate"><span class="pre">ax</span></code> is the axis you want your new axis to share limits with</p>
 <p>Let’s take a look at an example</p>
 <div class="cell docutils container">
@@ -1266,7 +1176,7 @@
 </div>
 </div>
 <div class="section" id="putting-this-all-together">
-<h3>Putting this all together<a class="headerlink" href="#putting-this-all-together" title="Permalink to this headline">¶</a></h3>
+<h3>Putting this all together<a class="headerlink" href="#putting-this-all-together" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Info</p>
 <p>You may wish to move around the location of your legend - you can do this by changing the <code>loc</code> argument in <code>ax.legend()</code></p>
@@ -1326,7 +1236,7 @@
 </div>
 </div>
 <div class="section" id="scatterplot">
-<h2>Scatterplot<a class="headerlink" href="#scatterplot" title="Permalink to this headline">¶</a></h2>
+<h2>Scatterplot<a class="headerlink" href="#scatterplot" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Maybe it doesn’t make sense to plot your data as a line plot, but with markers (aka scatter plot). We can do this by setting the <code class="docutils literal notranslate"><span class="pre">linestyle</span></code> to <code class="docutils literal notranslate"><span class="pre">None</span></code> and specifying a marker type, size, color, etc.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1399,7 +1309,7 @@
 </div>
 </div>
 <div class="section" id="imshow">
-<h2>imshow<a class="headerlink" href="#imshow" title="Permalink to this headline">¶</a></h2>
+<h2>imshow<a class="headerlink" href="#imshow" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">imshow</span></code> displays the values in an array as colored pixels, similar to a heat map.</p>
 <p>Here is some fake data to work with - let’s use a bivariate normal distribution.</p>
 <div class="cell docutils container">
@@ -1429,7 +1339,7 @@
 </div>
 </div>
 <div class="section" id="contour-contourf">
-<h2>contour/contourf<a class="headerlink" href="#contour-contourf" title="Permalink to this headline">¶</a></h2>
+<h2>contour/contourf<a class="headerlink" href="#contour-contourf" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">contour</span></code> creates contours around data.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">contourf</span></code> creates filled contours around data.</p></li>
@@ -1443,7 +1353,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.contour.QuadContourSet at 0x7fa444c12550&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.contour.QuadContourSet at 0x7f6ec06e34f0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_56_1.png" src="../../_images/matplotlib_56_1.png" />
@@ -1459,7 +1369,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;a list of 12 text.Text objects&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;a list of 13 text.Text objects&gt;
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_58_1.png" src="../../_images/matplotlib_58_1.png" />
@@ -1490,7 +1400,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;a list of 6 text.Text objects&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;a list of 7 text.Text objects&gt;
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_62_1.png" src="../../_images/matplotlib_62_1.png" />
@@ -1499,7 +1409,7 @@
 </div>
 <hr class="docutils" />
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code> can be used to visualize datasets you are working with</p></li>
 <li><p>You can customize various features such as labels and styles</p></li>
@@ -1514,11 +1424,11 @@
 </ul>
 </div>
 <div class="section" id="whats-next">
-<h2>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline">¶</a></h2>
+<h2>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>In the next notebook, we will cover more plotting functionality such as histograms, pie charts, and animation</p>
 </div>
 <div class="section" id="resources-and-references">
-<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline">¶</a></h2>
+<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>The goal of this tutorial is to provide an overview of the use of the Matplotlib library. It covers creating simple line plots, but it is by no means comprehensive. For more information, try looking at the:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://matplotlib.org">Matplotlib Documentation</a></p></li>
@@ -1549,9 +1459,7 @@
     <script>kernelName = 'python3'</script>
 
               </div>
-              
-            
-                <!-- Previous / next buttons -->
+              <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../matplotlib.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1568,29 +1476,155 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By the <a href="https://projectpythia.org/">Project Pythia</a> community<br/>
-    
-        &copy; Copyright 2021.<br/>
-      <div class="extra_footer">
-        All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.
-We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a> or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
-
-      </div>
-  </p>
-</footer>
-</main>
-
+            </div>
+          </div>
+        </main>
 
       </div>
     </div>
   
   <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
+<footer class="footer">
+  <div class="container-fluid m-0 p-0">
+  
+    <div class="footer-item">
+    
+  <div class="container-fluid footer-logos">
+    <div class="container-xl">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="NCAR" src="../../_images/NCAR-contemp-logo-blue.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="Unidata" src="../../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="UAlbany" src="../../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-menu pt-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>About</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/about.html"
+              >About Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/preamble/how-to-use.html"
+              >How to use Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#the-project-pythia-team"
+              >The Project Team</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Give Feedback</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="mailto:projectpythia@ucar.edu">Email us!</a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/projectpythia.github.io/discussions"
+              >Project Pythia Discussions</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/pythia-foundations/discussions"
+              >Pythia Foundations Discussions</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Contribute</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/contributing.html"
+              >How to contribute to Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/appendix/how-to-contribute.html"
+              >How to contribute to Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/code_of_conduct.html"
+              >Our code of conduct</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#weekly-working-group-meetings"
+              >Join our weekly meetings</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/ProjectPythia"
+              >Join us on GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  
+    <div class="footer-item">
+      <div class="container-fluid footer-info">
+    <div class="container-xl">
+      <div class="d-flex justify-content-center">
+        <p class="py-1 m-0">
+            &copy;&nbsp;2022.
+        
+          By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
+        
+          Last updated on 12 January 2022.
+        </p>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-extra">
+  <div class="container">
+    <div class="row">
+      <p class="m-0">
+        <img
+          src="../../_static/footer-logo-nsf.png"
+          style="float: left; width: 60px; height: 60px; margin-right: 1rem"
+        />
+        This material is based upon work supported by the National Science
+        Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those
+        of the author(s) and do not necessarily reflect the views of the
+        National Science Foundation.
+      </p>
+    </div>
+  </div>
+</div>
+    </div>
+  
+  </div>
+</footer>
   </body>
 </html>

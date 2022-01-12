@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-pythia-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -49,6 +49,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Formatted text in the notebook with Markdown" href="markdown.html" />
@@ -68,33 +69,99 @@
                 </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="132">
+    <div class="container-fluid" id="shim"></div>
     <div class="container-fluid" id="banner"></div>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
 
+  <div id="navbar-start">
+    
     
 
+<a class="navbar-brand" href="https://projectpythia.org">
+  <img src="../_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/gallery.html">Gallery</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ProjectPythia" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/project_pythia" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
     <div class="container-xl">
       <div class="row">
-          
+        
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
-      <img src="../_static/ProjectPythia_Logo_Final-01-Blue.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Pythia Foundations</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+        <form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -441,19 +508,18 @@
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
+  Theme by <a href="https://projectpythia.org">Project Pythia</a>.<br><br>
+All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.<br><br>
+We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
+or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
 
 </div>
 
+</div>
 
-          
+        
 
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
+        <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main"><div class="topbar container-xl fixed-top">
     <div class="topbar-contents row">
         <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
         <div class="col pl-md-4 topbar-main">
@@ -537,7 +603,7 @@
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+                <i class="fas fa-list"></i> On this page
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -658,145 +724,16 @@
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>JupyterLab</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#set-up">
-   Set Up
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-jupyterlab-interface">
-   The JupyterLab Interface
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#left-sidebar">
-     Left Sidebar
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#terminals">
-     Terminals
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#consoles">
-     Consoles
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#text-editor">
-     Text Editor
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#runnning-jupyterlab-notebooks">
-   Runnning JupyterLab Notebooks
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code-cells">
-     Code Cells
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#markdown-cells">
-     Markdown Cells
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#raw-cells">
-     Raw Cells
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#command-mode-shortcuts">
-     Command Mode Shortcuts
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#special-variables">
-     Special Variables
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#shell-commands">
-     Shell Commands
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#stopping-restarting-the-kernel">
-     Stopping &amp; Restarting the Kernel
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#magics">
-     Magics
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#shutting-down">
-   Shutting Down
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#whats-next">
-     What’s next?
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#resources-and-references">
-   Resources and references
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+          <div id="main-content" class="row">
+            <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+              
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="jupyterlab">
-<h1>JupyterLab<a class="headerlink" href="#jupyterlab" title="Permalink to this headline">¶</a></h1>
+<h1>JupyterLab<a class="headerlink" href="#jupyterlab" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
 <div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>JupyterLab is a popular web application on which users can create and write their Jupyter Notebooks, as well as explore data, install software, etc. This section will introduce the JupyterLab interface and cover details of JupyterLab Notebooks.</p>
 <ol class="simple">
 <li><p>Set Up</p></li>
@@ -805,7 +742,7 @@
 </ol>
 </div>
 <div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Concepts</p></th>
@@ -830,14 +767,14 @@
 </div>
 <hr class="docutils" />
 <div class="section" id="set-up">
-<h2>Set Up<a class="headerlink" href="#set-up" title="Permalink to this headline">¶</a></h2>
+<h2>Set Up<a class="headerlink" href="#set-up" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>To launch the JupyterLab interface in your browser follow the instructions in <a class="reference external" href="https://foundations.projectpythia.org/foundations/jupyter.html">Installing and Running Python: Python in Jupyter</a>.</p>
 <p>If, instead, you want to follow along using a provided remote JupyterLab instance, launch this notebook via <a class="reference external" href="https://mybinder.org/">Binder</a> using the launch icon at the top of this page,</p>
 <p><img alt="Binder Launch" src="../_images/binder-highlight.png" /></p>
 <p>and follow along from there! If launching Binder, take note of the <code class="docutils literal notranslate"><span class="pre">Launcher</span></code> tab in the upper-left (see interface below.) Click there to find yourself in the same interface moving forward, and feel free to refer back to this tab to follow along.</p>
 </div>
 <div class="section" id="the-jupyterlab-interface">
-<h2>The JupyterLab Interface<a class="headerlink" href="#the-jupyterlab-interface" title="Permalink to this headline">¶</a></h2>
+<h2>The JupyterLab Interface<a class="headerlink" href="#the-jupyterlab-interface" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Go to your browser and take a look at the JupyterLab interface.</p>
 <p>With a base installation of JupyterLab your screen should look similar to the image below:</p>
 <p>Notice:</p>
@@ -851,7 +788,7 @@
 <p><img alt="Interface" src="../_images/interface_labeled.png" /></p>
 <p>We will now take a closer look at certain aspects and features of the JupyterLab Interface.</p>
 <div class="section" id="left-sidebar">
-<h3>Left Sidebar<a class="headerlink" href="#left-sidebar" title="Permalink to this headline">¶</a></h3>
+<h3>Left Sidebar<a class="headerlink" href="#left-sidebar" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>The Collapsible Left Sidebar is open to the <strong>File Browser Tab</strong> at launch. Clicking the File Browser Tab will collapse the sidebar or reopen it to this tab.</p>
 <ul class="simple">
 <li><p>Within this tab you will see the “+” button which allows you to create a new launcher.</p></li>
@@ -867,7 +804,7 @@
 <a class="reference internal image-reference" href="../_images/extensions.png"><img alt="../_images/extensions.png" src="../_images/extensions.png" style="width: 200px;" /></a>
 </div>
 <div class="section" id="terminals">
-<h3>Terminals<a class="headerlink" href="#terminals" title="Permalink to this headline">¶</a></h3>
+<h3>Terminals<a class="headerlink" href="#terminals" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Let’s select the Running Tabs and Kernels Tab in the Left Sidebar and see how it changes when we’ve used the Launcher.</p>
 <p>Open a Terminal in the Launcher. It should look very similar to the desktop terminal that you initially launched JupyterLab from, but is running from within JupyterLab, within your existing Conda environment, and within the directory you launched JupyterLab from (the same root folder shown in the File Browser Tab). Notice that there is now a Terminal listed in the Running Terminals Tab.</p>
 <p>In the terminal you can use your usual terminal commands. For example, in the terminal window, run:</p>
@@ -893,7 +830,7 @@
 </div>
 </div>
 <div class="section" id="consoles">
-<h3>Consoles<a class="headerlink" href="#consoles" title="Permalink to this headline">¶</a></h3>
+<h3>Consoles<a class="headerlink" href="#consoles" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Back in the Launcher, click the “Python 3” Console button. There is only one console option right now, but you could install more kernels into your Conda environment.</p>
 <p>There will be three dots while the kernel starts, then what loads looks like an IPython console. This is a place to execute Python commands in a stand alone workspace which is good for testing. Notice that the kernel started in the Running Terminals and Kernels tab!</p>
 <p>Start in a “cell” at the bottom of the Console window. Type:</p>
@@ -913,7 +850,7 @@ s
 <p>Close the window and shut down the Console in the Running Kernels tab. We’re back to the Launcher again.</p>
 </div>
 <div class="section" id="text-editor">
-<h3>Text Editor<a class="headerlink" href="#text-editor" title="Permalink to this headline">¶</a></h3>
+<h3>Text Editor<a class="headerlink" href="#text-editor" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Click on the “Text File” button in the Launcher.
 Select the File Browser tab to see the new file <code class="docutils literal notranslate"><span class="pre">untitled.txt</span></code> you created.</p>
 <p>Enter this Python code into the new text file:</p>
@@ -930,7 +867,7 @@ print(s)
 </div>
 </div>
 <div class="section" id="runnning-jupyterlab-notebooks">
-<h2>Runnning JupyterLab Notebooks<a class="headerlink" href="#runnning-jupyterlab-notebooks" title="Permalink to this headline">¶</a></h2>
+<h2>Runnning JupyterLab Notebooks<a class="headerlink" href="#runnning-jupyterlab-notebooks" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>There are two ways to open a Jupyter Notebook. One way is to select the File Browser Tab, click the “New Launcher” button, and select a Python 3 Notebook from the Launcher. Another way is to go to the top Menu Bar, hover over the File Menu, and select “New Notebook.” JupyterLab will prompt you with a dialogue box to select the Kernel you want to use in your Notebook. Select the “Python 3” kernel.</p>
 <p>If you have the File Browser Tab open, notice you just created a file called <code class="docutils literal notranslate"><span class="pre">Untitled.ipynb.</span></code> You will also have a new window open in the main work area for your new Notebook.</p>
 <p>Let’s explore the Notebook interface:</p>
@@ -941,7 +878,7 @@ If your cell is grayed out and you can’t see a blinking cursor in the cell, th
 <p><img alt="Notebook Interface" src="../_images/notebook-interface_labeled.png" /></p>
 <p>You may move the Notebook over so we can see your text file at the same time to compare, resizing the Notebook window as needed.</p>
 <div class="section" id="code-cells">
-<h3>Code Cells<a class="headerlink" href="#code-cells" title="Permalink to this headline">¶</a></h3>
+<h3>Code Cells<a class="headerlink" href="#code-cells" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Click inside the first cell of the Notebook to switch the cell to edit mode.
 Enter the following into the cell:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
@@ -987,7 +924,7 @@ Enter the following in the next cell:
 <p><img alt="Code Cells" src="../_images/codecells.png" /></p>
 </div>
 <div class="section" id="markdown-cells">
-<h3>Markdown Cells<a class="headerlink" href="#markdown-cells" title="Permalink to this headline">¶</a></h3>
+<h3>Markdown Cells<a class="headerlink" href="#markdown-cells" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Now, with the next cell selected (i.e., the blue bar on the far left), whether in edit or command mode, go up to the “cell type” dropdown menu above and select “Markdown”.
 Notice that the <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code> label goes away.</p>
 <p>Markdown is a markup language that allows you to format text in a plain-text editor. Here we will demonstrate some common Markdown syntax. You can learn more at <a class="reference external" href="https://www.markdownguide.org/">the Markdown Guide site</a> or in our <a class="reference external" href="https://foundations.projectpythia.org/foundations/markdown.html">Getting Started with Jupyter: Markdown</a> content.
@@ -1025,7 +962,7 @@ $$
 <p><strong>Note:</strong> that the “markdown” source code is rendered into much prettier text, which we can take advantage of for narrating our work in the Notebook!</p>
 </div>
 <div class="section" id="raw-cells">
-<h3>Raw Cells<a class="headerlink" href="#raw-cells" title="Permalink to this headline">¶</a></h3>
+<h3>Raw Cells<a class="headerlink" href="#raw-cells" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Now in a new cell selected, select “raw” from the “cell type” dropdown menu. Again, the <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code> label goes away, and you can enter the following in the cell:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">8</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
@@ -1036,7 +973,7 @@ $$
 <p><img alt="Raw" src="../_images/raw.png" /></p>
 </div>
 <div class="section" id="command-mode-shortcuts">
-<h3>Command Mode Shortcuts<a class="headerlink" href="#command-mode-shortcuts" title="Permalink to this headline">¶</a></h3>
+<h3>Command Mode Shortcuts<a class="headerlink" href="#command-mode-shortcuts" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Now, select the “raw” cell you just created by clicking on the far left of the cell.  You are now in “command mode”. The up and down arrows move to different cells. Don’t hit “enter” which would switch the cell to “edit mode.” Let’s explore command mode.</p>
 <p>You can change the cell type with <code class="docutils literal notranslate"><span class="pre">y</span></code> (for code), <code class="docutils literal notranslate"><span class="pre">m</span></code> for markdown, or <code class="docutils literal notranslate"><span class="pre">r</span></code> for raw.</p>
 <p>You can add a new cell above the selected cell with <code class="docutils literal notranslate"><span class="pre">a</span></code> (or below the selected cell with <code class="docutils literal notranslate"><span class="pre">b</span></code>).</p>
@@ -1048,7 +985,7 @@ $$
 </div>
 </div>
 <div class="section" id="special-variables">
-<h3>Special Variables<a class="headerlink" href="#special-variables" title="Permalink to this headline">¶</a></h3>
+<h3>Special Variables<a class="headerlink" href="#special-variables" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Now, in the empty cell at the end, enter one underscore:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">_</span>
 </pre></div>
@@ -1065,7 +1002,7 @@ You can equivalently use the variables `Out[2]` or `In[2]` to retrieve the outpu
 <a class="reference internal image-reference" href="../_images/special_vars.png"><img alt="../_images/special_vars.png" src="../_images/special_vars.png" style="width: 600px;" /></a>
 </div>
 <div class="section" id="shell-commands">
-<h3>Shell Commands<a class="headerlink" href="#shell-commands" title="Permalink to this headline">¶</a></h3>
+<h3>Shell Commands<a class="headerlink" href="#shell-commands" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>In the next code cell, enter the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!pwd
 </pre></div>
@@ -1078,7 +1015,7 @@ print(files)
 </div>
 </div>
 <div class="section" id="stopping-restarting-the-kernel">
-<h3>Stopping &amp; Restarting the Kernel<a class="headerlink" href="#stopping-restarting-the-kernel" title="Permalink to this headline">¶</a></h3>
+<h3>Stopping &amp; Restarting the Kernel<a class="headerlink" href="#stopping-restarting-the-kernel" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>All of your commands and their output have been remembered by the kernel.  But sometimes you may get code that takes too long to execute, and you need to stop it. For example in the next code cell, run:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 </pre></div>
@@ -1087,7 +1024,7 @@ print(files)
 <p>If you execute a notebook out of order, you can end up in a corrupted state (redefined variables, for example). To start fresh, you should restart the kernel with the circle-arrow button in the toolbar at the top. Now the kernel has forgotten everything, and you’ll need to rerun each cell.</p>
 </div>
 <div class="section" id="magics">
-<h3>Magics<a class="headerlink" href="#magics" title="Permalink to this headline">¶</a></h3>
+<h3>Magics<a class="headerlink" href="#magics" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>A “magic” is a Jupyter Notebook command proceded by a <code class="docutils literal notranslate"><span class="pre">%</span></code> symbol. In the next code cell, enter the following:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">timeit</span> <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -1105,23 +1042,23 @@ print(files)
 </div>
 </div>
 <div class="section" id="shutting-down">
-<h2>Shutting Down<a class="headerlink" href="#shutting-down" title="Permalink to this headline">¶</a></h2>
+<h2>Shutting Down<a class="headerlink" href="#shutting-down" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Before shutting down, save your notebook with the disc icon in the Notebook toolbar. Now, close both tabs (the notebook and the text editor). You’re back to the Launcher.</p>
 <p>The notebook kernel is still running, though, so go to the Running Kernels tab and shut it down.</p>
 <p>And we’re done.  Go to “File → Shut Down” to close both your browser tab and JupyterLab itself.</p>
 </div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>You are now familiar with the JupyterLab interface and running Jupyter Notebooks. Jupyter is popular for allowing you to intersperse Markdown text or equations between code cells. Jupyter offers some functionality that a Python script does not: certain keyboard shortcuts, special variables, shell scripting, and magics.</p>
 <div class="section" id="whats-next">
-<h3>What’s next?<a class="headerlink" href="#whats-next" title="Permalink to this headline">¶</a></h3>
+<h3>What’s next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="markdown.html"><span class="doc std std-doc">Markdown</span></a></p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="resources-and-references">
-<h2>Resources and references<a class="headerlink" href="#resources-and-references" title="Permalink to this headline">¶</a></h2>
+<h2>Resources and references<a class="headerlink" href="#resources-and-references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://jupyter.org/">Jupyter Documentation</a></p></li>
 <li><p><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab Documentation</a></p></li>
@@ -1153,9 +1090,7 @@ print(files)
     <script>kernelName = 'python3'</script>
 
               </div>
-              
-            
-                <!-- Previous / next buttons -->
+              <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="getting-started-jupyter.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1172,29 +1107,155 @@ print(files)
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By the <a href="https://projectpythia.org/">Project Pythia</a> community<br/>
-    
-        &copy; Copyright 2021.<br/>
-      <div class="extra_footer">
-        All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.
-We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a> or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
-
-      </div>
-  </p>
-</footer>
-</main>
-
+            </div>
+          </div>
+        </main>
 
       </div>
     </div>
   
   <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
+<footer class="footer">
+  <div class="container-fluid m-0 p-0">
+  
+    <div class="footer-item">
+    
+  <div class="container-fluid footer-logos">
+    <div class="container-xl">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="NCAR" src="../_images/NCAR-contemp-logo-blue.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="Unidata" src="../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="UAlbany" src="../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-menu pt-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>About</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/about.html"
+              >About Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/preamble/how-to-use.html"
+              >How to use Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#the-project-pythia-team"
+              >The Project Team</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Give Feedback</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="mailto:projectpythia@ucar.edu">Email us!</a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/projectpythia.github.io/discussions"
+              >Project Pythia Discussions</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/pythia-foundations/discussions"
+              >Pythia Foundations Discussions</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Contribute</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/contributing.html"
+              >How to contribute to Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/appendix/how-to-contribute.html"
+              >How to contribute to Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/code_of_conduct.html"
+              >Our code of conduct</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#weekly-working-group-meetings"
+              >Join our weekly meetings</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/ProjectPythia"
+              >Join us on GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  
+    <div class="footer-item">
+      <div class="container-fluid footer-info">
+    <div class="container-xl">
+      <div class="d-flex justify-content-center">
+        <p class="py-1 m-0">
+            &copy;&nbsp;2022.
+        
+          By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
+        
+          Last updated on 12 January 2022.
+        </p>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-extra">
+  <div class="container">
+    <div class="row">
+      <p class="m-0">
+        <img
+          src="../_static/footer-logo-nsf.png"
+          style="float: left; width: 60px; height: 60px; margin-right: 1rem"
+        />
+        This material is based upon work supported by the National Science
+        Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those
+        of the author(s) and do not necessarily reflect the views of the
+        National Science Foundation.
+      </p>
+    </div>
+  </div>
+</div>
+    </div>
+  
+  </div>
+</footer>
   </body>
 </html>
