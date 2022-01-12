@@ -1,9 +1,5 @@
 # Issues and Discussions
 
-```{note}
-This content is under construction!
-```
-
 ## Overview:
 
 1. Examine an existing issue and discussion
@@ -18,6 +14,8 @@ This content is under construction!
 
 ---
 
+## Issues
+
 As mentioned in the previous section, GitHub Issues and Discussions allow collaboration within a repository. First, let's take a look at the [Issues page](https://github.com/ProjectPythia/pythia-foundations/issues) in Project Pythia's `pythia-foundations` repository:
 
 <img src="../../images/GitHubPythiaIssues.png" alt="Pythia Issues">
@@ -26,13 +24,17 @@ By default, it shows all open issues, but we can see all [closed issues](https:/
 
 <img src="../../images/GitHubPythiaIssuesClosed.png" alt="Pythia Closed Issues">
 
-Issues, Discussions, and Pull Requests are all numbered for easy reference. Let's examine [Issue \#144](https://github.com/ProjectPythia/pythia-foundations/issues/144).
+Issues, Discussions, and Pull Requests are all numbered for easy reference. By opening, resolving, and then closing an issue, we are leaving behind a searchable public record of what the issue was, why we thought it was important, and how we resolved it. This is great for project management, since it gets old issues out of the way without actually deleting them. Let's examine [Issue \#144](https://github.com/ProjectPythia/pythia-foundations/issues/144).
 
 <img src="../../images/GitHubPythiaIssue144.png" alt="Pythia Issue 144">
 
 As you can see, some broken links were found in one of the Pythia Foundations tutorials, likely because the site being linked recently had its structure changed. An additional comment was added, as well as a label to help filtering/sorting issues by topic. We then see that this issue was mentioned (by typing the issue number) elsewhere in the repository. In this case, it was mentioned in [Pull Request \#145](https://github.com/ProjectPythia/pythia-foundations/pull/145), which makes the changes to fix the issue. We can also see that the PR has been merged, which means the changes have been incorporated into the main branch of the code.
 
 Like this example, issues can notify others of bugs or typos, but they can also be used as "calls to action", whether you plan on addressing the issue yourself or are hoping that someone else will be interested in making the changes. Issues [\#97](https://github.com/ProjectPythia/pythia-foundations/issues/97) and [\#98](https://github.com/ProjectPythia/pythia-foundations/issues/98) are examples of this, in which ideas for changes are proposed and then addressed at a later time.
+
+A new issue can be opened by pressing the "New issue" button on the top right of the Issues page. Depending on the repository, you may be prompted to choose from a template, or you may just see title and text boxes to fill out.
+
+## Discussions
 
 Discussions, on the other hand, are more open-ended and do not _necessarily_ suggest a change or addition to the repository. Here is Project Pythia's Discussions page:
 
