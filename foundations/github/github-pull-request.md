@@ -1,4 +1,4 @@
-# GitHub Part 9: Opening a Pull Request on GitHub
+# Opening a Pull Request on GitHub
 
 ```{note}
 This content is under construction!
@@ -13,7 +13,7 @@ This content is under construction!
 
 | Concepts         | Importance | Notes |
 | ---------------- | ---------- | ----- |
-| GitHub Parts 1-8 | Necessary  |       |
+| GitHub Parts 1-7 | Necessary  |       |
 
 - **Time to learn**: 30 minutes
 
