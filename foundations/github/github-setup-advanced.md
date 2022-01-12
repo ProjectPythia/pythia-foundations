@@ -1,4 +1,4 @@
-# GitHub Part 6: Advanced GitHub Setup
+# Advanced GitHub Setup
 
 ```{note}
 This content is under construction!
@@ -11,9 +11,9 @@ This content is under construction!
 
 ## Prerequisites
 
-| Concepts         | Importance | Notes |
-| ---------------- | ---------- | ----- |
-| GitHub Parts 1-5 | Necessary  |       |
+| Concepts              | Importance | Notes |
+| --------------------- | ---------- | ----- |
+| Prior GitHub Sections | Necessary  |       |
 
 - **Time to learn**: 30 minutes
 
