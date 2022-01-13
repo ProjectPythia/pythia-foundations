@@ -2,18 +2,20 @@ name: pythia-book-dev
 channels:
   - conda-forge
 dependencies:
-  - python=3.8
+  - cartopy
   - jupyter-book
   - jupyterlab
   - matplotlib
-  - numpy
-  - pre-commit
-  - pydata-sphinx-theme>=0.7.1
-  - sqlalchemy<1.4
-  - cartopy
-  - xarray
   - nc-time-axis
   - netcdf4
+  - numpy
+  - pip
+  - pre-commit
   - pyproj
   - pythia-datasets
+  - python=3.8
   - scipy
+  - sqlalchemy<1.4
+  - xarray
+  - pip:
+      - sphinx-pythia-theme
