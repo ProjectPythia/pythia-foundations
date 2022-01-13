@@ -35,7 +35,7 @@ Example using branches with https://github.com/ProjectPythia/github-sandbox, the
 
 ## Branch Workflows
 
-## Remote Branches 
+## Remote Branches
 
 ## Pushing
 
