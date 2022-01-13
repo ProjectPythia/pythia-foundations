@@ -40,7 +40,7 @@ A new issue can be opened by pressing the "New issue" button on the top right of
 
 Discussions, on the other hand, are more open-ended and do not _necessarily_ suggest a change or addition to the repository. Here is the [Discussions page for Pythia Foundations](https://github.com/ProjectPythia/pythia-foundations/discussions):
 
-<img src="../../images/GitHubPythiaDisc.png" alt="Pythia Discussions">
+<img src="../../images/GitHubPythiaDisc.png" alt="Pythia Foundations Discussions">
 
 Let's take a look at [Discussion \#156](https://github.com/ProjectPythia/pythia-foundations/discussions/156).
 
