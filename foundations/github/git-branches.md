@@ -21,6 +21,32 @@ This content is under construction!
 
 ## Content section
 
+## Overview of GitHub branches, usefulness
+
+Example using branches with https://github.com/ProjectPythia/github-sandbox, the sandbox repository hosted by Project Pythia for getting started with GitHub.
+
+## Creating a New Branch
+
+## Switching Branches
+
+## Merging Branches
+
+## Branch Management
+
+## Branch Workflows
+
+## Remote Branches 
+
+## Pushing
+
+## Tracking Branches
+
+## Pulling
+
+## Deleting Branches
+
+## Rebasing
+
 ---
 
 ## Summary
