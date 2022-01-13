@@ -1,13 +1,8 @@
 # Issues and Discussions
 
-```{note}
-This content is under construction!
-```
-
 ## Overview:
 
-1. Overview 1
-1. Overview 2
+1. Examine an existing issue and discussion
 
 ## Prerequisites
 
@@ -15,27 +10,51 @@ This content is under construction!
 | --------------------- | ---------- | ----- |
 | Prior GitHub Sections | Necessary  |       |
 
-- **Time to learn**: 30 minutes
+- **Time to learn**: 5 minutes
 
 ---
 
-- Examine an existing issue
-  - Note that an issue may be addressed via a Pull Request (which will be discussed in a later section)
-  - Issue search tips (closed vs open)
-- Examine a discussion
+## Issues
+
+As mentioned in the previous section, GitHub Issues and Discussions allow collaboration within a repository. First, let's take a look at the [Issues page](https://github.com/ProjectPythia/pythia-foundations/issues) in Project Pythia's `pythia-foundations` repository:
+
+<img src="../../images/GitHubPythiaIssues.png" alt="Pythia Issues">
+
+By default, it shows all open issues, but we can see all [closed issues](https://github.com/ProjectPythia/pythia-foundations/issues?q=is%3Aissue+is%3Aclosed) by clicking "Closed".
+
+<img src="../../images/GitHubPythiaIssuesClosed.png" alt="Pythia Closed Issues">
+
+Issues, Discussions, and Pull Requests are all numbered for easy reference. By opening, resolving, and then closing an issue, we are leaving behind a searchable public record of what the issue was, why we thought it was important, and how we resolved it. This is great for project management, since it gets old issues out of the way without actually deleting them.
+
+Let's now examine [Issue \#144](https://github.com/ProjectPythia/pythia-foundations/issues/144).
+
+<img src="../../images/GitHubPythiaIssue144.png" alt="Pythia Issue 144">
+
+As you can see, some broken links were found in one of the Pythia Foundations tutorials, likely because the site being linked recently had its structure changed. An additional comment was added, as well as a label to help filtering/sorting issues by topic. We then see that this issue was mentioned (by typing the issue number) elsewhere in the repository. In this case, it was mentioned in [Pull Request \#145](https://github.com/ProjectPythia/pythia-foundations/pull/145), which makes the changes to fix the issue. We can also see that the PR has been merged, which means the changes have been incorporated into the main branch of the code.
+
+Like this example, issues can notify others of bugs or typos, but they can also be used as "calls to action", whether you plan on addressing the issue yourself or are hoping that someone else will be interested in making the changes. Issues [\#97](https://github.com/ProjectPythia/pythia-foundations/issues/97) and [\#98](https://github.com/ProjectPythia/pythia-foundations/issues/98) are examples of this, in which ideas for changes are proposed and then addressed at a later time.
+
+A new issue can be opened by pressing the "New issue" button on the top right of the Issues page. Depending on the repository, you may be prompted to choose from a template, or you may just see title and text boxes to fill out.
+
+## Discussions
+
+Discussions, on the other hand, are more open-ended and do not _necessarily_ suggest a change or addition to the repository. Here is the [Discussions page for Pythia Foundations](https://github.com/ProjectPythia/pythia-foundations/discussions):
+
+<img src="../../images/GitHubPythiaDisc.png" alt="Pythia Foundations Discussions">
+
+Let's take a look at [Discussion \#156](https://github.com/ProjectPythia/pythia-foundations/discussions/156).
+
+<img src="../../images/GitHubPythiaDisc156.png" alt="Pythia Discussion 156">
+
+This discussion brings up a resource relevant to the repository that could help others, but it is not suggesting a change like an issue would. Other discussions might include announcements, Q&A, or general thoughts about the repository.
 
 ---
 
 ## Summary
 
-- Sum 1
-- Sum 2
+- GitHub provides Issues and Discussions to facilitate collaboration.
+- Issues are specific and actionable, while discussions are open-ended.
 
 ### What's Next?
 
-Next lesson
-
-## References
-
-1. Ref 1
-1. Ref 2
+We will work through cloning and forking an example repository.
