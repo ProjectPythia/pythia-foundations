@@ -41,7 +41,8 @@ git status
 
 You will see that you are already on a branch called "main". And that this branch is up-to-date with "origin/main" and has nothign to commit.
 
-Now check the status of your remote repository with 
+Now check the status of your remote repository with
+
 ```
 git remote -v
 ```
@@ -71,6 +72,7 @@ Check that this branch was created with:
 ```
 git branch
 ```
+
 ![Git NewBranch](../../images/4-gitnewbranch.png)
 
 This will display the current and the new branch. You'll notice that we are still on branch "main" and will need to switch branches to work in our "newbranch."
@@ -98,6 +100,7 @@ Before we push this branch upstream, let's make some sample changes by creating 
 ```
 touch hello.py
 ```
+
 ![Git Status](../../images/6-samplechange.png)
 
 You can check that this file has been created by comparing an `ls` before and after this command, and also with a `git status` that will show your new untracked file.
