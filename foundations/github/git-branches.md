@@ -112,7 +112,11 @@ You can check that this file has been created by comparing an `ls` before and af
 
 `git add` and `git commit` your new file and check the status again.
 
+![Git Add](../../images/6a-gitadd.png)
+
 You're new branch is now one commit ahead of your main branch. You can see this with a `git log.`
+
+![Git Log](../../images/6b-gitlog.png)
 
 In a real workflow, you would continue making edits and git commits on a branch as so until you are ready to push up to GitHub.
 
@@ -121,6 +125,8 @@ Try to do this with
 ```
 git push
 ```
+
+![Git Push](../../images/6c-gitpush.png)
 
 You will get an error message, "fatal: The current branch newbranch has no upstream branch." So what is the proper method for getting our local branch changes up to GitHub?
 
@@ -132,9 +138,13 @@ git push --set-upstream origin newbranch
 
 Thankfully, Git provided this command in the previous error message.
 
+![Set Upstream](../../images/6d-setupstream.png)
+
 We can see that this worked by donig a `git branch -a`
 
 Notice the new branch called "remotes/origin/newbranch". And when you do a `git status` you'll see that we are up to date with this new remote branch.
+
+![Git Commit Status](../../images/7-github-branchandstatus.png)
 
 On future commits you will not have to repeat these steps, as your remote branch will already be established.
 
@@ -144,29 +154,51 @@ At this point, the demonstration will move from your local terminal to GitHub. G
 
 When you've navigated to your fork, you should see a message box alerting you that your branch "newbranch" had recent changes with the option to generate an open pull request. This pull request would take the changes from your "newbranch" branch and suggest them for the original upstream ProjectPythia github-sandbox repository. You'll also notice that you are on branch "main," but that there are now 2 branches.
 
+![GitHub](../../images/8-github.png)
+
 If you click on the branch "main" you'll see the list of these branches.
 
+![GitHub Branches](../../images/9-github-branches.png)
+
 There you can click on the branch "newbranch" to swtich branches.
+
+![New Branch](../../images/10-github-newbranch.png)
 
 Here you will see the message, "This branch is 1 commit ahead of ProjectPythia:main." Next to this message you'll see either the option to "Contribute" (which opens a pull request) or "Fetch Upstream" (which pulls in changes from the original repository). And just above your files you'll see your most recent commit.
 
 Click on the "Open a Pull Request" button under the "Contribute" drop-down.
 
+![Contribute](../../images/11-newbranch-contribute.png)
+
 This will send you to a new page. Notice that you are now in "ProjectPythia/github-sandbox" and not your fork.
+
+![Compare](../../images/12-compare.png)
 
 The page will have the two branches you are comparing with an arrow indicating which branch is to be merged into which. If you wanted, you could click on these branches to switch the merge configuration. Underneath that you'll see a green message, "Able to merge. These branches can be automatically merged." This message means that there are no conflicts. We will discuss conflicts in a later chapter.
 
 In a one-commit pull request, the pull request title defaults to your commit message. You can change this if you'd like. There is also a space to add a commit message. This is your opportunity to explain your changes to the owner's of the upstream repository.
 
+![Message](../../images/13-message.png)
+
 And if you scroll down, you'll see a summary of this pull request with every commit and changed file listed.
+
+![Summary](../../images/14-prsummary.png)
 
 Click the arrow next to "Create Pull Request" to change this to a draft pull request.
 
+![To Draft](../../images/15-todraft.png)
+
 Once you've clicked "Draft Pull Request," you will be directed to the page of your new pull request. Here you can add more comments or request reviews.
+
+![Draft PR](../../images/16-draft.png)
 
 Clicking "Files Changed" allows you to see all of the changes that would be merged with this pull request.
 
+![Files](../../images/17-fileschanged.png)
+
 If you are working in a repository that has automatic checks, it is a good idea to wait for these checks to pass successfully before you request reviewers or change to a non-draft pull request. Do this by clicking "Ready for Review."
+
+![Review(../../images/18-review.png)
 
 Here you will notice some changes.
 
