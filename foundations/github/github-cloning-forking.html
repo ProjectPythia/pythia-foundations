@@ -601,8 +601,23 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cloning-a-repository">
+   Cloning a repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#forking-a-repository">
+   Forking a repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
    Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#things-to-try">
+   Things to try
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -630,15 +645,11 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="cloning-and-forking-a-repository">
 <h1>Cloning and Forking a Repository<a class="headerlink" href="#cloning-and-forking-a-repository" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This content is under construction!</p>
-</div>
 <div class="section" id="overview">
 <h2>Overview:<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ol class="simple">
-<li><p>Overview 1</p></li>
-<li><p>Overview 2</p></li>
+<li><p>Cloning a repository</p></li>
+<li><p>Forking a repository</p></li>
 </ol>
 </div>
 <div class="section" id="prerequisites">
@@ -653,6 +664,10 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <tbody>
 <tr class="row-even"><td><p>Prior GitHub Sections</p></td>
 <td><p>Necessary</p></td>
+<td><p>GitHub user account required</p></td>
+</tr>
+<tr class="row-odd"><td><p>Command-line shell</p></td>
+<td><p>Helpful</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -660,39 +675,153 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <ul class="simple">
 <li><p><strong>Time to learn</strong>: 30 minutes</p></li>
 </ul>
+</div>
 <hr class="docutils" />
-<ul class="simple">
-<li><p>Cloning</p>
-<ul>
-<li><p>Why would you want to clone a repo?</p></li>
-<li><p>How do you clone a repo? See the what-is-git section.</p></li>
-<li><p>Now that you’ve cloned a repo, what can you do with it?</p></li>
-</ul>
-</li>
-<li><p>Forking</p>
-<ul>
-<li><p>Why would you want to fork a repo? See the github-pull-request section.</p></li>
-</ul>
-</li>
-</ul>
+<div class="section" id="cloning-a-repository">
+<h2>Cloning a repository<a class="headerlink" href="#cloning-a-repository" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Cloning is ideal for the following scenarios:</p>
+<ol class="simple">
+<li><p>You wish to download, build, and install the latest version of a software package.</p></li>
+<li><p>You would like to experiment with a repository on your local computer, but do not desire to maintain a separate copy of it (termed a <em>fork</em>, to be covered later in this lesson) on your GitHub account.</p></li>
+<li><p>You have previously <em>forked</em> a repository to your own GitHub account, and now wish to make changes to it for possible incorporation into the original repo, via a <em>pull request</em>.</p></li>
+</ol>
+<p>Let’s consider the 2nd scenario. Say you wish to copy a GitHub repository to a computer you have access to (which could be your own computer, or one you have access to at work or school).</p>
+<p>We’ll use a very basic repo that is part of the <a class="reference external" href="https://github.com/ProjectPythia">Project Pythia organization</a> as our example.</p>
+<p>First, point your browser to <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">https://github.com/ProjectPythia/github-sandbox</a>:</p>
+<img alt="SandboxRepo" src="../../_images/GitHub_SandboxRepo.png" />
+<hr class="docutils" />
+<p>We see that in the repository, there exists five files. Above the list of files is this row:</p>
+<img alt="RepoTools" src="../../_images/GitHub_RepoTools.png" />
+<hr class="docutils" />
+<p>Click on the green <strong>Code</strong> button to the right:</p>
+<img alt="CodeClone" src="../../_images/GitHub_CodeClone.png" />
+<hr class="docutils" />
+<p>Select the <strong>HTTPS</strong> option, then click on the URL to highlight it, and finally click on the copy-to-clipboard icon:</p>
+<img alt="CodeCloneHTTPS" src="../../_images/GitHub_CodeCloneHTTPS.png" />
+<hr class="docutils" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This link points to where the repository “lives” on GitHub. We will use the term <strong>origin</strong> to refer to this location.</p>
+</div>
+<p>Now, open up a terminal on your local computer, and if desired, <code class="docutils literal notranslate"><span class="pre">cd</span></code> into a directory that you’d like to house whatever repos you clone. Type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>, and then paste in the URL that you copied from GitHub (i.e., the <strong>origin</strong>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ProjectPythia</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">sandbox</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>You’ll see something like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Cloning</span> <span class="n">into</span> <span class="s1">&#39;github-sandbox&#39;</span><span class="o">...</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Enumerating</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Counting</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">15</span><span class="o">/</span><span class="mi">15</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Compressing</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">14</span><span class="o">/</span><span class="mi">14</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Total</span> <span class="mi">15</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">3</span><span class="p">),</span> <span class="n">reused</span> <span class="mi">0</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">0</span><span class="p">),</span> <span class="n">pack</span><span class="o">-</span><span class="n">reused</span> <span class="mi">0</span>
+<span class="n">Receiving</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">15</span><span class="o">/</span><span class="mi">15</span><span class="p">),</span> <span class="mf">7.41</span> <span class="n">KiB</span> <span class="o">|</span> <span class="mf">2.47</span> <span class="n">MiB</span><span class="o">/</span><span class="n">s</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Resolving</span> <span class="n">deltas</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="info admonition">
+<p class="admonition-title">Windows users</p>
+<p>While <code class="docutils literal notranslate"><span class="pre">git</span></code> is typically part of a Linux or Mac OS command-line shell, similar functionality must be installed if you are running Windows. Download and install the <a class="reference external" href="https://gitforwindows.org/">Git for Windows</a> package.</p>
+</div>
+<p>Now, you can <code class="docutils literal notranslate"><span class="pre">cd</span></code> into the <code class="docutils literal notranslate"><span class="pre">github-sandbox</span></code> directory which has been created and populated with the exact contents of the <strong>origin</strong>’s repository at the time you cloned it. If you have a Python installation, you could then type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">sample</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>to run the sample Python script. You should see the following output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hello, Python learners!
+</pre></div>
+</div>
+<p>By virtue of cloning the repo, <em>git</em> automatically sets the URL of the <strong>origin</strong>’s repository on GitHub. You can show this by typing the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+<p>You should see:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">origin</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ProjectPythia</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">sandbox</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
+<span class="n">origin</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ProjectPythia</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">sandbox</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This link points to where the repository “lives” on GitHub. We will use the term <strong>origin</strong> to refer to this location.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We discuss the <code class="docutils literal notranslate"><span class="pre">git</span></code> command-line interface in the <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/what-is-git">https://foundations.projectpythia.org/foundations/github/what-is-git</a> lesson.</p>
+</div>
+<p><strong>Congratulations!!</strong> You have now cloned a GitHub repository!</p>
+<p>Now, let’s consider the 3rd scenario for cloning … which involves the releated topic of <em>forking</em>.</p>
+</div>
+<div class="section" id="forking-a-repository">
+<h2>Forking a repository<a class="headerlink" href="#forking-a-repository" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Forking is similar to cloning, but has a bit more involved workflow. Scenarios where forking a repo is indicated include the following:</p>
+<ol class="simple">
+<li><p>You wish to collaborate on projects that are hosted on GitHub, but you are not one of that project’s <em>maintainers</em> (i.e., you do not have <em>write permissions</em> on it).</p></li>
+<li><p>You wish to experiment with changing or adding new features to a project, and do not immediately intend to <em>merge</em> them into the original project’s repo (aka, the <em>base</em> repository).</p></li>
+</ol>
+<p>In a fork, you first create a copy of an existing repository, but store it in your own personal GitHub organization (recall that when you create a GitHub account, the <em>organization</em> name is your GitHub user ID).</p>
+<p>Let’s say we intend to make some changes to the <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">Project Pythia Sandbox</a> repo, that ultimately we’ll submit to the original repository as a <em>Pull request</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be sure you have logged into GitHub at this time!</p>
+</div>
+<p>Notice at the top right of the screen, there is a <em>Fork</em> button:</p>
+<img alt="Fork" src="../../_images/GitHub_Fork.png" />
+<hr class="docutils" />
+<p>Click on it:</p>
+<img alt="ForkDest" src="../../_images/GitHub_ForkDest.png" />
+<hr class="docutils" />
+<p>You should see your GitHub user id (if you administer any other GitHub organizations, you will see them as well). Click on your user id to complete the <em>fork</em>. After a few seconds, your browser will be redirected to the forked repo, now residing in your personal GitHub organization:</p>
+<img alt="ForkPost" src="../../_images/GitHub_ForkPost.png" />
+<hr class="docutils" />
+<p>Notice that the <em>Fork</em> button on the upper right has incremented by one, and there is also is a line relating your fork to the original repo:</p>
+<img alt="ForkBranch" src="../../_images/GitHub_ForkBranch.png" />
+<hr class="docutils" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We discuss <em>branches</em> in the <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/git-branches">https://foundations.projectpythia.org/foundations/github/git-branches</a> lesson.</p>
+</div>
+<p>You now have a copy (essentially a clone) of the forked repository, which is now owned by you.</p>
+<p>You could, at this point, select one of the files in the repository and use GitHub’s built-in editor to make changes to these text-based files. But the typical use case that leverages the collaborative power of GitHub and its command-line cousin, <em>git</em>, involves <em>cloning</em> your <em>forked</em> copy of the repo to your local computer, where you can then perform your edits, and (in the case of software) test them on your system.</p>
+<p>Cloning your fork is the same as cloning the original repo. Click on the Code button, select the HTTPS protocol, copy the URL to the clipboard, and then run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;URL&gt;</span></code> on your local computer.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Unlike cloning, forking is not an option supported by the <em>git</em> command-line interface. I.e., <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fork</span></code> is not a valid command.</p>
+</div>
+<p>Once you’ve cloned the fork to your local machine, try running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code> again. You will see that the <em>origin</em> URL now points to your GitHub account or organization.</p>
+<p><em>The main purpose of cloning and forking a remote repository is so that you can make changes to the contents of those repositories in a safe and version-controller manner.</em> The process of making changes and submitting them as <em>pull requests</em> to the original repository is covered in our <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-pull-request">https://foundations.projectpythia.org/foundations/github/github-pull-request</a> lesson, but the workflow is as follows:</p>
+<ol class="simple">
+<li><p>Edit an existing file or files, and/or create new files.</p></li>
+<li><p>Stage your changes by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>.</p></li>
+<li><p>Commit your changes by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p></li>
+<li><p>(If you created a fork): Push your changes to your <em>fork</em> by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.</p></li>
+<li><p>(If you did not create a fork): Push your changes to the <em>base</em> repo by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>. This assumes you have write permissions on the base repo.</p></li>
+<li><p>In GitHub, create a <em>Pull request</em>.</p></li>
+</ol>
 </div>
 <hr class="docutils" />
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
-<li><p>Sum 1</p></li>
-<li><p>Sum 2</p></li>
+<li><p>The process of making a copy of a GitHub repository is called <em>cloning</em>.</p></li>
+<li><p><em>Forking</em> a repository also makes a copy of a GitHub repo, but places it in your GitHub organization.</p></li>
+<li><p>Forking allows you to modify a repo, without affecting the original version.</p></li>
+<li><p>After cloning your fork to your local computer, you can meke changes to your copy, which you can then submit to the original repo as a <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-pull-request"><em>Pull request</em></a>.</p></li>
+</ul>
+</div>
+<div class="section" id="things-to-try">
+<h2>Things to try<a class="headerlink" href="#things-to-try" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ul class="simple">
+<li><p>Clone another GitHub-hosted repository that is of interest to you.</p></li>
+<li><p>Then try creating a fork of that repository.</p></li>
 </ul>
 <div class="section" id="whats-next">
 <h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>Next lesson</p>
+<p>In the next lesson, you will set some configurations on your GitHub account that enable uploads (aka <em>pushes</em>) from your local computer to GitHub. You will also configure notifications on your GitHub account.</p>
 </div>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ol class="simple">
-<li><p>Ref 1</p></li>
-<li><p>Ref 2</p></li>
+<li><p><a class="reference external" href="https://github.community/t/the-difference-between-forking-and-cloning-a-repository/10189">Cloning vs Forking (GitHub Support)</a></p></li>
+<li><p><a class="reference external" href="https://github.community/t/what-the-fork/10187">What the Fork?(GitHub Community)</a></p></li>
 </ol>
 </div>
 </div>
@@ -856,7 +985,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 13 January 2022.
+          Last updated on 14 January 2022.
         </p>
       </div>
     </div>
