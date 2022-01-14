@@ -158,7 +158,7 @@ When you've navigated to your fork, you should see a message box alerting you th
 
 If you click on the branch "main" you'll see the list of these branches.
 
-![GitHub Branches](../../images/9-github-branches.png)
+![GitHub Branches](../../images/9-github-seebranches.png)
 
 There you can click on the branch "newbranch" to swtich branches.
 
@@ -198,7 +198,7 @@ Clicking "Files Changed" allows you to see all of the changes that would be merg
 
 If you are working in a repository that has automatic checks, it is a good idea to wait for these checks to pass successfully before you request reviewers or change to a non-draft pull request. Do this by clicking "Ready for Review."
 
-![Review(../../images/18-review.png)
+![Review](../../images/18-review.png)
 
 Here you will notice some changes.
 
