@@ -118,7 +118,7 @@ Now, let's consider the 3rd scenario for cloning ... which involves the releated
 
 ## Forking a repository
 
-Forking is similar to cloning, but has a bit more involved workflow. Scenarios whre forking a repo is indicated include the following:
+Forking is similar to cloning, but has a bit more involved workflow. Scenarios where forking a repo is indicated include the following:
 
 1. You wish to collaborate on projects that are hosted on GitHub, but you are not one of that project's _maintainers_ (i.e., you do not have _write permissions_ on it).
 1. You wish to experiment with changing or adding new features to a project, and do not immediately intend to _merge_ them into the original project's repo (aka, the _base_ repository).
