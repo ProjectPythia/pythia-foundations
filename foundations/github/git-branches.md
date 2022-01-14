@@ -37,13 +37,26 @@ Let's begin by checking the status of our repository:
 git status
 ```
 
+![Git Status](../../images/1-gitstatus.png)
+
 You will see that you are already on a branch called "main". And that this branch is up-to-date with "origin/main" and has nothign to commit.
+
+Now check the status of your remote repository with 
+```
+git remote -v
+```
+
+![Git Remote](../../images/2-gitremote.png)
+
+We are set up to pull and push from the same remote repository.
 
 Next, check all of your exising Git branches with:
 
 ```
 git branch -a
 ```
+
+![Git Branch](../../images/3-gitbranch.png)
 
 You will see one local branch ("main") and your remote branch ("remotes/origin/HEAD" and "remotes/origin/main", where "HEAD" points to "main").
 
@@ -58,6 +71,7 @@ Check that this branch was created with:
 ```
 git branch
 ```
+![Git NewBranch](../../images/4-gitnewbranch.png)
 
 This will display the current and the new branch. You'll notice that we are still on branch "main" and will need to switch branches to work in our "newbranch."
 
@@ -75,6 +89,8 @@ To check your current branch type:
 git status
 ```
 
+![Git Checkout](../../images/5-gitcheckout.png)
+
 Notice that `git status` doesn't say anything about being up-to-date, as beofre. This is because this branch only exists locally, not in our upstream GitHub fork.
 
 Before we push this branch upstream, let's make some sample changes by creating a new Python file.
@@ -82,6 +98,7 @@ Before we push this branch upstream, let's make some sample changes by creating 
 ```
 touch hello.py
 ```
+![Git Status](../../images/6-samplechange.png)
 
 You can check that this file has been created by comparing an `ls` before and after this command, and also with a `git status` that will show your new untracked file.
 
