@@ -6,9 +6,9 @@ The best practices for a simple workflow for sugesting changes to a GitHub repos
 
 1. What are Git Branches
 1. Creating a New Branch
-2. Switching Branches
-3. Setting up a Remote Branch
-4. Merging Branches
+1. Switching Branches
+1. Setting up a Remote Branch
+1. Merging Branches
 
 ## Prerequisites
 
@@ -98,7 +98,6 @@ git status
 
 Notice that `git status` doesn't say anything about being up-to-date, as before. This is because this branch only exists locally, not in our upstream GitHub fork.
 
-
 ## Setting up a Remote Branch
 
 Before we push this branch upstream, let's make some sample changes by creating a new Python file.
@@ -115,9 +114,10 @@ You can check that this file has been created by comparing an `ls` before and af
 
 You're new branch is now one commit ahead of your main branch. You can see this with a `git log.`
 
-In a real workflow, you would continue making edits and git commits on a branch as so until you are ready to push up to GitHub. 
+In a real workflow, you would continue making edits and git commits on a branch as so until you are ready to push up to GitHub.
 
 Try to do this with
+
 ```
 git push
 ```
@@ -125,6 +125,7 @@ git push
 You will get an error message, "fatal: The current branch newbranch has no upstream branch." So what is the proper method for getting our local branch changes up to GitHub?
 
 First, we need to set an upstream branch to direct our local push to:
+
 ```
 git push --set-upstream origin newbranch
 ```
@@ -137,12 +138,11 @@ Notice the new branch called "remotes/origin/newbranch". And when you do a `git 
 
 On future commits you will not have to repeat these steps, as your remote branch will already be established.
 
-
 ## Merging Branches
 
 At this point, the demonstration will move from your local terminal to GitHub. Go to your fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox). One fast way to get to your fork, is to click the "fork" button and then follow the link underneathe the message, "You've already forked github-sandbox."
 
-When you've navigated to your fork, you should see a message box alerting you that your branch "newbranch" had recent changes with the option to generate an open pull request. This pull request would take the changes from your "newbranch" branch and suggest them for the original upstream ProjectPythia github-sandbox repository. You'll also notice that you are on branch "main," but that there are now 2 branches. 
+When you've navigated to your fork, you should see a message box alerting you that your branch "newbranch" had recent changes with the option to generate an open pull request. This pull request would take the changes from your "newbranch" branch and suggest them for the original upstream ProjectPythia github-sandbox repository. You'll also notice that you are on branch "main," but that there are now 2 branches.
 
 If you click on the branch "main" you'll see the list of these branches.
 
@@ -152,11 +152,11 @@ Here you will see the message, "This branch is 1 commit ahead of ProjectPythia:m
 
 Click on the "Open a Pull Request" button under the "Contribute" drop-down.
 
-This will send you to a new page. Notice that you are now in "ProjectPythia/github-sandbox" and not your fork. 
+This will send you to a new page. Notice that you are now in "ProjectPythia/github-sandbox" and not your fork.
 
 The page will have the two branches you are comparing with an arrow indicating which branch is to be merged into which. If you wanted, you could click on these branches to switch the merge configuration. Underneath that you'll see a green message, "Able to merge. These branches can be automatically merged." This message means that there are no conflicts. We will discuss conflicts in a later chapter.
 
-In a one-commit pull request, the pull request title defaults to your commit message. You can change this if you'd like. There is also a space to add a commit message. This is your opportunity to explain your changes to the owner's of the upstream repository. 
+In a one-commit pull request, the pull request title defaults to your commit message. You can change this if you'd like. There is also a space to add a commit message. This is your opportunity to explain your changes to the owner's of the upstream repository.
 
 And if you scroll down, you'll see a summary of this pull request with every commit and changed file listed.
 
