@@ -23,9 +23,34 @@
 
 ---
 
-## What is version control (and why should we care)?
+## About version control and git
 
-### git: some definitions and history
+### What is version control (and why should we care)?
+
+[Version Control](https://en.wikipedia.org/wiki/Version_control) refers generally to systems for managing changes to documents or files. Version control systems let us keep track of what changes were made to a file, when they were made, and by whom. If you've ever used "Tracked changes" on a Word document with multiple authors, then you've seen a form of version control in action (though NOT one that is well suited to working with computer code!).
+
+The need for version control is particularly acute when working with computer code, where small changes to the text can have huge impacts on the results of running the code.
+
+Do you have a directory somewhere on your machine right now with five different versions of a Python script like this?
+
+```
+analysis_script_OLD.py
+analysis_script.py
+analysis_script_09122021.py
+analysis_script_09122021_edit.py
+analysis_script_NEW.py
+```
+
+A version control system will replace this mess with a well-ordered and labelled history of edits that you can freely browse through, and will greatly simply collaborating with other people on writing new code.
+
+### What is git?
+
+- A very popular VCS
+- git is FOSS and already deployed on many systems
+- Created by Linus Torvalds for
+- Used by most open-source projects in the Scientific Python ecosystem
+- Also used by Project Pythia.
+- Learning git will improve your own workflows and also enable collaborations.
 
 ## Inspect a git repository with `git status`
 
