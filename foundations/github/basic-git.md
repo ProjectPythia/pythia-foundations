@@ -19,7 +19,7 @@
 | --------------------- | ---------- | ----- |
 | Prior GitHub Sections | Necessary  |       |
 
-- **Time to learn**: 30 minutes
+- **Time to learn**: 45 minutes
 
 ---
 
@@ -29,7 +29,7 @@
 
 [Version Control](https://en.wikipedia.org/wiki/Version_control) refers generally to systems for managing changes to documents or files. Version control systems let us keep track of what changes were made to a file, when they were made, and by whom. If you've ever used "Tracked changes" on a Word document with multiple authors, then you've seen a form of version control in action (though NOT one that is well suited to working with computer code!).
 
-The need for version control is particularly acute when working with computer code, where small changes to the text can have huge impacts on the results of running the code.
+The need for version control is particularly acute when _working with computer code_, where small changes to the text can have huge impacts on the results of running the code.
 
 Do you have a directory somewhere on your machine right now with five different versions of a Python script like this?
 
@@ -41,24 +41,46 @@ analysis_script_09122021_edit.py
 analysis_script_NEW.py
 ```
 
-A version control system will replace this mess with a well-ordered and labelled history of edits that you can freely browse through, and will greatly simply collaborating with other people on writing new code.
+A Version Control System (VCS) like git will replace this mess with a _well-ordered and labelled history_ of edits that you can freely browse through, and will greatly simply collaborating with other people on writing new code.
 
 ### What is git?
 
-- A very popular VCS
-- git is FOSS and already deployed on many systems
-- Created by Linus Torvalds for
-- Used by most open-source projects in the Scientific Python ecosystem
-- Also used by Project Pythia.
-- Learning git will improve your own workflows and also enable collaborations.
+#### Git is not GitHub
+
+That's the first thing to understand. GitHub is a web-based platform for hosting code and collaborating with other people. On the other hand, **git is a command-line software package for Version Control**. It runs on your local computer as well as under the hood on GitHub. You need to understand something about version control with git in order to use many of GitHub's collaboration features.
+
+#### A little history and nomenclature
+
+Git has been around [since the mid-2000s](https://en.wikipedia.org/wiki/Git). It was originally written by Linus Torvalds specifically for use in development of the Linux kernel. Git is [FOSS](https://foundations.projectpythia.org/foundations/github/what-is-github.html#free-and-open-source-software-foss) and comes pre-installed on many Linux and Mac OS systems.
+
+There are many other VCSs out there. A few that you might encounter in scientific codebases include [Subversion](https://subversion.apache.org), [Mercurial](https://www.mercurial-scm.org), and [CVS](http://cvs.nongnu.org). However, git is overwhelmingly the VCS of choice for open-source projects in the Scientific Python ecosystem these days (as well as among software developers more generally).
+
+There is no universally agreed-upon meaning of the name "git". From the [git project's own README file](https://github.com/git/git/blob/master/README.md):
+
+> The name "git" was given by Linus Torvalds when he wrote the very first version. He described the tool as "the stupid content tracker" and the name as (depending on your mood):
+>
+> - random three-letter combination that is pronounceable, and not actually used by any common UNIX command. The fact that it is a mispronunciation of "get" may or may not be relevant.
+> - stupid. contemptible and despicable. simple. Take your pick from the dictionary of slang.
+> - "global information tracker": you're in a good mood, and it actually works for you. Angels sing, and a light suddenly fills the room.
+> - "goddamn idiotic truckload of sh\*t": when it breaks
+
+#### Git is a distributed VCS
+
+Aside from being free and widely deployed, an important distinguishing feature of git is that it is a distributed Version Control System. Essentially this means that every git directory on every computer is a complete independent repository with complete history.
+
+When we cloned the [`github-sandbox`](https://github.com/ProjectPythia/github-sandbox) repository back in the [Cloning and Forking](github-cloning-forking) section, we not only copied the current repository files but also the entire revision history of the repo.
+
+In this section we are going to explore basic git usage _on our local computer_. Nothing that we do here is going to affect other copies of the repositories stored elsewhere. _So don't worry about breaking anything!_
+
+Later, we will explore how to collaborate on code repositories using GitHub. But in keep in mind the basic idea that _all git repos are equal and independent_! You will have separate copies of repos stored on your local machine and in your GitHub organization.
+
+Now that we are oriented, let's dive into some basic git usage with the [`github-sandbox`](https://github.com/ProjectPythia/github-sandbox) repository!
 
 ## Inspect a git repository with `git status`
 
-First, make sure you followed the steps in the [Cloning a repository](github-cloning-forking) lesson to make a clone of the `github-sandbox` repo on your local computer.
+First, make sure you followed the steps in the [Cloning a repository](github-cloning-forking) lesson to make a clone of the `github-sandbox` repo on your local computer. Navigate to wherever you saved your copy of the repo.
 
-Navigate to wherever you saved your copy of the repo. Remember, when you made the clone, you got a complete, independent copy of everything in the repo. So don't worry about breaking anything!
-
-Your new best friend is
+Now meet your new best friend:
 
 ```bash
 git status
