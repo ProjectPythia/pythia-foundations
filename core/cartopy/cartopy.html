@@ -758,83 +758,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
               
               <div>
                 
-  <div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  Suppress warnings issued by Cartopy when downloading data files</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
-
-<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
-
-<span class="c1"># This code uses Cartopy to produce the Cartopy logo!</span>
-<span class="c1">#  The code is provided in the Cartopy docs here:</span>
-<span class="c1">#  https://scitools.org.uk/cartopy/docs/latest/gallery/miscellanea/logo.html</span>
-
-<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
-<span class="kn">import</span> <span class="nn">matplotlib.patches</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">matplotlib.textpath</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">matplotlib.font_manager</span> <span class="kn">import</span> <span class="n">FontProperties</span>
-
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">())</span>
-
-    <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">()</span>
-
-    <span class="c1"># generate a matplotlib path representing the word &quot;cartopy&quot;</span>
-    <span class="c1"># fp = FontProperties(family=&#39;Bitstream Vera Sans&#39;, weight=&#39;bold&#39;)</span>
-    <span class="c1"># This is throwing up a warning when we build on GitHub Actions about missing font</span>
-    <span class="n">fp</span> <span class="o">=</span> <span class="n">FontProperties</span><span class="p">(</span><span class="n">weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
-    <span class="n">logo_path</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">textpath</span><span class="o">.</span><span class="n">TextPath</span><span class="p">((</span><span class="o">-</span><span class="mi">175</span><span class="p">,</span> <span class="o">-</span><span class="mi">35</span><span class="p">),</span> <span class="s1">&#39;cartopy&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="n">fp</span><span class="p">)</span>
-    <span class="c1"># scale the letters up to sensible longitude and latitude sizes</span>
-    <span class="n">logo_path</span><span class="o">.</span><span class="n">_vertices</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">80</span><span class="p">,</span> <span class="mi">160</span><span class="p">])</span>
-
-    <span class="c1"># add a background image</span>
-    <span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">stock_img</span><span class="p">()</span>
-    <span class="c1"># clip the image according to the logo_path. mpl v1.2.0 does not support</span>
-    <span class="c1"># the transform API that cartopy makes use of, so we have to convert the</span>
-    <span class="c1"># projection into a transform manually</span>
-    <span class="n">plate_carree_transform</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span><span class="o">.</span><span class="n">_as_mpl_transform</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
-    <span class="n">im</span><span class="o">.</span><span class="n">set_clip_path</span><span class="p">(</span><span class="n">logo_path</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">plate_carree_transform</span><span class="p">)</span>
-
-    <span class="c1"># add the path as a patch, drawing black outlines around the text</span>
-    <span class="n">patch</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">patches</span><span class="o">.</span><span class="n">PathPatch</span><span class="p">(</span>
-        <span class="n">logo_path</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
-    <span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">patch</span><span class="p">)</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span>     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">51</span>     <span class="n">main</span><span class="p">()</span>
-
-<span class="nn">Input In [1],</span> in <span class="ni">main</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="n">logo_path</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">textpath</span><span class="o">.</span><span class="n">TextPath</span><span class="p">((</span><span class="o">-</span><span class="mi">175</span><span class="p">,</span> <span class="o">-</span><span class="mi">35</span><span class="p">),</span> <span class="s1">&#39;cartopy&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="n">fp</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="c1"># scale the letters up to sensible longitude and latitude sizes</span>
-<span class="ne">---&gt; </span><span class="mi">31</span> <span class="n">logo_path</span><span class="o">.</span><span class="n">_vertices</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">80</span><span class="p">,</span> <span class="mi">160</span><span class="p">])</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span> <span class="c1"># add a background image</span>
-<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">stock_img</span><span class="p">()</span>
-
-<span class="ne">ValueError</span>: output array is read-only
-</pre></div>
-</div>
-<img alt="../../_images/cartopy_0_1.png" src="../../_images/cartopy_0_1.png" />
-</div>
-</div>
+  <a class="reference internal image-reference" href="images/cartopy_logo.png"><img alt="images/cartopy_logo.png" src="images/cartopy_logo.png" style="width: 600px;" /></a>
 <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-cartopy">
 <h1>Introduction to Cartopy<a class="headerlink" href="#introduction-to-cartopy" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
@@ -873,8 +797,14 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">cartopy</span> <span class="kn">import</span> <span class="n">crs</span> <span class="k">as</span> <span class="n">ccrs</span><span class="p">,</span> <span class="n">feature</span> <span class="k">as</span> <span class="n">cfeature</span>
+
+<span class="c1">#  Suppress warnings issued by Cartopy when downloading data files</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -911,7 +841,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7efcba84beb0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7f5bcc32c640&gt;
 </pre></div>
 </div>
 </div>
@@ -943,7 +873,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7efcba8b8be0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7f5bcc234730&gt;
 </pre></div>
 </div>
 </div>
@@ -1130,7 +1060,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <p>Set the domain for defining the plot region. We will use this in the <code class="docutils literal notranslate"><span class="pre">set_extent</span></code> line below. Since these coordinates are expressed in degrees, they correspond to the PlateCarree projection.</p>
 <div class="admonition alert alert-warning">
 <p class="admonition-title">Warning</p>
-<p>Be patient: with a limited regional extent as specified here, the highest resolution (10m) shapefiles are used; as a result (as with any <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code> object that must be transformed from one coordinate system to another, a subject for a subsequent notebook), this will take some time to plot (could be several minutes), and even longer if you haven’t previously retrieved these features from the Natural Earth shapefile server.</p>
+<p>Be patient: with a limited regional extent as specified here, the highest resolution (10m) shapefiles are used; as a result (as with any <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code> object that must be transformed from one coordinate system to another, a subject for a subsequent notebook), this will take longer to plot, particularly if you haven’t previously retrieved these features from the Natural Earth shapefile server.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1154,8 +1084,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projLccNY</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">lonW</span><span class="p">,</span> <span class="n">lonE</span><span class="p">,</span> <span class="n">latS</span><span class="p">,</span> <span class="n">latN</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">projPC</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COLORS</span><span class="p">[</span><span class="s1">&#39;water&#39;</span><span class="p">])</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAND</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">OCEAN</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAKES</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
@@ -1168,6 +1098,10 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <div class="cell_output docutils container">
 <img alt="../../_images/cartopy_49_0.png" src="../../_images/cartopy_49_0.png" />
 </div>
+</div>
+<div class="admonition alert alert-info">
+<p class="admonition-title">Note:</p>
+<p>For high-resolution Natural Earth shapefiles such as this, while we could add Cartopy’s <code>OCEAN</code> feature, it currently takes <i>much longer</i> to render on the plot (try it yourself to see!). Instead, we take the strategy of first setting the facecolor of the entire <code>Axes</code> to match that of water bodies in Cartopy. When we then layer on the <code>LAND</code> feature, pixels that are not part of the <code>LAND</code> shapefile remain in the <code>water</code> facecolor, which is the same color as the <code>OCEAN</code> .</p>
 </div>
 </div>
 <div class="section" id="use-lower-resolution-shapefiles-from-natural-earth">
@@ -1223,7 +1157,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/cartopy_51_0.png" src="../../_images/cartopy_51_0.png" />
+<img alt="../../_images/cartopy_52_0.png" src="../../_images/cartopy_52_0.png" />
 </div>
 </div>
 </div>
@@ -1240,8 +1174,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="c1"># First subplot</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projLccNY</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">lonW</span><span class="p">,</span> <span class="n">lonE</span><span class="p">,</span> <span class="n">latS</span><span class="p">,</span> <span class="n">latN</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">projPC</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COLORS</span><span class="p">[</span><span class="s1">&#39;water&#39;</span><span class="p">])</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAND</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">OCEAN</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAKES</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
@@ -1261,8 +1195,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="c1"># Second subplot</span>
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projLccEur</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">lonW</span><span class="p">,</span> <span class="n">lonE</span><span class="p">,</span> <span class="n">latS</span><span class="p">,</span> <span class="n">latN</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">projPC</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COLORS</span><span class="p">[</span><span class="s1">&#39;water&#39;</span><span class="p">])</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAND</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">OCEAN</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAKES</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
@@ -1272,7 +1206,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/cartopy_53_0.png" src="../../_images/cartopy_53_0.png" />
+<img alt="../../_images/cartopy_54_0.png" src="../../_images/cartopy_54_0.png" />
 </div>
 </div>
 </div>
@@ -1290,7 +1224,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/cartopy_55_0.png" src="../../_images/cartopy_55_0.png" />
+<img alt="../../_images/cartopy_56_0.png" src="../../_images/cartopy_56_0.png" />
 </div>
 </div>
 <p>Plotting data on a Cartesian grid is equivalent to plotting data in the Plate Carree projection, where meridians and parallels are all straight lines with constant spacing. As a result of this simplicity, the global datasets we use often begin in the Plate Carree projection.</p>
@@ -1306,7 +1240,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/cartopy_57_0.png" src="../../_images/cartopy_57_0.png" />
+<img alt="../../_images/cartopy_58_0.png" src="../../_images/cartopy_58_0.png" />
 </div>
 </div>
 </div>
@@ -1495,7 +1429,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 14 January 2022.
+          Last updated on 17 January 2022.
         </p>
       </div>
     </div>
