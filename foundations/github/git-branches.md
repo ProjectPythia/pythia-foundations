@@ -9,8 +9,8 @@ The best practices for a simple workflow for sugesting changes to a GitHub repos
 1. Switching Branches
 1. Setting up a Remote Branch
 1. Merging Branches
-2. Pulling
-3. Deleting Branches
+1. Pulling
+1. Deleting Branches
 
 ## Prerequisites
 
@@ -29,7 +29,6 @@ Git branches allow for non-linear or differing revision histories of a repositor
 These branches can live on your comuter (local) or on GitHub (remote). They are brought together through Git pushes, pulls, and pull requests. Pushing is how you transfer changes from your local repository to a remote repository. Pulling is how you fetch upstream changes into your branch. And pull requests are how you suggest the changes you've made on your branch to the upstream codebase.
 
 One rule of thumb is for each development feature to have its own development branch until that feature is ready to be added to the upstream codebase. This allows you to compartmentalize your pull requests so that smaller working changes can be merged upstream independently of one another. For example, you might have a complete or near-complete feature on its own branch with an open pull request awaiting review. While you wait for feedback from the team before merging it, you can still work on a second feature on a second branch without affecting your first feature's pull request. **We encourage you to always do your work in a designated branch.**
-
 
 ## Creating a New Branch
 
@@ -103,7 +102,6 @@ $ git status
 
 Notice that `git status` doesn't say anything about being up-to-date, as before. This is because this branch only exists locally, not in our upstream GitHub fork.
 
-
 ## Setting up a Remote Branch
 
 Before we push this branch upstream, let's make some sample changes by creating a new Python file.
@@ -153,7 +151,6 @@ Notice the new branch called "remotes/origin/newbranch". And when you do a `git 
 ![Git Commit Status](../../images/7-github-branchandstatus.png)
 
 On future commits you will not have to repeat these steps, as your remote branch will already be established. Simply push with `git push` to have your remote branch reflect your future local changes.
-
 
 ## Merging Branches
 
@@ -216,44 +213,48 @@ To someone with write permissions on the repository, the ability to merge will l
 
 However, this pull request will NOT be merged, as the GitHub-Sandbox repository is intended to be static.
 
-
 ## Pulling
 
 Once a team member's pull request has been merged, you will find that these upstream changes are not automatically included in your fork or your branches. In order to include the changes from the upstream main branch, you will need to do a `git pull`.
 
 First check if there are any upstream changes
+
 ```
 $ git status
 ```
 
 Then if there are no conflicts
+
 ```
 $ git pull
 ```
 
 `git pull` is a combination of `git fetch` and `git merge`. That is it updates the remote tracking branches ('git fetch') AND updates your current branch with any new commits on the remote tracking branch (`git merge`).
 
-
 ## Deleting Branches
 
-After the feature you worked on has been completed and merged, you may want to delete your branch. 
+After the feature you worked on has been completed and merged, you may want to delete your branch.
 
-To do this locally, you must first switch back to "main" or any non-target branch. Then you can enter 
+To do this locally, you must first switch back to "main" or any non-target branch. Then you can enter
+
 ```
 git branch -d <branch>
 ```
 
 for example
+
 ```
 git branch -d newbranch
 ```
 
 To delete the branch remotely, type
+
 ```
 $ git push <remote> --delete <branch>.
 ```
 
-as in 
+as in
+
 ```
 git push origin --delete jukent/newbranch
 ```
@@ -271,5 +272,5 @@ Opening a Pull Request on GitHub
 
 ## References
 
-1. “GitHub.com Help Documentation.” GitHub Docs, https://docs.github.com/en. 
-2. Paul, Kevin. “Python Tutorial Seminar Series - Github.” Project Pythia, YouTube, 12 May 2021, https://www.youtube.com/watch?v=fYkPn0Nttlg. 
+1. “GitHub.com Help Documentation.” GitHub Docs, https://docs.github.com/en.
+2. Paul, Kevin. “Python Tutorial Seminar Series - Github.” Project Pythia, YouTube, 12 May 2021, https://www.youtube.com/watch?v=fYkPn0Nttlg.
