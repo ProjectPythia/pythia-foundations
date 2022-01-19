@@ -49,7 +49,7 @@ $ git status
 You will see that you are already on a branch called "main". And that this branch is up-to-date with "origin/main" and has nothing to commit.
 
 !!! note
-    The "main" branch used to automatically be called the "master" branch. This change was relatively recent, so all of your GitHub repositories may not reflect this yet. See instructions to change your branch name at [Github's Branch Renaming documentation](https://github.com/github/renaming).
+The "main" branch used to automatically be called the "master" branch. This change was relatively recent, so all of your GitHub repositories may not reflect this yet. See instructions to change your branch name at [Github's Branch Renaming documentation](https://github.com/github/renaming).
 
 Now check the status of your remote repository with
 
@@ -216,7 +216,6 @@ To someone with write permissions on the repository, the ability to merge will l
 
 However, this pull request will NOT be merged, as the GitHub-Sandbox repository is intended to be static.
 
-
 ## Pulling
 
 Once a team member's pull request has been merged, you will find that these upstream changes are not automatically included in your fork or your branches. In order to include the changes from the upstream main branch, you will need to do a `git pull`.
@@ -234,7 +233,6 @@ $ git pull
 ```
 
 `git pull` is a combination of `git fetch` and `git merge`. That is it updates the remote tracking branches (`git fetch`) AND updates your current branch with any new commits on the remote tracking branch (`git merge`).
-
 
 ## Deleting Branches
 
