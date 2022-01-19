@@ -47,7 +47,7 @@ A Version Control System (VCS) like git will replace this mess with a _well-orde
 
 #### Git is not GitHub
 
-That's the first thing to understand. GitHub is a web-based platform for hosting code and collaborating with other people. On the other hand, **git is a command-line software package for Version Control**. It runs on your local computer as well as under the hood on GitHub. You need to understand something about version control with git in order to use many of GitHub's collaboration features.
+That's the first thing to understand. GitHub is a web-based platform for hosting code and collaborating with other people. On the other hand, **git is a command-line Version Control System (VCS)** that you can download and install. It runs on your local computer as well as under the hood on GitHub. You need to understand something about version control with git in order to use many of GitHub's collaboration features.
 
 #### A little history and nomenclature
 
@@ -228,7 +228,7 @@ git commit -m 'Fix the typo'
 ```
 
 ```{note}
-Every commit should have a "message" that explains briefly what the commit is for. Here we set the commit message with the `-m` flag and chose some descriptive text.
+Every commit should have a "message" that explains briefly what the commit is for. Here we set the commit message with the `-m` flag and chose some descriptive text. Note, it's critical to have those quotes around 'Fix the typo'. Otherwise the command shell will misinterpret what you are trying to do. 
 ```
 
 Now when we do `git status` we see
