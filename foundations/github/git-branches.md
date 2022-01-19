@@ -1,6 +1,6 @@
 # Git Branches
 
-The best practices for a simple workflow for sugesting changes to a GitHub repository are: create your own fork of the repository, make a branch from your fork where your changes are made, and then suggest these changes move to the upstream repository with a pull request. This section of the GitHub chapter assumes you have read all prior GitHub sections, are familiar with git commands and the vocabulary ("cloning," "forking," "merging," "pull request" etc), and that you have already created your own fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox) hosted by Project Pythia. That fork is where you will make your first Git branch while following along with this chapter.
+The best practices for a simple workflow for sugesting changes to a GitHub repository are: create your own fork of the repository, make a branch from your fork where your changes are made, and then suggest these changes move to the upstream repository with a pull request. This section of the GitHub chapter assumes you have read the prior GitHub sections, are at least somewhat familiar with git commands and the vocabulary ("cloning," "forking," "merging," "pull request" etc), and that you have already created your own fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox) hosted by Project Pythia. That fork is where you will make your first Git branch while following along with this chapter.
 
 ## Overview:
 
@@ -30,11 +30,8 @@ These branches can live on your computer (local) or on GitHub (remote). They are
 
 One rule of thumb is for each development feature to have its own development branch until that feature is ready to be added to the upstream codebase. This allows you to compartmentalize your pull requests so that smaller working changes can be merged upstream independently of one another. For example, you might have a complete or near-complete feature on its own branch with an open pull request awaiting review. While you wait for feedback from the team before merging it, you can still work on a second feature on a second branch without affecting your first feature's pull request. **We encourage you to always do your work in a designated branch.**
 
-<figure>
-<img src="../../images/basicbranch.png" alt="basicbranch" style="width:100%">
-<figcaption align = "center"><b>
-The above flowchart demonstraties commits (C1 through C5) added to different branches of a personal fork of the upstream main repository. Different commits can be added to either branch in any order without depending on or knowing about each other.</b></figcaption>
-</figure>
+![basic branch](../../images/basicbranch.png)
+The above flowchart demonstraties commits (C1 through C5) added to different branches of a personal fork of the upstream main repository. Different commits can be added to either branch in any order without depending on or knowing about each other.
 
 ## Creating a New Branch
 
@@ -163,21 +160,15 @@ Notice the new branch called `remotes/origin/newbranch`. And when you do a `git 
 
 On future commits you will not have to repeat these steps, as your remote branch will already be established. Simply push with `git push` to have your remote branch reflect your future local changes.
 
-<figure>
-<img src="../../images/remote.png" alt="remote" style="width:100%">
-<figcaption align = "center"><b>
-The above flowchart demonstrates adding commits locally (C3 and C4) before pushing them to the corresponding remote branch.</b></figcaption>
-</figure>
+![remote](../../images/remote.png)
+The above flowchart demonstrates adding commits locally (C3 and C4) before pushing them to the corresponding remote branch.
 
 ## Merging Branches
 
 At this point, we will demonstrate how to merge branches via a Pull Request. Merging is how you bring your split branches of a repository back together again.
 
-<figure>
-<img src="../../images/PR.png" alt="PR" style="width:100%">
-<figcaption align = "center"><b>
-The above flowchart demonstrates a simple Pull Request (PR1), the upstream main repository has accepted the changes from the Feature 2 branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature2 branch can now be safely deleted. This flowchart has simplified out the remote and local versions of the Feature2 branch.</b></figcaption>
-</figure>
+![PR](../../images/PR.png)
+The above flowchart demonstrates a simple Pull Request (PR1), the upstream main repository has accepted the changes from the Feature 2 branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature2 branch can now be safely deleted. This flowchart has simplified out the remote and local versions of the Feature2 branch.
 
 The demonstration will move from your local terminal to GitHub. Go to your fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox). One fast way to get to your fork, is to click the "fork" button and then follow the link underneath the message, "You've already forked github-sandbox."
 
@@ -189,7 +180,7 @@ If you click on the branch `main` you'll see the list of these branches.
 
 ![GitHub Branches](../../images/9-github-seebranches.png)
 
-There you can click on the branch `newbranch` to swtich branches.
+There you can click on the branch `newbranch` to switch branches.
 
 ![New Branch](../../images/10-github-newbranch.png)
 
@@ -203,7 +194,7 @@ This will send you to a new page. Notice that you are now in "ProjectPythia/gith
 
 ![Compare](../../images/12-compare.png)
 
-The page will have the two branches you are comparing with an arrow indicating which branch is to be merged into which. If you wanted, you could click on these branches to switch the merge configuration. Underneath that you'll see a green message, "Able to merge. These branches can be automatically merged." This message means that there are no conflicts. We will discuss conflicts in a later chapter.
+The page will have the two branches you are comparing with an arrow indicating which branch is to be merged into which. Here, `base` is the upstream origin and `head` is your forked repository. If you wanted, you could click on these branches to switch the merge configuration. Underneath that you'll see a green message, "Able to merge. These branches can be automatically merged." This message means that there are no conflicts. We will discuss conflicts in a later chapter.
 
 In a one-commit pull request, the pull request title defaults to your commit message. You can change this if you'd like. There is also a space to add a commit message. This is your opportunity to explain your changes to the owners of the upstream repository.
 
@@ -236,21 +227,15 @@ To someone with write permissions on the repository, the ability to merge will l
 
 However, this pull request will NOT be merged, as the GitHub-Sandbox repository is intended to be static.
 
-<figure>
-<img src="../../images/remotePR.png" alt="remotePR" style="width:100%">
-<figcaption align = "center"><b>
-The above flowchart demonstrates a Pull Request (PR1) without simplifying out the remote vs local versions of the Feature2branch. Typically multiple pushes are made from your local to remote branch before a pull request is drafted to take all of those commits (C3, C4, C6, and C7) into the Upstream Main branch.</b></figcaption>
-</figure>
+![remotePR](../../images/remotePR.png)
+The above flowchart demonstrates a Pull Request (PR1) without simplifying out the remote vs local versions of the Feature2branch. Typically multiple pushes are made from your local to remote branch before a pull request is drafted to take all of those commits (C3, C4, C6, and C7) into the Upstream Main branch.
 
 ## Pulling
 
 Once a team member's pull request has been merged, you will find that these upstream changes are not automatically included in your fork or your branches. In order to include the changes from the upstream main branch, you will need to do a `git pull`.
 
-<figure>
-<img src="../../images/pull.png" alt="pull" style="width:100%">
-<figcaption align = "center"><b>
-The above flowchart demonstrates pulling in the upstream changes from Upstream Main after the pull request PR1 has been merged. Before continuing to work, with new commits (C6), it is best to pull in the upstream changes. The local vs remote branches have been simplified out of this diagram.</b></figcaption>
-</figure>
+![pull](../../images/pull.png)
+The above flowchart demonstrates pulling in the upstream changes from Upstream Main after the pull request PR1 has been merged. Before continuing to work, with new commits (C6), it is best to pull in the upstream changes. The local vs remote branches have been simplified out of this diagram.
 
 First check if there are any upstream changes:
 
@@ -266,11 +251,8 @@ $ git pull
 
 `git pull` is a combination of `git fetch` and `git merge`. That is it updates the remote tracking branches (`git fetch`) AND updates your current branch with any new commits on the remote tracking branch (`git merge`).
 
-<figure>
-<img src="../../images/team.png" alt="team" style="width:100%">
-<figcaption align = "center"><b>
-The above flowchart demonstrates pulling in the upstream changes from Upstream Main in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository by pull requests. It is important for each author to do regular `git pulls` to stay up to date with each other's contributions. The local vs remote branches have been simplified out of this diagram.</b></figcaption>
-</figure>
+![team](../../images/team.png)
+The above flowchart demonstrates pulling in the upstream changes from Upstream Main in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository by pull requests. It is important for each author to do regular `git pulls` to stay up to date with each other's contributions. The local vs remote branches have been simplified out of this diagram.
 
 ## Deleting Branches
 
