@@ -228,7 +228,7 @@ git commit -m 'Fix the typo'
 ```
 
 ```{note}
-Every commit should have a "message" that explains briefly what the commit is for. Here we set the commit message with the `-m` flag and chose some descriptive text. Note, it's critical to have those quotes around 'Fix the typo'. Otherwise the command shell will misinterpret what you are trying to do. 
+Every commit should have a "message" that explains briefly what the commit is for. Here we set the commit message with the `-m` flag and chose some descriptive text. Note, it's critical to have those quotes around 'Fix the typo'. Otherwise the command shell will misinterpret what you are trying to do.
 ```
 
 Now when we do `git status` we see
