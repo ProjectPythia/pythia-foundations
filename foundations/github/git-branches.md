@@ -48,8 +48,10 @@ $ git status
 
 You will see that you are already on a branch called "main". And that this branch is up-to-date with "origin/main" and has nothing to commit.
 
-!!! note
-The "main" branch used to automatically be called the "master" branch. This change was relatively recent, so all of your GitHub repositories may not reflect this yet. See instructions to change your branch name at [Github's Branch Renaming documentation](https://github.com/github/renaming).
+```{admonition} The Main Branch
+:class: info
+The `main` branch used to automatically be called the `master` branch. This change was relatively recent, so all of your GitHub repositories may not reflect this yet. See instructions to change your branch name at [Github's Branch Renaming documentation](https://github.com/github/renaming).
+```
 
 Now check the status of your remote repository with
 
@@ -69,7 +71,7 @@ $ git branch -a
 
 ![Git Branch](../../images/3-gitbranch.png)
 
-You will see one local branch ("main") and your remote branch ("remotes/origin/HEAD" and "remotes/origin/main", where "HEAD" points to "main").
+You will see one local branch (`main`) and your remote branch (`remotes/origin/HEAD` and `remotes/origin/main`, where `HEAD` points to `main`).
 
 Now, before we make some sample changes to our codebase, let's create a new branch where we'll make these changes:
 
@@ -85,7 +87,7 @@ $ git branch
 
 ![Git NewBranch](../../images/4-gitnewbranch.png)
 
-This will display the current and the new branch. You'll notice that we are still on branch "main" and will need to switch branches to work in our "newbranch."
+This will display the current and the new branch. You'll notice that we are still on branch `main` and will need to switch branches to work in our `newbranch`.
 
 ## Switching Branches
 
@@ -149,7 +151,7 @@ Thankfully, Git provided this command in the previous error message.
 
 We can see that this worked by doing a `git branch -a`
 
-Notice the new branch called "remotes/origin/newbranch". And when you do a `git status` you'll see that we are up to date with this new remote branch.
+Notice the new branch called `remotes/origin/newbranch`. And when you do a `git status` you'll see that we are up to date with this new remote branch.
 
 ![Git Commit Status](../../images/7-github-branchandstatus.png)
 
@@ -161,15 +163,15 @@ At this point, we will demonstrate how to merge branches via a Pull Request. Mer
 
 The demonstration will move from your local terminal to GitHub. Go to your fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox). One fast way to get to your fork, is to click the "fork" button and then follow the link underneath the message, "You've already forked github-sandbox."
 
-When you've navigated to your fork, you should see a message box alerting you that your branch "newbranch" had recent changes with the option to generate an open pull request. This pull request would take the changes from your "newbranch" branch and suggest them for the original upstream ProjectPythia github-sandbox repository. You'll also notice that you are on branch "main," but that there are now 2 branches.
+When you've navigated to your fork, you should see a message box alerting you that your branch `newbranch` had recent changes with the option to generate an open pull request. This pull request would take the changes from your `newbranch` branch and suggest them for the original upstream ProjectPythia github-sandbox repository. You'll also notice that you are on branch `main`, but that there are now 2 branches.
 
 ![GitHub](../../images/8-github.png)
 
-If you click on the branch "main" you'll see the list of these branches.
+If you click on the branch `main` you'll see the list of these branches.
 
 ![GitHub Branches](../../images/9-github-seebranches.png)
 
-There you can click on the branch "newbranch" to swtich branches.
+There you can click on the branch `newbranch` to swtich branches.
 
 ![New Branch](../../images/10-github-newbranch.png)
 
