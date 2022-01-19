@@ -142,7 +142,7 @@ in previous chapters of this book, before you make the actual PR.
 
 If you don’t have a local copy of the remote repository you’ll want
 to create one by [cloning the
-remote](https://foundations.projectpythia.org/foundations/github/github-cloning-forking.html)
+remote](github-cloning-forking)
 to your local computer. This can be done with the git command line
 tools and the general form of the command looks like this:
 
@@ -390,7 +390,7 @@ GitHub, and will then redirect your browser to the newly created
 forked, personal repository. The personal repository is owned by
 you. Any changes made here will not impact the upstream repository
 until you are ready to submit a PR. Let's try it. Follow
-the steps under Forking a repository [here](https://foundations.projectpythia.org/foundations/github/github-cloning-forking.html).
+the steps under Forking a repository [here](github-cloning-forking).
 
 ### Clone, branch, change, commit, push
 
