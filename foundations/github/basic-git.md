@@ -219,6 +219,8 @@ Now we see that all-important line `Changes to be committed`, telling us the con
 
 If you made a mistake (e.g., staged the wrong file), you can always unstage using `git restore` as shown in the `git status` output. Nothing is permanent until we commit!
 
+(And if you accidentally commit the wrong thing? Don't worry, you can always "go back in time" to previous commits -- see below!)
+
 ### Committing
 
 It's time to make a commitment. We can now permanently add our edit to the history of our `fix-typo` branch by doing this:
@@ -288,7 +290,12 @@ Every commit has a unique hexadecimal checksum code like `7dca0292467e4bbd736435
 
 ### Checking out a previous commit
 
-Let's say we want to retrieve the file `sample.txt` from the previous commit. We can do this using `git checkout` and the unique number code which you can just copy and paste from the `git log` output:
+Let's say you want to retrieve the file `sample.txt` from the previous commit. Two possible reasons why:
+
+1. You just want to take a quick look at something in the previous commit, but then go back to the current version. That's what we'll do here.
+2. Maybe you don't like the most recent commit and want to do some new edits _starting from the previous commit_ -- in effect, undoing the most recent commit and going back in time. The simplest way to do this is to _create a new branch_ starting from the previous commit. We'll cover branches more fully in the next lesson.
+
+To retrieve the previous commit, just use `git checkout` and the unique number code which you can just copy and paste from the `git log` output:
 
 ```bash
 git checkout 35fcbd991f911e170df550db58f74a082ba18b50
@@ -321,9 +328,9 @@ HEAD is now at 35fcbd9 Close docstring quote on sample.py
 
 By `detached HEAD`, git is telling us that we are NOT on the most recent commit in this branch.
 
-If you inspect `sample.txt` in your editor, you will see that the typo is back!
+If you inspect `sample.txt` in your editor, you will see that the typo `Fxing` is back!
 
-As the git message above is reminding us, it's possible to create an entirely new branch with changes that we make from this point in the history. But for now, let's just go back to the most recent commit on our `fix-typo` branch:
+As the git message above is reminding us, it's possible to create an entirely new branch with changes that we make from this point in the history using `git switch -c`. But for now, let's just go back to the most recent commit on our `fix-typo` branch:
 
 ```bash
 git checkout fix-typo
