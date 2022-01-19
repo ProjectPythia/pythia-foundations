@@ -26,7 +26,7 @@ The best practices for a simple workflow for sugesting changes to a GitHub repos
 
 Git branches allow for non-linear or differing revision histories of a repository. At a point in time, you can split your repository into multiple development paths (branches) where you can make different commits in each, typically with the ultimate intention of merging these branches and development changes together at a later time.
 
-These branches can live on your comuter (local) or on GitHub (remote). They are brought together through Git pushes, pulls, and pull requests. Pushing is how you transfer changes from your local repository to a remote repository. Pulling is how you fetch upstream changes into your branch. And pull requests are how you suggest the changes you've made on your branch to the upstream codebase.
+These branches can live on your computer (local) or on GitHub (remote). They are brought together through Git pushes, pulls, and pull requests. Pushing is how you transfer changes from your local repository to a remote repository. Pulling is how you fetch upstream changes into your branch. And pull requests are how you suggest the changes you've made on your branch to the upstream codebase.
 
 One rule of thumb is for each development feature to have its own development branch until that feature is ready to be added to the upstream codebase. This allows you to compartmentalize your pull requests so that smaller working changes can be merged upstream independently of one another. For example, you might have a complete or near-complete feature on its own branch with an open pull request awaiting review. While you wait for feedback from the team before merging it, you can still work on a second feature on a second branch without affecting your first feature's pull request. **We encourage you to always do your work in a designated branch.**
 
@@ -46,7 +46,10 @@ $ git status
 
 ![Git Status](../../images/1-gitstatus.png)
 
-You will see that you are already on a branch called "main". And that this branch is up-to-date with "origin/main" and has nothign to commit.
+You will see that you are already on a branch called "main". And that this branch is up-to-date with "origin/main" and has nothing to commit.
+
+!!! note
+    The "main" branch used to automatically be called the "master" branch. This change was relatively recent, so all of your GitHub repositories may not reflect this yet. See instructions to change your branch name at [Github's Branch Renaming documentation](https://github.com/github/renaming).
 
 Now check the status of your remote repository with
 
@@ -118,7 +121,7 @@ You can check that this file has been created by comparing an `ls` before and af
 
 ![Git Add](../../images/6a-gitadd.png)
 
-You're new branch is now one commit ahead of your main branch. You can see this with a `git log.`
+Your new branch is now one commit ahead of your main branch. You can see this with a `git log.`
 
 ![Git Log](../../images/6b-gitlog.png)
 
@@ -144,7 +147,7 @@ Thankfully, Git provided this command in the previous error message.
 
 ![Set Upstream](../../images/6d-setupstream.png)
 
-We can see that this worked by donig a `git branch -a`
+We can see that this worked by doing a `git branch -a`
 
 Notice the new branch called "remotes/origin/newbranch". And when you do a `git status` you'll see that we are up to date with this new remote branch.
 
@@ -156,7 +159,7 @@ On future commits you will not have to repeat these steps, as your remote branch
 
 At this point, we will demonstrate how to merge branches via a Pull Request. Merging is how you bring your split branches of a repository back together again.
 
-The demonstration will move from your local terminal to GitHub. Go to your fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox). One fast way to get to your fork, is to click the "fork" button and then follow the link underneathe the message, "You've already forked github-sandbox."
+The demonstration will move from your local terminal to GitHub. Go to your fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox). One fast way to get to your fork, is to click the "fork" button and then follow the link underneath the message, "You've already forked github-sandbox."
 
 When you've navigated to your fork, you should see a message box alerting you that your branch "newbranch" had recent changes with the option to generate an open pull request. This pull request would take the changes from your "newbranch" branch and suggest them for the original upstream ProjectPythia github-sandbox repository. You'll also notice that you are on branch "main," but that there are now 2 branches.
 
@@ -182,7 +185,7 @@ This will send you to a new page. Notice that you are now in "ProjectPythia/gith
 
 The page will have the two branches you are comparing with an arrow indicating which branch is to be merged into which. If you wanted, you could click on these branches to switch the merge configuration. Underneath that you'll see a green message, "Able to merge. These branches can be automatically merged." This message means that there are no conflicts. We will discuss conflicts in a later chapter.
 
-In a one-commit pull request, the pull request title defaults to your commit message. You can change this if you'd like. There is also a space to add a commit message. This is your opportunity to explain your changes to the owner's of the upstream repository.
+In a one-commit pull request, the pull request title defaults to your commit message. You can change this if you'd like. There is also a space to add a commit message. This is your opportunity to explain your changes to the owners of the upstream repository.
 
 ![Message](../../images/13-message.png)
 
@@ -206,36 +209,38 @@ If you are working in a repository that has automatic checks, it is a good idea 
 
 ![Review](../../images/18-review.png)
 
-eWhen working on a project with a larger team, do NOT merge your pull request before you have the approval of your teammates. Every team has their own requirements and best practice workflows, discuss them together. We will cover more about the ways to interact with pull requests through conversations and reviews in a later section.
+When working on a project with a larger team, do NOT merge your pull request before you have the approval of your teammates. Every team has their own requirements and best practice workflows, and will discuss/approve/reject pull requests together. We will cover more about the ways to interact with pull requests through conversations and reviews in a later section.
 
 To someone with write permissions on the repository, the ability to merge will look like this green button:
 ![Green](../../images/20-green.png)
 
 However, this pull request will NOT be merged, as the GitHub-Sandbox repository is intended to be static.
 
+
 ## Pulling
 
 Once a team member's pull request has been merged, you will find that these upstream changes are not automatically included in your fork or your branches. In order to include the changes from the upstream main branch, you will need to do a `git pull`.
 
-First check if there are any upstream changes
+First check if there are any upstream changes:
 
 ```
 $ git status
 ```
 
-Then if there are no conflicts
+Then if there are no conflicts:
 
 ```
 $ git pull
 ```
 
-`git pull` is a combination of `git fetch` and `git merge`. That is it updates the remote tracking branches ('git fetch') AND updates your current branch with any new commits on the remote tracking branch (`git merge`).
+`git pull` is a combination of `git fetch` and `git merge`. That is it updates the remote tracking branches (`git fetch`) AND updates your current branch with any new commits on the remote tracking branch (`git merge`).
+
 
 ## Deleting Branches
 
 After the feature you worked on has been completed and merged, you may want to delete your branch.
 
-To do this locally, you must first switch back to "main" or any non-target branch. Then you can enter
+To do this locally, you must first switch back to `main` or any non-target branch. Then you can enter
 
 ```
 git branch -d <branch>
