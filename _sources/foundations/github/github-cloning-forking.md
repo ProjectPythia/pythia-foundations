@@ -109,7 +109,7 @@ This link points to where the repository "lives" on GitHub. We will use the term
 ```
 
 ```{tip}
-We discuss the `git` command-line interface in the <https://foundations.projectpythia.org/foundations/github/what-is-git> lesson.
+We discuss the `git` command-line interface in the [Basic version control with git](basic-git) lesson.
 ```
 
 **Congratulations!!** You have now cloned a GitHub repository!
@@ -156,7 +156,7 @@ Notice that the _Fork_ button on the upper right has incremented by one, and the
 ---
 
 ```{tip}
-We discuss *branches* in the <https://foundations.projectpythia.org/foundations/github/git-branches> lesson.
+We discuss *branches* in the [Git Branches](git-branches) lesson.
 ```
 
 You now have a copy (essentially a clone) of the forked repository, which is now owned by you.
@@ -171,7 +171,7 @@ Unlike cloning, forking is not an option supported by the *git* command-line int
 
 Once you've cloned the fork to your local machine, try running `git remote -v` again. You will see that the _origin_ URL now points to your GitHub account or organization.
 
-_The main purpose of cloning and forking a remote repository is so that you can make changes to the contents of those repositories in a safe and version-controller manner._ The process of making changes and submitting them as _pull requests_ to the original repository is covered in our <https://foundations.projectpythia.org/foundations/github/github-pull-request> lesson, but the workflow is as follows:
+_The main purpose of cloning and forking a remote repository is so that you can make changes to the contents of those repositories in a safe and version-controller manner._ The process of making changes and submitting them as _pull requests_ to the original repository is covered in our lesson on [Opening a Pull Request on GitHub](github-pull-request), but the workflow is as follows:
 
 1. Edit an existing file or files, and/or create new files.
 1. Stage your changes by running `git add`.
@@ -187,7 +187,7 @@ _The main purpose of cloning and forking a remote repository is so that you can 
 - The process of making a copy of a GitHub repository is called _cloning_.
 - _Forking_ a repository also makes a copy of a GitHub repo, but places it in your GitHub organization.
 - Forking allows you to modify a repo, without affecting the original version.
-- After cloning your fork to your local computer, you can meke changes to your copy, which you can then submit to the original repo as a [_Pull request_](https://foundations.projectpythia.org/foundations/github/github-pull-request).
+- After cloning your fork to your local computer, you can meke changes to your copy, which you can then submit to the original repo as a [_Pull request_](github-pull-request).
 
 ## Things to try
 
