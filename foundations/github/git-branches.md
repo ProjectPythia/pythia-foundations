@@ -30,13 +30,11 @@ These branches can live on your computer (local) or on GitHub (remote). They are
 
 One rule of thumb is for each development feature to have its own development branch until that feature is ready to be added to the upstream codebase. This allows you to compartmentalize your pull requests so that smaller working changes can be merged upstream independently of one another. For example, you might have a complete or near-complete feature on its own branch with an open pull request awaiting review. While you wait for feedback from the team before merging it, you can still work on a second feature on a second branch without affecting your first feature's pull request. **We encourage you to always do your work in a designated branch.**
 
-
 <figure>
 <img src="../../images/basicbranch.png" alt="basicbranch" style="width:100%">
 <figcaption align = "center"><b>
 The above flowchart demonstraties commits (C1 through C5) added to different branches of a personal fork of the upstream main repository. Different commits can be added to either branch in any order without depending on or knowing about each other.</b></figcaption>
 </figure>
-
 
 ## Creating a New Branch
 
