@@ -257,7 +257,7 @@ repository. Once you are ready, commit your changes to the local
 repository:
 
 ```
-$ git commit -m "having fun yet?" .
+git commit -m "having fun yet?" .
 ```
 
 Don't forget that trailing "." or `git commit` will fail. That's one of the
