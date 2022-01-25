@@ -437,7 +437,7 @@ you must first configure your local repository by running the
 following commands from within your local copy of the repo:
 
 ```
-$ git remote -v
+git remote -v
 ```
 
 This should produce an output that looks similar to the following:
