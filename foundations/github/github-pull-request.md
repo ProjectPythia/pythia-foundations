@@ -341,7 +341,7 @@ Over time your local repository will diverge from the remote. Before
 starting on a new feature, or if the `main` branch on remote may have
 been updated while you were working on `my-new-feature`, it is a good
 idea to periodically sync up with the remote `main`. Make sure all
-of your changes to my-new-branch have been committed to the local
+of your changes to `my-new-feature` have been committed to the local
 repository, and then do:
 
 ```
