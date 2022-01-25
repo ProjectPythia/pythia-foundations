@@ -156,7 +156,7 @@ $ git clone repository-url local-directory-name
 ```
 
 Where `repository-url` is the URL for the GitHub repo that you want
-to clone, and _local-directory-name_ is the directory path on your
+to clone, and `local-directory-name` is the directory path on your
 local machine into which you want to create the clone. The local
 directory need not already exist. The clone command will create the
 local directory for you. If you don’t know the URL for your
