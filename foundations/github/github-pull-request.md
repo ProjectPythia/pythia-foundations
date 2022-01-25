@@ -170,7 +170,7 @@ $ git clone https://github.com/ProjectPythia/github-sandbox.git
 ```
 
 Note, we did not specify a _local-directory_name_ here, so git will
-use the _base name_ of the _repository_url_, "github-sandbox" as
+use the `base name` of the `repository_url`, "github-sandbox" as
 the local directory.
 
 ##### Start with the main branch
