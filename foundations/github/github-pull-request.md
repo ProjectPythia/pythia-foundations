@@ -1,9 +1,5 @@
 # Opening a Pull Request on GitHub
 
-```{note}
-This content is under construction!
-```
-
 ## Overview:
 
 1. What is a Pull Request (PR)?
@@ -20,7 +16,7 @@ This content is under construction!
 | [Cloning and Forking](https://foundations.projectpythia.org/foundations/github/github-cloning-forking.html) | Necessary   |       |
 | [Issues and Discussions](https://foundations.projectpythia.org/foundations/github/github-issues.html)       | Recommended |       |
 
-- **Time to learn**: 30 minutes
+- **Time to learn**: 60 minutes
 
 ---
 
@@ -31,7 +27,9 @@ that you have made to one repository are integrated (merged) into
 another repository. Typically, the changes are reviewed by the
 maintainers of the destination repository, potentially triggering
 a cycle of revisions, before the PR is “merged”, and your changes
-become part of the destination repo. Just like issues, PRs have
+become part of the destination repo.
+
+Just like issues, PRs have
 their own discussion forum for communicating about the proposed
 changes. In fact, not only can maintainers or collaborators communicate
 about your PR via GitHub, they can also suggest changes and may
@@ -40,7 +38,7 @@ commits. All of the activity, from start to finish, is tracked
 inside of the PR and can be reviewed at any time.
 
 When a contributor to a project creates a PR they are requesting
-that the maintainers of another destination repository pull a git
+that the owners of another destination repository pull a git
 branch from the contributor’s repository and merge the contents of
 the branch into a branch of the destination repository. This means
 that the contributor must provide four pieces of information: the
@@ -71,12 +69,14 @@ in many different ways to accomplish the same goal. In order to
 effectively and consistently use Git and GitHub, over the years a
 variety of best practices have evolved for supporting different
 modes of collaboration. Collectively these different models, or
-recipes, are referred to as _workflows_. The sequence of steps
+recipes, are referred to as _workflows_.
+
+The sequence of steps
 outlined above provides a general framework for submitting a PR.
 But the precise set of steps is highly dependent on the choice of
 workflow for a given project. In this chapter we describe Pull
-Requests for two commonly used workflows: The Git Feature Branch
-Workflow and the Forking Workflow. The former is simpler and often
+Requests for two commonly used workflows: The **Git Feature Branch
+Workflow** and the **Forking Workflow**. The former is simpler and often
 used by teams when everyone on the team is an authorized contributor
 to the destination repository. I.e. all of the contributors have
 write access to the remote repository hosted by GitHub. The latter
@@ -88,15 +88,15 @@ make a PR on each.
 
 ## Git Feature Branch Workflow
 
-The Git Feature Branch Workflow is one of the simplest and oldest
+The **Git Feature Branch Workflow** is one of the simplest and oldest
 collaborative workflows that is used for small team projects. The
-key idea behind this workflow, which is also common to the Forking
-Workflow, is that all development (all changes) should take place
+key idea behind this workflow, which is also common to the **Forking
+Workflow**, is that all development (all changes) should take place
 on a dedicated Git _feature_ branch, not the _main_ (historically
 referred to as _master_) branch. The motivation behind this is that
 one or more developers can iterate over a feature branch without
-disturbing the contents of the main branch. Consider using the Git
-Feature Branch Workflow for GitHub’s most widely used purpose,
+disturbing the contents of the main branch. Consider using the **Git
+Feature Branch Workflow** for GitHub’s most widely used purpose,
 software development. Software modifications are liable to introduce
 bugs. Isolating them to a dedicated branch until they can be fixed
 ensures that a known, or official, version of the software is always
@@ -113,7 +113,9 @@ such as “my-new-feature” or perhaps “issue-nnn”, where "nnn" is the
 number of an issue opened on the repository that this new feature
 branch will address. Changes by the contributor are then made to
 the feature branch in a local copy of the repository. When ready,
-the new branch is pushed to the remote repository. At this point,
+the new branch is pushed to the remote repository.
+
+At this point,
 the new branch can be viewed, discussed, and even changed by
 contributors with write access to the remote repository. When the
 author of the feature branch thinks the changes are ready to be
@@ -273,12 +275,12 @@ local repository. But most likely only you can see them, and if
 your local file system fails your changes may be lost. To make your
 changes visible to others, and safely stored on your remote GitHub
 repository, you need to push them. However, remember at the beginning
-of this section we said that the "Git Feature Branch Workflow" works
+of this section we said that the **Git Feature Branch Workflow** works
 when you have write access to the remote repository? Unless you are
 a member of Project Pythia you probably don't have write access to
 the _github-sandbox_ remote repo. So you won't be able to push your
 changes to it. That's OK. We can still run the `push` command. It won't
-break anything. In the next section on Forking Workflow we will
+break anything. In the next section on **Forking Workflow** we will
 discuss how to make changes on remote repositories that you do NOT
 have write access to, such as the one we're using in this example. Here
 is the `push` command that we expect to fail:
@@ -348,15 +350,15 @@ $ git merge main
 
 ## Forking Workflow
 
-The Git Feature Branch Workflow described above, along with the
+The **Git Feature Branch Workflow** described above, along with the
 steps needed to submit a PR, work when you have write access to the
 remote repository. But as we saw, if you don't have write access
 you will not be able to push your changes to the remote repo. So,
 if you are contributing to an open source project, such as Project
 Pythia for example, a slightly different workflow is required.
-The Forking Workflow is the one most commonly used for public open
-source projects. The primary difference between the Forking Workflow
-and the Git Feature Branch Workflow is that with the former, two
+The **Forking Workflow** is the one most commonly used for public open
+source projects. The primary difference between the **Forking Workflow**
+and the **Git Feature Branch Workflow** is that with the former, two
 remote repositories are involved: one managed by the developers of
 the project that you wish to contribute to, and one owned by you.
 To help keep things clear we will refer to these remotes as the
@@ -366,8 +368,8 @@ repository that you own and can push changes too. The personal
 repository must be public, so that the maintainers of the upstream
 repository can pull changes from it. Other than a couple of additional
 steps required at the beginning and the end, the process of submitting
-a PR when using the Forking Workflow is identical to that of the
-Git Feature Branch Workflow. The basic steps are as follows:
+a PR when using the **Forking Workflow** is identical to that of the
+**Git Feature Branch Workflow**. The basic steps are as follows:
 
 1. A developer ‘forks’ the upstream repository, creating a remote clone that is owned by the developer: the personal repository
 1. The developer then clones the newly created personal remote repository, creating a local copy. Yup, that is two clones.
@@ -377,7 +379,7 @@ Git Feature Branch Workflow. The basic steps are as follows:
 1. The developer submits a PR via GitHub to the upstream repository
 
 Note that steps 2 through 5 are identical to steps 1 through 4 for
-the Git Feature Branch Workflow. Hence, here we only discuss the
+the **Git Feature Branch Workflow**. Hence, here we only discuss the
 first step, and last step.
 
 ### Forking the upstream repository
@@ -394,8 +396,8 @@ the steps under Forking a repository [here](github-cloning-forking).
 
 ### Clone, branch, change, commit, push
 
-The next steps are the same as described above for the Git Feature
-Branch Workflow. Clone a local copy of the newly created remote,
+The next steps are the same as described above for the **Git Feature
+Branch Workflow**. Clone a local copy of the newly created remote,
 personal repository, create a feature branch, make your changes,
 commit your changes, and push the commits to your personal repository.
 
@@ -406,7 +408,7 @@ personal repository, a PR can be created that asks the maintainers
 of the upstream repository to merge the contents of the feature
 branch on the contributor’s repository into the main branch on the
 upstream repository. This step is remarkably similar to making a
-PR in the Git Feature Branch Workflow. The only difference is that
+PR in the **Git Feature Branch Workflow**. The only difference is that
 the contributor navigates their browser to the upstream, remote
 repository, not the personal remote, and initiates the PR there.
 Specifically, the following steps are once again followed, but
@@ -421,7 +423,7 @@ performed on the upstream remote:
 
 ### Safety tip on synchronization
 
-Just like with the Git Feature Branch Workflow model, over time
+Just like with the **Git Feature Branch Workflow** model, over time
 your local repository will diverge from the remote(s). Before
 starting on a new feature, or if the main branch on remote may have
 been updated while you were working on my-new-feature, it is a good
@@ -476,15 +478,15 @@ $ git merge upstream/main
   another repository.
 - Making a PR on GitHub is pretty simple. The steps that lead up to
   the PR depend your GitHub Workflow
-- Two commonly used GitHub Worflows are "Git Feature Branch Workflow" and
-  "Forking Workflow". The former is appropriate for teams of collaborators
+- Two commonly used GitHub Worflows are **Git Feature Branch Workflow** and
+  **Forking Workflow**. The former is appropriate for teams of collaborators
   where everyone has write access to the GitHub repository. The latter
   is commonly used when a developer wishes to contribute to a public GitHub
   project that for which they do not have write access to the repository.
 
 ### What's Next?
 
-In the next lesson we will put the Forking Workflow to work and show you
+In the next lesson we will put the **Forking Workflow** to work and show you
 how to use it to contribute to Project Pythia.
 
 ## References
