@@ -102,9 +102,11 @@ software development. Software modifications are liable to introduce
 bugs. Isolating them to a dedicated branch until they can be fixed
 ensures that a known, or official, version of the software is always
 available and in working order.
+
 ```{note}
-Avoiding making edits directly on the `main` branch is considered best practice for most workflows and projects! 
+Avoiding making edits directly on the `main` branch is considered best practice for most workflows and projects!
 ```
+
 ### Working with the Git Feature Branch Workflow
 
 This model assumes a single, remote GitHub repository with a branch
