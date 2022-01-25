@@ -467,9 +467,9 @@ After performing the above steps, you can then synchronize your
 local repository with the upstream remote by running the following:
 
 ```
-$ git fetch upstream
-$ git checkout main
-$ git merge upstream/main
+git fetch upstream
+git checkout main
+git merge upstream/main
 ```
 
 ---
