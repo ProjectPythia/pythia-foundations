@@ -292,7 +292,7 @@ is the `push` command that we expect to fail:
 $ git push --set-upstream origin my-new-feature
 ```
 
-You should get a helpfull error message like:
+You should get a helpful error message like:
 
 ```
 remote: Permission to ProjectPythia/github-sandbox.git denied to clyne.
