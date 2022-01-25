@@ -135,7 +135,7 @@ If additional changes are requested by the reviewers, these can be
 made by the contributor in their local repository, committed, and
 then pushed to the remote using the same processes they used with
 the initial push. Once reviewers are satisfied with the changes, a
-project maintainer can merge the feature branch with the main branch.
+project maintainer can merge the feature branch with `main`.
 
 #### Opening a PR with the Git Feature Branch Workflow
 
