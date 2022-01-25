@@ -305,7 +305,7 @@ you push a new branch. Later, if you want to push subsequent changes
 to the remote you can simply do:
 
 ```
-$ git push
+git push
 ```
 
 If you are feeling unsatisfied about not having `git push` succeed, there
