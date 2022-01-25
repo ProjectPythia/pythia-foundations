@@ -179,9 +179,9 @@ Continuing with our example above, make sure you are on the main
 branch and that it is up to date with the remote repository main:
 
 ```
-$ cd github-sandbox
-$ git checkout main
-$ git pull
+cd github-sandbox
+git checkout main
+git pull
 ```
 
 You should see output that looks like:
