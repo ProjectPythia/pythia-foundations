@@ -402,7 +402,7 @@ the steps under Forking a repository [here](github-cloning-forking).
 The next steps are the same as described above for the Git Feature
 Branch Workflow. Clone a local copy of the newly created remote,
 personal repository, create a feature branch, make your changes,
-commit your changes, and push the commits to your personal repository.
+commit your changes, and push the new branch with your commits to your personal repository.
 
 ### Making a pull request
 
