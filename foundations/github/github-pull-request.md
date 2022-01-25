@@ -451,7 +451,7 @@ Next, specify a new remote upstream repository that will be synced with the fork
 $ git remote add upstream upstream-url
 ```
 
-Where upstream-url is the URL of the upstream repository.
+Where `upstream-url` is the URL of the upstream repository.
 
 Finally, rerun the `git remote -v` command and you should see output
 that looks like this:
