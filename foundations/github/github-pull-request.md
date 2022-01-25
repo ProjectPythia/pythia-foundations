@@ -326,7 +326,7 @@ navigating to your repo do the following:
 
 1. Click on “Pull requests” in the top navigation bar
 1. Click on “New pull request”
-1. Under “Compare changes”, make sure that `base` is set to main, and `compare` is set to the name of your feature branch, “my-new-feature”
+1. Under “Compare changes”, make sure that `base` is set to `main`, and `compare` is set to the name of your feature branch, `my-new-feature`
 1. Click on “Create pull request”
 1. A PR window should open up. Provide a descriptive title, and any helpful comments that you want to communicate with the reviewers
 1. Click on “Create pull request” in the PR window.
