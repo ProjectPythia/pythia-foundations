@@ -374,12 +374,12 @@ steps required at the beginning and the end, the process of submitting
 a PR when using the Forking Workflow is identical to that of the
 Git Feature Branch Workflow. The basic steps are as follows:
 
-1. A developer ‘forks’ the upstream repository, creating a remote clone that is owned by the developer: the personal repository
-1. The developer then clones the newly created personal remote repository, creating a local copy. Yup, that is two clones.
-1. The developer creates a new branch in their local repository
-1. The developer makes changes to the branch and commits them to their local repository
-1. The developer pushes the branch to their personal remote repository that was created in the first step
-1. The developer submits a PR via GitHub to the upstream repository
+1. A contributor _forks_ the upstream repository, creating a remote clone that is owned by the contributor: the personal repository
+1. The contributor then clones the newly created personal remote repository, creating a local copy. Yup, that is two clones.
+1. The contributor creates a new branch in their local repository
+1. The contributor makes changes to the branch and commits them to their local repository
+1. The contributor pushes the branch to their personal remote repository that was created in step 1
+1. The contributor submits a PR via GitHub to the upstream repository
 
 Note that steps 2 through 5 are identical to steps 1 through 4 for
 the Git Feature Branch Workflow. Hence, here we only discuss the
