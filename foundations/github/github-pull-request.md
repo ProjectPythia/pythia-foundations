@@ -252,7 +252,7 @@ index b2a3b61..bf89419 100644
 
 It's probably obvious that `git status` will show you which files have been modified and are
 ready to be committed, while `git diff` will show you how your changes
-to my-new-feature branch differ from the main branch in the local
+to `my-new-feature` branch differ from the `main` branch in the local
 repository. Once you are ready, commit your changes to the local
 repository:
 
