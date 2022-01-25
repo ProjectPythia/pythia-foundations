@@ -448,7 +448,7 @@ origin https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
 Next, specify a new remote upstream repository that will be synced with the fork.
 
 ```
-$ git remote add upstream upstream-url
+git remote add upstream upstream-url
 ```
 
 Where `upstream-url` is the URL of the upstream repository.
