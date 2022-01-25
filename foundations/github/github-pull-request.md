@@ -213,7 +213,7 @@ Switched to a new branch 'my-new-feature'
 Next, we'll make changes and commit them to the `my-new-feature branch` in
 the local git repository.
 
-Use your favorite editor edit the file "sample.py". Add the line:
+Use your favorite editor to edit the file "sample.py". Add the line:
 
 ```
 print ("Do you like to rock the party?")
