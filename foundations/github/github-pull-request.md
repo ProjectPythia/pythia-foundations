@@ -199,7 +199,7 @@ Create a separate branch for every new capability you work on:
 $ git checkout -b my-new-feature
 ```
 
-This command will create a new branch named my-new-feature, if it
+This command will create a new branch named `my-new-feature`, if it
 doesn’t exist already, or switch to the existing branch if it does.
 Either way, any changes you make will occur in the branch my-new-feature,
 not in main. The output should look something like:
