@@ -196,7 +196,7 @@ Already up to date.
 Create a separate branch for every new capability you work on:
 
 ```
-$ git checkout -b my-new-feature
+git checkout -b my-new-feature
 ```
 
 This command will create a new branch named `my-new-feature`, if it
