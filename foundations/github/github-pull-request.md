@@ -219,7 +219,7 @@ Use your favorite editor to edit the file "sample.py". Add the line:
 print ("Do you like to rock the party?")
 ```
 
-after the existing "print" statment in the file.
+after the existing `print` statement in the file.
 
 Run the command `git status` and look at the output. You should see
 something like:
