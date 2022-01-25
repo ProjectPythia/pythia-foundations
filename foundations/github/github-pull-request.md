@@ -169,7 +169,7 @@ For example, let's clone the Project Pythia sandbox:
 $ git clone https://github.com/ProjectPythia/github-sandbox.git
 ```
 
-Note, we did not specify a _local-directory_name_ here, so git will
+Note, we did not specify a `local-directory_name` here, so git will
 use the `base name` of the `repository_url`, "github-sandbox" as
 the local directory.
 
