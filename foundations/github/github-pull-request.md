@@ -18,7 +18,7 @@ This content is under construction!
 | [What is GitHub](https://foundations.projectpythia.org/foundations/github/what-is-github.html)              | Necessary   |       |
 | [GitHub repositories](https://foundations.projectpythia.org/foundations/github/github-repos.html)           | Necessary   |       |
 | [Cloning and Forking](https://foundations.projectpythia.org/foundations/github/github-cloning-forking.html) | Necessary   |       |
-| [Basic version control with git](basic-git) | Necessary |      |
+| [Basic version control with git](basic-git)                                                                 | Necessary   |       |
 | [Issues and Discussions](https://foundations.projectpythia.org/foundations/github/github-issues.html)       | Recommended |       |
 
 - **Time to learn**: 30 minutes
