@@ -281,7 +281,7 @@ repository, you need to push them. However, remember at the beginning
 of this section we said that the "Git Feature Branch Workflow" works
 when you have write access to the remote repository? Unless you are
 a member of Project Pythia you probably don't have write access to
-the _github-sandbox_ remote repo. So you won't be able to push your
+the `github-sandbox` remote repo. So you won't be able to push your
 changes to it. That's OK. We can still run the `push` command. It won't
 break anything. In the next section on Forking Workflow we will
 discuss how to make changes on remote repositories that you do NOT
