@@ -430,7 +430,7 @@ Just like with the Git Feature Branch Workflow model, over time
 your local repository will diverge from the remote(s). Before
 starting on a new feature, or if the main branch on remote may have
 been updated while you were working on `my-new-feature`, it is a good
-idea to periodically sync up with the remote main. When working
+idea to periodically sync up with the remote `main`. When working
 with forks things get a little more complicated than when only a
 single remote is involved. Before syncing with the upstream remote
 you must first configure your local repository by running the
