@@ -259,12 +259,9 @@ repository. Once you are ready, commit your changes to the local
 repository:
 
 ```
+git add sample.py
 git commit -m "having fun yet?" .
 ```
-
-Don't forget that trailing "." or `git commit` will fail. That's one of the
-quirky features of git that keeps you on your toes: some commands apply
-to the entire local repository, others require you to specify a path.
 
 After a successful commit you should see a message like:
 
@@ -323,7 +320,7 @@ and pushing your commits back to the remote repository, you are now
 ready to issue a PR requesting that the remote repository maintainers
 review your changes for potential merger into the main branch on
 the remote. This final action must be performed from within your
-web browser after navigating to the URL for your remote repo. After
+web browser. After
 navigating to your repo do the following:
 
 1. Click on “Pull requests” in the top navigation bar
@@ -481,7 +478,7 @@ git merge upstream/main
 - A Pull Request (PR) is a formal mechanism for requesting that changes
   that you have made to one repository are integrated (merged) into
   another repository.
-- Making a PR on GitHub is pretty simple. The steps that lead up to
+- The steps that lead up to
   the PR depend your GitHub Workflow
 - Two commonly used GitHub Worflows are **Git Feature Branch Workflow** and
   **Forking Workflow**. The former is appropriate for teams of collaborators
