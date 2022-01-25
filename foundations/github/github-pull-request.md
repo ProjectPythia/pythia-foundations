@@ -110,7 +110,7 @@ Avoiding making edits directly on the `main` branch is considered best practice 
 ### Working with the Git Feature Branch Workflow
 
 This model assumes a single, remote GitHub repository with a branch
-named _main_, that contains the official version of all of the digital
+named `main`, that contains the official version of all of the digital
 assets, along with a history of all of the changes made. When a
 contributor wishes to make changes to the remote repository, they
 clone the repo and create a descriptively named feature branch,
