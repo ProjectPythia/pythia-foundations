@@ -129,7 +129,7 @@ changes made in the branch. GitHub simplifies the process of viewing
 the changes by offering a variety of ways to see context differences
 (diffs) between the main and the feature branch. Discussion between
 the reviewers and the contributor inside a PR discussion forum
-occurs in the same way that discussion over GitHub [Issues](https://foundations.projectpythia.org/foundations/github/github-issues.html) takes
+occurs in the same way that discussion over GitHub [Issues](github-issues) takes
 place inside a discussion forum associated with a particular issue.
 If additional changes are requested by the reviewers, these can be
 made by the contributor in their local repository, committed, and
