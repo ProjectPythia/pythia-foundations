@@ -14,6 +14,7 @@
 | [What is GitHub](https://foundations.projectpythia.org/foundations/github/what-is-github.html)              | Necessary   |       |
 | [GitHub repositories](https://foundations.projectpythia.org/foundations/github/github-repos.html)           | Necessary   |       |
 | [Cloning and Forking](https://foundations.projectpythia.org/foundations/github/github-cloning-forking.html) | Necessary   |       |
+| [Basic version control with git](basic-git)                                                                 | Necessary   |       |
 | [Issues and Discussions](https://foundations.projectpythia.org/foundations/github/github-issues.html)       | Recommended |       |
 
 - **Time to learn**: 60 minutes
@@ -47,12 +48,12 @@ repository, and finally, the destination branch.
 
 A typical sequence of steps consists of the following:
 
-1. A developer clones a personal remote repository, creating a local copy
-1. The developer creates a new branch in their local repository
-1. The developer makes changes to the branch and commits them to
+1. A contributor clones a personal remote repository, creating a local copy
+1. The contributor creates a new branch in their local repository
+1. The contributor makes changes to the branch and commits them to
    their local repository
-1. The developer _pushes_ the branch to a remote repository
-1. The developer submits a PR via GitHub
+1. The contributor _pushes_ the branch to a remote repository
+1. The contributor submits a PR via GitHub
 
 After the maintainers or collaborators of the destination review
 the changes, and any suggested revisions are made, the project
@@ -102,14 +103,18 @@ bugs. Isolating them to a dedicated branch until they can be fixed
 ensures that a known, or official, version of the software is always
 available and in working order.
 
+```{note}
+Avoiding making edits directly on the `main` branch is considered best practice for most workflows and projects!
+```
+
 ### Working with the Git Feature Branch Workflow
 
 This model assumes a single, remote GitHub repository with a branch
-named _main_, that contains the official version of all of the digital
+named `main`, that contains the official version of all of the digital
 assets, along with a history of all of the changes made. When a
 contributor wishes to make changes to the remote repository, they
 clone the repo and create a descriptively named feature branch,
-such as “my-new-feature” or perhaps “issue-nnn”, where "nnn" is the
+such as `my-new-feature` or perhaps `issue-nnn`, where `nnn` is the
 number of an issue opened on the repository that this new feature
 branch will address. Changes by the contributor are then made to
 the feature branch in a local copy of the repository. When ready,
@@ -119,20 +124,20 @@ At this point,
 the new branch can be viewed, discussed, and even changed by
 contributors with write access to the remote repository. When the
 author of the feature branch thinks the changes are ready to be
-merged into main on the remote repository, they create a PR. The
+merged into `main` on the remote repository, they create a PR. The
 PR signals the project maintainers that the contributor would like
-to merge their feature branch into main, and invites review of the
+to merge their feature branch into `main`, and invites review of the
 changes made in the branch. GitHub simplifies the process of viewing
 the changes by offering a variety of ways to see context differences
-(diffs) between the main and the feature branch. Discussion between
+(diffs) between `main` and the feature branch. Discussion between
 the reviewers and the contributor inside a PR discussion forum
-occurs in the same way that discussion over GitHub [Issues](https://foundations.projectpythia.org/foundations/github/github-issues.html) takes
+occurs in the same way that discussion over GitHub [Issues](github-issues) takes
 place inside a discussion forum associated with a particular issue.
 If additional changes are requested by the reviewers, these can be
 made by the contributor in their local repository, committed, and
 then pushed to the remote using the same processes they used with
 the initial push. Once reviewers are satisfied with the changes, a
-project maintainer can merge the feature branch with the main branch.
+project maintainer can merge the feature branch with `main`.
 
 #### Opening a PR with the Git Feature Branch Workflow
 
@@ -149,11 +154,11 @@ to your local computer. This can be done with the git command line
 tools and the general form of the command looks like this:
 
 ```
-$ git clone repository-url local-directory-name
+git clone repository-url local-directory-name
 ```
 
-Where _repository-url_ is the URL for the GitHub repo that you want
-to clone, and _local-directory-name_ is the directory path on your
+Where `repository-url` is the URL for the GitHub repo that you want
+to clone, and `local-directory-name` is the directory path on your
 local machine into which you want to create the clone. The local
 directory need not already exist. The clone command will create the
 local directory for you. If you don’t know the URL for your
@@ -163,11 +168,11 @@ and click on the `Code` button. The URL will be displayed.
 For example, let's clone the Project Pythia sandbox:
 
 ```
-$ git clone https://github.com/ProjectPythia/github-sandbox.git
+git clone https://github.com/ProjectPythia/github-sandbox.git
 ```
 
-Note, we did not specify a _local-directory_name_ here, so git will
-use the _base name_ of the _repository_url_, "github-sandbox" as
+Note, we did not specify a `local-directory_name` here, so git will
+use the `base name` of the `repository_url`, "github-sandbox" as
 the local directory.
 
 ##### Start with the main branch
@@ -176,9 +181,9 @@ Continuing with our example above, make sure you are on the main
 branch and that it is up to date with the remote repository main:
 
 ```
-$ cd github-sandbox
-$ git checkout main
-$ git pull
+cd github-sandbox
+git checkout main
+git pull
 ```
 
 You should see output that looks like:
@@ -193,13 +198,13 @@ Already up to date.
 Create a separate branch for every new capability you work on:
 
 ```
-$ git checkout -b my-new-feature
+git checkout -b my-new-feature
 ```
 
-This command will create a new branch named my-new-feature, if it
+This command will create a new branch named `my-new-feature`, if it
 doesn’t exist already, or switch to the existing branch if it does.
-Either way, any changes you make will occur in the branch my-new-feature,
-not in main. The output should look something like:
+Either way, any changes you make will occur in the branch `my-new-feature`,
+not in `main`. The output should look something like:
 
 ```
 Switched to a new branch 'my-new-feature'
@@ -207,16 +212,16 @@ Switched to a new branch 'my-new-feature'
 
 ##### Make changes and commit
 
-Next, we'll make changes and commit them to the my-new-feature branch in
+Next, we'll make changes and commit them to the `my-new-feature branch` in
 the local git repository.
 
-Use your favorite editor edit the file "sample.py". Add the line:
+Use your favorite editor to edit the file "sample.py". Add the line:
 
 ```
 print ("Do you like to rock the party?")
 ```
 
-after the existing "print" statment in the file.
+after the existing `print` statement in the file.
 
 Run the command `git status` and look at the output. You should see
 something like:
@@ -249,12 +254,12 @@ index b2a3b61..bf89419 100644
 
 It's probably obvious that `git status` will show you which files have been modified and are
 ready to be committed, while `git diff` will show you how your changes
-to my-new-feature branch differ from the main branch in the local
+to `my-new-feature` branch differ from the `main` branch in the local
 repository. Once you are ready, commit your changes to the local
 repository:
 
 ```
-$ git commit -m "having fun yet?" .
+git commit -m "having fun yet?" .
 ```
 
 Don't forget that trailing "." or `git commit` will fail. That's one of the
@@ -278,7 +283,7 @@ repository, you need to push them. However, remember at the beginning
 of this section we said that the **Git Feature Branch Workflow** works
 when you have write access to the remote repository? Unless you are
 a member of Project Pythia you probably don't have write access to
-the _github-sandbox_ remote repo. So you won't be able to push your
+the `github-sandbox` remote repo. So you won't be able to push your
 changes to it. That's OK. We can still run the `push` command. It won't
 break anything. In the next section on **Forking Workflow** we will
 discuss how to make changes on remote repositories that you do NOT
@@ -286,10 +291,10 @@ have write access to, such as the one we're using in this example. Here
 is the `push` command that we expect to fail:
 
 ```
-$ git push --set-upstream origin my-new-feature
+git push --set-upstream origin my-new-feature
 ```
 
-You should get a helpfull error message like:
+You should get a helpful error message like:
 
 ```
 remote: Permission to ProjectPythia/github-sandbox.git denied to clyne.
@@ -302,11 +307,11 @@ you push a new branch. Later, if you want to push subsequent changes
 to the remote you can simply do:
 
 ```
-$ git push
+git push
 ```
 
 If you are feeling unsatisfied about not having `git push` succeed, there
-is a simple solution: create your GitHub repository owned by you. The
+is a simple solution: create a GitHub repository owned by you. The
 GitHub Quickstart guide provides an excellent [tutorial](https://docs.github.com/en/get-started/quickstart/create-a-repo) on how to
 do this.
 
@@ -323,7 +328,7 @@ navigating to your repo do the following:
 
 1. Click on “Pull requests” in the top navigation bar
 1. Click on “New pull request”
-1. Under “Compare changes”, make sure that `base` is set to main, and `compare` is set to the name of your feature branch, “my-new-feature”
+1. Under “Compare changes”, make sure that `base` is set to `main`, and `compare` is set to the name of your feature branch, `my-new-feature`
 1. Click on “Create pull request”
 1. A PR window should open up. Provide a descriptive title, and any helpful comments that you want to communicate with the reviewers
 1. Click on “Create pull request” in the PR window.
@@ -335,17 +340,17 @@ PR is merged you’ll receive notification from GitHub.
 ##### Safety tip on synchronization
 
 Over time your local repository will diverge from the remote. Before
-starting on a new feature, or if the main branch on remote may have
-been updated while you were working on my-new-feature, it is a good
-idea to periodically sync up with the remote main. Make sure all
-of your changes to my-new-branch have been committed to the local
+starting on a new feature, or if the `main` branch on remote may have
+been updated while you were working on `my-new-feature`, it is a good
+idea to periodically sync up with the remote `main`. Make sure all
+of your changes to `my-new-feature` have been committed to the local
 repository, and then do:
 
 ```
-$ git checkout main
-$ git pull
-$ git checkout my-new-feature
-$ git merge main
+git checkout main
+git pull
+git checkout my-new-feature
+git merge main
 ```
 
 ## Forking Workflow
@@ -371,12 +376,12 @@ steps required at the beginning and the end, the process of submitting
 a PR when using the **Forking Workflow** is identical to that of the
 **Git Feature Branch Workflow**. The basic steps are as follows:
 
-1. A developer ‘forks’ the upstream repository, creating a remote clone that is owned by the developer: the personal repository
-1. The developer then clones the newly created personal remote repository, creating a local copy. Yup, that is two clones.
-1. The developer creates a new branch in their local repository
-1. The developer makes changes to the branch and commits them to their local repository
-1. The developer pushes the branch to their personal remote repository that was created in the first step
-1. The developer submits a PR via GitHub to the upstream repository
+1. A contributor _forks_ the upstream repository, creating a remote clone that is owned by the contributor: the personal repository
+1. The contributor then clones the newly created personal remote repository, creating a local copy. Yup, that is two clones.
+1. The contributor creates a new branch in their local repository
+1. The contributor makes changes to the branch and commits them to their local repository
+1. The contributor pushes the branch to their personal remote repository that was created in step 1
+1. The contributor submits a PR via GitHub to the upstream repository
 
 Note that steps 2 through 5 are identical to steps 1 through 4 for
 the **Git Feature Branch Workflow**. Hence, here we only discuss the
@@ -399,7 +404,7 @@ the steps under Forking a repository [here](github-cloning-forking).
 The next steps are the same as described above for the **Git Feature
 Branch Workflow**. Clone a local copy of the newly created remote,
 personal repository, create a feature branch, make your changes,
-commit your changes, and push the commits to your personal repository.
+commit your changes, and push the new branch with your commits to your personal repository.
 
 ### Making a pull request
 
@@ -416,7 +421,7 @@ performed on the upstream remote:
 
 1. Click on “Pull requests” in the top navigation bar
 1. Click on “New pull request”
-1. Under “Compare changes”, make sure that `base` is set to main, and `compare` is set to the name of your feature branch, “my-new-feature”
+1. Under “Compare changes”, make sure that `base` is set to `main`, and `compare` is set to the name of your feature branch, `my-new-feature`
 1. Click on “Create pull request”
 1. A PR window should open up. Provide a descriptive title, and any helpful comments that you want to communicate with the reviewers
 1. Click on “Create pull request” in the PR window.
@@ -426,15 +431,15 @@ performed on the upstream remote:
 Just like with the **Git Feature Branch Workflow** model, over time
 your local repository will diverge from the remote(s). Before
 starting on a new feature, or if the main branch on remote may have
-been updated while you were working on my-new-feature, it is a good
-idea to periodically sync up with the remote main. When working
+been updated while you were working on `my-new-feature`, it is a good
+idea to periodically sync up with the remote `main`. When working
 with forks things get a little more complicated than when only a
 single remote is involved. Before syncing with the upstream remote
 you must first configure your local repository by running the
 following commands from within your local copy of the repo:
 
 ```
-$ git remote -v
+git remote -v
 ```
 
 This should produce an output that looks similar to the following:
@@ -445,10 +450,10 @@ origin https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
 Next, specify a new remote upstream repository that will be synced with the fork.
 
 ```
-$ git remote add upstream upstream-url
+git remote add upstream upstream-url
 ```
 
-Where upstream-url is the URL of the upstream repository.
+Where `upstream-url` is the URL of the upstream repository.
 
 Finally, rerun the `git remote -v` command and you should see output
 that looks like this:
@@ -464,9 +469,9 @@ After performing the above steps, you can then synchronize your
 local repository with the upstream remote by running the following:
 
 ```
-$ git fetch upstream
-$ git checkout main
-$ git merge upstream/main
+git fetch upstream
+git checkout main
+git merge upstream/main
 ```
 
 ---
@@ -482,7 +487,7 @@ $ git merge upstream/main
   **Forking Workflow**. The former is appropriate for teams of collaborators
   where everyone has write access to the GitHub repository. The latter
   is commonly used when a developer wishes to contribute to a public GitHub
-  project that for which they do not have write access to the repository.
+  project for which they do not have write access to the repository.
 
 ### What's Next?
 
