@@ -345,10 +345,10 @@ of your changes to `my-new-feature` have been committed to the local
 repository, and then do:
 
 ```
-$ git checkout main
-$ git pull
-$ git checkout my-new-feature
-$ git merge main
+git checkout main
+git pull
+git checkout my-new-feature
+git merge main
 ```
 
 ## Forking Workflow
