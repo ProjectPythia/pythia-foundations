@@ -152,7 +152,7 @@ to your local computer. This can be done with the git command line
 tools and the general form of the command looks like this:
 
 ```
-$ git clone repository-url local-directory-name
+git clone repository-url local-directory-name
 ```
 
 Where `repository-url` is the URL for the GitHub repo that you want
