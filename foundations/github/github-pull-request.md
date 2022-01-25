@@ -166,7 +166,7 @@ and click on the `Code` button. The URL will be displayed.
 For example, let's clone the Project Pythia sandbox:
 
 ```
-$ git clone https://github.com/ProjectPythia/github-sandbox.git
+git clone https://github.com/ProjectPythia/github-sandbox.git
 ```
 
 Note, we did not specify a `local-directory_name` here, so git will
