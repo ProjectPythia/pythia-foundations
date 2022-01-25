@@ -127,7 +127,7 @@ PR signals the project maintainers that the contributor would like
 to merge their feature branch into `main`, and invites review of the
 changes made in the branch. GitHub simplifies the process of viewing
 the changes by offering a variety of ways to see context differences
-(diffs) between the main and the feature branch. Discussion between
+(diffs) between `main` and the feature branch. Discussion between
 the reviewers and the contributor inside a PR discussion forum
 occurs in the same way that discussion over GitHub [Issues](github-issues) takes
 place inside a discussion forum associated with a particular issue.
