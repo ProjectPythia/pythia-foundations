@@ -114,7 +114,7 @@ named `main`, that contains the official version of all of the digital
 assets, along with a history of all of the changes made. When a
 contributor wishes to make changes to the remote repository, they
 clone the repo and create a descriptively named feature branch,
-such as “my-new-feature” or perhaps “issue-nnn”, where "nnn" is the
+such as `my-new-feature` or perhaps `issue-nnn`, where `nnn` is the
 number of an issue opened on the repository that this new feature
 branch will address. Changes by the contributor are then made to
 the feature branch in a local copy of the repository. When ready,
