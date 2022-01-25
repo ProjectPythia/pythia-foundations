@@ -122,7 +122,7 @@ the new branch is pushed to the remote repository. At this point,
 the new branch can be viewed, discussed, and even changed by
 contributors with write access to the remote repository. When the
 author of the feature branch thinks the changes are ready to be
-merged into main on the remote repository, they create a PR. The
+merged into `main` on the remote repository, they create a PR. The
 PR signals the project maintainers that the contributor would like
 to merge their feature branch into main, and invites review of the
 changes made in the branch. GitHub simplifies the process of viewing
