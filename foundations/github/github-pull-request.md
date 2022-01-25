@@ -289,7 +289,7 @@ have write access to, such as the one we're using in this example. Here
 is the `push` command that we expect to fail:
 
 ```
-$ git push --set-upstream origin my-new-feature
+git push --set-upstream origin my-new-feature
 ```
 
 You should get a helpful error message like:
