@@ -309,7 +309,7 @@ $ git push
 ```
 
 If you are feeling unsatisfied about not having `git push` succeed, there
-is a simple solution: create your GitHub repository owned by you. The
+is a simple solution: create a GitHub repository owned by you. The
 GitHub Quickstart guide provides an excellent [tutorial](https://docs.github.com/en/get-started/quickstart/create-a-repo) on how to
 do this.
 
