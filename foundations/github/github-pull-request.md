@@ -202,7 +202,7 @@ $ git checkout -b my-new-feature
 This command will create a new branch named `my-new-feature`, if it
 doesn’t exist already, or switch to the existing branch if it does.
 Either way, any changes you make will occur in the branch `my-new-feature`,
-not in main. The output should look something like:
+not in `main`. The output should look something like:
 
 ```
 Switched to a new branch 'my-new-feature'
