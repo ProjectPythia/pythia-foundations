@@ -210,7 +210,7 @@ Switched to a new branch 'my-new-feature'
 
 ##### Make changes and commit
 
-Next, we'll make changes and commit them to the my-new-feature branch in
+Next, we'll make changes and commit them to the `my-new-feature branch` in
 the local git repository.
 
 Use your favorite editor edit the file "sample.py". Add the line:
