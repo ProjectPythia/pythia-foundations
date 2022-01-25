@@ -485,7 +485,7 @@ $ git merge upstream/main
   "Forking Workflow". The former is appropriate for teams of collaborators
   where everyone has write access to the GitHub repository. The latter
   is commonly used when a developer wishes to contribute to a public GitHub
-  project that for which they do not have write access to the repository.
+  project for which they do not have write access to the repository.
 
 ### What's Next?
 
