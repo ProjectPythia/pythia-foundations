@@ -124,7 +124,7 @@ contributors with write access to the remote repository. When the
 author of the feature branch thinks the changes are ready to be
 merged into `main` on the remote repository, they create a PR. The
 PR signals the project maintainers that the contributor would like
-to merge their feature branch into main, and invites review of the
+to merge their feature branch into `main`, and invites review of the
 changes made in the branch. GitHub simplifies the process of viewing
 the changes by offering a variety of ways to see context differences
 (diffs) between the main and the feature branch. Discussion between
