@@ -50,12 +50,12 @@ repository, and finally, the destination branch.
 
 A typical sequence of steps consists of the following:
 
-1. A developer clones a personal remote repository, creating a local copy
-1. The developer creates a new branch in their local repository
-1. The developer makes changes to the branch and commits them to
+1. A contributor clones a personal remote repository, creating a local copy
+1. The contributor creates a new branch in their local repository
+1. The contributor makes changes to the branch and commits them to
    their local repository
-1. The developer _pushes_ the branch to a remote repository
-1. The developer submits a PR via GitHub
+1. The contributor _pushes_ the branch to a remote repository
+1. The contributor submits a PR via GitHub
 
 After the maintainers or collaborators of the destination review
 the changes, and any suggested revisions are made, the project
