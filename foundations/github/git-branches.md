@@ -64,7 +64,7 @@ $ git remote -v
 
 ![Git Remote](../../images/2-gitremote.png)
 
-We are set up to pull and push from the same remote repository.
+We are set up to pull (denoted as 'fetch' in the output above) and push from the same remote repository.
 
 Next, check all of your exising Git branches with:
 
