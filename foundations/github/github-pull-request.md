@@ -479,7 +479,7 @@ git merge upstream/main
   that you have made to one repository are integrated (merged) into
   another repository.
 - The steps that lead up to
-  the PR depend your GitHub Workflow
+  the PR depend your GitHub Workflow.
 - Two commonly used GitHub Worflows are **Git Feature Branch Workflow** and
   **Forking Workflow**. The former is appropriate for teams of collaborators
   where everyone has write access to the GitHub repository. The latter
