@@ -493,5 +493,5 @@ how to use it to contribute to Project Pythia.
 
 ## References
 
-1. Atlassian's tutorial on (workflows)[https://www.atlassian.com/git/tutorials/comparing-workflows]
+1. Atlassian's tutorial on [workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
 1. GitHub's [Collaborating with pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
