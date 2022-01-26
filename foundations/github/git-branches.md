@@ -24,7 +24,7 @@ The best practices for a simple workflow for suggesting changes to a GitHub repo
 
 ## What are Git branches?
 
-Git branches allow for non-linear or differing revision histories of a repository. At a point in time, you can split your repository into multiple development paths (branches) where you can make different commits in each, typically with the ultimate intention of merging these branches and development changes together at a later time.
+Git branches allow for non-linear or differing revision histories of a repository. At a point in time, you can split your repository into multiple development paths (branches) where you can make different commits in each, typically with the ultimate intention of merging these branches and development changes together at a later time. Some reasons for wanting to split your repository into multiple paths is to experiment with different methods of solving a problem (before deciding which method will ultimately be merged) and to work on different problems within the same codebase (without confusing which code changes are relevant to which problem). There are also some convenience bots on GitHub that, if installed in the repository, may not act as intended if your work is all on the `main` branch.
 
 These branches can live on your computer (local) or on GitHub (remote). They are brought together through Git _pushes_, _pulls_, and _pull requests_. _Pushing_ is how you transfer changes from your local repository to a remote repository. _Pulling_ is how you fetch upstream changes into your branch. And _Pull Requests_ are how you suggest the changes you've made on your branch to the upstream codebase.
 
@@ -35,16 +35,21 @@ The above flowchart demonstraties commits (C1 through C5) added to different bra
 
 ## Creating a New Branch
 
+```{admonition} Have you forked the repository?
+:class: info
+Having forked (NOT just cloned) the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox) is essential for following the steps in this book chapter. See the chapter on [GitHub Cloning and Forking](github-cloning-forking.md).
+```
+
 From your terminal, navigate to your local clone of your `Github-Sandbox` Repository fork:
 
 ```
-$ cd github-sandbox
+cd github-sandbox
 ```
 
 Let's begin by checking the status of our repository:
 
 ```
-$ git status
+git status
 ```
 
 ![Git Status](../../images/1-gitstatus.png)
@@ -59,7 +64,7 @@ Historically, the `main` branch was called the `master` branch. The name change 
 Now check the status of your remote repository with
 
 ```
-$ git remote -v
+git remote -v
 ```
 
 ![Git Remote](../../images/2-gitremote.png)
@@ -69,23 +74,23 @@ We are set up to pull (denoted as 'fetch' in the output above) and push from the
 Next, check all of your exising Git branches with:
 
 ```
-$ git branch -a
+git branch -a
 ```
 
 ![Git Branch](../../images/3-gitbranch.png)
 
-You will see one local branch (`main`) and your remote branch (`remotes/origin/HEAD` and `remotes/origin/main`, where `HEAD` points to `main`).
+You will see one local branch (`main`) and your remote branch (`remotes/origin/HEAD` and `remotes/origin/main`, where `HEAD` points to `main`). `HEAD` is the pointer to the current branch reference, or in essence, a pointer to your last commit. More on this in a later section.
 
 Now, before we make some sample changes to our codebase, let's create a new branch where we'll make these changes:
 
 ```
-$ git branch newbranch
+git branch newbranch
 ```
 
 Check that this branch was created with:
 
 ```
-$ git branch
+git branch
 ```
 
 ![Git NewBranch](../../images/4-gitnewbranch.png)
@@ -97,13 +102,13 @@ This will display the current and the new branch. You'll notice that we are stil
 To switch branches use the command `git checkout` as in:
 
 ```
-$ git checkout newbranch
+git checkout newbranch
 ```
 
 To check your current branch use `git status`:
 
 ```
-$ git status
+git status
 ```
 
 ![Git Checkout](../../images/5-gitcheckout.png)
@@ -112,10 +117,10 @@ Notice that `git status` doesn't say anything about being up-to-date, as before.
 
 ## Setting up a Remote Branch
 
-Before we push this branch upstream, let's make some sample changes by creating a new Python file.
+Before we push this branch upstream, let's make some sample changes by creating a new empty file, with the ending ".py".
 
 ```
-$ touch hello.py
+touch hello.py
 ```
 
 ![Git Status](../../images/6-samplechange.png)
@@ -135,7 +140,7 @@ In a real workflow, you would continue making edits and git commits on a branch 
 Try to do this with
 
 ```
-$ git push
+git push
 ```
 
 ![Git Push](../../images/6c-gitpush.png)
@@ -145,7 +150,7 @@ You will get an error message, "fatal: The current branch newbranch has no upstr
 First, we need to set an upstream branch to direct our local push to:
 
 ```
-$ git push --set-upstream origin newbranch
+git push --set-upstream origin newbranch
 ```
 
 Thankfully, Git provided this command in the previous error message.
@@ -240,13 +245,13 @@ The above flowchart demonstrates pulling in the upstream changes from Upstream M
 First check if there are any upstream changes:
 
 ```
-$ git status
+git status
 ```
 
 Then, if there are no conflicts:
 
 ```
-$ git pull
+git pull
 ```
 
 `git pull` is a combination of `git fetch` and `git merge`. That is it updates the remote tracking branches (`git fetch`) AND updates your current branch with any new commits on the remote tracking branch (`git merge`).
@@ -273,7 +278,7 @@ git branch -d newbranch
 To delete the branch remotely, type
 
 ```
-$ git push <remote> --delete <branch>.
+git push <remote> --delete <branch>.
 ```
 
 as in
