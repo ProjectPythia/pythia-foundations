@@ -53,7 +53,7 @@ You will see that you are already on a branch called "main". And that this branc
 
 ```{admonition} The Main Branch
 :class: info
-The `main` branch used to automatically be called the `master` branch. This change was relatively recent, so all of your GitHub repositories may not reflect this yet. See instructions to change your branch name at [Github's Branch Renaming documentation](https://github.com/github/renaming).
+Historically, the `main` branch was called the `master` branch. The name change was relatively recent, so all of your GitHub repositories may not reflect this yet. See instructions to change your branch name at [Github's Branch Renaming documentation](https://github.com/github/renaming).
 ```
 
 Now check the status of your remote repository with
