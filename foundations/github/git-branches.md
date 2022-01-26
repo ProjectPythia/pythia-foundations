@@ -130,7 +130,7 @@ Your new branch is now one commit ahead of your main branch. You can see this wi
 
 ![Git Log](../../images/6b-gitlog.png)
 
-In a real workflow, you would continue making edits and git commits on a branch as so until you are ready to push up to GitHub.
+In a real workflow, you would continue making edits and git commits on a branch until you are ready to push up to GitHub.
 
 Try to do this with
 
