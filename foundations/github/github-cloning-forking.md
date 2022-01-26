@@ -109,7 +109,7 @@ This link points to where the repository "lives" on GitHub. We will use the term
 ```
 
 ```{tip}
-We discuss the `git` command-line interface in the <https://foundations.projectpythia.org/foundations/github/what-is-git> lesson.
+We discuss the `git` command-line interface in the <https://foundations.projectpythia.org/foundations/github/basic-git> lesson.
 ```
 
 **Congratulations!!** You have now cloned a GitHub repository!
