@@ -100,7 +100,7 @@ To switch branches use the command `git checkout` as in:
 $ git checkout newbranch
 ```
 
-To check your current branch type:
+To check your current branch use `git status`:
 
 ```
 $ git status
