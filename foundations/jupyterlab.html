@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -838,14 +839,14 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>To execute the cell type “shift+enter”. Notice that the console redisplays the code you wrote, labels it with a number, and displays (prints) the output to the screen.</p>
+<p>To execute the cell type <kbd>Shift</kbd>+<kbd>Enter</kbd>. Notice that the console redisplays the code you wrote, labels it with a number, and displays (prints) the output to the screen.</p>
 <p>In the next cell, enter:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>s = ‘Hello, World!’
-print(f’s = {s}’)
-s
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello, World!&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;s = </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">s</span>
 </pre></div>
 </div>
-<p>The first line of this code designates a string <code class="docutils literal notranslate"><span class="pre">s</span></code> with the value “Hello, World!”, the second line uses f-formatting to print the string, and the final line just calls up <code class="docutils literal notranslate"><span class="pre">s</span></code>. The last line in the cell will always be returned (its value displayed) regardless of whether you called <code class="docutils literal notranslate"><span class="pre">print</span></code>. Type “shift+enter” to execute the cell. Again the output is labeled (this time with a 2), and we see the input code, the printed standard-out statement, and the return statement. The “return value” and the values “printed to screen” are different!</p>
+<p>The first line of this code designates a string <code class="docutils literal notranslate"><span class="pre">s</span></code> with the value “Hello, World!”, the second line uses f-formatting to print the string, and the final line just calls up <code class="docutils literal notranslate"><span class="pre">s</span></code>. The last line in the cell will always be returned (its value displayed) regardless of whether you called <code class="docutils literal notranslate"><span class="pre">print</span></code>. Type <kbd>Shift</kbd>+<kbd>Enter</kbd> to execute the cell. Again the output is labeled (this time with a 2), and we see the input code, the printed standard-out statement, and the return statement. The “return value” and the values “printed to screen” are different!</p>
 <p><img alt="Console" src="../_images/console.png" /></p>
 <p>Close the window and shut down the Console in the Running Kernels tab. We’re back to the Launcher again.</p>
 </div>
@@ -854,8 +855,8 @@ s
 <p>Click on the “Text File” button in the Launcher.
 Select the File Browser tab to see the new file <code class="docutils literal notranslate"><span class="pre">untitled.txt</span></code> you created.</p>
 <p>Enter this Python code into the new text file:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>s = ‘Hello, World!’
-print(s)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello, World!&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>You may notice that the file has a dot instead of an “X” where you’d close it, this indicates that the file hasn’t been saved or has unsaved changes. Save the file (“command+s” on Mac, “control+s” on Windows, or File Menu → Save).</p>
@@ -884,7 +885,7 @@ Enter the following into the cell:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>And then type “shift+enter” to execute the cell.</p>
+<p>And then type <kbd>Shift</kbd>+<kbd>Enter</kbd> to execute the cell.</p>
 <p>You’ll see the output, <code class="docutils literal notranslate"><span class="pre">4</span></code>, printed directly below your code cell. Executing the cell automatically creats a new cell in edit mode below the first.</p>
 <p>In this new cell, enter:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
@@ -896,7 +897,7 @@ Enter the following into the cell:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hello</span>
 </pre></div>
 </div>
-<p>And then type “shift+enter”.</p>
+<p>And then type <kbd>Shift</kbd>+<kbd>Enter</kbd>.</p>
 <p>This single-line <code class="docutils literal notranslate"><span class="pre">import</span></code> statement runs the conents of your <code class="docutils literal notranslate"><span class="pre">hello.py</span></code> script file, and would do the same for any file regardless of length.</p>
 <div class="admonition alert alert-warning">
     <p class="admonition-title" style="font-weight:bold">Warning</p>
@@ -907,14 +908,14 @@ Enter the following in the next cell:
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span><span class="o">.</span><span class="n">s</span>
 </pre></div>
 </div>
-<p>Hit “shift+enter” to execute.</p>
-<p>Again, it displays the value of the variable <code class="docutils literal notranslate"><span class="pre">s</span></code> from the “hello” module we just created. One difference is that this time the output is given it’s own label <code class="docutils literal notranslate"><span class="pre">[2]</span></code> matching the input label of the cell (whereas the output from cell <code class="docutils literal notranslate"><span class="pre">[1]</span></code> is not labelled).  This is the difference between output sent to the screen vs the return value of the cell.</p>
+<p>Hit <kbd>Shift</kbd>+<kbd>Enter</kbd> to execute.</p>
+<p>Again, it displays the value of the variable <code class="docutils literal notranslate"><span class="pre">s</span></code> from the “hello” module we just created. One difference is that this time the output is given its own label <code class="docutils literal notranslate"><span class="pre">[2]</span></code> matching the input label of the cell (whereas the output from cell <code class="docutils literal notranslate"><span class="pre">[1]</span></code> is not labelled).  This is the difference between output sent to the screen vs the return value of the cell.</p>
 <p>Let’s now import a module from the Python standard library:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Again, hit “shift+enter”.</p>
+<p>Again, hit <kbd>Shift</kbd>+<kbd>Enter</kbd>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">time.sleep(10)</span></code> function causes code to wait for 10 seconds, which is plenty of time to notice how the cell changes in time:</p>
 <ul class="simple">
 <li><p>The label of the cell is <code class="docutils literal notranslate"><span class="pre">[*]</span></code> indicating that the kernel is running that cell</p></li>
@@ -940,7 +941,7 @@ Click on the cell and enter edit mode, we can now type in some markdown text lik
  <span class="o">-</span> <span class="n">three</span>
 </pre></div>
 </div>
-<p>and “shift+enter” to render the markdown to HTML.</p>
+<p>and <kbd>Shift</kbd>+<kbd>Enter</kbd> to render the markdown to HTML.</p>
 <a class="reference internal image-reference" href="../_images/markdown.png"><img alt="../_images/markdown.png" src="../_images/markdown.png" style="width: 600px;" /></a>
 <p>Again, in the next cell, change this cell to “Markdown”. To demonstrate displaying equations, enter:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## Some math
@@ -952,7 +953,7 @@ e^x=\sum_{i=0}^\infty \frac{1}{i!}x^i
 $$
 </pre></div>
 </div>
-<p>When you are done, type “shift+enter” to render the markdown document.</p>
+<p>When you are done, type <kbd>Shift</kbd>+<kbd>Enter</kbd> to render the markdown document.</p>
 <a class="reference internal image-reference" href="../_images/markdown_eq.png"><img alt="../_images/markdown_eq.png" src="../_images/markdown_eq.png" style="width: 600px;" /></a>
 <p>You can also do inline equations with a single “$” for example</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>This is an equation: $i^4$.
@@ -968,7 +969,7 @@ $$
 <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>When you “shift+enter” the text isn’t rendered.</p>
+<p>When you <kbd>Shift</kbd>+<kbd>Enter</kbd> the text isn’t rendered.</p>
 <p>This is a way of entering text/source that you do not want the Notebook to do anything with (i.e., no rendering).</p>
 <p><img alt="Raw" src="../_images/raw.png" /></p>
 </div>
@@ -981,7 +982,7 @@ $$
 <p>You can move a cell up or down by clicking and dragging.</p>
 <div class="admonition alert alert-warning">
 <p class="admonition-title">Warning</p>
-<p>Cells can be executed in any order you want.  You just have to select the cell and “shift+enter”, and select the cells in any order you want.  However, if you share your notebook there is an implicit expectation to execute the cells in the order in which they are presented in the notebook. Be careful with this! If variables are reused or redefined between cells, reordering them could have unintended consequences!</p>
+<p>Cells can be executed in any order you want.  You just have to select the cell and <kbd>Shift</kbd>+<kbd>Enter</kbd>, and select the cells in any order you want.  However, if you share your notebook there is an implicit expectation to execute the cells in the order in which they are presented in the notebook. Be careful with this! If variables are reused or redefined between cells, reordering them could have unintended consequences!</p>
 </div>
 </div>
 <div class="section" id="special-variables">
@@ -995,22 +996,22 @@ $$
 </pre></div>
 </div>
 <div class="admonition alert alert-danger">
-    <p class="admonition-title" style="font-weight:bold">Danger</p>
-        If the cell you to refer to does not have a return value, this will raise an error.
+<p class="admonition-title">Danger</p>
+<p>If the cell you to refer to does not have a return value, this will raise an error.</p>
 </div>
-You can equivalently use the variables `Out[2]` or `In[2]` to retrieve the output and input (as a string).
+<p>You can equivalently use the variables <code class="docutils literal notranslate"><span class="pre">Out[2]</span></code> or <code class="docutils literal notranslate"><span class="pre">In[2]</span></code> to retrieve the output and input (as a string).</p>
 <a class="reference internal image-reference" href="../_images/special_vars.png"><img alt="../_images/special_vars.png" src="../_images/special_vars.png" style="width: 600px;" /></a>
 </div>
 <div class="section" id="shell-commands">
 <h3>Shell Commands<a class="headerlink" href="#shell-commands" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>In the next code cell, enter the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!pwd
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pwd
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">!</span></code> allows you to write shell commands. A shell command is a command that is run by the host operating system, not the Python kernel. Executing this cell will “print the working directory” (i.e. your current directory).</p>
-<p>You can even use the output of shell commands as input to python code. As in:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>files = !ls
-print(files)
+<p>You can even use the output of shell commands as input to Python code. As in:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="o">!</span>ls
+<span class="nb">print</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1029,15 +1030,15 @@ print(files)
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">timeit</span> <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The “%timeit” magic is a timer that runs the command multiple times, measuring how long it takes and gathering timing statistics. Hit “shift+enter” to see it work.</p>
-<p>Multiline magics work on entire cells, and these have a double-%.  For example, here is a multiline version of the timeit magic:</p>
+<p>The “%timeit” magic is a timer that runs the command multiple times, measuring how long it takes and gathering timing statistics. Hit <kbd>Shift</kbd>+<kbd>Enter</kbd> to see it work.</p>
+<p>Multiline magics work on entire cells, and these have a double-<code class="docutils literal notranslate"><span class="pre">%</span></code>.  For example, here is a multiline version of the timeit magic:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">timeit</span>
 
 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>and “shift+enter” to run it.  This will time the entire cell.</p>
+<p>and <kbd>Shift</kbd>+<kbd>Enter</kbd> to run it.  This will time the entire cell.</p>
 <a class="reference internal image-reference" href="../_images/magics.png"><img alt="../_images/magics.png" src="../_images/magics.png" style="width: 600px;" /></a>
 </div>
 </div>
@@ -1228,7 +1229,7 @@ print(files)
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 26 January 2022.
+          Last updated on 27 January 2022.
         </p>
       </div>
     </div>

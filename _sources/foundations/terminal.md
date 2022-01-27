@@ -67,7 +67,7 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
    $ nano mysci.py
    ```
 
-6. Change the script to include the classic first command - printing, "Hello, world!".
+6. Change the script to include the classic first command: printing, "Hello, world!".
 
    ```python
    print("Hello, world!")
@@ -76,7 +76,7 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
 7. Save your file and exit the navigator. How to do this is dependent on your chosen text editor.
 
    - In Vim the command is `:wq`.
-   - In Nano it is `Ctrl + O` to save and `Ctrl + X` to exit (where you will be prompted if you want to save it, if modified).
+   - In Nano it is {kbd}`Ctrl`\+{kbd}`O` to save and {kbd}`Ctrl`\+{kbd}`X` to exit (where you will be prompted if you want to save it, if modified).
 
 8. In the terminal, execute your script:
 
