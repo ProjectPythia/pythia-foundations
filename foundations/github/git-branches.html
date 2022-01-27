@@ -602,8 +602,38 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#content-section">
-   Content section
+  <a class="reference internal nav-link" href="#what-are-git-branches">
+   What are Git branches?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-a-new-branch">
+   Creating a New Branch
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#switching-branches">
+   Switching Branches
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-a-remote-branch">
+   Setting up a Remote Branch
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merging-branches">
+   Merging Branches
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pulling">
+   Pulling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deleting-branches">
+   Deleting Branches
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -636,15 +666,17 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="git-branches">
 <h1>Git Branches<a class="headerlink" href="#git-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This content is under construction!</p>
-</div>
+<p>The best practices for a simple workflow for suggesting changes to a GitHub repository are: create your own fork of the repository, make a branch from your fork where your changes are made, and then suggest these changes move to the upstream repository with a pull request. This section of the GitHub chapter assumes you have read the prior GitHub sections, are at least somewhat familiar with git commands and the vocabulary (“cloning,” “forking,” “merging,” “pull request” etc), and that you have already created your own fork of the <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">GitHub Sandbox Repository</a> hosted by Project Pythia. That fork is where you will make your first Git branch while following along with this chapter.</p>
 <div class="section" id="overview">
 <h2>Overview:<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ol class="simple">
-<li><p>Overview 1</p></li>
-<li><p>Overview 2</p></li>
+<li><p>What are Git Branches</p></li>
+<li><p>Creating a New Branch</p></li>
+<li><p>Switching Branches</p></li>
+<li><p>Setting up a Remote Branch</p></li>
+<li><p>Merging Branches</p></li>
+<li><p>Pulling</p></li>
+<li><p>Deleting Branches</p></li>
 </ol>
 </div>
 <div class="section" id="prerequisites">
@@ -668,26 +700,194 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </ul>
 </div>
 <hr class="docutils" />
-<div class="section" id="content-section">
-<h2>Content section<a class="headerlink" href="#content-section" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="section" id="what-are-git-branches">
+<h2>What are Git branches?<a class="headerlink" href="#what-are-git-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Git branches allow for non-linear or differing revision histories of a repository. At a point in time, you can split your repository into multiple development paths (branches) where you can make different commits in each, typically with the ultimate intention of merging these branches and development changes together at a later time.</p>
+<p>Branching is one of git’s methods for helping with collaborative document editing, much like “change tracking” in Google Docs or Microsoft Word. It enables multiple people to edit copies of the same document content, while reducing or managing edit collisions, and with the ultimate aim of merging everyones changes together later. It also allows the same person to edit multiple copies of the same document, but with different intentions. Some reasons for wanting to split your repository into multiple paths (i.e. branches) is to experiment with different methods of solving a problem (before deciding which method will ultimately be merged) and to work on different problems within the same codebase (without confusing which code changes are relevant to which problem). There are also some convenience bots on GitHub that, if installed in the repository, may not act as intended if your work is all on the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch.</p>
+<p>These branches can live on your computer (local) or on GitHub (remote). They are brought together through Git <em>pushes</em>, <em>pulls</em>, and <em>pull requests</em>. <em>Pushing</em> is how you transfer changes from your local repository to a remote repository. <em>Pulling</em> is how you fetch upstream changes into your branch. And <em>Pull Requests</em> are how you suggest the changes you’ve made on your branch to the upstream codebase.</p>
+<p>One rule of thumb is for each development feature to have its own development branch until that feature is ready to be added to the upstream (remote) codebase. This allows you to compartmentalize your pull requests so that smaller working changes can be merged upstream independently of one another. For example, you might have a complete or near-complete feature on its own branch with an open pull request awaiting review. While you wait for feedback from the team before merging it, you can still work on a second feature on a second branch without affecting your first feature’s pull request. <strong>We encourage you to always do your work in a designated branch.</strong></p>
+<p><img alt="basic branch" src="../../_images/basicbranch.png" />
+The above flowchart demonstraties commits (C1 through C5) added to different branches of a personal fork of the upstream main repository. Different commits can be added to either branch in any order without depending on or knowing about each other.</p>
+</div>
+<div class="section" id="creating-a-new-branch">
+<h2>Creating a New Branch<a class="headerlink" href="#creating-a-new-branch" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="info admonition">
+<p class="admonition-title">Have you forked the repository?</p>
+<p>Having forked (NOT just cloned) the <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">GitHub Sandbox Repository</a> is essential for following the steps in this book chapter. See the chapter on <a class="reference internal" href="github-cloning-forking.html"><span class="doc std std-doc">GitHub Cloning and Forking</span></a>.</p>
+</div>
+<p>From your terminal, navigate to your local clone of your <code class="docutils literal notranslate"><span class="pre">Github-Sandbox</span></code> Repository fork:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">github</span><span class="o">-</span><span class="n">sandbox</span>
+</pre></div>
+</div>
+<p>Let’s begin by checking the status of our repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<p><img alt="Git Status" src="../../_images/1-gitstatus.png" /></p>
+<p>You will see that you are already on a branch called “main”. And that this branch is up-to-date with “origin/main” and has nothing to commit.</p>
+<div class="info admonition">
+<p class="admonition-title">The Main Branch</p>
+<p>Historically, the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch was called the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch. The name change was relatively recent, so all of your GitHub repositories may not reflect this yet. See instructions to change your branch name at <a class="reference external" href="https://github.com/github/renaming">Github’s Branch Renaming documentation</a>.</p>
+</div>
+<p>Now check the status of your remote repository with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+<p><img alt="Git Remote" src="../../_images/2-gitremote.png" /></p>
+<p>We are set up to pull (denoted as ‘fetch’ in the output above) and push from the same remote repository.</p>
+<p>Next, check all of your exising Git branches with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+<p><img alt="Git Branch" src="../../_images/3-gitbranch.png" /></p>
+<p>You will see one local branch (<code class="docutils literal notranslate"><span class="pre">main</span></code>) and your remote branch (<code class="docutils literal notranslate"><span class="pre">remotes/origin/HEAD</span></code> and <code class="docutils literal notranslate"><span class="pre">remotes/origin/main</span></code>, where <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> points to <code class="docutils literal notranslate"><span class="pre">main</span></code>). <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> is the pointer to the current branch reference, or in essence, a pointer to your last commit. More on this in a later section.</p>
+<p>Now, before we make some sample changes to our codebase, let’s create a new branch where we’ll make these changes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="n">newbranch</span>
+</pre></div>
+</div>
+<p>Check that this branch was created with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
+</pre></div>
+</div>
+<p><img alt="Git NewBranch" src="../../_images/4-gitnewbranch.png" /></p>
+<p>This will display the current and the new branch. You’ll notice that we are still on branch <code class="docutils literal notranslate"><span class="pre">main</span></code> and will need to switch branches to work in our <code class="docutils literal notranslate"><span class="pre">newbranch</span></code>.</p>
+</div>
+<div class="section" id="switching-branches">
+<h2>Switching Branches<a class="headerlink" href="#switching-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>To switch branches use the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> as in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">newbranch</span>
+</pre></div>
+</div>
+<p>To check your current branch use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<p><img alt="Git Checkout" src="../../_images/5-gitcheckout.png" /></p>
+<p>Notice that <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> doesn’t say anything about being up-to-date, as before. This is because this branch only exists locally, not in our upstream GitHub fork.</p>
+</div>
+<div class="section" id="setting-up-a-remote-branch">
+<h2>Setting up a Remote Branch<a class="headerlink" href="#setting-up-a-remote-branch" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Before we push this branch upstream, let’s make some sample changes by creating a new empty file, with the ending “.py”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">touch</span> <span class="n">hello</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p><img alt="Git Status" src="../../_images/6-samplechange.png" /></p>
+<p>You can check that this file has been created by comparing an <code class="docutils literal notranslate"><span class="pre">ls</span></code> before and after this command, and also with a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> that will show your new untracked file.</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> your new file and check the status again.</p>
+<p><img alt="Git Add" src="../../_images/6a-gitadd.png" /></p>
+<p>Your new branch is now one commit ahead of your main branch. You can see this with a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log.</span></code></p>
+<p><img alt="Git Log" src="../../_images/6b-gitlog.png" /></p>
+<p>In a real workflow, you would continue making edits and git commits on a branch until you are ready to push up to GitHub.</p>
+<p>Try to do this with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<p><img alt="Git Push" src="../../_images/6c-gitpush.png" /></p>
+<p>You will get an error message, “fatal: The current branch newbranch has no upstream branch.” So what is the proper method for getting our local branch changes up to GitHub?</p>
+<p>First, we need to set an upstream branch to direct our local push to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span> <span class="n">origin</span> <span class="n">newbranch</span>
+</pre></div>
+</div>
+<p>Thankfully, Git provided this command in the previous error message.</p>
+<p><img alt="Set Upstream" src="../../_images/6d-setupstream.png" /></p>
+<p>We can see that this worked by doing a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-a</span></code></p>
+<p>Notice the new branch called <code class="docutils literal notranslate"><span class="pre">remotes/origin/newbranch</span></code>. And when you do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> you’ll see that we are up to date with this new remote branch.</p>
+<p><img alt="Git Commit Status" src="../../_images/7-github-branchandstatus.png" /></p>
+<p>On future commits you will not have to repeat these steps, as your remote branch will already be established. Simply push with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> to have your remote branch reflect your future local changes.</p>
+<p><img alt="remote" src="../../_images/remote.png" />
+The above flowchart demonstrates adding commits locally (C3 and C4) before pushing them to the corresponding remote branch.</p>
+</div>
+<div class="section" id="merging-branches">
+<h2>Merging Branches<a class="headerlink" href="#merging-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>At this point, we will demonstrate how to merge branches via a Pull Request. Merging is how you bring your split branches of a repository back together again.</p>
+<p><img alt="PR" src="../../_images/PR.png" />
+The above flowchart demonstrates a simple Pull Request (PR1), the upstream main repository has accepted the changes from the Feature 2 branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature2 branch can now be safely deleted. This flowchart has simplified out the remote and local versions of the Feature2 branch.</p>
+<p>The demonstration will move from your local terminal to GitHub. Go to your fork of the <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">GitHub Sandbox Repository</a>. One fast way to get to your fork, is to click the “fork” button and then follow the link underneath the message, “You’ve already forked github-sandbox.”</p>
+<p>When you’ve navigated to your fork, you should see a message box alerting you that your branch <code class="docutils literal notranslate"><span class="pre">newbranch</span></code> had recent changes with the option to generate an open pull request. This pull request would take the changes from your <code class="docutils literal notranslate"><span class="pre">newbranch</span></code> branch and suggest them for the original upstream ProjectPythia github-sandbox repository. You’ll also notice that you are on branch <code class="docutils literal notranslate"><span class="pre">main</span></code>, but that there are now 2 branches.</p>
+<p><img alt="GitHub" src="../../_images/8-github.png" /></p>
+<p>If you click on the branch <code class="docutils literal notranslate"><span class="pre">main</span></code> you’ll see the list of these branches.</p>
+<p><img alt="GitHub Branches" src="../../_images/9-github-seebranches.png" /></p>
+<p>There you can click on the branch <code class="docutils literal notranslate"><span class="pre">newbranch</span></code> to switch branches.</p>
+<p><img alt="New Branch" src="../../_images/10-github-newbranch.png" /></p>
+<p>Here you will see the message, “This branch is 1 commit ahead of ProjectPythia:main.” Next to this message you’ll see either the option to “Contribute” (which opens a pull request) or “Fetch Upstream” (which pulls in changes from the original repository). And just above your files you’ll see your most recent commit.</p>
+<p>Click on the “Open a Pull Request” button under the “Contribute” drop-down.</p>
+<p><img alt="Contribute" src="../../_images/11-newbranch-contribute.png" /></p>
+<p>This will send you to a new page. Notice that you are now in “ProjectPythia/github-sandbox” and not your fork.</p>
+<p><img alt="Compare" src="../../_images/12-compare.png" /></p>
+<p>The page will have the two branches you are comparing with an arrow indicating which branch is to be merged into which. Here, <code class="docutils literal notranslate"><span class="pre">base</span></code> is the upstream origin and <code class="docutils literal notranslate"><span class="pre">head</span></code> is your forked repository. If you wanted, you could click on these branches to switch the merge configuration. Underneath that you’ll see a green message, “Able to merge. These branches can be automatically merged.” This message means that there are no conflicts. We will discuss conflicts in a later chapter.</p>
+<p>In a one-commit pull request, the pull request title defaults to your commit message. You can change this if you’d like. There is also a space to add a commit message. This is your opportunity to explain your changes to the owners of the upstream repository.</p>
+<p><img alt="Message" src="../../_images/13-message.png" /></p>
+<p>And if you scroll down, you’ll see a summary of this pull request with every commit and changed file listed.</p>
+<p><img alt="Summary" src="../../_images/14-prsummary.png" /></p>
+<p>Click the arrow next to “Create Pull Request” to change this to a draft pull request.</p>
+<p><img alt="To Draft" src="../../_images/15-todraft.png" /></p>
+<p>Once you’ve clicked “Draft Pull Request,” you will be directed to the page of your new pull request. Here you can add more comments or request reviews.</p>
+<p><img alt="Draft PR" src="../../_images/16-draft.png" /></p>
+<p>Clicking “Files Changed” allows you to see all of the changes that would be merged with this pull request.</p>
+<p><img alt="Files" src="../../_images/17-fileschanged.png" /></p>
+<p>If you are working in a repository that has automatic checks, it is a good idea to wait for these checks to pass successfully before you request reviewers or change to a non-draft pull request. Do this by clicking “Ready for Review.”</p>
+<p><img alt="Review" src="../../_images/18-review.png" /></p>
+<p>When working on a project with a larger team, do NOT merge your pull request before you have the approval of your teammates. Every team has their own requirements and best practice workflows, and will discuss/approve/reject pull requests together. We will cover more about the ways to interact with pull requests through conversations and reviews in a later section.</p>
+<p>To someone with write permissions on the repository, the ability to merge will look like this green button:
+<img alt="Green" src="../../_images/20-green.png" /></p>
+<p>However, this pull request will NOT be merged, as the GitHub-Sandbox repository is intended to be static.</p>
+<p><img alt="remotePR" src="../../_images/remotePR.png" />
+The above flowchart demonstrates a Pull Request (PR1) without simplifying out the remote vs local versions of the Feature2branch. Typically multiple pushes are made from your local to remote branch before a pull request is drafted to take all of those commits (C3, C4, C6, and C7) into the Upstream Main branch.</p>
+</div>
+<div class="section" id="pulling">
+<h2>Pulling<a class="headerlink" href="#pulling" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Once a team member’s pull request has been merged, you will find that these upstream changes are not automatically included in your fork or your branches. In order to include the changes from the upstream main branch, you will need to do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>.</p>
+<p><img alt="pull" src="../../_images/pull.png" />
+The above flowchart demonstrates pulling in the upstream changes from Upstream Main after the pull request PR1 has been merged. Before continuing to work, with new commits (C6), it is best to pull in the upstream changes. The local vs remote branches have been simplified out of this diagram.</p>
+<p>First check if there are any upstream changes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<p>Then, if there are no conflicts:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> is a combination of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code>. That is it updates the remote tracking branches (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code>) AND updates your current branch with any new commits on the remote tracking branch (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code>).</p>
+<p><img alt="team" src="../../_images/team.png" />
+The above flowchart demonstrates pulling in the upstream changes from Upstream Main in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository by pull requests. It is important for each author to do regular <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pulls</span></code> to stay up to date with each other’s contributions. The local vs remote branches have been simplified out of this diagram.</p>
+</div>
+<div class="section" id="deleting-branches">
+<h2>Deleting Branches<a class="headerlink" href="#deleting-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>After the feature you worked on has been completed and merged, you may want to delete your branch.</p>
+<p>To do this locally, you must first switch back to <code class="docutils literal notranslate"><span class="pre">main</span></code> or any non-target branch. Then you can enter</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>for example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="n">newbranch</span>
+</pre></div>
+</div>
+<p>To delete the branch remotely, type</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">&lt;</span><span class="n">remote</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">delete</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;.</span>
+</pre></div>
+</div>
+<p>as in</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">--</span><span class="n">delete</span> <span class="n">jukent</span><span class="o">/</span><span class="n">newbranch</span>
+</pre></div>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
-<li><p>Sum 1</p></li>
-<li><p>Sum 2</p></li>
+<li><p>Git Branches allow you to independently work on different features of a project via differing revision histories of a repository.</p></li>
+<li><p>A useful workflow is to create a new branch locally, switch to it and set up a remote branch. During your revision, push to your upstream branch and pull from main as often as necessary. Then suggest your edits via a pull request and, if desired, delete your branch after the merge.</p></li>
 </ul>
 <div class="section" id="whats-next">
 <h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>Next lesson</p>
+<p>Opening a Pull Request on GitHub</p>
 </div>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ol class="simple">
-<li><p>Ref 1</p></li>
-<li><p>Ref 2</p></li>
+<li><p>“GitHub.com Help Documentation.” GitHub Docs, https://docs.github.com/en.</p></li>
+<li><p>Paul, Kevin. “Python Tutorial Seminar Series - Github.” Project Pythia, YouTube, 12 May 2021, https://www.youtube.com/watch?v=fYkPn0Nttlg.</p></li>
 </ol>
 </div>
 </div>
