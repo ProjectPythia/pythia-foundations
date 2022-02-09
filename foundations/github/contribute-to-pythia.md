@@ -2,7 +2,9 @@
 
 ## Overview:
 
-1. Contribute to Project Pythia by creating a PR in the Pythia Foundations repo
+1. Suggest a change
+2. Make the edits
+3. Create a pull request
 
 ## Prerequisites
 
@@ -14,7 +16,7 @@
 
 ---
 
-Now that you have become more familiar with how to use Git and GitHub, you might have an idea or some material that you want to contribute to Project Pythia! The [Project Pythia Contributor's Guide](https://projectpythia.org/contributing.html) describes the steps required to submit a PR to any of Project Pythia's repos, so here we will go through an example of submitting a PR to `pythia-foundations`.
+Now that you have become more familiar with how to use Git and GitHub, you might have an idea or some material that you want to contribute to Project Pythia! The [Project Pythia Contributor's Guide](https://projectpythia.org/contributing.html) describes the steps required to submit a PR to any of Project Pythia's repos. Here, we will go through an example of submitting a PR to `pythia-foundations`.
 
 ## Suggest a change
 
@@ -26,12 +28,12 @@ We could open an issue to suggest this change in order to get feedback on the id
 
 ## Make the edits
 
-We will follow the Forking Workflow described in the previous section of this tutorial, assuming `pythia-foundations` has already been forked:
+We will follow the [Forking Workflow](https://foundations.projectpythia.org/foundations/github/github-pull-request.html#forking-workflow) described in the previous section of this tutorial, assuming `pythia-foundations` has already been forked:
 
-- create a new branch with a descriptive name
-- make the changes and commit them locally
-- push to the remote repository
-- open a PR on GitHub
+- Create a new branch with a descriptive name
+- Make the changes and commit them locally
+- Push to the remote repository
+- Open a PR on GitHub
 
 First, making the new branch,
 
@@ -57,13 +59,13 @@ Then pushing to our remote aliased `origin`:
 git push origin clarify-sst-tos
 ```
 
-## Create a PR
+## Create a pull request
 
 Now, going to our remote repo on GitHub, forked from `pythia-foundations`, we see that recent changes have been made. By clicking on the "Compare & pull request" button, we can open a PR, proposing that our changes be merged into the main branch of `ProjectPythia/pythia-foundations`.
 
 <img src="../../images/GitHubContrFork.png" alt="GitHub Forked Repo">
 
-Project Pythia has an automated reviewer system: when a PR is created, two members of the organization will be randomly chosen to review it. If your PR is not immediately ready to be approved and merged, open it as a draft to delay the review process. Once it is ready, click "Ready for review" to take it out of draft mode.
+Project Pythia has an automated reviewer system: when a PR is created, two members of the organization will be randomly chosen to review it. If your PR is not immediately ready to be approved and merged, open it as a draft to delay the review process. As shown in this [Git Branches section](https://foundations.projectpythia.org/foundations/github/git-branches.html#merging-branches), the "Draft pull request" button is found using the arrow on the "Create pull request" button.
 
 Let's add the `content` tag and open this one as a draft for now:
 
@@ -73,7 +75,7 @@ For any PR opened in `pythia-foundations`, there will be a few checks that need 
 
 <img src="../../images/GitHubContrChecks.png" alt="GitHub Checks">
 
-Now we wait for any comments or reviews!
+Once it is ready, click "Ready for review" to take it out of draft mode. Now we wait for any comments or reviews!
 
 ---
 
