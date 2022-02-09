@@ -602,25 +602,23 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#content-section">
-   Content Section
+  <a class="reference internal nav-link" href="#suggest-a-change">
+   Suggest a change
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-the-edits">
+   Make the edits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-pull-request">
+   Create a pull request
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
    Summary
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#whats-next">
-     What’s Next?
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
   </a>
  </li>
 </ul>
@@ -636,15 +634,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="contribute-to-project-pythia-via-github">
 <h1>Contribute to Project Pythia via GitHub<a class="headerlink" href="#contribute-to-project-pythia-via-github" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This content is under construction!</p>
-</div>
 <div class="section" id="overview">
 <h2>Overview:<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ol class="simple">
-<li><p>Overview 1</p></li>
-<li><p>Overview 2</p></li>
+<li><p>Suggest a change</p></li>
+<li><p>Make the edits</p></li>
+<li><p>Create a pull request</p></li>
 </ol>
 </div>
 <div class="section" id="prerequisites">
@@ -666,29 +661,58 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <ul class="simple">
 <li><p><strong>Time to learn</strong>: 30 minutes</p></li>
 </ul>
-</div>
 <hr class="docutils" />
-<div class="section" id="content-section">
-<h2>Content Section<a class="headerlink" href="#content-section" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Now that you have become more familiar with how to use Git and GitHub, you might have an idea or some material that you want to contribute to Project Pythia! The <a class="reference external" href="https://projectpythia.org/contributing.html">Project Pythia Contributor’s Guide</a> describes the steps required to submit a PR to any of Project Pythia’s repos. Here, we will go through an example of submitting a PR to <code class="docutils literal notranslate"><span class="pre">pythia-foundations</span></code>.</p>
+</div>
+<div class="section" id="suggest-a-change">
+<h2>Suggest a change<a class="headerlink" href="#suggest-a-change" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>One simple way to contribute is to fix a typo or suggest a change to one of the tutorials. For example, in the <a class="reference external" href="https://foundations.projectpythia.org/core/xarray/computation-masking.html">Computations and Masks with Xarray tutorial</a>, let’s suggest a clarification that the sea surface temperature is called <code class="docutils literal notranslate"><span class="pre">tos</span></code> in the dataset we are using.</p>
+<img alt="Computations and Masks with Xarray" src="../../_images/GitHubContrXarray.png" />
+<p>We could open an issue to suggest this change in order to get feedback on the idea before we take the time to edit files, but since this is such a small change, let’s just create a PR.</p>
+</div>
+<div class="section" id="make-the-edits">
+<h2>Make the edits<a class="headerlink" href="#make-the-edits" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>We will follow the <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-pull-request.html#forking-workflow">Forking Workflow</a> described in the previous section of this tutorial, assuming <code class="docutils literal notranslate"><span class="pre">pythia-foundations</span></code> has already been forked:</p>
+<ul class="simple">
+<li><p>Create a new branch with a descriptive name</p></li>
+<li><p>Make the changes and commit them locally</p></li>
+<li><p>Push to the remote repository</p></li>
+<li><p>Open a PR on GitHub</p></li>
+</ul>
+<p>First, making the new branch,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch clarify-sst-tos
+git checkout clarify-sst-tos
+</pre></div>
+</div>
+<p>There are a variety of ways to make changes, depending on the type of file, as well as preference. Here we want to edit a Jupyter Notebook (file extension <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>), so we can use JupyterLab. We find the file of interest at <code class="docutils literal notranslate"><span class="pre">/core/xarray/computation-masking.ipynb</span></code> and add in some text:</p>
+<img alt="Notebook in JupyterLab" src="../../_images/GitHubContrJupyterLab.png" />
+<p>After saving and exiting (and checking for changes with a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>), we commit with the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add core/xarray/computation-masking.ipynb
+git commit -m <span class="s1">&#39;Mention that SST is called tos in the model&#39;</span>
+</pre></div>
+</div>
+<p>Then pushing to our remote aliased <code class="docutils literal notranslate"><span class="pre">origin</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push origin clarify-sst-tos
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-pull-request">
+<h2>Create a pull request<a class="headerlink" href="#create-a-pull-request" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Now, going to our remote repo on GitHub, forked from <code class="docutils literal notranslate"><span class="pre">pythia-foundations</span></code>, we see that recent changes have been made. By clicking on the “Compare &amp; pull request” button, we can open a PR, proposing that our changes be merged into the main branch of <code class="docutils literal notranslate"><span class="pre">ProjectPythia/pythia-foundations</span></code>.</p>
+<img alt="GitHub Forked Repo" src="../../_images/GitHubContrFork.png" />
+<p>Project Pythia has an automated reviewer system: when a PR is created, two members of the organization will be randomly chosen to review it. If your PR is not immediately ready to be approved and merged, open it as a draft to delay the review process. As shown in this <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/git-branches.html#merging-branches">Git Branches section</a>, the “Draft pull request” button is found using the arrow on the “Create pull request” button.</p>
+<p>Let’s add the <code class="docutils literal notranslate"><span class="pre">content</span></code> tag and open this one as a draft for now:</p>
+<img alt="GitHub PR Creation" src="../../_images/GitHubContrPR.png" />
+<p>For any PR opened in <code class="docutils literal notranslate"><span class="pre">pythia-foundations</span></code>, there will be a few checks that need to pass before merging is allowed. Once the <code class="docutils literal notranslate"><span class="pre">deploy-book</span> <span class="pre">/</span> <span class="pre">build</span></code> check has completed (which will likely take a few minutes), there will be a Deployment Preview URL commented by the github-actions bot that will take you to a build of the Pythia Foundations book with your edits. There you can ensure your edits show up as expected.</p>
+<img alt="GitHub Checks" src="../../_images/GitHubContrChecks.png" />
+<p>Once it is ready, click “Ready for review” to take it out of draft mode. Now we wait for any comments or reviews!</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
-<li><p>Sum 1</p></li>
-<li><p>Sum 2</p></li>
+<li><p>You can contribute to Project Pythia by suggesting edits or adding content with a Pull Request</p></li>
 </ul>
-<div class="section" id="whats-next">
-<h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>Next lesson</p>
-</div>
-</div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<ol class="simple">
-<li><p>Ref 1</p></li>
-<li><p>Ref 2</p></li>
-</ol>
 </div>
 </div>
 
@@ -851,7 +875,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 7 February 2022.
+          Last updated on 9 February 2022.
         </p>
       </div>
     </div>
