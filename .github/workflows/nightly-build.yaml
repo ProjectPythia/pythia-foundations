@@ -34,7 +34,7 @@ jobs:
         if: |
           always()
           && (steps.build.outcome != 'success' || steps.conda.outcome != 'success')
-        uses: actions/github-script@v5
+        uses: actions/github-script@v6
         with:
           script: |
 
