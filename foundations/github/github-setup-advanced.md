@@ -17,7 +17,7 @@
 
 ## GitHub secure key generation
 
-When you signed up for your free account on [GitHub](https://github.com), you established a _user id_ and its corresponding _password_. Many of the repositories that GitHub servers are readable from anywhere, not even requiring a GitHub account.
+When you signed up for your free account on [GitHub](https://github.com), you established a _user id_ and its corresponding _password_. Many of the repositories that GitHub serves are readable from anywhere, not even requiring a GitHub account.
 
 However, especially when you use the `git` command-line interface to access a GitHub-hosted repo, there are cases when you need to provide an additional set of login credentials, such as:
 
@@ -71,6 +71,20 @@ Follow the steps with helpful screenshots at [GitHub's Connecting to GitHub with
 :class: tip
 If using the *ssh* protocol to clone *or* push, you *must* have generated and created an ssh key-pair.
 ```
+
+```{admonition} Tip:
+:class: tip
+If using the *ssh* protocol to clone *or* push, you *must* have generated and created an ssh key-pair.
+```
+
+---
+
+```{admonition} HTTPS vs SSH: Either is fine!
+:class: note
+Either **https** or **ssh** works fine. Choose whatever you prefer. See [this overview](https://www.toolsqa.com/git/ssh-protocol/) of the pros and cons of each protocol.
+```
+
+---
 
 ## GitHub notifications
 
@@ -173,3 +187,4 @@ In the next section, we will learn the basics of version control using command-l
 
 1. [GitHub Personal Access Token (https)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 1. [GitHub Public/Private Keypair (ssh)](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+1. [Remotes in GitHub (Carpentries Tutorial)](https://swcarpentry.github.io/git-novice/07-github/index.html)
