@@ -72,11 +72,6 @@ Follow the steps with helpful screenshots at [GitHub's Connecting to GitHub with
 If using the *ssh* protocol to clone *or* push, you *must* have generated and created an ssh key-pair.
 ```
 
-```{admonition} Tip:
-:class: tip
-If using the *ssh* protocol to clone *or* push, you *must* have generated and created an ssh key-pair.
-```
-
 ---
 
 ```{admonition} HTTPS vs SSH: Either is fine!
