@@ -602,6 +602,38 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#github-secure-key-generation">
+   GitHub secure key generation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generate-a-secure-personal-access-token-for-https">
+   Generate a secure personal access token for https
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generate-an-ssh-public-private-keypair">
+   Generate an SSH public/private keypair
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#github-notifications">
+   GitHub notifications
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#email-notifications">
+     Email notifications
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stop-spamming-me-github">
+   Stop spamming me, GitHub!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
@@ -631,15 +663,11 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="advanced-github-setup">
 <h1>Advanced GitHub Setup<a class="headerlink" href="#advanced-github-setup" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This content is under construction!</p>
-</div>
 <div class="section" id="overview">
 <h2>Overview:<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ol class="simple">
-<li><p>Overview 1</p></li>
-<li><p>Overview 2</p></li>
+<li><p>Configure your GitHub account for secure logins via ssh and/or https</p></li>
+<li><p>Set up notifications on repositories you own or follow</p></li>
 </ol>
 </div>
 <div class="section" id="prerequisites">
@@ -659,35 +687,110 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </tbody>
 </table>
 <ul class="simple">
-<li><p><strong>Time to learn</strong>: 30 minutes</p></li>
+<li><p><strong>Time to learn</strong>: 15 minutes</p></li>
 </ul>
+</div>
 <hr class="docutils" />
-<ul class="simple">
-<li><p>Motivation: this will lead into the basic-git section, where the user will clone the initial repo created here, and then stage/commit/push/pull</p>
-<ul>
-<li><p>SSH and/or HTTPS key generation</p></li>
-<li><p>Create initial repo</p></li>
-</ul>
-</li>
-</ul>
+<div class="section" id="github-secure-key-generation">
+<h2>GitHub secure key generation<a class="headerlink" href="#github-secure-key-generation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>When you signed up for your free account on <a class="reference external" href="https://github.com">GitHub</a>, you established a <em>user id</em> and its corresponding <em>password</em>. Many of the repositories that GitHub serves are readable from anywhere, not even requiring a GitHub account.</p>
+<p>However, especially when you use the <code class="docutils literal notranslate"><span class="pre">git</span></code> command-line interface to access a GitHub-hosted repo, there are cases when you need to provide an additional set of login credentials, such as:</p>
+<ol class="simple">
+<li><p>When you want to clone a <em>private</em>, as opposed to <em>public</em> GitHub repository (<strong>read-access</strong>)</p></li>
+<li><p>When you wish to <em>push</em> to a repo (<strong>write-access</strong>)</p></li>
+</ol>
+<p>For these use-cases, you won’t be able to simply type your GitHub user id and password from the command line. Instead, you need to set up <em>access tokens</em> that live in two places: in your GitHub account, and in your local computer’s file system.</p>
+<p>GitHub supports two means of key-based access: via <em>https</em> and <em>ssh</em>.</p>
+<p>For example, one can clone <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">Project Pythia’s Sandbox repository</a> using one URL for the https protocol:</p>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_https_URL.png"><img alt="GitHub Clone https" src="../../_images/GitHub_Setup_Advanced_https_URL.png" style="width: 600px;" /></a>
+<hr class="docutils" />
+<p>The URL in this case is <strong>https://github.com/ProjectPythia/github-sandbox.git</strong></p>
+<p>Similarly, if you click on the <strong>SSH</strong> tab:</p>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_ssh_URL.png"><img alt="GitHub Clone ssh" src="../../_images/GitHub_Setup_Advanced_ssh_URL.png" style="width: 600px;" /></a>
+<hr class="docutils" />
+<p>Here, the URL is <strong>git&#64;github.com:ProjectPythia/github-sandbox.git</strong></p>
+</div>
+<div class="section" id="generate-a-secure-personal-access-token-for-https">
+<h2>Generate a secure personal access token for https<a class="headerlink" href="#generate-a-secure-personal-access-token-for-https" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>First, you will create a secure token in your GitHub account settings, and then use the token on your local computer.</p>
+<p>Follow the steps with helpful screenshots at <a class="reference external" href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub’s PAT Creation</a> page.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip:</p>
+<p>If using the <em>https</em> protocol to <em>push</em> to a remote repo, you must have generated and downloaded a personal access token. You <em>may</em> also need it when cloning, <em>if</em> the remote repo is <em>not</em> open to all.</p>
+</div>
+</div>
+<div class="section" id="generate-an-ssh-public-private-keypair">
+<h2>Generate an SSH public/private keypair<a class="headerlink" href="#generate-an-ssh-public-private-keypair" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>First, on your local computer, you will create an SSH <em>public/private keypair</em>, and then upload the <em>public key</em> to your GitHub account.</p>
+<p>Follow the steps with helpful screenshots at <a class="reference external" href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">GitHub’s Connecting to GitHub with SSH</a> page.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip:</p>
+<p>If using the <em>ssh</em> protocol to clone <em>or</em> push, you <em>must</em> have generated and created an ssh key-pair.</p>
+</div>
+<hr class="docutils" />
+<div class="note admonition">
+<p class="admonition-title">HTTPS vs SSH: Either is fine!</p>
+<p>Either <strong>https</strong> or <strong>ssh</strong> works fine. Choose whatever you prefer. See <a class="reference external" href="https://www.toolsqa.com/git/ssh-protocol/">this overview</a> of the pros and cons of each protocol.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="github-notifications">
+<h2>GitHub notifications<a class="headerlink" href="#github-notifications" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>In keeping with the social network aspect of GitHub, you can <em>follow</em> particular repositories that are of interest to you. Additionally, once you begin contributing to a repository, you may wish to be notified when pull requests are made, issues are posted, your code review is requested, and so on. While it’s easy to have GitHub email you at the address you used when you registered for your GitHub account, you may wish to avoid email clutter.</p>
+<div class="section" id="email-notifications">
+<h3>Email notifications<a class="headerlink" href="#email-notifications" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Let’s say you wish to monitor (or <em>watch</em>) the Project Pythia GitHub Sandbox repository and receive emails about it:</p>
+<p>Click on the <strong>Watch</strong> link near the top of the page:</p>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Watch.png"><img alt="GitHub Watch" src="../../_images/GitHub_Setup_Advanced_Watch.png" style="width: 600px;" /></a>
+<hr class="docutils" />
+<p>You can then select what type of notifications you wish to receive. For example, you may want to receive <em>all notifications</em> related to that repo:</p>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Watch_All_Activity.png"><img alt="GitHub Watch All Activity" src="../../_images/GitHub_Setup_Advanced_Watch_All_Activity.png" style="width: 600px;" /></a>
+<hr class="docutils" />
+<p>You will then receive email at the address you used when you signed up for GitHub whenever activity occurs on that repo.</p>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Unwatch.png"><img alt="GitHub Unwatch" src="../../_images/GitHub_Setup_Advanced_Unwatch.png" style="width: 600px;" /></a>
+<hr class="docutils" />
+<p>You can stop watching that repo by just clicking on the now-labeled <em>Unwatch</em> link again, and choosing <em>Participating and &#64;mentions</em> to toggle it back to <em>Unwatch</em>.</p>
+</div>
+</div>
+<div class="section" id="stop-spamming-me-github">
+<h2>Stop spamming me, GitHub!<a class="headerlink" href="#stop-spamming-me-github" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>It’s easy to become overwhelmed with email from one or more repos that you are following and/or participating in! Instead, you may wish to disable email notifications.
+In order to set you notification settings, go to <strong>https://github/settings/notifications</strong>. You can, for example, uncheck the <strong>Email</strong> boxes to cease receiving notifications that way:</p>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notification_Settings.png"><img alt="GitHub Notification Settings" src="../../_images/GitHub_Setup_Advanced_Notification_Settings.png" style="width: 600px;" /></a>
+<hr class="docutils" />
+<p>Instead, get in the habit of clicking on the <em>Notifications</em> icon when logged into GitHub:</p>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notifications.png"><img alt="GitHub Notifications" src="../../_images/GitHub_Setup_Advanced_Notifications.png" style="width: 600px;" /></a>
+<hr class="docutils" />
+<p>You can click on the <em>Notifications</em> icon and scroll through all notifications from repos that you opted into receiving:</p>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notifications_Browser.png"><img alt="GitHub Notification Browser" src="../../_images/GitHub_Setup_Advanced_Notifications_Browser.png" style="width: 600px;" /></a>
+<hr class="docutils" />
+<p>Use the <em>Filter notifications</em> control to display only those that meet certain criteria. For example, say you only wanted to view topics related to the <em>MetPy</em> repo:</p>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notification_Filter.png"><img alt="GitHub Notification Filter" src="../../_images/GitHub_Setup_Advanced_Notification_Filter.png" style="width: 600px;" /></a>
+<hr class="docutils" />
+<div class="tip admonition">
+<p class="admonition-title">Tip:</p>
+<p>In the list of notifications, you can unsubscribe as shown below.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notifications_Unsubscribe.png"><img alt="GitHub Notification Unsubscribe" src="../../_images/GitHub_Setup_Advanced_Notifications_Unsubscribe.png" style="width: 600px;" /></a>
 </div>
 <hr class="docutils" />
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
-<li><p>Sum 1</p></li>
-<li><p>Sum 2</p></li>
+<li><p>GitHub uses <strong>secure tokens</strong> to enable <em>write</em> (and sometimes <em>read</em>) <em>access</em> to GitHub repositories.</p></li>
+<li><p>You can opt-in to notifications on a repo. The default, which can be easily changed, is to receive email.</p></li>
 </ul>
 <div class="section" id="whats-next">
 <h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>Next lesson</p>
+<p>In the next section, we will learn the basics of version control using command-line <code class="docutils literal notranslate"><span class="pre">git</span></code>.</p>
 </div>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ol class="simple">
-<li><p>Ref 1</p></li>
-<li><p>Ref 2</p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub Personal Access Token (https)</a></p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">GitHub Public/Private Keypair (ssh)</a></p></li>
+<li><p><a class="reference external" href="https://swcarpentry.github.io/git-novice/07-github/index.html">Remotes in GitHub (Carpentries Tutorial)</a></p></li>
 </ol>
 </div>
 </div>
@@ -851,7 +954,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 14 February 2022.
+          Last updated on 15 February 2022.
         </p>
       </div>
     </div>
