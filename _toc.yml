@@ -43,6 +43,7 @@ parts:
       - file: core/matplotlib
         sections:
           - file: core/matplotlib/matplotlib
+          - file: core/matplotlib/matplotlib-additional-topics-1
       - file: core/cartopy
         sections:
           - file: core/cartopy/cartopy
