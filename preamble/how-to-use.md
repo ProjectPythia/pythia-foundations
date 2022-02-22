@@ -37,7 +37,7 @@ in the Scientific Python Ecosystem. These packages serve as the
 building blocks for many of the more geoscience focused components
 of the Scientific Python Ecosystem.
 
-## Running Pythia Foundation examples
+## Running Pythia Foundations examples
 
 All of the content in Pythia Foundations is authored in Markdown
 and presented in the form of [Jupyter
@@ -55,7 +55,7 @@ can run, and even modify, the example code in real time!! This
 interaction allows you to experiment with different parameters and
 observe instantly how results change.
 
-There are two ways that you can execute the Pythia Foundation book
+There are two ways that you can execute the Pythia Foundations book
 chapters. Both are described below.
 
 ### Interacting with Jupyter Notebooks in the cloud via Binder
@@ -70,9 +70,9 @@ on the rocket ship icon, (see figure below), and be sure to select
 “launch Binder”. After a moment you should be presented with a
 notebook that you can interact with. I.e. you’ll be able to execute
 and even change the example programs. You’ll see that the code cells
-have no output at first, until you execute them by pressing “Shift
-\+ Enter”. Complete details on how to interact with a live Jupyter
-notebook are described in [Getting Started with
+have no output at first, until you execute them by pressing
+{kbd}`Shift`\+{kbd}`Enter`. Complete details on how to interact with
+a live Jupyter notebook are described in [Getting Started with
 Jupyter](https://foundations.projectpythia.org/foundations/getting-started-jupyter.html).
 
 ### Interacting with Jupyter Books locally
@@ -86,11 +86,30 @@ and select “.ipynb”.
 
 That was the easy part. Getting the notebook to execute locally may
 take a little more work. The book was created to run in a particular
-Python environment, managed with Conda. To ensure success you should
-follow the instructions in the Pythia Foundations contributor’s
-[guide](https://foundations.projectpythia.org/appendix/how-to-contribute.html)
-on how to configure your Python environment. Once your environment
-is configured and “activated”, change your working directory to the
+Python environment, managed with Conda. If you don't have a up-to-date
+version of Conda on your machine, you'll want to install one. A brief
+introduction to installing Conda is available [here](https://foundations.projectpythia.org/foundations/conda.html).
+
+Once you've installed Conda you will need to create and activate a Conda environment
+that is compatible with Pythia Foundation's notebooks. This
+can be done with two commands from the terminal, one to create the
+environment and one to activate it:
+
+```
+conda env create --force -f https://raw.githubusercontent.com/ProjectPythia/pythia-foundations/main/environment.yml
+conda activate pythia-book-dev
+```
+
+You should only need to create the environment once (run the first
+command above). But if you download another notebook later, you will
+need to activate _pythia-book-dev_ if
+it is not currently active, for example if you open up a new
+terminal window, or deactivate _pythia-book-dev_ explicitly with
+the `conda` command. Again, more information on Conda can be
+found [here](https://foundations.projectpythia.org/foundations/conda.html).
+
+Now that your _pythia-book-dev_ environment is activated,
+change your working directory to the
 location where you downloaded the notebook (.ipynb file) and start
 the Jupyter Notebook server. For example if you downloaded the
 notebook file to your home directory you would do:
@@ -102,11 +121,13 @@ notebook file to your home directory you would do:
 
 A local Jupyter Notebook server should open in your web browser.
 Simply open the .ipynb file using the Notebook server’s file browser
-and you are good to go. Alternatively, you could “clone the site”
+and you are good to go. If you want to work with many Pythia Foundations
+notebooks, you might want to “clone the site”
 and download all of the notebooks. First click on the Pythia
 Foundations GitHub icon (see figure below) and select repository.
 Then follow the instructions in our Getting Started with GitHub
 [guide](https://foundations.projectpythia.org/foundations/getting-started-github.html#)
-for cloning a repository.
+for cloning a repository. The steps used above for configuring your
+Conda environment should work for this method as well.
 
 ![Annotated Pythia Foundations home page](../images/foundations_diagram.png)
