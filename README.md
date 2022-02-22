@@ -1,6 +1,6 @@
-# Project Pythia Foundations
+# Pythia Foundations
 
-This is the source repository for the Project Pythia Foundations content collection.
+This is the source repository for the Pythia Foundations content collection.
 
 The rendered site can be found at https://foundations.projectpythia.org
 

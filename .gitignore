@@ -136,3 +136,6 @@ content/pages/contributing.md
 content/pages/code_of_conduct.md
 content/notebooks_gallery/
 .jupyter_cache/
+
+# Notebook outputs
+core/pandas/nino_analyzed_output.csv
