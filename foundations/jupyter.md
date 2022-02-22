@@ -69,13 +69,13 @@ jupyter lab —browser=chrome
 
    Select "Python 3" to use the Python version you just installed in the `pythia_foundations_env` conda environment.
 
-3. Change the first notebook cell to include the classic first command - printing, "Hello, world!".
+3. Change the first notebook cell to include the classic first command: printing, "Hello, world!".
 
    ```python
    print("Hello, world!")
    ```
 
-4. Run your cell with **SHIFT ENTER** and see that the results are printed below the cell.
+4. Run your cell with {kbd}`Shift`\+{kbd}`Enter` and see that the results are printed below the cell.
 
    ![Jupyter - Hello World](../images/mysci.png)
 
@@ -94,7 +94,9 @@ Then you can quit Jupyter by:
 - clicking the "Quit" button on the top right, or
 - typing `exit` into the terminal
 
-Alternatively you can simultaneously shutdown and exit the Jupyter session by typing `Ctrl-C` in the terminal and confirming that you do want to "shutdown this notebook server."
+Alternatively you can simultaneously shutdown and exit the Jupyter session by typing
+{kbd}`Ctrl`\+{kbd}`C` in the terminal and confirming that you do want to
+"shutdown this notebook server."
 
 ---
 
