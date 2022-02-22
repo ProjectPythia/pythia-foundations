@@ -43,17 +43,16 @@
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Cartopy" href="../cartopy.html" />
+    <link rel="next" title="Additional Topics Part 1: Histograms, Pie Charts, and Animation" href="matplotlib-additional-topics-1.html" />
     <link rel="prev" title="Matplotlib" href="../matplotlib.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -380,6 +379,11 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Matplotlib Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matplotlib-additional-topics-1.html">
+     Additional Topics Part 1: Histograms, Pie Charts, and Animation
     </a>
    </li>
   </ul>
@@ -903,7 +907,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8ea84972e0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe658f6e430&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_15_1.png" src="../../_images/matplotlib_15_1.png" />
@@ -1004,7 +1008,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8ea8381c10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fe658e59640&gt;
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_25_1.png" src="../../_images/matplotlib_25_1.png" />
@@ -1043,7 +1047,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8ea8313370&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fe658de86a0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_28_1.png" src="../../_images/matplotlib_28_1.png" />
@@ -1083,7 +1087,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8ea825f910&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe658d34a60&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_34_1.png" src="../../_images/matplotlib_34_1.png" />
@@ -1354,7 +1358,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.contour.QuadContourSet at 0x7f8e94e3fd00&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.contour.QuadContourSet at 0x7fe658a683d0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/matplotlib_56_1.png" src="../../_images/matplotlib_56_1.png" />
@@ -1426,7 +1430,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="whats-next">
 <h2>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>In the next notebook, we will cover more plotting functionality such as histograms, pie charts, and animation</p>
+<p><a class="reference internal" href="matplotlib-additional-topics-1.html"><span class="doc std std-doc">More plotting functionality</span></a> such as histograms, pie charts, and animation.</p>
 </div>
 <div class="section" id="resources-and-references">
 <h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -1469,10 +1473,10 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
             <p class="prev-next-title">Matplotlib</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../cartopy.html" title="next page">
+    <a class='right-next' id="next-link" href="matplotlib-additional-topics-1.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Cartopy</p>
+        <p class="prev-next-title">Additional Topics Part 1: Histograms, Pie Charts, and Animation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -1598,7 +1602,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 21 February 2022.
+          Last updated on 22 February 2022.
         </p>
       </div>
     </div>

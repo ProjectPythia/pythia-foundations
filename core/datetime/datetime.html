@@ -43,15 +43,14 @@
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -382,6 +381,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../matplotlib/matplotlib.html">
      Matplotlib Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matplotlib/matplotlib-additional-topics-1.html">
+     Additional Topics Part 1: Histograms, Pie Charts, and Animation
     </a>
    </li>
   </ul>
@@ -899,7 +903,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1645460633.6313603
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1645568381.988581
 </pre></div>
 </div>
 </div>
@@ -920,7 +924,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The benchmark took 1.001173973083496 seconds
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The benchmark took 1.001319408416748 seconds
 </pre></div>
 </div>
 </div>
@@ -1048,7 +1052,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5353
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5354
 </pre></div>
 </div>
 </div>
@@ -1120,8 +1124,8 @@ The type of the &#39;tide_length&#39; variable is &lt;class &#39;datetime.timede
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive 2022-02-21 16:23:54.685734.
-I am time zone aware 2022-02-21 16:23:54.685761+00:00.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive 2022-02-22 22:19:43.050037.
+I am time zone aware 2022-02-22 22:19:43.050070+00:00.
 </pre></div>
 </div>
 </div>
@@ -1144,8 +1148,8 @@ I am time zone aware 2022-02-21 16:23:54.685761+00:00.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive: 2022-02-21 16:23:54.691805.
-I am time zone aware: 2022-02-21 09:23:54.703061-07:00.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive: 2022-02-22 22:19:43.056142.
+I am time zone aware: 2022-02-22 15:19:43.069366-07:00.
 </pre></div>
 </div>
 </div>
@@ -1167,8 +1171,8 @@ I am time zone aware: 2022-02-21 09:23:54.703061-07:00.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The UTC time is February 21, 2022, 4:23PM.
-The &#39;US/Mountain&#39; time is February 21, 2022, 9:23AM.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The UTC time is February 22, 2022, 10:19PM.
+The &#39;US/Mountain&#39; time is February 22, 2022, 3:19PM.
 </pre></div>
 </div>
 </div>
@@ -1363,7 +1367,7 @@ The &#39;US/Mountain&#39; time is February 21, 2022, 9:23AM.
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 21 February 2022.
+          Last updated on 22 February 2022.
         </p>
       </div>
     </div>
