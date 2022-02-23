@@ -386,6 +386,11 @@ const thebe_selector_output = ".output, .cell_output"
      Additional Topics Part 1: Histograms, Pie Charts, and Animation
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="additional-topics2.html">
+     Annotations, Colorbars, and Advanced Layouts
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -643,8 +648,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#line-plots">
-   Line plots
+  <a class="reference internal nav-link" href="#basic-line-plots">
+   Basic Line Plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#labels-and-grid-lines">
+   Labels and Grid Lines
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -657,16 +667,16 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
      Adding labels and a grid
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#customizing-colors">
-     Customizing colors
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#working-with-multiple-panels-in-a-figure">
-   Working with multiple panels in a figure
+  <a class="reference internal nav-link" href="#customizing-colors">
+   Customizing colors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subplots">
+   Subplots
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -726,13 +736,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#imshow">
-   imshow
+  <a class="reference internal nav-link" href="#displaying-images">
+   Displaying Images
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contour-contourf">
-   contour/contourf
+  <a class="reference internal nav-link" href="#contour-and-filled-contour-plots">
+   Contour and Filled Contour Plots
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -768,10 +778,14 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>We will cover the basics of plotting within Python, using the Matplotlib library, including a few different plots available within the library.</p>
 <ol class="simple">
-<li><p>Create a basic line plot.</p></li>
-<li><p>Add labels and grid lines to the plot.</p></li>
-<li><p>Plot multiple series of data.</p></li>
-<li><p>Plot image, contour, and filled contour plots.</p></li>
+<li><p>Figure and axes</p></li>
+<li><p>Basic line plots</p></li>
+<li><p>Labels and grid lines</p></li>
+<li><p>Customizing colors</p></li>
+<li><p>Subplots</p></li>
+<li><p>Scatterplots</p></li>
+<li><p>Displaying Images</p></li>
+<li><p>Contour and filled contour plots.</p></li>
 </ol>
 </div>
 <div class="section" id="prerequisites">
@@ -886,8 +900,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <p>Now let’s make our first plot with Matplotlib. Matplotlib has two core objects: the <code class="docutils literal notranslate"><span class="pre">Figure</span></code> and the <code class="docutils literal notranslate"><span class="pre">Axes</span></code>. The <code class="docutils literal notranslate"><span class="pre">Axes</span></code> is an individual plot with an x-axis, a y-axis, labels, etc; it has all of the various plotting methods we use. A <code class="docutils literal notranslate"><span class="pre">Figure</span></code> holds one or more <code class="docutils literal notranslate"><span class="pre">Axes</span></code> on which we draw; think of the <code class="docutils literal notranslate"><span class="pre">Figure</span></code> as the level at which things are saved to files (e.g. PNG, SVG)</p>
 <p><img alt="anatomy of a figure" src="https://matplotlib.org/stable/_images/sphx_glr_anatomy_001.png" /></p>
 </div>
-<div class="section" id="line-plots">
-<h2>Line plots<a class="headerlink" href="#line-plots" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="section" id="basic-line-plots">
+<h2>Basic Line Plots<a class="headerlink" href="#basic-line-plots" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Let’s create a <code class="docutils literal notranslate"><span class="pre">Figure</span></code> whose dimensions, if printed out on hardcopy, would be 10 inches wide and 6 inches long (assuming a landscape orientation). We then create an <code class="docutils literal notranslate"><span class="pre">Axes</span></code>, consisting of a single subplot, on the <code class="docutils literal notranslate"><span class="pre">Figure</span></code>. After that, we call <code class="docutils literal notranslate"><span class="pre">plot</span></code>, with <code class="docutils literal notranslate"><span class="pre">times</span></code> as the data along the x-axis (independent values) and <code class="docutils literal notranslate"><span class="pre">temps</span></code> as the data along the y-axis (the dependent values).</p>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Info</p>
@@ -902,17 +916,17 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># Plot times as x-variable and temperatures as y-variable</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">temps</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">temps</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe658f6e430&gt;]
-</pre></div>
-</div>
-<img alt="../../_images/matplotlib_15_1.png" src="../../_images/matplotlib_15_1.png" />
+<img alt="../../_images/matplotlib_15_0.png" src="../../_images/matplotlib_15_0.png" />
 </div>
 </div>
+</div>
+<div class="section" id="labels-and-grid-lines">
+<h2>Labels and Grid Lines<a class="headerlink" href="#labels-and-grid-lines" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <div class="section" id="adding-axes-labels">
 <h3>Adding axes labels<a class="headerlink" href="#adding-axes-labels" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Next, add x- and y-axis labels to our <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object.</p>
@@ -928,7 +942,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_18_0.png" src="../../_images/matplotlib_18_0.png" />
+<img alt="../../_images/matplotlib_19_0.png" src="../../_images/matplotlib_19_0.png" />
 </div>
 </div>
 <p>We can also add a title to the plot and increase the fontsize:</p>
@@ -941,7 +955,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_20_0.png" src="../../_images/matplotlib_20_0.png" />
+<img alt="../../_images/matplotlib_21_0.png" src="../../_images/matplotlib_21_0.png" />
 </div>
 </div>
 <p>Of course, we can do so much more…</p>
@@ -1003,20 +1017,18 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Add a legend to the upper left corner of the plot</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fe658e59640&gt;
-</pre></div>
+<img alt="../../_images/matplotlib_26_0.png" src="../../_images/matplotlib_26_0.png" />
 </div>
-<img alt="../../_images/matplotlib_25_1.png" src="../../_images/matplotlib_25_1.png" />
 </div>
 </div>
 </div>
 <div class="section" id="customizing-colors">
-<h3>Customizing colors<a class="headerlink" href="#customizing-colors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<h2>Customizing colors<a class="headerlink" href="#customizing-colors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>We’re not restricted to the default look of the plots, but rather we can override style attributes, such as <code class="docutils literal notranslate"><span class="pre">linestyle</span></code> and <code class="docutils literal notranslate"><span class="pre">color</span></code>. <code class="docutils literal notranslate"><span class="pre">color</span></code> can accept a wide array of options for color, such as <code class="docutils literal notranslate"><span class="pre">red</span></code> or <code class="docutils literal notranslate"><span class="pre">blue</span></code> or HTML color codes. Here we use some different shades of red taken from the Tableau color set in matplotlib, by using <code class="docutils literal notranslate"><span class="pre">tab:red</span></code> for color.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1042,21 +1054,18 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Add a legend to the upper left corner of the plot</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fe658de86a0&gt;
-</pre></div>
-</div>
-<img alt="../../_images/matplotlib_28_1.png" src="../../_images/matplotlib_28_1.png" />
+<img alt="../../_images/matplotlib_29_0.png" src="../../_images/matplotlib_29_0.png" />
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="working-with-multiple-panels-in-a-figure">
-<h2>Working with multiple panels in a figure<a class="headerlink" href="#working-with-multiple-panels-in-a-figure" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="section" id="subplots">
+<h2>Subplots<a class="headerlink" href="#subplots" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Working with multiple panels in a figure</p>
 <p>Start first with some more fake data - in this case, we add dewpoint data!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1069,7 +1078,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <p>Now, let’s plot it up, with the other temperature data!</p>
 <div class="section" id="using-add-subplot-to-create-two-different-subplots-within-the-figure">
 <h3>Using add_subplot to create two different subplots within the figure<a class="headerlink" href="#using-add-subplot-to-create-two-different-subplots-within-the-figure" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>We can use the <code class="docutils literal notranslate"><span class="pre">.add_subplot()</span></code> method to add subplots to our figure! The subplot arguements are formatted as follows:
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">.add_subplot()</span></code> method to add subplots to our figure! The subplot arguments are formatted as follows:
 <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">columns,</span> <span class="pre">subplot_number)</span></code></p>
 <p>For example, if we want a single row, with two columns, we use the following code block</p>
 <div class="cell docutils container">
@@ -1082,15 +1091,27 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 
 <span class="c1"># Create a plot for dewpoint</span>
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">dewpoint</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:green&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">dewpoint</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:green&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe658d34a60&gt;]
+<img alt="../../_images/matplotlib_35_0.png" src="../../_images/matplotlib_35_0.png" />
+</div>
+</div>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">plot.subplots()</span></code> with inputs <code class="docutils literal notranslate"><span class="pre">nrows</span></code> and <code class="docutils literal notranslate"><span class="pre">ncolumns</span></code> to initialize your subplot axes, <code class="docutils literal notranslate"><span class="pre">ax</span></code>.</p>
+<p>Index your axes, as in <code class="docutils literal notranslate"><span class="pre">ax[0].plot()</span></code> to decide which subplot you’re plotting to.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">temps</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:red&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">dewpoint</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:green&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<img alt="../../_images/matplotlib_34_1.png" src="../../_images/matplotlib_34_1.png" />
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/matplotlib_37_0.png" src="../../_images/matplotlib_37_0.png" />
 </div>
 </div>
 </div>
@@ -1109,15 +1130,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="c1"># Create a plot for dewpoint</span>
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">dewpoint</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:green&#39;</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Dewpoint&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Dewpoint&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Dewpoint&#39;)
-</pre></div>
-</div>
-<img alt="../../_images/matplotlib_36_1.png" src="../../_images/matplotlib_36_1.png" />
+<img alt="../../_images/matplotlib_39_0.png" src="../../_images/matplotlib_39_0.png" />
 </div>
 </div>
 </div>
@@ -1139,15 +1157,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">dewpoint</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:green&#39;</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Dewpoint&#39;</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">110</span><span class="p">,</span> <span class="mi">130</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">110</span><span class="p">,</span> <span class="mi">130</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(110.0, 130.0)
-</pre></div>
-</div>
-<img alt="../../_images/matplotlib_38_1.png" src="../../_images/matplotlib_38_1.png" />
+<img alt="../../_images/matplotlib_41_0.png" src="../../_images/matplotlib_41_0.png" />
 </div>
 </div>
 </div>
@@ -1168,15 +1183,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="c1"># Create a plot for dewpoint</span>
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">dewpoint</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:green&#39;</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Dewpoint&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Dewpoint&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Dewpoint&#39;)
-</pre></div>
-</div>
-<img alt="../../_images/matplotlib_40_1.png" src="../../_images/matplotlib_40_1.png" />
+<img alt="../../_images/matplotlib_43_0.png" src="../../_images/matplotlib_43_0.png" />
 </div>
 </div>
 </div>
@@ -1235,7 +1247,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(95.0, 162.0)
 </pre></div>
 </div>
-<img alt="../../_images/matplotlib_43_1.png" src="../../_images/matplotlib_43_1.png" />
+<img alt="../../_images/matplotlib_46_1.png" src="../../_images/matplotlib_46_1.png" />
 </div>
 </div>
 </div>
@@ -1254,12 +1266,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Temperature (surface)&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Temperature (1000 hPa)&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Temperature Cross Plot&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_45_0.png" src="../../_images/matplotlib_45_0.png" />
+<img alt="../../_images/matplotlib_48_0.png" src="../../_images/matplotlib_48_0.png" />
 </div>
 </div>
 <div class="admonition alert alert-info">
@@ -1277,12 +1289,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Temperature (surface)&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Temperature (1000 hPa)&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Temperature Cross Plot&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_47_0.png" src="../../_images/matplotlib_47_0.png" />
+<img alt="../../_images/matplotlib_50_0.png" src="../../_images/matplotlib_50_0.png" />
 </div>
 </div>
 <p>Let’s put together the following:</p>
@@ -1304,17 +1316,17 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Temperature (surface)&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Temperature (1000 hPa)&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Temperature Cross Plot&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_49_0.png" src="../../_images/matplotlib_49_0.png" />
+<img alt="../../_images/matplotlib_52_0.png" src="../../_images/matplotlib_52_0.png" />
 </div>
 </div>
 </div>
-<div class="section" id="imshow">
-<h2>imshow<a class="headerlink" href="#imshow" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="section" id="displaying-images">
+<h2>Displaying Images<a class="headerlink" href="#displaying-images" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">imshow</span></code> displays the values in an array as colored pixels, similar to a heat map.</p>
 <p>Here is some fake data to work with - let’s use a bivariate normal distribution.</p>
 <div class="cell docutils container">
@@ -1339,12 +1351,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_53_0.png" src="../../_images/matplotlib_53_0.png" />
+<img alt="../../_images/matplotlib_56_0.png" src="../../_images/matplotlib_56_0.png" />
 </div>
 </div>
 </div>
-<div class="section" id="contour-contourf">
-<h2>contour/contourf<a class="headerlink" href="#contour-contourf" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="section" id="contour-and-filled-contour-plots">
+<h2>Contour and Filled Contour Plots<a class="headerlink" href="#contour-and-filled-contour-plots" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">contour</span></code> creates contours around data.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">contourf</span></code> creates filled contours around data.</p></li>
@@ -1353,15 +1365,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.contour.QuadContourSet at 0x7fe658a683d0&gt;
-</pre></div>
-</div>
-<img alt="../../_images/matplotlib_56_1.png" src="../../_images/matplotlib_56_1.png" />
+<img alt="../../_images/matplotlib_59_0.png" src="../../_images/matplotlib_59_0.png" />
 </div>
 </div>
 <p>Now let’s label our contour lines</p>
@@ -1369,27 +1378,24 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;a list of 13 text.Text objects&gt;
-</pre></div>
-</div>
-<img alt="../../_images/matplotlib_58_1.png" src="../../_images/matplotlib_58_1.png" />
+<img alt="../../_images/matplotlib_61_0.png" src="../../_images/matplotlib_61_0.png" />
 </div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">contourf</span></code> method stands for contour fill, which fills in the contours!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_60_0.png" src="../../_images/matplotlib_60_0.png" />
+<img alt="../../_images/matplotlib_63_0.png" src="../../_images/matplotlib_63_0.png" />
 </div>
 </div>
 <p>Finally, let’s create a figure using <code class="docutils literal notranslate"><span class="pre">imshow</span></code> and <code class="docutils literal notranslate"><span class="pre">contour</span></code> that is a heatmap in the colormap of our choice, then overlay black contours with a 0.5 contour interval.</p>
@@ -1408,7 +1414,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;a list of 7 text.Text objects&gt;
 </pre></div>
 </div>
-<img alt="../../_images/matplotlib_62_1.png" src="../../_images/matplotlib_62_1.png" />
+<img alt="../../_images/matplotlib_65_1.png" src="../../_images/matplotlib_65_1.png" />
 </div>
 </div>
 </div>
@@ -1602,7 +1608,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 22 February 2022.
+          Last updated on 23 February 2022.
         </p>
       </div>
     </div>

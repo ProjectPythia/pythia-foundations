@@ -388,6 +388,11 @@ const thebe_selector_output = ".output, .cell_output"
      Additional Topics Part 1: Histograms, Pie Charts, and Animation
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matplotlib/additional-topics2.html">
+     Annotations, Colorbars, and Advanced Layouts
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -1286,7 +1291,7 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([23. , 14. , 16.9, 21.8, 20.9, 25. , 27.7, 20.6,  9.5, 21.7])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([19.3, 18.1, 23. , 26.7, 21.6, 16.8, 14.6, 13.4, 11.8, 22.3])
 </pre></div>
 </div>
 </div>
@@ -1309,8 +1314,8 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.        , 17.96666667, 17.56666667, 19.86666667, 22.56666667,
-       24.53333333, 24.43333333, 19.26666667, 17.26666667,  0.        ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.        , 20.13333333, 22.6       , 23.76666667, 21.7       ,
+       17.66666667, 14.93333333, 13.26666667, 15.83333333,  0.        ])
 </pre></div>
 </div>
 </div>
@@ -1324,8 +1329,8 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([17.96666667, 17.56666667, 19.86666667, 22.56666667, 24.53333333,
-       24.43333333, 19.26666667, 17.26666667])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([20.13333333, 22.6       , 23.76666667, 21.7       , 17.66666667,
+       14.93333333, 13.26666667, 15.83333333])
 </pre></div>
 </div>
 </div>
@@ -1338,7 +1343,7 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([23. , 14. , 16.9, 21.8, 20.9, 25. , 27.7, 20.6,  9.5, 21.7])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([19.3, 18.1, 23. , 26.7, 21.6, 16.8, 14.6, 13.4, 11.8, 22.3])
 </pre></div>
 </div>
 </div>
@@ -1357,14 +1362,14 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[23. , 14. , 16.9],
-       [14. , 16.9, 21.8],
-       [16.9, 21.8, 20.9],
-       [21.8, 20.9, 25. ],
-       [20.9, 25. , 27.7],
-       [25. , 27.7, 20.6],
-       [27.7, 20.6,  9.5],
-       [20.6,  9.5, 21.7]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[19.3, 18.1, 23. ],
+       [18.1, 23. , 26.7],
+       [23. , 26.7, 21.6],
+       [26.7, 21.6, 16.8],
+       [21.6, 16.8, 14.6],
+       [16.8, 14.6, 13.4],
+       [14.6, 13.4, 11.8],
+       [13.4, 11.8, 22.3]])
 </pre></div>
 </div>
 </div>
@@ -1377,8 +1382,8 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([17.96666667, 17.56666667, 19.86666667, 22.56666667, 24.53333333,
-       24.43333333, 19.26666667, 17.26666667])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([20.13333333, 22.6       , 23.76666667, 21.7       , 17.66666667,
+       14.93333333, 13.26666667, 15.83333333])
 </pre></div>
 </div>
 </div>
@@ -1392,14 +1397,14 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[  23. ,   14. , 2000. ],
-       [  14. , 2000. ,   21.8],
-       [2000. ,   21.8,   20.9],
-       [  21.8,   20.9,   25. ],
-       [  20.9,   25. ,   27.7],
-       [  25. ,   27.7,   20.6],
-       [  27.7,   20.6,    9.5],
-       [  20.6,    9.5,   21.7]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[  19.3,   18.1, 2000. ],
+       [  18.1, 2000. ,   26.7],
+       [2000. ,   26.7,   21.6],
+       [  26.7,   21.6,   16.8],
+       [  21.6,   16.8,   14.6],
+       [  16.8,   14.6,   13.4],
+       [  14.6,   13.4,   11.8],
+       [  13.4,   11.8,   22.3]])
 </pre></div>
 </div>
 </div>
@@ -1426,13 +1431,13 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[6, 6, 7, ..., 7, 7, 8],
-       [7, 7, 7, ..., 7, 7, 7],
-       [7, 8, 7, ..., 6, 7, 6],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[6, 7, 6, ..., 7, 7, 6],
+       [7, 6, 7, ..., 7, 5, 7],
+       [7, 7, 7, ..., 7, 6, 7],
        ...,
-       [7, 7, 6, ..., 7, 6, 6],
-       [6, 8, 7, ..., 6, 8, 6],
-       [7, 7, 7, ..., 7, 7, 8]])
+       [7, 7, 7, ..., 7, 7, 6],
+       [7, 7, 7, ..., 6, 7, 6],
+       [7, 7, 7, ..., 7, 7, 7]])
 </pre></div>
 </div>
 </div>
@@ -1457,13 +1462,13 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[775. , 775. , 737.5, ..., 737.5, 737.5, 700. ],
-       [737.5, 737.5, 737.5, ..., 737.5, 737.5, 737.5],
-       [737.5, 700. , 737.5, ..., 775. , 737.5, 775. ],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[775. , 737.5, 775. , ..., 737.5, 737.5, 775. ],
+       [737.5, 775. , 737.5, ..., 737.5, 812.5, 737.5],
+       [737.5, 737.5, 737.5, ..., 737.5, 775. , 737.5],
        ...,
-       [737.5, 737.5, 775. , ..., 737.5, 775. , 775. ],
-       [775. , 700. , 737.5, ..., 775. , 700. , 775. ],
-       [737.5, 737.5, 737.5, ..., 737.5, 737.5, 700. ]])
+       [737.5, 737.5, 737.5, ..., 737.5, 737.5, 775. ],
+       [737.5, 737.5, 737.5, ..., 775. , 737.5, 775. ],
+       [737.5, 737.5, 737.5, ..., 737.5, 737.5, 737.5]])
 </pre></div>
 </div>
 </div>
@@ -1492,19 +1497,19 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ -7.46098668,  -9.27740162,  -6.70523577, ..., -10.67537796,
-         -8.67695717,  -9.6700783 ],
-       [ -6.55578807, -11.95945383, -12.92485493, ..., -11.29212916,
-        -10.79058047, -12.81685311],
-       [-11.28193785, -14.81637095, -11.20517965, ..., -10.95433737,
-         -8.03687942,  -9.62649897],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ -6.99419961, -14.34595075, -12.20903825, ...,  -9.17778247,
+        -11.51808592,  -7.30234902],
+       [ -6.12425315,  -8.68233864, -12.97178602, ..., -12.39271251,
+         -6.41256028, -10.20812539],
+       [ -6.56263406, -16.27839058, -10.75598457, ..., -13.55957395,
+         -6.97467012, -10.14746668],
        ...,
-       [-13.07574086, -12.81366655,  -7.08201926, ..., -11.66631632,
-         -6.49984849, -10.78492511],
-       [ -6.59911933, -12.77378328,  -8.72945173, ...,  -7.35585694,
-        -13.23658368,  -9.7669749 ],
-       [-10.04515313, -11.81988075,  -9.47583069, ..., -10.0831038 ,
-        -13.73426406, -13.29234759]])
+       [-12.2012229 ,  -9.05501861, -10.23879941, ..., -15.52211591,
+         -9.79410272,  -8.13913773],
+       [ -8.0679842 , -10.38601931, -10.6735767 , ...,  -9.65360503,
+         -9.33749654, -10.80388399],
+       [-15.00820699,  -8.1009965 ,  -9.40388852, ..., -11.1166911 ,
+        -10.16359083,  -9.19464928]])
 </pre></div>
 </div>
 </div>
@@ -1548,19 +1553,19 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ -7.46098668,  -9.27740162,  -6.70523577, ..., -10.67537796,
-         -8.67695717,  -9.6700783 ],
-       [ -6.55578807, -11.95945383, -12.92485493, ..., -11.29212916,
-        -10.79058047, -12.81685311],
-       [-11.28193785, -14.81637095, -11.20517965, ..., -10.95433737,
-         -8.03687942,  -9.62649897],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ -6.99419961, -14.34595075, -12.20903825, ...,  -9.17778247,
+        -11.51808592,  -7.30234902],
+       [ -6.12425315,  -8.68233864, -12.97178602, ..., -12.39271251,
+         -6.41256028, -10.20812539],
+       [ -6.56263406, -16.27839058, -10.75598457, ..., -13.55957395,
+         -6.97467012, -10.14746668],
        ...,
-       [-13.07574086, -12.81366655,  -7.08201926, ..., -11.66631632,
-         -6.49984849, -10.78492511],
-       [ -6.59911933, -12.77378328,  -8.72945173, ...,  -7.35585694,
-        -13.23658368,  -9.7669749 ],
-       [-10.04515313, -11.81988075,  -9.47583069, ..., -10.0831038 ,
-        -13.73426406, -13.29234759]])
+       [-12.2012229 ,  -9.05501861, -10.23879941, ..., -15.52211591,
+         -9.79410272,  -8.13913773],
+       [ -8.0679842 , -10.38601931, -10.6735767 , ...,  -9.65360503,
+         -9.33749654, -10.80388399],
+       [-15.00820699,  -8.1009965 ,  -9.40388852, ..., -11.1166911 ,
+        -10.16359083,  -9.19464928]])
 </pre></div>
 </div>
 </div>
@@ -1757,7 +1762,7 @@ f_i - f_{i+1} - f_{i-1}
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 22 February 2022.
+          Last updated on 23 February 2022.
         </p>
       </div>
     </div>
