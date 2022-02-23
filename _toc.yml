@@ -44,6 +44,7 @@ parts:
         sections:
           - file: core/matplotlib/matplotlib
           - file: core/matplotlib/matplotlib-additional-topics-1
+          - file: core/matplotlib/additional-topics2
       - file: core/cartopy
         sections:
           - file: core/cartopy/cartopy
