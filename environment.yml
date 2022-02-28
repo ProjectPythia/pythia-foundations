@@ -15,6 +15,7 @@ dependencies:
   - pythia-datasets
   - python=3.8
   - scipy
+  - ffmpeg
   - sqlalchemy<1.4
   - xarray
   - pip:
