@@ -7,12 +7,12 @@
 
 ## Prerequisites
 
-| Concepts              | Importance | Notes |
-| --------------------- | ---------- | ----- |
-| [What is GitHub?](what-is-github)| Necessary  |  GitHub user account required |
-| [GitHub Repositories](github-repos)| Necessary  |       |
-| [Issues and Discussions](github-issues) |   |       |
-| [Cloning and Forking a Repository](github-cloning-forking) |  |       |
+| Concepts                                                   | Importance | Notes                        |
+| ---------------------------------------------------------- | ---------- | ---------------------------- |
+| [What is GitHub?](what-is-github)                          | Necessary  | GitHub user account required |
+| [GitHub Repositories](github-repos)                        | Necessary  |                              |
+| [Issues and Discussions](github-issues)                    |            |                              |
+| [Cloning and Forking a Repository](github-cloning-forking) |            |                              |
 
 - **Time to learn**: 15 minutes
 

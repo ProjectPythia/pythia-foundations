@@ -15,13 +15,13 @@
 
 ## Prerequisites
 
-| Concepts              | Importance | Notes |
-| --------------------- | ---------- | ----- |
-| [What is GitHub?](what-is-github)| Necessary  |  GitHub user account required |
-| [GitHub Repositories](github-repos)| Necessary  |       |
-| [Issues and Discussions](github-issues) |   |       |
-| [Cloning and Forking a Repository](github-cloning-forking) |   |       |
-| [Advanced GitHub Setup](github-setup-advanced) |  |       |
+| Concepts                                                   | Importance | Notes                        |
+| ---------------------------------------------------------- | ---------- | ---------------------------- |
+| [What is GitHub?](what-is-github)                          | Necessary  | GitHub user account required |
+| [GitHub Repositories](github-repos)                        | Necessary  |                              |
+| [Issues and Discussions](github-issues)                    |            |                              |
+| [Cloning and Forking a Repository](github-cloning-forking) |            |                              |
+| [Advanced GitHub Setup](github-setup-advanced)             |            |                              |
 
 - **Time to learn**: 45 minutes
 
