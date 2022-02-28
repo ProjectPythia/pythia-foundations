@@ -628,6 +628,11 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-matplotlib">
+   Why Matplotlib?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#imports">
    Imports
   </a>
@@ -778,6 +783,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>We will cover the basics of plotting within Python, using the Matplotlib library, including a few different plots available within the library.</p>
 <ol class="simple">
+<li><p>Why Matplotlib?</p></li>
 <li><p>Figure and axes</p></li>
 <li><p>Basic line plots</p></li>
 <li><p>Labels and grid lines</p></li>
@@ -813,6 +819,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </ul>
 </div>
 <hr class="docutils" />
+<div class="section" id="why-matplotlib">
+<h2>Why Matplotlib?<a class="headerlink" href="#why-matplotlib" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Matplotlib is a plotting library for Python and is often the first plotting package Python-learners encounter. You may be wondering, “Why learn Matplotlib? Why not Seaborn or another plotting library first?”</p>
+<p>The simple answer is because of Matplotlib’s popularity. Matplotlib is one of the most popular Python packages. Because of its history as Python’s “go-to” plotting package, most other open source plotting libraries (including Seaborn) are built on top of Matplotlib and thus these improved or specialized plotting packages still inherit some of Matplotlib’s capabilities, syntax, and limitations. You will find it useful to be familiar with Matplotlib when learning other plotting libraries.</p>
+<p>Matplotlib supports a variety of output formats, chart types, and interactive options, and runs well on most operating systems and graphic backends. These features are part of “Why Matplotlib” is so popular, and the first plotting language we will introduce you to in this book.</p>
+</div>
 <div class="section" id="imports">
 <h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Let’s import the matplotlib library’s <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> interface; this interface is the simplest way to create new Matplotlib figures. To shorten this long name, we import it as <code class="docutils literal notranslate"><span class="pre">plt</span></code> to keep things short but clear.</p>
@@ -921,7 +933,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_15_0.png" src="../../_images/matplotlib_15_0.png" />
+<img alt="../../_images/matplotlib_16_0.png" src="../../_images/matplotlib_16_0.png" />
 </div>
 </div>
 </div>
@@ -942,7 +954,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_19_0.png" src="../../_images/matplotlib_19_0.png" />
+<img alt="../../_images/matplotlib_20_0.png" src="../../_images/matplotlib_20_0.png" />
 </div>
 </div>
 <p>We can also add a title to the plot and increase the fontsize:</p>
@@ -955,7 +967,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_21_0.png" src="../../_images/matplotlib_21_0.png" />
+<img alt="../../_images/matplotlib_22_0.png" src="../../_images/matplotlib_22_0.png" />
 </div>
 </div>
 <p>Of course, we can do so much more…</p>
@@ -1022,7 +1034,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_26_0.png" src="../../_images/matplotlib_26_0.png" />
+<img alt="../../_images/matplotlib_27_0.png" src="../../_images/matplotlib_27_0.png" />
 </div>
 </div>
 </div>
@@ -1059,7 +1071,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_29_0.png" src="../../_images/matplotlib_29_0.png" />
+<img alt="../../_images/matplotlib_30_0.png" src="../../_images/matplotlib_30_0.png" />
 </div>
 </div>
 </div>
@@ -1096,7 +1108,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_35_0.png" src="../../_images/matplotlib_35_0.png" />
+<img alt="../../_images/matplotlib_36_0.png" src="../../_images/matplotlib_36_0.png" />
 </div>
 </div>
 <p>You can also use <code class="docutils literal notranslate"><span class="pre">plot.subplots()</span></code> with inputs <code class="docutils literal notranslate"><span class="pre">nrows</span></code> and <code class="docutils literal notranslate"><span class="pre">ncolumns</span></code> to initialize your subplot axes, <code class="docutils literal notranslate"><span class="pre">ax</span></code>.</p>
@@ -1111,7 +1123,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_37_0.png" src="../../_images/matplotlib_37_0.png" />
+<img alt="../../_images/matplotlib_38_0.png" src="../../_images/matplotlib_38_0.png" />
 </div>
 </div>
 </div>
@@ -1135,7 +1147,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_39_0.png" src="../../_images/matplotlib_39_0.png" />
+<img alt="../../_images/matplotlib_40_0.png" src="../../_images/matplotlib_40_0.png" />
 </div>
 </div>
 </div>
@@ -1162,7 +1174,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_41_0.png" src="../../_images/matplotlib_41_0.png" />
+<img alt="../../_images/matplotlib_42_0.png" src="../../_images/matplotlib_42_0.png" />
 </div>
 </div>
 </div>
@@ -1188,7 +1200,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_43_0.png" src="../../_images/matplotlib_43_0.png" />
+<img alt="../../_images/matplotlib_44_0.png" src="../../_images/matplotlib_44_0.png" />
 </div>
 </div>
 </div>
@@ -1239,15 +1251,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="n">ax2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">257</span><span class="p">,</span> <span class="mi">312</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">95</span><span class="p">,</span> <span class="mi">162</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">95</span><span class="p">,</span> <span class="mi">162</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(95.0, 162.0)
-</pre></div>
-</div>
-<img alt="../../_images/matplotlib_46_1.png" src="../../_images/matplotlib_46_1.png" />
+<img alt="../../_images/matplotlib_47_0.png" src="../../_images/matplotlib_47_0.png" />
 </div>
 </div>
 </div>
@@ -1271,7 +1280,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_48_0.png" src="../../_images/matplotlib_48_0.png" />
+<img alt="../../_images/matplotlib_49_0.png" src="../../_images/matplotlib_49_0.png" />
 </div>
 </div>
 <div class="admonition alert alert-info">
@@ -1294,7 +1303,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_50_0.png" src="../../_images/matplotlib_50_0.png" />
+<img alt="../../_images/matplotlib_51_0.png" src="../../_images/matplotlib_51_0.png" />
 </div>
 </div>
 <p>Let’s put together the following:</p>
@@ -1321,7 +1330,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_52_0.png" src="../../_images/matplotlib_52_0.png" />
+<img alt="../../_images/matplotlib_53_0.png" src="../../_images/matplotlib_53_0.png" />
 </div>
 </div>
 </div>
@@ -1351,7 +1360,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_56_0.png" src="../../_images/matplotlib_56_0.png" />
+<img alt="../../_images/matplotlib_57_0.png" src="../../_images/matplotlib_57_0.png" />
 </div>
 </div>
 </div>
@@ -1370,7 +1379,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_59_0.png" src="../../_images/matplotlib_59_0.png" />
+<img alt="../../_images/matplotlib_60_0.png" src="../../_images/matplotlib_60_0.png" />
 </div>
 </div>
 <p>Now let’s label our contour lines</p>
@@ -1383,7 +1392,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_61_0.png" src="../../_images/matplotlib_61_0.png" />
+<img alt="../../_images/matplotlib_62_0.png" src="../../_images/matplotlib_62_0.png" />
 </div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">contourf</span></code> method stands for contour fill, which fills in the contours!</p>
@@ -1395,7 +1404,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib_63_0.png" src="../../_images/matplotlib_63_0.png" />
+<img alt="../../_images/matplotlib_64_0.png" src="../../_images/matplotlib_64_0.png" />
 </div>
 </div>
 <p>Finally, let’s create a figure using <code class="docutils literal notranslate"><span class="pre">imshow</span></code> and <code class="docutils literal notranslate"><span class="pre">contour</span></code> that is a heatmap in the colormap of our choice, then overlay black contours with a 0.5 contour interval.</p>
@@ -1406,15 +1415,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
     <span class="n">Z</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;PiYG&#39;</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="p">)</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;a list of 7 text.Text objects&gt;
-</pre></div>
-</div>
-<img alt="../../_images/matplotlib_65_1.png" src="../../_images/matplotlib_65_1.png" />
+<img alt="../../_images/matplotlib_66_0.png" src="../../_images/matplotlib_66_0.png" />
 </div>
 </div>
 </div>
