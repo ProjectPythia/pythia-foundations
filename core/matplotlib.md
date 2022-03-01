@@ -4,7 +4,7 @@
 
 ## Why Matplotlib?
 
-Matplotlib is a plotting library for Python and is often the first plotting package Python-learners encounter. You may be wondering, "Why learn Matplotlib? Why not Seaborn or another plotting library first?"
+Matplotlib is a plotting library for Python and is often the first plotting package Python-learners encounter. You may be wondering, "Why learn Matplotlib? Why not [Seaborn](https://seaborn.pydata.org) or another plotting library first?"
 
 The simple answer is because of Matplotlib's popularity. Matplotlib is one of the most popular Python packages. Because of its history as Python's "go-to" plotting package, most other open source plotting libraries (including Seaborn) are built on top of Matplotlib and thus these improved or specialized plotting packages still inherit some of Matplotlib's capabilities, syntax, and limitations. You will find it useful to be familiar with Matplotlib when learning other plotting libraries.
 
