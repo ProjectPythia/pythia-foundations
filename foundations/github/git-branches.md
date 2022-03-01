@@ -20,8 +20,8 @@ The best practices for a simple workflow for suggesting changes to a GitHub repo
 | [GitHub Repositories](github-repos)                        | Necessary   |                              |
 | [Issues and Discussions](github-issues)                    | Recommended |                              |
 | [Cloning and Forking a Repository](github-cloning-forking) | Necessary   |                              |
-| [Advanced GitHub Setup](github-setup-advanced)             |     Recommended        |                              |
-| [Basic Version Control with Git](basic-git)                |   Recommended          |                              |
+| [Advanced GitHub Setup](github-setup-advanced)             | Recommended |                              |
+| [Basic Version Control with Git](basic-git)                | Recommended |                              |
 
 - **Time to learn**: 30 minutes
 
