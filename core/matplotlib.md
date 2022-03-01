@@ -14,7 +14,7 @@ Matplotlib supports a variety of output formats, chart types, and interactive op
 
 ## In this section
 
-This section contains tutorials on basic plotting with [matplotlib](https://matplotlib.org).
+This section contains tutorials on basic plotting with [Matplotlib](https://matplotlib.org).
 
 From the [Matplotlib documentation](https://matplotlib.org) "Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python."
 
