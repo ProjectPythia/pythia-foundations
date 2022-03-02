@@ -188,7 +188,23 @@ The above flowchart demonstrates adding commits locally (C3 and C4) before pushi
 
 ## Merging Branches
 
-Merging is how you bring your split branches of a repository back together again. The most common way to merge branches is via a Pull Request.
+Merging is how you bring your split branches of a repository back together again. 
+
+If you want to merge 2 LOCAL branches together, the steps are as follows:
+
+Let's assume your 2 branches are named `branchA` and `branchB`. And you want your changes from `branchB` to now be reflected in `branchA`
+
+1. First checkout the branch you want to merge INTO:
+``` 
+git checkout branchA
+```
+
+2. Then execute a `merge`:
+```
+git merge branchB
+```
+
+A very common way of merging REMOTE branches is via a Pull Request.
 
 ![PR](../../images/PR.png)
 The above flowchart demonstrates a simple Pull Request (PR1), the upstream main repository has accepted the changes from the Feature 2 branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature2 branch can now be safely deleted. This flowchart has simplified out the remote and local versions of the Feature2 branch.
@@ -196,7 +212,7 @@ The above flowchart demonstrates a simple Pull Request (PR1), the upstream main 
 ![remotePR](../../images/remotePR.png)
 The above flowchart demonstrates a Pull Request (PR1) without simplifying out the remote vs local versions of the Feature2branch. Typically multiple pushes are made from your local to remote branch before a pull request is drafted to take all of those commits (C3, C4, C6, and C7) into the Upstream Main branch.
 
-We will continue this demonstration and cover the specifics of a [Pull Request](github-pull-request) more thoroughly in the next section.
+We will continue this demonstration and cover the specifics of merging via a [Pull Request](github-pull-request) more thoroughly in the next section.
 
 ## Pulling
 
