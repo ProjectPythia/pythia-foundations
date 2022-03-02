@@ -16,7 +16,7 @@
 | [Cloning and Forking](github-cloning-forking) | Necessary   |       |
 | [Basic version control with git](basic-git)   | Necessary   |       |
 | [Issues and Discussions](github-issues)       | Recommended |       |
-| [Branches](github-issues)       | Necessary |       |
+| [Branches](github-issues)                     | Necessary   |       |
 
 - **Time to learn**: 60 minutes
 
@@ -63,9 +63,10 @@ closes the PR.
 
 ## Opening a Pull Request
 
-The demonstration is a continuation from the [GitHub Branches chapter](github-branches). Here, we will move from your local terminal to GitHub. 
+The demonstration is a continuation from the [GitHub Branches chapter](github-branches). Here, we will move from your local terminal to GitHub.
 
 ### Navigate to Your Fork
+
 Go to your fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox). One fast way to get to your fork, is to click the "fork" button and then follow the link underneath the message, "You've already forked github-sandbox."
 
 When you've navigated to your fork, you should see a message box alerting you that your branch `newbranch` had recent changes with the option to generate an open pull request. This pull request would take the changes from your `newbranch` branch and suggest them for the original upstream ProjectPythia github-sandbox repository. You'll also notice that you are on branch `main`, but that there are now 2 branches.
@@ -73,6 +74,7 @@ When you've navigated to your fork, you should see a message box alerting you th
 ![GitHub](../../images/8-github.png)
 
 ### Switch Branches
+
 If you click on the branch `main` you'll see the list of these branches.
 
 ![GitHub Branches](../../images/9-github-seebranches.png)
@@ -84,6 +86,7 @@ There you can click on the branch `newbranch` to switch branches.
 Here you will see the message, "This branch is 1 commit ahead of ProjectPythia:main." Next to this message you'll see either the option to "Contribute" (which opens a pull request) or "Fetch Upstream" (which pulls in changes from the original repository). And just above your files you'll see your most recent commit.
 
 ### Open a Draft Pull Request
+
 Click on the "Open a Pull Request" button under the "Contribute" drop-down.
 
 ![Contribute](../../images/11-newbranch-contribute.png)
@@ -132,14 +135,13 @@ However, this PR will NOT be merged, as the GitHub-Sandbox repository is intende
 
 The above demonstration is an example of the Git **Forking Workflow**, because we forked the [GitHub Sandbox repository](https://github.com/ProjectPythia/github-sandbox) before making our feature branches. This is most common when you do NOT have write-access to the upstream repository.
 
-This differs from the **Feature Workflow**, where all contributors work on a single, remote GitHub repository in specific feature branches. This is common when all contributoris DO have write-access to the upstream repository. 
+This differs from the **Feature Workflow**, where all contributors work on a single, remote GitHub repository in specific feature branches. This is common when all contributoris DO have write-access to the upstream repository.
 
 The steps leading up to creating your PR depend on your workflow. The main difference in creating the PR is that
 the contributor now, for the Feature Workflow, navigates to the upstream, remote
 repository, not a personal remote fork, and initiates the PR there.
 
 We will cover [GitHub Workflows](github-workflows) in greater detail in the next chapter.
-
 
 ---
 
