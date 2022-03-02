@@ -182,7 +182,7 @@ The above flowchart demonstrates adding commits locally (C3 and C4) before pushi
 
 ## Merging Branches
 
-Merging is how you bring your split branches of a repository back together again. The most commone way to merge branches is via a Pull Request.
+Merging is how you bring your split branches of a repository back together again. The most common way to merge branches is via a Pull Request.
 
 ![PR](../../images/PR.png)
 The above flowchart demonstrates a simple Pull Request (PR1), the upstream main repository has accepted the changes from the Feature 2 branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature2 branch can now be safely deleted. This flowchart has simplified out the remote and local versions of the Feature2 branch.
