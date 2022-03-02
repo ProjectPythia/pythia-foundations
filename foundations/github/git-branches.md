@@ -15,15 +15,14 @@ The best practices for a simple workflow for suggesting changes to a GitHub repo
 
 ## Prerequisites
 
-| Concepts              | Importance | Notes |
-| --------------------- | ---------- | ----- |
+| Concepts                                                   | Importance  | Notes                        |
+| ---------------------------------------------------------- | ----------- | ---------------------------- |
 | [What is GitHub?](what-is-github)                          | Necessary   | GitHub user account required |
 | [GitHub Repositories](github-repos)                        | Necessary   |                              |
 | [Issues and Discussions](github-issues)                    | Recommended |                              |
 | [Cloning and Forking a Repository](github-cloning-forking) | Necessary   |                              |
 | [Advanced GitHub Setup](github-setup-advanced)             | Recommended |                              |
 | [Basic Version Control with Git](basic-git)                | Recommended |                              |
-
 
 - **Time to learn**: 30 minutes
 
@@ -46,7 +45,6 @@ One rule of thumb is for each development feature to have its own development br
 
 ![basic branch](../../images/basicbranch.png)
 The above flowchart demonstraties commits (C1 through C5) added to different branches of a personal fork of the upstream main repository. Different commits can be added to either branch in any order without depending on or knowing about each other.
-
 
 ## Creating a New Branch
 
