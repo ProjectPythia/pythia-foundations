@@ -15,6 +15,7 @@
 | [Cloning and Forking](github-cloning-forking) | Necessary   |       |
 | [Basic version control with git](basic-git)   | Necessary   |       |
 | [Issues and Discussions](github-issues)       | Recommended |       |
+| [Branches](github-issues)       | Necessary |       |
 | [Pull Requests](github-pull-requests)       | Necessary |       |
 
 - **Time to learn**: 60 minutes

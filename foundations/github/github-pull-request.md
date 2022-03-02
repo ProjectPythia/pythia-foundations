@@ -3,6 +3,9 @@
 ## Overview:
 
 1. What is a Pull Request (PR)?
+1. Opening a Pull Request
+1. Pull Request Features
+1. GitHub Workflows
 
 ## Prerequisites
 
@@ -13,6 +16,7 @@
 | [Cloning and Forking](github-cloning-forking) | Necessary   |       |
 | [Basic version control with git](basic-git)   | Necessary   |       |
 | [Issues and Discussions](github-issues)       | Recommended |       |
+| [Branches](github-issues)       | Necessary |       |
 
 - **Time to learn**: 60 minutes
 
@@ -57,164 +61,85 @@ the changes, and any suggested revisions are made, the project
 maintainer merges the feature into the destination repository and
 closes the PR.
 
-## GitHub workflows
+## Opening a Pull Request
 
-GitHub, together with Git, are powerful tools for managing and
-collaborating on all kinds of digital assets, such as software,
-documentation, and even manuscripts for research papers. Like other
-complex software environments, often these tools can be employed
-in many different ways to accomplish the same goal. In order to
-effectively and consistently use Git and GitHub, over the years a
-variety of best practices have evolved for supporting different
-modes of collaboration. Collectively these different models, or
-recipes, are referred to as _workflows_.
+The demonstration is a continuation from the [GitHub Branches chapter](github-branches). Here, we will move from your local terminal to GitHub. 
 
-The sequence of steps
-outlined above provides a general framework for submitting a PR.
-But the precise set of steps is highly dependent on the choice of
-workflow for a given project. In this chapter we describe Pull
-Requests for two commonly used workflows: The **Git Feature Branch
-Workflow** and the **Forking Workflow**. The former is simpler and often
-used by teams when everyone on the team is an authorized contributor
-to the destination repository. I.e. all of the contributors have
-write access to the remote repository hosted by GitHub. The latter
-is typically what is needed to contribute to external projects for
-which the contributor is not authorized (i.e. does not have write
-access) to make changes to the destination repository. We briefly
-describe both workflows below, and include the steps necessary to
-make a PR on each.
+### Navigate to Your Fork
+Go to your fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox). One fast way to get to your fork, is to click the "fork" button and then follow the link underneath the message, "You've already forked github-sandbox."
 
-## Git Feature Branch Workflow
+When you've navigated to your fork, you should see a message box alerting you that your branch `newbranch` had recent changes with the option to generate an open pull request. This pull request would take the changes from your `newbranch` branch and suggest them for the original upstream ProjectPythia github-sandbox repository. You'll also notice that you are on branch `main`, but that there are now 2 branches.
 
-The **Git Feature Branch Workflow** is one of the simplest and oldest
-collaborative workflows that is used for small team projects. The
-key idea behind this workflow, which is also common to the **Forking
-Workflow**, is that all development (all changes) should take place
-on a dedicated Git _feature_ branch, not the _main_ (historically
-referred to as _master_) branch. The motivation behind this is that
-one or more developers can iterate over a feature branch without
-disturbing the contents of the main branch. Consider using the **Git
-Feature Branch Workflow** for GitHub’s most widely used purpose,
-software development. Software modifications are liable to introduce
-bugs. Isolating them to a dedicated branch until they can be fixed
-ensures that a known, or official, version of the software is always
-available and in working order.
+![GitHub](../../images/8-github.png)
 
-```{note}
-Avoiding making edits directly on the `main` branch is considered best practice for most workflows and projects!
-```
+### Switch Branches
+If you click on the branch `main` you'll see the list of these branches.
 
-### Working with the Git Feature Branch Workflow
+![GitHub Branches](../../images/9-github-seebranches.png)
 
-This model assumes a single, remote GitHub repository with a branch
-named `main`, that contains the official version of all of the digital
-assets, along with a history of all of the changes made. When a
-contributor wishes to make changes to the remote repository, they
-clone the repo and create a descriptively named feature branch,
-such as `my-new-feature` or perhaps `issue-nnn`, where `nnn` is the
-number of an issue opened on the repository that this new feature
-branch will address. Changes by the contributor are then made to
-the feature branch in a local copy of the repository. When ready,
-the new branch is pushed to the remote repository.
+There you can click on the branch `newbranch` to switch branches.
 
-At this point,
-the new branch can be viewed, discussed, and even changed by
-contributors with write access to the remote repository. When the
-author of the feature branch thinks the changes are ready to be
-merged into `main` on the remote repository, they create a PR. The
-PR signals the project maintainers that the contributor would like
-to merge their feature branch into `main`, and invites review of the
-changes made in the branch. GitHub simplifies the process of viewing
-the changes by offering a variety of ways to see context differences
-(diffs) between `main` and the feature branch. Discussion between
-the reviewers and the contributor inside a PR discussion forum
-occurs in the same way that discussion over GitHub [Issues](github-issues) takes
-place inside a discussion forum associated with a particular issue.
-If additional changes are requested by the reviewers, these can be
-made by the contributor in their local repository, committed, and
-then pushed to the remote using the same processes they used with
-the initial push. Once reviewers are satisfied with the changes, a
-project maintainer can merge the feature branch with `main`.
+![New Branch](../../images/10-github-newbranch.png)
 
-##### Making a Pull Request
+Here you will see the message, "This branch is 1 commit ahead of ProjectPythia:main." Next to this message you'll see either the option to "Contribute" (which opens a pull request) or "Fetch Upstream" (which pulls in changes from the original repository). And just above your files you'll see your most recent commit.
 
-Finally, after cloning a remote repository, creating a feature
-branch, making your changes, committing them to your local repository,
-and pushing your commits back to the remote repository, you are now
-ready to issue a PR requesting that the remote repository maintainers
-review your changes for potential merger into the main branch on
-the remote. This final action must be performed from within your
-web browser. After
-navigating to your repo do the following:
+### Open a Draft Pull Request
+Click on the "Open a Pull Request" button under the "Contribute" drop-down.
 
-1. Click on “Pull requests” in the top navigation bar
-1. Click on “New pull request”
-1. Under “Compare changes”, make sure that `base` is set to `main`, and `compare` is set to the name of your feature branch, `my-new-feature`
-1. Click on “Create pull request”
-1. A PR window should open up. Provide a descriptive title, and any helpful comments that you want to communicate with the reviewers
-1. Click on “Create pull request” in the PR window.
+![Contribute](../../images/11-newbranch-contribute.png)
 
-That’s it! You’re done! Sit back and wait for comments from reviewers.
-If changes are requested, simply repeat the steps above. Once your
-PR is merged you’ll receive notification from GitHub.
+This will send you to a new page. Notice that you are now in "ProjectPythia/github-sandbox" and not your fork.
 
+![Compare](../../images/12-compare.png)
 
-## Forking Workflow
+The page will have the two branches you are comparing with an arrow indicating which branch is to be merged into which. Here, `base` is the upstream origin and `head` is your forked repository. If you wanted, you could click on these branches to switch the merge configuration. Underneath that you'll see a green message, "Able to merge. These branches can be automatically merged." This message means that there are no conflicts. We will discuss conflicts in a later chapter.
 
-The **Git Feature Branch Workflow** described above, along with the
-steps needed to submit a PR, work when you have write access to the
-remote repository. But as we saw, if you don't have write access
-you will not be able to push your changes to the remote repo. So,
-if you are contributing to an open source project, such as Project
-Pythia for example, a slightly different workflow is required.
-The **Forking Workflow** is the one most commonly used for public open
-source projects. The primary difference between the **Forking Workflow**
-and the **Git Feature Branch Workflow** is that with the former, two
-remote repositories are involved: one managed by the developers of
-the project that you wish to contribute to, and one owned by you.
-To help keep things clear we will refer to these remotes as the
-upstream repository and the personal repository, respectively. Not
-surprisingly, the personal repository will be a clone of the project
-repository that you own and can push changes too. The personal
-repository must be public, so that the maintainers of the upstream
-repository can pull changes from it. Other than a couple of additional
-steps required at the beginning and the end, the process of submitting
-a PR when using the **Forking Workflow** is identical to that of the
-**Git Feature Branch Workflow**. The basic steps are as follows:
+In a one-commit PR, the PR title defaults to your commit message. You can change this if you'd like. There is also a space to add a commit message. This is your opportunity to explain your changes to the owners of the upstream repository.
 
-1. A contributor _forks_ the upstream repository, creating a remote clone that is owned by the contributor: the personal repository
-1. The contributor then clones the newly created personal remote repository, creating a local copy. Yup, that is two clones.
-1. The contributor creates a new branch in their local repository
-1. The contributor makes changes to the branch and commits them to their local repository
-1. The contributor pushes the branch to their personal remote repository that was created in step 1
-1. The contributor submits a PR via GitHub to the upstream repository
+![Message](../../images/13-message.png)
 
-Note that steps 2 through 5 are identical to steps 1 through 4 for
-the **Git Feature Branch Workflow**. Hence, here we only discuss the
-first step, and last step.
+And if you scroll down, you'll see a summary of this PR with every commit and changed file listed.
 
-### Making a pull request
+![Summary](../../images/14-prsummary.png)
 
-Once the new feature branch has been pushed to the contributor’s
-personal repository, a PR can be created that asks the maintainers
-of the upstream repository to merge the contents of the feature
-branch on the contributor’s repository into the main branch on the
-upstream repository. This step is remarkably similar to making a
-PR in the **Git Feature Branch Workflow**. The only difference is that
-the contributor navigates their browser to the upstream, remote
-repository, not the personal remote, and initiates the PR there.
-Specifically, the following steps are once again followed, but
-performed on the upstream remote:
+Click the arrow next to "Create Pull Request" to change this to a draft PR.
 
-1. Click on “Pull requests” in the top navigation bar
-1. Click on “New pull request”
-1. Under “Compare changes”, make sure that `base` is set to `main`, and `compare` is set to the name of your feature branch, `my-new-feature`
-1. Click on “Create pull request”
-1. A PR window should open up. Provide a descriptive title, and any helpful comments that you want to communicate with the reviewers
-1. Click on “Create pull request” in the PR window.
+![To Draft](../../images/15-todraft.png)
 
+Once you've clicked "Draft Pull Request," you will be directed to the page of your new PR. Here you can add more comments or request reviews.
 
-```
+![Draft PR](../../images/16-draft.png)
+
+## Pull Request Features
+
+Now let's look at the features and discussions in an open (draft) PR.
+Clicking "Files Changed" allows you to see all of the changes that would be merged with this PR.
+
+![Files](../../images/17-fileschanged.png)
+
+If you are working in a repository that has automatic checks, it is a good idea to wait for these checks to pass successfully before you request reviewers or change to a non-draft PR. Do this by clicking "Ready for Review."
+
+![Review](../../images/18-review.png)
+
+When working on a project with a larger team, do NOT merge your pull request before you have the approval of your teammates. Every team has their own requirements and best practice workflows, and will discuss/approve/reject pull requests together. We will cover more about the ways to interact with PRs through conversations and reviews in a later section.
+
+To someone with write permissions on the repository, the ability to merge will look like this green button:
+![Green](../../images/20-green.png)
+
+However, this PR will NOT be merged, as the GitHub-Sandbox repository is intended to be static.
+
+## GitHub Workflows
+
+The above demonstration is an example of the Git **Forking Workflow**, because we forked the [GitHub Sandbox repository](https://github.com/ProjectPythia/github-sandbox) before making our feature branches. This is most common when you do NOT have write-access to the upstream repository.
+
+This differs from the **Feature Workflow**, where all contributors work on a single, remote GitHub repository in specific feature branches. This is common when all contributoris DO have write-access to the upstream repository. 
+
+The steps leading up to creating your PR depend on your workflow. The main difference in creating the PR is that
+the contributor now, for the Feature Workflow, navigates to the upstream, remote
+repository, not a personal remote fork, and initiates the PR there.
+
+We will cover [GitHub Workflows](github-workflows) in greater detail in the next chapter.
+
 
 ---
 
