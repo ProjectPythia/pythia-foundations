@@ -1,3 +1,9 @@
+```{image} ../../images/Git-Logo-2Color.png
+:alt: Git Logo
+:width: 600px
+:align: center
+```
+
 # Git Branches
 
 The best practices for a simple workflow for suggesting changes to a GitHub repository are: create your own fork of the repository, make a branch from your fork where your changes are made, and then suggest these changes move to the upstream repository with a pull request. This section of the GitHub chapter assumes you have read the prior GitHub sections, are at least somewhat familiar with git commands and the vocabulary ("cloning," "forking," "merging," "pull request" etc), and that you have already created your own fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox) hosted by Project Pythia. That fork is where you will make your first Git branch while following along with this chapter.
@@ -31,9 +37,9 @@ The best practices for a simple workflow for suggesting changes to a GitHub repo
 
 Git branches allow for non-linear or differing revision histories of a repository. At a point in time, you can split your repository into multiple development paths (branches) where you can make different commits in each, typically with the ultimate intention of merging these branches and development changes together at a later time.
 
-Branching is one of git's methods for helping with collaborative document editing, much like "change tracking" in Google Docs or Microsoft Word. It enables multiple people to edit copies of the same document content, while reducing or managing edit collisions, and with the ultimate aim of merging everyones changes together later. It also allows the same person to edit multiple copies of the same document, but with different intentions. Some reasons for wanting to split your repository into multiple paths (i.e. branches) is to experiment with different methods of solving a problem (before deciding which method will ultimately be merged) and to work on different problems within the same codebase (without confusing which code changes are relevant to which problem). There are also some convenience bots on GitHub that, if installed in the repository, may not act as intended if your work is all on the `main` branch.
+Branching is one of git's methods for helping with collaborative document editing, much like "change tracking" in Google Docs or Microsoft Word. It enables multiple people to edit copies of the same document content, while reducing or managing edit collisions, and with the ultimate aim of merging everyone's changes together later. It also allows the same person to edit multiple copies of the same document, but with different intentions. Some reasons for wanting to split your repository into multiple paths (i.e. branches) is to experiment with different methods of solving a problem (before deciding which method will ultimately be merged) and to work on different problems within the same codebase (without confusing which code changes are relevant to which problem).
 
-These branches can live on your computer (local) or on GitHub (remote). They are brought together through Git _pushes_, _pulls_, and _pull requests_. _Pushing_ is how you transfer changes from your local repository to a remote repository. _Pulling_ is how you fetch upstream changes into your branch. And _Pull Requests_ are how you suggest the changes you've made on your branch to the upstream codebase.
+These branches can live on your computer (local) or on GitHub (remote). They are brought together through Git _pushes_, _pulls_, _merges_, and _pull requests_. _Pushing_ is how you transfer changes from your local repository to a remote repository. _Pulling_ is how you fetch upstream changes into your branch. _Merging_ is how you piece the forked history back together again. And _Pull Requests_ are how you suggest the changes you've made on your branch to the upstream codebase.
 
 ```{admonition} Pull Requests
 :class: info
@@ -182,7 +188,23 @@ The above flowchart demonstrates adding commits locally (C3 and C4) before pushi
 
 ## Merging Branches
 
-Merging is how you bring your split branches of a repository back together again. The most common way to merge branches is via a Pull Request.
+Merging is how you bring your split branches of a repository back together again. 
+
+If you want to merge 2 LOCAL branches together, the steps are as follows:
+
+Let's assume your 2 branches are named `branchA` and `branchB`. And you want your changes from `branchB` to now be reflected in `branchA`
+
+1. First checkout the branch you want to merge INTO:
+``` 
+git checkout branchA
+```
+
+2. Then execute a `merge`:
+```
+git merge branchB
+```
+
+A very common way of merging REMOTE branches is via a Pull Request.
 
 ![PR](../../images/PR.png)
 The above flowchart demonstrates a simple Pull Request (PR1), the upstream main repository has accepted the changes from the Feature 2 branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature2 branch can now be safely deleted. This flowchart has simplified out the remote and local versions of the Feature2 branch.
@@ -190,7 +212,7 @@ The above flowchart demonstrates a simple Pull Request (PR1), the upstream main 
 ![remotePR](../../images/remotePR.png)
 The above flowchart demonstrates a Pull Request (PR1) without simplifying out the remote vs local versions of the Feature2branch. Typically multiple pushes are made from your local to remote branch before a pull request is drafted to take all of those commits (C3, C4, C6, and C7) into the Upstream Main branch.
 
-We will continue this demonstration and cover the specifics of a [Pull Request](github-pull-request) more thoroughly in the next section.
+We will continue this demonstration and cover the specifics of merging via a [Pull Request](github-pull-request) more thoroughly in the next section.
 
 ## Pulling
 
