@@ -17,7 +17,13 @@ The best practices for a simple workflow for suggesting changes to a GitHub repo
 
 | Concepts              | Importance | Notes |
 | --------------------- | ---------- | ----- |
-| Prior GitHub Sections | Necessary  |       |
+| [What is GitHub?](what-is-github)                          | Necessary   | GitHub user account required |
+| [GitHub Repositories](github-repos)                        | Necessary   |                              |
+| [Issues and Discussions](github-issues)                    | Recommended |                              |
+| [Cloning and Forking a Repository](github-cloning-forking) | Necessary   |                              |
+| [Advanced GitHub Setup](github-setup-advanced)             | Recommended |                              |
+| [Basic Version Control with Git](basic-git)                | Recommended |                              |
+
 
 - **Time to learn**: 30 minutes
 
@@ -250,7 +256,7 @@ git push origin --delete jukent/newbranch
 
 ### What's Next?
 
-[Opening a Pull Request on GitHub]
+[Opening a Pull Request on GitHub](github-pull-request)
 
 ## References
 
