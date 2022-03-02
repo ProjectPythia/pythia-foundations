@@ -1,4 +1,6 @@
-# Opening a Pull Request on GitHub
+# GitHub Workflows
+
+A workflow is a series of activities or tasks that must be completed sequentially or parallel to achieve the desired outcome. Here we outline two different GitHub workflows that take you through the steps leading up to opening a Pull Request. 
 
 ## Overview:
 
