@@ -5,7 +5,6 @@ The best practices for a simple workflow for suggesting changes to a GitHub repo
 ## Overview:
 
 1. What are Git Branches
-1. GitHub Workflows
 1. Creating a New Branch
 1. Switching Branches
 1. Setting up a Remote Branch
