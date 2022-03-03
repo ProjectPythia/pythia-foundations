@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Additional Topics Part 1: Histograms, Pie Charts, and Animation &#8212; Pythia Foundations</title>
+    <title>Histograms, Pie Charts, and Animations &#8212; Pythia Foundations</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Annotations, Colorbars, and Advanced Layouts" href="additional-topics2.html" />
-    <link rel="prev" title="Matplotlib Basics" href="matplotlib.html" />
+    <link rel="next" title="Annotations, Colorbars, and Advanced Layouts" href="annotations-colorbars-layouts.html" />
+    <link rel="prev" title="Matplotlib Basics" href="matplotlib-basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -377,17 +377,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="matplotlib.html">
+    <a class="reference internal" href="matplotlib-basics.html">
      Matplotlib Basics
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Additional Topics Part 1: Histograms, Pie Charts, and Animation
+     Histograms, Pie Charts, and Animations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="additional-topics2.html">
+    <a class="reference internal" href="annotations-colorbars-layouts.html">
      Annotations, Colorbars, and Advanced Layouts
     </a>
    </li>
@@ -552,7 +552,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/core/matplotlib/matplotlib-additional-topics-1.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/core/matplotlib/histograms-piecharts-animation.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -572,10 +572,10 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/matplotlib/matplotlib-additional-topics-1.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/matplotlib/histograms-piecharts-animation.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/matplotlib/matplotlib-additional-topics-1.ipynb"><button
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/matplotlib/histograms-piecharts-animation.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -595,7 +595,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/core/matplotlib/matplotlib-additional-topics-1.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/core/matplotlib/histograms-piecharts-animation.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -643,8 +643,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#animation">
-   Animation
+  <a class="reference internal nav-link" href="#animations">
+   Animations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -700,15 +700,17 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
               
               <div>
                 
-  <center><img src="https://matplotlib.org/_static/logo2.png" width=600 alt="Matplotlib Logo"></img></center><div class="tex2jax_ignore mathjax_ignore section" id="additional-topics-part-1-histograms-pie-charts-and-animation">
-<h1>Additional Topics Part 1: Histograms, Pie Charts, and Animation<a class="headerlink" href="#additional-topics-part-1-histograms-pie-charts-and-animation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+  <p><img alt="Matplotlib logo" src="https://matplotlib.org/stable/_images/sphx_glr_logos2_003.png" /></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="histograms-pie-charts-and-animations">
+<h1>Histograms, Pie Charts, and Animations<a class="headerlink" href="#histograms-pie-charts-and-animations" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>In this section we’ll explore some more specialized plot types, including:</p>
 <ol class="simple">
 <li><p>Histograms</p></li>
 <li><p>Pie Charts</p></li>
-<li><p>Animation</p></li>
+<li><p>Animations</p></li>
 </ol>
 </div>
 <div class="section" id="prerequisites">
@@ -725,7 +727,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <td><p>Necessary</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="matplotlib.html"><span class="doc std std-doc">Matplotlib basics</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="matplotlib-basics.html"><span class="doc std std-doc">Matplotlib basics</span></a></p></td>
 <td><p>Necessary</p></td>
 <td><p></p></td>
 </tr>
@@ -738,7 +740,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <hr class="docutils" />
 <div class="section" id="imports">
 <h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>The same as before, we are going to import matplotlib’s <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> interface as <code class="docutils literal notranslate"><span class="pre">plt</span></code>.</p>
+<p>The same as before, we are going to import Matplotlib’s <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> interface as <code class="docutils literal notranslate"><span class="pre">plt</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -774,7 +776,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib-additional-topics-1_12_0.png" src="../../_images/matplotlib-additional-topics-1_12_0.png" />
+<img alt="../../_images/histograms-piecharts-animation_12_0.png" src="../../_images/histograms-piecharts-animation_12_0.png" />
 </div>
 </div>
 <p>Similarly, we can make a 2D histrogram by generating a second random array and using <code class="docutils literal notranslate"><span class="pre">plt.hist2d</span></code>.</p>
@@ -787,7 +789,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib-additional-topics-1_14_0.png" src="../../_images/matplotlib-additional-topics-1_14_0.png" />
+<img alt="../../_images/histograms-piecharts-animation_14_0.png" src="../../_images/histograms-piecharts-animation_14_0.png" />
 </div>
 </div>
 </div>
@@ -802,7 +804,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib-additional-topics-1_17_0.png" src="../../_images/matplotlib-additional-topics-1_17_0.png" />
+<img alt="../../_images/histograms-piecharts-animation_17_0.png" src="../../_images/histograms-piecharts-animation_17_0.png" />
 </div>
 </div>
 <p>Typically, you’ll see examples where all of the values in the array <code class="docutils literal notranslate"><span class="pre">x</span></code> will sum to 100, but the data provided to the pie chart does NOT have to add up to 100. Any numbers provided will be normalized to <code class="docutils literal notranslate"><span class="pre">sum(x)==1</span></code> by default, although this can be turned off by setting <code class="docutils literal notranslate"><span class="pre">normalize=False</span></code>.</p>
@@ -815,7 +817,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib-additional-topics-1_19_0.png" src="../../_images/matplotlib-additional-topics-1_19_0.png" />
+<img alt="../../_images/histograms-piecharts-animation_19_0.png" src="../../_images/histograms-piecharts-animation_19_0.png" />
 </div>
 </div>
 <p>Let’s do a more complicated example.</p>
@@ -835,13 +837,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib-additional-topics-1_21_0.png" src="../../_images/matplotlib-additional-topics-1_21_0.png" />
+<img alt="../../_images/histograms-piecharts-animation_21_0.png" src="../../_images/histograms-piecharts-animation_21_0.png" />
 </div>
 </div>
 </div>
-<div class="section" id="animation">
-<h2>Animation<a class="headerlink" href="#animation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>From matplotlib’s animation interface, there is one main tool, <code class="docutils literal notranslate"><span class="pre">FuncAnimation</span></code>. See matplotlib’s full animation documentation <a class="reference external" href="https://matplotlib.org/stable/api/animation_api.html">here</a>.</p>
+<div class="section" id="animations">
+<h2>Animations<a class="headerlink" href="#animations" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>From Matplotlib’s animation interface, there is one main tool, <code class="docutils literal notranslate"><span class="pre">FuncAnimation</span></code>. See Matplotlib’s full animation documentation <a class="reference external" href="https://matplotlib.org/stable/api/animation_api.html">here</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span>
@@ -877,7 +879,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/matplotlib-additional-topics-1_29_0.png" src="../../_images/matplotlib-additional-topics-1_29_0.png" />
+<img alt="../../_images/histograms-piecharts-animation_29_0.png" src="../../_images/histograms-piecharts-animation_29_0.png" />
 </div>
 </div>
 </div>
@@ -2739,7 +2741,7 @@ LWlsc3QAAAAlqXRvbwAAAB1kYXRhAAAAAQAAAABMYXZmNTkuMTYuMTAw
 </div>
 <div class="section" id="saving-an-animation">
 <h3>Saving an Animation<a class="headerlink" href="#saving-an-animation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>To save an animation, use <code class="docutils literal notranslate"><span class="pre">anim.save()</span></code> as shown below. The inputs are teh file location (<code class="docutils literal notranslate"><span class="pre">animate.gif</span></code>) and the writer used to save the file. Here the animation writer chosen is Pillow, a library for image processing in Python.</p>
+<p>To save an animation, use <code class="docutils literal notranslate"><span class="pre">anim.save()</span></code> as shown below. The inputs are the file location (<code class="docutils literal notranslate"><span class="pre">animate.gif</span></code>) and the writer used to save the file. Here the animation writer chosen is <a class="reference external" href="https://pillow.readthedocs.io/en/stable/index.html">Pillow</a>, a library for image processing in Python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anim</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;animate.gif&#39;</span><span class="p">,</span> <span class="n">writer</span><span class="o">=</span><span class="s1">&#39;pillow&#39;</span><span class="p">);</span>
@@ -2753,13 +2755,14 @@ LWlsc3QAAAAlqXRvbwAAAB1kYXRhAAAAAQAAAABMYXZmNTkuMTYuMTAw
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> supports additional plot types. Here we covered histograms and scatter plots.</p></li>
+<li><p>Matplotlib supports additional plot types.</p></li>
+<li><p>Here we covered histograms and scatter plots.</p></li>
 <li><p>You can animate your plots.</p></li>
 </ul>
 </div>
 <div class="section" id="whats-next">
 <h2>What’s Next<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p><span class="xref myst">More plotting functionality</span> such as annotations, equation rendering, and colormaps.</p>
+<p><a class="reference internal" href="annotations-colorbars-layouts.html"><span class="doc std std-doc">More plotting functionality</span></a> such as annotations, equation rendering, colormaps, and advanced layout.</p>
 </div>
 <div class="section" id="additional-resources">
 <h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -2794,14 +2797,14 @@ LWlsc3QAAAAlqXRvbwAAAB1kYXRhAAAAAQAAAABMYXZmNTkuMTYuMTAw
               </div>
               <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="matplotlib.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="matplotlib-basics.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Matplotlib Basics</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="additional-topics2.html" title="next page">
+    <a class='right-next' id="next-link" href="annotations-colorbars-layouts.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Annotations, Colorbars, and Advanced Layouts</p>
@@ -2930,7 +2933,7 @@ LWlsc3QAAAAlqXRvbwAAAB1kYXRhAAAAAQAAAABMYXZmNTkuMTYuMTAw
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 1 March 2022.
+          Last updated on 3 March 2022.
         </p>
       </div>
     </div>

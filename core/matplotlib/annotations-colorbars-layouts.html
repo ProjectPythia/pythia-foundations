@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Cartopy" href="../cartopy.html" />
-    <link rel="prev" title="Additional Topics Part 1: Histograms, Pie Charts, and Animation" href="matplotlib-additional-topics-1.html" />
+    <link rel="prev" title="Histograms, Pie Charts, and Animations" href="histograms-piecharts-animation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -379,13 +379,13 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="matplotlib.html">
+    <a class="reference internal" href="matplotlib-basics.html">
      Matplotlib Basics
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="matplotlib-additional-topics-1.html">
-     Additional Topics Part 1: Histograms, Pie Charts, and Animation
+    <a class="reference internal" href="histograms-piecharts-animation.html">
+     Histograms, Pie Charts, and Animations
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -554,7 +554,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/core/matplotlib/additional-topics2.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/core/matplotlib/annotations-colorbars-layouts.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -574,10 +574,10 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/matplotlib/additional-topics2.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/matplotlib/annotations-colorbars-layouts.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/matplotlib/additional-topics2.ipynb"><button
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/matplotlib/annotations-colorbars-layouts.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -597,7 +597,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/core/matplotlib/additional-topics2.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/core/matplotlib/annotations-colorbars-layouts.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -677,13 +677,11 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
   <a class="reference internal nav-link" href="#basic-colorbars">
    Basic Colorbars
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#shared-colorbars">
-     Shared Colorbars
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shared-colorbars">
+   Shared Colorbars
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#custom-colorbars">
@@ -701,8 +699,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additional-resources">
-   Additional Resources
+  <a class="reference internal nav-link" href="#resources-and-references">
+   Resources and references
   </a>
  </li>
 </ul>
@@ -722,7 +720,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <hr class="docutils" />
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<ul class="simple">
+<p>In this section we explore methods for customizing plots, including the following:</p>
+<ol class="simple">
 <li><p>Adding annotations</p></li>
 <li><p>Rendering equations</p></li>
 <li><p>Colormap overview</p></li>
@@ -730,7 +729,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <li><p>Shared colorbars</p></li>
 <li><p>Custom colorbars</p></li>
 <li><p>Mosaic subplots</p></li>
-</ul>
+</ol>
 </div>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -741,10 +740,10 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Basic familiarity with <a class="reference internal" href="../numpy/numpy-basics.html"><span class="doc std std-doc">NumPy</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../numpy/numpy-basics.html"><span class="doc std std-doc">NumPy basics</span></a></p></td>
 <td><p>Necessary</p></td>
 </tr>
-<tr class="row-odd"><td><p>Basic familiarity with <a class="reference internal" href="matplotlib.html"><span class="doc std std-doc">Matplotlib</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="matplotlib-basics.html"><span class="doc std std-doc">Matplotlib basics</span></a></p></td>
 <td><p>Necessary</p></td>
 </tr>
 </tbody>
@@ -784,7 +783,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/additional-topics2_6_0.png" src="../../_images/additional-topics2_6_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_6_0.png" src="../../_images/annotations-colorbars-layouts_6_0.png" />
 </div>
 </div>
 </div>
@@ -800,7 +799,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/additional-topics2_8_0.png" src="../../_images/additional-topics2_8_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_8_0.png" src="../../_images/annotations-colorbars-layouts_8_0.png" />
 </div>
 </div>
 </div>
@@ -828,7 +827,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/additional-topics2_11_0.png" src="../../_images/additional-topics2_11_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_11_0.png" src="../../_images/annotations-colorbars-layouts_11_0.png" />
 </div>
 </div>
 <p>We plotted our equation! But it looks pretty small; we can increase the size of the text, and center the equation by using <code class="docutils literal notranslate"><span class="pre">fontsize</span></code> and <code class="docutils literal notranslate"><span class="pre">ha</span></code> (horizontal alignment).</p>
@@ -844,7 +843,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/additional-topics2_13_0.png" src="../../_images/additional-topics2_13_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_13_0.png" src="../../_images/annotations-colorbars-layouts_13_0.png" />
 </div>
 </div>
 <div class="section" id="add-a-box-around-the-text">
@@ -879,7 +878,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/additional-topics2_16_0.png" src="../../_images/additional-topics2_16_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_16_0.png" src="../../_images/annotations-colorbars-layouts_16_0.png" />
 </div>
 </div>
 </div>
@@ -955,7 +954,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/additional-topics2_26_0.png" src="../../_images/additional-topics2_26_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_26_0.png" src="../../_images/annotations-colorbars-layouts_26_0.png" />
 </div>
 </div>
 <p>We can change which colorbar to use by passing in <code class="docutils literal notranslate"><span class="pre">cmap</span> <span class="pre">=</span> <span class="pre">'colorbar_name'</span></code>. We can use the <code class="docutils literal notranslate"><span class="pre">magma</span></code> colorbar instead!</p>
@@ -970,11 +969,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/additional-topics2_28_0.png" src="../../_images/additional-topics2_28_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_28_0.png" src="../../_images/annotations-colorbars-layouts_28_0.png" />
+</div>
 </div>
 </div>
 <div class="section" id="shared-colorbars">
-<h3>Shared Colorbars<a class="headerlink" href="#shared-colorbars" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<h2>Shared Colorbars<a class="headerlink" href="#shared-colorbars" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Often times, you are not plotting a single axis. You may wish to share colorbars between different plots! We can share colorbars between two plots using the following:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -988,14 +988,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f15f5c04e20&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fea2b2bddf0&gt;
 </pre></div>
 </div>
-<img alt="../../_images/additional-topics2_30_1.png" src="../../_images/additional-topics2_30_1.png" />
+<img alt="../../_images/annotations-colorbars-layouts_30_1.png" src="../../_images/annotations-colorbars-layouts_30_1.png" />
 </div>
 </div>
 <p>You may have noticed the input argument <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code>. This is subplot syntax, as you have seen in the previous Matplotlib content.</p>
-</div>
 </div>
 <div class="section" id="custom-colorbars">
 <h2>Custom Colorbars<a class="headerlink" href="#custom-colorbars" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -1029,7 +1028,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/additional-topics2_33_0.png" src="../../_images/additional-topics2_33_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_33_0.png" src="../../_images/annotations-colorbars-layouts_33_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1046,13 +1045,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/additional-topics2_34_0.png" src="../../_images/additional-topics2_34_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_34_0.png" src="../../_images/annotations-colorbars-layouts_34_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="mosaic-subplots">
 <h2>Mosaic Subplots<a class="headerlink" href="#mosaic-subplots" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>One of the recent features added to matplotlib is <code class="docutils literal notranslate"><span class="pre">subplot_mosaic</span></code> where you can pass the structure of your figure, and it will generate your subplots automatically!</p>
+<p>One of the recent features added to Matplotlib is <code class="docutils literal notranslate"><span class="pre">subplot_mosaic</span></code> where you can pass the structure of your figure, and it will generate your subplots automatically!</p>
 <p>For example, if we wanted two plots on top, and one of the bottom, we can construct it using the following block of text:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;&quot;</span>
 <span class="n">AB</span>
@@ -1078,7 +1077,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/additional-topics2_36_0.png" src="../../_images/additional-topics2_36_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_36_0.png" src="../../_images/annotations-colorbars-layouts_36_0.png" />
 </div>
 </div>
 <p>You’ll notice there is not a colorbar plotted by default. When constructing the colorbar, we need to specify:</p>
@@ -1106,7 +1105,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/additional-topics2_38_0.png" src="../../_images/additional-topics2_38_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_38_0.png" src="../../_images/annotations-colorbars-layouts_38_0.png" />
 </div>
 </div>
 </div>
@@ -1114,21 +1113,21 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
-<li><p>You can use features in <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> to add annotations, even math, to your plots</p></li>
+<li><p>You can use features in Matplotlib to add annotations, even math, to your plots</p></li>
 <li><p>There are a number of considerations to take into account when choosing your colormap</p></li>
-<li><p>You can create your own colormaps with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
+<li><p>You can create your own colormaps with Matplotlib</p></li>
 <li><p>Various axes in figures can share colorbars</p></li>
 </ul>
 </div>
-<div class="section" id="additional-resources">
-<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="section" id="resources-and-references">
+<h2>Resources and references<a class="headerlink" href="#resources-and-references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://matplotlib.org/stable/api/text_api.html#matplotlib.text.Text.set_math_fontfamily">Matplotlib text documentation</a></p></li>
 <li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.annotate.html">Matplotlib annotation documentation</a></p></li>
 <li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/text/annotations.html#sphx-glr-tutorials-text-annotations-py">Matplotlib’s annotation examples</a></p></li>
-<li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/text/mathtext.html">Writing mathmatical expressions in matplotlib</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/text/mathtext.html">Writing mathmatical expressions in Matplotlib</a></p></li>
 <li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/text_labels_and_annotations/mathtext_examples.html#sphx-glr-gallery-text-labels-and-annotations-mathtext-examples-py">Mathtext Examples</a></p></li>
-<li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/shapes_and_collections/fancybox_demo.html">Drawing fancy boxeas with matplotlib</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/shapes_and_collections/fancybox_demo.html">Drawing fancy boxeas with Matplotlib</a></p></li>
 <li><p><a class="reference external" href="https://lnkd.in/dD5fE8V">Plot Types Cheat Sheet</a></p></li>
 <li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">Choosing Colormaps in Matplotlib</a></p></li>
 <li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormap-manipulation.html">Making custom colormaps</a></p></li>
@@ -1160,11 +1159,11 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
               </div>
               <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="matplotlib-additional-topics-1.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="histograms-piecharts-animation.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Additional Topics Part 1: Histograms, Pie Charts, and Animation</p>
+            <p class="prev-next-title">Histograms, Pie Charts, and Animations</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../cartopy.html" title="next page">
@@ -1296,7 +1295,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 1 March 2022.
+          Last updated on 3 March 2022.
         </p>
       </div>
     </div>

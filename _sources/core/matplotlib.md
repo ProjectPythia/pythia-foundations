@@ -18,8 +18,12 @@ This section contains tutorials on basic plotting with [Matplotlib](https://matp
 
 From the [Matplotlib documentation](https://matplotlib.org) "Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python."
 
-Currently, we provide a basic introduction to matplotlib, as well as:
+Currently, we provide a basic introduction to Matplotlib, as well as:
 
-- Legend and annotation customization
+- Histograms
+- Piecharts
+- Animations
+- Annotations
+- Colorbars
+- Contour plots
 - Customizing layouts
-- Interactive and 3D plotting
