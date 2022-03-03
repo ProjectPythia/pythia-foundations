@@ -20,6 +20,14 @@ From the [Matplotlib documentation](https://matplotlib.org) "Matplotlib is a com
 
 Currently, we provide a basic introduction to Matplotlib, as well as:
 
+<<<<<<< HEAD
 - Legend and annotation customization
+=======
+- Histograms
+- Piecharts
+- Animations
+- Annotations
+- Colorbars
+- Contour plots
+>>>>>>> 98ebce738704c8daaa8dca15fa5d65ea35427677
 - Customizing layouts
-- Interactive and 3D plotting
