@@ -42,9 +42,9 @@ parts:
           - file: core/numpy/numpy-broadcasting
       - file: core/matplotlib
         sections:
-          - file: core/matplotlib/matplotlib
-          - file: core/matplotlib/matplotlib-additional-topics-1
-          - file: core/matplotlib/additional-topics2
+          - file: core/matplotlib/matplotlib-basics
+          - file: core/matplotlib/histograms-piecharts-animation
+          - file: core/matplotlib/annotations-colorbars-layouts
       - file: core/cartopy
         sections:
           - file: core/cartopy/cartopy
