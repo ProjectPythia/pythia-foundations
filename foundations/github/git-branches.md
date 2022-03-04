@@ -214,7 +214,7 @@ If there were competing edits in the 2 branches that Git cannot automatically re
 A **Pull Request** is essentially a merge that happens on an upstream remote. We will continue this demonstration and cover the specifics of merging via a [Pull Request](github-pull-request) more thoroughly in the next section.
 
 ![PR](../../images/PR.png)
-The above flowchart demonstrates a simple Pull Request (PR1), the upstream main repository has accepted the changes from the feature branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature2 branch can now be safely deleted.
+The above flowchart demonstrates a simple Pull Request (PR1), the upstream main repository has accepted the changes from the feature branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature branch can now be safely deleted.
 
 ## Updating Your Branches
 
