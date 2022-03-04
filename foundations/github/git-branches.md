@@ -183,8 +183,8 @@ Notice the new branch called `remotes/origin/newbranch`. And when you do a `git 
 
 On future commits you will not have to repeat these steps, as your remote branch will already be established. Simply push with `git push` to have your remote branch reflect your future local changes.
 
-![remote](../../images/remote.png)
-The above flowchart demonstrates adding commits locally (C3 and C4) before pushing them to the corresponding remote branch.
+![remote](../../images/gitpush.png)
+The above flowchart demonstrates adding commits locally (C1 and C2) before pushing them to the corresponding remote branch. Before the push, the changes from these commits exist ONLY locally and are not represented on your upstream GitHub repository. After the push, everything is up-to-date.
 
 ## Merging Branches
 
@@ -192,7 +192,7 @@ Merging is how you bring your split branches of a repository back together again
 
 If you want to merge two _local_ branches together, the steps are as follows:
 
-Let's assume your two branches are named `BranchA` and `BranchB`, and you want your changes from `branchB` to now be reflected in `branchA`
+Let's assume your two branches are named `BranchA` and `BranchB`, and you want your changes from `BranchB` to now be reflected in `BranchA`
 
 1. First checkout the branch you want to merge INTO:
 
@@ -206,27 +206,27 @@ git checkout BranchA
 git merge BranchB
 ```
 
-![local merge](../../images/local merge.png)
+![local merge](../../images/localmerge.png)
 The above diagram demonstrates merging `BranchB` into `BranchA`. After the merge `BranchB` is unchanged, but `BranchA` now represents all commits (C1/C2/C5 AND C3/C4).
 
 If there were competing edits in the 2 branches that Git cannot automatically resolve, a **merge conflict** occurs. This typically happens if edits are to the same line in different commits. Conflicts can be [resolved in the command line](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) or in your GUI of choice (such as Visual Studio Code).
 
-A **Pull Request** is essentially a merge that happens on an upstream remote. In a Pull Request, sometimes called a Merge Request, you are asking for the upsteam main repository to pull in, or merge, the changes from your feature branch.
+A **Pull Request** is essentially a merge that happens on an upstream remote. We will continue this demonstration and cover the specifics of merging via a [Pull Request](github-pull-request) more thoroughly in the next section.
 
 ![PR](../../images/PR.png)
-The above flowchart demonstrates a simple Pull Request (PR1), the upstream main repository has accepted the changes from the Feature 2 branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature2 branch can now be safely deleted. This flowchart has simplified out the remote and local versions of the Feature2 branch.
+The above flowchart demonstrates a simple Pull Request (PR1), the upstream main repository has accepted the changes from the feature branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature2 branch can now be safely deleted.
 
-![remotePR](../../images/remotePR.png)
-The above flowchart demonstrates a Pull Request (PR1) without simplifying out the remote vs local versions of the Feature2branch. Typically multiple pushes are made from your local to remote branch before a pull request is drafted to take all of those commits (C3, C4, C6, and C7) into the Upstream Main branch.
 
-We will continue this demonstration and cover the specifics of merging via a [Pull Request](github-pull-request) more thoroughly in the next section.
+## Updating Your Branches
 
-## Pulling
+In the previous section we showed you how to merge local branches together, combining the changes from two different branches into one. In this example, all of the changes to the branches were local and made by a single person, you. In a collaborative environment, other contributors may be making changes to their own feature branches (or main branch), which will ultimately be pushed up to the remote repository. Thus your local copies of branches may become stale and need to be refreshed. 
 
-Once a team member's pull request has been merged, you will find that these upstream changes are not automatically included in your fork or your branches. In order to include the changes from the upstream main branch, you will need to do a `git pull`.
+In the examples above, your local main branch may no longer be consistent with main on the remote repository. The more time that passes by, the more likely this is to happen, particularly for an active GitHub repository. Here we show you how to sync your branches with the upstream branches.
 
-![pull](../../images/pull.png)
-The above flowchart demonstrates pulling in the upstream changes from Upstream Main after the Pull Request PR1 has been merged. Before continuing to work, with new commits (C6), it is best to pull in the upstream changes. The local vs remote branches have been simplified out of this diagram.
+Once yours or a team member's pull request has been merged, you will find that these upstream changes are not automatically included in your fork or your other branches. In order to include the changes from the upstream main branch, you will need to do a `git pull`.
+
+![pull](../../images/gitpull.png)
+The above flowchart demonstrates pulling in the upstream changes from Upstream Main after a Pull Request PR1 has been merged. Before continuing to work, with new commits on the feature branch, it is best to pull in the upstream changes.
 
 First check if there are any upstream changes:
 
@@ -242,8 +242,13 @@ git pull
 
 `git pull` is a combination of `git fetch` and `git merge`. That is it updates the remote tracking branches (`git fetch`) AND updates your current branch with any new commits on the remote tracking branch (`git merge`).
 
-![team](../../images/team.png)
-The above flowchart demonstrates pulling in the upstream changes from Upstream Main in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository by pull requests. It is important for each author to do regular `git pulls` to stay up to date with each other's contributions. The local vs remote branches have been simplified out of this diagram.
+![pull before](../../images/gitpull-before.png)
+The above flowchart illustrates a merged Pull Request, PR1 from Feature Branch1. This demonstrates that now Feature Branch 2 is stale, and does not include the changes in the upstream repository.
+
+![pull after](../../images/gitpull-after.png)
+With a Pull, changes from the upstream repository are now reflected in the Feature Branch2. New commits (e.g. C3) can safely be added to this branch.
+
+This same concept appplies to work in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository via Pull Requests. It is important for each author to do regular `git pulls` to stay up to date with each other's contributions.
 
 ## Deleting Branches
 
