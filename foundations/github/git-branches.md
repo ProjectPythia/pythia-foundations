@@ -27,7 +27,7 @@ The best practices for a simple workflow for suggesting changes to a GitHub repo
 | [Issues and Discussions](github-issues)                    | Recommended |                              |
 | [Cloning and Forking a Repository](github-cloning-forking) | Necessary   |                              |
 | [Advanced GitHub Setup](github-setup-advanced)             | Recommended |                              |
-| [Basic Version Control with Git](basic-git)                | Recommended |                              |
+| [Basic Version Control with Git](basic-git)                | Necessary   |                              |
 
 - **Time to learn**: 30 minutes
 
@@ -190,23 +190,28 @@ The above flowchart demonstrates adding commits locally (C3 and C4) before pushi
 
 Merging is how you bring your split branches of a repository back together again.
 
-If you want to merge 2 LOCAL branches together, the steps are as follows:
+If you want to merge two _local_ branches together, the steps are as follows:
 
-Let's assume your 2 branches are named `branchA` and `branchB`. And you want your changes from `branchB` to now be reflected in `branchA`
+Let's assume your two branches are named `BranchA` and `BranchB`, and you want your changes from `branchB` to now be reflected in `branchA`
 
 1. First checkout the branch you want to merge INTO:
 
 ```
-git checkout branchA
+git checkout BranchA
 ```
 
 2. Then execute a `merge`:
 
 ```
-git merge branchB
+git merge BranchB
 ```
 
-A very common way of merging REMOTE branches is via a Pull Request.
+![local merge](../../images/local merge.png)
+The above diagram demonstrates merging `BranchB` into `BranchA`. After the merge `BranchB` is unchanged, but `BranchA` now represents all commits (C1/C2/C5 AND C3/C4).
+
+If there were competing edits in the 2 branches that Git cannot automatically resolve, a **merge conflict** occurs. This typically happens if edits are to the same line in different commits. Conflicts can be [resolved in the command line](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) or in your GUI of choice (such as Visual Studio Code).
+
+A **Pull Request** is essentially a merge that happens on an upstream remote. In a Pull Request, sometimes called a Merge Request, you are asking for the upsteam main repository to pull in, or merge, the changes from your feature branch.
 
 ![PR](../../images/PR.png)
 The above flowchart demonstrates a simple Pull Request (PR1), the upstream main repository has accepted the changes from the Feature 2 branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature2 branch can now be safely deleted. This flowchart has simplified out the remote and local versions of the Feature2 branch.
@@ -221,7 +226,7 @@ We will continue this demonstration and cover the specifics of merging via a [Pu
 Once a team member's pull request has been merged, you will find that these upstream changes are not automatically included in your fork or your branches. In order to include the changes from the upstream main branch, you will need to do a `git pull`.
 
 ![pull](../../images/pull.png)
-The above flowchart demonstrates pulling in the upstream changes from Upstream Main after the pull request PR1 has been merged. Before continuing to work, with new commits (C6), it is best to pull in the upstream changes. The local vs remote branches have been simplified out of this diagram.
+The above flowchart demonstrates pulling in the upstream changes from Upstream Main after the Pull Request PR1 has been merged. Before continuing to work, with new commits (C6), it is best to pull in the upstream changes. The local vs remote branches have been simplified out of this diagram.
 
 First check if there are any upstream changes:
 
@@ -229,7 +234,7 @@ First check if there are any upstream changes:
 git status
 ```
 
-Then, if there are no conflicts:
+Then, if there are no merge conflicts:
 
 ```
 git pull
@@ -283,3 +288,4 @@ git push origin --delete jukent/newbranch
 
 1. “GitHub.com Help Documentation.” GitHub Docs, https://docs.github.com/en.
 2. Paul, Kevin. “Python Tutorial Seminar Series - Github.” Project Pythia, YouTube, 12 May 2021, https://www.youtube.com/watch?v=fYkPn0Nttlg.
+3. “Resolving a Merge Conflict Using the Command Line.” GitHub Docs, https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line.
