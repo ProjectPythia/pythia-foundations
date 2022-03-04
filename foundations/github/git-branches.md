@@ -207,7 +207,7 @@ git merge BranchB
 ```
 
 ![local merge](../../images/local merge.png)
-The above diagram demonstrates merging `BranchB` into `BranchA`. After the merge `BranchB` is unchanged, but `BranchA` now represents all commits (C1/C2/C5 AND C3/C4). 
+The above diagram demonstrates merging `BranchB` into `BranchA`. After the merge `BranchB` is unchanged, but `BranchA` now represents all commits (C1/C2/C5 AND C3/C4).
 
 If there were competing edits in the 2 branches that Git cannot automatically resolve, a **merge conflict** occurs. This typically happens if edits are to the same line in different commits. Conflicts can be [resolved in the command line](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) or in your GUI of choice (such as Visual Studio Code).
 
@@ -288,4 +288,4 @@ git push origin --delete jukent/newbranch
 
 1. “GitHub.com Help Documentation.” GitHub Docs, https://docs.github.com/en.
 2. Paul, Kevin. “Python Tutorial Seminar Series - Github.” Project Pythia, YouTube, 12 May 2021, https://www.youtube.com/watch?v=fYkPn0Nttlg.
-3. “Resolving a Merge Conflict Using the Command Line.” GitHub Docs, https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line. 
+3. “Resolving a Merge Conflict Using the Command Line.” GitHub Docs, https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line.
