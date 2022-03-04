@@ -192,7 +192,7 @@ Merging is how you bring your split branches of a repository back together again
 
 If you want to merge two _local_ branches together, the steps are as follows:
 
-Let's assume your 2 branches are named `branchA` and `branchB`. And you want your changes from `branchB` to now be reflected in `branchA`
+Let's assume your two branches are named `branchA` and `branchB`, and you want your changes from `branchB` to now be reflected in `branchA`
 
 1. First checkout the branch you want to merge INTO:
 
