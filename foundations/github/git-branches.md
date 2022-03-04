@@ -216,10 +216,9 @@ A **Pull Request** is essentially a merge that happens on an upstream remote. We
 ![PR](../../images/PR.png)
 The above flowchart demonstrates a simple Pull Request (PR1), the upstream main repository has accepted the changes from the feature branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature2 branch can now be safely deleted.
 
-
 ## Updating Your Branches
 
-In the previous section we showed you how to merge local branches together, combining the changes from two different branches into one. In this example, all of the changes to the branches were local and made by a single person, you. In a collaborative environment, other contributors may be making changes to their own feature branches (or main branch), which will ultimately be pushed up to the remote repository. Thus your local copies of branches may become stale and need to be refreshed. 
+In the previous section we showed you how to merge local branches together, combining the changes from two different branches into one. In this example, all of the changes to the branches were local and made by a single person, you. In a collaborative environment, other contributors may be making changes to their own feature branches (or main branch), which will ultimately be pushed up to the remote repository. Thus your local copies of branches may become stale and need to be refreshed.
 
 In the examples above, your local main branch may no longer be consistent with main on the remote repository. The more time that passes by, the more likely this is to happen, particularly for an active GitHub repository. Here we show you how to sync your branches with the upstream branches.
 
