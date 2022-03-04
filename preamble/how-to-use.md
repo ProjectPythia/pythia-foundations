@@ -45,7 +45,7 @@ Notebook](https://jupyterbook.org/intro.html) “chapters”. The power
 of Jupyter Notebooks is that they can contain both static text and
 executable code that you can interact with. When you navigate to a
 book chapter such as [Matplotlib
-Basics](https://foundations.projectpythia.org/core/matplotlib/matplotlib.html)
+Basics](https://foundations.projectpythia.org/core/matplotlib/matplotlib-basics.html)
 you will see static text, Python code, and the rendered output of
 that code in the form of the many figures that appear. In the case
 of Matplotlib Basics these figures are produced by Matplotlib itself.
