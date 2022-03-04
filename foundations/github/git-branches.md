@@ -190,7 +190,7 @@ The above flowchart demonstrates adding commits locally (C3 and C4) before pushi
 
 Merging is how you bring your split branches of a repository back together again.
 
-If you want to merge 2 LOCAL branches together, the steps are as follows:
+If you want to merge two _local_ branches together, the steps are as follows:
 
 Let's assume your 2 branches are named `branchA` and `branchB`. And you want your changes from `branchB` to now be reflected in `branchA`
 
