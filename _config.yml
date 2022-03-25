@@ -103,7 +103,7 @@ sphinx:
       use_edit_page_button: true
       github_url: https://github.com/ProjectPythia
       twitter_url: https://twitter.com/project_pythia
-      icon_links':
+      icon_links:
         - name: YouTube
           url: https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw
           icon: fab fa-youtube-square
