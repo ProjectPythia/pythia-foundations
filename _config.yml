@@ -103,6 +103,11 @@ sphinx:
       use_edit_page_button: true
       github_url: https://github.com/ProjectPythia
       twitter_url: https://twitter.com/project_pythia
+      icon_links:
+        - name: YouTube
+          url: https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw
+          icon: fab fa-youtube-square
+          type: fontawesome
       launch_buttons:
         binderhub_url: https://mybinder.org
         notebook_interface: jupyterlab
