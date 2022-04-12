@@ -876,12 +876,12 @@ False
 <p>The number <code class="docutils literal notranslate"><span class="pre">m</span></code> above is a good example. We can use the built-in function <code class="docutils literal notranslate"><span class="pre">type()</span></code> to inspect what we’ve got in memory:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;int&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -892,12 +892,12 @@ False
 <p>Floats can be entered in decimal notation:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">0.1</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;float&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -905,12 +905,12 @@ False
 <p>or in scientific notation:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mf">4e7</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">4e7</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;float&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -922,24 +922,24 @@ False
 <p>You can use either single quotes <code class="docutils literal notranslate"><span class="pre">''</span></code> or double quotes <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code> to denote a string:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;str&#39;&gt;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;str&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -1012,7 +1012,7 @@ False
 <p>Python also allows lists to be created dynamically through <em>list comprehension</em> like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)]</span>
 <span class="n">squares</span>
 </pre></div>
 </div>
@@ -1346,7 +1346,7 @@ The value is: 4
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 4 April 2022.
+          Last updated on 12 April 2022.
         </p>
       </div>
     </div>
