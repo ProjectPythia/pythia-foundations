@@ -6,9 +6,10 @@
 
 ## Prerequisites
 
-| Concepts              | Importance | Notes |
-| --------------------- | ---------- | ----- |
-| Prior GitHub Sections | Necessary  |       |
+| Concepts                            | Importance | Notes |
+| ----------------------------------- | ---------- | ----- |
+| [What is GitHub?](what-is-github)   | Necessary  |       |
+| [GitHub Repositories](github-repos) | Necessary  |       |
 
 - **Time to learn**: 5 minutes
 
