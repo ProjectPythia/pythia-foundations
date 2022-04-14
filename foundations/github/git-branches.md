@@ -17,6 +17,7 @@ Git "branches" are an important component of many Git and GitHub workflows. If y
 1. Merging Branches
 1. Pulling
 1. Deleting Branches
+1. Complete Workflow
 
 ## Prerequisites
 
@@ -48,8 +49,8 @@ We will cover [Pull Requests]((github-pull-request)) more in-depthly in the next
 
 One rule of thumb is for each development feature to have its own development branch until that feature is ready to be added to the upstream (remote) codebase. This allows you to compartmentalize your pull requests so that smaller working changes can be merged upstream independently of one another. For example, you might have a complete or near-complete feature on its own branch with an open pull request awaiting review. While you wait for feedback from the team before merging it, you can still work on a second feature on a second branch without affecting your first feature's pull request. **We encourage you to always do your work in a designated branch.**
 
-![basic branch](../../images/basicbranch.png)
-The above flowchart demonstraties commits (C1 through C5) added to different branches of a personal fork of the upstream main repository. Different commits can be added to either branch in any order without depending on or knowing about each other.
+![commit](../../images/commit.jpg)
+The above flowchart demonstraties commit C1 added to different the "newbranch" of a personal fork of the upstream main repository. Different commits can be added to different branches in any order without depending on or knowing about each other.
 
 ## Creating a New Branch
 
@@ -57,6 +58,8 @@ The above flowchart demonstraties commits (C1 through C5) added to different bra
 :class: info
 Having forked (NOT just cloned) the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox) is essential for following the steps in this book chapter. See the chapter on [GitHub Cloning and Forking](github-cloning-forking.md).
 ```
+
+![newbranch](../../images/newbranch.gif)
 
 From your terminal, navigate to your local clone of your `Github-Sandbox` Repository fork:
 
@@ -135,6 +138,8 @@ Notice that `git status` doesn't say anything about being up-to-date, as before.
 
 ## Setting up a Remote Branch
 
+![gitbranching](../../images/gitbranching.gif)
+
 Before we push this branch upstream, let's make some sample changes by creating a new empty file, with the ending ".py".
 
 ```
@@ -183,7 +188,7 @@ Notice the new branch called `remotes/origin/newbranch`. And when you do a `git 
 
 On future commits you will not have to repeat these steps, as your remote branch will already be established. Simply push with `git push` to have your remote branch reflect your future local changes.
 
-![remote](../../images/gitpush.png)
+![remote](../../images/remote.jpg)
 The above flowchart demonstrates adding commits locally (C1 and C2) before pushing them to the corresponding remote branch. Before the push, the changes from these commits exist ONLY locally and are not represented on your upstream GitHub repository. After the push, everything is up-to-date.
 
 ## Merging Branches
@@ -192,28 +197,28 @@ Merging is how you bring your split branches of a repository back together again
 
 If you want to merge two _local_ branches together, the steps are as follows:
 
-Let's assume your two branches are named `BranchA` and `BranchB`, and you want your changes from `BranchB` to now be reflected in `BranchA`
+Let's assume your two branches are named `main` and `newbranch`, and you want your changes from `newbranch` to now be reflected in `main`
 
 1. First checkout the branch you want to merge INTO:
 
 ```
-git checkout BranchA
+git checkout main
 ```
 
 2. Then execute a `merge`:
 
 ```
-git merge BranchB
+git merge newbranch
 ```
 
-![local merge](../../images/localmerge.png)
-The above diagram demonstrates merging `BranchB` into `BranchA`. After the merge `BranchB` is unchanged, but `BranchA` now represents all commits (C1/C2/C5 AND C3/C4).
+![local merge](../../images/merge.jpg)
+The above diagram demonstrates merging `newbranch` into `main`. After the merge `newbranch` is unchanged, but `main` now represents all commits.
 
 If there were competing edits in the 2 branches that Git cannot automatically resolve, a **merge conflict** occurs. This typically happens if edits are to the same line in different commits. Conflicts can be [resolved in the command line](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) or in your GUI of choice (such as Visual Studio Code).
 
 A **Pull Request** is essentially a merge that happens on an upstream remote. We will continue this demonstration and cover the specifics of merging via a [Pull Request](github-pull-request) more thoroughly in the next section.
 
-![PR](../../images/PR.png)
+![PR](../../images/PR.jpg)
 The above flowchart demonstrates a simple Pull Request (PR1), the upstream main repository has accepted the changes from the feature branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature branch can now be safely deleted.
 
 ## Updating Your Branches
@@ -224,7 +229,7 @@ In the examples above, your local main branch may no longer be consistent with m
 
 Once yours or a team member's pull request has been merged, you will find that these upstream changes are not automatically included in your fork or your other branches. In order to include the changes from the upstream main branch, you will need to do a `git pull`.
 
-![pull](../../images/gitpull.png)
+![pull](../../images/pull.jpg)
 The above flowchart demonstrates pulling in the upstream changes from Upstream Main after a Pull Request PR1 has been merged. Before continuing to work, with new commits on the feature branch, it is best to pull in the upstream changes.
 
 First check if there are any upstream changes:
@@ -240,12 +245,6 @@ git pull
 ```
 
 `git pull` is a combination of `git fetch` and `git merge`. That is it updates the remote tracking branches (`git fetch`) AND updates your current branch with any new commits on the remote tracking branch (`git merge`).
-
-![pull before](../../images/gitpull-before.png)
-The above flowchart illustrates a merged Pull Request, PR1 from Feature Branch1. This demonstrates that now Feature Branch 2 is stale, and does not include the changes in the upstream repository.
-
-![pull after](../../images/gitpull-after.png)
-With a Pull, changes from the upstream repository are now reflected in the Feature Branch2. New commits (e.g. C3) can safely be added to this branch.
 
 This same concept appplies to work in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository via Pull Requests. It is important for each author to do regular `git pulls` to stay up to date with each other's contributions.
 
@@ -276,6 +275,20 @@ as in
 ```
 git push origin --delete jukent/newbranch
 ```
+
+## Complete Workflow
+
+All in all your Git Branching workflow should resemble this flow:
+![gitbranching](../../images/gitbranching.gif)
+
+1. Forking the upstream repository
+1. Creating a local clone of your upstream fork
+1. Creating a new branch
+1. Switching branches
+1. Making a commit
+1. Setting up a remote branch
+1. Merging branches (locally or via a PR)
+1. Pulling from upstream
 
 ---
 
