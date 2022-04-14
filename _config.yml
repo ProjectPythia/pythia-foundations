@@ -89,8 +89,9 @@ bibtex_bibfiles:
 
 sphinx:
   config:
-    linkcheck_ignore:
-      - https://docs.github.com
+    linkcheck_request_headers:
+      'https://docs.github.com/':
+        User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:24.0) Gecko/20100101 Firefox/24.0
     html_favicon: images/icons/favicon.ico
     html_last_updated_fmt: '%-d %B %Y'
     html_theme: sphinx_pythia_theme
