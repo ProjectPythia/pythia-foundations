@@ -49,8 +49,6 @@ We will cover [Pull Requests]((github-pull-request)) more in-depthly in the next
 
 One rule of thumb is for each development feature to have its own development branch until that feature is ready to be added to the upstream (remote) codebase. This allows you to compartmentalize your pull requests so that smaller working changes can be merged upstream independently of one another. For example, you might have a complete or near-complete feature on its own branch with an open pull request awaiting review. While you wait for feedback from the team before merging it, you can still work on a second feature on a second branch without affecting your first feature's pull request. **We encourage you to always do your work in a designated branch.**
 
-![commit](../../images/commit.gif)
-The above flowchart demonstraties commit C3 and C4 added to the "branchA" of a clone of the forked repository. Different commits can be added to different branches in any order without depending on or knowing about each other.
 
 ## Creating a New Branch
 
@@ -60,6 +58,7 @@ Having forked (NOT just cloned) the [GitHub Sandbox Repository](https://github.c
 ```
 
 ![branching](../../images/branching.gif)
+The above flowchart demonstraties commit C3 and C4 added to the "branchA" of a clone of the forked repository. Different commits can be added to different branches in any order without depending on or knowing about each other.
 
 From your terminal, navigate to your local clone of your `Github-Sandbox` Repository fork:
 
