@@ -191,7 +191,6 @@ Notice the new branch called `remotes/origin/newbranch`. And when you do a `git 
 
 On future commits you will not have to repeat these steps, as your remote branch will already be established. Simply push with `git push` to have your remote branch reflect your future local changes.
 
-
 ## Merging Branches
 
 Merging is how you bring your split branches of a repository back together again.
@@ -274,7 +273,6 @@ git pull
 `git pull` is a combination of `git fetch` and `git merge`. That is it updates the remote tracking branches (`git fetch`) AND updates your current branch with any new commits on the remote tracking branch (`git merge`).
 
 This same concept appplies to work in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository via Pull Requests. It is important for each author to do regular `git pulls` to stay up to date with each other's contributions.
-
 
 ## Complete Workflow
 
