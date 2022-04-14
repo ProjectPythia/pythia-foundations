@@ -49,7 +49,6 @@ We will cover [Pull Requests]((github-pull-request)) more in-depthly in the next
 
 One rule of thumb is for each development feature to have its own development branch until that feature is ready to be added to the upstream (remote) codebase. This allows you to compartmentalize your pull requests so that smaller working changes can be merged upstream independently of one another. For example, you might have a complete or near-complete feature on its own branch with an open pull request awaiting review. While you wait for feedback from the team before merging it, you can still work on a second feature on a second branch without affecting your first feature's pull request. **We encourage you to always do your work in a designated branch.**
 
-
 ## Creating a New Branch
 
 ```{admonition} Have you forked the repository?
