@@ -28,7 +28,7 @@ is useful for dealing with non-standard calendars.
 
 When it comes to data visualization,
 the default library is [Matplotlib](https://matplotlib.org/).
-As you can see at the [matplotlib gallery](https://matplotlib.org/stable/gallery/index.html),
+As you can see at the [Matplotlib gallery](https://matplotlib.org/stable/gallery/index.html),
 this library is great for any simple (e.g. bar charts, contour plots, line graphs),
 static (e.g. .png, .eps, .pdf) plots.
 The [cartopy](https://scitools.org.uk/cartopy/docs/latest/) library
