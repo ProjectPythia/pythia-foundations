@@ -67,7 +67,7 @@ Not all of the Pandas functionality is available
 (which is a trade-off associated with being able to handle multi-dimensional arrays),
 but the ability to refer to array elements by their actual latitude (e.g. 20 South),
 longitude (e.g. 50 East), height (e.g. 500 hPa) and time (e.g. 2015-04-27), for example,
-makes the xarray data array far easier to deal with than the NumPy array.
+makes the Xarray data array far easier to deal with than the NumPy array.
 As an added bonus,
 xarray also has built in functionality for reading/writing specific geoscience file formats
 (e.g netCDF, GRIB)
