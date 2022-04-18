@@ -77,7 +77,7 @@ You will occasionally find yourself needing to use a core library directly
 (e.g. you might create a plot with xarray and then call a specific matplotlib
 function to customise a label on that plot),
 but to avoid re-inventing the wheel your first impulse should always be
-to check whether a high-level library like pandas or xarray has the functionality you need.
+to check whether a high-level library like Pandas or Xarray has the functionality you need.
 Nothing would be more heartbreaking than spending hours writing your own function
 using the netCDF4 library for extracting the metadata contained within a netCDF file,
 for instance,
