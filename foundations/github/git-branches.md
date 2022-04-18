@@ -57,7 +57,7 @@ Having forked (NOT just cloned) the [GitHub Sandbox Repository](https://github.c
 ```
 
 ![branching](../../images/branching.gif)
-The above flowchart demonstraties commit C3 and C4 added to the "branchA" of a clone of the forked repository. Different commits can be added to different branches in any order without depending on or knowing about each other.
+The above flowchart demonstrates forking a remote repository, labeled "Upstream", creating a local copy, labeled "Clone", creating a new branch, "branchA", and adding two commits, C3 and C4, to "branchA" of the local clone of the forked repository. Different commits can be added to different branches in any order without depending on or knowing about each other.
 
 From your terminal, navigate to your local clone of your `Github-Sandbox` Repository fork:
 
