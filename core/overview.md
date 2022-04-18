@@ -81,7 +81,7 @@ to check whether a high-level library like Pandas or Xarray has the functionalit
 Nothing would be more heartbreaking than spending hours writing your own function
 using the netCDF4 library for extracting the metadata contained within a netCDF file,
 for instance,
-only to find that xarray automatically keeps this information upon reading a netCDF file.
+only to find that Xarray automatically keeps this information upon reading a netCDF file.
 In this way, a solid working knowledge of the geoscience stack
 can save you a lot of time and effort.
 
