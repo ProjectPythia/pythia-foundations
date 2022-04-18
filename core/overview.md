@@ -22,7 +22,8 @@ to multi-core machines and/or distributed clusters (i.e. parallel processing).
 Another common feature of geo-data science is time series analysis.
 The Python standard library comes with a [datetime](https://docs.python.org/3/library/datetime.html)
 package for manipulating dates and times.
-NumPy also includes a `datetime64` module for efficient vectorized datetime operations
+NumPy also includes a [datetime64](https://numpy.org/doc/stable/reference/arrays.datetime.html)
+module for efficient vectorized datetime operations
 and the [cftime](https://unidata.github.io/cftime/) library
 is useful for dealing with non-standard calendars.
 
@@ -47,14 +48,14 @@ These high-levels libraries aren’t as flexible
 but they can do common tasks with far less effort.
 
 The most popular high-level data science library is undoubtedly [Pandas](http://pandas.pydata.org/).
-The key advance offered by Pandas is the concept of labelled arrays.
+The key advance offered by Pandas is the concept of labeled arrays.
 Rather than referring to the individual elements of a data array using a numeric index
 (as is required with NumPy),
 the actual row and column headings can be used.
 That means information from the cardiac ward on 3 July 2005
 could be obtained from a medical dataset by asking for `data['cardiac'].loc['2005-07-03']`,
 rather than having to remember the numeric index corresponding to that ward and date.
-This labelled array feature,
+This labeled array feature,
 combined with a bunch of other features that streamline common statistical and plotting tasks
 traditionally performed with SciPy, datetime and Matplotlib,
 greatly simplifies the code development process (read: less lines of code).
