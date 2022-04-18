@@ -92,7 +92,7 @@ broad-scale tasks like data input/output, common statistics, visualisation, etc.
 Given their large user base,
 these libraries are usually written and supported by large companies/institutions
 (e.g. the MetOffice supports Cartopy)
-or the wider PyData community (e.g. NumPy, pandas, xarray).
+or the wider PyData community (e.g. NumPy, Pandas, Xarray).
 Within each sub-discipline of the geosciences,
 individuals and research groups take these general libraries
 and apply them to their very specific data analysis tasks.
