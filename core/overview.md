@@ -46,7 +46,7 @@ These high-levels libraries aren’t as flexible
 – they can’t do _everything_ like the core stack can –
 but they can do common tasks with far less effort.
 
-The most popular high-level data science library is undoubtedly [pandas](http://pandas.pydata.org/).
+The most popular high-level data science library is undoubtedly [Pandas](http://pandas.pydata.org/).
 The key advance offered by pandas is the concept of labelled arrays.
 Rather than referring to the individual elements of a data array using a numeric index
 (as is required with NumPy),
