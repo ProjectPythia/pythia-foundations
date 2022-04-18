@@ -102,7 +102,7 @@ For instance, Andrew Dawson (an atmospheric scientist at Oxford)
 does a lot of EOF analysis and manipulation of wind data,
 so he has released his [eofs](https://ajdawson.github.io/eofs/latest/)
 and [windspharm](https://ajdawson.github.io/windspharm/latest/) libraries
-(which are able to handle data arrays from NumPy or xarray).
+(which are able to handle data arrays from NumPy or Xarray).
 Similarly, a group at the Atmospheric Radiation Measurement (ARM) Climate Research Facility
 have released their Python ARM Radar Toolkit ([Py-ART](http://arm-doe.github.io/pyart/))
 for analysing weather radar data.
