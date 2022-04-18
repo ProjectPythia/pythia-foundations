@@ -27,7 +27,7 @@ and the [cftime](https://unidata.github.io/cftime/) library
 is useful for dealing with non-standard calendars.
 
 When it comes to data visualization,
-the default library is [matplotlib](https://matplotlib.org/).
+the default library is [Matplotlib](https://matplotlib.org/).
 As you can see at the [matplotlib gallery](https://matplotlib.org/stable/gallery/index.html),
 this library is great for any simple (e.g. bar charts, contour plots, line graphs),
 static (e.g. .png, .eps, .pdf) plots.
