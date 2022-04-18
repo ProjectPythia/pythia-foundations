@@ -13,7 +13,7 @@ It has some built in functions for calculating very simple statistics
 (e.g. maximum, mean, standard deviation),
 but for more complex analysis
 (e.g. interpolation, integration, linear algebra)
-the [SciPy](https://www.scipy.org/scipylib/index.html) library is the default.
+the [SciPy](https://scipy.org) library is the default.
 If you’re dealing with particularly large arrays,
 [Dask](https://dask.org/) works with the existing Python ecosystem
 (including NumPy) to scale your analysis
