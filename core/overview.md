@@ -63,7 +63,7 @@ One of the limitations of Pandas
 is that it’s only able to handle one- or two-dimensional (i.e. tabular) data arrays.
 The [Xarray](http://xarray.pydata.org/) library was therefore created
 to extend the labelled array concept to x-dimensional arrays.
-Not all of the pandas functionality is available
+Not all of the Pandas functionality is available
 (which is a trade-off associated with being able to handle multi-dimensional arrays),
 but the ability to refer to array elements by their actual latitude (e.g. 20 South),
 longitude (e.g. 50 East), height (e.g. 500 hPa) and time (e.g. 2015-04-27), for example,
