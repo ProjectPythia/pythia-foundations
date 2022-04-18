@@ -74,7 +74,7 @@ Xarray also has built in functionality for reading/writing specific geoscience f
 and incorporates Dask under the hood to make dealing with large arrays easier.
 
 You will occasionally find yourself needing to use a core library directly
-(e.g. you might create a plot with xarray and then call a specific matplotlib
+(e.g. you might create a plot with Xarray and then call a specific Matplotlib
 function to customise a label on that plot),
 but to avoid re-inventing the wheel your first impulse should always be
 to check whether a high-level library like Pandas or Xarray has the functionality you need.
