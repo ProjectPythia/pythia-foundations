@@ -56,7 +56,7 @@ could be obtained from a medical dataset by asking for `data['cardiac'].loc['200
 rather than having to remember the numeric index corresponding to that ward and date.
 This labelled array feature,
 combined with a bunch of other features that streamline common statistical and plotting tasks
-traditionally performed with SciPy, datetime and matplotlib,
+traditionally performed with SciPy, datetime and Matplotlib,
 greatly simplifies the code development process (read: less lines of code).
 
 One of the limitations of pandas
