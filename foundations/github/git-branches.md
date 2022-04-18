@@ -114,7 +114,7 @@ git branch
 
 ![Git NewBranch](../../images/4-gitnewbranch.png)
 
-This will display the current and the new branch. You'll notice that current or active branch, indicated by the "*" is still the `main` branch. Thus, any changes we make to the contents of our local repository will still be made on `main`.  We will need to switch branches to work in the new branch, `branchA`.
+This will display the current and the new branch. You'll notice that current or active branch, indicated by the "\*" is still the `main` branch. Thus, any changes we make to the contents of our local repository will still be made on `main`. We will need to switch branches to work in the new branch, `branchA`.
 
 ## Switching Branches
 
