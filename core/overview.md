@@ -69,7 +69,7 @@ but the ability to refer to array elements by their actual latitude (e.g. 20 Sou
 longitude (e.g. 50 East), height (e.g. 500 hPa) and time (e.g. 2015-04-27), for example,
 makes the Xarray data array far easier to deal with than the NumPy array.
 As an added bonus,
-xarray also has built in functionality for reading/writing specific geoscience file formats
+Xarray also has built in functionality for reading/writing specific geoscience file formats
 (e.g netCDF, GRIB)
 and incorporates Dask under the hood to make dealing with large arrays easier.
 
