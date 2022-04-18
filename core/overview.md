@@ -1,6 +1,6 @@
 # Overview
 
-A group of programs that works in tandem to produce a result or achieve a common goal is often referred to as a software stack. 
+A group of programs that works in tandem to produce a result or achieve a common goal is often referred to as a software stack.
 This page gives an overview of the Python geoscience stack.
 Scroll to the end of the page for cross-referenced tutorial material for several of the packages in the stack.
 We suggest that new users start with the [Foundational Skills](../foundations/overview) section in order to get the most out of these tutorials.
@@ -43,7 +43,7 @@ can often require quite a bit of work (i.e. many lines of code).
 To make things more efficient for data scientists,
 the scientific Python community has therefore built a number of libraries on top of the core stack.
 These high-levels libraries aren’t as flexible
-– they can’t do *everything* like the core stack can –
+– they can’t do _everything_ like the core stack can –
 but they can do common tasks with far less effort.
 
 The most popular high-level data science library is undoubtedly [pandas](http://pandas.pydata.org/).
@@ -110,8 +110,7 @@ for analysing weather radar data.
 There are too many domain specific libraries to mention here,
 but online resources such as the
 [Python for Atmosphere and Ocean Science (PyAOS) package index](https://pyaos.github.io/packages/)
-attempt to keep track of the domain-specific libraries in their field. 
-
+attempt to keep track of the domain-specific libraries in their field.
 
 ## Tutorials
 
