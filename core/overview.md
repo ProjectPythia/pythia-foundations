@@ -28,7 +28,7 @@ is useful for dealing with non-standard calendars.
 
 When it comes to data visualization,
 the default library is [matplotlib](https://matplotlib.org/).
-As you can see at the [matplotlib gallery](https://matplotlib.org/gallery.html),
+As you can see at the [matplotlib gallery](https://matplotlib.org/stable/gallery/index.html),
 this library is great for any simple (e.g. bar charts, contour plots, line graphs),
 static (e.g. .png, .eps, .pdf) plots.
 The [cartopy](https://scitools.org.uk/cartopy/docs/latest/) library
@@ -55,7 +55,7 @@ That means information from the cardiac ward on 3 July 2005
 could be obtained from a medical dataset by asking for `data['cardiac'].loc['2005-07-03']`,
 rather than having to remember the numeric index corresponding to that ward and date.
 This labelled array feature,
-combined with a bunch of other features that simplify common statistical and plotting tasks
+combined with a bunch of other features that streamline common statistical and plotting tasks
 traditionally performed with SciPy, datetime and matplotlib,
 greatly simplifies the code development process (read: less lines of code).
 
