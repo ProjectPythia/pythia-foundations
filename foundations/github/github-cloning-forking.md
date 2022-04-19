@@ -2,6 +2,7 @@
 
 ## Overview:
 
+1. Cloning and forking
 1. Cloning a repository
 1. Forking a repository
 
@@ -17,6 +18,34 @@
 - **Time to learn**: 30 minutes
 
 ---
+
+## Cloning and forking
+
+_Cloning_ and _forking_ are two related terms in the GitHub vernacular
+that, unfortunately, are not always used consistently throughout
+the _web-o-sphere_. In Project Pythia we use the term _clone_ to mean
+making a **local** copy of a **remote** repository; the source for
+the copy is a remote repo, and the destination for the copy is your
+local laptop/desktop. When working with GitHub, a _fork_, on the
+other hand, creates a copy of a GitHub repository on GitHub. I.e.
+both the source and the destination of the _fork_ operations are
+hosted in the cloud on GitHub. Forking is performed via your GitHub
+account. While the forked repository may be owned by anyone, the
+newly created repository will be owned by you. Cloning, on the
+other hand, is performed using a Git command. Naturally, since the
+destination of the clone operation is your local computer, you will
+own the cloned contents. In either case, whether you clone or fork,
+any changes you make to the newly created repository will not impact
+the original without taking explicit action (e.g. performing a
+_push_ or submitting a _pull request_, the topics of later sections
+in this guide).
+
+Cloning and forking are often used together (more on this later).
+The illustration below demonstrates the operation of a Fork of a
+remote repository (UPSTREAM), followed by a clone of the newly
+created ORIGIN.
+
+![clone-and-fork](../../images/github-clone-fork.png)
 
 ## Cloning a repository
 
@@ -186,9 +215,9 @@ _The main purpose of cloning and forking a remote repository is so that you can 
 
 ## Summary
 
-- The process of making a copy of a GitHub repository is called _cloning_.
-- _Forking_ a repository also makes a copy of a GitHub repo, but places it in your GitHub organization.
-- Forking allows you to modify a repo, without affecting the original version.
+- The process of making a **local** copy of a GitHub repository is called _cloning_. The destination for the cloned copy is whatever machine you ran the `git clone` command from.
+- _Forking_ a repository also makes a copy of a GitHub repo, but places it in your GitHub organization in the GitHub.com cloud.
+- Forking allows you to modify a remote repo, without affecting the original version.
 - After cloning your fork to your local computer, you can meke changes to your copy, which you can then submit to the original repo as a [_Pull request_](github-pull-request).
 
 ## Things to try
