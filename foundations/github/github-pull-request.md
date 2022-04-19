@@ -1,10 +1,16 @@
+```{image} ../../images/Git-Logo-2Color.png
+:alt: Git Logo
+:width: 600px
+:align: center
+```
+
 # Opening a Pull Request on GitHub
 
-A pull request, aka a "merge request," is an event that occurs when a project contributor begins the process of merging new code changes from a feature branch with the main project repository.
+A Pull Request, aka a "merge request," is an event that occurs when a project contributor begins the process of merging new code changes from a feature branch with the main project repository.
 
 ## Overview:
 
-1. What is a Pull Request (PR)?
+1. What is a Pull Request?
 1. Opening a Pull Request
 1. Pull Request Features
 1. GitHub Workflows
@@ -33,7 +39,7 @@ maintainers of the destination repository, potentially triggering
 a cycle of revisions, before the PR is “merged”, and your changes
 become part of the destination repo.
 
-Just like issues, PRs have
+Just like Issues, PRs have
 their own discussion forum for communicating about the proposed
 changes. In fact, not only can maintainers or collaborators communicate
 about your PR via GitHub, they can also suggest changes and may
@@ -71,7 +77,7 @@ The demonstration is a continuation from the [GitHub Branches chapter](github-br
 
 Go to your fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox). One fast way to get to your fork, is to click the "fork" button and then follow the link underneath the message, "You've already forked github-sandbox."
 
-When you've navigated to your fork, you should see a message box alerting you that your branch `newbranch` had recent changes with the option to generate an open pull request. This pull request would take the changes from your `newbranch` branch and suggest them for the original upstream ProjectPythia github-sandbox repository. You'll also notice that you are on branch `main`, but that there are now 2 branches.
+When you've navigated to your fork, you should see a message box alerting you that your branch `branchA` had recent changes with the option to generate an open Pull Request. This Pull Request would take the changes from your `branchA` branch and suggest them for the original upstream ProjectPythia github-sandbox repository. You'll also notice that you are on branch `main`, but that there are now 2 branches.
 
 ![GitHub](../../images/8-github.png)
 
@@ -81,11 +87,11 @@ If you click on the branch `main` you'll see the list of these branches.
 
 ![GitHub Branches](../../images/9-github-seebranches.png)
 
-There you can click on the branch `newbranch` to switch branches.
+There you can click on the branch `branchA` to switch branches.
 
 ![New Branch](../../images/10-github-newbranch.png)
 
-Here you will see the message, "This branch is 1 commit ahead of ProjectPythia:main." Next to this message you'll see either the option to "Contribute" (which opens a pull request) or "Fetch Upstream" (which pulls in changes from the original repository). And just above your files you'll see your most recent commit.
+Here you will see the message, "This branch is 1 commit ahead of ProjectPythia:main." Next to this message you'll see either the option to "Contribute" (which opens a Pull Request) or "Fetch Upstream" (which pulls in changes from the original repository). And just above your files you'll see your most recent commit.
 
 ### Open a Draft Pull Request
 
@@ -126,7 +132,7 @@ If you are working in a repository that has automatic checks, it is a good idea 
 
 ![Review](../../images/18-review.png)
 
-When working on a project with a larger team, do NOT merge your pull request before you have the approval of your teammates. Every team has their own requirements and best practice workflows, and will discuss/approve/reject pull requests together. We will cover more about the ways to interact with PRs through conversations and reviews in a later section.
+When working on a project with a larger team, do NOT merge your Pull Request before you have the approval of your teammates. Every team has their own requirements and best practice workflows, and will discuss/approve/reject pull requests together. We will cover more about the ways to interact with PRs through conversations and reviews in a later section.
 
 To someone with write permissions on the repository, the ability to merge will look like this green button:
 ![Green](../../images/20-green.png)
@@ -161,4 +167,4 @@ In the next lesson we will learn more about [GitHub Workflows](github-workflows)
 
 ## References
 
-1. GitHub's [Collaborating with pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
+1. GitHub's [Collaborating with Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)

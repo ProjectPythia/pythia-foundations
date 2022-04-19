@@ -1,3 +1,9 @@
+```{image} ../../images/Git-Logo-2Color.png
+:alt: Git Logo
+:width: 600px
+:align: center
+```
+
 # GitHub Workflows
 
 A workflow is a series of activities or tasks that must be completed sequentially or parallel to achieve the desired outcome. Here we outline two different GitHub workflows that take you through the steps leading up to opening a Pull Request.
@@ -292,12 +298,12 @@ the remote. This final action must be performed from within your
 web browser. After
 navigating to your repo do the following:
 
-1. Click on “Pull requests” in the top navigation bar
-1. Click on “New pull request”
+1. Click on “Pull Requests” in the top navigation bar
+1. Click on “New Pull Request”
 1. Under “Compare changes”, make sure that `base` is set to `main`, and `compare` is set to the name of your feature branch, `my-new-feature`
-1. Click on “Create pull request”
+1. Click on “Create Pull Request”
 1. A PR window should open up. Provide a descriptive title, and any helpful comments that you want to communicate with the reviewers
-1. Click on “Create pull request” in the PR window.
+1. Click on “Create Pull Request” in the PR window.
 
 That’s it! You’re done! Sit back and wait for comments from reviewers.
 If changes are requested, simply repeat the steps above. Once your
@@ -372,7 +378,7 @@ Branch Workflow**. Clone a local copy of the newly created remote,
 personal repository, create a feature branch, make your changes,
 commit your changes, and push the new branch with your commits to your personal repository.
 
-### Making a pull request
+### Making a Pull Request
 
 Once the new feature branch has been pushed to the contributor’s
 personal repository, a PR can be created that asks the maintainers
@@ -385,12 +391,12 @@ repository, not the personal remote, and initiates the PR there.
 Specifically, the following steps are once again followed, but
 performed on the upstream remote:
 
-1. Click on “Pull requests” in the top navigation bar
-1. Click on “New pull request”
+1. Click on “Pull Requests” in the top navigation bar
+1. Click on “New Pull Request”
 1. Under “Compare changes”, make sure that `base` is set to `main`, and `compare` is set to the name of your feature branch, `my-new-feature`
-1. Click on “Create pull request”
+1. Click on “Create Pull Request”
 1. A PR window should open up. Provide a descriptive title, and any helpful comments that you want to communicate with the reviewers
-1. Click on “Create pull request” in the PR window.
+1. Click on “Create Pull Request” in the PR window.
 
 ### Safety tip on synchronization
 
@@ -460,4 +466,4 @@ how to use it to [contribute to Project Pythia](contribute-to-pythia).
 ## References
 
 1. Atlassian's tutorial on [workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
-1. GitHub's [Collaborating with pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
+1. GitHub's [Collaborating with Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
