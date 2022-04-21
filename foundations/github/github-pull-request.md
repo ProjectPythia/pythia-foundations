@@ -143,7 +143,13 @@ project maintainer can merge the feature branch with `main`.
 
 With all of the background material behind us, we’re almost ready
 to open a PR. Let’s review the steps you’ll want to follow, discussed
-in previous chapters of this book, before you make the actual PR.
+in previous chapters of this book, before you make the actual PR. The
+illustration in the figure below demonstrates schematically how
+the remote and local repositories change after each step.
+
+|                                                 ![GitHub feature branch workflow](../../images/github-pr-gfbw.gif)                                                 |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| **Figure 1:** An illustration of how remote and local repositories change in the steps leading up to a Pull Request when using the GitHub Feature Branch Workflow. |
 
 ##### Cloning the remote repository
 
@@ -319,9 +325,10 @@ branch, making your changes, committing them to your local repository,
 and pushing your commits back to the remote repository, you are now
 ready to issue a PR requesting that the remote repository maintainers
 review your changes for potential merger into the main branch on
-the remote. This final action must be performed from within your
+the remote. This final action,
+issuing the PR, must be performed from within your
 web browser. After
-navigating to your repo do the following:
+navigating to your GitHub repo perform the following (See Figure 2):
 
 1. Click on “Pull requests” in the top navigation bar
 1. Click on “New pull request”
@@ -333,6 +340,10 @@ navigating to your repo do the following:
 That’s it! You’re done! Sit back and wait for comments from reviewers.
 If changes are requested, simply repeat the steps above. Once your
 PR is merged you’ll receive notification from GitHub.
+
+| ![GitHub feature branch workflow](../../images/github-pr-gfbw-pr.gif) |
+| :-------------------------------------------------------------------: |
+|            **Figure 2:** Making a Pull Request on GitHub.             |
 
 ##### Safety tip on synchronization
 
@@ -383,6 +394,10 @@ a PR when using the **Forking Workflow** is identical to that of the
 Note that steps 2 through 5 are identical to steps 1 through 4 for
 the **Git Feature Branch Workflow**. Hence, here we only discuss the
 first step, and last step.
+
+|                                           ![GitHub feature branch workflow](../../images/github-pr-fw.gif)                                           |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------: |
+| **Figure 3:** An illustration of how remote and local repositories change in the steps leading up to a Pull Request when using the Forking Workflow. |
 
 ### Forking the upstream repository
 
