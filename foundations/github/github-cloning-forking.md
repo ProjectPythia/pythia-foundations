@@ -2,7 +2,7 @@
 
 ## Overview:
 
-1. Cloning and forking
+1. Cloning and forking a git repository
 1. Cloning a repository
 1. Forking a repository
 
