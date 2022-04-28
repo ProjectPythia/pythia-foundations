@@ -1,7 +1,6 @@
 ```{image} ../../images/Git-Logo-2Color.png
 :alt: Git Logo
-:width: 600px
-:align: center
+:width: 400px
 ```
 
 # GitHub Workflows
@@ -24,7 +23,7 @@ A workflow is a series of activities or tasks that must be completed sequentiall
 | [Basic version control with git](basic-git)   | Necessary   |       |
 | [Issues and Discussions](github-issues)       | Recommended |       |
 | [Branches](github-issues)                     | Necessary   |       |
-| [Pull Requests](github-pull-requests)         | Necessary   |       |
+| [Pull Requests](github-pull-request)          | Necessary   |       |
 
 - **Time to learn**: 60 minutes
 

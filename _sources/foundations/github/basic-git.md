@@ -1,7 +1,6 @@
 ```{image} ../../images/Git-Logo-2Color.png
 :alt: Git Logo
-:width: 600px
-:align: center
+:width: 400px
 ```
 
 # Basic version control with git
