@@ -59,7 +59,7 @@ parts:
           - file: core/data-formats/netcdf-cf
       - file: core/xarray
         sections:
-          - file: core/xarray/xarray
+          - file: core/xarray/xarray-intro
           - file: core/xarray/computation-masking
           - file: core/xarray/enso-xarray
   - caption: Appendix
