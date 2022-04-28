@@ -86,7 +86,7 @@ Either **https** or **ssh** works fine. Choose whatever you prefer. See [this ov
 
 ## GitHub notifications
 
-In keeping with the social network aspect of GitHub, you can _follow_ particular repositories that are of interest to you. Additionally, once you begin contributing to a repository, you may wish to be notified when pull requests are made, issues are posted, your code review is requested, and so on. While it's easy to have GitHub email you at the address you used when you registered for your GitHub account, you may wish to avoid email clutter.
+In keeping with the social network aspect of GitHub, you can _follow_ particular repositories that are of interest to you. Additionally, once you begin contributing to a repository, you may wish to be notified when Pull Requests are made, Issues are posted, your code review is requested, and so on. While it's easy to have GitHub email you at the address you used when you registered for your GitHub account, you may wish to avoid email clutter.
 
 ### Email notifications
 
