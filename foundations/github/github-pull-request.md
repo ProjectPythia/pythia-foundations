@@ -132,7 +132,7 @@ If you are working in a repository that has automatic checks, it is a good idea 
 
 ![Review](../../images/18-review.png)
 
-When working on a project with a larger team, do NOT merge your Pull Request before you have the approval of your teammates. Every team has their own requirements and best practice workflows, and will discuss/approve/reject pull requests together. We will cover more about the ways to interact with PRs through conversations and reviews in a later section.
+When working on a project with a larger team, do NOT merge your Pull Request before you have the approval of your teammates. Every team has their own requirements and best practice workflows, and will discuss/approve/reject Pull Requests together. We will cover more about the ways to interact with PRs through conversations and reviews in a later section.
 
 To someone with write permissions on the repository, the ability to merge will look like this green button:
 ![Green](../../images/20-green.png)

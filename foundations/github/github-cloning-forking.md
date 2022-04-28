@@ -37,7 +37,7 @@ destination of the clone operation is your local computer, you will
 own the cloned contents. In either case, whether you clone or fork,
 any changes you make to the newly created repository will not impact
 the original without taking explicit action (e.g. performing a
-_push_ or submitting a _pull request_, the topics of later sections
+_push_ or submitting a _Pull Request_, the topics of later sections
 in this guide).
 
 Cloning and forking are often used together (more on this later).
@@ -53,7 +53,7 @@ Cloning is ideal for the following scenarios:
 
 1. You wish to download, build, and install the latest version of a software package.
 1. You would like to experiment with a repository on your local computer, but do not desire to maintain a separate copy of it (termed a _fork_, to be covered later in this lesson) on your GitHub account.
-1. You have previously _forked_ a repository to your own GitHub account, and now wish to make changes to it for possible incorporation into the original repo, via a _pull request_.
+1. You have previously _forked_ a repository to your own GitHub account, and now wish to make changes to it for possible incorporation into the original repo, via a _Pull Request_.
 
 Let's consider the 2nd scenario. Say you wish to copy a GitHub repository to a computer you have access to (which could be your own computer, or one you have access to at work or school).
 
@@ -202,7 +202,7 @@ Unlike cloning, forking is not an option supported by the *git* command-line int
 
 Once you've cloned the fork to your local machine, try running `git remote -v` again. You will see that the _origin_ URL now points to your GitHub account or organization.
 
-_The main purpose of cloning and forking a remote repository is so that you can make changes to the contents of those repositories in a safe and version-controller manner._ The process of making changes and submitting them as _pull requests_ to the original repository is covered in our lesson on [Opening a Pull Request on GitHub](github-pull-request), but the workflow is as follows:
+_The main purpose of cloning and forking a remote repository is so that you can make changes to the contents of those repositories in a safe and version-controller manner._ The process of making changes and submitting them as _Pull Requests_ to the original repository is covered in our lesson on [Opening a Pull Request on GitHub](github-pull-request), but the workflow is as follows:
 
 1. Edit an existing file or files, and/or create new files.
 1. Stage your changes by running `git add`.

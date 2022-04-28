@@ -4,7 +4,7 @@
 
 1. Suggest a change
 2. Make the edits
-3. Create a pull request
+3. Create a Pull Request
 
 ## Prerequisites
 
@@ -59,7 +59,7 @@ Then pushing to our remote aliased `origin`:
 git push origin clarify-sst-tos
 ```
 
-## Create a pull request
+## Create a Pull Request
 
 Now, going to our remote repo on GitHub, forked from `pythia-foundations`, we see that recent changes have been made. By clicking on the "Compare & pull request" button, we can open a PR, proposing that our changes be merged into the main branch of `ProjectPythia/pythia-foundations`.
 
