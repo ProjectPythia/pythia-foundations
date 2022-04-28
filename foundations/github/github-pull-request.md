@@ -1,7 +1,6 @@
-```{image} ../../images/Git-Logo-2Color.png
-:alt: Git Logo
-:width: 600px
-:align: center
+```{image} ../../images/GitHub-logo.png
+:alt: GitHub Logo
+:width: 400px
 ```
 
 # Opening a Pull Request on GitHub
