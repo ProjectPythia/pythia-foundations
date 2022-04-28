@@ -1,8 +1,6 @@
-# Xarray
+![xarray Logo](http://xarray.pydata.org/en/stable/_static/dataset-diagram-logo.png 'xarray Logo')
 
-```{note}
-This content is under construction!
-```
+# Xarray
 
 This section contains tutorials on using [Xarray][xarray home]. Xarray is used widely in the geosciences and beyond for analysis of gridded N-dimensional datasets.
 
