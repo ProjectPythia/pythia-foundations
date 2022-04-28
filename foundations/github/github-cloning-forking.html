@@ -733,7 +733,7 @@ destination of the clone operation is your local computer, you will
 own the cloned contents. In either case, whether you clone or fork,
 any changes you make to the newly created repository will not impact
 the original without taking explicit action (e.g. performing a
-<em>push</em> or submitting a <em>pull request</em>, the topics of later sections
+<em>push</em> or submitting a <em>Pull Request</em>, the topics of later sections
 in this guide).</p>
 <p>Cloning and forking are often used together (more on this later).
 The illustration below demonstrates the operation of a Fork of a
@@ -747,7 +747,7 @@ created ORIGIN.</p>
 <ol class="simple">
 <li><p>You wish to download, build, and install the latest version of a software package.</p></li>
 <li><p>You would like to experiment with a repository on your local computer, but do not desire to maintain a separate copy of it (termed a <em>fork</em>, to be covered later in this lesson) on your GitHub account.</p></li>
-<li><p>You have previously <em>forked</em> a repository to your own GitHub account, and now wish to make changes to it for possible incorporation into the original repo, via a <em>pull request</em>.</p></li>
+<li><p>You have previously <em>forked</em> a repository to your own GitHub account, and now wish to make changes to it for possible incorporation into the original repo, via a <em>Pull Request</em>.</p></li>
 </ol>
 <p>Let’s consider the 2nd scenario. Say you wish to copy a GitHub repository to a computer you have access to (which could be your own computer, or one you have access to at work or school).</p>
 <p>We’ll use a very basic repo that is part of the <a class="reference external" href="https://github.com/ProjectPythia">Project Pythia organization</a> as our example.</p>
@@ -850,7 +850,7 @@ created ORIGIN.</p>
 <p>Unlike cloning, forking is not an option supported by the <em>git</em> command-line interface. I.e., <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fork</span></code> is not a valid command.</p>
 </div>
 <p>Once you’ve cloned the fork to your local machine, try running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code> again. You will see that the <em>origin</em> URL now points to your GitHub account or organization.</p>
-<p><em>The main purpose of cloning and forking a remote repository is so that you can make changes to the contents of those repositories in a safe and version-controller manner.</em> The process of making changes and submitting them as <em>pull requests</em> to the original repository is covered in our lesson on <a class="reference internal" href="github-pull-request.html"><span class="doc std std-doc">Opening a Pull Request on GitHub</span></a>, but the workflow is as follows:</p>
+<p><em>The main purpose of cloning and forking a remote repository is so that you can make changes to the contents of those repositories in a safe and version-controller manner.</em> The process of making changes and submitting them as <em>Pull Requests</em> to the original repository is covered in our lesson on <a class="reference internal" href="github-pull-request.html"><span class="doc std std-doc">Opening a Pull Request on GitHub</span></a>, but the workflow is as follows:</p>
 <ol class="simple">
 <li><p>Edit an existing file or files, and/or create new files.</p></li>
 <li><p>Stage your changes by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>.</p></li>
