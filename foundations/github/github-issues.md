@@ -17,7 +17,28 @@
 
 ## Issues
 
-As mentioned in the previous section, GitHub Issues and Discussions allow collaboration within a repository. First, let's take a look at the [Issues page](https://github.com/ProjectPythia/pythia-foundations/issues) in Project Pythia's `pythia-foundations` repository:
+GitHub provides two different, but related mechanisms for communicating
+within a repository about a project: _Issues_ and _Discussions_.
+Issues are more like “todo” items; they are task-focused. For example, issues
+are often used to report and track bugs, request new features, or
+perhaps note a performance problem. Ultimately, the maintainers of
+a project may resolve the issue by fixing the bug, adding the
+feature, etc., and then closing the resolved issue, marking the
+task as completed. GitHub _Discussions_, much like the name implies,
+are more open ended, and may not have a resolution. Asking about a
+topic, discussing the merits of a new feature, or even advertising
+an event, such as a tutorial for your project, are all examples
+of _Discussions_.
+
+In the text below we discuss _Issues_ in more detail, followed by
+a discussion on Discussions. Keep in mind that when initiating a
+conversation on GitHub it is often unclear whether something is
+more suited as an _Issue_ or a _Discussion_. We, the creators of
+Project Pythia, struggle ourselves. If you’re not sure, simply pick
+one. Fortunately, the GitHub developers recognized this dilemma and
+made it easy to convert _Issues_ into _Discussions_ and vice versa.
+
+To get started, let's take a look at the [Issues page](https://github.com/ProjectPythia/pythia-foundations/issues) in Project Pythia's `pythia-foundations` repository:
 
 <img src="../../images/GitHubPythiaIssues.png" alt="Pythia Issues">
 
@@ -55,6 +76,8 @@ This discussion brings up a resource relevant to the repository that could help 
 
 - GitHub provides Issues and Discussions to facilitate collaboration.
 - Issues are specific and actionable, while discussions are open-ended.
+- If you want to discuss a topic and you're not sure if it is an Issue
+  or a Discussion, just pick one. It will be ok:-)
 
 ### What's Next?
 
