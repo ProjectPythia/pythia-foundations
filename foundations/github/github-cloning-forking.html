@@ -625,6 +625,11 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cloning-and-forking">
+   Cloning and forking
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cloning-a-repository">
    Cloning a repository
   </a>
@@ -672,6 +677,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <div class="section" id="overview">
 <h2>Overview:<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ol class="simple">
+<li><p>Cloning and forking a git repository</p></li>
 <li><p>Cloning a repository</p></li>
 <li><p>Forking a repository</p></li>
 </ol>
@@ -709,6 +715,32 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </ul>
 </div>
 <hr class="docutils" />
+<div class="section" id="cloning-and-forking">
+<h2>Cloning and forking<a class="headerlink" href="#cloning-and-forking" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p><em>Cloning</em> and <em>forking</em> are two related terms in the GitHub vernacular
+that, unfortunately, are not always used consistently throughout
+the <em>web-o-sphere</em>. In Project Pythia we use the term <em>clone</em> to mean
+making a <strong>local</strong> copy of a <strong>remote</strong> repository; the source for
+the copy is a remote repo, and the destination for the copy is your
+local laptop/desktop. When working with GitHub, a <em>fork</em>, on the
+other hand, creates a copy of a GitHub repository on GitHub. I.e.
+both the source and the destination of the <em>fork</em> operations are
+hosted in the cloud on GitHub. Forking is performed via your GitHub
+account. While the forked repository may be owned by anyone, the
+newly created repository will be owned by you. Cloning, on the
+other hand, is performed using a Git command. Naturally, since the
+destination of the clone operation is your local computer, you will
+own the cloned contents. In either case, whether you clone or fork,
+any changes you make to the newly created repository will not impact
+the original without taking explicit action (e.g. performing a
+<em>push</em> or submitting a <em>pull request</em>, the topics of later sections
+in this guide).</p>
+<p>Cloning and forking are often used together (more on this later).
+The illustration below demonstrates the operation of a Fork of a
+remote repository (UPSTREAM), followed by a clone of the newly
+created ORIGIN.</p>
+<p><img alt="clone-and-fork" src="../../_images/github-clone-fork.png" /></p>
+</div>
 <div class="section" id="cloning-a-repository">
 <h2>Cloning a repository<a class="headerlink" href="#cloning-a-repository" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Cloning is ideal for the following scenarios:</p>
@@ -832,9 +864,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
-<li><p>The process of making a copy of a GitHub repository is called <em>cloning</em>.</p></li>
-<li><p><em>Forking</em> a repository also makes a copy of a GitHub repo, but places it in your GitHub organization.</p></li>
-<li><p>Forking allows you to modify a repo, without affecting the original version.</p></li>
+<li><p>The process of making a <strong>local</strong> copy of a GitHub repository is called <em>cloning</em>. The destination for the cloned copy is whatever machine you ran the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> command from.</p></li>
+<li><p><em>Forking</em> a repository also makes a copy of a GitHub repo, but places it in your GitHub organization in the GitHub.com cloud.</p></li>
+<li><p>Forking allows you to modify a remote repo, without affecting the original version.</p></li>
 <li><p>After cloning your fork to your local computer, you can meke changes to your copy, which you can then submit to the original repo as a <a class="reference internal" href="github-pull-request.html"><span class="doc std std-doc"><em>Pull request</em></span></a>.</p></li>
 </ul>
 </div>
