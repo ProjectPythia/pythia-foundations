@@ -1,4 +1,4 @@
-![xarray Logo](http://xarray.pydata.org/en/stable/_static/dataset-diagram-logo.png "xarray Logo")
+![xarray Logo](http://xarray.pydata.org/en/stable/_static/dataset-diagram-logo.png 'xarray Logo')
 
 # Xarray
 
