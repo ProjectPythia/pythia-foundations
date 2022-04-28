@@ -92,4 +92,4 @@ We will work through cloning and forking an example repository.
 
 ## References
 
-1. [What is GitHub Discussions? A complete guide](https://resources.github.com/devops/process/planning/discussions/#:~:text=GitHub%20Discussions%20thread.-,GitHub%20Discussions%20vs.%20GitHub%20Issues%3A%20When%20to%20use%20each,-A%20common%20question)
+1. [What is GitHub Discussions? A complete guide](https://resources.github.com/devops/process/planning/discussions/)
