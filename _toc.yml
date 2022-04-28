@@ -32,7 +32,6 @@ parts:
           - file: foundations/github/github-pull-request
           - file: foundations/github/github-workflows
           - file: foundations/github/contribute-to-pythia
-          - file: foundations/github/github-advanced
   - caption: Core Scientific Python packages
     chapters:
       - file: core/overview
