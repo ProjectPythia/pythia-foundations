@@ -22,7 +22,7 @@ A workflow is a series of activities or tasks that must be completed sequentiall
 | [Cloning and Forking](github-cloning-forking) | Necessary   |       |
 | [Basic version control with git](basic-git)   | Necessary   |       |
 | [Issues and Discussions](github-issues)       | Recommended |       |
-| [Branches](github-issues)                     | Necessary   |       |
+| [Branches](git-branches)                      | Necessary   |       |
 | [Pull Requests](github-pull-request)          | Necessary   |       |
 
 - **Time to learn**: 60 minutes
