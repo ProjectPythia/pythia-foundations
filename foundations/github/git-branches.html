@@ -690,7 +690,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
   <a class="reference internal image-reference" href="../../_images/Git-Logo-2Color.png"><img alt="Git Logo" src="../../_images/Git-Logo-2Color.png" style="width: 400px;" /></a>
 <div class="tex2jax_ignore mathjax_ignore section" id="git-branches">
 <h1>Git Branches<a class="headerlink" href="#git-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
-<p>Git “branches” are an important component of many Git and GitHub workflows. If you plan to use GitHub to manage your own resources, or contribute to a GitHub hosted project, it is essential to have a basic understanding of what branches are and how to use them. For example, the best practices for a simple workflow for suggesting changes to a GitHub repository are: create your own fork of the repository, make a branch from your fork where your changes are made, and then suggest these changes move to the upstream repository with a Pull Request. This section of the GitHub chapter assumes you have read the prior GitHub sections, are at least somewhat familiar with git commands and the vocabulary (“cloning,” “forking,” “merging,” “Pull Request” etc), and that you have already created your own fork of the <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">GitHub Sandbox Repository</a> hosted by Project Pythia. That fork is where you will make your first Git branch while following along with this chapter.</p>
+<p>Git “branches” are an important component of many Git and GitHub workflows. If you plan to use GitHub to manage your own resources, or contribute to a GitHub hosted project, it is essential to have a basic understanding of what branches are and how to use them. For example, the best practices for a simple workflow for suggesting changes to a GitHub repository are: create your own fork of the repository, make a branch from your fork where your changes are made, and then suggest these changes move to the upstream repository with a Pull Request. This section of the GitHub chapter assumes you have read the prior GitHub sections, are at least somewhat familiar with git commands and the vocabulary (“cloning,” “forking,” “merging,” “Pull Request” etc), and that you have already created your own fork of the <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">GitHub Sandbox Repository</a> hosted by Project Pythia.</p>
 <div class="section" id="overview">
 <h2>Overview:<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ol class="simple">
@@ -730,7 +730,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <td><p>Necessary</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="github-setup-advanced.html"><span class="doc std std-doc">Advanced GitHub Setup</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="github-setup-advanced.html"><span class="doc std std-doc">Configuring your GitHub account</span></a></p></td>
 <td><p>Recommended</p></td>
 <td><p></p></td>
 </tr>
@@ -840,7 +840,7 @@ The above flowchart demonstrates pushing two new local commits (C3 and C4) to th
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span> <span class="n">origin</span> <span class="n">branchA</span>
 </pre></div>
 </div>
-<p>Thankfully, Git provided this command in the previous error message.</p>
+<p>Thankfully, Git provided this command in the previous error message. If you cloned using HTTPS, you will be asked to enter your username and password, as described in <a class="reference external" href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub’s PAT Creation page</a>.</p>
 <p><img alt="Set Upstream" src="../../_images/6d-setupstream.png" /></p>
 <p>We can see that this worked by doing a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-a</span></code></p>
 <p>Notice the new branch called <code class="docutils literal notranslate"><span class="pre">remotes/origin/newbranch</span></code>. And when you do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> you’ll see that we are up to date with this new remote branch.</p>
@@ -1105,7 +1105,7 @@ The above flowchart demonstrates pulling in the upstream changes from Upstream M
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 28 April 2022.
+          Last updated on 4 May 2022.
         </p>
       </div>
     </div>

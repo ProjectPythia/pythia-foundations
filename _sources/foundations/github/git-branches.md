@@ -5,7 +5,7 @@
 
 # Git Branches
 
-Git "branches" are an important component of many Git and GitHub workflows. If you plan to use GitHub to manage your own resources, or contribute to a GitHub hosted project, it is essential to have a basic understanding of what branches are and how to use them. For example, the best practices for a simple workflow for suggesting changes to a GitHub repository are: create your own fork of the repository, make a branch from your fork where your changes are made, and then suggest these changes move to the upstream repository with a Pull Request. This section of the GitHub chapter assumes you have read the prior GitHub sections, are at least somewhat familiar with git commands and the vocabulary ("cloning," "forking," "merging," "Pull Request" etc), and that you have already created your own fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox) hosted by Project Pythia. That fork is where you will make your first Git branch while following along with this chapter.
+Git "branches" are an important component of many Git and GitHub workflows. If you plan to use GitHub to manage your own resources, or contribute to a GitHub hosted project, it is essential to have a basic understanding of what branches are and how to use them. For example, the best practices for a simple workflow for suggesting changes to a GitHub repository are: create your own fork of the repository, make a branch from your fork where your changes are made, and then suggest these changes move to the upstream repository with a Pull Request. This section of the GitHub chapter assumes you have read the prior GitHub sections, are at least somewhat familiar with git commands and the vocabulary ("cloning," "forking," "merging," "Pull Request" etc), and that you have already created your own fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox) hosted by Project Pythia.
 
 ## Overview:
 
@@ -26,7 +26,7 @@ Git "branches" are an important component of many Git and GitHub workflows. If y
 | [GitHub Repositories](github-repos)                        | Necessary   |                              |
 | [Issues and Discussions](github-issues)                    | Recommended |                              |
 | [Cloning and Forking a Repository](github-cloning-forking) | Necessary   |                              |
-| [Advanced GitHub Setup](github-setup-advanced)             | Recommended |                              |
+| [Configuring your GitHub account](github-setup-advanced)   | Recommended |                              |
 | [Basic Version Control with Git](basic-git)                | Necessary   |                              |
 
 - **Time to learn**: 30 minutes
@@ -176,7 +176,7 @@ First, we need to set an upstream branch to direct our local push to:
 git push --set-upstream origin branchA
 ```
 
-Thankfully, Git provided this command in the previous error message.
+Thankfully, Git provided this command in the previous error message. If you cloned using HTTPS, you will be asked to enter your username and password, as described in [GitHub's PAT Creation page](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 ![Set Upstream](../../images/6d-setupstream.png)
 
