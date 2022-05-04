@@ -23,7 +23,7 @@ A Pull Request, aka a "merge request," is an event that occurs when a project co
 | [Cloning and Forking](github-cloning-forking) | Necessary   |       |
 | [Basic version control with git](basic-git)   | Necessary   |       |
 | [Issues and Discussions](github-issues)       | Recommended |       |
-| [Branches](github-issues)                     | Necessary   |       |
+| [Branches](git-branches)                      | Necessary   |       |
 
 - **Time to learn**: 60 minutes
 
@@ -94,7 +94,7 @@ Here you will see the message, "This branch is 1 commit ahead of ProjectPythia:m
 
 ### Open a Draft Pull Request
 
-Click on the "Open a Pull Request" button under the "Contribute" drop-down.
+Click on the "Open pull request" button under the "Contribute" drop-down.
 
 ![Contribute](../../images/11-newbranch-contribute.png)
 
@@ -142,7 +142,7 @@ However, this PR will NOT be merged, as the GitHub-Sandbox repository is intende
 
 The above demonstration is an example of the Git **Forking Workflow**, because we forked the [GitHub Sandbox repository](https://github.com/ProjectPythia/github-sandbox) before making our feature branches. This is most common when you do NOT have write-access to the upstream repository.
 
-This differs from the **Feature Workflow**, where all contributors work on a single, remote GitHub repository in specific feature branches. This is common when all contributoris DO have write-access to the upstream repository.
+This differs from the **Feature Workflow**, where all contributors work on a single, remote GitHub repository in specific feature branches. This is common when all contributors DO have write-access to the upstream repository.
 
 The steps leading up to creating your PR depend on your workflow. The main difference in creating the PR is that
 the contributor now, for the Feature Workflow, navigates to the upstream, remote

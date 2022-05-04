@@ -82,7 +82,7 @@ Click on the green **Code** button to the right:
 
 ---
 
-Select the **HTTPS** option, then click on the URL to highlight it, and finally click on the copy-to-clipboard icon:
+Select the **HTTPS** option, and click on the copy-to-clipboard icon:
 
 <img src="../../images/GitHub_CodeCloneHTTPS.png" alt="CodeCloneHTTPS">
 
@@ -199,7 +199,7 @@ You now have a copy (essentially a clone) of the forked repository, which is now
 
 You could, at this point, select one of the files in the repository and use GitHub's built-in editor to make changes to these text-based files. But the typical use case that leverages the collaborative power of GitHub and its command-line cousin, _git_, involves _cloning_ your _forked_ copy of the repo to your local computer, where you can then perform your edits, and (in the case of software) test them on your system.
 
-Cloning your fork is the same as cloning the original repo. Click on the Code button, select the HTTPS protocol, copy the URL to the clipboard, and then run `git clone <URL>` on your local computer.
+Cloning your fork is the same as cloning the original repo. Click on the Code button, select the HTTPS protocol, copy the URL to the clipboard, and then run `git clone <URL>` on your local computer. In this case, you will need to either run this command in a different directory or rename the destination directory with `git clone <URL> <directory-name>`, since it will by default use the name of the repo, `github-sandbox`.
 
 ```{tip}
 Unlike cloning, forking is not an option supported by the *git* command-line interface. I.e., `git fork` is not a valid command.
