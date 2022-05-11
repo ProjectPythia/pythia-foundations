@@ -1,8 +1,6 @@
-# NumPy
+<img src=https://github.com/numpy/numpy/raw/main/branding/logo/primary/numpylogo.svg width=250 alt="NumPy Logo"></img>
 
-```{note}
-This content is under construction!
-```
+# NumPy
 
 This section contains tutorials on array computing with [NumPy](https://numpy.org).
 
