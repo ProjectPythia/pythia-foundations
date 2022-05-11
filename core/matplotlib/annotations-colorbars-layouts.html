@@ -997,13 +997,14 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fb0a1b26e20&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f568b526190&gt;
 </pre></div>
 </div>
 <img alt="../../_images/annotations-colorbars-layouts_30_1.png" src="../../_images/annotations-colorbars-layouts_30_1.png" />
 </div>
 </div>
-<p>You may have noticed the input argument <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code>. This is subplot syntax, as you have seen in the previous Matplotlib content.</p>
+<p>You may have noticed the input argument <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code>. To clarify, <code class="docutils literal notranslate"><span class="pre">hist1</span></code> is a tuple returned by <code class="docutils literal notranslate"><span class="pre">hist2d</span></code>, and <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> returns a <code class="docutils literal notranslate"><span class="pre">matplotlib.collections.QuadMesh</span></code> that points to the colormap.</p>
+<p>Read more at the <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist2d.html"><code class="docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.hist2d</span></code> documentation</a>.</p>
 </div>
 <div class="section" id="custom-colorbars">
 <h2>Custom Colorbars<a class="headerlink" href="#custom-colorbars" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -1304,7 +1305,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 9 May 2022.
+          Last updated on 11 May 2022.
         </p>
       </div>
     </div>
