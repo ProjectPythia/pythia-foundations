@@ -112,7 +112,7 @@ There are too many domain specific libraries to mention here,
 but online resources such as the
 [Python for Atmosphere and Ocean Science (PyAOS) package index](https://pyaos.github.io/packages/)
 attempt to keep track of the domain-specific libraries in their field.
-Also check out the [Pythia Resource Gallery](https://projectpythia.org/gallery.html) and try filtering by domain.
+Also check out the [Pythia Resource Gallery](https://projectpythia.org/resource-gallery.html) and try filtering by domain.
 
 ## Tutorials
 
