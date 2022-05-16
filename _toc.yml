@@ -30,8 +30,8 @@ parts:
           - file: foundations/github/basic-git
           - file: foundations/github/git-branches
           - file: foundations/github/github-pull-request
+          - file: foundations/github/github-workflows
           - file: foundations/github/contribute-to-pythia
-          - file: foundations/github/github-advanced
   - caption: Core Scientific Python packages
     chapters:
       - file: core/overview
@@ -59,7 +59,7 @@ parts:
           - file: core/data-formats/netcdf-cf
       - file: core/xarray
         sections:
-          - file: core/xarray/xarray
+          - file: core/xarray/xarray-intro
           - file: core/xarray/computation-masking
           - file: core/xarray/enso-xarray
   - caption: Appendix
