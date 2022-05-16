@@ -127,6 +127,8 @@ sphinx:
           url: https://foundations.projectpythia.org
         - name: Resources
           url: https://projectpythia.org/resouce-gallery.html
+        - name: Cookbooks
+          url: https://projectpythia.org/cookbooks.html
         - name: Community
           url: https://projectpythia.org/index.html#join-us
       footer_logos:
