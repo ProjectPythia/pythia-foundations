@@ -884,7 +884,7 @@ Select the File Browser tab to see the new file <code class="docutils literal no
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You may notice that the file has a dot instead of an “X” where you’d close it, this indicates that the file hasn’t been saved or has unsaved changes. Save the file (“command+s” on Mac, “control+s” on Windows, or File Menu → Save).</p>
+<p>You may notice that the file has a dot instead of an “X” where you’d close it, this indicates that the file hasn’t been saved or has unsaved changes. Save the file (“command+s” on Mac, “control+s” on Windows, or “File▶Save Text”).</p>
 <p>Go to the File Browser tab and right-click the new text file we create and “Rename” it to <code class="docutils literal notranslate"><span class="pre">hello.py</span></code>. Once the extension changes to <code class="docutils literal notranslate"><span class="pre">.py</span></code>, Jupyter recognizes that this is a Python file, and the text editor syntax highlights the code.</p>
 <p>Now, click the “+” button in the File Browser to create a new Launcher. In the Launcher tab, click on the “Terminal” button, again to create a terminal. Now you have 2 tabs open: a text editor tab and a terminal tab. Drag the Terminal tab to the right side of the main work area to view both windows simultaneously. Click the File Browser tab to collapse the left sidebar and get more real estate! Alternatively you could stack the windows one on top of the other.</p>
 <p>Run <code class="docutils literal notranslate"><span class="pre">ls</span></code> in the Terminal window to see the text file we just created. Execute <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">hello.py</span></code> in the Terminal window. See the output in the Terminal window.</p>
@@ -894,7 +894,7 @@ Select the File Browser tab to see the new file <code class="docutils literal no
 </div>
 <div class="section" id="running-jupyterlab-notebooks">
 <h2>Running JupyterLab Notebooks<a class="headerlink" href="#running-jupyterlab-notebooks" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>There are two ways to open a Jupyter Notebook. One way is to select the File Browser Tab, click the “New Launcher” button, and select a Python 3 Notebook from the Launcher. Another way is to go to the top Menu Bar and select File▶New▶Notebook. JupyterLab will prompt you with a dialogue box to select the Kernel you want to use in your Notebook. Select the “Python 3” kernel.</p>
+<p>There are two ways to open a Jupyter Notebook. One way is to select the File Browser Tab, click the “New Launcher” button, and select a Python 3 Notebook from the Launcher. Another way is to go to the top Menu Bar and select “File▶New▶Notebook.” JupyterLab will prompt you with a dialogue box to select the Kernel you want to use in your Notebook. Select the “Python 3” kernel.</p>
 <p>If you have the File Browser Tab open, notice you just created a file called <code class="docutils literal notranslate"><span class="pre">Untitled.ipynb.</span></code> You will also have a new window open in the main work area for your new Notebook.</p>
 <p>Let’s explore the Notebook interface:</p>
 <p>There is a <strong>Toolbar</strong> at the top with buttons that allow you to: Save, Create New Cells, Cut/Paste/Copy Cells, Run the Cell, Stop the Kernel, Refresh the Kernel. There is also a <strong>dropdown menu</strong> to select the kind of cell (Markdown, Raw, or Code). And all the way to the right is the name of your Kernel (which you can click to change Kernels) and a <strong>Kernel Status Icon</strong> that indicates if something is being computed by the Kernel (by a dark cirlce) or not (by an empty circle).</p>
@@ -955,33 +955,33 @@ Enter the following in the next cell:
 Notice that the <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code> label goes away.</p>
 <p>Markdown is a markup language that allows you to format text in a plain-text editor. Here we will demonstrate some common Markdown syntax. You can learn more at <a class="reference external" href="https://www.markdownguide.org/">the Markdown Guide site</a> or in our <a class="reference external" href="https://foundations.projectpythia.org/foundations/markdown.html">Getting Started with Jupyter: Markdown</a> content.
 Click on the cell and enter edit mode, we can now type in some markdown text like so:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a heading!</span>
-<span class="n">And</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">some</span> <span class="n">text</span><span class="o">.</span>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># This is a heading!</span>
+And this is some text.
 
-<span class="c1">## And this is a subheading</span>
-<span class="k">with</span> <span class="n">a</span> <span class="n">bulleted</span> <span class="nb">list</span> <span class="ow">in</span> <span class="n">it</span><span class="p">:</span>
+<span class="gu">## And this is a subheading</span>
+with a bulleted list in it:
 
- <span class="o">-</span> <span class="n">one</span>
- <span class="o">-</span> <span class="n">two</span>
- <span class="o">-</span> <span class="n">three</span>
+ <span class="k">-</span> one
+ <span class="k">-</span> two
+ <span class="k">-</span> three
 </pre></div>
 </div>
 <p>and <kbd>Shift</kbd>+<kbd>Enter</kbd> to render the markdown to HTML.</p>
 <a class="reference internal image-reference" href="../_images/markdown.png"><img alt="../_images/markdown.png" src="../_images/markdown.png" style="width: 600px;" /></a>
 <p>Again, in the next cell, change this cell to “Markdown”. To demonstrate displaying equations, enter:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## Some math
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">## Some math</span>
 
 And Jupyter’s version of markdown can display LaTeX:
 
 $$
-e^x=\sum_{i=0}^\infty \frac{1}{i!}x^i
+e^x=\sum_{i=0}^{\infty} \frac{1}{i!}x^i
 $$
 </pre></div>
 </div>
 <p>When you are done, type <kbd>Shift</kbd>+<kbd>Enter</kbd> to render the markdown document.</p>
 <a class="reference internal image-reference" href="../_images/markdown_eq.png"><img alt="../_images/markdown_eq.png" src="../_images/markdown_eq.png" style="width: 600px;" /></a>
 <p>You can also do inline equations with a single “$” for example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>This is an equation: $i^4$.
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>This is an equation: $i^4$.
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/markdown_eq_inline.png"><img alt="../_images/markdown_eq_inline.png" src="../_images/markdown_eq_inline.png" style="width: 600px;" /></a>
@@ -990,8 +990,8 @@ $$
 <div class="section" id="raw-cells">
 <h3>Raw Cells<a class="headerlink" href="#raw-cells" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Now in a new cell selected, select “raw” from the “cell type” dropdown menu. Again, the <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code> label goes away, and you can enter the following in the cell:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">8</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>i = 8
+print(i)
 </pre></div>
 </div>
 <p>When you <kbd>Shift</kbd>+<kbd>Enter</kbd> the text isn’t rendered.</p>
@@ -1000,7 +1000,9 @@ $$
 </div>
 <div class="section" id="command-mode-shortcuts">
 <h3>Command Mode Shortcuts<a class="headerlink" href="#command-mode-shortcuts" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>Now, select the “raw” cell you just created by clicking on the far left of the cell.  You are now in “command mode”. The up and down arrows move to different cells. Don’t hit “enter” which would switch the cell to “edit mode.” Let’s explore command mode.</p>
+<p>Now, select the “raw” cell you just created by clicking on the far left of the cell.</p>
+<p><img alt="far_left_cell.png" src="../_images/far_left_cell.png" /></p>
+<p>You are now in “command mode”. The up and down arrows move to different cells. Don’t hit “enter” which would switch the cell to “edit mode.” Let’s explore command mode.</p>
 <p>You can change the cell type with <code class="docutils literal notranslate"><span class="pre">y</span></code> (for code), <code class="docutils literal notranslate"><span class="pre">m</span></code> for markdown, or <code class="docutils literal notranslate"><span class="pre">r</span></code> for raw.</p>
 <p>You can add a new cell above the selected cell with <code class="docutils literal notranslate"><span class="pre">a</span></code> (or below the selected cell with <code class="docutils literal notranslate"><span class="pre">b</span></code>).</p>
 <p>You can cut (<code class="docutils literal notranslate"><span class="pre">x</span></code>), copy (<code class="docutils literal notranslate"><span class="pre">c</span></code>), paste (<code class="docutils literal notranslate"><span class="pre">v</span></code>).</p>
@@ -1071,7 +1073,7 @@ $$
 <h2>Shutting Down<a class="headerlink" href="#shutting-down" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Before shutting down, save your notebook with the disc icon in the Notebook toolbar. Now, close both tabs (the notebook and the text editor). You’re back to the Launcher.</p>
 <p>The notebook kernel is still running, though, so go to the Running Kernels tab and shut it down.</p>
-<p>And we’re done.  Go to “File → Shut Down” to close both your browser tab and JupyterLab itself.</p>
+<p>And we’re done.  Go to “File▶Shut Down” to close both your browser tab and JupyterLab itself.</p>
 </div>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -1254,7 +1256,7 @@ $$
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 24 May 2022.
+          Last updated on 1 June 2022.
         </p>
       </div>
     </div>

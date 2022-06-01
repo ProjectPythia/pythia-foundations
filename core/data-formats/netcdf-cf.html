@@ -879,7 +879,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
     title: Forecast model run
     institution: Unidata
     source: WRF-1.5
-    history: 2022-05-24 17:31:45.667010 Python
+    history: 2022-06-01 17:38:16.798736 Python
     references: 
     comment: 
     dimensions(sizes): forecast_time(0), x(101), y(67), pressure(7)
@@ -1049,7 +1049,7 @@ filling on, default _FillValue of 9.969209968386869e+36 used
 </div>
 </div>
 <p>Time coordinates must contain a <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute with a string value with a form similar to <code class="docutils literal notranslate"><span class="pre">'seconds</span> <span class="pre">since</span> <span class="pre">2019-01-06</span> <span class="pre">12:00:00.00'</span></code>. ‘seconds’, ‘minutes’, ‘hours’, and ‘days’ are the most commonly used units for time. Due to the variable length of months and years, they are not recommended.</p>
-<p>Before we can write data, we need to first need to convert our list of Python <code class="docutils literal notranslate"><span class="pre">datetime</span></code> instances to numeric values. We can use the <code class="docutils literal notranslate"><span class="pre">date2num</span></code> method from the <code class="docutils literal notranslate"><span class="pre">cftime</span></code> library to make this easy to convert using the unit string as defined above.</p>
+<p>Before we can write data, we need to first convert our list of Python <code class="docutils literal notranslate"><span class="pre">datetime</span></code> instances to numeric values. We can use the <code class="docutils literal notranslate"><span class="pre">date2num</span></code> method from the <code class="docutils literal notranslate"><span class="pre">cftime</span></code> library to make this easy to convert using the unit string as defined above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time_units</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;hours since </span><span class="si">{</span><span class="n">times</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s1">%Y-%m-%d 00:00</span><span class="si">}</span><span class="s1">&#39;</span>
@@ -1618,7 +1618,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 24 May 2022.
+          Last updated on 1 June 2022.
         </p>
       </div>
     </div>

@@ -772,11 +772,11 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <p><img alt="branching" src="../../_images/branching.gif" />
 The above flowchart demonstrates forking a remote repository, labeled “Upstream”, creating a local copy, labeled “Clone”, creating a new branch, “branchA”, and adding two commits, C3 and C4, to “branchA” of the local clone of the forked repository. Different commits can be added to different branches in any order without depending on or knowing about each other.</p>
 <p>From your terminal, navigate to your local clone of your <code class="docutils literal notranslate"><span class="pre">Github-Sandbox</span></code> Repository fork:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">github</span><span class="o">-</span><span class="n">sandbox</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> github-sandbox
 </pre></div>
 </div>
 <p>Let’s begin by checking the status of our repository:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git status
 </pre></div>
 </div>
 <p><img alt="Git Status" src="../../_images/1-gitstatus.png" /></p>
@@ -786,23 +786,23 @@ The above flowchart demonstrates forking a remote repository, labeled “Upstrea
 <p>Historically, the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch was called the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch. The name change was relatively recent, so all of your GitHub repositories may not reflect this yet. See instructions to change your branch name at <a class="reference external" href="https://github.com/github/renaming">Github’s Branch Renaming documentation</a>.</p>
 </div>
 <p>Now check the status of your remote repository with</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git remote -v
 </pre></div>
 </div>
 <p><img alt="Git Remote" src="../../_images/2-gitremote.png" /></p>
 <p>We are set up to pull (denoted as ‘fetch’ in the output above) and push from the same remote repository.</p>
 <p>Next, check all of your exising Git branches with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">a</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch -a
 </pre></div>
 </div>
 <p><img alt="Git Branch" src="../../_images/3-gitbranch.png" /></p>
 <p>You will see one local branch (<code class="docutils literal notranslate"><span class="pre">main</span></code>) and your remote branch (<code class="docutils literal notranslate"><span class="pre">remotes/origin/HEAD</span></code> and <code class="docutils literal notranslate"><span class="pre">remotes/origin/main</span></code>, where <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> points to <code class="docutils literal notranslate"><span class="pre">main</span></code>). <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> is the pointer to the current branch reference, or in essence, a pointer to your last commit. More on this in a later section.</p>
 <p>Now, before we make some sample changes to our codebase, let’s create a new branch where we’ll make these changes:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="n">branchA</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch branchA
 </pre></div>
 </div>
 <p>Check that this branch was created with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch
 </pre></div>
 </div>
 <p><img alt="Git NewBranch" src="../../_images/4-gitnewbranch.png" /></p>
@@ -811,11 +811,11 @@ The above flowchart demonstrates forking a remote repository, labeled “Upstrea
 <div class="section" id="switching-branches">
 <h2>Switching Branches<a class="headerlink" href="#switching-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>To switch branches use the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> as in:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">branchA</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout branchA
 </pre></div>
 </div>
 <p>To check your current branch use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git status
 </pre></div>
 </div>
 <p><img alt="Git Checkout" src="../../_images/5-gitcheckout.png" /></p>
@@ -827,7 +827,7 @@ The above flowchart demonstrates forking a remote repository, labeled “Upstrea
 <p><img alt="pushing" src="../../_images/pushing.gif" />
 The above flowchart demonstrates pushing two new local commits (C3 and C4) to the corresponding remote branch. Before the push, the changes from these commits exist ONLY locally and are not represented on your upstream GitHub repository. After the push, everything is up-to-date.</p>
 <p>Before we push this branch upstream, let’s make some sample changes (like C3 or C4) by creating a new empty file, with the ending “.py”.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">touch</span> <span class="n">hello</span><span class="o">.</span><span class="n">py</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch hello.py
 </pre></div>
 </div>
 <p><img alt="Git Status" src="../../_images/6-samplechange.png" /></p>
@@ -838,13 +838,13 @@ The above flowchart demonstrates pushing two new local commits (C3 and C4) to th
 <p><img alt="Git Log" src="../../_images/6b-gitlog.png" /></p>
 <p>In a real workflow, you would continue making edits and git commits on a branch until you are ready to push up to GitHub.</p>
 <p>Try to do this with</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push
 </pre></div>
 </div>
 <p><img alt="Git Push" src="../../_images/6c-gitpush.png" /></p>
 <p>You will get an error message, “fatal: The current branch <code class="docutils literal notranslate"><span class="pre">branchA</span></code> has no upstream branch.” So what is the proper method for getting our local branch changes up to GitHub?</p>
 <p>First, we need to set an upstream branch to direct our local push to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span> <span class="n">origin</span> <span class="n">branchA</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push --set-upstream origin branchA
 </pre></div>
 </div>
 <p>Thankfully, Git provided this command in the previous error message. If you cloned using HTTPS, you will be asked to enter your username and password, as described in <a class="reference external" href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub’s PAT Creation page</a>.</p>
@@ -862,13 +862,13 @@ The above flowchart demonstrates pushing two new local commits (C3 and C4) to th
 <ol class="simple">
 <li><p>First checkout the branch you want to merge INTO:</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">branchA</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout branchA
 </pre></div>
 </div>
 <ol class="simple">
 <li><p>Then execute a <code class="docutils literal notranslate"><span class="pre">merge</span></code>:</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">merge</span> <span class="n">branchB</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git merge branchB
 </pre></div>
 </div>
 <p>If there were competing edits in the 2 branches that Git cannot automatically resolve, a <strong>merge conflict</strong> occurs. This typically happens if edits are to the same line in different commits. Conflicts can be <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line">resolved in the command line</a> or in your GUI of choice (such as Visual Studio Code).</p>
@@ -881,19 +881,19 @@ The above flowchart demonstrates a simple Pull Request where the upstream main r
 <p>After the feature you worked on has been completed and merged, you may want to delete your branch.
 <img alt="deletebranch" src="../../_images/deletingbranch.gif" /></p>
 <p>To do this locally, you must first switch back to <code class="docutils literal notranslate"><span class="pre">main</span></code> or any non-target branch. Then you can enter</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch -d &lt;branch&gt;
 </pre></div>
 </div>
 <p>for example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="n">branchA</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch -d branchA
 </pre></div>
 </div>
 <p>To delete the branch remotely, type</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">&lt;</span><span class="n">remote</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">delete</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;.</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push &lt;remote&gt; --delete &lt;branch&gt;.
 </pre></div>
 </div>
 <p>as in</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">--</span><span class="n">delete</span> <span class="n">jukent</span><span class="o">/</span><span class="n">branchA</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push origin --delete jukent/branchA
 </pre></div>
 </div>
 </div>
@@ -905,11 +905,11 @@ The above flowchart demonstrates pulling in the upstream changes from Upstream M
 <p>In this example, all of the changes to the branches were local and made by a single person, you. In a collaborative environment, other contributors may be making changes to their own feature branches (or main branch), which will ultimately be pushed up to the remote repository. Either way, your branches will become stale and need to be refreshed. The more time that passes by, the more likely this is to happen, particularly for an active GitHub repository. Here we show you how to sync your branches with the upstream branches.</p>
 <p>Once a Pull Request has been merged, you will find that these upstream changes are not automatically included in your fork or your other branches. In order to include the changes from the upstream main branch, you will need to do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>.</p>
 <p>First check if there are any upstream changes:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git status
 </pre></div>
 </div>
 <p>Then, if there are no merge conflicts:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git pull
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> is a combination of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code>. That is it updates the remote tracking branches (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code>) AND updates your current branch with any new commits on the remote tracking branch (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code>).</p>
@@ -1112,7 +1112,7 @@ The above flowchart demonstrates pulling in the upstream changes from Upstream M
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 24 May 2022.
+          Last updated on 1 June 2022.
         </p>
       </div>
     </div>
