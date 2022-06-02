@@ -26,7 +26,7 @@ Git "branches" are an important component of many Git and GitHub workflows. If y
 | [GitHub Repositories](github-repos)                        | Necessary   |                              |
 | [Issues and Discussions](github-issues)                    | Recommended |                              |
 | [Cloning and Forking a Repository](github-cloning-forking) | Necessary   |                              |
-| [Configuring your GitHub account](github-setup-advanced)   | Recommended |                              |
+| [Configuring your GitHub Account](github-setup-advanced)   | Recommended |                              |
 | [Basic Version Control with Git](basic-git)                | Necessary   |                              |
 
 - **Time to learn**: 30 minutes
