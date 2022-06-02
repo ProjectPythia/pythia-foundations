@@ -20,7 +20,7 @@
 | [GitHub Repositories](github-repos)                        | Necessary   |                              |
 | [Issues and Discussions](github-issues)                    | Recommended |                              |
 | [Cloning and Forking a Repository](github-cloning-forking) | Recommended |                              |
-| [Configuring your GitHub account](github-setup-advanced)   | Recommended |                              |
+| [Configuring your GitHub Account](github-setup-advanced)   | Recommended |                              |
 
 - **Time to learn**: 45 minutes
 
