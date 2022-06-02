@@ -1,4 +1,4 @@
-# Formatted text in the notebook with Markdown
+# Formatted Text in the Notebook with Markdown
 
 ```{note}
 This content is under construction!
