@@ -3,7 +3,7 @@
 :width: 400px
 ```
 
-# GitHub repositories
+# GitHub Repositories
 
 ## Overview:
 
