@@ -1,4 +1,4 @@
-# Getting started with Python
+# Getting Started with Python
 
 **_New Python users, start here!_**
 
