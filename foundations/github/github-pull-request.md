@@ -19,9 +19,9 @@ A Pull Request, aka a "merge request," is an event that occurs when a project co
 | Concepts                                      | Importance  | Notes |
 | --------------------------------------------- | ----------- | ----- |
 | [What is GitHub](what-is-github)              | Necessary   |       |
-| [GitHub repositories](github-repos)           | Necessary   |       |
+| [GitHub Repositories](github-repos)           | Necessary   |       |
 | [Cloning and Forking](github-cloning-forking) | Necessary   |       |
-| [Basic version control with git](basic-git)   | Necessary   |       |
+| [Basic Version Control with _git_](basic-git)   | Necessary   |       |
 | [Issues and Discussions](github-issues)       | Recommended |       |
 | [Branches](git-branches)                      | Necessary   |       |
 
