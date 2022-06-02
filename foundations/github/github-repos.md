@@ -7,7 +7,7 @@
 
 ## Overview:
 
-1. Explore GitHub repositories
+1. Explore GitHub Repositories
 
 ## Prerequisites
 
