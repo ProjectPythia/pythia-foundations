@@ -3,7 +3,7 @@
 :width: 600px
 ```
 
-# Getting started with GitHub
+# Getting Started with GitHub
 
 Python and Jupyter are cool technologies, but they only scratch the surface of why you might want to adopt Python for your geoscience workflow.
 
