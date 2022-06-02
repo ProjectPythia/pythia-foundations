@@ -3,7 +3,7 @@
 :width: 400px
 ```
 
-# Basic version control with git
+# Basic Version Control with Git
 
 ## Overview:
 
