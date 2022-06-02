@@ -3,7 +3,7 @@
 :width: 400px
 ```
 
-# Configuring your GitHub account
+# Configuring your GitHub Account
 
 ## Overview:
 
