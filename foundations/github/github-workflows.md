@@ -20,7 +20,7 @@ A workflow is a series of activities or tasks that must be completed sequentiall
 | [What is GitHub](what-is-github)              | Necessary   |       |
 | [GitHub Repositories](github-repos)           | Necessary   |       |
 | [Cloning and Forking](github-cloning-forking) | Necessary   |       |
-| [Basic Version Control with _git_](basic-git)   | Necessary   |       |
+| [Basic Version Control with _git_](basic-git) | Necessary   |       |
 | [Issues and Discussions](github-issues)       | Recommended |       |
 | [Branches](git-branches)                      | Necessary   |       |
 | [Pull Requests](github-pull-request)          | Necessary   |       |
