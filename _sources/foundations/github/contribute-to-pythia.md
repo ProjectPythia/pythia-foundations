@@ -13,9 +13,16 @@
 
 ## Prerequisites
 
-| Concepts              | Importance | Notes |
-| --------------------- | ---------- | ----- |
-| Prior GitHub Sections | Necessary  |       |
+| Concepts                                      | Importance  | Notes |
+| --------------------------------------------- | ----------- | ----- |
+| [What is GitHub](what-is-github)              | Necessary   |       |
+| [GitHub Repositories](github-repos)           | Necessary   |       |
+| [Cloning and Forking](github-cloning-forking) | Necessary   |       |
+| [Basic Version Control with _git_](basic-git) | Necessary   |       |
+| [Issues and Discussions](github-issues)       | Recommended |       |
+| [Branches](git-branches)                      | Necessary   |       |
+| [Pull Requests](github-pull-request)          | Necessary   |       |
+| [GitHub Workflows](git-workflow)              | Necessary   |       |
 
 - **Time to learn**: 30 minutes
 
