@@ -3,11 +3,11 @@
 :width: 400px
 ```
 
-# GitHub repositories
+# GitHub Repositories
 
 ## Overview:
 
-1. Explore GitHub repositories
+1. Explore GitHub Repositories
 
 ## Prerequisites
 

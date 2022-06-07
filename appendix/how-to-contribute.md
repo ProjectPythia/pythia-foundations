@@ -1,4 +1,4 @@
-# Pythia Foundations contributor's guide
+# Pythia Foundations Contributor's Guide
 
 ```{note}
 This content is under construction!
