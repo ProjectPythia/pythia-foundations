@@ -300,5 +300,5 @@ All in all your Git Branching workflow should resemble this flow:
 ## Resources and references
 
 - [GitHub.com Help Documentation (GitHub Docs)](https://docs.github.com/en)
-- Paul, Kevin. [Python Tutorial Seminar Series - Github (Project Pythia, YouTube, 12 May 2021)](https://www.youtube.com/watch?v=fYkPn0Nttlg)
+- [Xdev Python Tutorial Seminar Series - Github (Kevin Paul)](https://www.youtube.com/watch?v=fYkPn0Nttlg)
 - [Resolving a Merge Conflict Using the Command Line (GitHub Docs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
