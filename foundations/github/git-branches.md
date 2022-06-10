@@ -297,8 +297,8 @@ All in all your Git Branching workflow should resemble this flow:
 
 [Opening a Pull Request on GitHub](github-pull-request)
 
-## References
+## Resources and references
 
-1. “GitHub.com Help Documentation.” GitHub Docs, https://docs.github.com/en.
-2. Paul, Kevin. “Python Tutorial Seminar Series - Github.” Project Pythia, YouTube, 12 May 2021, https://www.youtube.com/watch?v=fYkPn0Nttlg.
-3. “Resolving a Merge Conflict Using the Command Line.” GitHub Docs, https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line.
+- [GitHub.com Help Documentation (GitHub Docs)](https://docs.github.com/en)
+- [Xdev Python Tutorial Seminar Series - Github (Kevin Paul)](https://www.youtube.com/watch?v=fYkPn0Nttlg)
+- [Resolving a Merge Conflict Using the Command Line (GitHub Docs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
