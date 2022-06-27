@@ -1,3 +1,8 @@
+```{image} ../../images/GitHub-logo.png
+:alt: GitHub Logo
+:width: 400px
+```
+
 # GitHub repositories
 
 ## Overview:
@@ -51,6 +56,28 @@ When you [created your own GitHub account](https://foundations.projectpythia.org
 ```
 
 Another example is this project's [Pythia Foundations repository](https://github.com/ProjectPythia/pythia-foundations), on which this tutorial is stored. It is owned by the [Project Pythia organization](https://github.com/ProjectPythia), which also owns several other repositories that store the files needed to generate <https://projectpythia.org/>, among other things.
+
+## GitHub's distributed repositories
+
+Finally, we introduce an important concept that is vital to your
+understanding when working with GitHub. It is both the source of
+GitHub's power, as well as much of its complexity. GitHub repositories
+are _distributed_; in the general case, there is more than one
+repository for any project. In fact, repositories can come and go
+at any time, created and deleted as need dictates. Creating new
+repositories from existing ones, synchronizing, and managing them
+are the topics of later sections. For now, it is only important to
+understand that for a GitHub managed project there is typically one
+"official" repository, often called the "upstream" repository, and it lives on GitHub.com. There may be any
+number of copies of the "official" repository, known as _forks_ (or _origins_,
+if it is owned by you),
+that also reside on GitHub.com. Repos that are hosted on GitHub.com
+are referred to as _remotes_. In addition to the remotes, there may
+be one or more copies of the remotes on your desktop or laptop
+computer that are referred to as _locals_. A conceptual diagram of
+the various repos is shown in the image below.
+
+![GitHub repositories](../../images/github-repos.png)
 
 ---
 

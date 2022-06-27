@@ -1,4 +1,7 @@
-<img src="../../images/GitHub-logo.png" alt="Github Logo" width="600px">
+```{image} ../../images/GitHub-logo.png
+:alt: GitHub Logo
+:width: 400px
+```
 
 # What is GitHub?
 
@@ -103,8 +106,8 @@ The above screenshot is from <i>one moment in time</i>. When you visit the Xarra
 
 While one can freely browse GitHub repositories such as Xarray anonymously, it's necessary to log into a unique (and free) user account in order to take advantage of GitHub's full capabilities, such as:
 
-1. Opening issues and pull requests
-1. Participate in discussions
+1. Opening Issues and Pull Requests
+1. Participate in Discussions
 1. Host your own repository
 
 Your next step (if you haven't already) should be to register for your free GitHub account. As with many online services, you will choose a user id, password, and specify an email address to use with your account.

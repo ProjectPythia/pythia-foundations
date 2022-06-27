@@ -1,7 +1,6 @@
 ```{image} ../../images/Git-Logo-2Color.png
 :alt: Git Logo
-:width: 600px
-:align: center
+:width: 400px
 ```
 
 # Basic version control with git
@@ -21,7 +20,7 @@
 | [GitHub Repositories](github-repos)                        | Necessary   |                              |
 | [Issues and Discussions](github-issues)                    | Recommended |                              |
 | [Cloning and Forking a Repository](github-cloning-forking) | Recommended |                              |
-| [Advanced GitHub Setup](github-setup-advanced)             | Recommended |                              |
+| [Configuring your GitHub account](github-setup-advanced)   | Recommended |                              |
 
 - **Time to learn**: 45 minutes
 
@@ -286,7 +285,8 @@ Date:   Tue Jan 11 13:58:09 2022 -0500
     Create sample.py
 ```
 
-which shows the last few commits on this branch, including the commit number, author, timestamp, and commit message. You can page down to see the rest of the history!
+which shows the last few commits on this branch, including the commit number, author, timestamp, and commit message. You can page down to see the rest of the history
+or just press `Q` to exit `git log`!
 
 ```{note}
 Every commit has a unique hexadecimal checksum code like `7dca0292467e4bbd73643556f83fd1c52b5c113c`. Your history will look a little different from the above!
