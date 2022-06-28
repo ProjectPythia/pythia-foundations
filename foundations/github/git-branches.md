@@ -26,8 +26,8 @@ Git "branches" are an important component of many Git and GitHub workflows. If y
 | [GitHub Repositories](github-repos)                        | Necessary   |                              |
 | [Issues and Discussions](github-issues)                    | Recommended |                              |
 | [Cloning and Forking a Repository](github-cloning-forking) | Necessary   |                              |
-| [Configuring your GitHub account](github-setup-advanced)   | Recommended |                              |
-| [Basic Version Control with Git](basic-git)                | Necessary   |                              |
+| [Configuring your GitHub Account](github-setup-advanced)   | Recommended |                              |
+| [Basic Version Control with _git_](basic-git)              | Necessary   |                              |
 
 - **Time to learn**: 30 minutes
 
@@ -60,13 +60,13 @@ The above flowchart demonstrates forking a remote repository, labeled "Upstream"
 
 From your terminal, navigate to your local clone of your `Github-Sandbox` Repository fork:
 
-```
+```bash
 cd github-sandbox
 ```
 
 Let's begin by checking the status of our repository:
 
-```
+```bash
 git status
 ```
 
@@ -81,7 +81,7 @@ Historically, the `main` branch was called the `master` branch. The name change 
 
 Now check the status of your remote repository with
 
-```
+```bash
 git remote -v
 ```
 
@@ -91,7 +91,7 @@ We are set up to pull (denoted as 'fetch' in the output above) and push from the
 
 Next, check all of your exising Git branches with:
 
-```
+```bash
 git branch -a
 ```
 
@@ -101,13 +101,13 @@ You will see one local branch (`main`) and your remote branch (`remotes/origin/H
 
 Now, before we make some sample changes to our codebase, let's create a new branch where we'll make these changes:
 
-```
+```bash
 git branch branchA
 ```
 
 Check that this branch was created with:
 
-```
+```bash
 git branch
 ```
 
@@ -119,13 +119,13 @@ This will display the current and the new branch. You'll notice that current or 
 
 To switch branches use the command `git checkout` as in:
 
-```
+```bash
 git checkout branchA
 ```
 
 To check your current branch use `git status`:
 
-```
+```bash
 git status
 ```
 
@@ -142,7 +142,7 @@ The above flowchart demonstrates pushing two new local commits (C3 and C4) to th
 
 Before we push this branch upstream, let's make some sample changes (like C3 or C4) by creating a new empty file, with the ending ".py".
 
-```
+```bash
 touch hello.py
 ```
 
@@ -162,7 +162,7 @@ In a real workflow, you would continue making edits and git commits on a branch 
 
 Try to do this with
 
-```
+```bash
 git push
 ```
 
@@ -172,7 +172,7 @@ You will get an error message, "fatal: The current branch `branchA` has no upstr
 
 First, we need to set an upstream branch to direct our local push to:
 
-```
+```bash
 git push --set-upstream origin branchA
 ```
 
@@ -198,13 +198,13 @@ Let's assume your two branches are named `branchA` and `branchB`, and you want y
 
 1. First checkout the branch you want to merge INTO:
 
-```
+```bash
 git checkout branchA
 ```
 
 2. Then execute a `merge`:
 
-```
+```bash
 git merge branchB
 ```
 
@@ -222,25 +222,25 @@ After the feature you worked on has been completed and merged, you may want to d
 
 To do this locally, you must first switch back to `main` or any non-target branch. Then you can enter
 
-```
+```bash
 git branch -d <branch>
 ```
 
 for example
 
-```
+```bash
 git branch -d branchA
 ```
 
 To delete the branch remotely, type
 
-```
+```bash
 git push <remote> --delete <branch>.
 ```
 
 as in
 
-```
+```bash
 git push origin --delete jukent/branchA
 ```
 
@@ -257,13 +257,13 @@ Once a Pull Request has been merged, you will find that these upstream changes a
 
 First check if there are any upstream changes:
 
-```
+```bash
 git status
 ```
 
 Then, if there are no merge conflicts:
 
-```
+```bash
 git pull
 ```
 
@@ -297,8 +297,8 @@ All in all your Git Branching workflow should resemble this flow:
 
 [Opening a Pull Request on GitHub](github-pull-request)
 
-## References
+## Resources and references
 
-1. “GitHub.com Help Documentation.” GitHub Docs, https://docs.github.com/en.
-2. Paul, Kevin. “Python Tutorial Seminar Series - Github.” Project Pythia, YouTube, 12 May 2021, https://www.youtube.com/watch?v=fYkPn0Nttlg.
-3. “Resolving a Merge Conflict Using the Command Line.” GitHub Docs, https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line.
+- [GitHub.com Help Documentation (GitHub Docs)](https://docs.github.com/en)
+- [Xdev Python Tutorial Seminar Series - Github (Kevin Paul)](https://www.youtube.com/watch?v=fYkPn0Nttlg)
+- [Resolving a Merge Conflict Using the Command Line (GitHub Docs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
