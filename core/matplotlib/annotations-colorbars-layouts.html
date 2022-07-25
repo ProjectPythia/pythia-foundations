@@ -706,6 +706,19 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
   <a class="reference internal nav-link" href="#custom-colorbars">
    Custom Colorbars
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-normalize-class">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Normalize
+      </span>
+     </code>
+     Class
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mosaic-subplots">
@@ -1007,14 +1020,57 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f4bbae82130&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fbb15fe4340&gt;
 </pre></div>
 </div>
 <img alt="../../_images/annotations-colorbars-layouts_30_1.png" src="../../_images/annotations-colorbars-layouts_30_1.png" />
 </div>
 </div>
-<p>You may have noticed the input argument <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code>. To clarify, <code class="docutils literal notranslate"><span class="pre">hist1</span></code> is a tuple returned by <code class="docutils literal notranslate"><span class="pre">hist2d</span></code>, and <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> returns a <code class="docutils literal notranslate"><span class="pre">matplotlib.collections.QuadMesh</span></code> that points to the colormap.</p>
-<p>Read more at the <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist2d.html"><code class="docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.hist2d</span></code> documentation</a>.</p>
+<p>You may have noticed the input argument <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code>. To clarify, <code class="docutils literal notranslate"><span class="pre">hist1</span></code> is a tuple returned by <code class="docutils literal notranslate"><span class="pre">hist2d</span></code>, and <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> returns a <code class="docutils literal notranslate"><span class="pre">matplotlib.collections.QuadMesh</span></code> that points to the colormap for the first histogram. To make sure that both histograms are using the same colormap with the same range of values, <code class="docutils literal notranslate"><span class="pre">vmax</span></code> is set to 0.18 for both plots. This ensures that both histograms are using colormaps that represent values from 0 (the default for histograms) to 0.18. Because the same data is used for both plots, it doesn’t matter whether we pass in <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> or <code class="docutils literal notranslate"><span class="pre">hist2[3]</span></code> to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code>.
+Read more at the <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist2d.html"><code class="docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.hist2d</span></code> documentation</a>.</p>
+<p>Other kinds of plots can share colorbars too. A common use case is filled contour plots with shared colorbars for comparing data. <code class="docutils literal notranslate"><span class="pre">vmin</span></code> and <code class="docutils literal notranslate"><span class="pre">vmax</span></code> behave the same way for <code class="docutils literal notranslate"><span class="pre">contourf</span></code> as they do for <code class="docutils literal notranslate"><span class="pre">hist2d</span></code>. A downside to using the <code class="docutils literal notranslate"><span class="pre">vmin</span></code> and <code class="docutils literal notranslate"><span class="pre">vmax</span></code> kwargs when plotting two different datasets is that while the colormaps may be the same, the dataset with a smaller range of values won’t show the full range of colors as seen below. Thus, it <em>does</em> matter in this particular example which output from <code class="docutils literal notranslate"><span class="pre">contourf</span></code> is used to make the colorbar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x2</span> <span class="o">=</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mf">3.01</span><span class="p">,</span> <span class="mf">0.025</span><span class="p">)</span>
+<span class="n">X2</span><span class="p">,</span> <span class="n">Y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">X2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">Y2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">Z2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">X2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">Y2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">c1</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X2</span><span class="p">,</span> <span class="n">Y2</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X2</span><span class="p">,</span> <span class="n">Y2</span><span class="p">,</span> <span class="n">Z2</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">location</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">c2</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">location</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Shared colormaps on data with different ranges&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.98, &#39;Shared colormaps on data with different ranges&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/annotations-colorbars-layouts_33_1.png" src="../../_images/annotations-colorbars-layouts_33_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">c1</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X2</span><span class="p">,</span> <span class="n">Y2</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X2</span><span class="p">,</span> <span class="n">Y2</span><span class="p">,</span> <span class="n">Z2</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">c2</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Using the contourf output from the data with a wider range&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.98, &#39;Using the contourf output from the data with a wider range&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/annotations-colorbars-layouts_34_1.png" src="../../_images/annotations-colorbars-layouts_34_1.png" />
+</div>
+</div>
 </div>
 <div class="section" id="custom-colorbars">
 <h2>Custom Colorbars<a class="headerlink" href="#custom-colorbars" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -1048,7 +1104,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/annotations-colorbars-layouts_33_0.png" src="../../_images/annotations-colorbars-layouts_33_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_36_0.png" src="../../_images/annotations-colorbars-layouts_36_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1065,8 +1121,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/annotations-colorbars-layouts_34_0.png" src="../../_images/annotations-colorbars-layouts_34_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_37_0.png" src="../../_images/annotations-colorbars-layouts_37_0.png" />
 </div>
+</div>
+<div class="section" id="the-normalize-class">
+<h3>The <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> Class<a class="headerlink" href="#the-normalize-class" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Note that both plots use the <code class="docutils literal notranslate"><span class="pre">norm</span></code> kwarg. The <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> class linearly normalizes data into the [0, 1] interval. This is used to linearly map the colors in the colormap to the data from <code class="docutils literal notranslate"><span class="pre">vmin</span></code> to <code class="docutils literal notranslate"><span class="pre">vmax</span></code>. In fact, we used this functionality in the previous histogram exercise! The <code class="docutils literal notranslate"><span class="pre">vmin</span></code> and <code class="docutils literal notranslate"><span class="pre">vmax</span></code> kwargs for <code class="docutils literal notranslate"><span class="pre">hist2d</span></code> are simply passed into the <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> function. When making a custom colormap, it is best to specify how you want the data normalized.</p>
+<p>For non-linear nomalization, check out this <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormapnorms.html">Colormap Normalization tutorial</a>.</p>
 </div>
 </div>
 <div class="section" id="mosaic-subplots">
@@ -1097,7 +1158,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/annotations-colorbars-layouts_36_0.png" src="../../_images/annotations-colorbars-layouts_36_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_40_0.png" src="../../_images/annotations-colorbars-layouts_40_0.png" />
 </div>
 </div>
 <p>You’ll notice there is not a colorbar plotted by default. When constructing the colorbar, we need to specify:</p>
@@ -1125,7 +1186,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/annotations-colorbars-layouts_38_0.png" src="../../_images/annotations-colorbars-layouts_38_0.png" />
+<img alt="../../_images/annotations-colorbars-layouts_42_0.png" src="../../_images/annotations-colorbars-layouts_42_0.png" />
 </div>
 </div>
 </div>
