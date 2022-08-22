@@ -41,6 +41,8 @@ When you think your PR might be ready to be merged into the main project branch,
 
 You can do this by navigating to the right side bar menu of your PR's page. Under "Reviewers" enter and request from the GitHub user's you would like to approve your work. GitHub may suggest certain reviewers based on file codeowners or recent editors of the same files.
 
+<img src="../../images/review-request.png" alt="Request Reviews">
+
 It is possible to automate this process with a `CODEOWNERS` file and GitHub actions.
 
 Learn more at GitHub's [Requesting a Pull Request Review Documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review).
@@ -50,6 +52,8 @@ Learn more at GitHub's [Requesting a Pull Request Review Documentation](https://
 So you've been requested for review on a PR. What do you do now? First make sure you can view the files changed in a meaningful way.
 
 A PR has a "Files Changed" tab, so look here first. You will notice green and red highlighting to show added and removed content.
+
+<img src="../../images/review-fileschanged.png" alt="Reviewing Files Changed">
 
 But this raw content can be hard to interpret if the files you are reviewing are meant to be rendered as a webpage or a Jupyter Notebook, for example.
 
@@ -62,6 +66,8 @@ Wether looking at the content locally, in a deployment preview, or with ReviewNB
 ## Providing a Pull Request Review
 
 Back in the "Files Changed" tab you will see the option to "Add a single comment" or "Start Review". Here you can comment, approve, or request changes.
+
+<img src="../../images/review-approve.png" alt="Approving Review">
 
 ## What to Look for When Reviewing
 
