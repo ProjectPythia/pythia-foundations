@@ -25,7 +25,7 @@ Pull Requests (PRs) are typically reviewed by collaborators before being merged 
 | [Basic Version Control with _git_](basic-git) | Necessary   |       |
 | [Issues and Discussions](github-issues)       | Recommended |       |
 | [Branches](git-branches)                      | Necessary   |       |
-| [Pull Requests](github-pull-request)                 | Necessary   |       |
+| [Pull Requests](github-pull-request)          | Necessary   |       |
 
 - **Time to learn**: 30 minutes
 
@@ -33,11 +33,11 @@ Pull Requests (PRs) are typically reviewed by collaborators before being merged 
 
 ## What is a Pull Request Review?
 
-A PR Review is an opportunity for a team member to look through proposed file changes and request changes before merging into the main project branch. You may ask clarifying questions, ask for things to be changed, or suggest concrete edits. The author should satisfy your requests before the PR is merged (and may have to, if your branch protections are configured). 
+A PR Review is an opportunity for a team member to look through proposed file changes and request changes before merging into the main project branch. You may ask clarifying questions, ask for things to be changed, or suggest concrete edits. The author should satisfy your requests before the PR is merged (and may have to, if your branch protections are configured).
 
 ## Requesting Pull Request Reviews
 
-When you think your PR might be ready to be merged into the main project branch, it is time to request reviews. 
+When you think your PR might be ready to be merged into the main project branch, it is time to request reviews.
 
 You can do this by navigating to the right side bar menu of your PR's page. Under "Reviewers", select the gear icon, and then enter and request from the GitHub user's you would like to approve your work. GitHub may suggest certain reviewers based on file codeowners or recent editors of the same files.
 
@@ -65,7 +65,7 @@ Wether looking at the content locally, in a deployment preview, or with ReviewNB
 
 ## Providing a Pull Request Review
 
-Back in the "Files Changed" tab you can add in-line review comments by selecting the "+" icon to the left of the desired line. That will open a comment box with the options to "Add a single comment" or "Start Review". 
+Back in the "Files Changed" tab you can add in-line review comments by selecting the "+" icon to the left of the desired line. That will open a comment box with the options to "Add a single comment" or "Start Review".
 
 <img src="../../images/review-inline.png" alt="Inline Reviews">
 
@@ -86,12 +86,11 @@ Here are some more tips on what to look for during your review:
 - If the PR is meant to be rendered, preview how the rendered content looks to check for image resolution and functionality
 - And voice the limitations of your review! It is okay to not address all of these points in your review, but let your team know what you did look for (content vs code, e.g.). Your opinion matters.
 
-
 ---
 
 ## Summary
 
-- A PR Review is a way of safeguarding the main project branch by having other contributor's look through code before it is merged. 
+- A PR Review is a way of safeguarding the main project branch by having other contributor's look through code before it is merged.
 - There are several things to keep in mind when reviewing code, try to articulate what you based your review on.
 
 ### What's Next?
