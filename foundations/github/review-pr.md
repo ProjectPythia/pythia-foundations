@@ -39,7 +39,7 @@ A PR Review is an opportunity for a team member to look through proposed file ch
 
 When you think your PR might be ready to be merged into the main project branch, it is time to request reviews. 
 
-You can do this by navigating to the right side bar menu of your PR's page. Under "Reviewers" enter and request from the GitHub user's you would like to approve your work. GitHub may suggest certain reviewers based on file codeowners or recent editors of the same files.
+You can do this by navigating to the right side bar menu of your PR's page. Under "Reviewers", select the gear icon, and then enter and request from the GitHub user's you would like to approve your work. GitHub may suggest certain reviewers based on file codeowners or recent editors of the same files.
 
 <img src="../../images/review-request.png" alt="Request Reviews">
 
