@@ -22,6 +22,7 @@
 | [Issues and Discussions](github-issues)       | Recommended |       |
 | [Branches](git-branches)                      | Necessary   |       |
 | [Pull Requests](github-pull-request)          | Necessary   |       |
+| [Reviewing Pull Requests](review-pr)          | Recommended |       |
 | [GitHub Workflows](git-workflow)              | Necessary   |       |
 
 - **Time to learn**: 30 minutes
