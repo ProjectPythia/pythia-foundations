@@ -65,7 +65,13 @@ Wether looking at the content locally, in a deployment preview, or with ReviewNB
 
 ## Providing a Pull Request Review
 
-Back in the "Files Changed" tab you will see the option to "Add a single comment" or "Start Review". Here you can comment, approve, or request changes.
+Back in the "Files Changed" tab you can add in-line review comments by selecting the "+" icon to the left of the desired line. That will open a comment box with the options to "Add a single comment" or "Start Review". 
+
+<img src="../../images/review-inline.png" alt="Inline Reviews">
+
+This method is generally preferred if you have small edits that are easy for you, the reviewer, to implement yourself.
+
+For larger change requests, questions, or approvals, you can also comment, approve, express gratitude, or request changes from the top right menu.
 
 <img src="../../images/review-approve.png" alt="Approving Review">
 
