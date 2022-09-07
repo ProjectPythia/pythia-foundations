@@ -41,7 +41,7 @@ When you think your PR might be ready to be merged into the main project branch,
 
 You can do this by navigating to the right side bar menu of your PR's page. Under "Reviewers", select the gear icon, and then enter and request from the GitHub user's you would like to approve your work. GitHub may suggest certain reviewers based on file codeowners or recent editors of the same files.
 
-<img src="../../images/review-request.png" alt="Request Reviews">
+<img src="../../images/review-request.png" alt="Request Reviews" width="600"><br/>
 
 It is possible to automate this process with a `CODEOWNERS` file and GitHub actions.
 
@@ -53,7 +53,7 @@ So you've been requested for review on a PR. What do you do now? First make sure
 
 A PR has a "Files Changed" tab, so look here first. You will notice green and red highlighting to show added and removed content.
 
-<img src="../../images/review-fileschanged.png" alt="Reviewing Files Changed">
+<img src="../../images/review-fileschanged.png" alt="Reviewing Files Changed"><br/>
 
 But this raw content can be hard to interpret if the files you are reviewing are meant to be rendered as a webpage or a Jupyter Notebook, for example.
 
@@ -67,17 +67,17 @@ Wether looking at the content locally, in a deployment preview, or with ReviewNB
 
 Back in the "Files Changed" tab you can add in-line review comments by selecting the "+" icon to the left of the desired line. That will open a comment box with the options to "Add a single comment" or "Start Review".
 
-<img src="../../images/review-inline.png" alt="Inline Reviews">
+<img src="../../images/review-inline.png" alt="Inline Reviews"><br/>
 
 This method is generally preferred if you have comments that are relevant to specific lines of the code.
 
-This is also the prefered method if you've noticed small edits that are easy for you, the reviewer, to implement yourself. You can this can be done by suggesting changes with the "+-" icon (circled in red below). This will auto-format and auto-populate with the line you are editing, which you then edit.
+This is also the prefered method if you've noticed small edits that are easy for you, the reviewer, to implement yourself. This can be done by suggesting changes with the "+-" icon (circled in red below). This will auto-format and auto-populate with the line you are editing, which you then edit. <br/>
 
-<img src="../../images/suggestion.png" alt="Review Suggestions">
+<img src="../../images/suggestion.png" alt="Review Suggestions" width="600"> <br/>
 
 For larger change requests, questions, or approvals, you can also comment, approve, express gratitude, or request changes from the top right menu.
 
-<img src="../../images/review-approve.png" alt="Approving Review">
+<img src="../../images/review-approve.png" alt="Approving Review"><br/>
 
 "Comment" is for leaving comments on the PR. This is a chance to provide feedback or ask questions that shouldn't hinder the process of merging the PR.
 
