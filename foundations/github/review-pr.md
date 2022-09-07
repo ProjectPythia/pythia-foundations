@@ -73,7 +73,7 @@ This method is generally preferred if you have comments that are relevant to spe
 
 This is also the prefered method if you've noticed small edits that are easy for you, the reviewer, to implement yourself. You can this can be done by suggesting changes with the "+-" icon (circled in red below). This will auto-format and auto-populate with the line you are editing, which you then edit.
 
-<img src="../../images/suggesting.png" alt="Review Suggestions">
+<img src="../../images/suggestion.png" alt="Review Suggestions">
 
 For larger change requests, questions, or approvals, you can also comment, approve, express gratitude, or request changes from the top right menu.
 
@@ -84,6 +84,8 @@ For larger change requests, questions, or approvals, you can also comment, appro
 "Approve" is for when you think the new content changes are great and should be pulled into the main code branch as soon as possible. Let's get this merged (LGTM)!
 
 "Request changes" is for when you've noticed something that should be improved upon before the codebase is merged.
+
+And then finish your review!
 
 ## What to Look for When Reviewing
 
