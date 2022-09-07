@@ -69,7 +69,7 @@ Back in the "Files Changed" tab you can add in-line review comments by selecting
 
 <img src="../../images/review-inline.png" alt="Inline Reviews">
 
-This method is generally preferred if you have comments that are relevant to specific lines of the code. 
+This method is generally preferred if you have comments that are relevant to specific lines of the code.
 
 This is also the prefered method if you've noticed small edits that are easy for you, the reviewer, to implement yourself. You can this can be done by suggesting changes with the "+-" icon (circled in red below). This will auto-format and auto-populate with the line you are editing, which you then edit.
 
