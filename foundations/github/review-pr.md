@@ -5,7 +5,7 @@
 
 # Reviewing Pull Requests
 
-Pull Requests (PRs) are typically reviewed by collaborators before being merged in to the main project branch. Here are some tips on how to effectively review a PR.
+Pull Requests (PRs) are typically reviewed by collaborators before being merged in to the main project branch. If you've been asked to review a PR, perhaps you're feeling overwhelmed, underqualified, or just plain don't know where to start. Remember that your teammates want to make the best project they can, and they want your feedback to help get there, so dive in! Here are some tips on how to effectively review a PR that can help.
 
 ## Overview:
 
@@ -69,11 +69,21 @@ Back in the "Files Changed" tab you can add in-line review comments by selecting
 
 <img src="../../images/review-inline.png" alt="Inline Reviews">
 
-This method is generally preferred if you have small edits that are easy for you, the reviewer, to implement yourself.
+This method is generally preferred if you have comments that are relevant to specific lines of the code. 
+
+This is also the prefered method if you've noticed small edits that are easy for you, the reviewer, to implement yourself. You can this can be done by suggesting changes with the "+-" icon (circled in red below). This will auto-format and auto-populate with the line you are editing, which you then edit.
+
+<img src="../../images/suggesting.png" alt="Review Suggestions">
 
 For larger change requests, questions, or approvals, you can also comment, approve, express gratitude, or request changes from the top right menu.
 
 <img src="../../images/review-approve.png" alt="Approving Review">
+
+"Comment" is for leaving comments on the PR. This is a chance to provide feedback or ask questions that shouldn't hinder the process of merging the PR.
+
+"Approve" is for when you think the new content changes are great and should be pulled into the main code branch as soon as possible. Let's get this merged (LGTM)!
+
+"Request changes" is for when you've noticed something that should be improved upon before the codebase is merged.
 
 ## What to Look for When Reviewing
 
@@ -84,7 +94,7 @@ Here are some more tips on what to look for during your review:
 - Look at the content for spelling errors
 - Provide feedback on the code itself (Are there tests? Are they robust enough? Can you follow it? Do you know a cleaner method? Are variable names conflicting? etc)
 - If the PR is meant to be rendered, preview how the rendered content looks to check for image resolution and functionality
-- And voice the limitations of your review! It is okay to not address all of these points in your review, but let your team know what you did look for (content vs code, e.g.). Your opinion matters.
+- And voice the limitations of your review! It is okay to not address all of these points in your review, but let your team know what you did look for (content vs code, e.g.). **Your opinion matters.**
 
 ---
 
