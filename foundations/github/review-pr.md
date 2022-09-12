@@ -39,11 +39,14 @@ A PR Review is an opportunity for a team member to look through proposed file ch
 
 When you think your PR might be ready to be merged into the main project branch, it is time to request reviews.
 
-You can do this by navigating to the right side bar menu of your PR's page. Under "Reviewers", select the gear icon, and then enter and request from the GitHub user's you would like to approve your work. GitHub may suggest certain reviewers based on file codeowners or recent editors of the same files.
+You can do this by navigating to the right side bar menu of your PR's page. Under "Reviewers", select the gear icon, and then select or enter a GitHub user's ID for whom you would like to approve your work. GitHub may suggest certain reviewers based on file codeowners or recent editors of the same files.
 
 <img src="../../images/review-request.png" alt="Request Reviews" width="600"><br/>
 
-It is possible to automate this process with a `CODEOWNERS` file and GitHub actions.
+```{admonition} Did you know?
+:class: info
+It is possible to automate this process with a `CODEOWNERS` file and [GitHub actions](https://docs.github.com/en/actions).
+```
 
 Learn more at GitHub's [Requesting a Pull Request Review Documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review).
 
@@ -57,11 +60,11 @@ A PR has a "Files Changed" tab, so look here first. You will notice green and re
 
 But this raw content can be hard to interpret if the files you are reviewing are meant to be rendered as a webpage or a Jupyter Notebook, for example.
 
-Often, repositories that have lots of Jupyter Notebooks or webpage content will use GitHub actions to provide content previews of the deployed site or use a service such as [ReviewNB](https://www.reviewnb.com/). Be careful when navigating a previewed site deployment because any absolute links will take you out of the preview.
+Often, repositories that have lots of Jupyter Notebooks or webpage content will use GitHub actions to provide content previews of the deployed site or use a service such as [ReviewNB](https://www.reviewnb.com/). Be careful when navigating a previewed site deployment because any absolute links will take you out of the preview. 
 
-One trusty way to view the rendered content, is to locally check out the PR branch. By bringing the content to your typical workspace, you should be able to use your prefered code editor as well as any necessary terminal commands to view and render the content. Read more at GitHub's [checking out pull requests locally documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/checking-out-pull-requests-locally).
+One trusty way to view the rendered content is to locally check out the PR branch. By bringing the content to your typical workspace, you should be able to use your prefered code editor as well as any necessary terminal commands to view and render the content. Read more at GitHub's [checking out pull requests locally documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/checking-out-pull-requests-locally).
 
-Wether looking at the content locally, in a deployment preview, or with ReviewNB, you should still use the "Files Changed" list to guide where you concentrate your review, as these other services may not direct you to where changes occured.
+Whether looking at the content locally, in a deployment preview, or with ReviewNB, you should still use the "Files Changed" list to guide where you concentrate your review, as these other services may not direct you to where changes occured.
 
 ## Providing a Pull Request Review
 
@@ -102,8 +105,8 @@ Here are some more tips on what to look for during your review:
 
 ## Summary
 
-- A PR Review is a way of safeguarding the main project branch by having other contributor's look through code before it is merged.
-- There are several things to keep in mind when reviewing code, try to articulate what you based your review on.
+- A PR Review is a way of safeguarding the main project branch by having other contributors look through code before it is merged.
+- There are several things to keep in mind when reviewing code; try to articulate what you based your review on.
 
 ### What's Next?
 
