@@ -60,7 +60,7 @@ A PR has a "Files Changed" tab, so look here first. You will notice green and re
 
 But this raw content can be hard to interpret if the files you are reviewing are meant to be rendered as a webpage or a Jupyter Notebook, for example.
 
-Often, repositories that have lots of Jupyter Notebooks or webpage content will use GitHub actions to provide content previews of the deployed site or use a service such as [ReviewNB](https://www.reviewnb.com/). Be careful when navigating a previewed site deployment because any absolute links will take you out of the preview. 
+Often, repositories that have lots of Jupyter Notebooks or webpage content will use GitHub actions to provide content previews of the deployed site or use a service such as [ReviewNB](https://www.reviewnb.com/). Be careful when navigating a previewed site deployment because any absolute links will take you out of the preview.
 
 One trusty way to view the rendered content is to locally check out the PR branch. By bringing the content to your typical workspace, you should be able to use your prefered code editor as well as any necessary terminal commands to view and render the content. Read more at GitHub's [checking out pull requests locally documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/checking-out-pull-requests-locally).
 
