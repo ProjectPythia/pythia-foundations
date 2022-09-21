@@ -162,7 +162,7 @@ We will cover [GitHub Workflows](github-workflows) in greater detail in the next
 
 ### What's Next?
 
-In the next lesson we will learn more about [GitHub Workflows](github-workflows).
+In the next lesson we will learn more about [Reviewing Pull Requests](review-pr).
 
 ## References
 
