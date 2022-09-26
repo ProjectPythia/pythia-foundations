@@ -37,6 +37,14 @@ jobs:
           mamba-version: '*'
           use-mamba: true
 
+      - name: Install binderbot
+        run: |
+          python -m pip install git+https://github.com/pangeo-gallery/binderbot.git
+      
+      - name: Execute notebooks via binderbot
+        run: |
+          python -m binderbot.cli --binder-url http://binder.mypythia.org --repo ProjectPythia/pythia-foundations --ref main foundations/*.ipynb core/*/*.ipynb 
+
       # Build the book
       - name: Build the book
         run: |
