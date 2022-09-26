@@ -11,6 +11,7 @@ dependencies:
   - numpy
   - pip
   - pre-commit
+  - dask
   - pyproj
   - pythia-datasets
   - python
@@ -18,5 +19,6 @@ dependencies:
   - ffmpeg
   - sqlalchemy<1.4
   - xarray
+  - graphviz
   - pip:
       - sphinx-pythia-theme
