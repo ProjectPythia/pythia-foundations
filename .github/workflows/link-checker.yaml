@@ -23,22 +23,13 @@ jobs:
         with:
           channels: conda-forge
           channel-priority: strict
-          activate-environment: pythia-book-dev
+          activate-environment: book-build
           auto-update-conda: false
           python-version: 3.8
-          environment-file: environment.yml
+          environment-file: book-build-environment.yml
           mamba-version: '*'
           use-mamba: true
 
-      - name: Disable notebook execution
-        shell: python
-        run: |
-          import yaml
-          with open('_config.yml') as f:
-            data = yaml.safe_load(f)
-          data['execute']['execute_notebooks'] = 'off'
-          with open('_config.yml', 'w') as f:
-            yaml.dump(data, f)
       - name: Check external links
         run: |
           jupyter-book build --builder linkcheck .
