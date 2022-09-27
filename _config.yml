@@ -13,7 +13,7 @@ exclude_patterns:
 
 execute:
   # See https://jupyterbook.org/content/execute.html
-  execute_notebooks: 'off'  # we are executing via binderbot instead
+  execute_notebooks: 'off' # we are executing via binderbot instead
   #   "auto" should only execute those notebooks that don't have output in all cells.
   #   "force" : force execution of all notebooks
   #   "cache": Cache output of notebooks on each build.
