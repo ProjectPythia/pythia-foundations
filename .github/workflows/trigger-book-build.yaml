@@ -1,0 +1,11 @@
+name: trigger-book-build
+on:
+  pull_request:
+
+jobs:
+  build:
+    uses: ProjectPythiaCookbooks/cookbook-actions/.github/workflows/build-book.yaml@main
+    with:
+      environment_name: pythia-book-dev
+      artifact_name: book-zip-${{ github.event.number }}
+      # Other input options are possible, see ProjectPythiaCookbooks/cookbook-actions/.github/workflows/build-book.yaml

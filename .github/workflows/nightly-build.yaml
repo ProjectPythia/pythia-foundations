@@ -4,76 +4,15 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * *' # Daily “At 00:00”
+
 jobs:
-  jupyterbook-build:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash -l {0}
-    if: github.repository == 'ProjectPythia/pythia-foundations'
-    steps:
-      - uses: actions/checkout@v3
-      - uses: conda-incubator/setup-miniconda@master
-        id: conda
-        with:
-          channels: conda-forge
-          channel-priority: strict
-          activate-environment: pythia-book-dev
-          auto-update-conda: false
-          python-version: 3.8
-          environment-file: environment.yml
-          mamba-version: '*'
-          use-mamba: true
+  build:
+    if: ${{ github.repository_owner == 'ProjectPythiaCookbooks' }}
+    uses: ProjectPythiaCookbooks/cookbook-actions/.github/workflows/build-book.yaml@main
+    with:
+      environment_name: pythia-book-dev
 
-      - name: Build the book
-        id: build
-        run: |
-          jupyter-book build .
-
-      - name: Report status
-        if: |
-          always()
-          && (steps.build.outcome != 'success' || steps.conda.outcome != 'success')
-        uses: actions/github-script@v6
-        with:
-          script: |
-
-            const title = '⚠️ Nightly build failed ⚠️'
-            const creator = 'github-actions[bot]'
-            const issueLabel = 'CI'
-            const workflow_url = `https://github.com/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`
-            const issue_body = `[Workflow Run URL](${workflow_url})\n\n`
-
-            let foundIssue = false
-            const issues = await github.rest.issues.listForRepo({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-            })
-            for (let issue of issues.data) {
-              if (
-                issue.user.login === creator &&
-                issue.state === 'open' &&
-                issue.labels.some((label) => label.name === issueLabel)
-              ) {
-                github.rest.issues.update({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  issue_number: issue.number,
-                  body: issue_body,
-                })
-                core.info(`Updated an existing issue: ${issue.number}.`)
-                foundIssue = true
-                break
-              }
-            }
-
-            if (!foundIssue) {
-              await github.rest.issues.create({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                title: title,
-                body: issue_body,
-                labels: [issueLabel],
-              })
-              core.info('Opened a new issue')
-            }
+  link-check:
+    if: ${{ github.repository_owner == 'ProjectPythiaCookbooks' }}
+    uses: ProjectPythiaCookbooks/cookbook-actions/.github/workflows/link-checker.yaml@main
+    
