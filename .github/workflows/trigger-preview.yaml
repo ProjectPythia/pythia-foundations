@@ -4,7 +4,7 @@ on:
     workflows:
       - trigger-book-build
     types:
-      - requested 
+      - requested
       - completed
 
 jobs:
