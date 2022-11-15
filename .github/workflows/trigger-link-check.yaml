@@ -5,4 +5,3 @@ on:
 jobs:
   link-check:
     uses: ProjectPythiaCookbooks/cookbook-actions/.github/workflows/link-checker.yaml@main
-      

@@ -18,4 +18,3 @@ jobs:
     uses: ProjectPythiaCookbooks/cookbook-actions/.github/workflows/deploy-book.yaml@main
     with:
       cname: foundations.projectpythia.org
-  

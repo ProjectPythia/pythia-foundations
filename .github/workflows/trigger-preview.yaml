@@ -25,4 +25,4 @@ jobs:
     uses: ProjectPythiaCookbooks/cookbook-actions/.github/workflows/preview-comment.yaml@main
     with:
       pull_request_number: ${{ needs.find-pull-request.outputs.number }}
-      sha: ${{ needs.find-pull-request.outputs.sha }}  
+      sha: ${{ needs.find-pull-request.outputs.sha }}

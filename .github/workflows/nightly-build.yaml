@@ -15,4 +15,3 @@ jobs:
   link-check:
     if: ${{ github.repository_owner == 'ProjectPythiaCookbooks' }}
     uses: ProjectPythiaCookbooks/cookbook-actions/.github/workflows/link-checker.yaml@main
-    
