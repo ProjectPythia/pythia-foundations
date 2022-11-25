@@ -13,13 +13,13 @@ exclude_patterns:
 
 execute:
   # See https://jupyterbook.org/content/execute.html
-  execute_notebooks: cache
+  execute_notebooks: force
   #   "auto" should only execute those notebooks that don't have output in all cells.
   #   "force" : force execution of all notebooks
   #   "cache": Cache output of notebooks on each build.
   timeout: 600
-  # Do not abort notebook execution for errors, since they may be intentional.
-  allow_errors: True
+  # Cells that are expected to fail (for pedagogical reasons) should set the cell tag `raises-exceptions`
+  allow_errors: False
 
 #######################################################################################
 # Parse and render settings
