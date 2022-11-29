@@ -32,7 +32,7 @@ Python Packages. The first, Foundational Skills, covers essential
 material that all users of Project Pythia are expected to feel
 comfortable with in order to make the most of the rest of the Project
 Pythia content. The second, Core Scientific Python Packages, covers
-what we believe are the most important and “foundational” packages
+what we believe are the most important and fundamental packages
 in the Scientific Python Ecosystem. These packages serve as the
 building blocks for many of the more geoscience focused components
 of the Scientific Python Ecosystem.
@@ -51,7 +51,7 @@ that code in the form of the many figures that appear. In the case
 of Matplotlib Basics these figures are produced by Matplotlib itself.
 Viewing content in this manner is not much different than reading
 a hardbound textbook. To get the full benefit of Jupyter Books you
-can run, and even modify, the example code in real time!! This
+can run, and even modify, the example code in real time! This
 interaction allows you to experiment with different parameters and
 observe instantly how results change.
 
@@ -62,15 +62,15 @@ chapters. Both are described below.
 
 The simplest way to interact with a Jupyter Notebook is through
 [Binder](https://mybinder.org/), which enables the execution of a
-Jupyter Book in the cloud. The details of how this works are not
+Jupyter Notebook in the cloud. The details of how this works are not
 important for now. All you need to know is how to launch a Pythia
 Foundations book chapter via Binder. Simply navigate your mouse to
 the top right corner of the book chapter you are viewing and click
 on the rocket ship icon, (see figure below), and be sure to select
-“launch Binder”. After a moment you should be presented with a
-notebook that you can interact with. I.e. you’ll be able to execute
-and even change the example programs. You’ll see that the code cells
-have no output at first, until you execute them by pressing
+“Launch Binder”. After a moment you should be presented with a
+notebook that you can interact with. You’ll be able to execute code
+and even change the example programs. At first the code cells
+have no output, until you execute them by pressing
 {kbd}`Shift`\+{kbd}`Enter`. Complete details on how to interact with
 a live Jupyter notebook are described in [Getting Started with
 Jupyter](https://foundations.projectpythia.org/foundations/getting-started-jupyter.html).
@@ -115,8 +115,8 @@ the Jupyter Notebook server. For example if you downloaded the
 notebook file to your home directory you would do:
 
 ```
-% cd ~
-% jupyter notebook
+cd ~
+jupyter notebook
 ```
 
 A local Jupyter Notebook server should open in your web browser.
