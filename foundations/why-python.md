@@ -18,7 +18,7 @@ Most of your work is probably already in interpreted languages if you've ever us
 
 ## Object Oriented languages
 
-Objects are custom datatypes. For every custom datatype, you usually have a set of operations you might want to conduct. For example, if you have an object that is a list of numbers, and you might want to apply a mathematical operation, such as sum, onto this list object in bulk. Not every function can be applied to every datatype; it wouldn't make sense to apply a logarithm to a string of letters or to capitalize a list of numbers. Data and the operations applied to them are grouped together into one object.
+Objects are custom datatypes. For every custom datatype, you usually have a set of operations you might want to conduct. For example, if you have an object that is a list of numbers, you might want to apply a mathematical operation, such as sum, onto this list object in bulk. Not every function can be applied to every datatype; it wouldn't make sense to apply a logarithm to a string of letters or to capitalize a list of numbers. Data and the operations applied to them are grouped together into one object.
 
 ## Open source
 
