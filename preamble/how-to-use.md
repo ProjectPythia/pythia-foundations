@@ -116,7 +116,7 @@ notebook file to your home directory you would do:
 
 ```
 cd ~
-jupyter notebook
+jupyterlab
 ```
 
 A local Jupyter Notebook server should open in your web browser.
