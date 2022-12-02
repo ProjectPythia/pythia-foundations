@@ -21,7 +21,7 @@ You'd like to learn to run Python in the terminal. Here we will cover:
 
 ## Installing Python in the Terminal
 
-If running Python in the terminal, it is best to install Miniconda. You can do that by following the [instructions for you machine](https://docs.conda.io/en/latest/miniconda.html).
+If you are running Python in the terminal, it is best to install Miniconda. You can do that by following the [instructions for your machine](https://docs.conda.io/en/latest/miniconda.html).
 
 [Learn more about Conda here](conda.md)
 
@@ -61,7 +61,7 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
    $ touch mysci.py
    ```
 
-5. And now that you've set up our workspace, edit the `mysci.py` script using your favorite text editor (nano, e.g.):
+5. And now that you've set up our workspace, edit the `mysci.py` script using your favorite text editor (e.g., nano):
 
    ```
    $ nano mysci.py
@@ -73,9 +73,9 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
    print("Hello, world!")
    ```
 
-7. Save your file and exit the navigator. How to do this is dependent on your chosen text editor.
+7. Save your file and exit the editor. How to do this is dependent on your chosen text editor.
 
-   - In Vim the command is `:wq`.
+   - In Vim, revert to command mode by pressing `esc`. Then, the command is `:wq`.
    - In Nano it is {kbd}`Ctrl`\+{kbd}`O` to save and {kbd}`Ctrl`\+{kbd}`X` to exit (where you will be prompted if you want to save it, if modified).
 
 8. In the terminal, execute your script:
@@ -90,7 +90,7 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
 
 ## Summary
 
-Running Python in the Terminal is a good option if you are familiar with Linux commands or scripting on a super computer. It requires the use of a text editor.
+Running Python in the terminal is a good option if you are familiar with Linux commands or scripting on a supercomputer. It requires the use of a text editor.
 
 ### What's Next?
 
