@@ -699,7 +699,7 @@ the main <a class="reference external" href="https://projectpythia.org/contribut
 <div class="section" id="create-a-conda-environment">
 <h3>Create a conda environment<a class="headerlink" href="#create-a-conda-environment" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>The first time you check out this repository, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env update -f environment.yml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>update<span class="w"> </span>-f<span class="w"> </span>environment.yml
 </pre></div>
 </div>
 <p>This will create or update the dev environment (<code class="docutils literal notranslate"><span class="pre">pythia-book-dev</span></code>).</p>
@@ -707,8 +707,8 @@ the main <a class="reference external" href="https://projectpythia.org/contribut
 <div class="section" id="install-pre-commit-hooks">
 <h3>Install <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> hooks<a class="headerlink" href="#install-pre-commit-hooks" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>This repository includes <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> hooks (defined in <code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code>). To activate/install these pre-commit hooks, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate pythia-book-dev
-pre-commit install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>pythia-book-dev
+pre-commit<span class="w"> </span>install
 </pre></div>
 </div>
 <p>This is also a one-time step.</p>
@@ -717,12 +717,12 @@ pre-commit install
 <div class="section" id="building-the-book-locally">
 <h3>Building the book locally<a class="headerlink" href="#building-the-book-locally" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>To build the book locally, run the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate pythia-book-dev
-jupyter-book build .
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>pythia-book-dev
+jupyter-book<span class="w"> </span>build<span class="w"> </span>.
 </pre></div>
 </div>
 <p>Finally, you can view the book by opening the file <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> with your favorite web browser. On most platforms you can simply run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>open _build/html/index.html
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>open<span class="w"> </span>_build/html/index.html
 </pre></div>
 </div>
 </div>
@@ -730,7 +730,7 @@ jupyter-book build .
 <h3>Keeping your dev environment up to date<a class="headerlink" href="#keeping-your-dev-environment-up-to-date" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>It’s good practice to update the packages in your <code class="docutils literal notranslate"><span class="pre">pythia-book-dev</span></code> conda environment frequently to their latest versions, especially if it’s been a while since you used it. If the <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">.</span></code> command above generates error messages, that is a good indication that your conda environment may be out of date.</p>
 <p>To update all packages in the currently activated environment to their latest versions, do this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update --all
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>--all
 </pre></div>
 </div>
 </div>
@@ -898,7 +898,7 @@ jupyter-book build .
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 27 December 2022.
+          Last updated on 9 January 2023.
         </p>
       </div>
     </div>

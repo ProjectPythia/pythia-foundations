@@ -907,14 +907,14 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <h2>Inspect a git repository with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code><a class="headerlink" href="#inspect-a-git-repository-with-git-status" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>First, make sure you followed the steps in the <a class="reference internal" href="github-cloning-forking.html"><span class="doc std std-doc">Cloning a repository</span></a> lesson to make a clone of the <code class="docutils literal notranslate"><span class="pre">github-sandbox</span></code> repo on your local computer. Navigate to wherever you saved your copy of the repo.</p>
 <p>Now meet your new best friend:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git status
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
 </pre></div>
 </div>
 <p>which will always give you information about the current git repo. Try it! You should see something like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On branch main
-Your branch is up to date with <span class="s1">&#39;origin/main&#39;</span>.
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On<span class="w"> </span>branch<span class="w"> </span>main
+Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span>date<span class="w"> </span>with<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
 
-nothing to commit, working tree clean
+nothing<span class="w"> </span>to<span class="w"> </span>commit,<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span>clean
 </pre></div>
 </div>
 <p><strong>Two really important things here</strong>:</p>
@@ -923,7 +923,7 @@ nothing to commit, working tree clean
 <li><p>The last line <code class="docutils literal notranslate"><span class="pre">nothing</span> <span class="pre">to</span> <span class="pre">commit,</span> <span class="pre">working</span> <span class="pre">tree</span> <span class="pre">clean</span></code> tells us that we haven’t made any changes to files.</p></li>
 </ol>
 <p>You’ll want to use</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git status
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
 </pre></div>
 </div>
 <p>frequently to keep track of things in your repos.</p>
@@ -940,16 +940,16 @@ nothing to commit, working tree clean
 <p>While there’s nothing stopping us from making changes directly to the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch, it’s often best to avoid this! The reason is that it makes collaboration trickier. See the <a class="reference internal" href="github-pull-request.html"><span class="doc std std-doc">lesson on Pull Requests</span></a>.</p>
 </div>
 <p>Let’s create and checkout a new branch in one line:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout -b fix-typo
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>fix-typo
 </pre></div>
 </div>
 <p>Now try your new best friend again:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git status
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
 </pre></div>
 </div>
 <p>You should see something like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On branch fix-typo
-nothing to commit, working tree clean
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On<span class="w"> </span>branch<span class="w"> </span>fix-typo
+nothing<span class="w"> </span>to<span class="w"> </span>commit,<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span>clean
 </pre></div>
 </div>
 <p>This tells us that we have switched over to a new branch called <code class="docutils literal notranslate"><span class="pre">fix-typo</span></code>, but there are not (yet) any changes to the files in the repo.</p>
@@ -963,33 +963,33 @@ nothing to commit, working tree clean
 <li><p>Save the changes.</p></li>
 <li><p>Revisit your new best friend <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>. It should now show something like this:</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On branch fix-typo
-Changes not staged <span class="k">for</span> commit:
-  <span class="o">(</span>use <span class="s2">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed<span class="o">)</span>
-  <span class="o">(</span>use <span class="s2">&quot;git restore &lt;file&gt;...&quot;</span> to discard changes <span class="k">in</span> working directory<span class="o">)</span>
-	modified:   sample.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On<span class="w"> </span>branch<span class="w"> </span>fix-typo
+Changes<span class="w"> </span>not<span class="w"> </span>staged<span class="w"> </span><span class="k">for</span><span class="w"> </span>commit:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>update<span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git restore &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>discard<span class="w"> </span>changes<span class="w"> </span><span class="k">in</span><span class="w"> </span>working<span class="w"> </span>directory<span class="o">)</span>
+<span class="w">	</span>modified:<span class="w">   </span>sample.txt
 
-no changes added to commit <span class="o">(</span>use <span class="s2">&quot;git add&quot;</span> and/or <span class="s2">&quot;git commit -a&quot;</span><span class="o">)</span>
+no<span class="w"> </span>changes<span class="w"> </span>added<span class="w"> </span>to<span class="w"> </span>commit<span class="w"> </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>and/or<span class="w"> </span><span class="s2">&quot;git commit -a&quot;</span><span class="o">)</span>
 </pre></div>
 </div>
 <p>Here <code class="docutils literal notranslate"><span class="pre">git</span></code> is telling us that the file <code class="docutils literal notranslate"><span class="pre">sample.txt</span></code> does <em>not</em> match what’s in the repository.</p>
 <p>Of course we know what changed in that file because we just finished editing it. But here’s a quick and easy way to see the changes:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git diff
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>diff
 </pre></div>
 </div>
 <p>which should show you something like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>diff --git a/sample.txt b/sample.txt
-index 4bc074c..edc31c0 <span class="m">100644</span>
---- a/sample.txt
-+++ b/sample.txt
-@@ -4,6 +4,6 @@ We can use it to demonstrate making pull requests or raising issues <span class="k">in</span> a GitHub
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>diff<span class="w"> </span>--git<span class="w"> </span>a/sample.txt<span class="w"> </span>b/sample.txt
+index<span class="w"> </span>4bc074c..edc31c0<span class="w"> </span><span class="m">100644</span>
+---<span class="w"> </span>a/sample.txt
++++<span class="w"> </span>b/sample.txt
+@@<span class="w"> </span>-4,6<span class="w"> </span>+4,6<span class="w"> </span>@@<span class="w"> </span>We<span class="w"> </span>can<span class="w"> </span>use<span class="w"> </span>it<span class="w"> </span>to<span class="w"> </span>demonstrate<span class="w"> </span>making<span class="w"> </span>pull<span class="w"> </span>requests<span class="w"> </span>or<span class="w"> </span>raising<span class="w"> </span>issues<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>GitHub
 
- One good way to contribute to a project is to make additions and/or edits to documentation!
+<span class="w"> </span>One<span class="w"> </span>good<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>contribute<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>project<span class="w"> </span>is<span class="w"> </span>to<span class="w"> </span>make<span class="w"> </span>additions<span class="w"> </span>and/or<span class="w"> </span>edits<span class="w"> </span>to<span class="w"> </span>documentation!
 
--Fxing something as simple as a typo is a great way to get started as a contributor!
-+Fixing something as simple as a typo is a great way to get started as a contributor!
+-Fxing<span class="w"> </span>something<span class="w"> </span>as<span class="w"> </span>simple<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>typo<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>great<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>started<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>contributor!
++Fixing<span class="w"> </span>something<span class="w"> </span>as<span class="w"> </span>simple<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>typo<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>great<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>started<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>contributor!
 
- Or, consider adding some more content to this file.
+<span class="w"> </span>Or,<span class="w"> </span>consider<span class="w"> </span>adding<span class="w"> </span>some<span class="w"> </span>more<span class="w"> </span>content<span class="w"> </span>to<span class="w"> </span>this<span class="w"> </span>file.
 </pre></div>
 </div>
 <p>We can see here that <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> finds the line(s) where our current file differs from what’s in the repo, along with a few lines before and after for context.</p>
@@ -1003,14 +1003,14 @@ index 4bc074c..edc31c0 <span class="m">100644</span>
 <h3>Staging<a class="headerlink" href="#staging" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Before we make a commit, we must first stage our changes. Think of staging simply as “getting ready to commit”. The two-step process can help avoid accidentally committing something that wasn’t ready.</p>
 <p>To stage our changes, we use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add sample.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>sample.txt
 </pre></div>
 </div>
 <p>and now our new best friend tells us</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On branch fix-typo
-Changes to be committed:
-  <span class="o">(</span>use <span class="s2">&quot;git restore --staged &lt;file&gt;...&quot;</span> to unstage<span class="o">)</span>
-	modified:   sample.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On<span class="w"> </span>branch<span class="w"> </span>fix-typo
+Changes<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>committed:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git restore --staged &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>unstage<span class="o">)</span>
+<span class="w">	</span>modified:<span class="w">   </span>sample.txt
 </pre></div>
 </div>
 <p>Now we see that all-important line <code class="docutils literal notranslate"><span class="pre">Changes</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">committed</span></code>, telling us the contents of our staging area.</p>
@@ -1020,7 +1020,7 @@ Changes to be committed:
 <div class="section" id="committing">
 <h3>Committing<a class="headerlink" href="#committing" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>It’s time to make a commitment. We can now permanently add our edit to the history of our <code class="docutils literal notranslate"><span class="pre">fix-typo</span></code> branch by doing this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -m <span class="s1">&#39;Fix the typo&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;Fix the typo&#39;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -1028,8 +1028,8 @@ Changes to be committed:
 <p>Every commit should have a “message” that explains briefly what the commit is for. Here we set the commit message with the <code class="docutils literal notranslate"><span class="pre">-m</span></code> flag and chose some descriptive text. Note, it’s critical to have those quotes around <code class="docutils literal notranslate"><span class="pre">'Fix</span> <span class="pre">the</span> <span class="pre">typo'</span></code>. Otherwise the command shell will misinterpret what you are trying to do.</p>
 </div>
 <p>Now when we do <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> we see</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On branch fix-typo
-nothing to commit, working tree clean
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On<span class="w"> </span>branch<span class="w"> </span>fix-typo
+nothing<span class="w"> </span>to<span class="w"> </span>commit,<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span>clean
 </pre></div>
 </div>
 <p>And we’re back to a clean state! We have now added a new permanent change to the history of our repo (or more specifically, to this <em>branch</em> of the repo).</p>
@@ -1041,33 +1041,33 @@ nothing to commit, working tree clean
 <div class="section" id="viewing-the-commit-history-with-git-log">
 <h3>Viewing the commit history with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code><a class="headerlink" href="#viewing-the-commit-history-with-git-log" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>A simple way to see this history of the current branch is this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git log
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>log
 </pre></div>
 </div>
 <p>You’ll see something like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>commit 7dca0292467e4bbd73643556f83fd1c52b5c113c <span class="o">(</span>HEAD -&gt; fix-typo<span class="o">)</span>
-Author: Brian Rose &lt;brose@albany.edu&gt;
-Date:   Mon Jan <span class="m">17</span> <span class="m">11</span>:31:49 <span class="m">2022</span> -0500
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>commit<span class="w"> </span>7dca0292467e4bbd73643556f83fd1c52b5c113c<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>fix-typo<span class="o">)</span>
+Author:<span class="w"> </span>Brian<span class="w"> </span>Rose<span class="w"> </span>&lt;brose@albany.edu&gt;
+Date:<span class="w">   </span>Mon<span class="w"> </span>Jan<span class="w"> </span><span class="m">17</span><span class="w"> </span><span class="m">11</span>:31:49<span class="w"> </span><span class="m">2022</span><span class="w"> </span>-0500
 
-    Fix the typo
+<span class="w">    </span>Fix<span class="w"> </span>the<span class="w"> </span>typo
 
-commit 35fcbd991f911e170df550db58f74a082ba18b50 <span class="o">(</span>origin/main, origin/HEAD, main<span class="o">)</span>
-Author: Kevin Tyle &lt;ktyle@albany.edu&gt;
-Date:   Thu Jan <span class="m">13</span> <span class="m">11</span>:29:40 <span class="m">2022</span> -0500
+commit<span class="w"> </span>35fcbd991f911e170df550db58f74a082ba18b50<span class="w"> </span><span class="o">(</span>origin/main,<span class="w"> </span>origin/HEAD,<span class="w"> </span>main<span class="o">)</span>
+Author:<span class="w"> </span>Kevin<span class="w"> </span>Tyle<span class="w"> </span>&lt;ktyle@albany.edu&gt;
+Date:<span class="w">   </span>Thu<span class="w"> </span>Jan<span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">11</span>:29:40<span class="w"> </span><span class="m">2022</span><span class="w"> </span>-0500
 
-    Close docstring quote on sample.py
+<span class="w">    </span>Close<span class="w"> </span>docstring<span class="w"> </span>quote<span class="w"> </span>on<span class="w"> </span>sample.py
 
-commit e56ea58071f150ec00904a50341a672456cbcb8f
-Author: Kevin Tyle &lt;ktyle@albany.edu&gt;
-Date:   Tue Jan <span class="m">11</span> <span class="m">14</span>:15:31 <span class="m">2022</span> -0500
+commit<span class="w"> </span>e56ea58071f150ec00904a50341a672456cbcb8f
+Author:<span class="w"> </span>Kevin<span class="w"> </span>Tyle<span class="w"> </span>&lt;ktyle@albany.edu&gt;
+Date:<span class="w">   </span>Tue<span class="w"> </span>Jan<span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">14</span>:15:31<span class="w"> </span><span class="m">2022</span><span class="w"> </span>-0500
 
-    Create sample.md
+<span class="w">    </span>Create<span class="w"> </span>sample.md
 
-commit f98d05e312d19a84b74c45402a2904ab94d86e45
-Author: Kevin Tyle &lt;ktyle@albany.edu&gt;
-Date:   Tue Jan <span class="m">11</span> <span class="m">13</span>:58:09 <span class="m">2022</span> -0500
+commit<span class="w"> </span>f98d05e312d19a84b74c45402a2904ab94d86e45
+Author:<span class="w"> </span>Kevin<span class="w"> </span>Tyle<span class="w"> </span>&lt;ktyle@albany.edu&gt;
+Date:<span class="w">   </span>Tue<span class="w"> </span>Jan<span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">13</span>:58:09<span class="w"> </span><span class="m">2022</span><span class="w"> </span>-0500
 
-    Create sample.py
+<span class="w">    </span>Create<span class="w"> </span>sample.py
 </pre></div>
 </div>
 <p>which shows the last few commits on this branch, including the commit number, author, timestamp, and commit message. You can page down to see the rest of the history
@@ -1085,35 +1085,35 @@ or just press <code class="docutils literal notranslate"><span class="pre">Q</sp
 <li><p>Maybe you don’t like the most recent commit and want to do some new edits <em>starting from the previous commit</em> – in effect, undoing the most recent commit and going back in time. The simplest way to do this is to <em>create a new branch</em> starting from the previous commit. We’ll cover branches more fully in the next lesson.</p></li>
 </ol>
 <p>To retrieve the previous commit, just use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> and the unique number code which you can just copy and paste from the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> output:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout 35fcbd991f911e170df550db58f74a082ba18b50
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>35fcbd991f911e170df550db58f74a082ba18b50
 </pre></div>
 </div>
 <p>You may see output that looks like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Note: switching to <span class="s1">&#39;35fcbd991f911e170df550db58f74a082ba18b50&#39;</span>.
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Note:<span class="w"> </span>switching<span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;35fcbd991f911e170df550db58f74a082ba18b50&#39;</span>.
 
-You are <span class="k">in</span> <span class="s1">&#39;detached HEAD&#39;</span> state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make <span class="k">in</span> this
-state without impacting any branches by switching back to a branch.
+You<span class="w"> </span>are<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s1">&#39;detached HEAD&#39;</span><span class="w"> </span>state.<span class="w"> </span>You<span class="w"> </span>can<span class="w"> </span>look<span class="w"> </span>around,<span class="w"> </span>make<span class="w"> </span>experimental
+changes<span class="w"> </span>and<span class="w"> </span>commit<span class="w"> </span>them,<span class="w"> </span>and<span class="w"> </span>you<span class="w"> </span>can<span class="w"> </span>discard<span class="w"> </span>any<span class="w"> </span>commits<span class="w"> </span>you<span class="w"> </span>make<span class="w"> </span><span class="k">in</span><span class="w"> </span>this
+state<span class="w"> </span>without<span class="w"> </span>impacting<span class="w"> </span>any<span class="w"> </span>branches<span class="w"> </span>by<span class="w"> </span>switching<span class="w"> </span>back<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>branch.
 
-If you want to create a new branch to retain commits you create, you may
-<span class="k">do</span> so <span class="o">(</span>now or later<span class="o">)</span> by using -c with the switch command. Example:
+If<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>create<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>branch<span class="w"> </span>to<span class="w"> </span>retain<span class="w"> </span>commits<span class="w"> </span>you<span class="w"> </span>create,<span class="w"> </span>you<span class="w"> </span>may
+<span class="k">do</span><span class="w"> </span>so<span class="w"> </span><span class="o">(</span>now<span class="w"> </span>or<span class="w"> </span>later<span class="o">)</span><span class="w"> </span>by<span class="w"> </span>using<span class="w"> </span>-c<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>switch<span class="w"> </span>command.<span class="w"> </span>Example:
 
-  git switch -c &lt;new-branch-name&gt;
+<span class="w">  </span>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>&lt;new-branch-name&gt;
 
-Or undo this operation with:
+Or<span class="w"> </span>undo<span class="w"> </span>this<span class="w"> </span>operation<span class="w"> </span>with:
 
-  git switch -
+<span class="w">  </span>git<span class="w"> </span>switch<span class="w"> </span>-
 
-Turn off this advice by setting config variable advice.detachedHead to <span class="nb">false</span>
+Turn<span class="w"> </span>off<span class="w"> </span>this<span class="w"> </span>advice<span class="w"> </span>by<span class="w"> </span>setting<span class="w"> </span>config<span class="w"> </span>variable<span class="w"> </span>advice.detachedHead<span class="w"> </span>to<span class="w"> </span><span class="nb">false</span>
 
-HEAD is now at 35fcbd9 Close docstring quote on sample.py
+HEAD<span class="w"> </span>is<span class="w"> </span>now<span class="w"> </span>at<span class="w"> </span>35fcbd9<span class="w"> </span>Close<span class="w"> </span>docstring<span class="w"> </span>quote<span class="w"> </span>on<span class="w"> </span>sample.py
 </pre></div>
 </div>
 <p>(the details may vary depending on what version of git you are running).</p>
 <p>By <code class="docutils literal notranslate"><span class="pre">detached</span> <span class="pre">HEAD</span></code>, git is telling us that we are NOT on the most recent commit in this branch.</p>
 <p>If you inspect <code class="docutils literal notranslate"><span class="pre">sample.txt</span></code> in your editor, you will see that the typo <code class="docutils literal notranslate"><span class="pre">Fxing</span></code> is back!</p>
 <p>As the git message above is reminding us, it’s possible to create an entirely new branch with changes that we make from this point in the history using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">switch</span> <span class="pre">-c</span></code>. But for now, let’s just go back to the most recent commit on our <code class="docutils literal notranslate"><span class="pre">fix-typo</span></code> branch:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout fix-typo
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>fix-typo
 </pre></div>
 </div>
 </div>
@@ -1125,22 +1125,22 @@ HEAD is now at 35fcbd9 Close docstring quote on sample.py
 <div class="section" id="compare-across-commits">
 <h3>Compare across commits<a class="headerlink" href="#compare-across-commits" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>To compare across any commits in our history, we again use the unique commit checksum that we listed with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git diff HEAD 35fcbd991f911e170df550db58f74a082ba18b50
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>diff<span class="w"> </span>HEAD<span class="w"> </span>35fcbd991f911e170df550db58f74a082ba18b50
 </pre></div>
 </div>
 <p>gives</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>diff --git a/sample.txt b/sample.txt
-index edc31c0..4bc074c <span class="m">100644</span>
---- a/sample.txt
-+++ b/sample.txt
-@@ -4,6 +4,6 @@ We can use it to demonstrate making pull requests or raising issues <span class="k">in</span> a GitHub
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>diff<span class="w"> </span>--git<span class="w"> </span>a/sample.txt<span class="w"> </span>b/sample.txt
+index<span class="w"> </span>edc31c0..4bc074c<span class="w"> </span><span class="m">100644</span>
+---<span class="w"> </span>a/sample.txt
++++<span class="w"> </span>b/sample.txt
+@@<span class="w"> </span>-4,6<span class="w"> </span>+4,6<span class="w"> </span>@@<span class="w"> </span>We<span class="w"> </span>can<span class="w"> </span>use<span class="w"> </span>it<span class="w"> </span>to<span class="w"> </span>demonstrate<span class="w"> </span>making<span class="w"> </span>pull<span class="w"> </span>requests<span class="w"> </span>or<span class="w"> </span>raising<span class="w"> </span>issues<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>GitHub
 
- One good way to contribute to a project is to make additions and/or edits to documentation!
+<span class="w"> </span>One<span class="w"> </span>good<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>contribute<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>project<span class="w"> </span>is<span class="w"> </span>to<span class="w"> </span>make<span class="w"> </span>additions<span class="w"> </span>and/or<span class="w"> </span>edits<span class="w"> </span>to<span class="w"> </span>documentation!
 
--Fixing something as simple as a typo is a great way to get started as a contributor!
-+Fxing something as simple as a typo is a great way to get started as a contributor!
+-Fixing<span class="w"> </span>something<span class="w"> </span>as<span class="w"> </span>simple<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>typo<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>great<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>started<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>contributor!
++Fxing<span class="w"> </span>something<span class="w"> </span>as<span class="w"> </span>simple<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>typo<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>great<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>started<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>contributor!
 
- Or, consider adding some more content to this file.
+<span class="w"> </span>Or,<span class="w"> </span>consider<span class="w"> </span>adding<span class="w"> </span>some<span class="w"> </span>more<span class="w"> </span>content<span class="w"> </span>to<span class="w"> </span>this<span class="w"> </span>file.
 </pre></div>
 </div>
 <div class="admonition note">
@@ -1152,22 +1152,22 @@ index edc31c0..4bc074c <span class="m">100644</span>
 <h3>Compare across branches<a class="headerlink" href="#compare-across-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Recall that, since we have done all our editing in a new branch, the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch still has the typo!</p>
 <p>We can see this with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> using the <code class="docutils literal notranslate"><span class="pre">..</span></code> notation to compare two branches:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git diff main..fix-typo
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>diff<span class="w"> </span>main..fix-typo
 </pre></div>
 </div>
 <p>The output is very similar:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>diff --git a/sample.txt b/sample.txt
-index 4bc074c..edc31c0 <span class="m">100644</span>
---- a/sample.txt
-+++ b/sample.txt
-@@ -4,6 +4,6 @@ We can use it to demonstrate making pull requests or raising issues <span class="k">in</span> a GitHub
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>diff<span class="w"> </span>--git<span class="w"> </span>a/sample.txt<span class="w"> </span>b/sample.txt
+index<span class="w"> </span>4bc074c..edc31c0<span class="w"> </span><span class="m">100644</span>
+---<span class="w"> </span>a/sample.txt
++++<span class="w"> </span>b/sample.txt
+@@<span class="w"> </span>-4,6<span class="w"> </span>+4,6<span class="w"> </span>@@<span class="w"> </span>We<span class="w"> </span>can<span class="w"> </span>use<span class="w"> </span>it<span class="w"> </span>to<span class="w"> </span>demonstrate<span class="w"> </span>making<span class="w"> </span>pull<span class="w"> </span>requests<span class="w"> </span>or<span class="w"> </span>raising<span class="w"> </span>issues<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>GitHub
 
- One good way to contribute to a project is to make additions and/or edits to documentation!
+<span class="w"> </span>One<span class="w"> </span>good<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>contribute<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>project<span class="w"> </span>is<span class="w"> </span>to<span class="w"> </span>make<span class="w"> </span>additions<span class="w"> </span>and/or<span class="w"> </span>edits<span class="w"> </span>to<span class="w"> </span>documentation!
 
--Fxing something as simple as a typo is a great way to get started as a contributor!
-+Fixing something as simple as a typo is a great way to get started as a contributor!
+-Fxing<span class="w"> </span>something<span class="w"> </span>as<span class="w"> </span>simple<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>typo<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>great<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>started<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>contributor!
++Fixing<span class="w"> </span>something<span class="w"> </span>as<span class="w"> </span>simple<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>typo<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>great<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>started<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>contributor!
 
- Or, consider adding some more content to this file.
+<span class="w"> </span>Or,<span class="w"> </span>consider<span class="w"> </span>adding<span class="w"> </span>some<span class="w"> </span>more<span class="w"> </span>content<span class="w"> </span>to<span class="w"> </span>this<span class="w"> </span>file.
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> command is a powerful comparison tool (and maybe your second new best friend). For many more detail on its usage, see the <a class="reference external" href="https://git-scm.com/docs/git-diff">git documentation</a>.</p>
@@ -1383,7 +1383,7 @@ index 4bc074c..edc31c0 <span class="m">100644</span>
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 27 December 2022.
+          Last updated on 9 January 2023.
         </p>
       </div>
     </div>
