@@ -7,11 +7,11 @@ on:
 
 jobs:
   build:
-    if: ${{ github.repository_owner == 'ProjectPythiaCookbooks' }}
-    uses: ProjectPythiaCookbooks/cookbook-actions/.github/workflows/build-book.yaml@main
+    if: ${{ github.repository_owner == 'ProjectPythia' }}
+    uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
     with:
       environment_name: pythia-book-dev
 
   link-check:
-    if: ${{ github.repository_owner == 'ProjectPythiaCookbooks' }}
-    uses: ProjectPythiaCookbooks/cookbook-actions/.github/workflows/link-checker.yaml@main
+    if: ${{ github.repository_owner == 'ProjectPythia' }}
+    uses: ProjectPythia/cookbook-actions/.github/workflows/link-checker.yaml@main
