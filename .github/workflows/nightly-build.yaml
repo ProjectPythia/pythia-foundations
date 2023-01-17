@@ -20,7 +20,7 @@ jobs:
           channel-priority: strict
           activate-environment: pythia-book-dev
           auto-update-conda: false
-          python-version: 3.8
+          python-version: 3.10
           environment-file: environment.yml
           mamba-version: '*'
           use-mamba: true
