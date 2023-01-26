@@ -4,8 +4,8 @@ on:
 
 jobs:
   build:
-    uses: ProjectPythiaCookbooks/cookbook-actions/.github/workflows/build-book.yaml@main
+    uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
     with:
       environment_name: pythia-book-dev
       artifact_name: book-zip-${{ github.event.number }}
-      # Other input options are possible, see ProjectPythiaCookbooks/cookbook-actions/.github/workflows/build-book.yaml
+      # Other input options are possible, see ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml
