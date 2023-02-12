@@ -16,27 +16,27 @@
 | ---------------------------------------------------------- | ------------ | ---------------------------- |
 | [What is GitHub?](what-is-github)                          | Necessary    | GitHub user account required |
 | [GitHub Repositories](github-repos)                        | Necessary    |                              |
-| [Issues and Discussions](github-issues)                    | Recommeneded |                              |
+| [Issues and Discussions](github-issues)                    | Recommended  |                              |
 | [Cloning and Forking a Repository](github-cloning-forking) | Recommended  |                              |
 
-- **Time to learn**: 15 minutes
+- **Time to learn**: 35 minutes
 
 ---
 
 ## GitHub secure key generation
 
-When you signed up for your free account on [GitHub](https://github.com), you established a _user id_ and its corresponding _password_. Many of the repositories that GitHub serves are readable from anywhere, not even requiring a GitHub account.
+When you signed up for your free account on [GitHub](https://github.com), you established a _user ID_ and its corresponding _password_. Many of the repositories that GitHub serves are readable from anywhere, not even requiring a GitHub account.
 
 However, especially when you use the `git` command-line interface to access a GitHub-hosted repo, there are cases when you need to provide an additional set of login credentials, such as:
 
 1. When you want to clone a _private_, as opposed to _public_ GitHub repository (**read-access**)
 2. When you wish to _push_ to a repo (**write-access**)
 
-For these use-cases, you won't be able to simply type your GitHub user id and password from the command line. Instead, you need to set up _access tokens_ that live in two places: in your GitHub account, and in your local computer's file system.
+For these use-cases, you won't be able to simply type your GitHub user ID and password from the command line. Instead, you need to set up _access tokens_ that live in two places: in your GitHub account, and in your local computer's file system.
 
-GitHub supports two means of key-based access: via _https_ and _ssh_.
+GitHub supports two means of key-based access: via _https_, and via _ssh_.
 
-For example, one can clone [Project Pythia's Sandbox repository](https://github.com/ProjectPythia/github-sandbox) using one URL for the https protocol:
+For example, one can clone [Project Pythia's Sandbox repository](https://github.com/ProjectPythia/github-sandbox) using a URL for the https protocol:
 
 ```{image} ../../images/GitHub_Setup_Advanced_https_URL.png
 :alt: GitHub Clone https
@@ -95,7 +95,7 @@ In keeping with the social network aspect of GitHub, you can _follow_ particular
 
 ### Email notifications
 
-Let's say you wish to monitor (or _watch_) the Project Pythia GitHub Sandbox repository and receive emails about it:
+Let's say you wish to monitor (or _watch_) the Project Pythia GitHub Sandbox repository and receive emails about it.
 
 Click on the **Watch** link near the top of the page:
 
@@ -128,8 +128,8 @@ You can stop watching that repo by just clicking on the now-labeled _Unwatch_ li
 
 ## Stop spamming me, GitHub!
 
-It's easy to become overwhelmed with email from one or more repos that you are following and/or participating in! Instead, you may wish to disable email notifications.
-In order to set you notification settings, go to **https://github/settings/notifications**. You can, for example, uncheck the **Email** boxes to cease receiving notifications that way:
+It's easy to become overwhelmed with email from one or more repos that you are following and/or participating in! In this case, you may wish to disable email notifications.
+In order to set your notification settings, go to **https://github.com/settings/notifications**. You can, for example, uncheck the **Email** boxes to cease receiving notifications that way:
 
 ```{image} ../../images/GitHub_Setup_Advanced_Notification_Settings.png
 :alt: GitHub Notification Settings
@@ -138,7 +138,7 @@ In order to set you notification settings, go to **https://github/settings/notif
 
 ---
 
-Instead, get in the habit of clicking on the _Notifications_ icon when logged into GitHub:
+If you turn email notifications off, get in the habit of clicking on the _Notifications_ icon when logged into GitHub:
 
 ```{image} ../../images/GitHub_Setup_Advanced_Notifications.png
 :alt: GitHub Notifications
@@ -147,7 +147,7 @@ Instead, get in the habit of clicking on the _Notifications_ icon when logged in
 
 ---
 
-You can click on the _Notifications_ icon and scroll through all notifications from repos that you opted into receiving:
+You can click on the _Notifications_ icon and scroll through all notifications from repos that you opted into receiving notifications from:
 
 ```{image} ../../images/GitHub_Setup_Advanced_Notifications_Browser.png
 :alt: GitHub Notification Browser
