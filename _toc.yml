@@ -63,6 +63,7 @@ parts:
           - file: core/xarray/xarray-intro
           - file: core/xarray/computation-masking
           - file: core/xarray/enso-xarray
+          - file: core/xarray/dask-arrays-xarray
   - caption: Appendix
     chapters:
       - file: appendix/how-to-contribute
