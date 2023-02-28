@@ -27,7 +27,7 @@
 
 When you signed up for your free account on [GitHub](https://github.com), you established a _user ID_ and its corresponding _password_. Many of the repositories that GitHub serves are readable from anywhere, not even requiring a GitHub account.
 
-However, especially when you use the `git` command-line interface to access a GitHub-hosted repo, there are cases when you need to provide an additional set of login credentials, such as:
+However, especially when you use the git command-line interface to access a GitHub-hosted repo, there are cases when you need to provide an additional set of login credentials. Some of these cases are:
 
 1. When you want to clone a _private_, as opposed to _public_ GitHub repository (**read-access**)
 2. When you wish to _push_ to a repo (**write-access**)
