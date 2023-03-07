@@ -1,0 +1,30 @@
+kbd {
+  /* Based on: https://dylanatsmith.com/wrote/styling-the-kbd-element */
+
+  /* Key top color */
+  background-color: rgb(238, 237, 237);
+
+  /* Key legend */
+  color: rgba(var(--pst-color-paragraph), 1);
+  font-size: 0.75em;
+  font-family: monospace;
+  font-weight: bold;
+
+  /* Fancy border and shadow, to make it look like a key */
+  border-radius: 0.3em;
+  border: 1px solid grey;
+  box-shadow: 0 2px 0 1px grey;
+  padding: 2px 5px;
+  margin-left: 1px;
+  margin-right: 1px;
+  line-height: 1;
+  position: relative;
+  top: -2px;
+
+  cursor: default; /* instead of text selection cursor */
+}
+kbd:hover {
+  /* Press-down on hover */
+  box-shadow: 0 1px 0 0.5px grey;
+  top: 0px;
+}
