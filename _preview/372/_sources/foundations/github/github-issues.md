@@ -79,7 +79,7 @@ Let's take a look at [Discussion \#156](https://github.com/ProjectPythia/pythia-
 
 This discussion brings up a resource relevant to the repository that could help others, but it is not suggesting a change like an issue would. Other Discussions might include announcements, Q&A, or general thoughts about the repository.
 
-GitHub also makes it simple to reference a Discussion in an Issue (and vice verse),
+GitHub also makes it simple to reference a Discussion in an Issue (and vice versa),
 which can help provide background and context for a piece of work.
 
 ---
