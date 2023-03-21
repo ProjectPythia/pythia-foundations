@@ -26,9 +26,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
@@ -43,7 +43,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -713,7 +713,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <p>Git “branches” are an important component of many Git and GitHub workflows. If you plan to use GitHub to manage your own resources, or contribute to a GitHub hosted project, it is essential to have a basic understanding of what branches are and how to use them. For example, the best practices for a simple workflow for suggesting changes to a GitHub repository are: create your own fork of the repository, make a branch from your fork where your changes are made, and then suggest these changes move to the upstream repository with a Pull Request. This section of the GitHub chapter assumes you have read the prior GitHub sections, are at least somewhat familiar with git commands and the vocabulary (“cloning,” “forking,” “merging,” “Pull Request” etc), and that you have already created your own fork of the <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">GitHub Sandbox Repository</a> hosted by Project Pythia.</p>
 <div class="section" id="overview">
 <h2>Overview:<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>What are Git Branches</p></li>
 <li><p>Creating a New Branch</p></li>
 <li><p>Switching Branches</p></li>
@@ -872,13 +872,13 @@ The above flowchart demonstrates pushing two new local commits (C3 and C4) to th
 <p>Merging is how you bring your split branches of a repository back together again.</p>
 <p>If you want to merge two <em>local</em> branches together, the steps are as follows:</p>
 <p>Let’s assume your two branches are named <code class="docutils literal notranslate"><span class="pre">branchA</span></code> and <code class="docutils literal notranslate"><span class="pre">branchB</span></code>, and you want your changes from <code class="docutils literal notranslate"><span class="pre">branchB</span></code> to now be reflected in <code class="docutils literal notranslate"><span class="pre">branchA</span></code></p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>First checkout the branch you want to merge INTO:</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>branchA
 </pre></div>
 </div>
-<ol class="simple">
+<ol class="arabic simple" start="2">
 <li><p>Then execute a <code class="docutils literal notranslate"><span class="pre">merge</span></code>:</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>merge<span class="w"> </span>branchB
@@ -932,7 +932,7 @@ The above flowchart demonstrates pulling in the upstream changes from Upstream M
 <h2>Complete Workflow<a class="headerlink" href="#complete-workflow" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>All in all your Git Branching workflow should resemble this flow:
 <img alt="gitworkflow" src="../../_images/gitworkflow.gif" /></p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Forking the upstream repository</p></li>
 <li><p>Creating a local clone of your upstream fork</p></li>
 <li><p>Creating a new branch</p></li>
@@ -1125,7 +1125,7 @@ The above flowchart demonstrates pulling in the upstream changes from Upstream M
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 21 February 2023.
+          Last updated on 21 March 2023.
         </p>
       </div>
     </div>

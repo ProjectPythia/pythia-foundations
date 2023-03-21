@@ -26,9 +26,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
@@ -43,7 +43,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -826,7 +826,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <hr class="docutils" />
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Introduction to pandas data structures</p></li>
 <li><p>How to slice and dice pandas dataframes and dataseries</p></li>
 <li><p>How to use pandas for exploratory data analysis</p></li>
@@ -2571,7 +2571,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_72_0.png" src="../../_images/pandas_72_0.png" />
+<img alt="../../_images/02d27e06cbaf5246a94b4d7c690b7b9299a97f435a67a2a3812d7c3134b9fa1c.png" src="../../_images/02d27e06cbaf5246a94b4d7c690b7b9299a97f435a67a2a3812d7c3134b9fa1c.png" />
 </div>
 </div>
 <p>Before, we called <code class="docutils literal notranslate"><span class="pre">.plot()</span></code> which generated a single line plot. This is helpful, but there are other plots which can also help with understanding your data! Let’s try using a histogram to understand distributions…</p>
@@ -2583,7 +2583,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_74_0.png" src="../../_images/pandas_74_0.png" />
+<img alt="../../_images/dbccff127481323f1bb68722f88ec97bf604e85e4392943da4b2467871d76c23.png" src="../../_images/dbccff127481323f1bb68722f88ec97bf604e85e4392943da4b2467871d76c23.png" />
 </div>
 </div>
 <p>We can see some clear differences in the distributions, which is helpful! Another plot one might like to use would be a <code class="docutils literal notranslate"><span class="pre">boxplot</span></code>. Here, we replace <code class="docutils literal notranslate"><span class="pre">hist</span></code> with <code class="docutils literal notranslate"><span class="pre">box</span></code></p>
@@ -2594,7 +2594,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_76_0.png" src="../../_images/pandas_76_0.png" />
+<img alt="../../_images/904266a60fa20277a68c04250b58399ba77e7658f43f8e391f45f004b7a7b1f9.png" src="../../_images/904266a60fa20277a68c04250b58399ba77e7658f43f8e391f45f004b7a7b1f9.png" />
 </div>
 </div>
 <p>Here, we again see a clear difference in the distributions. These are not the only plots you can use within pandas! For more examples of plotting choices, check out <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">the pandas plot documentation</a></p>
@@ -2614,7 +2614,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_79_0.png" src="../../_images/pandas_79_0.png" />
+<img alt="../../_images/b4eff61083103e440bb7167cb2aa64c263c5d4ff2d7bc9ec815e6442e1245b7d.png" src="../../_images/b4eff61083103e440bb7167cb2aa64c263c5d4ff2d7bc9ec815e6442e1245b7d.png" />
 </div>
 </div>
 <p>This can be a great way to take a quick look at your data, but what if you wanted a more <em><strong>quantitative</strong></em> perspective? We can use the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method on our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>; this returns a table of summary statistics for all columns in the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></p>
@@ -3298,7 +3298,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_91_0.png" src="../../_images/pandas_91_0.png" />
+<img alt="../../_images/8e474c143e56231d7c7d3816a03422c9604e4a3cfc36e3e86e46d782257c150c.png" src="../../_images/8e474c143e56231d7c7d3816a03422c9604e4a3cfc36e3e86e46d782257c150c.png" />
 </div>
 </div>
 </div>
@@ -3959,7 +3959,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_100_0.png" src="../../_images/pandas_100_0.png" />
+<img alt="../../_images/02d27e06cbaf5246a94b4d7c690b7b9299a97f435a67a2a3812d7c3134b9fa1c.png" src="../../_images/02d27e06cbaf5246a94b4d7c690b7b9299a97f435a67a2a3812d7c3134b9fa1c.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3969,7 +3969,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pandas_101_0.png" src="../../_images/pandas_101_0.png" />
+<img alt="../../_images/4cdb582ba9a96a41847d5a51b90db4e58f18d1a267c374815dc39208482b4eb4.png" src="../../_images/4cdb582ba9a96a41847d5a51b90db4e58f18d1a267c374815dc39208482b4eb4.png" />
 </div>
 </div>
 </div>
@@ -4411,7 +4411,7 @@ Name: Nino34_degK, Length: 472, dtype: float64
 </div>
 <div class="section" id="resources-and-references">
 <h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><a class="reference external" href="https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/">NOAA NCDC ENSO Dataset Used in this Example</a></p></li>
 <li><p><a class="reference external" href="https://pandas.pydata.org/docs/getting_started/index.html#getting-started">Getting Started with Pandas</a></p></li>
 <li><p><a class="reference external" href="https://pandas.pydata.org/docs/user_guide/index.html#user-guide">Pandas User Guide</a></p></li>
@@ -4578,7 +4578,7 @@ Name: Nino34_degK, Length: 472, dtype: float64
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 21 February 2023.
+          Last updated on 21 March 2023.
         </p>
       </div>
     </div>
