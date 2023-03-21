@@ -1,0 +1,4611 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to Pandas &#8212; Pythia Foundations</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Data Formats" href="../data-formats.html" />
+    <link rel="prev" title="Pandas" href="../pandas.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-G57FLM9M46"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-G57FLM9M46');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="132">
+    <div class="container-fluid" id="shim"></div>
+    <div class="container-fluid" id="banner"></div>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://projectpythia.org">
+  <img src="../../_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ProjectPythia" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/project_pythia" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" rel="noopener" target="_blank" title="YouTube">
+            <span><i class="fab fa-youtube-square"></i></span>
+            <label class="sr-only">YouTube</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    <div class="container-xl">
+      <div class="row">
+        
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   Pythia Foundations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/how-to-use.html">
+   How to Use This Book
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Foundational skills
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../foundations/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../foundations/why-python.html">
+   Why Python?
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../foundations/getting-started-python.html">
+   Getting Started with Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/quickstart.html">
+     Quickstart: Zero to Python
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../foundations/how-to-run-python.html">
+     Installing and Running Python
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../foundations/terminal.html">
+       Python in the Terminal
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../foundations/jupyter.html">
+       Python in Jupyter
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../foundations/conda.html">
+       Installing and Managing Python with Conda
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../foundations/getting-started-jupyter.html">
+   Getting Started with Jupyter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/jupyterlab.html">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/markdown.html">
+     Formatted Text in the Notebook with Markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../foundations/getting-started-github.html">
+   Getting Started with GitHub
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/what-is-github.html">
+     What is GitHub?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/github-repos.html">
+     GitHub Repositories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/github-issues.html">
+     Issues and Discussions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/github-cloning-forking.html">
+     Cloning and Forking a Repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/github-setup-advanced.html">
+     Configuring Your GitHub Account
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/basic-git.html">
+     Basic Version Control with
+     <em>
+      git
+     </em>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/git-branches.html">
+     Git Branches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/github-pull-request.html">
+     Opening a Pull Request on GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/review-pr.html">
+     Reviewing Pull Requests
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/github-workflows.html">
+     GitHub Workflows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/contribute-to-pythia.html">
+     Contribute to Project Pythia via GitHub
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Core Scientific Python packages
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../numpy.html">
+   NumPy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../numpy/numpy-basics.html">
+     NumPy Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../numpy/intermediate-numpy.html">
+     Intermediate NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../numpy/numpy-broadcasting.html">
+     NumPy Broadcasting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../matplotlib.html">
+   Matplotlib
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matplotlib/matplotlib-basics.html">
+     Matplotlib Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matplotlib/histograms-piecharts-animation.html">
+     Histograms, Pie Charts, and Animations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matplotlib/annotations-colorbars-layouts.html">
+     Annotations, Colorbars, and Advanced Layouts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../cartopy.html">
+   Cartopy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cartopy/cartopy.html">
+     Introduction to Cartopy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../datetime.html">
+   Datetime
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../datetime/datetime.html">
+     Times and Dates in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../pandas.html">
+   Pandas
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Introduction to Pandas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data-formats.html">
+   Data Formats
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data-formats/netcdf-cf.html">
+     NetCDF and CF: The Basics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../xarray.html">
+   Xarray
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xarray/xarray-intro.html">
+     Introduction to Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xarray/computation-masking.html">
+     Computations and Masks with Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xarray/enso-xarray.html">
+     Calculating ENSO with Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xarray/dask-arrays-xarray.html">
+     Dask Arrays with Xarray
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/how-to-contribute.html">
+   Pythia Foundations Contributor’s Guide
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/template.html">
+     Project Pythia Notebook Template
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by <a href="https://projectpythia.org">Project Pythia</a>.<br><br>
+All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.<br><br>
+We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
+or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
+
+</div>
+
+</div>
+
+        
+
+        <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main"><div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/core/pandas/pandas.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ProjectPythia/pythia-foundations"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/pandas/pandas.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/pandas/pandas.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/core/pandas/pandas.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> On this page
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports">
+   Imports
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-pandas-dataframe">
+   The pandas
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     DataFrame
+    </span>
+   </code>
+   …
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-pandas-series">
+   The pandas
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Series
+    </span>
+   </code>
+   …
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slicing-and-dicing-the-dataframe-and-series">
+   Slicing and Dicing the
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     DataFrame
+    </span>
+   </code>
+   and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Series
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexing-a-series">
+     Indexing a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Series
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-iloc-and-loc-to-index">
+     Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .iloc
+      </span>
+     </code>
+     and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .loc
+      </span>
+     </code>
+     to index
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extending-to-the-dataframe">
+     Extending to the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       DataFrame
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploratory-data-analysis">
+   Exploratory Data Analysis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-a-quick-look-at-the-beginning-end-of-your-dataframe">
+     Get a Quick Look at the Beginning/End of your
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Dataframe
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-plots-of-your-data">
+     Quick Plots of Your Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#customize-your-plot">
+       Customize your Plot
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-statistics">
+     Basic Statistics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subsetting-using-the-datetime-column">
+     Subsetting Using the Datetime Column
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#investigating-extreme-values">
+     Investigating Extreme Values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resampling">
+     Resampling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applying-operations-to-a-dataframe">
+     Applying operations to a dataframe
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#whats-next">
+     What’s Next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resources-and-references">
+   Resources and References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+          <div id="main-content" class="row">
+            <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+              
+              <div>
+                
+  <center><img src="https://github.com/pandas-dev/pandas/raw/main/web/pandas/static/img/pandas.svg" alt="pandas Logo" style="width: 800px;"/></center>
+<div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-pandas">
+<h1>Introduction to Pandas<a class="headerlink" href="#introduction-to-pandas" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<hr class="docutils" />
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ol class="arabic simple">
+<li><p>Introduction to pandas data structures</p></li>
+<li><p>How to slice and dice pandas dataframes and dataseries</p></li>
+<li><p>How to use pandas for exploratory data analysis</p></li>
+</ol>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concepts</p></th>
+<th class="head"><p>Importance</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../../foundations/quickstart.html"><span class="doc std std-doc">Python Quickstart</span></a></p></td>
+<td><p>Necessary</p></td>
+<td><p>Intro to <code class="docutils literal notranslate"><span class="pre">dict</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../numpy/numpy-basics.html"><span class="doc std std-doc">Numpy Basics</span></a></p></td>
+<td><p>Necessary</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>Time to learn</strong>: 60 minutes</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>You will often see the nickname <code class="docutils literal notranslate"><span class="pre">pd</span></code> used as an abbreviation for pandas in the import statement, just like <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is often imported as <code class="docutils literal notranslate"><span class="pre">np</span></code>. Here we will also be importing <code class="docutils literal notranslate"><span class="pre">pythia_datasets</span></code>, our tool for accessing example data we provide for our materials.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pythia_datasets</span> <span class="kn">import</span> <span class="n">DATASETS</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-pandas-dataframe">
+<h2>The pandas <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/dsintro.html#dataframe"><code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a>…<a class="headerlink" href="#the-pandas-dataframe" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>… is a <strong>labeled</strong>, two dimensional columnal structure similar to a table, spreadsheet, or the R <code class="docutils literal notranslate"><span class="pre">data.frame</span></code>.</p>
+<p><img alt="dataframe schematic" src="https://github.com/pandas-dev/pandas/raw/main/doc/source/_static/schemas/01_table_dataframe.svg" /></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">columns</span></code> that make up our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be lists, dictionaries, NumPy arrays, pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code>, or more. Within these <code class="docutils literal notranslate"><span class="pre">columns</span></code> our data can be any texts, numbers, dates and times, or many other data types you may have encountered in Python and NumPy. Shown here on the left in dark gray, our very first <code class="docutils literal notranslate"><span class="pre">column</span></code>  is uniquely referrred to as an <code class="docutils literal notranslate"><span class="pre">Index</span></code>, and this contains information characterizing each row of our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. Similar to any other <code class="docutils literal notranslate"><span class="pre">column</span></code>, the <code class="docutils literal notranslate"><span class="pre">index</span></code> can label our rows by text, numbers, <code class="docutils literal notranslate"><span class="pre">datetime</span></code>s (a popular one!), or more.</p>
+<p>Let’s take a look by reading in some <code class="docutils literal notranslate"><span class="pre">.csv</span></code> data, which comes from the NCDC teleconnections database, including various El Niño Southern Oscillation (ENSO) indices! [<a class="reference external" href="https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/">ref</a>].</p>
+<div class="admonition alert alert-info">
+<p class="admonition-title">Info</p>
+<p>Here we’re getting the data from Project Pythia’s custom library of example data, which we already imported above with <code>from pythia_datasets import DATASETS</code>. The <code>DATASETS.fetch()</code> method will automatically download and cache our example data file <code>enso_data.csv</code> locally.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="n">DATASETS</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">&#39;enso_data.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;enso_data.csv&#39; from &#39;https://github.com/ProjectPythia/pythia-datasets/raw/main/data/enso_data.csv&#39; to &#39;/home/runner/.cache/pythia-datasets&#39;.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once we have a valid path to a data file that Pandas knows how to read, we can open it like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we print out our dataframe, you will notice that is text based, which is okay, but not the “best” looking output</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       datetime  Nino12  Nino12anom  Nino3  Nino3anom  Nino4  Nino4anom  \
+0    1982-01-01   24.29       -0.17  25.87       0.24  28.30       0.00   
+1    1982-02-01   25.49       -0.58  26.38       0.01  28.21       0.11   
+2    1982-03-01   25.21       -1.31  26.98      -0.16  28.41       0.22   
+3    1982-04-01   24.50       -0.97  27.68       0.18  28.92       0.42   
+4    1982-05-01   23.97       -0.23  27.79       0.71  29.49       0.70   
+..          ...     ...         ...    ...        ...    ...        ...   
+467  2020-12-01   22.16       -0.60  24.38      -0.83  27.65      -0.95   
+468  2021-01-01   23.89       -0.64  25.06      -0.55  27.10      -1.25   
+469  2021-02-01   25.55       -0.66  25.80      -0.57  27.20      -1.00   
+470  2021-03-01   26.48       -0.26  26.80      -0.39  27.79      -0.55   
+471  2021-04-01   24.89       -0.80  26.96      -0.65  28.47      -0.21   
+
+     Nino34  Nino34anom  
+0     26.72        0.15  
+1     26.70       -0.02  
+2     27.20       -0.02  
+3     28.02        0.24  
+4     28.54        0.69  
+..      ...         ...  
+467   25.53       -1.12  
+468   25.58       -0.99  
+469   25.81       -0.92  
+470   26.75       -0.51  
+471   27.40       -0.49  
+
+[472 rows x 9 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Instead, if we just use the pandas dataframe itself (without wrapping it in <code class="docutils literal notranslate"><span class="pre">print</span></code>), we have a nicely rendered table which is native to pandas and Jupyter Notebooks. See how much nicer that looks?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>datetime</th>
+      <th>Nino12</th>
+      <th>Nino12anom</th>
+      <th>Nino3</th>
+      <th>Nino3anom</th>
+      <th>Nino4</th>
+      <th>Nino4anom</th>
+      <th>Nino34</th>
+      <th>Nino34anom</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1982-01-01</td>
+      <td>24.29</td>
+      <td>-0.17</td>
+      <td>25.87</td>
+      <td>0.24</td>
+      <td>28.30</td>
+      <td>0.00</td>
+      <td>26.72</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1982-02-01</td>
+      <td>25.49</td>
+      <td>-0.58</td>
+      <td>26.38</td>
+      <td>0.01</td>
+      <td>28.21</td>
+      <td>0.11</td>
+      <td>26.70</td>
+      <td>-0.02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1982-03-01</td>
+      <td>25.21</td>
+      <td>-1.31</td>
+      <td>26.98</td>
+      <td>-0.16</td>
+      <td>28.41</td>
+      <td>0.22</td>
+      <td>27.20</td>
+      <td>-0.02</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1982-04-01</td>
+      <td>24.50</td>
+      <td>-0.97</td>
+      <td>27.68</td>
+      <td>0.18</td>
+      <td>28.92</td>
+      <td>0.42</td>
+      <td>28.02</td>
+      <td>0.24</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1982-05-01</td>
+      <td>23.97</td>
+      <td>-0.23</td>
+      <td>27.79</td>
+      <td>0.71</td>
+      <td>29.49</td>
+      <td>0.70</td>
+      <td>28.54</td>
+      <td>0.69</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>467</th>
+      <td>2020-12-01</td>
+      <td>22.16</td>
+      <td>-0.60</td>
+      <td>24.38</td>
+      <td>-0.83</td>
+      <td>27.65</td>
+      <td>-0.95</td>
+      <td>25.53</td>
+      <td>-1.12</td>
+    </tr>
+    <tr>
+      <th>468</th>
+      <td>2021-01-01</td>
+      <td>23.89</td>
+      <td>-0.64</td>
+      <td>25.06</td>
+      <td>-0.55</td>
+      <td>27.10</td>
+      <td>-1.25</td>
+      <td>25.58</td>
+      <td>-0.99</td>
+    </tr>
+    <tr>
+      <th>469</th>
+      <td>2021-02-01</td>
+      <td>25.55</td>
+      <td>-0.66</td>
+      <td>25.80</td>
+      <td>-0.57</td>
+      <td>27.20</td>
+      <td>-1.00</td>
+      <td>25.81</td>
+      <td>-0.92</td>
+    </tr>
+    <tr>
+      <th>470</th>
+      <td>2021-03-01</td>
+      <td>26.48</td>
+      <td>-0.26</td>
+      <td>26.80</td>
+      <td>-0.39</td>
+      <td>27.79</td>
+      <td>-0.55</td>
+      <td>26.75</td>
+      <td>-0.51</td>
+    </tr>
+    <tr>
+      <th>471</th>
+      <td>2021-04-01</td>
+      <td>24.89</td>
+      <td>-0.80</td>
+      <td>26.96</td>
+      <td>-0.65</td>
+      <td>28.47</td>
+      <td>-0.21</td>
+      <td>27.40</td>
+      <td>-0.49</td>
+    </tr>
+  </tbody>
+</table>
+<p>472 rows × 9 columns</p>
+</div></div></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">index</span></code> within pandas is essentially a list of the unique row IDs, which by default, is a list of sequential integers which start at 0</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RangeIndex(start=0, stop=472, step=1)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Our indexing column isn’t particularly helpful currently. Pandas is clever! A few optional keyword arguments later, and…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nino12</th>
+      <th>Nino12anom</th>
+      <th>Nino3</th>
+      <th>Nino3anom</th>
+      <th>Nino4</th>
+      <th>Nino4anom</th>
+      <th>Nino34</th>
+      <th>Nino34anom</th>
+    </tr>
+    <tr>
+      <th>datetime</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1982-01-01</th>
+      <td>24.29</td>
+      <td>-0.17</td>
+      <td>25.87</td>
+      <td>0.24</td>
+      <td>28.30</td>
+      <td>0.00</td>
+      <td>26.72</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <th>1982-02-01</th>
+      <td>25.49</td>
+      <td>-0.58</td>
+      <td>26.38</td>
+      <td>0.01</td>
+      <td>28.21</td>
+      <td>0.11</td>
+      <td>26.70</td>
+      <td>-0.02</td>
+    </tr>
+    <tr>
+      <th>1982-03-01</th>
+      <td>25.21</td>
+      <td>-1.31</td>
+      <td>26.98</td>
+      <td>-0.16</td>
+      <td>28.41</td>
+      <td>0.22</td>
+      <td>27.20</td>
+      <td>-0.02</td>
+    </tr>
+    <tr>
+      <th>1982-04-01</th>
+      <td>24.50</td>
+      <td>-0.97</td>
+      <td>27.68</td>
+      <td>0.18</td>
+      <td>28.92</td>
+      <td>0.42</td>
+      <td>28.02</td>
+      <td>0.24</td>
+    </tr>
+    <tr>
+      <th>1982-05-01</th>
+      <td>23.97</td>
+      <td>-0.23</td>
+      <td>27.79</td>
+      <td>0.71</td>
+      <td>29.49</td>
+      <td>0.70</td>
+      <td>28.54</td>
+      <td>0.69</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2020-12-01</th>
+      <td>22.16</td>
+      <td>-0.60</td>
+      <td>24.38</td>
+      <td>-0.83</td>
+      <td>27.65</td>
+      <td>-0.95</td>
+      <td>25.53</td>
+      <td>-1.12</td>
+    </tr>
+    <tr>
+      <th>2021-01-01</th>
+      <td>23.89</td>
+      <td>-0.64</td>
+      <td>25.06</td>
+      <td>-0.55</td>
+      <td>27.10</td>
+      <td>-1.25</td>
+      <td>25.58</td>
+      <td>-0.99</td>
+    </tr>
+    <tr>
+      <th>2021-02-01</th>
+      <td>25.55</td>
+      <td>-0.66</td>
+      <td>25.80</td>
+      <td>-0.57</td>
+      <td>27.20</td>
+      <td>-1.00</td>
+      <td>25.81</td>
+      <td>-0.92</td>
+    </tr>
+    <tr>
+      <th>2021-03-01</th>
+      <td>26.48</td>
+      <td>-0.26</td>
+      <td>26.80</td>
+      <td>-0.39</td>
+      <td>27.79</td>
+      <td>-0.55</td>
+      <td>26.75</td>
+      <td>-0.51</td>
+    </tr>
+    <tr>
+      <th>2021-04-01</th>
+      <td>24.89</td>
+      <td>-0.80</td>
+      <td>26.96</td>
+      <td>-0.65</td>
+      <td>28.47</td>
+      <td>-0.21</td>
+      <td>27.40</td>
+      <td>-0.49</td>
+    </tr>
+  </tbody>
+</table>
+<p>472 rows × 8 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;1982-01-01&#39;, &#39;1982-02-01&#39;, &#39;1982-03-01&#39;, &#39;1982-04-01&#39;,
+               &#39;1982-05-01&#39;, &#39;1982-06-01&#39;, &#39;1982-07-01&#39;, &#39;1982-08-01&#39;,
+               &#39;1982-09-01&#39;, &#39;1982-10-01&#39;,
+               ...
+               &#39;2020-07-01&#39;, &#39;2020-08-01&#39;, &#39;2020-09-01&#39;, &#39;2020-10-01&#39;,
+               &#39;2020-11-01&#39;, &#39;2020-12-01&#39;, &#39;2021-01-01&#39;, &#39;2021-02-01&#39;,
+               &#39;2021-03-01&#39;, &#39;2021-04-01&#39;],
+              dtype=&#39;datetime64[ns]&#39;, name=&#39;datetime&#39;, length=472, freq=None)
+</pre></div>
+</div>
+</div>
+</div>
+<p>… now we have our data helpfully organized by a proper <code class="docutils literal notranslate"><span class="pre">datetime</span></code>-like object. Each of our multiple columns of data can now be referenced by their date! This sneak preview at the pandas <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code> also unlocks for us much of pandas most useful time series functionality. Don’t worry, we’ll get there. What are the actual columns of data we’ve read in here?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Nino12&#39;, &#39;Nino12anom&#39;, &#39;Nino3&#39;, &#39;Nino3anom&#39;, &#39;Nino4&#39;, &#39;Nino4anom&#39;,
+       &#39;Nino34&#39;, &#39;Nino34anom&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-pandas-series">
+<h2>The pandas <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/dsintro.html#series"><code class="docutils literal notranslate"><span class="pre">Series</span></code></a>…<a class="headerlink" href="#the-pandas-series" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>… is essentially any one of the columns of our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, with its accompanying <code class="docutils literal notranslate"><span class="pre">Index</span></code> to provide a label for each value in our column.</p>
+<p><img alt="pandas Series" src="https://github.com/pandas-dev/pandas/raw/main/doc/source/_static/schemas/01_table_series.svg" /></p>
+<p>The pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> is a fast and capable 1-dimensional array of nearly any data type we could want, and it can behave very similarly to a NumPy <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> or a Python <code class="docutils literal notranslate"><span class="pre">dict</span></code>. You can take a look at any of the <code class="docutils literal notranslate"><span class="pre">Series</span></code> that make up your <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> with its label and the Python <code class="docutils literal notranslate"><span class="pre">dict</span></code> notation, or with dot-shorthand:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Nino34&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime
+1982-01-01    26.72
+1982-02-01    26.70
+1982-03-01    27.20
+1982-04-01    28.02
+1982-05-01    28.54
+              ...  
+2020-12-01    25.53
+2021-01-01    25.58
+2021-02-01    25.81
+2021-03-01    26.75
+2021-04-01    27.40
+Name: Nino34, Length: 472, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-block alert-info">
+<b>Tip:</b> You can also use the `.` (dot) notation, as seen below, but this is moreso a "convenience feature", which for the most part is interchangeable with the dictionary notation above, except when the column name is not a valid Python object (ex. column names beginning with a number or a space)</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Nino34</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime
+1982-01-01    26.72
+1982-02-01    26.70
+1982-03-01    27.20
+1982-04-01    28.02
+1982-05-01    28.54
+              ...  
+2020-12-01    25.53
+2021-01-01    25.58
+2021-02-01    25.81
+2021-03-01    26.75
+2021-04-01    27.40
+Name: Nino34, Length: 472, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="slicing-and-dicing-the-dataframe-and-series">
+<h2>Slicing and Dicing the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> and <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#slicing-and-dicing-the-dataframe-and-series" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>We will expand on what you just saw, soon! Importantly,</p>
+<blockquote>
+<div><p><strong>Everything in pandas can be accessed with its label</strong>,</p>
+</div></blockquote>
+<p>no matter how your data is organized.</p>
+<div class="section" id="indexing-a-series">
+<h3>Indexing a <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#indexing-a-series" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Let’s back up a bit here. Once more, let’s pull out one <code class="docutils literal notranslate"><span class="pre">Series</span></code> from our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using its column label, and we’ll start there.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Nino34&quot;</span><span class="p">]</span>
+
+<span class="n">nino34_series</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime
+1982-01-01    26.72
+1982-02-01    26.70
+1982-03-01    27.20
+1982-04-01    28.02
+1982-05-01    28.54
+              ...  
+2020-12-01    25.53
+2021-01-01    25.58
+2021-02-01    25.81
+2021-03-01    26.75
+2021-04-01    27.40
+Name: Nino34, Length: 472, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Series</span></code> can be indexed, selected, and subset as both <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>-like,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.02
+</pre></div>
+</div>
+</div>
+</div>
+<p>and <code class="docutils literal notranslate"><span class="pre">dict</span></code>-like, using labels</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="p">[</span><span class="s2">&quot;1982-04-01&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.02
+</pre></div>
+</div>
+</div>
+</div>
+<p>These two can be extended in ways that you might expect,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime
+1982-01-01    26.72
+1982-02-01    26.70
+1982-03-01    27.20
+1982-04-01    28.02
+1982-05-01    28.54
+1982-06-01    28.75
+1982-07-01    28.10
+1982-08-01    27.93
+1982-09-01    28.11
+1982-10-01    28.64
+1982-11-01    28.81
+1982-12-01    29.21
+Name: Nino34, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition alert alert-info">
+<p class="admonition-title">Info</p>
+<p>Index-based slices are <b>exclusive</b> of the final value, similar to Python’s usual indexing rules.</p>
+</div>
+<p>as well as potentially unexpected ways,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="p">[</span><span class="s2">&quot;1982-01-01&quot;</span><span class="p">:</span><span class="s2">&quot;1982-12-01&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime
+1982-01-01    26.72
+1982-02-01    26.70
+1982-03-01    27.20
+1982-04-01    28.02
+1982-05-01    28.54
+1982-06-01    28.75
+1982-07-01    28.10
+1982-08-01    27.93
+1982-09-01    28.11
+1982-10-01    28.64
+1982-11-01    28.81
+1982-12-01    29.21
+Name: Nino34, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>That’s right, label-based slicing! Pandas will do the work under the hood for you to find this range of values according to your labels.</p>
+<div class="admonition alert alert-info">
+<p class="admonition-title">Info</p>
+<p>label-based slices are <b>inclusive</b> of the final value, different from above!</p>
+</div>
+<p>If you are familiar with <a class="reference internal" href="../xarray.html"><span class="doc std std-doc">xarray</span></a>, you might also already have a comfort with creating your own <code class="docutils literal notranslate"><span class="pre">slice</span></code> objects by hand, and that works here!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="p">[</span><span class="nb">slice</span><span class="p">(</span><span class="s2">&quot;1982-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;1982-12-01&quot;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime
+1982-01-01    26.72
+1982-02-01    26.70
+1982-03-01    27.20
+1982-04-01    28.02
+1982-05-01    28.54
+1982-06-01    28.75
+1982-07-01    28.10
+1982-08-01    27.93
+1982-09-01    28.11
+1982-10-01    28.64
+1982-11-01    28.81
+1982-12-01    29.21
+Name: Nino34, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="using-iloc-and-loc-to-index">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> and <code class="docutils literal notranslate"><span class="pre">.loc</span></code> to index<a class="headerlink" href="#using-iloc-and-loc-to-index" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Let’s introduce pandas-preferred ways to access your data by label, <code class="docutils literal notranslate"><span class="pre">.loc</span></code>, or by index, <code class="docutils literal notranslate"><span class="pre">.iloc</span></code>. They behave similarly to the notation introduced above, but provide more speed, security, and rigor in your value selection, as well as help you avoid <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/indexing.html#returning-a-view-versus-a-copy">chained assignment warnings</a> within pandas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.02
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime
+1982-01-01    26.72
+1982-02-01    26.70
+1982-03-01    27.20
+1982-04-01    28.02
+1982-05-01    28.54
+1982-06-01    28.75
+1982-07-01    28.10
+1982-08-01    27.93
+1982-09-01    28.11
+1982-10-01    28.64
+1982-11-01    28.81
+1982-12-01    29.21
+Name: Nino34, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;1982-04-01&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.02
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;1982-01-01&quot;</span><span class="p">:</span><span class="s2">&quot;1982-12-01&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime
+1982-01-01    26.72
+1982-02-01    26.70
+1982-03-01    27.20
+1982-04-01    28.02
+1982-05-01    28.54
+1982-06-01    28.75
+1982-07-01    28.10
+1982-08-01    27.93
+1982-09-01    28.11
+1982-10-01    28.64
+1982-11-01    28.81
+1982-12-01    29.21
+Name: Nino34, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="extending-to-the-dataframe">
+<h3>Extending to the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#extending-to-the-dataframe" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>These capabilities extend back to our original <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, as well!</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;1982-01-01&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/pandas/core/indexes/base.py:3802,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3801</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3802</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3803</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/pandas/_libs/index.pyx:138,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/pandas/_libs/index.pyx:165,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:5745,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:5753,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: &#39;1982-01-01&#39;
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;1982-01-01&quot;</span><span class="p">]</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/pandas/core/frame.py:3807,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3805</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3806</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">3807</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3808</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3809</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/pandas/core/indexes/base.py:3804,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3802</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3803</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3804</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3805</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3806</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3807</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3808</span>     <span class="c1">#  the TypeError.</span>
+<span class="g g-Whitespace">   </span><span class="mi">3809</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="ne">KeyError</span>: &#39;1982-01-01&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition alert alert-danger">
+<p class="admonition-title">Danger</p>
+<p>Or do they?</p>
+</div>
+<p>They do! Importantly however, indexing a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be more strict, and pandas will try not to too heavily assume what you are looking for. So, by default we can’t pull out a row within <code class="docutils literal notranslate"><span class="pre">df</span></code> by its label alone, and <strong>instead labels are for identifying columns within <code class="docutils literal notranslate"><span class="pre">df</span></code></strong>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Nino34&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime
+1982-01-01    26.72
+1982-02-01    26.70
+1982-03-01    27.20
+1982-04-01    28.02
+1982-05-01    28.54
+              ...  
+2020-12-01    25.53
+2021-01-01    25.58
+2021-02-01    25.81
+2021-03-01    26.75
+2021-04-01    27.40
+Name: Nino34, Length: 472, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>and integer indexing will similarly get us nothing,</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/pandas/core/indexes/base.py:3802,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3801</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3802</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3803</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/pandas/_libs/index.pyx:138,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/pandas/_libs/index.pyx:165,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:5745,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:5753,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: 0
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/pandas/core/frame.py:3807,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3805</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3806</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">3807</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3808</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3809</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/pandas/core/indexes/base.py:3804,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3802</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3803</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3804</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3805</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3806</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3807</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3808</span>     <span class="c1">#  the TypeError.</span>
+<span class="g g-Whitespace">   </span><span class="mi">3809</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="ne">KeyError</span>: 0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Knowing now that we can pull out one of our columns as a series with its label, and using our experience interacting with the <code class="docutils literal notranslate"><span class="pre">Series</span></code> <code class="docutils literal notranslate"><span class="pre">df[&quot;Nino34&quot;]</span></code>, we can chain our brackets to pull out any value from any of our columns in <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Nino34&quot;</span><span class="p">][</span><span class="s2">&quot;1982-04-01&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.02
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Nino34&quot;</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.02
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, this is not a pandas-preferred way to index and subset our data, and has limited capabilities for us. As we touched on before, <code class="docutils literal notranslate"><span class="pre">.loc</span></code> and <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> give us more to work with, and their functionality grows further for <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;1982-04-01&quot;</span><span class="p">,</span> <span class="s2">&quot;Nino34&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.02
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition alert alert-info">
+<p class="admonition-title">Info</p>
+<p>Note the <code>[<i>row</i>, <i>column</i>]</code> ordering!</p>
+</div>
+<p>These allow us to pull out entire rows of <code class="docutils literal notranslate"><span class="pre">df</span></code>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;1982-04-01&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nino12        24.50
+Nino12anom    -0.97
+Nino3         27.68
+Nino3anom      0.18
+Nino4         28.92
+Nino4anom      0.42
+Nino34        28.02
+Nino34anom     0.24
+Name: 1982-04-01 00:00:00, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;1982-01-01&quot;</span><span class="p">:</span><span class="s2">&quot;1982-12-01&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nino12</th>
+      <th>Nino12anom</th>
+      <th>Nino3</th>
+      <th>Nino3anom</th>
+      <th>Nino4</th>
+      <th>Nino4anom</th>
+      <th>Nino34</th>
+      <th>Nino34anom</th>
+    </tr>
+    <tr>
+      <th>datetime</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1982-01-01</th>
+      <td>24.29</td>
+      <td>-0.17</td>
+      <td>25.87</td>
+      <td>0.24</td>
+      <td>28.30</td>
+      <td>0.00</td>
+      <td>26.72</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <th>1982-02-01</th>
+      <td>25.49</td>
+      <td>-0.58</td>
+      <td>26.38</td>
+      <td>0.01</td>
+      <td>28.21</td>
+      <td>0.11</td>
+      <td>26.70</td>
+      <td>-0.02</td>
+    </tr>
+    <tr>
+      <th>1982-03-01</th>
+      <td>25.21</td>
+      <td>-1.31</td>
+      <td>26.98</td>
+      <td>-0.16</td>
+      <td>28.41</td>
+      <td>0.22</td>
+      <td>27.20</td>
+      <td>-0.02</td>
+    </tr>
+    <tr>
+      <th>1982-04-01</th>
+      <td>24.50</td>
+      <td>-0.97</td>
+      <td>27.68</td>
+      <td>0.18</td>
+      <td>28.92</td>
+      <td>0.42</td>
+      <td>28.02</td>
+      <td>0.24</td>
+    </tr>
+    <tr>
+      <th>1982-05-01</th>
+      <td>23.97</td>
+      <td>-0.23</td>
+      <td>27.79</td>
+      <td>0.71</td>
+      <td>29.49</td>
+      <td>0.70</td>
+      <td>28.54</td>
+      <td>0.69</td>
+    </tr>
+    <tr>
+      <th>1982-06-01</th>
+      <td>22.89</td>
+      <td>0.07</td>
+      <td>27.46</td>
+      <td>1.03</td>
+      <td>29.76</td>
+      <td>0.92</td>
+      <td>28.75</td>
+      <td>1.10</td>
+    </tr>
+    <tr>
+      <th>1982-07-01</th>
+      <td>22.47</td>
+      <td>0.87</td>
+      <td>26.44</td>
+      <td>0.82</td>
+      <td>29.38</td>
+      <td>0.58</td>
+      <td>28.10</td>
+      <td>0.88</td>
+    </tr>
+    <tr>
+      <th>1982-08-01</th>
+      <td>21.75</td>
+      <td>1.10</td>
+      <td>26.15</td>
+      <td>1.16</td>
+      <td>29.04</td>
+      <td>0.36</td>
+      <td>27.93</td>
+      <td>1.11</td>
+    </tr>
+    <tr>
+      <th>1982-09-01</th>
+      <td>21.80</td>
+      <td>1.44</td>
+      <td>26.52</td>
+      <td>1.67</td>
+      <td>29.16</td>
+      <td>0.47</td>
+      <td>28.11</td>
+      <td>1.39</td>
+    </tr>
+    <tr>
+      <th>1982-10-01</th>
+      <td>22.94</td>
+      <td>2.12</td>
+      <td>27.11</td>
+      <td>2.19</td>
+      <td>29.38</td>
+      <td>0.72</td>
+      <td>28.64</td>
+      <td>1.95</td>
+    </tr>
+    <tr>
+      <th>1982-11-01</th>
+      <td>24.59</td>
+      <td>3.00</td>
+      <td>27.62</td>
+      <td>2.64</td>
+      <td>29.23</td>
+      <td>0.60</td>
+      <td>28.81</td>
+      <td>2.16</td>
+    </tr>
+    <tr>
+      <th>1982-12-01</th>
+      <td>26.13</td>
+      <td>3.34</td>
+      <td>28.39</td>
+      <td>3.25</td>
+      <td>29.15</td>
+      <td>0.66</td>
+      <td>29.21</td>
+      <td>2.64</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nino12        24.50
+Nino12anom    -0.97
+Nino3         27.68
+Nino3anom      0.18
+Nino4         28.92
+Nino4anom      0.42
+Nino34        28.02
+Nino34anom     0.24
+Name: 1982-04-01 00:00:00, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nino12</th>
+      <th>Nino12anom</th>
+      <th>Nino3</th>
+      <th>Nino3anom</th>
+      <th>Nino4</th>
+      <th>Nino4anom</th>
+      <th>Nino34</th>
+      <th>Nino34anom</th>
+    </tr>
+    <tr>
+      <th>datetime</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1982-01-01</th>
+      <td>24.29</td>
+      <td>-0.17</td>
+      <td>25.87</td>
+      <td>0.24</td>
+      <td>28.30</td>
+      <td>0.00</td>
+      <td>26.72</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <th>1982-02-01</th>
+      <td>25.49</td>
+      <td>-0.58</td>
+      <td>26.38</td>
+      <td>0.01</td>
+      <td>28.21</td>
+      <td>0.11</td>
+      <td>26.70</td>
+      <td>-0.02</td>
+    </tr>
+    <tr>
+      <th>1982-03-01</th>
+      <td>25.21</td>
+      <td>-1.31</td>
+      <td>26.98</td>
+      <td>-0.16</td>
+      <td>28.41</td>
+      <td>0.22</td>
+      <td>27.20</td>
+      <td>-0.02</td>
+    </tr>
+    <tr>
+      <th>1982-04-01</th>
+      <td>24.50</td>
+      <td>-0.97</td>
+      <td>27.68</td>
+      <td>0.18</td>
+      <td>28.92</td>
+      <td>0.42</td>
+      <td>28.02</td>
+      <td>0.24</td>
+    </tr>
+    <tr>
+      <th>1982-05-01</th>
+      <td>23.97</td>
+      <td>-0.23</td>
+      <td>27.79</td>
+      <td>0.71</td>
+      <td>29.49</td>
+      <td>0.70</td>
+      <td>28.54</td>
+      <td>0.69</td>
+    </tr>
+    <tr>
+      <th>1982-06-01</th>
+      <td>22.89</td>
+      <td>0.07</td>
+      <td>27.46</td>
+      <td>1.03</td>
+      <td>29.76</td>
+      <td>0.92</td>
+      <td>28.75</td>
+      <td>1.10</td>
+    </tr>
+    <tr>
+      <th>1982-07-01</th>
+      <td>22.47</td>
+      <td>0.87</td>
+      <td>26.44</td>
+      <td>0.82</td>
+      <td>29.38</td>
+      <td>0.58</td>
+      <td>28.10</td>
+      <td>0.88</td>
+    </tr>
+    <tr>
+      <th>1982-08-01</th>
+      <td>21.75</td>
+      <td>1.10</td>
+      <td>26.15</td>
+      <td>1.16</td>
+      <td>29.04</td>
+      <td>0.36</td>
+      <td>27.93</td>
+      <td>1.11</td>
+    </tr>
+    <tr>
+      <th>1982-09-01</th>
+      <td>21.80</td>
+      <td>1.44</td>
+      <td>26.52</td>
+      <td>1.67</td>
+      <td>29.16</td>
+      <td>0.47</td>
+      <td>28.11</td>
+      <td>1.39</td>
+    </tr>
+    <tr>
+      <th>1982-10-01</th>
+      <td>22.94</td>
+      <td>2.12</td>
+      <td>27.11</td>
+      <td>2.19</td>
+      <td>29.38</td>
+      <td>0.72</td>
+      <td>28.64</td>
+      <td>1.95</td>
+    </tr>
+    <tr>
+      <th>1982-11-01</th>
+      <td>24.59</td>
+      <td>3.00</td>
+      <td>27.62</td>
+      <td>2.64</td>
+      <td>29.23</td>
+      <td>0.60</td>
+      <td>28.81</td>
+      <td>2.16</td>
+    </tr>
+    <tr>
+      <th>1982-12-01</th>
+      <td>26.13</td>
+      <td>3.34</td>
+      <td>28.39</td>
+      <td>3.25</td>
+      <td>29.15</td>
+      <td>0.66</td>
+      <td>29.21</td>
+      <td>2.64</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Even further,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+    <span class="s2">&quot;1982-01-01&quot;</span><span class="p">:</span><span class="s2">&quot;1982-12-01&quot;</span><span class="p">,</span>  <span class="c1"># slice of rows</span>
+    <span class="p">[</span><span class="s2">&quot;Nino12&quot;</span><span class="p">,</span> <span class="s2">&quot;Nino3&quot;</span><span class="p">,</span> <span class="s2">&quot;Nino4&quot;</span><span class="p">,</span> <span class="s2">&quot;Nino34&quot;</span><span class="p">],</span>  <span class="c1"># list of columns</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nino12</th>
+      <th>Nino3</th>
+      <th>Nino4</th>
+      <th>Nino34</th>
+    </tr>
+    <tr>
+      <th>datetime</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1982-01-01</th>
+      <td>24.29</td>
+      <td>25.87</td>
+      <td>28.30</td>
+      <td>26.72</td>
+    </tr>
+    <tr>
+      <th>1982-02-01</th>
+      <td>25.49</td>
+      <td>26.38</td>
+      <td>28.21</td>
+      <td>26.70</td>
+    </tr>
+    <tr>
+      <th>1982-03-01</th>
+      <td>25.21</td>
+      <td>26.98</td>
+      <td>28.41</td>
+      <td>27.20</td>
+    </tr>
+    <tr>
+      <th>1982-04-01</th>
+      <td>24.50</td>
+      <td>27.68</td>
+      <td>28.92</td>
+      <td>28.02</td>
+    </tr>
+    <tr>
+      <th>1982-05-01</th>
+      <td>23.97</td>
+      <td>27.79</td>
+      <td>29.49</td>
+      <td>28.54</td>
+    </tr>
+    <tr>
+      <th>1982-06-01</th>
+      <td>22.89</td>
+      <td>27.46</td>
+      <td>29.76</td>
+      <td>28.75</td>
+    </tr>
+    <tr>
+      <th>1982-07-01</th>
+      <td>22.47</td>
+      <td>26.44</td>
+      <td>29.38</td>
+      <td>28.10</td>
+    </tr>
+    <tr>
+      <th>1982-08-01</th>
+      <td>21.75</td>
+      <td>26.15</td>
+      <td>29.04</td>
+      <td>27.93</td>
+    </tr>
+    <tr>
+      <th>1982-09-01</th>
+      <td>21.80</td>
+      <td>26.52</td>
+      <td>29.16</td>
+      <td>28.11</td>
+    </tr>
+    <tr>
+      <th>1982-10-01</th>
+      <td>22.94</td>
+      <td>27.11</td>
+      <td>29.38</td>
+      <td>28.64</td>
+    </tr>
+    <tr>
+      <th>1982-11-01</th>
+      <td>24.59</td>
+      <td>27.62</td>
+      <td>29.23</td>
+      <td>28.81</td>
+    </tr>
+    <tr>
+      <th>1982-12-01</th>
+      <td>26.13</td>
+      <td>28.39</td>
+      <td>29.15</td>
+      <td>29.21</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="admonition alert alert-info">
+<p class="admonition-title">Info</p>
+<p>For a more comprehensive explanation, which includes additional examples, limitations, and compares indexing methods between DataFrame and Series see <a href="https://pandas.pydata.org/docs/user_guide/indexing.html">pandas’ rules for indexing.</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="exploratory-data-analysis">
+<h2>Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="section" id="get-a-quick-look-at-the-beginning-end-of-your-dataframe">
+<h3>Get a Quick Look at the Beginning/End of your <code class="docutils literal notranslate"><span class="pre">Dataframe</span></code><a class="headerlink" href="#get-a-quick-look-at-the-beginning-end-of-your-dataframe" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Pandas also gives you a few shortcuts to quickly investigate entire <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nino12</th>
+      <th>Nino12anom</th>
+      <th>Nino3</th>
+      <th>Nino3anom</th>
+      <th>Nino4</th>
+      <th>Nino4anom</th>
+      <th>Nino34</th>
+      <th>Nino34anom</th>
+    </tr>
+    <tr>
+      <th>datetime</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1982-01-01</th>
+      <td>24.29</td>
+      <td>-0.17</td>
+      <td>25.87</td>
+      <td>0.24</td>
+      <td>28.30</td>
+      <td>0.00</td>
+      <td>26.72</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <th>1982-02-01</th>
+      <td>25.49</td>
+      <td>-0.58</td>
+      <td>26.38</td>
+      <td>0.01</td>
+      <td>28.21</td>
+      <td>0.11</td>
+      <td>26.70</td>
+      <td>-0.02</td>
+    </tr>
+    <tr>
+      <th>1982-03-01</th>
+      <td>25.21</td>
+      <td>-1.31</td>
+      <td>26.98</td>
+      <td>-0.16</td>
+      <td>28.41</td>
+      <td>0.22</td>
+      <td>27.20</td>
+      <td>-0.02</td>
+    </tr>
+    <tr>
+      <th>1982-04-01</th>
+      <td>24.50</td>
+      <td>-0.97</td>
+      <td>27.68</td>
+      <td>0.18</td>
+      <td>28.92</td>
+      <td>0.42</td>
+      <td>28.02</td>
+      <td>0.24</td>
+    </tr>
+    <tr>
+      <th>1982-05-01</th>
+      <td>23.97</td>
+      <td>-0.23</td>
+      <td>27.79</td>
+      <td>0.71</td>
+      <td>29.49</td>
+      <td>0.70</td>
+      <td>28.54</td>
+      <td>0.69</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nino12</th>
+      <th>Nino12anom</th>
+      <th>Nino3</th>
+      <th>Nino3anom</th>
+      <th>Nino4</th>
+      <th>Nino4anom</th>
+      <th>Nino34</th>
+      <th>Nino34anom</th>
+    </tr>
+    <tr>
+      <th>datetime</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2020-12-01</th>
+      <td>22.16</td>
+      <td>-0.60</td>
+      <td>24.38</td>
+      <td>-0.83</td>
+      <td>27.65</td>
+      <td>-0.95</td>
+      <td>25.53</td>
+      <td>-1.12</td>
+    </tr>
+    <tr>
+      <th>2021-01-01</th>
+      <td>23.89</td>
+      <td>-0.64</td>
+      <td>25.06</td>
+      <td>-0.55</td>
+      <td>27.10</td>
+      <td>-1.25</td>
+      <td>25.58</td>
+      <td>-0.99</td>
+    </tr>
+    <tr>
+      <th>2021-02-01</th>
+      <td>25.55</td>
+      <td>-0.66</td>
+      <td>25.80</td>
+      <td>-0.57</td>
+      <td>27.20</td>
+      <td>-1.00</td>
+      <td>25.81</td>
+      <td>-0.92</td>
+    </tr>
+    <tr>
+      <th>2021-03-01</th>
+      <td>26.48</td>
+      <td>-0.26</td>
+      <td>26.80</td>
+      <td>-0.39</td>
+      <td>27.79</td>
+      <td>-0.55</td>
+      <td>26.75</td>
+      <td>-0.51</td>
+    </tr>
+    <tr>
+      <th>2021-04-01</th>
+      <td>24.89</td>
+      <td>-0.80</td>
+      <td>26.96</td>
+      <td>-0.65</td>
+      <td>28.47</td>
+      <td>-0.21</td>
+      <td>27.40</td>
+      <td>-0.49</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="quick-plots-of-your-data">
+<h3>Quick Plots of Your Data<a class="headerlink" href="#quick-plots-of-your-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>A good way to explore your data is by making a simple plot. Pandas allows you to plot without even calling <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>! Here, we are interested in the <code class="docutils literal notranslate"><span class="pre">Nino34</span></code> series. Check this out…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Nino34</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/02d27e06cbaf5246a94b4d7c690b7b9299a97f435a67a2a3812d7c3134b9fa1c.png" src="../../_images/02d27e06cbaf5246a94b4d7c690b7b9299a97f435a67a2a3812d7c3134b9fa1c.png" />
+</div>
+</div>
+<p>Before, we called <code class="docutils literal notranslate"><span class="pre">.plot()</span></code> which generated a single line plot. This is helpful, but there are other plots which can also help with understanding your data! Let’s try using a histogram to understand distributions…</p>
+<p>The only part that changes here is we are subsetting for just two <code class="docutils literal notranslate"><span class="pre">Nino</span></code> indices, and after <code class="docutils literal notranslate"><span class="pre">.plot</span></code>, we include <code class="docutils literal notranslate"><span class="pre">.hist()</span></code> which stands for histogram</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Nino12&#39;</span><span class="p">,</span> <span class="s1">&#39;Nino34&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/dbccff127481323f1bb68722f88ec97bf604e85e4392943da4b2467871d76c23.png" src="../../_images/dbccff127481323f1bb68722f88ec97bf604e85e4392943da4b2467871d76c23.png" />
+</div>
+</div>
+<p>We can see some clear differences in the distributions, which is helpful! Another plot one might like to use would be a <code class="docutils literal notranslate"><span class="pre">boxplot</span></code>. Here, we replace <code class="docutils literal notranslate"><span class="pre">hist</span></code> with <code class="docutils literal notranslate"><span class="pre">box</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Nino12&#39;</span><span class="p">,</span> <span class="s1">&#39;Nino34&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">box</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/904266a60fa20277a68c04250b58399ba77e7658f43f8e391f45f004b7a7b1f9.png" src="../../_images/904266a60fa20277a68c04250b58399ba77e7658f43f8e391f45f004b7a7b1f9.png" />
+</div>
+</div>
+<p>Here, we again see a clear difference in the distributions. These are not the only plots you can use within pandas! For more examples of plotting choices, check out <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">the pandas plot documentation</a></p>
+<div class="section" id="customize-your-plot">
+<h4>Customize your Plot<a class="headerlink" href="#customize-your-plot" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+<p>These <code class="docutils literal notranslate"><span class="pre">plot()</span></code> methods are just wrappers to matplotlib, so with a little more work the plots can be customized just like any matplotlib figure.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Nino34</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span>
+    <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;ENSO34 Index (degC)&#39;</span><span class="p">,</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/b4eff61083103e440bb7167cb2aa64c263c5d4ff2d7bc9ec815e6442e1245b7d.png" src="../../_images/b4eff61083103e440bb7167cb2aa64c263c5d4ff2d7bc9ec815e6442e1245b7d.png" />
+</div>
+</div>
+<p>This can be a great way to take a quick look at your data, but what if you wanted a more <em><strong>quantitative</strong></em> perspective? We can use the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method on our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>; this returns a table of summary statistics for all columns in the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></p>
+</div>
+</div>
+<div class="section" id="basic-statistics">
+<h3>Basic Statistics<a class="headerlink" href="#basic-statistics" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>By using the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method, we see some general statistics! Notice how calling this on the dataframe returns a table with all the <code class="docutils literal notranslate"><span class="pre">Series</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nino12</th>
+      <th>Nino12anom</th>
+      <th>Nino3</th>
+      <th>Nino3anom</th>
+      <th>Nino4</th>
+      <th>Nino4anom</th>
+      <th>Nino34</th>
+      <th>Nino34anom</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>472.000000</td>
+      <td>472.000000</td>
+      <td>472.000000</td>
+      <td>472.000000</td>
+      <td>472.000000</td>
+      <td>472.000000</td>
+      <td>472.000000</td>
+      <td>472.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>23.209619</td>
+      <td>0.059725</td>
+      <td>25.936568</td>
+      <td>0.039428</td>
+      <td>28.625064</td>
+      <td>0.063814</td>
+      <td>27.076780</td>
+      <td>0.034894</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>2.431522</td>
+      <td>1.157590</td>
+      <td>1.349621</td>
+      <td>0.965464</td>
+      <td>0.755422</td>
+      <td>0.709401</td>
+      <td>1.063004</td>
+      <td>0.947936</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>18.570000</td>
+      <td>-2.100000</td>
+      <td>23.030000</td>
+      <td>-2.070000</td>
+      <td>26.430000</td>
+      <td>-1.870000</td>
+      <td>24.270000</td>
+      <td>-2.380000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>21.152500</td>
+      <td>-0.712500</td>
+      <td>24.850000</td>
+      <td>-0.600000</td>
+      <td>28.140000</td>
+      <td>-0.430000</td>
+      <td>26.330000</td>
+      <td>-0.572500</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>22.980000</td>
+      <td>-0.160000</td>
+      <td>25.885000</td>
+      <td>-0.115000</td>
+      <td>28.760000</td>
+      <td>0.205000</td>
+      <td>27.100000</td>
+      <td>0.015000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>25.322500</td>
+      <td>0.515000</td>
+      <td>26.962500</td>
+      <td>0.512500</td>
+      <td>29.190000</td>
+      <td>0.630000</td>
+      <td>27.792500</td>
+      <td>0.565000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>29.150000</td>
+      <td>4.620000</td>
+      <td>29.140000</td>
+      <td>3.620000</td>
+      <td>30.300000</td>
+      <td>1.670000</td>
+      <td>29.600000</td>
+      <td>2.950000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>You can look at specific statistics too, such as mean! Notice how the output is a <code class="docutils literal notranslate"><span class="pre">Series</span></code> (column) now</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nino12        23.209619
+Nino12anom     0.059725
+Nino3         25.936568
+Nino3anom      0.039428
+Nino4         28.625064
+Nino4anom      0.063814
+Nino34        27.076780
+Nino34anom     0.034894
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you are interested in a single column mean, subset for that and use <code class="docutils literal notranslate"><span class="pre">.mean</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Nino34</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27.07677966101695
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="subsetting-using-the-datetime-column">
+<h3>Subsetting Using the Datetime Column<a class="headerlink" href="#subsetting-using-the-datetime-column" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>You can use techniques besides slicing to subset a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. Here, we provide examples of using a couple other options.</p>
+<p>Say you only want the month of January - you can use <code class="docutils literal notranslate"><span class="pre">df.index.month</span></code> to query for which month you are interested in (in this case, 1 for the month of January)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Uses the datetime column</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nino12</th>
+      <th>Nino12anom</th>
+      <th>Nino3</th>
+      <th>Nino3anom</th>
+      <th>Nino4</th>
+      <th>Nino4anom</th>
+      <th>Nino34</th>
+      <th>Nino34anom</th>
+    </tr>
+    <tr>
+      <th>datetime</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1982-01-01</th>
+      <td>24.29</td>
+      <td>-0.17</td>
+      <td>25.87</td>
+      <td>0.24</td>
+      <td>28.30</td>
+      <td>0.00</td>
+      <td>26.72</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <th>1983-01-01</th>
+      <td>27.42</td>
+      <td>2.96</td>
+      <td>28.92</td>
+      <td>3.29</td>
+      <td>29.00</td>
+      <td>0.70</td>
+      <td>29.36</td>
+      <td>2.79</td>
+    </tr>
+    <tr>
+      <th>1984-01-01</th>
+      <td>24.18</td>
+      <td>-0.28</td>
+      <td>24.82</td>
+      <td>-0.81</td>
+      <td>27.64</td>
+      <td>-0.66</td>
+      <td>25.64</td>
+      <td>-0.93</td>
+    </tr>
+    <tr>
+      <th>1985-01-01</th>
+      <td>23.59</td>
+      <td>-0.87</td>
+      <td>24.51</td>
+      <td>-1.12</td>
+      <td>27.71</td>
+      <td>-0.59</td>
+      <td>25.43</td>
+      <td>-1.14</td>
+    </tr>
+    <tr>
+      <th>1986-01-01</th>
+      <td>24.61</td>
+      <td>0.15</td>
+      <td>24.73</td>
+      <td>-0.90</td>
+      <td>28.11</td>
+      <td>-0.19</td>
+      <td>25.79</td>
+      <td>-0.78</td>
+    </tr>
+    <tr>
+      <th>1987-01-01</th>
+      <td>25.30</td>
+      <td>0.84</td>
+      <td>26.69</td>
+      <td>1.06</td>
+      <td>29.02</td>
+      <td>0.72</td>
+      <td>27.91</td>
+      <td>1.34</td>
+    </tr>
+    <tr>
+      <th>1988-01-01</th>
+      <td>24.64</td>
+      <td>0.18</td>
+      <td>26.12</td>
+      <td>0.49</td>
+      <td>29.13</td>
+      <td>0.83</td>
+      <td>27.32</td>
+      <td>0.75</td>
+    </tr>
+    <tr>
+      <th>1989-01-01</th>
+      <td>24.09</td>
+      <td>-0.37</td>
+      <td>24.15</td>
+      <td>-1.48</td>
+      <td>26.54</td>
+      <td>-1.76</td>
+      <td>24.53</td>
+      <td>-2.04</td>
+    </tr>
+    <tr>
+      <th>1990-01-01</th>
+      <td>24.02</td>
+      <td>-0.44</td>
+      <td>25.34</td>
+      <td>-0.29</td>
+      <td>28.56</td>
+      <td>0.26</td>
+      <td>26.55</td>
+      <td>-0.02</td>
+    </tr>
+    <tr>
+      <th>1991-01-01</th>
+      <td>23.86</td>
+      <td>-0.60</td>
+      <td>25.65</td>
+      <td>0.02</td>
+      <td>29.00</td>
+      <td>0.70</td>
+      <td>27.01</td>
+      <td>0.44</td>
+    </tr>
+    <tr>
+      <th>1992-01-01</th>
+      <td>24.83</td>
+      <td>0.37</td>
+      <td>27.00</td>
+      <td>1.37</td>
+      <td>29.06</td>
+      <td>0.76</td>
+      <td>28.41</td>
+      <td>1.84</td>
+    </tr>
+    <tr>
+      <th>1993-01-01</th>
+      <td>24.43</td>
+      <td>-0.03</td>
+      <td>25.56</td>
+      <td>-0.07</td>
+      <td>28.60</td>
+      <td>0.30</td>
+      <td>26.69</td>
+      <td>0.12</td>
+    </tr>
+    <tr>
+      <th>1994-01-01</th>
+      <td>24.32</td>
+      <td>-0.14</td>
+      <td>25.71</td>
+      <td>0.08</td>
+      <td>28.47</td>
+      <td>0.17</td>
+      <td>26.60</td>
+      <td>0.03</td>
+    </tr>
+    <tr>
+      <th>1995-01-01</th>
+      <td>25.33</td>
+      <td>0.87</td>
+      <td>26.34</td>
+      <td>0.71</td>
+      <td>29.20</td>
+      <td>0.90</td>
+      <td>27.55</td>
+      <td>0.98</td>
+    </tr>
+    <tr>
+      <th>1996-01-01</th>
+      <td>23.84</td>
+      <td>-0.62</td>
+      <td>24.96</td>
+      <td>-0.67</td>
+      <td>27.92</td>
+      <td>-0.38</td>
+      <td>25.74</td>
+      <td>-0.83</td>
+    </tr>
+    <tr>
+      <th>1997-01-01</th>
+      <td>23.67</td>
+      <td>-0.79</td>
+      <td>24.70</td>
+      <td>-0.93</td>
+      <td>28.41</td>
+      <td>0.11</td>
+      <td>25.96</td>
+      <td>-0.61</td>
+    </tr>
+    <tr>
+      <th>1998-01-01</th>
+      <td>28.22</td>
+      <td>3.76</td>
+      <td>28.94</td>
+      <td>3.31</td>
+      <td>29.01</td>
+      <td>0.71</td>
+      <td>29.10</td>
+      <td>2.53</td>
+    </tr>
+    <tr>
+      <th>1999-01-01</th>
+      <td>23.73</td>
+      <td>-0.73</td>
+      <td>24.41</td>
+      <td>-1.22</td>
+      <td>26.59</td>
+      <td>-1.71</td>
+      <td>24.90</td>
+      <td>-1.67</td>
+    </tr>
+    <tr>
+      <th>2000-01-01</th>
+      <td>23.86</td>
+      <td>-0.60</td>
+      <td>23.88</td>
+      <td>-1.75</td>
+      <td>26.96</td>
+      <td>-1.34</td>
+      <td>24.65</td>
+      <td>-1.92</td>
+    </tr>
+    <tr>
+      <th>2001-01-01</th>
+      <td>23.88</td>
+      <td>-0.58</td>
+      <td>24.99</td>
+      <td>-0.64</td>
+      <td>27.50</td>
+      <td>-0.80</td>
+      <td>25.74</td>
+      <td>-0.83</td>
+    </tr>
+    <tr>
+      <th>2002-01-01</th>
+      <td>23.64</td>
+      <td>-0.82</td>
+      <td>25.09</td>
+      <td>-0.54</td>
+      <td>28.81</td>
+      <td>0.51</td>
+      <td>26.50</td>
+      <td>-0.07</td>
+    </tr>
+    <tr>
+      <th>2003-01-01</th>
+      <td>24.38</td>
+      <td>-0.08</td>
+      <td>26.38</td>
+      <td>0.75</td>
+      <td>29.25</td>
+      <td>0.95</td>
+      <td>27.76</td>
+      <td>1.19</td>
+    </tr>
+    <tr>
+      <th>2004-01-01</th>
+      <td>24.60</td>
+      <td>0.14</td>
+      <td>25.92</td>
+      <td>0.29</td>
+      <td>28.83</td>
+      <td>0.53</td>
+      <td>26.74</td>
+      <td>0.17</td>
+    </tr>
+    <tr>
+      <th>2005-01-01</th>
+      <td>24.47</td>
+      <td>0.01</td>
+      <td>25.89</td>
+      <td>0.26</td>
+      <td>29.21</td>
+      <td>0.91</td>
+      <td>27.10</td>
+      <td>0.53</td>
+    </tr>
+    <tr>
+      <th>2006-01-01</th>
+      <td>24.33</td>
+      <td>-0.13</td>
+      <td>25.00</td>
+      <td>-0.63</td>
+      <td>27.68</td>
+      <td>-0.62</td>
+      <td>25.64</td>
+      <td>-0.93</td>
+    </tr>
+    <tr>
+      <th>2007-01-01</th>
+      <td>24.99</td>
+      <td>0.53</td>
+      <td>26.50</td>
+      <td>0.87</td>
+      <td>28.93</td>
+      <td>0.63</td>
+      <td>27.26</td>
+      <td>0.69</td>
+    </tr>
+    <tr>
+      <th>2008-01-01</th>
+      <td>23.86</td>
+      <td>-0.60</td>
+      <td>24.13</td>
+      <td>-1.50</td>
+      <td>26.62</td>
+      <td>-1.68</td>
+      <td>24.71</td>
+      <td>-1.86</td>
+    </tr>
+    <tr>
+      <th>2009-01-01</th>
+      <td>24.42</td>
+      <td>-0.10</td>
+      <td>25.03</td>
+      <td>-0.60</td>
+      <td>27.42</td>
+      <td>-0.88</td>
+      <td>25.54</td>
+      <td>-1.03</td>
+    </tr>
+    <tr>
+      <th>2010-01-01</th>
+      <td>24.82</td>
+      <td>0.30</td>
+      <td>26.63</td>
+      <td>1.00</td>
+      <td>29.51</td>
+      <td>1.21</td>
+      <td>28.07</td>
+      <td>1.50</td>
+    </tr>
+    <tr>
+      <th>2011-01-01</th>
+      <td>24.08</td>
+      <td>-0.44</td>
+      <td>24.31</td>
+      <td>-1.32</td>
+      <td>26.72</td>
+      <td>-1.58</td>
+      <td>24.93</td>
+      <td>-1.64</td>
+    </tr>
+    <tr>
+      <th>2012-01-01</th>
+      <td>23.88</td>
+      <td>-0.64</td>
+      <td>24.90</td>
+      <td>-0.73</td>
+      <td>27.09</td>
+      <td>-1.21</td>
+      <td>25.49</td>
+      <td>-1.08</td>
+    </tr>
+    <tr>
+      <th>2013-01-01</th>
+      <td>24.00</td>
+      <td>-0.52</td>
+      <td>25.06</td>
+      <td>-0.57</td>
+      <td>28.28</td>
+      <td>-0.02</td>
+      <td>26.16</td>
+      <td>-0.41</td>
+    </tr>
+    <tr>
+      <th>2014-01-01</th>
+      <td>24.79</td>
+      <td>0.27</td>
+      <td>25.26</td>
+      <td>-0.37</td>
+      <td>28.14</td>
+      <td>-0.17</td>
+      <td>26.06</td>
+      <td>-0.51</td>
+    </tr>
+    <tr>
+      <th>2015-01-01</th>
+      <td>24.13</td>
+      <td>-0.39</td>
+      <td>25.99</td>
+      <td>0.36</td>
+      <td>29.16</td>
+      <td>0.86</td>
+      <td>27.10</td>
+      <td>0.53</td>
+    </tr>
+    <tr>
+      <th>2016-01-01</th>
+      <td>25.93</td>
+      <td>1.41</td>
+      <td>28.21</td>
+      <td>2.58</td>
+      <td>29.65</td>
+      <td>1.35</td>
+      <td>29.17</td>
+      <td>2.60</td>
+    </tr>
+    <tr>
+      <th>2017-01-01</th>
+      <td>25.75</td>
+      <td>1.23</td>
+      <td>25.61</td>
+      <td>-0.02</td>
+      <td>28.18</td>
+      <td>-0.12</td>
+      <td>26.25</td>
+      <td>-0.32</td>
+    </tr>
+    <tr>
+      <th>2018-01-01</th>
+      <td>23.71</td>
+      <td>-0.81</td>
+      <td>24.48</td>
+      <td>-1.14</td>
+      <td>28.03</td>
+      <td>-0.27</td>
+      <td>25.82</td>
+      <td>-0.75</td>
+    </tr>
+    <tr>
+      <th>2019-01-01</th>
+      <td>25.10</td>
+      <td>0.57</td>
+      <td>26.17</td>
+      <td>0.55</td>
+      <td>29.00</td>
+      <td>0.65</td>
+      <td>27.08</td>
+      <td>0.52</td>
+    </tr>
+    <tr>
+      <th>2020-01-01</th>
+      <td>24.55</td>
+      <td>0.02</td>
+      <td>25.81</td>
+      <td>0.20</td>
+      <td>29.28</td>
+      <td>0.93</td>
+      <td>27.09</td>
+      <td>0.53</td>
+    </tr>
+    <tr>
+      <th>2021-01-01</th>
+      <td>23.89</td>
+      <td>-0.64</td>
+      <td>25.06</td>
+      <td>-0.55</td>
+      <td>27.10</td>
+      <td>-1.25</td>
+      <td>25.58</td>
+      <td>-0.99</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>You could even assign this month to a new column!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that it is its own column (<code class="docutils literal notranslate"><span class="pre">Series</span></code>), we can use <code class="docutils literal notranslate"><span class="pre">groupby</span></code> to group by the month, then taking the average, to determine average monthly values over the dataset</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/8e474c143e56231d7c7d3816a03422c9604e4a3cfc36e3e86e46d782257c150c.png" src="../../_images/8e474c143e56231d7c7d3816a03422c9604e4a3cfc36e3e86e46d782257c150c.png" />
+</div>
+</div>
+</div>
+<div class="section" id="investigating-extreme-values">
+<h3>Investigating Extreme Values<a class="headerlink" href="#investigating-extreme-values" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>You can also use <em><strong>conditional indexing</strong></em>, such that you can search where rows meet a certain criteria. In this case, we are interested in where the Nino34 anomaly is greater than 2</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Nino34anom</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nino12</th>
+      <th>Nino12anom</th>
+      <th>Nino3</th>
+      <th>Nino3anom</th>
+      <th>Nino4</th>
+      <th>Nino4anom</th>
+      <th>Nino34</th>
+      <th>Nino34anom</th>
+      <th>month</th>
+    </tr>
+    <tr>
+      <th>datetime</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1982-11-01</th>
+      <td>24.59</td>
+      <td>3.00</td>
+      <td>27.62</td>
+      <td>2.64</td>
+      <td>29.23</td>
+      <td>0.60</td>
+      <td>28.81</td>
+      <td>2.16</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>1982-12-01</th>
+      <td>26.13</td>
+      <td>3.34</td>
+      <td>28.39</td>
+      <td>3.25</td>
+      <td>29.15</td>
+      <td>0.66</td>
+      <td>29.21</td>
+      <td>2.64</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>1983-01-01</th>
+      <td>27.42</td>
+      <td>2.96</td>
+      <td>28.92</td>
+      <td>3.29</td>
+      <td>29.00</td>
+      <td>0.70</td>
+      <td>29.36</td>
+      <td>2.79</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1983-02-01</th>
+      <td>28.09</td>
+      <td>2.02</td>
+      <td>28.92</td>
+      <td>2.55</td>
+      <td>28.79</td>
+      <td>0.69</td>
+      <td>29.13</td>
+      <td>2.41</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1997-08-01</th>
+      <td>24.80</td>
+      <td>4.15</td>
+      <td>27.84</td>
+      <td>2.85</td>
+      <td>29.26</td>
+      <td>0.58</td>
+      <td>28.84</td>
+      <td>2.02</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>1997-09-01</th>
+      <td>24.40</td>
+      <td>4.04</td>
+      <td>27.84</td>
+      <td>2.99</td>
+      <td>29.32</td>
+      <td>0.63</td>
+      <td>28.93</td>
+      <td>2.21</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>1997-10-01</th>
+      <td>24.58</td>
+      <td>3.76</td>
+      <td>28.17</td>
+      <td>3.25</td>
+      <td>29.32</td>
+      <td>0.66</td>
+      <td>29.23</td>
+      <td>2.54</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>1997-11-01</th>
+      <td>25.63</td>
+      <td>4.04</td>
+      <td>28.55</td>
+      <td>3.57</td>
+      <td>29.49</td>
+      <td>0.86</td>
+      <td>29.32</td>
+      <td>2.67</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>1997-12-01</th>
+      <td>26.92</td>
+      <td>4.13</td>
+      <td>28.76</td>
+      <td>3.62</td>
+      <td>29.32</td>
+      <td>0.83</td>
+      <td>29.26</td>
+      <td>2.69</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>1998-01-01</th>
+      <td>28.22</td>
+      <td>3.76</td>
+      <td>28.94</td>
+      <td>3.31</td>
+      <td>29.01</td>
+      <td>0.71</td>
+      <td>29.10</td>
+      <td>2.53</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1998-02-01</th>
+      <td>28.98</td>
+      <td>2.91</td>
+      <td>28.93</td>
+      <td>2.56</td>
+      <td>28.87</td>
+      <td>0.77</td>
+      <td>28.86</td>
+      <td>2.14</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2015-08-01</th>
+      <td>22.88</td>
+      <td>2.24</td>
+      <td>27.33</td>
+      <td>2.34</td>
+      <td>29.66</td>
+      <td>0.98</td>
+      <td>28.89</td>
+      <td>2.07</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>2015-09-01</th>
+      <td>22.91</td>
+      <td>2.57</td>
+      <td>27.48</td>
+      <td>2.63</td>
+      <td>29.73</td>
+      <td>1.04</td>
+      <td>29.00</td>
+      <td>2.28</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>2015-10-01</th>
+      <td>23.31</td>
+      <td>2.52</td>
+      <td>27.58</td>
+      <td>2.66</td>
+      <td>29.79</td>
+      <td>1.12</td>
+      <td>29.15</td>
+      <td>2.46</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2015-11-01</th>
+      <td>23.83</td>
+      <td>2.24</td>
+      <td>27.91</td>
+      <td>2.93</td>
+      <td>30.30</td>
+      <td>1.67</td>
+      <td>29.60</td>
+      <td>2.95</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>2015-12-01</th>
+      <td>25.01</td>
+      <td>2.19</td>
+      <td>27.99</td>
+      <td>2.85</td>
+      <td>30.11</td>
+      <td>1.63</td>
+      <td>29.39</td>
+      <td>2.82</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>2016-01-01</th>
+      <td>25.93</td>
+      <td>1.41</td>
+      <td>28.21</td>
+      <td>2.58</td>
+      <td>29.65</td>
+      <td>1.35</td>
+      <td>29.17</td>
+      <td>2.60</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2016-02-01</th>
+      <td>26.81</td>
+      <td>0.67</td>
+      <td>28.36</td>
+      <td>1.99</td>
+      <td>29.55</td>
+      <td>1.45</td>
+      <td>29.12</td>
+      <td>2.40</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>You can also sort columns based on the values!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Nino34anom&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nino12</th>
+      <th>Nino12anom</th>
+      <th>Nino3</th>
+      <th>Nino3anom</th>
+      <th>Nino4</th>
+      <th>Nino4anom</th>
+      <th>Nino34</th>
+      <th>Nino34anom</th>
+      <th>month</th>
+    </tr>
+    <tr>
+      <th>datetime</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1988-11-01</th>
+      <td>20.55</td>
+      <td>-1.04</td>
+      <td>23.03</td>
+      <td>-1.95</td>
+      <td>26.76</td>
+      <td>-1.87</td>
+      <td>24.27</td>
+      <td>-2.38</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>1988-12-01</th>
+      <td>21.80</td>
+      <td>-0.99</td>
+      <td>23.07</td>
+      <td>-2.07</td>
+      <td>26.75</td>
+      <td>-1.74</td>
+      <td>24.33</td>
+      <td>-2.24</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>1988-10-01</th>
+      <td>19.50</td>
+      <td>-1.32</td>
+      <td>23.17</td>
+      <td>-1.75</td>
+      <td>27.06</td>
+      <td>-1.60</td>
+      <td>24.62</td>
+      <td>-2.07</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>1989-01-01</th>
+      <td>24.09</td>
+      <td>-0.37</td>
+      <td>24.15</td>
+      <td>-1.48</td>
+      <td>26.54</td>
+      <td>-1.76</td>
+      <td>24.53</td>
+      <td>-2.04</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2000-01-01</th>
+      <td>23.86</td>
+      <td>-0.60</td>
+      <td>23.88</td>
+      <td>-1.75</td>
+      <td>26.96</td>
+      <td>-1.34</td>
+      <td>24.65</td>
+      <td>-1.92</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1997-11-01</th>
+      <td>25.63</td>
+      <td>4.04</td>
+      <td>28.55</td>
+      <td>3.57</td>
+      <td>29.49</td>
+      <td>0.86</td>
+      <td>29.32</td>
+      <td>2.67</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>1997-12-01</th>
+      <td>26.92</td>
+      <td>4.13</td>
+      <td>28.76</td>
+      <td>3.62</td>
+      <td>29.32</td>
+      <td>0.83</td>
+      <td>29.26</td>
+      <td>2.69</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>1983-01-01</th>
+      <td>27.42</td>
+      <td>2.96</td>
+      <td>28.92</td>
+      <td>3.29</td>
+      <td>29.00</td>
+      <td>0.70</td>
+      <td>29.36</td>
+      <td>2.79</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2015-12-01</th>
+      <td>25.01</td>
+      <td>2.19</td>
+      <td>27.99</td>
+      <td>2.85</td>
+      <td>30.11</td>
+      <td>1.63</td>
+      <td>29.39</td>
+      <td>2.82</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>2015-11-01</th>
+      <td>23.83</td>
+      <td>2.24</td>
+      <td>27.91</td>
+      <td>2.93</td>
+      <td>30.30</td>
+      <td>1.67</td>
+      <td>29.60</td>
+      <td>2.95</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+<p>472 rows × 9 columns</p>
+</div></div></div>
+</div>
+<p>Let’s change the way that is ordered…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Nino34anom&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nino12</th>
+      <th>Nino12anom</th>
+      <th>Nino3</th>
+      <th>Nino3anom</th>
+      <th>Nino4</th>
+      <th>Nino4anom</th>
+      <th>Nino34</th>
+      <th>Nino34anom</th>
+      <th>month</th>
+    </tr>
+    <tr>
+      <th>datetime</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2015-11-01</th>
+      <td>23.83</td>
+      <td>2.24</td>
+      <td>27.91</td>
+      <td>2.93</td>
+      <td>30.30</td>
+      <td>1.67</td>
+      <td>29.60</td>
+      <td>2.95</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>2015-12-01</th>
+      <td>25.01</td>
+      <td>2.19</td>
+      <td>27.99</td>
+      <td>2.85</td>
+      <td>30.11</td>
+      <td>1.63</td>
+      <td>29.39</td>
+      <td>2.82</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>1983-01-01</th>
+      <td>27.42</td>
+      <td>2.96</td>
+      <td>28.92</td>
+      <td>3.29</td>
+      <td>29.00</td>
+      <td>0.70</td>
+      <td>29.36</td>
+      <td>2.79</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1997-12-01</th>
+      <td>26.92</td>
+      <td>4.13</td>
+      <td>28.76</td>
+      <td>3.62</td>
+      <td>29.32</td>
+      <td>0.83</td>
+      <td>29.26</td>
+      <td>2.69</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>1997-11-01</th>
+      <td>25.63</td>
+      <td>4.04</td>
+      <td>28.55</td>
+      <td>3.57</td>
+      <td>29.49</td>
+      <td>0.86</td>
+      <td>29.32</td>
+      <td>2.67</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2000-01-01</th>
+      <td>23.86</td>
+      <td>-0.60</td>
+      <td>23.88</td>
+      <td>-1.75</td>
+      <td>26.96</td>
+      <td>-1.34</td>
+      <td>24.65</td>
+      <td>-1.92</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1989-01-01</th>
+      <td>24.09</td>
+      <td>-0.37</td>
+      <td>24.15</td>
+      <td>-1.48</td>
+      <td>26.54</td>
+      <td>-1.76</td>
+      <td>24.53</td>
+      <td>-2.04</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1988-10-01</th>
+      <td>19.50</td>
+      <td>-1.32</td>
+      <td>23.17</td>
+      <td>-1.75</td>
+      <td>27.06</td>
+      <td>-1.60</td>
+      <td>24.62</td>
+      <td>-2.07</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>1988-12-01</th>
+      <td>21.80</td>
+      <td>-0.99</td>
+      <td>23.07</td>
+      <td>-2.07</td>
+      <td>26.75</td>
+      <td>-1.74</td>
+      <td>24.33</td>
+      <td>-2.24</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>1988-11-01</th>
+      <td>20.55</td>
+      <td>-1.04</td>
+      <td>23.03</td>
+      <td>-1.95</td>
+      <td>26.76</td>
+      <td>-1.87</td>
+      <td>24.27</td>
+      <td>-2.38</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+<p>472 rows × 9 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="resampling">
+<h3>Resampling<a class="headerlink" href="#resampling" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Here, we are trying to resample the timeseries such that the signal does not appear as noisy. This can helpfule when working with timeseries data! In this case, we resample to a yearly average (<code class="docutils literal notranslate"><span class="pre">1Y</span></code>) instead of monthly values</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Nino34</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/02d27e06cbaf5246a94b4d7c690b7b9299a97f435a67a2a3812d7c3134b9fa1c.png" src="../../_images/02d27e06cbaf5246a94b4d7c690b7b9299a97f435a67a2a3812d7c3134b9fa1c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Nino34</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;1Y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/4cdb582ba9a96a41847d5a51b90db4e58f18d1a267c374815dc39208482b4eb4.png" src="../../_images/4cdb582ba9a96a41847d5a51b90db4e58f18d1a267c374815dc39208482b4eb4.png" />
+</div>
+</div>
+</div>
+<div class="section" id="applying-operations-to-a-dataframe">
+<h3>Applying operations to a dataframe<a class="headerlink" href="#applying-operations-to-a-dataframe" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Often times, people are interested in applying calculations to data within pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s. Here, we setup a function to convert from degrees Celsius to Kelvin</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_degc_to_kelvin</span><span class="p">(</span><span class="n">temperature_degc</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts from degrees celsius to Kelvin</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">temperature_degc</span> <span class="o">+</span> <span class="mf">273.15</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, this function accepts and returns a single value</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert a single value</span>
+<span class="n">convert_degc_to_kelvin</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>273.15
+</pre></div>
+</div>
+</div>
+</div>
+<p>But what if we want to apply this to our dataframe? We can subset for Nino34, which is in degrees Celsius</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime
+1982-01-01    26.72
+1982-02-01    26.70
+1982-03-01    27.20
+1982-04-01    28.02
+1982-05-01    28.54
+              ...  
+2020-12-01    25.53
+2021-01-01    25.58
+2021-02-01    25.81
+2021-03-01    26.75
+2021-04-01    27.40
+Name: Nino34, Length: 472, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice how the object type is a pandas series</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Nino12</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.series.Series
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you call <code class="docutils literal notranslate"><span class="pre">.values</span></code>, the object type is now a numpy array. Pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> values include numpy arrays, and calling <code class="docutils literal notranslate"><span class="pre">.values</span></code> returns the series as a numpy array!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Nino12</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ndarray
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s apply this calculation to this <code class="docutils literal notranslate"><span class="pre">Series</span></code>; this returns another <code class="docutils literal notranslate"><span class="pre">Series</span></code> object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">convert_degc_to_kelvin</span><span class="p">(</span><span class="n">nino34_series</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime
+1982-01-01    299.87
+1982-02-01    299.85
+1982-03-01    300.35
+1982-04-01    301.17
+1982-05-01    301.69
+               ...  
+2020-12-01    298.68
+2021-01-01    298.73
+2021-02-01    298.96
+2021-03-01    299.90
+2021-04-01    300.55
+Name: Nino34, Length: 472, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we include <code class="docutils literal notranslate"><span class="pre">.values</span></code>, it returns a <code class="docutils literal notranslate"><span class="pre">numpy</span> <span class="pre">array</span></code></p>
+<div class="admonition alert alert-warning">
+<p class="admonition-title">Warning</p>
+<p>We don’t usually recommend converting to NumPy arrays unless you need to - once you convert to NumPy arrays, the helpful label information is lost… so beware!</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">convert_degc_to_kelvin</span><span class="p">(</span><span class="n">nino34_series</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([299.87, 299.85, 300.35, 301.17, 301.69, 301.9 , 301.25, 301.08,
+       301.26, 301.79, 301.96, 302.36, 302.51, 302.28, 302.18, 302.06,
+       302.04, 301.39, 300.22, 299.68, 299.59, 299.02, 298.73, 298.74,
+       298.79, 299.54, 300.01, 300.54, 300.54, 300.01, 299.89, 299.49,
+       299.58, 299.08, 298.56, 298.15, 298.58, 298.82, 299.38, 299.95,
+       300.26, 300.01, 299.84, 299.65, 299.4 , 299.34, 299.34, 299.26,
+       298.94, 299.09, 299.8 , 300.59, 300.65, 300.84, 300.52, 300.3 ,
+       300.48, 300.72, 300.88, 300.85, 301.06, 301.17, 301.62, 301.95,
+       301.9 , 302.18, 301.95, 301.73, 301.54, 301.22, 301.14, 300.75,
+       300.47, 300.37, 300.46, 300.47, 299.63, 299.26, 298.72, 298.39,
+       298.58, 297.77, 297.42, 297.48, 297.68, 298.48, 299.05, 299.84,
+       300.24, 300.13, 299.89, 299.48, 299.4 , 299.41, 299.39, 299.53,
+       299.7 , 300.1 , 300.61, 301.17, 301.21, 300.73, 300.4 , 300.2 ,
+       299.9 , 300.13, 299.87, 300.06, 300.16, 300.08, 300.4 , 301.13,
+       301.5 , 301.51, 301.07, 300.59, 300.22, 300.78, 301.01, 301.52,
+       301.56, 301.78, 301.98, 302.29, 302.14, 301.17, 300.68, 299.79,
+       299.63, 299.49, 299.66, 299.88, 299.84, 300.12, 300.81, 301.74,
+       301.97, 301.43, 300.7 , 299.99, 300.07, 300.08, 300.06, 299.91,
+       299.75, 299.74, 300.42, 301.05, 301.19, 301.14, 300.5 , 300.5 ,
+       300.15, 300.64, 301.02, 301.02, 300.7 , 300.6 , 300.78, 301.08,
+       300.88, 300.74, 300.16, 299.48, 299.11, 298.82, 298.81, 298.72,
+       298.89, 299.  , 299.77, 300.51, 300.52, 300.47, 300.24, 299.71,
+       299.5 , 299.39, 299.34, 299.17, 299.11, 299.51, 300.18, 301.18,
+       301.75, 302.09, 302.07, 301.99, 302.08, 302.38, 302.47, 302.41,
+       302.25, 302.01, 301.82, 301.71, 301.62, 299.87, 299.09, 298.64,
+       298.76, 298.49, 298.33, 297.94, 298.05, 298.56, 299.4 , 299.99,
+       300.12, 299.75, 299.5 , 298.74, 298.86, 298.79, 298.27, 298.05,
+       297.8 , 298.34, 299.23, 300.16, 300.27, 300.18, 299.87, 299.6 ,
+       299.36, 299.11, 298.93, 298.74, 298.89, 299.26, 299.99, 300.67,
+       300.75, 300.83, 300.47, 300.02, 299.7 , 299.74, 299.6 , 299.32,
+       299.65, 300.1 , 300.47, 301.09, 301.3 , 301.58, 301.13, 300.94,
+       300.98, 301.2 , 301.42, 301.24, 300.91, 300.64, 300.96, 300.96,
+       300.52, 300.63, 300.58, 300.  , 300.11, 300.34, 300.2 , 300.04,
+       299.89, 300.01, 300.25, 300.99, 301.21, 300.91, 300.84, 300.69,
+       300.62, 300.53, 300.46, 300.46, 300.25, 300.11, 300.7 , 301.22,
+       301.35, 301.2 , 300.62, 300.03, 299.78, 299.9 , 299.49, 299.04,
+       298.79, 299.23, 299.72, 300.74, 301.06, 301.  , 300.5 , 300.37,
+       300.49, 300.62, 300.88, 300.91, 300.41, 299.96, 300.33, 300.93,
+       300.72, 300.7 , 299.94, 299.35, 298.92, 298.37, 298.21, 298.12,
+       297.86, 297.98, 299.22, 299.98, 300.33, 300.32, 300.34, 300.  ,
+       299.59, 299.48, 299.45, 298.89, 298.69, 299.19, 299.82, 300.65,
+       301.18, 301.26, 301.09, 300.68, 300.62, 300.78, 301.34, 301.45,
+       301.22, 301.09, 301.44, 301.51, 300.83, 300.15, 299.24, 298.65,
+       298.22, 298.16, 298.22, 298.1 , 298.08, 298.61, 299.38, 300.17,
+       300.57, 300.61, 300.11, 299.34, 299.13, 298.87, 298.75, 298.68,
+       298.64, 299.18, 299.78, 300.53, 300.95, 301.1 , 300.9 , 300.7 ,
+       300.39, 300.13, 300.16, 299.61, 299.31, 299.47, 300.15, 300.83,
+       300.72, 300.58, 300.06, 299.69, 299.8 , 299.51, 299.8 , 299.68,
+       299.21, 299.33, 300.14, 301.16, 301.46, 301.26, 300.55, 300.17,
+       300.32, 300.32, 300.65, 300.5 , 300.25, 300.44, 300.94, 301.71,
+       302.03, 302.11, 301.97, 302.04, 302.15, 302.3 , 302.75, 302.54,
+       302.32, 302.27, 302.05, 302.02, 301.3 , 300.68, 299.88, 299.43,
+       299.26, 299.11, 299.25, 299.31, 299.4 , 300.02, 300.49, 301.25,
+       301.45, 301.34, 300.76, 299.82, 299.44, 299.38, 298.94, 298.95,
+       298.97, 298.98, 299.63, 300.57, 300.87, 301.  , 300.67, 300.26,
+       300.25, 300.7 , 300.79, 300.68, 300.23, 300.56, 301.37, 301.75,
+       301.72, 301.39, 300.78, 300.12, 299.85, 300.46, 300.41, 300.22,
+       300.24, 300.29, 300.97, 301.47, 300.74, 300.45, 300.04, 299.33,
+       298.92, 298.45, 298.49, 298.68, 298.73, 298.96, 299.9 , 300.55])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can now assign our pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> with the converted temperatures to a new column in our dataframe!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Nino34_degK&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">convert_degc_to_kelvin</span><span class="p">(</span><span class="n">nino34_series</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Nino34_degK</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime
+1982-01-01    299.87
+1982-02-01    299.85
+1982-03-01    300.35
+1982-04-01    301.17
+1982-05-01    301.69
+               ...  
+2020-12-01    298.68
+2021-01-01    298.73
+2021-02-01    298.96
+2021-03-01    299.90
+2021-04-01    300.55
+Name: Nino34_degK, Length: 472, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that our analysis is done, we can save our data to a <code class="docutils literal notranslate"><span class="pre">csv</span></code> for later - or share with others!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;nino_analyzed_output.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;nino_analyzed_output.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nino12</th>
+      <th>Nino12anom</th>
+      <th>Nino3</th>
+      <th>Nino3anom</th>
+      <th>Nino4</th>
+      <th>Nino4anom</th>
+      <th>Nino34</th>
+      <th>Nino34anom</th>
+      <th>month</th>
+      <th>Nino34_degK</th>
+    </tr>
+    <tr>
+      <th>datetime</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1982-01-01</th>
+      <td>24.29</td>
+      <td>-0.17</td>
+      <td>25.87</td>
+      <td>0.24</td>
+      <td>28.30</td>
+      <td>0.00</td>
+      <td>26.72</td>
+      <td>0.15</td>
+      <td>1</td>
+      <td>299.87</td>
+    </tr>
+    <tr>
+      <th>1982-02-01</th>
+      <td>25.49</td>
+      <td>-0.58</td>
+      <td>26.38</td>
+      <td>0.01</td>
+      <td>28.21</td>
+      <td>0.11</td>
+      <td>26.70</td>
+      <td>-0.02</td>
+      <td>2</td>
+      <td>299.85</td>
+    </tr>
+    <tr>
+      <th>1982-03-01</th>
+      <td>25.21</td>
+      <td>-1.31</td>
+      <td>26.98</td>
+      <td>-0.16</td>
+      <td>28.41</td>
+      <td>0.22</td>
+      <td>27.20</td>
+      <td>-0.02</td>
+      <td>3</td>
+      <td>300.35</td>
+    </tr>
+    <tr>
+      <th>1982-04-01</th>
+      <td>24.50</td>
+      <td>-0.97</td>
+      <td>27.68</td>
+      <td>0.18</td>
+      <td>28.92</td>
+      <td>0.42</td>
+      <td>28.02</td>
+      <td>0.24</td>
+      <td>4</td>
+      <td>301.17</td>
+    </tr>
+    <tr>
+      <th>1982-05-01</th>
+      <td>23.97</td>
+      <td>-0.23</td>
+      <td>27.79</td>
+      <td>0.71</td>
+      <td>29.49</td>
+      <td>0.70</td>
+      <td>28.54</td>
+      <td>0.69</td>
+      <td>5</td>
+      <td>301.69</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2020-12-01</th>
+      <td>22.16</td>
+      <td>-0.60</td>
+      <td>24.38</td>
+      <td>-0.83</td>
+      <td>27.65</td>
+      <td>-0.95</td>
+      <td>25.53</td>
+      <td>-1.12</td>
+      <td>12</td>
+      <td>298.68</td>
+    </tr>
+    <tr>
+      <th>2021-01-01</th>
+      <td>23.89</td>
+      <td>-0.64</td>
+      <td>25.06</td>
+      <td>-0.55</td>
+      <td>27.10</td>
+      <td>-1.25</td>
+      <td>25.58</td>
+      <td>-0.99</td>
+      <td>1</td>
+      <td>298.73</td>
+    </tr>
+    <tr>
+      <th>2021-02-01</th>
+      <td>25.55</td>
+      <td>-0.66</td>
+      <td>25.80</td>
+      <td>-0.57</td>
+      <td>27.20</td>
+      <td>-1.00</td>
+      <td>25.81</td>
+      <td>-0.92</td>
+      <td>2</td>
+      <td>298.96</td>
+    </tr>
+    <tr>
+      <th>2021-03-01</th>
+      <td>26.48</td>
+      <td>-0.26</td>
+      <td>26.80</td>
+      <td>-0.39</td>
+      <td>27.79</td>
+      <td>-0.55</td>
+      <td>26.75</td>
+      <td>-0.51</td>
+      <td>3</td>
+      <td>299.90</td>
+    </tr>
+    <tr>
+      <th>2021-04-01</th>
+      <td>24.89</td>
+      <td>-0.80</td>
+      <td>26.96</td>
+      <td>-0.65</td>
+      <td>28.47</td>
+      <td>-0.21</td>
+      <td>27.40</td>
+      <td>-0.49</td>
+      <td>4</td>
+      <td>300.55</td>
+    </tr>
+  </tbody>
+</table>
+<p>472 rows × 10 columns</p>
+</div></div></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ul class="simple">
+<li><p>Pandas is a very powerful tool for working with tabular (i.e. spreadsheet-style) data</p></li>
+<li><p>There are multiple ways of subsetting your pandas dataframe or series</p></li>
+<li><p>Pandas allows you to refer to subsets of data by label, which generally makes code more readable and more robust</p></li>
+<li><p>Pandas can be helpful for exploratory data analysis, including plotting and basic statistics</p></li>
+<li><p>One can apply calculations to pandas dataframes and save the output via <code class="docutils literal notranslate"><span class="pre">csv</span></code> files</p></li>
+</ul>
+<div class="section" id="whats-next">
+<h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>In the next notebook, we will look more into using pandas for more in-depth data analysis.</p>
+</div>
+</div>
+<div class="section" id="resources-and-references">
+<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/">NOAA NCDC ENSO Dataset Used in this Example</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/getting_started/index.html#getting-started">Getting Started with Pandas</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/user_guide/index.html#user-guide">Pandas User Guide</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./core/pandas"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../pandas.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Pandas</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../data-formats.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data Formats</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </div>
+          </div>
+        </main>
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+<footer class="footer">
+  <div class="container-fluid m-0 p-0">
+  
+    <div class="footer-item">
+    
+  <div class="container-fluid footer-logos">
+    <div class="container-xl">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="NCAR" src="../../_images/NCAR-contemp-logo-blue.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="Unidata" src="../../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="UAlbany" src="../../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-menu pt-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>About</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/about.html"
+              >About Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/preamble/how-to-use.html"
+              >How to use Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#the-project-pythia-team"
+              >The Project Team</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Give Feedback</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="mailto:projectpythia@ucar.edu">Email us!</a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/projectpythia.github.io/discussions"
+              >Project Pythia Discussions</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/pythia-foundations/discussions"
+              >Pythia Foundations Discussions</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Contribute</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/contributing.html"
+              >How to contribute to Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/appendix/how-to-contribute.html"
+              >How to contribute to Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/code_of_conduct.html"
+              >Our code of conduct</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#weekly-working-group-meetings"
+              >Join our weekly meetings</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/ProjectPythia"
+              >Join us on GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  
+    <div class="footer-item">
+      <div class="container-fluid footer-info">
+    <div class="container-xl">
+      <div class="d-flex justify-content-center">
+        <p class="py-1 m-0">
+            &copy;&nbsp;2022.
+        
+          By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
+        
+          Last updated on 21 March 2023.
+        </p>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-extra">
+  <div class="container">
+    <div class="row">
+      <p class="m-0">
+        <img
+          src="../../_static/footer-logo-nsf.png"
+          style="float: left; width: 60px; height: 60px; margin-right: 1rem"
+        />
+        This material is based upon work supported by the National Science
+        Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those
+        of the author(s) and do not necessarily reflect the views of the
+        National Science Foundation.
+      </p>
+    </div>
+  </div>
+</div>
+    </div>
+  
+  </div>
+</footer>
+  </body>
+</html>

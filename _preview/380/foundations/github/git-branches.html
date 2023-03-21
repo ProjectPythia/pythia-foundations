@@ -1,0 +1,1158 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Branches &#8212; Pythia Foundations</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Opening a Pull Request on GitHub" href="github-pull-request.html" />
+    <link rel="prev" title="Basic Version Control with git" href="basic-git.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-G57FLM9M46"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-G57FLM9M46');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="132">
+    <div class="container-fluid" id="shim"></div>
+    <div class="container-fluid" id="banner"></div>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://projectpythia.org">
+  <img src="../../_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ProjectPythia" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/project_pythia" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" rel="noopener" target="_blank" title="YouTube">
+            <span><i class="fab fa-youtube-square"></i></span>
+            <label class="sr-only">YouTube</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    <div class="container-xl">
+      <div class="row">
+        
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   Pythia Foundations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/how-to-use.html">
+   How to Use This Book
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Foundational skills
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../why-python.html">
+   Why Python?
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../getting-started-python.html">
+   Getting Started with Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../quickstart.html">
+     Quickstart: Zero to Python
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../how-to-run-python.html">
+     Installing and Running Python
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../terminal.html">
+       Python in the Terminal
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jupyter.html">
+       Python in Jupyter
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../conda.html">
+       Installing and Managing Python with Conda
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../getting-started-jupyter.html">
+   Getting Started with Jupyter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jupyterlab.html">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../markdown.html">
+     Formatted Text in the Notebook with Markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../getting-started-github.html">
+   Getting Started with GitHub
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="what-is-github.html">
+     What is GitHub?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-repos.html">
+     GitHub Repositories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-issues.html">
+     Issues and Discussions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-cloning-forking.html">
+     Cloning and Forking a Repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-setup-advanced.html">
+     Configuring Your GitHub Account
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="basic-git.html">
+     Basic Version Control with
+     <em>
+      git
+     </em>
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Git Branches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-pull-request.html">
+     Opening a Pull Request on GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="review-pr.html">
+     Reviewing Pull Requests
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-workflows.html">
+     GitHub Workflows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="contribute-to-pythia.html">
+     Contribute to Project Pythia via GitHub
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Core Scientific Python packages
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../core/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/numpy.html">
+   NumPy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/numpy/numpy-basics.html">
+     NumPy Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/numpy/intermediate-numpy.html">
+     Intermediate NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/numpy/numpy-broadcasting.html">
+     NumPy Broadcasting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/matplotlib.html">
+   Matplotlib
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/matplotlib/matplotlib-basics.html">
+     Matplotlib Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/matplotlib/histograms-piecharts-animation.html">
+     Histograms, Pie Charts, and Animations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/matplotlib/annotations-colorbars-layouts.html">
+     Annotations, Colorbars, and Advanced Layouts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/cartopy.html">
+   Cartopy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/cartopy/cartopy.html">
+     Introduction to Cartopy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/datetime.html">
+   Datetime
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/datetime/datetime.html">
+     Times and Dates in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/pandas.html">
+   Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/pandas/pandas.html">
+     Introduction to Pandas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/data-formats.html">
+   Data Formats
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/data-formats/netcdf-cf.html">
+     NetCDF and CF: The Basics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/xarray.html">
+   Xarray
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/xarray-intro.html">
+     Introduction to Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/computation-masking.html">
+     Computations and Masks with Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/enso-xarray.html">
+     Calculating ENSO with Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/dask-arrays-xarray.html">
+     Dask Arrays with Xarray
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/how-to-contribute.html">
+   Pythia Foundations Contributor’s Guide
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/template.html">
+     Project Pythia Notebook Template
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by <a href="https://projectpythia.org">Project Pythia</a>.<br><br>
+All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.<br><br>
+We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
+or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
+
+</div>
+
+</div>
+
+        
+
+        <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main"><div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/foundations/github/git-branches.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ProjectPythia/pythia-foundations"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Ffoundations/github/git-branches.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/foundations/github/git-branches.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> On this page
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-are-git-branches">
+   What are Git branches?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-a-new-branch">
+   Creating a New Branch
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#switching-branches">
+   Switching Branches
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-a-remote-branch">
+   Setting up a Remote Branch
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merging-branches">
+   Merging Branches
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deleting-branches">
+   Deleting Branches
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#updating-your-branches">
+   Updating Your Branches
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#complete-workflow">
+   Complete Workflow
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#whats-next">
+     What’s Next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resources-and-references">
+   Resources and references
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+          <div id="main-content" class="row">
+            <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+              
+              <div>
+                
+  <a class="reference internal image-reference" href="../../_images/Git-Logo-2Color.png"><img alt="Git Logo" src="../../_images/Git-Logo-2Color.png" style="width: 400px;" /></a>
+<div class="tex2jax_ignore mathjax_ignore section" id="git-branches">
+<h1>Git Branches<a class="headerlink" href="#git-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<p>Git “branches” are an important component of many Git and GitHub workflows. If you plan to use GitHub to manage your own resources, or contribute to a GitHub hosted project, it is essential to have a basic understanding of what branches are and how to use them. For example, the best practices for a simple workflow for suggesting changes to a GitHub repository are: create your own fork of the repository, make a branch from your fork where your changes are made, and then suggest these changes move to the upstream repository with a Pull Request. This section of the GitHub chapter assumes you have read the prior GitHub sections, are at least somewhat familiar with git commands and the vocabulary (“cloning,” “forking,” “merging,” “Pull Request” etc), and that you have already created your own fork of the <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">GitHub Sandbox Repository</a> hosted by Project Pythia.</p>
+<div class="section" id="overview">
+<h2>Overview:<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ol class="arabic simple">
+<li><p>What are Git Branches</p></li>
+<li><p>Creating a New Branch</p></li>
+<li><p>Switching Branches</p></li>
+<li><p>Setting up a Remote Branch</p></li>
+<li><p>Merging Branches</p></li>
+<li><p>Deleting Branches</p></li>
+<li><p>Updating Your Branches</p></li>
+<li><p>Complete Workflow</p></li>
+</ol>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concepts</p></th>
+<th class="head"><p>Importance</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="what-is-github.html"><span class="doc std std-doc">What is GitHub?</span></a></p></td>
+<td><p>Necessary</p></td>
+<td><p>GitHub user account required</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="github-repos.html"><span class="doc std std-doc">GitHub Repositories</span></a></p></td>
+<td><p>Necessary</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="github-issues.html"><span class="doc std std-doc">Issues and Discussions</span></a></p></td>
+<td><p>Recommended</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="github-cloning-forking.html"><span class="doc std std-doc">Cloning and Forking a Repository</span></a></p></td>
+<td><p>Necessary</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="github-setup-advanced.html"><span class="doc std std-doc">Configuring your GitHub Account</span></a></p></td>
+<td><p>Recommended</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="basic-git.html"><span class="doc std std-doc">Basic Version Control with <em>git</em></span></a></p></td>
+<td><p>Necessary</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>Time to learn</strong>: 30 minutes</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="what-are-git-branches">
+<h2>What are Git branches?<a class="headerlink" href="#what-are-git-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Git branches allow for non-linear or differing revision histories of a repository. At a point in time, you can split your repository into multiple development paths (branches) where you can make different commits in each, typically with the ultimate intention of merging these branches and development changes together at a later time.</p>
+<p>Branching is one of git’s methods for helping with collaborative document editing, much like “change tracking” in Google Docs or Microsoft Word. It enables multiple people to edit copies of the same document content, while reducing or managing edit collisions, and with the ultimate aim of merging everyone’s changes together later. It also allows the same person to edit multiple copies of the same document, but with different intentions. Some reasons for wanting to split your repository into multiple paths (i.e. branches) is to experiment with different methods of solving a problem (before deciding which method will ultimately be merged) and to work on different problems within the same codebase (without confusing which code changes are relevant to which problem).</p>
+<p>These branches can live on your computer (local) or on GitHub (remote). They are brought together through Git <em>pushes</em>, <em>pulls</em>, <em>merges</em>, and <em>Pull Requests</em>. <em>Pushing</em> is how you transfer changes from your local repository to a remote repository. <em>Pulling</em> is how you fetch upstream changes into your branch. <em>Merging</em> is how you piece the forked history back together again (i.e. join two branches). And <em>Pull Requests</em> are how you suggest the changes you’ve made on your branch to the upstream codebase.</p>
+<div class="info admonition">
+<p class="admonition-title">Pull Requests</p>
+<p>We will cover <span class="xref myst">Pull Requests</span> more in-depthly in the next section.</p>
+</div>
+<p>One rule of thumb is for each development feature to have its own development branch until that feature is ready to be added to the upstream (remote) codebase. This allows you to compartmentalize your Pull Requests so that smaller working changes can be merged upstream independently of one another. For example, you might have a complete or near-complete feature on its own branch with an open Pull Request awaiting review. While you wait for feedback from the team before merging it, you can still work on a second feature on a second branch without affecting your first feature’s Pull Request. <strong>We encourage you to always do your work in a designated branch.</strong></p>
+</div>
+<div class="section" id="creating-a-new-branch">
+<h2>Creating a New Branch<a class="headerlink" href="#creating-a-new-branch" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="info admonition">
+<p class="admonition-title">Have you forked the repository?</p>
+<p>Having forked (NOT just cloned) the <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">GitHub Sandbox Repository</a> is essential for following the steps in this book chapter. See the chapter on <a class="reference internal" href="github-cloning-forking.html"><span class="doc std std-doc">GitHub Cloning and Forking</span></a>.</p>
+</div>
+<p><img alt="branching" src="../../_images/branching.gif" />
+The above flowchart demonstrates forking a remote repository, labeled “Upstream”, creating a local copy, labeled “Clone”, creating a new branch, “branchA”, and adding two commits, C3 and C4, to “branchA” of the local clone of the forked repository. Different commits can be added to different branches in any order without depending on or knowing about each other.</p>
+<p>From your terminal, navigate to your local clone of your <code class="docutils literal notranslate"><span class="pre">Github-Sandbox</span></code> Repository fork:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>github-sandbox
+</pre></div>
+</div>
+<p>Let’s begin by checking the status of our repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
+</pre></div>
+</div>
+<p><img alt="Git Status" src="../../_images/1-gitstatus.png" /></p>
+<p>You will see that you are already on a branch called “main”. And that this branch is up-to-date with “origin/main” and has nothing to commit.</p>
+<div class="info admonition">
+<p class="admonition-title">The Main Branch</p>
+<p>Historically, the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch was called the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch. The name change was relatively recent, so all of your GitHub repositories may not reflect this yet. See instructions to change your branch name at <a class="reference external" href="https://github.com/github/renaming">Github’s Branch Renaming documentation</a>.</p>
+</div>
+<p>Now check the status of your remote repository with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>-v
+</pre></div>
+</div>
+<p><img alt="Git Remote" src="../../_images/2-gitremote.png" /></p>
+<p>We are set up to pull (denoted as ‘fetch’ in the output above) and push from the same remote repository.</p>
+<p>Next, check all of your exising Git branches with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>-a
+</pre></div>
+</div>
+<p><img alt="Git Branch" src="../../_images/3-gitbranch.png" /></p>
+<p>You will see one local branch (<code class="docutils literal notranslate"><span class="pre">main</span></code>) and your remote branch (<code class="docutils literal notranslate"><span class="pre">remotes/origin/HEAD</span></code> and <code class="docutils literal notranslate"><span class="pre">remotes/origin/main</span></code>, where <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> points to <code class="docutils literal notranslate"><span class="pre">main</span></code>). <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> is the pointer to the current branch reference, or in essence, a pointer to your last commit. More on this in a later section.</p>
+<p>Now, before we make some sample changes to our codebase, let’s create a new branch where we’ll make these changes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>branchA
+</pre></div>
+</div>
+<p>Check that this branch was created with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch
+</pre></div>
+</div>
+<p><img alt="Git NewBranch" src="../../_images/4-gitnewbranch.png" /></p>
+<p>This will display the current and the new branch. You’ll notice that current or active branch, indicated by the “*” is still the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch. Thus, any changes we make to the contents of our local repository will still be made on <code class="docutils literal notranslate"><span class="pre">main</span></code>. We will need to switch branches to work in the new branch, <code class="docutils literal notranslate"><span class="pre">branchA</span></code>.</p>
+</div>
+<div class="section" id="switching-branches">
+<h2>Switching Branches<a class="headerlink" href="#switching-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>To switch branches use the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> as in:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>branchA
+</pre></div>
+</div>
+<p>To check your current branch use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
+</pre></div>
+</div>
+<p><img alt="Git Checkout" src="../../_images/5-gitcheckout.png" /></p>
+<p>Notice that <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> doesn’t say anything about being up-to-date, as before. This is because this branch only exists locally, not in our upstream GitHub fork.</p>
+</div>
+<div class="section" id="setting-up-a-remote-branch">
+<h2>Setting up a Remote Branch<a class="headerlink" href="#setting-up-a-remote-branch" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>While your clone lives locally on your laptop, a remote branch exists on your GitHub server. You have to tell GitHub about your local branch before these changes are reflected remotely in your upstream fork.</p>
+<p><img alt="pushing" src="../../_images/pushing.gif" />
+The above flowchart demonstrates pushing two new local commits (C3 and C4) to the corresponding remote branch. Before the push, the changes from these commits exist ONLY locally and are not represented on your upstream GitHub repository. After the push, everything is up-to-date.</p>
+<p>Before we push this branch upstream, let’s make some sample changes (like C3 or C4) by creating a new empty file, with the ending “.py”.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span>hello.py
+</pre></div>
+</div>
+<p><img alt="Git Status" src="../../_images/6-samplechange.png" /></p>
+<p>You can check that this file has been created by comparing an <code class="docutils literal notranslate"><span class="pre">ls</span></code> before and after this command, and also with a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> that will show your new untracked file.</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> your new file and check the status again.</p>
+<p><img alt="Git Add" src="../../_images/6a-gitadd.png" /></p>
+<p>Your new branch is now one commit ahead of your main branch. You can see this with a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log.</span></code></p>
+<p><img alt="Git Log" src="../../_images/6b-gitlog.png" /></p>
+<p>In a real workflow, you would continue making edits and git commits on a branch until you are ready to push up to GitHub.</p>
+<p>Try to do this with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p><img alt="Git Push" src="../../_images/6c-gitpush.png" /></p>
+<p>You will get an error message, “fatal: The current branch <code class="docutils literal notranslate"><span class="pre">branchA</span></code> has no upstream branch.” So what is the proper method for getting our local branch changes up to GitHub?</p>
+<p>First, we need to set an upstream branch to direct our local push to:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>branchA
+</pre></div>
+</div>
+<p>Thankfully, Git provided this command in the previous error message. If you cloned using HTTPS, you will be asked to enter your username and password, as described in <a class="reference external" href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub’s PAT Creation page</a>.</p>
+<p><img alt="Set Upstream" src="../../_images/6d-setupstream.png" /></p>
+<p>We can see that this worked by doing a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-a</span></code></p>
+<p>Notice the new branch called <code class="docutils literal notranslate"><span class="pre">remotes/origin/newbranch</span></code>. And when you do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> you’ll see that we are up to date with this new remote branch.</p>
+<p><img alt="Git Commit Status" src="../../_images/7-github-branchandstatus.png" /></p>
+<p>On future commits you will not have to repeat these steps, as your remote branch will already be established. Simply push with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> to have your remote branch reflect your future local changes.</p>
+</div>
+<div class="section" id="merging-branches">
+<h2>Merging Branches<a class="headerlink" href="#merging-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Merging is how you bring your split branches of a repository back together again.</p>
+<p>If you want to merge two <em>local</em> branches together, the steps are as follows:</p>
+<p>Let’s assume your two branches are named <code class="docutils literal notranslate"><span class="pre">branchA</span></code> and <code class="docutils literal notranslate"><span class="pre">branchB</span></code>, and you want your changes from <code class="docutils literal notranslate"><span class="pre">branchB</span></code> to now be reflected in <code class="docutils literal notranslate"><span class="pre">branchA</span></code></p>
+<ol class="arabic simple">
+<li><p>First checkout the branch you want to merge INTO:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>branchA
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Then execute a <code class="docutils literal notranslate"><span class="pre">merge</span></code>:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>merge<span class="w"> </span>branchB
+</pre></div>
+</div>
+<p>If there were competing edits in the 2 branches that Git cannot automatically resolve, a <strong>merge conflict</strong> occurs. This typically happens if edits are to the same line in different commits. Conflicts can be <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line">resolved in the command line</a> or in your GUI of choice (such as Visual Studio Code).</p>
+<p>A <strong>Pull Request</strong> is essentially a merge that happens on an upstream remote. We will continue this demonstration and cover the specifics of merging via a <a class="reference internal" href="github-pull-request.html"><span class="doc std std-doc">Pull Request</span></a> more thoroughly in the next section.</p>
+<p><img alt="PR" src="../../_images/pullrequest.gif" />
+The above flowchart demonstrates a simple Pull Request where the upstream main repository has accepted the changes from the feature branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature branch can now be safely deleted.</p>
+</div>
+<div class="section" id="deleting-branches">
+<h2>Deleting Branches<a class="headerlink" href="#deleting-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>After the feature you worked on has been completed and merged, you may want to delete your branch.
+<img alt="deletebranch" src="../../_images/deletingbranch.gif" /></p>
+<p>To do this locally, you must first switch back to <code class="docutils literal notranslate"><span class="pre">main</span></code> or any non-target branch. Then you can enter</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>&lt;branch&gt;
+</pre></div>
+</div>
+<p>for example</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>branchA
+</pre></div>
+</div>
+<p>To delete the branch remotely, type</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w"> </span>&lt;remote&gt;<span class="w"> </span>--delete<span class="w"> </span>&lt;branch&gt;.
+</pre></div>
+</div>
+<p>as in</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>jukent/branchA
+</pre></div>
+</div>
+</div>
+<div class="section" id="updating-your-branches">
+<h2>Updating Your Branches<a class="headerlink" href="#updating-your-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Previously, we showed you how to merge branches together, combining the changes from two different branches into one. Afterwards you deleted your feature branch <code class="docutils literal notranslate"><span class="pre">branchA</span></code>. Your local clone and fork of your <code class="docutils literal notranslate"><span class="pre">main</span></code> branch have now both need to pull from the upstream repository.</p>
+<p><img alt="pull" src="../../_images/pulling.gif" />
+The above flowchart demonstrates pulling in the upstream changes from Upstream Main after a Pull Request has been merged, first into your fork and then into your clone. Before continuing to work, with new commits on the feature branch, it is best to pull in the upstream changes.</p>
+<p>In this example, all of the changes to the branches were local and made by a single person, you. In a collaborative environment, other contributors may be making changes to their own feature branches (or main branch), which will ultimately be pushed up to the remote repository. Either way, your branches will become stale and need to be refreshed. The more time that passes by, the more likely this is to happen, particularly for an active GitHub repository. Here we show you how to sync your branches with the upstream branches.</p>
+<p>Once a Pull Request has been merged, you will find that these upstream changes are not automatically included in your fork or your other branches. In order to include the changes from the upstream main branch, you will need to do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>.</p>
+<p>First check if there are any upstream changes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
+</pre></div>
+</div>
+<p>Then, if there are no merge conflicts:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>pull
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> is a combination of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code>. That is it updates the remote tracking branches (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code>) AND updates your current branch with any new commits on the remote tracking branch (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code>).</p>
+<p>This same concept appplies to work in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository via Pull Requests. It is important for each author to do regular <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pulls</span></code> to stay up to date with each other’s contributions.</p>
+</div>
+<div class="section" id="complete-workflow">
+<h2>Complete Workflow<a class="headerlink" href="#complete-workflow" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>All in all your Git Branching workflow should resemble this flow:
+<img alt="gitworkflow" src="../../_images/gitworkflow.gif" /></p>
+<ol class="arabic simple">
+<li><p>Forking the upstream repository</p></li>
+<li><p>Creating a local clone of your upstream fork</p></li>
+<li><p>Creating a new branch</p></li>
+<li><p>Switching branches</p></li>
+<li><p>Making a commit</p></li>
+<li><p>Setting up a remote branch</p></li>
+<li><p>Merging branches via a PR</p></li>
+<li><p>Deleting branches</p></li>
+<li><p>Pulling from upstream</p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ul class="simple">
+<li><p>Git Branches allow you to independently work on different features of a project via differing revision histories of a repository.</p></li>
+<li><p>A useful workflow is to create a new branch locally, switch to it and set up a remote branch. During your revision, push to your upstream branch and pull from main as often as necessary. Then suggest your edits via a Pull Request and, if desired, delete your branch after the merge.</p></li>
+</ul>
+<div class="section" id="whats-next">
+<h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p><a class="reference internal" href="github-pull-request.html"><span class="doc std std-doc">Opening a Pull Request on GitHub</span></a></p>
+</div>
+</div>
+<div class="section" id="resources-and-references">
+<h2>Resources and references<a class="headerlink" href="#resources-and-references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.github.com/en">GitHub.com Help Documentation (GitHub Docs)</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=fYkPn0Nttlg">Xdev Python Tutorial Seminar Series - Github (Kevin Paul)</a></p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line">Resolving a Merge Conflict Using the Command Line (GitHub Docs)</a></p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./foundations/github"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="basic-git.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Basic Version Control with <em>git</em></p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="github-pull-request.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Opening a Pull Request on GitHub</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </div>
+          </div>
+        </main>
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+<footer class="footer">
+  <div class="container-fluid m-0 p-0">
+  
+    <div class="footer-item">
+    
+  <div class="container-fluid footer-logos">
+    <div class="container-xl">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="NCAR" src="../../_images/NCAR-contemp-logo-blue.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="Unidata" src="../../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="UAlbany" src="../../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-menu pt-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>About</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/about.html"
+              >About Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/preamble/how-to-use.html"
+              >How to use Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#the-project-pythia-team"
+              >The Project Team</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Give Feedback</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="mailto:projectpythia@ucar.edu">Email us!</a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/projectpythia.github.io/discussions"
+              >Project Pythia Discussions</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/pythia-foundations/discussions"
+              >Pythia Foundations Discussions</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Contribute</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/contributing.html"
+              >How to contribute to Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/appendix/how-to-contribute.html"
+              >How to contribute to Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/code_of_conduct.html"
+              >Our code of conduct</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#weekly-working-group-meetings"
+              >Join our weekly meetings</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/ProjectPythia"
+              >Join us on GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  
+    <div class="footer-item">
+      <div class="container-fluid footer-info">
+    <div class="container-xl">
+      <div class="d-flex justify-content-center">
+        <p class="py-1 m-0">
+            &copy;&nbsp;2022.
+        
+          By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
+        
+          Last updated on 21 March 2023.
+        </p>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-extra">
+  <div class="container">
+    <div class="row">
+      <p class="m-0">
+        <img
+          src="../../_static/footer-logo-nsf.png"
+          style="float: left; width: 60px; height: 60px; margin-right: 1rem"
+        />
+        This material is based upon work supported by the National Science
+        Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those
+        of the author(s) and do not necessarily reflect the views of the
+        National Science Foundation.
+      </p>
+    </div>
+  </div>
+</div>
+    </div>
+  
+  </div>
+</footer>
+  </body>
+</html>
