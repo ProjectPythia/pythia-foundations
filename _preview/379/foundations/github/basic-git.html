@@ -1,0 +1,1416 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Version Control with git &#8212; Pythia Foundations</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Git Branches" href="git-branches.html" />
+    <link rel="prev" title="Configuring Your GitHub Account" href="github-setup-advanced.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-G57FLM9M46"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-G57FLM9M46');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="132">
+    <div class="container-fluid" id="shim"></div>
+    <div class="container-fluid" id="banner"></div>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://projectpythia.org">
+  <img src="../../_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ProjectPythia" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/project_pythia" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" rel="noopener" target="_blank" title="YouTube">
+            <span><i class="fab fa-youtube-square"></i></span>
+            <label class="sr-only">YouTube</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    <div class="container-xl">
+      <div class="row">
+        
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   Pythia Foundations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/how-to-use.html">
+   How to Use This Book
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Foundational skills
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../why-python.html">
+   Why Python?
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../getting-started-python.html">
+   Getting Started with Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../quickstart.html">
+     Quickstart: Zero to Python
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../how-to-run-python.html">
+     Installing and Running Python
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../terminal.html">
+       Python in the Terminal
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jupyter.html">
+       Python in Jupyter
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../conda.html">
+       Installing and Managing Python with Conda
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../getting-started-jupyter.html">
+   Getting Started with Jupyter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jupyterlab.html">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../markdown.html">
+     Formatted Text in the Notebook with Markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../getting-started-github.html">
+   Getting Started with GitHub
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="what-is-github.html">
+     What is GitHub?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-repos.html">
+     GitHub Repositories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-issues.html">
+     Issues and Discussions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-cloning-forking.html">
+     Cloning and Forking a Repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-setup-advanced.html">
+     Configuring Your GitHub Account
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Basic Version Control with
+     <em>
+      git
+     </em>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="git-branches.html">
+     Git Branches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-pull-request.html">
+     Opening a Pull Request on GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="review-pr.html">
+     Reviewing Pull Requests
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-workflows.html">
+     GitHub Workflows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="contribute-to-pythia.html">
+     Contribute to Project Pythia via GitHub
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Core Scientific Python packages
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../core/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/numpy.html">
+   NumPy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/numpy/numpy-basics.html">
+     NumPy Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/numpy/intermediate-numpy.html">
+     Intermediate NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/numpy/numpy-broadcasting.html">
+     NumPy Broadcasting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/matplotlib.html">
+   Matplotlib
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/matplotlib/matplotlib-basics.html">
+     Matplotlib Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/matplotlib/histograms-piecharts-animation.html">
+     Histograms, Pie Charts, and Animations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/matplotlib/annotations-colorbars-layouts.html">
+     Annotations, Colorbars, and Advanced Layouts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/cartopy.html">
+   Cartopy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/cartopy/cartopy.html">
+     Introduction to Cartopy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/datetime.html">
+   Datetime
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/datetime/datetime.html">
+     Times and Dates in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/pandas.html">
+   Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/pandas/pandas.html">
+     Introduction to Pandas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/data-formats.html">
+   Data Formats
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/data-formats/netcdf-cf.html">
+     NetCDF and CF: The Basics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/xarray.html">
+   Xarray
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/xarray-intro.html">
+     Introduction to Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/computation-masking.html">
+     Computations and Masks with Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/enso-xarray.html">
+     Calculating ENSO with Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/dask-arrays-xarray.html">
+     Dask Arrays with Xarray
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/how-to-contribute.html">
+   Pythia Foundations Contributor’s Guide
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/template.html">
+     Project Pythia Notebook Template
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by <a href="https://projectpythia.org">Project Pythia</a>.<br><br>
+All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.<br><br>
+We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
+or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
+
+</div>
+
+</div>
+
+        
+
+        <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main"><div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/foundations/github/basic-git.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ProjectPythia/pythia-foundations"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Ffoundations/github/basic-git.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/foundations/github/basic-git.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> On this page
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-version-control-and-git">
+   About version control and git
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-version-control-and-why-should-we-care">
+     What is version control (and why should we care)?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-git">
+     What is git?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-is-not-github">
+       Git is not GitHub
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-little-history-and-nomenclature">
+       A little history and nomenclature
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-is-a-distributed-vcs">
+       Git is a distributed VCS
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inspect-a-git-repository-with-git-status">
+   Inspect a git repository with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     git
+    </span>
+    <span class="pre">
+     status
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-some-changes">
+   Make some changes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-new-feature-branch">
+     Create a new feature branch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#time-to-make-some-changes">
+     Time to make some changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stage-and-commit-our-changes">
+   Stage and commit our changes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#staging">
+     Staging
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#committing">
+     Committing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#going-back-in-time">
+   Going back in time
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#viewing-the-commit-history-with-git-log">
+     Viewing the commit history with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       git
+      </span>
+      <span class="pre">
+       log
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checking-out-a-previous-commit">
+     Checking out a previous commit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparing-versions">
+   Comparing versions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-across-commits">
+     Compare across commits
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-across-branches">
+     Compare across branches
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-commands-mini-reference">
+   Git commands mini-reference
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commands-we-used-in-this-tutorial">
+     Commands we used in this tutorial
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-other-git-commands-youll-want-to-know">
+     Some other git commands you’ll want to know
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#whats-next">
+     What’s Next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+          <div id="main-content" class="row">
+            <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+              
+              <div>
+                
+  <a class="reference internal image-reference" href="../../_images/Git-Logo-2Color.png"><img alt="Git Logo" src="../../_images/Git-Logo-2Color.png" style="width: 400px;" /></a>
+<div class="tex2jax_ignore mathjax_ignore section" id="basic-version-control-with-git">
+<h1>Basic Version Control with <em>git</em><a class="headerlink" href="#basic-version-control-with-git" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<div class="section" id="overview">
+<h2>Overview:<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ol class="arabic simple">
+<li><p>The need for version control</p></li>
+<li><p>Basic git usage</p></li>
+<li><p>Making your first git commit</p></li>
+<li><p>Viewing and comparing across the commit history</p></li>
+</ol>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concepts</p></th>
+<th class="head"><p>Importance</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="what-is-github.html"><span class="doc std std-doc">What is GitHub?</span></a></p></td>
+<td><p>Necessary</p></td>
+<td><p>GitHub user account required</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="github-repos.html"><span class="doc std std-doc">GitHub Repositories</span></a></p></td>
+<td><p>Necessary</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="github-issues.html"><span class="doc std std-doc">Issues and Discussions</span></a></p></td>
+<td><p>Recommended</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="github-cloning-forking.html"><span class="doc std std-doc">Cloning and Forking a Repository</span></a></p></td>
+<td><p>Recommended</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="github-setup-advanced.html"><span class="doc std std-doc">Configuring your GitHub Account</span></a></p></td>
+<td><p>Recommended</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>Time to learn</strong>: 45 minutes</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="about-version-control-and-git">
+<h2>About version control and git<a class="headerlink" href="#about-version-control-and-git" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="section" id="what-is-version-control-and-why-should-we-care">
+<h3>What is version control (and why should we care)?<a class="headerlink" href="#what-is-version-control-and-why-should-we-care" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Version_control">Version Control</a> refers generally to systems for managing changes to documents or files. Version control systems let us keep track of what changes were made to a file, when they were made, and by whom. If you’ve ever used “Tracked changes” on a Word document with multiple authors, then you’ve seen a form of version control in action (though NOT one that is well suited to working with computer code!).</p>
+<p>The need for version control is particularly acute when <em>working with computer code</em>, where small changes to the text can have huge impacts on the results of running the code.</p>
+<p>Do you have a directory somewhere on your machine right now with five different versions of a Python script like this?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">analysis_script_OLD</span><span class="o">.</span><span class="n">py</span>
+<span class="n">analysis_script</span><span class="o">.</span><span class="n">py</span>
+<span class="n">analysis_script_09122021</span><span class="o">.</span><span class="n">py</span>
+<span class="n">analysis_script_09122021_edit</span><span class="o">.</span><span class="n">py</span>
+<span class="n">analysis_script_NEW</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>A Version Control System (VCS) like git will replace this mess with a <em>well-ordered and labelled history</em> of edits that you can freely browse through, and will greatly simply collaborating with other people on writing new code.</p>
+</div>
+<div class="section" id="what-is-git">
+<h3>What is git?<a class="headerlink" href="#what-is-git" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<div class="section" id="git-is-not-github">
+<h4>Git is not GitHub<a class="headerlink" href="#git-is-not-github" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+<p>That’s the first thing to understand. GitHub is a web-based platform for hosting code and collaborating with other people. On the other hand, <strong>git is a command-line Version Control System (VCS)</strong> that you can download and install. It runs on your local computer as well as under the hood on GitHub. You need to understand something about version control with git in order to use many of GitHub’s collaboration features.</p>
+</div>
+<div class="section" id="a-little-history-and-nomenclature">
+<h4>A little history and nomenclature<a class="headerlink" href="#a-little-history-and-nomenclature" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+<p>Git has been around <a class="reference external" href="https://en.wikipedia.org/wiki/Git">since the mid-2000s</a>. It was originally written by Linus Torvalds specifically for use in development of the Linux kernel. Git is <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/what-is-github.html#free-and-open-source-software-foss">FOSS</a> and comes pre-installed on many Linux and Mac OS systems.</p>
+<p>There are many other VCSs out there. A few that you might encounter in scientific codebases include <a class="reference external" href="https://subversion.apache.org">Subversion</a>, <a class="reference external" href="https://www.mercurial-scm.org">Mercurial</a>, and <a class="reference external" href="http://cvs.nongnu.org">CVS</a>. However, git is overwhelmingly the VCS of choice for open-source projects in the Scientific Python ecosystem these days (as well as among software developers more generally).</p>
+<p>There is no universally agreed-upon meaning of the name “git”. From the <a class="reference external" href="https://github.com/git/git/blob/master/README.md">git project’s own README file</a>:</p>
+<blockquote>
+<div><p>The name “git” was given by Linus Torvalds when he wrote the very first version. He described the tool as “the stupid content tracker” and the name as (depending on your mood):</p>
+<ul class="simple">
+<li><p>random three-letter combination that is pronounceable, and not actually used by any common UNIX command. The fact that it is a mispronunciation of “get” may or may not be relevant.</p></li>
+<li><p>stupid. contemptible and despicable. simple. Take your pick from the dictionary of slang.</p></li>
+<li><p>“global information tracker”: you’re in a good mood, and it actually works for you. Angels sing, and a light suddenly fills the room.</p></li>
+<li><p>“goddamn idiotic truckload of sh*t”: when it breaks</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="git-is-a-distributed-vcs">
+<h4>Git is a distributed VCS<a class="headerlink" href="#git-is-a-distributed-vcs" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+<p>Aside from being free and widely deployed, an important distinguishing feature of git is that it is a distributed Version Control System. Essentially this means that every git directory on every computer is a complete independent repository with complete history.</p>
+<p>When we cloned the <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox"><code class="docutils literal notranslate"><span class="pre">github-sandbox</span></code></a> repository back in the <a class="reference internal" href="github-cloning-forking.html"><span class="doc std std-doc">Cloning and Forking</span></a> section, we not only copied the current repository files but also the entire revision history of the repo.</p>
+<p>In this section we are going to explore basic git usage <em>on our local computer</em>. Nothing that we do here is going to affect other copies of the repositories stored elsewhere. <em>So don’t worry about breaking anything!</em></p>
+<p>Later, we will explore how to collaborate on code repositories using GitHub. But in keep in mind the basic idea that <em>all git repos are equal and independent</em>! You will have separate copies of repos stored on your local machine and in your GitHub organization.</p>
+<p>Now that we are oriented, let’s dive into some basic git usage with the <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox"><code class="docutils literal notranslate"><span class="pre">github-sandbox</span></code></a> repository!</p>
+</div>
+</div>
+</div>
+<div class="section" id="inspect-a-git-repository-with-git-status">
+<h2>Inspect a git repository with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code><a class="headerlink" href="#inspect-a-git-repository-with-git-status" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>First, make sure you followed the steps in the <a class="reference internal" href="github-cloning-forking.html"><span class="doc std std-doc">Cloning a repository</span></a> lesson to make a clone of the <code class="docutils literal notranslate"><span class="pre">github-sandbox</span></code> repo on your local computer. Navigate to wherever you saved your copy of the repo.</p>
+<p>Now meet your new best friend:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
+</pre></div>
+</div>
+<p>which will always give you information about the current git repo. Try it! You should see something like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On<span class="w"> </span>branch<span class="w"> </span>main
+Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span>date<span class="w"> </span>with<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
+
+nothing<span class="w"> </span>to<span class="w"> </span>commit,<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span>clean
+</pre></div>
+</div>
+<p><strong>Two really important things here</strong>:</p>
+<ol class="arabic simple">
+<li><p>The first line show you the current <em>branch</em> (here called <code class="docutils literal notranslate"><span class="pre">main</span></code>). We’ll cover branching in more detail in the <a class="reference internal" href="git-branches.html"><span class="doc std std-doc">next lesson</span></a>, but basically each branch is a completely independent version with its own history. When we start making changes to files, we’ll have to pay attention to which branch we’re currently on.</p></li>
+<li><p>The last line <code class="docutils literal notranslate"><span class="pre">nothing</span> <span class="pre">to</span> <span class="pre">commit,</span> <span class="pre">working</span> <span class="pre">tree</span> <span class="pre">clean</span></code> tells us that we haven’t made any changes to files.</p></li>
+</ol>
+<p>You’ll want to use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
+</pre></div>
+</div>
+<p>frequently to keep track of things in your repos.</p>
+</div>
+<div class="section" id="make-some-changes">
+<h2>Make some changes<a class="headerlink" href="#make-some-changes" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Version control is all about keeping track of changes made to files. So let’s make some changes!</p>
+<p>You may have noticed that the file <code class="docutils literal notranslate"><span class="pre">sample.txt</span></code> in the <code class="docutils literal notranslate"><span class="pre">github-sandbox</span></code> repository contains a typo. Here we’re going to fix the error and save it locally.</p>
+<div class="section" id="create-a-new-feature-branch">
+<h3>Create a new feature branch<a class="headerlink" href="#create-a-new-feature-branch" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Before we start editing files, the first thing to do is to <em>create a new branch</em> where we can safely make any changes we want.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>While there’s nothing stopping us from making changes directly to the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch, it’s often best to avoid this! The reason is that it makes collaboration trickier. See the <a class="reference internal" href="github-pull-request.html"><span class="doc std std-doc">lesson on Pull Requests</span></a>.</p>
+</div>
+<p>Let’s create and checkout a new branch in one line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>fix-typo
+</pre></div>
+</div>
+<p>Now try your new best friend again:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
+</pre></div>
+</div>
+<p>You should see something like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On<span class="w"> </span>branch<span class="w"> </span>fix-typo
+nothing<span class="w"> </span>to<span class="w"> </span>commit,<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span>clean
+</pre></div>
+</div>
+<p>This tells us that we have switched over to a new branch called <code class="docutils literal notranslate"><span class="pre">fix-typo</span></code>, but there are not (yet) any changes to the files in the repo.</p>
+</div>
+<div class="section" id="time-to-make-some-changes">
+<h3>Time to make some changes<a class="headerlink" href="#time-to-make-some-changes" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Now do the following:</p>
+<ul class="simple">
+<li><p>Using your favorite text editor, open the file <code class="docutils literal notranslate"><span class="pre">github-sandbox/sample.txt</span></code>.</p></li>
+<li><p>Replace the word <code class="docutils literal notranslate"><span class="pre">Fxing</span></code> with the much more satisfying <code class="docutils literal notranslate"><span class="pre">Fixing</span></code>.</p></li>
+<li><p>Save the changes.</p></li>
+<li><p>Revisit your new best friend <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>. It should now show something like this:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On<span class="w"> </span>branch<span class="w"> </span>fix-typo
+Changes<span class="w"> </span>not<span class="w"> </span>staged<span class="w"> </span><span class="k">for</span><span class="w"> </span>commit:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>update<span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git restore &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>discard<span class="w"> </span>changes<span class="w"> </span><span class="k">in</span><span class="w"> </span>working<span class="w"> </span>directory<span class="o">)</span>
+<span class="w">	</span>modified:<span class="w">   </span>sample.txt
+
+no<span class="w"> </span>changes<span class="w"> </span>added<span class="w"> </span>to<span class="w"> </span>commit<span class="w"> </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>and/or<span class="w"> </span><span class="s2">&quot;git commit -a&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Here <code class="docutils literal notranslate"><span class="pre">git</span></code> is telling us that the file <code class="docutils literal notranslate"><span class="pre">sample.txt</span></code> does <em>not</em> match what’s in the repository.</p>
+<p>Of course we know what changed in that file because we just finished editing it. But here’s a quick and easy way to see the changes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>diff
+</pre></div>
+</div>
+<p>which should show you something like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>diff<span class="w"> </span>--git<span class="w"> </span>a/sample.txt<span class="w"> </span>b/sample.txt
+index<span class="w"> </span>4bc074c..edc31c0<span class="w"> </span><span class="m">100644</span>
+---<span class="w"> </span>a/sample.txt
++++<span class="w"> </span>b/sample.txt
+@@<span class="w"> </span>-4,6<span class="w"> </span>+4,6<span class="w"> </span>@@<span class="w"> </span>We<span class="w"> </span>can<span class="w"> </span>use<span class="w"> </span>it<span class="w"> </span>to<span class="w"> </span>demonstrate<span class="w"> </span>making<span class="w"> </span>pull<span class="w"> </span>requests<span class="w"> </span>or<span class="w"> </span>raising<span class="w"> </span>issues<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>GitHub
+
+<span class="w"> </span>One<span class="w"> </span>good<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>contribute<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>project<span class="w"> </span>is<span class="w"> </span>to<span class="w"> </span>make<span class="w"> </span>additions<span class="w"> </span>and/or<span class="w"> </span>edits<span class="w"> </span>to<span class="w"> </span>documentation!
+
+-Fxing<span class="w"> </span>something<span class="w"> </span>as<span class="w"> </span>simple<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>typo<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>great<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>started<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>contributor!
++Fixing<span class="w"> </span>something<span class="w"> </span>as<span class="w"> </span>simple<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>typo<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>great<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>started<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>contributor!
+
+<span class="w"> </span>Or,<span class="w"> </span>consider<span class="w"> </span>adding<span class="w"> </span>some<span class="w"> </span>more<span class="w"> </span>content<span class="w"> </span>to<span class="w"> </span>this<span class="w"> </span>file.
+</pre></div>
+</div>
+<p>We can see here that <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> finds the line(s) where our current file differs from what’s in the repo, along with a few lines before and after for context.</p>
+<p>The next step is to add our changes to the “official” history of our repo. This is a two-step process (staging and committing).</p>
+</div>
+</div>
+<div class="section" id="stage-and-commit-our-changes">
+<h2>Stage and commit our changes<a class="headerlink" href="#stage-and-commit-our-changes" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">commit</span></code> is the centerpiece of the git workflow. Each commit is a specific set of changes, additions, and/or deletions of files that gets added to the official history of the repository.</p>
+<div class="section" id="staging">
+<h3>Staging<a class="headerlink" href="#staging" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Before we make a commit, we must first stage our changes. Think of staging simply as “getting ready to commit”. The two-step process can help avoid accidentally committing something that wasn’t ready.</p>
+<p>To stage our changes, we use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>sample.txt
+</pre></div>
+</div>
+<p>and now our new best friend tells us</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On<span class="w"> </span>branch<span class="w"> </span>fix-typo
+Changes<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>committed:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git restore --staged &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>unstage<span class="o">)</span>
+<span class="w">	</span>modified:<span class="w">   </span>sample.txt
+</pre></div>
+</div>
+<p>Now we see that all-important line <code class="docutils literal notranslate"><span class="pre">Changes</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">committed</span></code>, telling us the contents of our staging area.</p>
+<p>If you made a mistake (e.g., staged the wrong file), you can always unstage using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">restore</span></code> as shown in the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> output. Nothing is permanent until we commit!</p>
+<p>(And if you accidentally commit the wrong thing? Don’t worry, you can always “go back in time” to previous commits – see below!)</p>
+</div>
+<div class="section" id="committing">
+<h3>Committing<a class="headerlink" href="#committing" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>It’s time to make a commitment. We can now permanently add our edit to the history of our <code class="docutils literal notranslate"><span class="pre">fix-typo</span></code> branch by doing this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;Fix the typo&#39;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Every commit should have a “message” that explains briefly what the commit is for. Here we set the commit message with the <code class="docutils literal notranslate"><span class="pre">-m</span></code> flag and chose some descriptive text. Note, it’s critical to have those quotes around <code class="docutils literal notranslate"><span class="pre">'Fix</span> <span class="pre">the</span> <span class="pre">typo'</span></code>. Otherwise the command shell will misinterpret what you are trying to do.</p>
+</div>
+<p>Now when we do <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> we see</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>On<span class="w"> </span>branch<span class="w"> </span>fix-typo
+nothing<span class="w"> </span>to<span class="w"> </span>commit,<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span>clean
+</pre></div>
+</div>
+<p>And we’re back to a clean state! We have now added a new permanent change to the history of our repo (or more specifically, to this <em>branch</em> of the repo).</p>
+</div>
+</div>
+<div class="section" id="going-back-in-time">
+<h2>Going back in time<a class="headerlink" href="#going-back-in-time" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Each commit is essentially a snapshot in time of the state of the repo. So how can we look back on that history, or revert back to a previous version of a file?</p>
+<div class="section" id="viewing-the-commit-history-with-git-log">
+<h3>Viewing the commit history with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code><a class="headerlink" href="#viewing-the-commit-history-with-git-log" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>A simple way to see this history of the current branch is this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>log
+</pre></div>
+</div>
+<p>You’ll see something like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>commit<span class="w"> </span>7dca0292467e4bbd73643556f83fd1c52b5c113c<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>fix-typo<span class="o">)</span>
+Author:<span class="w"> </span>Brian<span class="w"> </span>Rose<span class="w"> </span>&lt;brose@albany.edu&gt;
+Date:<span class="w">   </span>Mon<span class="w"> </span>Jan<span class="w"> </span><span class="m">17</span><span class="w"> </span><span class="m">11</span>:31:49<span class="w"> </span><span class="m">2022</span><span class="w"> </span>-0500
+
+<span class="w">    </span>Fix<span class="w"> </span>the<span class="w"> </span>typo
+
+commit<span class="w"> </span>35fcbd991f911e170df550db58f74a082ba18b50<span class="w"> </span><span class="o">(</span>origin/main,<span class="w"> </span>origin/HEAD,<span class="w"> </span>main<span class="o">)</span>
+Author:<span class="w"> </span>Kevin<span class="w"> </span>Tyle<span class="w"> </span>&lt;ktyle@albany.edu&gt;
+Date:<span class="w">   </span>Thu<span class="w"> </span>Jan<span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">11</span>:29:40<span class="w"> </span><span class="m">2022</span><span class="w"> </span>-0500
+
+<span class="w">    </span>Close<span class="w"> </span>docstring<span class="w"> </span>quote<span class="w"> </span>on<span class="w"> </span>sample.py
+
+commit<span class="w"> </span>e56ea58071f150ec00904a50341a672456cbcb8f
+Author:<span class="w"> </span>Kevin<span class="w"> </span>Tyle<span class="w"> </span>&lt;ktyle@albany.edu&gt;
+Date:<span class="w">   </span>Tue<span class="w"> </span>Jan<span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">14</span>:15:31<span class="w"> </span><span class="m">2022</span><span class="w"> </span>-0500
+
+<span class="w">    </span>Create<span class="w"> </span>sample.md
+
+commit<span class="w"> </span>f98d05e312d19a84b74c45402a2904ab94d86e45
+Author:<span class="w"> </span>Kevin<span class="w"> </span>Tyle<span class="w"> </span>&lt;ktyle@albany.edu&gt;
+Date:<span class="w">   </span>Tue<span class="w"> </span>Jan<span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">13</span>:58:09<span class="w"> </span><span class="m">2022</span><span class="w"> </span>-0500
+
+<span class="w">    </span>Create<span class="w"> </span>sample.py
+</pre></div>
+</div>
+<p>which shows the last few commits on this branch, including the commit number, author, timestamp, and commit message. You can page down to see the rest of the history
+or just press <code class="docutils literal notranslate"><span class="pre">Q</span></code> to exit <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code>!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Every commit has a unique hexadecimal checksum code like <code class="docutils literal notranslate"><span class="pre">7dca0292467e4bbd73643556f83fd1c52b5c113c</span></code>. Your history will look a little different from the above!</p>
+</div>
+</div>
+<div class="section" id="checking-out-a-previous-commit">
+<h3>Checking out a previous commit<a class="headerlink" href="#checking-out-a-previous-commit" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Let’s say you want to retrieve the file <code class="docutils literal notranslate"><span class="pre">sample.txt</span></code> from the previous commit. Two possible reasons why:</p>
+<ol class="arabic simple">
+<li><p>You just want to take a quick look at something in the previous commit, but then go back to the current version. That’s what we’ll do here.</p></li>
+<li><p>Maybe you don’t like the most recent commit and want to do some new edits <em>starting from the previous commit</em> – in effect, undoing the most recent commit and going back in time. The simplest way to do this is to <em>create a new branch</em> starting from the previous commit. We’ll cover branches more fully in the next lesson.</p></li>
+</ol>
+<p>To retrieve the previous commit, just use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> and the unique number code which you can just copy and paste from the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> output:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>35fcbd991f911e170df550db58f74a082ba18b50
+</pre></div>
+</div>
+<p>You may see output that looks like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Note:<span class="w"> </span>switching<span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;35fcbd991f911e170df550db58f74a082ba18b50&#39;</span>.
+
+You<span class="w"> </span>are<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s1">&#39;detached HEAD&#39;</span><span class="w"> </span>state.<span class="w"> </span>You<span class="w"> </span>can<span class="w"> </span>look<span class="w"> </span>around,<span class="w"> </span>make<span class="w"> </span>experimental
+changes<span class="w"> </span>and<span class="w"> </span>commit<span class="w"> </span>them,<span class="w"> </span>and<span class="w"> </span>you<span class="w"> </span>can<span class="w"> </span>discard<span class="w"> </span>any<span class="w"> </span>commits<span class="w"> </span>you<span class="w"> </span>make<span class="w"> </span><span class="k">in</span><span class="w"> </span>this
+state<span class="w"> </span>without<span class="w"> </span>impacting<span class="w"> </span>any<span class="w"> </span>branches<span class="w"> </span>by<span class="w"> </span>switching<span class="w"> </span>back<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>branch.
+
+If<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>create<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>branch<span class="w"> </span>to<span class="w"> </span>retain<span class="w"> </span>commits<span class="w"> </span>you<span class="w"> </span>create,<span class="w"> </span>you<span class="w"> </span>may
+<span class="k">do</span><span class="w"> </span>so<span class="w"> </span><span class="o">(</span>now<span class="w"> </span>or<span class="w"> </span>later<span class="o">)</span><span class="w"> </span>by<span class="w"> </span>using<span class="w"> </span>-c<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>switch<span class="w"> </span>command.<span class="w"> </span>Example:
+
+<span class="w">  </span>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>&lt;new-branch-name&gt;
+
+Or<span class="w"> </span>undo<span class="w"> </span>this<span class="w"> </span>operation<span class="w"> </span>with:
+
+<span class="w">  </span>git<span class="w"> </span>switch<span class="w"> </span>-
+
+Turn<span class="w"> </span>off<span class="w"> </span>this<span class="w"> </span>advice<span class="w"> </span>by<span class="w"> </span>setting<span class="w"> </span>config<span class="w"> </span>variable<span class="w"> </span>advice.detachedHead<span class="w"> </span>to<span class="w"> </span><span class="nb">false</span>
+
+HEAD<span class="w"> </span>is<span class="w"> </span>now<span class="w"> </span>at<span class="w"> </span>35fcbd9<span class="w"> </span>Close<span class="w"> </span>docstring<span class="w"> </span>quote<span class="w"> </span>on<span class="w"> </span>sample.py
+</pre></div>
+</div>
+<p>(the details may vary depending on what version of git you are running).</p>
+<p>By <code class="docutils literal notranslate"><span class="pre">detached</span> <span class="pre">HEAD</span></code>, git is telling us that we are NOT on the most recent commit in this branch.</p>
+<p>If you inspect <code class="docutils literal notranslate"><span class="pre">sample.txt</span></code> in your editor, you will see that the typo <code class="docutils literal notranslate"><span class="pre">Fxing</span></code> is back!</p>
+<p>As the git message above is reminding us, it’s possible to create an entirely new branch with changes that we make from this point in the history using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">switch</span> <span class="pre">-c</span></code>. But for now, let’s just go back to the most recent commit on our <code class="docutils literal notranslate"><span class="pre">fix-typo</span></code> branch:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>fix-typo
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="comparing-versions">
+<h2>Comparing versions<a class="headerlink" href="#comparing-versions" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>We already saw one use of the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> command to look at changes in a repo. By default <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> will compare the currently saved files against the most recent commit.</p>
+<p>We can also use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> to compare across commits within a branch, or between two different branches. Here are some examples.</p>
+<div class="section" id="compare-across-commits">
+<h3>Compare across commits<a class="headerlink" href="#compare-across-commits" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>To compare across any commits in our history, we again use the unique commit checksum that we listed with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>diff<span class="w"> </span>HEAD<span class="w"> </span>35fcbd991f911e170df550db58f74a082ba18b50
+</pre></div>
+</div>
+<p>gives</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>diff<span class="w"> </span>--git<span class="w"> </span>a/sample.txt<span class="w"> </span>b/sample.txt
+index<span class="w"> </span>edc31c0..4bc074c<span class="w"> </span><span class="m">100644</span>
+---<span class="w"> </span>a/sample.txt
++++<span class="w"> </span>b/sample.txt
+@@<span class="w"> </span>-4,6<span class="w"> </span>+4,6<span class="w"> </span>@@<span class="w"> </span>We<span class="w"> </span>can<span class="w"> </span>use<span class="w"> </span>it<span class="w"> </span>to<span class="w"> </span>demonstrate<span class="w"> </span>making<span class="w"> </span>pull<span class="w"> </span>requests<span class="w"> </span>or<span class="w"> </span>raising<span class="w"> </span>issues<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>GitHub
+
+<span class="w"> </span>One<span class="w"> </span>good<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>contribute<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>project<span class="w"> </span>is<span class="w"> </span>to<span class="w"> </span>make<span class="w"> </span>additions<span class="w"> </span>and/or<span class="w"> </span>edits<span class="w"> </span>to<span class="w"> </span>documentation!
+
+-Fixing<span class="w"> </span>something<span class="w"> </span>as<span class="w"> </span>simple<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>typo<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>great<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>started<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>contributor!
++Fxing<span class="w"> </span>something<span class="w"> </span>as<span class="w"> </span>simple<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>typo<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>great<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>started<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>contributor!
+
+<span class="w"> </span>Or,<span class="w"> </span>consider<span class="w"> </span>adding<span class="w"> </span>some<span class="w"> </span>more<span class="w"> </span>content<span class="w"> </span>to<span class="w"> </span>this<span class="w"> </span>file.
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here we use <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> as an alias for the <em>most recent commit</em>.</p>
+</div>
+</div>
+<div class="section" id="compare-across-branches">
+<h3>Compare across branches<a class="headerlink" href="#compare-across-branches" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Recall that, since we have done all our editing in a new branch, the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch still has the typo!</p>
+<p>We can see this with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> using the <code class="docutils literal notranslate"><span class="pre">..</span></code> notation to compare two branches:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>diff<span class="w"> </span>main..fix-typo
+</pre></div>
+</div>
+<p>The output is very similar:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>diff<span class="w"> </span>--git<span class="w"> </span>a/sample.txt<span class="w"> </span>b/sample.txt
+index<span class="w"> </span>4bc074c..edc31c0<span class="w"> </span><span class="m">100644</span>
+---<span class="w"> </span>a/sample.txt
++++<span class="w"> </span>b/sample.txt
+@@<span class="w"> </span>-4,6<span class="w"> </span>+4,6<span class="w"> </span>@@<span class="w"> </span>We<span class="w"> </span>can<span class="w"> </span>use<span class="w"> </span>it<span class="w"> </span>to<span class="w"> </span>demonstrate<span class="w"> </span>making<span class="w"> </span>pull<span class="w"> </span>requests<span class="w"> </span>or<span class="w"> </span>raising<span class="w"> </span>issues<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>GitHub
+
+<span class="w"> </span>One<span class="w"> </span>good<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>contribute<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>project<span class="w"> </span>is<span class="w"> </span>to<span class="w"> </span>make<span class="w"> </span>additions<span class="w"> </span>and/or<span class="w"> </span>edits<span class="w"> </span>to<span class="w"> </span>documentation!
+
+-Fxing<span class="w"> </span>something<span class="w"> </span>as<span class="w"> </span>simple<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>typo<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>great<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>started<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>contributor!
++Fixing<span class="w"> </span>something<span class="w"> </span>as<span class="w"> </span>simple<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>typo<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>great<span class="w"> </span>way<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>started<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>contributor!
+
+<span class="w"> </span>Or,<span class="w"> </span>consider<span class="w"> </span>adding<span class="w"> </span>some<span class="w"> </span>more<span class="w"> </span>content<span class="w"> </span>to<span class="w"> </span>this<span class="w"> </span>file.
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> command is a powerful comparison tool (and maybe your second new best friend). For many more detail on its usage, see the <a class="reference external" href="https://git-scm.com/docs/git-diff">git documentation</a>.</p>
+</div>
+</div>
+<div class="section" id="git-commands-mini-reference">
+<h2>Git commands mini-reference<a class="headerlink" href="#git-commands-mini-reference" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="section" id="commands-we-used-in-this-tutorial">
+<h3>Commands we used in this tutorial<a class="headerlink" href="#commands-we-used-in-this-tutorial" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>: see what branch we’re on and what state our repo is in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code>: switch between branches (use the <code class="docutils literal notranslate"><span class="pre">-b</span></code> flag to create a new branch and check it out)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code>: compare files between current version and last commit (default), between two commits, or between two branches.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>: stage a file for a commit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>: create a new commit with the staged files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code>: see the commit history of our branch.</p></li>
+</ul>
+</div>
+<div class="section" id="some-other-git-commands-youll-want-to-know">
+<h3>Some other git commands you’ll want to know<a class="headerlink" href="#some-other-git-commands-youll-want-to-know" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>We’ll cover many of these in subsequent sections.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code>: list all the branch in the repo</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">mv</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rm</span></code>: git-enhanced versions of the <code class="docutils literal notranslate"><span class="pre">mv</span></code> (move file) and <code class="docutils literal notranslate"><span class="pre">rm</span></code> (remove file) commands. These will automatically stage the changes in your current branch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code>: merge changes from one branch into another.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>: export or input changes between your local branch and a remote repository (e.g. hosted on GitHub).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code>: create a brand-new repo in the current directory</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ul class="simple">
+<li><p>Version control is an important tool for working with code files (or anything that is saved as plain text).</p></li>
+<li><p>git is the most common version control software in use today.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> is your new best friend because it gives you a quick view into what’s going on in a git repository.</p></li>
+<li><p>Every branch of a git repository has a history which is a series of numbered and labelled commits.</p></li>
+<li><p>You can view this history with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code></p></li>
+<li><p>Making a new commit is a two-step process with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p></li>
+<li><p>Commits are non-destructive, meaning you can always go back in time to previous commits.</p></li>
+</ul>
+<div class="section" id="whats-next">
+<h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Next we’ll explore the concept of branching in git repositories in more detail, including how to merge changes made on one branch into another branch.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://git-scm.com/doc">Official git documentation</a></p></li>
+<li><p><a class="reference external" href="https://swcarpentry.github.io/git-novice/">The Software Carpentries beginner lessons on git</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./foundations/github"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="github-setup-advanced.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Configuring Your GitHub Account</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="git-branches.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Git Branches</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </div>
+          </div>
+        </main>
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+<footer class="footer">
+  <div class="container-fluid m-0 p-0">
+  
+    <div class="footer-item">
+    
+  <div class="container-fluid footer-logos">
+    <div class="container-xl">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="NCAR" src="../../_images/NCAR-contemp-logo-blue.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="Unidata" src="../../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="UAlbany" src="../../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-menu pt-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>About</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/about.html"
+              >About Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/preamble/how-to-use.html"
+              >How to use Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#the-project-pythia-team"
+              >The Project Team</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Give Feedback</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="mailto:projectpythia@ucar.edu">Email us!</a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/projectpythia.github.io/discussions"
+              >Project Pythia Discussions</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/pythia-foundations/discussions"
+              >Pythia Foundations Discussions</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Contribute</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/contributing.html"
+              >How to contribute to Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/appendix/how-to-contribute.html"
+              >How to contribute to Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/code_of_conduct.html"
+              >Our code of conduct</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#weekly-working-group-meetings"
+              >Join our weekly meetings</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/ProjectPythia"
+              >Join us on GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  
+    <div class="footer-item">
+      <div class="container-fluid footer-info">
+    <div class="container-xl">
+      <div class="d-flex justify-content-center">
+        <p class="py-1 m-0">
+            &copy;&nbsp;2022.
+        
+          By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
+        
+          Last updated on 21 March 2023.
+        </p>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-extra">
+  <div class="container">
+    <div class="row">
+      <p class="m-0">
+        <img
+          src="../../_static/footer-logo-nsf.png"
+          style="float: left; width: 60px; height: 60px; margin-right: 1rem"
+        />
+        This material is based upon work supported by the National Science
+        Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those
+        of the author(s) and do not necessarily reflect the views of the
+        National Science Foundation.
+      </p>
+    </div>
+  </div>
+</div>
+    </div>
+  
+  </div>
+</footer>
+  </body>
+</html>

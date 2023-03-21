@@ -1,0 +1,1098 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloning and Forking a Repository &#8212; Pythia Foundations</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Configuring Your GitHub Account" href="github-setup-advanced.html" />
+    <link rel="prev" title="Issues and Discussions" href="github-issues.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-G57FLM9M46"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-G57FLM9M46');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="132">
+    <div class="container-fluid" id="shim"></div>
+    <div class="container-fluid" id="banner"></div>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://projectpythia.org">
+  <img src="../../_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ProjectPythia" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/project_pythia" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" rel="noopener" target="_blank" title="YouTube">
+            <span><i class="fab fa-youtube-square"></i></span>
+            <label class="sr-only">YouTube</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    <div class="container-xl">
+      <div class="row">
+        
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   Pythia Foundations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/how-to-use.html">
+   How to Use This Book
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Foundational skills
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../why-python.html">
+   Why Python?
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../getting-started-python.html">
+   Getting Started with Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../quickstart.html">
+     Quickstart: Zero to Python
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../how-to-run-python.html">
+     Installing and Running Python
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../terminal.html">
+       Python in the Terminal
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jupyter.html">
+       Python in Jupyter
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../conda.html">
+       Installing and Managing Python with Conda
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../getting-started-jupyter.html">
+   Getting Started with Jupyter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jupyterlab.html">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../markdown.html">
+     Formatted Text in the Notebook with Markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../getting-started-github.html">
+   Getting Started with GitHub
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="what-is-github.html">
+     What is GitHub?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-repos.html">
+     GitHub Repositories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-issues.html">
+     Issues and Discussions
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Cloning and Forking a Repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-setup-advanced.html">
+     Configuring Your GitHub Account
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="basic-git.html">
+     Basic Version Control with
+     <em>
+      git
+     </em>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="git-branches.html">
+     Git Branches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-pull-request.html">
+     Opening a Pull Request on GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="review-pr.html">
+     Reviewing Pull Requests
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-workflows.html">
+     GitHub Workflows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="contribute-to-pythia.html">
+     Contribute to Project Pythia via GitHub
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Core Scientific Python packages
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../core/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/numpy.html">
+   NumPy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/numpy/numpy-basics.html">
+     NumPy Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/numpy/intermediate-numpy.html">
+     Intermediate NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/numpy/numpy-broadcasting.html">
+     NumPy Broadcasting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/matplotlib.html">
+   Matplotlib
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/matplotlib/matplotlib-basics.html">
+     Matplotlib Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/matplotlib/histograms-piecharts-animation.html">
+     Histograms, Pie Charts, and Animations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/matplotlib/annotations-colorbars-layouts.html">
+     Annotations, Colorbars, and Advanced Layouts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/cartopy.html">
+   Cartopy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/cartopy/cartopy.html">
+     Introduction to Cartopy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/datetime.html">
+   Datetime
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/datetime/datetime.html">
+     Times and Dates in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/pandas.html">
+   Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/pandas/pandas.html">
+     Introduction to Pandas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/data-formats.html">
+   Data Formats
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/data-formats/netcdf-cf.html">
+     NetCDF and CF: The Basics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/xarray.html">
+   Xarray
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/xarray-intro.html">
+     Introduction to Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/computation-masking.html">
+     Computations and Masks with Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/enso-xarray.html">
+     Calculating ENSO with Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/dask-arrays-xarray.html">
+     Dask Arrays with Xarray
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/how-to-contribute.html">
+   Pythia Foundations Contributor’s Guide
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/template.html">
+     Project Pythia Notebook Template
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by <a href="https://projectpythia.org">Project Pythia</a>.<br><br>
+All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.<br><br>
+We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
+or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
+
+</div>
+
+</div>
+
+        
+
+        <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main"><div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/foundations/github/github-cloning-forking.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ProjectPythia/pythia-foundations"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Ffoundations/github/github-cloning-forking.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/foundations/github/github-cloning-forking.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> On this page
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cloning-and-forking">
+   Cloning and forking
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cloning-a-repository">
+   Cloning a repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#forking-a-repository">
+   Forking a repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#things-to-try">
+   Things to try
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#whats-next">
+     What’s Next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+          <div id="main-content" class="row">
+            <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+              
+              <div>
+                
+  <a class="reference internal image-reference" href="../../_images/GitHub-logo.png"><img alt="GitHub Logo" src="../../_images/GitHub-logo.png" style="width: 400px;" /></a>
+<div class="tex2jax_ignore mathjax_ignore section" id="cloning-and-forking-a-repository">
+<h1>Cloning and Forking a Repository<a class="headerlink" href="#cloning-and-forking-a-repository" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<div class="section" id="overview">
+<h2>Overview:<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ol class="arabic simple">
+<li><p>Cloning and forking a git repository</p></li>
+<li><p>Cloning a repository</p></li>
+<li><p>Forking a repository</p></li>
+</ol>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concepts</p></th>
+<th class="head"><p>Importance</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="what-is-github.html"><span class="doc std std-doc">What is GitHub?</span></a></p></td>
+<td><p>Necessary</p></td>
+<td><p>GitHub user account required</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="github-repos.html"><span class="doc std std-doc">GitHub Repositories</span></a></p></td>
+<td><p>Necessary</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="github-issues.html"><span class="doc std std-doc">Issues and Discussions</span></a></p></td>
+<td><p>Recommended</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Command-line shell</p></td>
+<td><p>Helpful</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>Time to learn</strong>: 30 minutes</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="cloning-and-forking">
+<h2>Cloning and forking<a class="headerlink" href="#cloning-and-forking" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p><em>Cloning</em> and <em>forking</em> are two related terms in the GitHub vernacular
+that, unfortunately, are not always used consistently throughout
+the <em>web-o-sphere</em>. In Project Pythia we use the term <em>clone</em> to mean
+making a <strong>local</strong> copy of a <strong>remote</strong> repository; the source for
+the copy is a remote repo, and the destination for the copy is your
+local laptop/desktop. When working with GitHub, a <em>fork</em>, on the
+other hand, creates a copy of a GitHub repository on GitHub. I.e.
+both the source and the destination of the <em>fork</em> operations are
+hosted in the cloud on GitHub. Forking is performed via your GitHub
+account. While the forked repository may be owned by anyone, the
+newly created repository will be owned by you. Cloning, on the
+other hand, is performed using a Git command. Naturally, since the
+destination of the clone operation is your local computer, you will
+own the cloned contents. In either case, whether you clone or fork,
+any changes you make to the newly created repository will not impact
+the original without taking explicit action (e.g. performing a
+<em>push</em> or submitting a <em>Pull Request</em>, the topics of later sections
+in this guide).</p>
+<p>Cloning and forking are often used together (more on this later).
+The illustration below demonstrates the operation of a Fork of a
+remote repository (UPSTREAM), followed by a clone of the newly
+created ORIGIN.</p>
+<p><img alt="clone-and-fork" src="../../_images/github-clone-fork.png" /></p>
+</div>
+<div class="section" id="cloning-a-repository">
+<h2>Cloning a repository<a class="headerlink" href="#cloning-a-repository" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Cloning is ideal for the following scenarios:</p>
+<ol class="arabic simple">
+<li><p>You wish to download, build, and install the latest version of a software package.</p></li>
+<li><p>You would like to experiment with a repository on your local computer, but do not desire to maintain a separate copy of it (termed a <em>fork</em>, to be covered later in this lesson) on your GitHub account.</p></li>
+<li><p>You have previously <em>forked</em> a repository to your own GitHub account, and now wish to make changes to it for possible incorporation into the original repo, via a <em>Pull Request</em>.</p></li>
+</ol>
+<p>Let’s consider the 2nd scenario. Say you wish to copy a GitHub repository to a computer you have access to (which could be your own computer, or one you have access to at work or school).</p>
+<p>We’ll use a very basic repo that is part of the <a class="reference external" href="https://github.com/ProjectPythia">Project Pythia organization</a> as our example.</p>
+<p>First, point your browser to <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">https://github.com/ProjectPythia/github-sandbox</a>:</p>
+<img alt="SandboxRepo" src="../../_images/GitHub_SandboxRepo.png" />
+<hr class="docutils" />
+<p>We see that in the repository, there exists five files. Above the list of files is this row:</p>
+<img alt="RepoTools" src="../../_images/GitHub_RepoTools.png" />
+<hr class="docutils" />
+<p>Click on the green <strong>Code</strong> button to the right:</p>
+<img alt="CodeClone" src="../../_images/GitHub_CodeClone.png" />
+<hr class="docutils" />
+<p>Select the <strong>HTTPS</strong> option, and click on the copy-to-clipboard icon:</p>
+<img alt="CodeCloneHTTPS" src="../../_images/GitHub_CodeCloneHTTPS.png" />
+<hr class="docutils" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This link points to where the repository “lives” on GitHub. We will use the term <strong>origin</strong> to refer to this location.</p>
+</div>
+<p>Now, open up a terminal on your local computer, and if desired, <code class="docutils literal notranslate"><span class="pre">cd</span></code> into a directory that you’d like to house whatever repos you clone. Type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>, and then paste in the URL that you copied from GitHub (i.e., the <strong>origin</strong>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ProjectPythia</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">sandbox</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>You’ll see something like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Cloning</span> <span class="n">into</span> <span class="s1">&#39;github-sandbox&#39;</span><span class="o">...</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Enumerating</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Counting</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">15</span><span class="o">/</span><span class="mi">15</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Compressing</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">14</span><span class="o">/</span><span class="mi">14</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Total</span> <span class="mi">15</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">3</span><span class="p">),</span> <span class="n">reused</span> <span class="mi">0</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">0</span><span class="p">),</span> <span class="n">pack</span><span class="o">-</span><span class="n">reused</span> <span class="mi">0</span>
+<span class="n">Receiving</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">15</span><span class="o">/</span><span class="mi">15</span><span class="p">),</span> <span class="mf">7.41</span> <span class="n">KiB</span> <span class="o">|</span> <span class="mf">2.47</span> <span class="n">MiB</span><span class="o">/</span><span class="n">s</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Resolving</span> <span class="n">deltas</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="info admonition">
+<p class="admonition-title">Windows users</p>
+<p>While <code class="docutils literal notranslate"><span class="pre">git</span></code> is typically part of a Linux or Mac OS command-line shell, similar functionality must be installed if you are running Windows. Download and install the <a class="reference external" href="https://gitforwindows.org/">Git for Windows</a> package.</p>
+</div>
+<p>Now, you can <code class="docutils literal notranslate"><span class="pre">cd</span></code> into the <code class="docutils literal notranslate"><span class="pre">github-sandbox</span></code> directory which has been created and populated with the exact contents of the <strong>origin</strong>’s repository at the time you cloned it. If you have a Python installation, you could then type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">sample</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>to run the sample Python script. You should see the following output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hello, Python learners!
+</pre></div>
+</div>
+<p>By virtue of cloning the repo, <em>git</em> automatically sets the URL of the <strong>origin</strong>’s repository on GitHub. You can show this by typing the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+<p>You should see:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">origin</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ProjectPythia</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">sandbox</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
+<span class="n">origin</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ProjectPythia</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">sandbox</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This link points to where the repository “lives” on GitHub. We will use the term <strong>origin</strong> to refer to this location.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We discuss the <code class="docutils literal notranslate"><span class="pre">git</span></code> command-line interface in the <a class="reference internal" href="basic-git.html"><span class="doc std std-doc">Basic version control with git</span></a> lesson.</p>
+</div>
+<p><strong>Congratulations!!</strong> You have now cloned a GitHub repository!</p>
+<p>Now, let’s consider the 3rd scenario for cloning … which involves the releated topic of <em>forking</em>.</p>
+</div>
+<div class="section" id="forking-a-repository">
+<h2>Forking a repository<a class="headerlink" href="#forking-a-repository" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Forking is similar to cloning, but has a bit more involved workflow. Scenarios where forking a repo is indicated include the following:</p>
+<ol class="arabic simple">
+<li><p>You wish to collaborate on projects that are hosted on GitHub, but you are not one of that project’s <em>maintainers</em> (i.e., you do not have <em>write permissions</em> on it).</p></li>
+<li><p>You wish to experiment with changing or adding new features to a project, and do not immediately intend to <em>merge</em> them into the original project’s repo (aka, the <em>base</em> repository).</p></li>
+</ol>
+<p>In a fork, you first create a copy of an existing repository, but store it in your own personal GitHub organization (recall that when you create a GitHub account, the <em>organization</em> name is your GitHub user ID).</p>
+<p>Let’s say we intend to make some changes to the <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">Project Pythia Sandbox</a> repo, that ultimately we’ll submit to the original repository as a <em>Pull request</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be sure you have logged into GitHub at this time!</p>
+</div>
+<p>Notice at the top right of the screen, there is a <em>Fork</em> button:</p>
+<img alt="Fork" src="../../_images/GitHub_Fork.png" />
+<hr class="docutils" />
+<p>Click on it:</p>
+<img alt="ForkDest" src="../../_images/GitHub_ForkDest.png" />
+<hr class="docutils" />
+<p>You should see your GitHub user id (if you administer any other GitHub organizations, you will see them as well). Click on your user id to complete the <em>fork</em>. After a few seconds, your browser will be redirected to the forked repo, now residing in your personal GitHub organization:</p>
+<img alt="ForkPost" src="../../_images/GitHub_ForkPost.png" />
+<hr class="docutils" />
+<p>Notice that the <em>Fork</em> button on the upper right has incremented by one, and there is also is a line relating your fork to the original repo:</p>
+<img alt="ForkBranch" src="../../_images/GitHub_ForkBranch.png" />
+<hr class="docutils" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We discuss <em>branches</em> in the <a class="reference internal" href="git-branches.html"><span class="doc std std-doc">Git Branches</span></a> lesson.</p>
+</div>
+<p>You now have a copy (essentially a clone) of the forked repository, which is now owned by you.</p>
+<p>You could, at this point, select one of the files in the repository and use GitHub’s built-in editor to make changes to these text-based files. But the typical use case that leverages the collaborative power of GitHub and its command-line cousin, <em>git</em>, involves <em>cloning</em> your <em>forked</em> copy of the repo to your local computer, where you can then perform your edits, and (in the case of software) test them on your system.</p>
+<p>Cloning your fork is the same as cloning the original repo. Click on the Code button, select the HTTPS protocol, copy the URL to the clipboard, and then run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;URL&gt;</span></code> on your local computer. In this case, you will need to either run this command in a different directory or rename the destination directory with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;URL&gt;</span> <span class="pre">&lt;directory-name&gt;</span></code>, since it will by default use the name of the repo, <code class="docutils literal notranslate"><span class="pre">github-sandbox</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Unlike cloning, forking is not an option supported by the <em>git</em> command-line interface. I.e., <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fork</span></code> is not a valid command.</p>
+</div>
+<p>Once you’ve cloned the fork to your local machine, try running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code> again. You will see that the <em>origin</em> URL now points to your GitHub account or organization.</p>
+<p><em>The main purpose of cloning and forking a remote repository is so that you can make changes to the contents of those repositories in a safe and version-controller manner.</em> The process of making changes and submitting them as <em>Pull Requests</em> to the original repository is covered in our lesson on <a class="reference internal" href="github-pull-request.html"><span class="doc std std-doc">Opening a Pull Request on GitHub</span></a>, but the workflow is as follows:</p>
+<ol class="arabic simple">
+<li><p>Edit an existing file or files, and/or create new files.</p></li>
+<li><p>Stage your changes by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>.</p></li>
+<li><p>Commit your changes by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p></li>
+<li><p>(If you created a fork): Push your changes to your <em>fork</em> by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.</p></li>
+<li><p>(If you did not create a fork): Push your changes to the <em>base</em> repo by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>. This assumes you have write permissions on the base repo.</p></li>
+<li><p>In GitHub, create a <em>Pull request</em>.</p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ul class="simple">
+<li><p>The process of making a <strong>local</strong> copy of a GitHub repository is called <em>cloning</em>. The destination for the cloned copy is whatever machine you ran the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> command from.</p></li>
+<li><p><em>Forking</em> a repository also makes a copy of a GitHub repo, but places it in your GitHub organization in the GitHub.com cloud.</p></li>
+<li><p>Forking allows you to modify a remote repo, without affecting the original version.</p></li>
+<li><p>After cloning your fork to your local computer, you can meke changes to your copy, which you can then submit to the original repo as a <a class="reference internal" href="github-pull-request.html"><span class="doc std std-doc"><em>Pull request</em></span></a>.</p></li>
+</ul>
+</div>
+<div class="section" id="things-to-try">
+<h2>Things to try<a class="headerlink" href="#things-to-try" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ul class="simple">
+<li><p>Clone another GitHub-hosted repository that is of interest to you.</p></li>
+<li><p>Then try creating a fork of that repository.</p></li>
+</ul>
+<div class="section" id="whats-next">
+<h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>In the next lesson, you will set some configurations on your GitHub account that enable uploads (aka <em>pushes</em>) from your local computer to GitHub. You will also configure notifications on your GitHub account.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://github.community/t/the-difference-between-forking-and-cloning-a-repository/10189">Cloning vs Forking (GitHub Support)</a></p></li>
+<li><p><a class="reference external" href="https://github.community/t/what-the-fork/10187">What the Fork?(GitHub Community)</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./foundations/github"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="github-issues.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Issues and Discussions</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="github-setup-advanced.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Configuring Your GitHub Account</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </div>
+          </div>
+        </main>
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+<footer class="footer">
+  <div class="container-fluid m-0 p-0">
+  
+    <div class="footer-item">
+    
+  <div class="container-fluid footer-logos">
+    <div class="container-xl">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="NCAR" src="../../_images/NCAR-contemp-logo-blue.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="Unidata" src="../../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="UAlbany" src="../../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-menu pt-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>About</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/about.html"
+              >About Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/preamble/how-to-use.html"
+              >How to use Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#the-project-pythia-team"
+              >The Project Team</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Give Feedback</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="mailto:projectpythia@ucar.edu">Email us!</a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/projectpythia.github.io/discussions"
+              >Project Pythia Discussions</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/pythia-foundations/discussions"
+              >Pythia Foundations Discussions</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Contribute</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/contributing.html"
+              >How to contribute to Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/appendix/how-to-contribute.html"
+              >How to contribute to Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/code_of_conduct.html"
+              >Our code of conduct</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#weekly-working-group-meetings"
+              >Join our weekly meetings</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/ProjectPythia"
+              >Join us on GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  
+    <div class="footer-item">
+      <div class="container-fluid footer-info">
+    <div class="container-xl">
+      <div class="d-flex justify-content-center">
+        <p class="py-1 m-0">
+            &copy;&nbsp;2022.
+        
+          By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
+        
+          Last updated on 21 March 2023.
+        </p>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-extra">
+  <div class="container">
+    <div class="row">
+      <p class="m-0">
+        <img
+          src="../../_static/footer-logo-nsf.png"
+          style="float: left; width: 60px; height: 60px; margin-right: 1rem"
+        />
+        This material is based upon work supported by the National Science
+        Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those
+        of the author(s) and do not necessarily reflect the views of the
+        National Science Foundation.
+      </p>
+    </div>
+  </div>
+</div>
+    </div>
+  
+  </div>
+</footer>
+  </body>
+</html>

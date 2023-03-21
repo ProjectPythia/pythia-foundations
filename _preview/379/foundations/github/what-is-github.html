@@ -1,0 +1,1034 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What is GitHub? &#8212; Pythia Foundations</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="GitHub Repositories" href="github-repos.html" />
+    <link rel="prev" title="Getting Started with GitHub" href="../getting-started-github.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-G57FLM9M46"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-G57FLM9M46');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="132">
+    <div class="container-fluid" id="shim"></div>
+    <div class="container-fluid" id="banner"></div>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://projectpythia.org">
+  <img src="../../_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ProjectPythia" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/project_pythia" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" rel="noopener" target="_blank" title="YouTube">
+            <span><i class="fab fa-youtube-square"></i></span>
+            <label class="sr-only">YouTube</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    <div class="container-xl">
+      <div class="row">
+        
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   Pythia Foundations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/how-to-use.html">
+   How to Use This Book
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Foundational skills
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../why-python.html">
+   Why Python?
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../getting-started-python.html">
+   Getting Started with Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../quickstart.html">
+     Quickstart: Zero to Python
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../how-to-run-python.html">
+     Installing and Running Python
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../terminal.html">
+       Python in the Terminal
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../jupyter.html">
+       Python in Jupyter
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../conda.html">
+       Installing and Managing Python with Conda
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../getting-started-jupyter.html">
+   Getting Started with Jupyter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jupyterlab.html">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../markdown.html">
+     Formatted Text in the Notebook with Markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../getting-started-github.html">
+   Getting Started with GitHub
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     What is GitHub?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-repos.html">
+     GitHub Repositories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-issues.html">
+     Issues and Discussions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-cloning-forking.html">
+     Cloning and Forking a Repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-setup-advanced.html">
+     Configuring Your GitHub Account
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="basic-git.html">
+     Basic Version Control with
+     <em>
+      git
+     </em>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="git-branches.html">
+     Git Branches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-pull-request.html">
+     Opening a Pull Request on GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="review-pr.html">
+     Reviewing Pull Requests
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github-workflows.html">
+     GitHub Workflows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="contribute-to-pythia.html">
+     Contribute to Project Pythia via GitHub
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Core Scientific Python packages
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../core/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/numpy.html">
+   NumPy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/numpy/numpy-basics.html">
+     NumPy Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/numpy/intermediate-numpy.html">
+     Intermediate NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/numpy/numpy-broadcasting.html">
+     NumPy Broadcasting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/matplotlib.html">
+   Matplotlib
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/matplotlib/matplotlib-basics.html">
+     Matplotlib Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/matplotlib/histograms-piecharts-animation.html">
+     Histograms, Pie Charts, and Animations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/matplotlib/annotations-colorbars-layouts.html">
+     Annotations, Colorbars, and Advanced Layouts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/cartopy.html">
+   Cartopy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/cartopy/cartopy.html">
+     Introduction to Cartopy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/datetime.html">
+   Datetime
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/datetime/datetime.html">
+     Times and Dates in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/pandas.html">
+   Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/pandas/pandas.html">
+     Introduction to Pandas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/data-formats.html">
+   Data Formats
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/data-formats/netcdf-cf.html">
+     NetCDF and CF: The Basics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../core/xarray.html">
+   Xarray
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/xarray-intro.html">
+     Introduction to Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/computation-masking.html">
+     Computations and Masks with Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/enso-xarray.html">
+     Calculating ENSO with Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../core/xarray/dask-arrays-xarray.html">
+     Dask Arrays with Xarray
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/how-to-contribute.html">
+   Pythia Foundations Contributor’s Guide
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/template.html">
+     Project Pythia Notebook Template
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by <a href="https://projectpythia.org">Project Pythia</a>.<br><br>
+All code in Pythia Foundations is licensed under Apache 2.0. All other non-code content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 (CC BY 4.0)</a>.<br><br>
+We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
+or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
+
+</div>
+
+</div>
+
+        
+
+        <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main"><div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/foundations/github/what-is-github.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ProjectPythia/pythia-foundations"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Ffoundations/github/what-is-github.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/foundations/github/what-is-github.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> On this page
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   What is GitHub?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#no-experience-necessary">
+   No experience necessary!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#free-and-open-source-software-foss">
+   Free- and open-source software (FOSS)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-control-systems-vcs">
+   Version control systems (VCS)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#foss-and-vcs-on-the-internet">
+   FOSS and VCS on the Internet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#foss-vcs-web-github">
+   FOSS + VCS + Web = GitHub
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#register-for-a-free-github-account">
+   Register for a free GitHub account
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#whats-next">
+     What’s Next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+          <div id="main-content" class="row">
+            <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+              
+              <div>
+                
+  <a class="reference internal image-reference" href="../../_images/GitHub-logo.png"><img alt="GitHub Logo" src="../../_images/GitHub-logo.png" style="width: 400px;" /></a>
+<div class="tex2jax_ignore mathjax_ignore section" id="what-is-github">
+<h1>What is GitHub?<a class="headerlink" href="#what-is-github" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<div class="section" id="overview">
+<h2>Overview:<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ol class="arabic simple">
+<li><p>What is GitHub?</p></li>
+<li><p>No experience necessary!</p></li>
+<li><p>Free- and open-source software (FOSS)</p></li>
+<li><p>Version control systems (VCS)</p></li>
+<li><p>GitHub = FOSS + VCS + Web</p></li>
+<li><p>Register for a free GitHub account</p></li>
+</ol>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concepts</p></th>
+<th class="head"><p>Importance</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>None</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>Time to learn</strong>: 15 minutes</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="id1">
+<h2>What is GitHub?<a class="headerlink" href="#id1" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p><a class="reference external" href="https://github.com">GitHub</a> is a web-based platform for the dissemination of free- and open-source software.</p>
+<p>If you are reading this lesson, you are already using GitHub, as that is where Project Pythia hosts its content!</p>
+<p>GitHub provides the following:</p>
+<ol class="arabic simple">
+<li><p><em>Version control</em> for free- and open-source software and other digital assets</p></li>
+<li><p>Project <em>discussion forums</em></p></li>
+<li><p><em>DevOps</em> to facilitate building and testing software</p></li>
+<li><p><em>Bug</em> reporting, patching, and tracking</p></li>
+<li><p><em>Documentation</em> hosting</p></li>
+<li><p>An environment that fosters <em>collaboration</em></p></li>
+</ol>
+<p>Although GitHub can host any digital asset, the most common use case for GitHub is for individuals or organizations to house <em>repositories</em> of <em>free-</em> and <em>open-source software</em>:</p>
+</div>
+<div class="section" id="no-experience-necessary">
+<h2>No experience necessary!<a class="headerlink" href="#no-experience-necessary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>You do not need to be an experienced software developer or be proficient in version control to make use of GitHub! Perhaps, though, you have used a particular package (e.g., Xarray or Matplotlib) and have had questions about its usage, noticed a bug, or had an idea for a new feature for the package! You can participate in a project’s development via GitHub the same way you might have interacted with its developers via email in the past.</p>
+</div>
+<div class="section" id="free-and-open-source-software-foss">
+<h2>Free- and open-source software (FOSS)<a class="headerlink" href="#free-and-open-source-software-foss" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Much of what we term the <em>scientific Python software ecosystem</em> consists of <em>free- and open-source software</em>. Often abbreviated as <strong>FOSS</strong>, this means:</p>
+<ol class="arabic simple">
+<li><p>The software is free-of-charge, and</p></li>
+<li><p>The various files which contain the <em>software code</em> are publicly available.</p></li>
+</ol>
+<div class="info admonition">
+<p class="admonition-title">Did you know?</p>
+<p>The <a class="reference external" href="https://python.org">Python language</a> itself is an example of <em>FOSS</em>!</p>
+</div>
+<p>FOSS is nothing new. For example, the <a class="reference external" href="https://kernel.org">Linux kernel source code</a> has been available to download for many years.</p>
+<div class="tip admonition">
+<p class="admonition-title">Free <span class="math notranslate nohighlight">\(\neq\)</span> open source!</p>
+<p>Just because a software package may be free does not mean that its source code is open! For example, although Nvidia makes its video drivers available for free download, the source code for those drivers is proprietary.</p>
+</div>
+<p>Arguably, the greatest advantage of open-source software is that it enables <em>collaborative sharing</em>, and thus community feedback.</p>
+<p>Types of community input may include the following:</p>
+<ol class="arabic simple">
+<li><p><em>Issues</em>: usage questions, bug reports, feature requests</p></li>
+<li><p><em>Pull requests</em>: a user can ask that that their changes/additions be incorporated into the project</p></li>
+<li><p><em>Discussions</em>: a community forum on the open source project</p></li>
+</ol>
+</div>
+<div class="section" id="version-control-systems-vcs">
+<h2>Version control systems (VCS)<a class="headerlink" href="#version-control-systems-vcs" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>We will discuss version control in more detail later in this series, but the need to track and manage changes to a project, especially one that involves software, has long been known. Over the years, FOSS developers have used VCS such as <em>cvs</em>, <em>svn</em>, and most recently, <em>git</em>. All of these systems are <em>command-line tools</em>.</p>
+</div>
+<div class="section" id="foss-and-vcs-on-the-internet">
+<h2>FOSS and VCS on the Internet<a class="headerlink" href="#foss-and-vcs-on-the-internet" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>A successful FOSS project needs to be accessible via the web. As mentioned before, the Linux kernel and the Python language have long been available using first-generation remote access protocols such as FTP and HTTP, and SSH. Later, VCS tools such as cvs and svn established their own TCP protocols for remote access. With the advent of <em>git</em>, web-based services that supported HTTP(S) and SSH sprung up. Each of these VCS leverages the concept of a particular FOSS project as a <i>code repository</i>.</p>
+<div class="info admonition">
+<p class="admonition-title">Did you know?</p>
+<p>Linus Torvalds, the original developer (and still the lead maintainer) of <strong>Linux</strong>, is also the original developer of <a class="reference external" href="https://git-scm.com">Git</a>!</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Stay tuned!</p>
+<p>We will discuss version control and the use of <strong>Git</strong> via the command line later in this series.</p>
+</div>
+</div>
+<div class="section" id="foss-vcs-web-github">
+<h2>FOSS + VCS + Web = GitHub<a class="headerlink" href="#foss-vcs-web-github" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Perhaps the most popular web-based platform that uses Git for FOSS VCS is <a class="reference external" href="https://github.com">GitHub</a>. GitHub hosts all of the Python software packages that Project Pythia covers as code repositories (we’ll use the term <i>Git repo</i>, or more generally just <i>repo</i> henceforth to represent a GitHub code repository).</p>
+<p>For example, here is a screenshot from <a class="reference external" href="https://github.com/pydata/xarray">Xarray’s GitHub</a> Git repo:</p>
+<img alt="Xarray GitHub" src="../../_images/XarrayGithub.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The above screenshot is from <i>one moment in time</i>. When you visit the Xarray GitHub link above, it will no doubt look different!</p>
+</div>
+</div>
+<div class="section" id="register-for-a-free-github-account">
+<h2>Register for a free GitHub account<a class="headerlink" href="#register-for-a-free-github-account" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>While one can freely browse GitHub repositories such as Xarray anonymously, it’s necessary to log into a unique (and free) user account in order to take advantage of GitHub’s full capabilities, such as:</p>
+<ol class="arabic simple">
+<li><p>Opening Issues and Pull Requests</p></li>
+<li><p>Participate in Discussions</p></li>
+<li><p>Host your own repository</p></li>
+</ol>
+<p>Your next step (if you haven’t already) should be to register for your free GitHub account. As with many online services, you will choose a user id, password, and specify an email address to use with your account.</p>
+<p>To do so, simply point your browser to the <a class="reference external" href="https://github.com/join">GitHub sign-up page</a>:</p>
+<img alt="GitHub Signup" src="../../_images/GitHubJoin.png" />
+<p>While GitHub offers paid options, a free account is typically all that is needed!</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ul class="simple">
+<li><p>GitHub serves as a web-based platform for digital assets, particularly FOSS.</p></li>
+<li><p>GitHub uses Git as its version control system.</p></li>
+<li><p>You can set up a free user account on GitHub.</p></li>
+</ul>
+<div class="section" id="whats-next">
+<h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>In the next lesson, we will explore some GitHub repositories.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/GitHub">GitHub (Wikipedia)</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./foundations/github"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../getting-started-github.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Getting Started with GitHub</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="github-repos.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GitHub Repositories</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </div>
+          </div>
+        </main>
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+<footer class="footer">
+  <div class="container-fluid m-0 p-0">
+  
+    <div class="footer-item">
+    
+  <div class="container-fluid footer-logos">
+    <div class="container-xl">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="NCAR" src="../../_images/NCAR-contemp-logo-blue.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="Unidata" src="../../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="UAlbany" src="../../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-menu pt-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>About</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/about.html"
+              >About Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/preamble/how-to-use.html"
+              >How to use Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#the-project-pythia-team"
+              >The Project Team</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Give Feedback</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="mailto:projectpythia@ucar.edu">Email us!</a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/projectpythia.github.io/discussions"
+              >Project Pythia Discussions</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/ProjectPythia/pythia-foundations/discussions"
+              >Pythia Foundations Discussions</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Contribute</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/contributing.html"
+              >How to contribute to Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/appendix/how-to-contribute.html"
+              >How to contribute to Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/code_of_conduct.html"
+              >Our code of conduct</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#weekly-working-group-meetings"
+              >Join our weekly meetings</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/ProjectPythia"
+              >Join us on GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  
+    <div class="footer-item">
+      <div class="container-fluid footer-info">
+    <div class="container-xl">
+      <div class="d-flex justify-content-center">
+        <p class="py-1 m-0">
+            &copy;&nbsp;2022.
+        
+          By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
+        
+          Last updated on 21 March 2023.
+        </p>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-extra">
+  <div class="container">
+    <div class="row">
+      <p class="m-0">
+        <img
+          src="../../_static/footer-logo-nsf.png"
+          style="float: left; width: 60px; height: 60px; margin-right: 1rem"
+        />
+        This material is based upon work supported by the National Science
+        Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those
+        of the author(s) and do not necessarily reflect the views of the
+        National Science Foundation.
+      </p>
+    </div>
+  </div>
+</div>
+    </div>
+  
+  </div>
+</footer>
+  </body>
+</html>
