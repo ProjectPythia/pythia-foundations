@@ -762,7 +762,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <hr class="docutils" />
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>In this section we explore methods for customizing plots, including the following:</p>
+<p>In this section we explore methods for customizing plots.  The following topics will be covered:</p>
 <ol class="arabic simple">
 <li><p>Adding annotations</p></li>
 <li><p>Rendering equations</p></li>
@@ -796,7 +796,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="imports">
 <h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Here, we import <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, and <code class="docutils literal notranslate"><span class="pre">scipy</span></code> (to generate some sample data)</p>
+<p>Here, we import the <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> interface and <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, in addition to the <code class="docutils literal notranslate"><span class="pre">scipy</span></code> statistics package (<code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code>) for generating sample data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -810,7 +810,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="create-some-sample-data">
 <h2>Create Some Sample Data<a class="headerlink" href="#create-some-sample-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Using <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code>, we can create a normal distribution! Notice how nicely centered and normal our distribution is!</p>
+<p>By using <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code>, the Scipy statistics package described above, we can easily create a data array containing a normal distribution.  We can plot these data points to confirm that the correct distribution was generated. The generated sample data will then be used later in this section. The code and sample plot for this data generation are as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu</span> <span class="o">=</span> <span class="mi">0</span>
@@ -831,8 +831,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="adding-annotations">
 <h2>Adding Annotations<a class="headerlink" href="#adding-annotations" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>A common part of many people’s workflows is adding annotations, or “a note of explanation or comment added to a text or diagram.”</p>
-<p>We can do this using <code class="docutils literal notranslate"><span class="pre">plt.text</span></code> which takes the inputs of the <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> float text position in data coordinates and the text string.</p>
+<p>A common part of many people’s workflows is adding annotations.  A rough definition of ‘annotation’ is ‘a note of explanation or comment added to text or a diagram’.</p>
+<p>We can add an annotation to a plot using <code class="docutils literal notranslate"><span class="pre">plt.text</span></code>.  This method takes the x and y data coordinates at which to draw the annotation (as floating-point values), and the string containing the annotation text.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">)</span>
@@ -847,15 +847,16 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="rendering-equations">
 <h2>Rendering Equations<a class="headerlink" href="#rendering-equations" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>We can even add <strong>math text</strong>, using Latex syntax. The key is use strings with following format:</p>
+<p>We can also add annotations with <strong>equation formatting</strong>, by using LaTeX syntax.  The key is to use strings in the following format:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sa">r</span><span class="s1">&#39;$some_equation$&#39;</span>
 </pre></div>
 </div>
-<p>Here is the example equation we use!</p>
+<p>Let’s run an example that renders the following equation as an annotation:</p>
 <div class="math notranslate nohighlight">
 \[f(x) = \frac{1}{\mu\sqrt{2\pi}}  e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}\]</div>
-<p>If you are interested in learning more about Latex syntax, check out <a class="reference external" href="https://latex-tutorial.com/tutorials/amsmath/">their official documentation</a>.</p>
-<p>Further, if you’re running the notebook interactively (e.g. on Binder) you can double click on the cell to see the latex source for the rendered equation.</p>
+<p>The next code block and plot demonstrate rendering this equation as an annotation.</p>
+<p>If you are interested in learning more about LaTeX syntax, check out <a class="reference external" href="https://latex-tutorial.com/tutorials/amsmath/">their official documentation</a>.</p>
+<p>Furthermore, if the code is being executed in a Jupyter notebook run interactively (e.g., on Binder), you can double-click on the cell to see the LaTeX source for the rendered equation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">)</span>
@@ -872,8 +873,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <img alt="../../_images/68cd2c7b43c4149a1f98d472f284418b77a971c11075236306d54a2c9c6ac9b6.png" src="../../_images/68cd2c7b43c4149a1f98d472f284418b77a971c11075236306d54a2c9c6ac9b6.png" />
 </div>
 </div>
-<p>We plotted our equation! But it looks pretty small; we can increase the size of the text, and center the equation by using <code class="docutils literal notranslate"><span class="pre">fontsize</span></code> and <code class="docutils literal notranslate"><span class="pre">ha</span></code> (horizontal alignment).</p>
-<p>This next example also uses latex notation in the legend text.</p>
+<p>As you can see, the equation was correctly rendered in the plot above. However, the equation appears quite small.  We can increase the size of the text using the <code class="docutils literal notranslate"><span class="pre">fontsize</span></code> keyword argument, and center the equation using the <code class="docutils literal notranslate"><span class="pre">ha</span></code> (horizontal alignment) keyword argument.</p>
+<p>The following example illustrates the use of these keyword arguments, as well as creating a legend containing LaTeX notation:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fstr</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$f(x) = \frac</span><span class="si">{1}</span><span class="s1">{\mu\sqrt{2\pi}}  e^{-\frac</span><span class="si">{1}{2}</span><span class="s1">\left(\frac{x-\mu}{\sigma}\right)^2}$&#39;</span>
@@ -890,13 +891,14 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="add-a-box-around-the-text">
 <h3>Add a Box Around the Text<a class="headerlink" href="#add-a-box-around-the-text" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>One other thing we can add here, for readability, is a box around the text, using <code class="docutils literal notranslate"><span class="pre">bbox</span></code>.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">bbox</span></code> argument in <code class="docutils literal notranslate"><span class="pre">plt.text</span></code> uses a dictionary to create the box! We pass in:</p>
+<p>To improve readability, we can also add a box around the equation text.  This is done using <code class="docutils literal notranslate"><span class="pre">bbox</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">bbox</span></code> is a keyword argument in <code class="docutils literal notranslate"><span class="pre">plt.text</span></code> that creates a box around text.  It takes a dictionary that specifies options, behaving like additional keyword arguments inside of the <code class="docutils literal notranslate"><span class="pre">bbox</span></code> argument.  In this case, we use the following dictionary keys:</p>
 <ul class="simple">
-<li><p>a rounded box sytle (<code class="docutils literal notranslate"><span class="pre">boxstyle</span> <span class="pre">=</span> <span class="pre">'round'</span></code>)</p></li>
+<li><p>a rounded box style (<code class="docutils literal notranslate"><span class="pre">boxstyle</span> <span class="pre">=</span> <span class="pre">'round'</span></code>)</p></li>
 <li><p>a light grey facecolor (<code class="docutils literal notranslate"><span class="pre">fc</span> <span class="pre">=</span> <span class="pre">'lightgrey'</span></code>)</p></li>
 <li><p>a black edgecolor (<code class="docutils literal notranslate"><span class="pre">ec</span> <span class="pre">=</span> <span class="pre">'k'</span></code>)</p></li>
 </ul>
+<p>This example demonstrates the correct use of <code class="docutils literal notranslate"><span class="pre">bbox</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
@@ -928,12 +930,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <hr class="docutils" />
 <div class="section" id="colormap-overview">
 <h2>Colormap Overview<a class="headerlink" href="#colormap-overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Colormaps are a visually appealing way to represent another dimension to your data. They are a matrix of hues and values allowing you to, for example, display hotter temperatures as red and colder temperatures as blue.</p>
+<p>Colormaps are a visually appealing method of looking at visualized data in a new and different way. They associate specific values with hues, using color to ease rapid understanding of plotted data; for example, displaying hotter temperatures as red and colder temperatures as blue.</p>
 <div class="section" id="classes-of-colormaps">
 <h3>Classes of colormaps<a class="headerlink" href="#classes-of-colormaps" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>Click the dropdown arrow to see examples of colormaps within their respective classes.</p>
+<p>There are four different classes of colormaps, and many individual maps are contained in each class.  To view some examples for each class, use the dropdown arrow next to the class name below.</p>
 <details>
-<summary> 1. <b>Sequential:</b> change in lightness and/or saturation of color incrementally. Good for data that has ordering. </summary>
+<summary> 1. <b>Sequential:</b> These colormaps incrementally increase or decrease in lightness and/or saturation of color.  In general, they work best for ordered data. </summary>
 <p><img alt="Perceptually Sequential" src="../../_images/perceptually-sequential.png" /></p>
 <p><img alt="Sequential" src="../../_images/sequential.png" /></p>
 <p><img alt="Sequential2" src="../../_images/sequential2.png" /></p>
@@ -942,17 +944,17 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <p><img alt="Sequential2" src="../../_images/s2.png" /></p>
 </details>
 <details>
-    <summary> 2. <b>Diverging:</b> change in lightness and/or saturation of two different colors that meet in the middle at an unsaturated color. Should be used when the data has a natural zero point, such as sea level. </summary>
+    <summary> 2. <b>Diverging:</b> These colormaps contain two colors that change in lightness and/or saturation in proportion to distance from the middle, and an unsaturated color in the middle.  They are almost always used with data containing a natural zero point, such as sea level. </summary>
 <p><img alt="Diverging" src="../../_images/diverging.png" /></p>
 <p><img alt="Diverging" src="../../_images/d.png" /></p>
 </details>
 <details>
-    <summary> 3. <b>Cyclic:</b> change in lightness of two different colors that meet in the middle and begin and end at an unsaturated color. Should be used for values that naturally wrap around. </summary>
+    <summary> 3. <b>Cyclic:</b> These colormaps have two different colors that change in lightness and meet in the middle, and unsaturated colors at the beginning and end.  They are usually best for data values that wrap around, such as longitude. </summary>
 <p><img alt="Cyclic" src="../../_images/cyclic.png" /></p>
 <p><img alt="Cyclic" src="../../_images/c.png" /></p>
 </details>
 <details>
-    <summary> 4. <b>Qualitative:</b> miscellaneous color. Should not be used for data that has ordering or relationships. </summary>
+    <summary> 4. <b>Qualitative:</b> These colormaps have no pattern, and are mostly bands of miscellaneous colors.  You should only use these colormaps for unordered data without relationships. </summary>
 <p><img alt="Qualitative" src="../../_images/qualitative.png" /></p>
 <p><img alt="Miscellanous" src="../../_images/misc.png" /></p>
 <p><img alt="Miscellanous" src="../../_images/m.png" /></p>
@@ -961,18 +963,18 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <h3>Other considerations<a class="headerlink" href="#other-considerations" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>There is a lot of info about choosing colormaps that could be its own tutorial. Two important considerations:</p>
 <ol class="arabic simple">
-<li><p>Color blind friendly patterns: avoiding colormaps with both red and green can account for the most common form of color blindness. The GeoCAT-examples gallery has a section devoted to <a class="reference external" href="https://geocat-examples.readthedocs.io/en/latest/gallery/index.html#colors">picking better colormaps</a> that covers this.</p></li>
-<li><p>Grayscale conversion: It is not uncommon for plots rendered in color to be printed in black and white, obscuring the usefulness of a chosen colormap</p></li>
+<li><p>Color-blind friendly patterns: By using colormaps that do not contain both red and green, you can help people with the most common form of color blindness read your data plots more easily.  The GeoCAT examples gallery has a section about <a class="reference external" href="https://geocat-examples.readthedocs.io/en/latest/gallery/index.html#colors">picking better colormaps</a> that covers this issue in greater detail.</p></li>
+<li><p>Grayscale conversion: It is not too uncommon for a plot originally rendered in color to be converted to black-and-white (monochrome grayscale).  This reduces the usefulness of specific colormaps, as shown below.</p></li>
 </ol>
 <p><img alt="hsv colormap in grayscale" src="../../_images/hsv2gray.png" /></p>
 <ul class="simple">
-<li><p>See <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">Choosing Colormaps in Matplotlib</a> for a more in depth version of this section</p></li>
+<li><p>For more information on these concerns, as well as colormap choices in general, see the documentation page <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">Choosing Colormaps in Matplotlib</a>.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="basic-colorbars">
 <h2>Basic Colorbars<a class="headerlink" href="#basic-colorbars" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Before we look at a colorbar, let’s generate some fake data using <code class="docutils literal notranslate"><span class="pre">numpy.random</span></code></p>
+<p>Before we look at a colorbar, let’s generate some fake X and Y data using <code class="docutils literal notranslate"><span class="pre">numpy.random</span></code>, and set a number of bins for a histogram:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">npts</span> <span class="o">=</span> <span class="mi">1000</span>
@@ -984,7 +986,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 </div>
-<p>Here, we plot a 2D histogram using our fake data, using the default colorbar “viridis”</p>
+<p>Now we can use our fake data to plot a 2-D histogram with the number of bins set above.  We then add a colorbar to the plot, using the default colormap <code class="docutils literal notranslate"><span class="pre">viridis</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
@@ -996,10 +998,10 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/8cbd36ba5f09d557562481e0bac0a14dcb2ce0024ef1dd242b2edb439ef1c774.png" src="../../_images/8cbd36ba5f09d557562481e0bac0a14dcb2ce0024ef1dd242b2edb439ef1c774.png" />
+<img alt="../../_images/493cb4dc2712828ee61a6de7739563643a4850c46d1b76d946e80419d3ee2635.png" src="../../_images/493cb4dc2712828ee61a6de7739563643a4850c46d1b76d946e80419d3ee2635.png" />
 </div>
 </div>
-<p>We can change which colorbar to use by passing in <code class="docutils literal notranslate"><span class="pre">cmap</span> <span class="pre">=</span> <span class="pre">'colorbar_name'</span></code>. We can use the <code class="docutils literal notranslate"><span class="pre">magma</span></code> colorbar instead!</p>
+<p>We can change which colormap to use by setting the keyword argument <code class="docutils literal notranslate"><span class="pre">cmap</span> <span class="pre">=</span> <span class="pre">'colormap_name'</span></code> in the plotting function call.  This sets the colormap not only for the plot, but for the colorbar as well.  In this case, we use the <code class="docutils literal notranslate"><span class="pre">magma</span></code> colormap:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
@@ -1011,13 +1013,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d0c87d306507ecbc701dd4a5d2f0dec0acb3c29d8a4abe7ce5c609ba1072f871.png" src="../../_images/d0c87d306507ecbc701dd4a5d2f0dec0acb3c29d8a4abe7ce5c609ba1072f871.png" />
+<img alt="../../_images/923fc9c084de7929c66e92b9362fbb98bd6033d5ddbd318a48c94dcca9f5c31e.png" src="../../_images/923fc9c084de7929c66e92b9362fbb98bd6033d5ddbd318a48c94dcca9f5c31e.png" />
 </div>
 </div>
 </div>
 <div class="section" id="shared-colorbars">
 <h2>Shared Colorbars<a class="headerlink" href="#shared-colorbars" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Often times, you are not plotting a single axis. You may wish to share colorbars between different plots! We can share colorbars between two plots using the following:</p>
+<p>Oftentimes, you are plotting multiple subplots, or multiple <code class="docutils literal notranslate"><span class="pre">Axes</span></code> objects, simultaneously. In these scenarios, you can create colorbars that span multiple plots, as shown in the following example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1030,15 +1032,15 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fbcc018afb0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fc8acf7a7a0&gt;
 </pre></div>
 </div>
-<img alt="../../_images/dc66c807fdac07a2e056c19445fcc8522a93f22aab75d7708ae5a5d9be124418.png" src="../../_images/dc66c807fdac07a2e056c19445fcc8522a93f22aab75d7708ae5a5d9be124418.png" />
+<img alt="../../_images/962320b71f9b43b76eb9a9794705489987c0af277415c17eb042d4b11da6ee10.png" src="../../_images/962320b71f9b43b76eb9a9794705489987c0af277415c17eb042d4b11da6ee10.png" />
 </div>
 </div>
-<p>You may have noticed the input argument <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code>. To clarify, <code class="docutils literal notranslate"><span class="pre">hist1</span></code> is a tuple returned by <code class="docutils literal notranslate"><span class="pre">hist2d</span></code>, and <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> returns a <code class="docutils literal notranslate"><span class="pre">matplotlib.collections.QuadMesh</span></code> that points to the colormap for the first histogram. To make sure that both histograms are using the same colormap with the same range of values, <code class="docutils literal notranslate"><span class="pre">vmax</span></code> is set to 0.18 for both plots. This ensures that both histograms are using colormaps that represent values from 0 (the default for histograms) to 0.18. Because the same data is used for both plots, it doesn’t matter whether we pass in <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> or <code class="docutils literal notranslate"><span class="pre">hist2[3]</span></code> to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code>.
-Read more at the <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist2d.html"><code class="docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.hist2d</span></code> documentation</a>.</p>
-<p>Other kinds of plots can share colorbars too. A common use case is filled contour plots with shared colorbars for comparing data. <code class="docutils literal notranslate"><span class="pre">vmin</span></code> and <code class="docutils literal notranslate"><span class="pre">vmax</span></code> behave the same way for <code class="docutils literal notranslate"><span class="pre">contourf</span></code> as they do for <code class="docutils literal notranslate"><span class="pre">hist2d</span></code>. A downside to using the <code class="docutils literal notranslate"><span class="pre">vmin</span></code> and <code class="docutils literal notranslate"><span class="pre">vmax</span></code> kwargs when plotting two different datasets is that while the colormaps may be the same, the dataset with a smaller range of values won’t show the full range of colors as seen below. Thus, it <em>does</em> matter in this particular example which output from <code class="docutils literal notranslate"><span class="pre">contourf</span></code> is used to make the colorbar.</p>
+<p>You may be wondering why the call to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code> uses the argument <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code>. The explanation is as follows: <code class="docutils literal notranslate"><span class="pre">hist1</span></code> is a tuple returned by <code class="docutils literal notranslate"><span class="pre">hist2d</span></code>, and <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> contains a <code class="docutils literal notranslate"><span class="pre">matplotlib.collections.QuadMesh</span></code> that points to the colormap for the first histogram. To make sure that both histograms are using the same colormap with the same range of values, <code class="docutils literal notranslate"><span class="pre">vmax</span></code> is set to 0.18 for both plots. This ensures that both histograms are using colormaps that represent values from 0 (the default for histograms) to 0.18. Because the same data values are used for both plots, it doesn’t matter whether we pass in <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> or <code class="docutils literal notranslate"><span class="pre">hist2[3]</span></code> to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code>.
+You can learn more about this topic by reviewing the <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist2d.html"><code class="docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.hist2d</span></code> documentation</a>.</p>
+<p>In addition, there are many other types of plots that can also share colorbars. An actual use case that is quite common is to use shared colorbars to compare data between filled contour plots. The <code class="docutils literal notranslate"><span class="pre">vmin</span></code> and <code class="docutils literal notranslate"><span class="pre">vmax</span></code> keyword arguments behave the same way for <code class="docutils literal notranslate"><span class="pre">contourf</span></code> as they do for <code class="docutils literal notranslate"><span class="pre">hist2d</span></code>. However, there is a potential downside to using the <code class="docutils literal notranslate"><span class="pre">vmin</span></code> and <code class="docutils literal notranslate"><span class="pre">vmax</span></code> kwargs. When plotting two different datasets, the dataset with the smaller range of values won’t show the full range of colors, even though the colormaps are the same. Thus, it can potentially matter which output from <code class="docutils literal notranslate"><span class="pre">contourf</span></code> is used to make a colorbar.  The following examples demonstrate general plotting technique for filled contour plots with shared colorbars, as well as best practices for dealing with some of these logistical issues:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x2</span> <span class="o">=</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mf">3.01</span><span class="p">,</span> <span class="mf">0.025</span><span class="p">)</span>
@@ -1084,10 +1086,10 @@ Read more at the <a class="reference external" href="https://matplotlib.org/stab
 </div>
 <div class="section" id="custom-colorbars">
 <h2>Custom Colorbars<a class="headerlink" href="#custom-colorbars" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Even with the large collection of prepackaged colorbars, you may find it useful to create your own colorbar.</p>
-<p>Below are 2 similar examples of using custom colorbars:</p>
-<p>The first has very discrete list of colors called <code class="docutils literal notranslate"><span class="pre">colors</span></code>, and creates a colormap from this list with the call <code class="docutils literal notranslate"><span class="pre">ListedColormap</span></code>.</p>
-<p>The second used the call <code class="docutils literal notranslate"><span class="pre">LinearSegmentedColormap</span></code> to create a colormap from interpolating the same list <code class="docutils literal notranslate"><span class="pre">colors</span></code>.</p>
+<p>Despite the availability of a large number of premade colorbar styles, it can still occasionally be helpful to create your own colorbars.</p>
+<p>Below are 2 similar examples of using custom colorbars.</p>
+<p>The first example uses a very discrete list of colors, simply named <code class="docutils literal notranslate"><span class="pre">colors</span></code>, and creates a colormap from this list by using the call <code class="docutils literal notranslate"><span class="pre">ListedColormap</span></code>.</p>
+<p>The second example uses the function <code class="docutils literal notranslate"><span class="pre">LinearSegmentedColormap</span></code> to create a new colormap, using interpolation and the <code class="docutils literal notranslate"><span class="pre">colors</span></code> list defined in the first example.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span>
@@ -1114,7 +1116,7 @@ Read more at the <a class="reference external" href="https://matplotlib.org/stab
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e3e06d1367211925356193d98e0730d1733b2b94aecaff0b4a2279e38a59c08e.png" src="../../_images/e3e06d1367211925356193d98e0730d1733b2b94aecaff0b4a2279e38a59c08e.png" />
+<img alt="../../_images/c024e6f3f2db24ccbd8a13588721252984e07fe6e6e372ef2a9122ade3119126.png" src="../../_images/c024e6f3f2db24ccbd8a13588721252984e07fe6e6e372ef2a9122ade3119126.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1131,27 +1133,27 @@ Read more at the <a class="reference external" href="https://matplotlib.org/stab
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c70a0bd9044f7d8d597eff567b5eec5fa5cbb0ebd0d30b0fce630e482fd0be6e.png" src="../../_images/c70a0bd9044f7d8d597eff567b5eec5fa5cbb0ebd0d30b0fce630e482fd0be6e.png" />
+<img alt="../../_images/4a4c62cc3f453724362a2e4e3da9c6d27a61df233afe01e03f1edefee73dbd9d.png" src="../../_images/4a4c62cc3f453724362a2e4e3da9c6d27a61df233afe01e03f1edefee73dbd9d.png" />
 </div>
 </div>
 <div class="section" id="the-normalize-class">
 <h3>The <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> Class<a class="headerlink" href="#the-normalize-class" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>Note that both plots use the <code class="docutils literal notranslate"><span class="pre">norm</span></code> kwarg. The <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> class linearly normalizes data into the [0, 1] interval. This is used to linearly map the colors in the colormap to the data from <code class="docutils literal notranslate"><span class="pre">vmin</span></code> to <code class="docutils literal notranslate"><span class="pre">vmax</span></code>. In fact, we used this functionality in the previous histogram exercise! The <code class="docutils literal notranslate"><span class="pre">vmin</span></code> and <code class="docutils literal notranslate"><span class="pre">vmax</span></code> kwargs for <code class="docutils literal notranslate"><span class="pre">hist2d</span></code> are simply passed into the <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> function. When making a custom colormap, it is best to specify how you want the data normalized.</p>
-<p>For non-linear nomalization, check out this <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormapnorms.html#">Colormap Normalization tutorial</a>.</p>
+<p>Notice that both of these examples contain plotting functions that make use of the <code class="docutils literal notranslate"><span class="pre">norm</span></code> kwarg.  This keyword argument takes an object of the <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> class.  A <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> object is constructed with two numeric values, representing the start and end of the data.  It then linearly normalizes the data in that range into an interval of [0,1]. If this sounds familiar, it is because this functionality was used in a previous histogram example.  Feel free to review any previous examples if you need a refresher on particular topics. In this example, the values of the <code class="docutils literal notranslate"><span class="pre">vmin</span></code> and <code class="docutils literal notranslate"><span class="pre">vmax</span></code> kwargs used in <code class="docutils literal notranslate"><span class="pre">hist2d</span></code> are reused as arguments to the <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> class constructor.  This sets the values of <code class="docutils literal notranslate"><span class="pre">vmin</span></code> and <code class="docutils literal notranslate"><span class="pre">vmax</span></code> as the starting and ending data values for our <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> object, which is passed to the <code class="docutils literal notranslate"><span class="pre">norm</span></code> kwarg of <code class="docutils literal notranslate"><span class="pre">hist2d</span></code> to normalize the data. There are many different options for normalizing data, and it is important to explicitly specify how you want your data normalized, especially when making a custom colormap.</p>
+<p>For information on nonlinear and other complex forms of normalization, review this <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormapnorms.html#">Colormap Normalization tutorial</a>.</p>
 </div>
 </div>
 <div class="section" id="mosaic-subplots">
 <h2>Mosaic Subplots<a class="headerlink" href="#mosaic-subplots" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>One of the recent features added to Matplotlib is <code class="docutils literal notranslate"><span class="pre">subplot_mosaic</span></code> where you can pass the structure of your figure, and it will generate your subplots automatically!</p>
-<p>For example, if we wanted two plots on top, and one of the bottom, we can construct it using the following block of text:</p>
+<p>One of the helpful features recently added to Matplotlib is the <code class="docutils literal notranslate"><span class="pre">subplot_mosaic</span></code> method.  This method allows you to specify the structure of your figure using specially formatted strings, and will generate subplots automatically based on that structure.</p>
+<p>For example, if we wanted two plots on top, and one on the bottom, we can construct them by passing the following string to <code class="docutils literal notranslate"><span class="pre">subplot_mosaic</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;&quot;</span>
 <span class="n">AB</span>
 <span class="n">CC</span>
 <span class="s2">&quot;&quot;</span>
 </pre></div>
 </div>
-<p>This corresponds to three axes: <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">B</span></code>, and <code class="docutils literal notranslate"><span class="pre">C</span></code> with <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> on top of <code class="docutils literal notranslate"><span class="pre">C</span></code>.</p>
-<p>Once we create the subplots, we can access them using the resultant axes dictionary, with the syntax <code class="docutils literal notranslate"><span class="pre">axes_dict['your_axis']</span></code>. An example of this is given below!</p>
+<p>This creates three <code class="docutils literal notranslate"><span class="pre">Axes</span></code> objects corresponding to three subplots.  The subplots <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> are on top of the subplot <code class="docutils literal notranslate"><span class="pre">C</span></code>, and the <code class="docutils literal notranslate"><span class="pre">C</span></code> subplot spans the combined width of <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
+<p>Once we create the subplots, we can access them using the dictionary returned by <code class="docutils literal notranslate"><span class="pre">subplot_mosaic</span></code>.  You can specify an <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object (in this example, <code class="docutils literal notranslate"><span class="pre">your_axis</span></code>) in the dictionary (in this example, <code class="docutils literal notranslate"><span class="pre">axes_dict</span></code>) by using the syntax <code class="docutils literal notranslate"><span class="pre">axes_dict['your_axis']</span></code>. A full example of <code class="docutils literal notranslate"><span class="pre">subplot_mosaic</span></code> is as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">axdict</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">subplot_mosaic</span><span class="p">(</span>
@@ -1168,13 +1170,13 @@ Read more at the <a class="reference external" href="https://matplotlib.org/stab
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/b363ad86a5e2a1ffc03ee3b12d2ff9089e37eb6ec8791b290964b9458094ac45.png" src="../../_images/b363ad86a5e2a1ffc03ee3b12d2ff9089e37eb6ec8791b290964b9458094ac45.png" />
+<img alt="../../_images/ebf6edcbc1e29ab249383931afdb597fcedbda6e62c42de11f7bda68ccf9494b.png" src="../../_images/ebf6edcbc1e29ab249383931afdb597fcedbda6e62c42de11f7bda68ccf9494b.png" />
 </div>
 </div>
-<p>You’ll notice there is not a colorbar plotted by default. When constructing the colorbar, we need to specify:</p>
+<p>You’ll notice there is not a colorbar plotted by default. When constructing the colorbar, we need to specify the following:</p>
 <ul class="simple">
 <li><p>Which plot to use for the colormapping (ex. <code class="docutils literal notranslate"><span class="pre">histA</span></code>)</p></li>
-<li><p>Which axes to merge colorbars across (ex. [<code class="docutils literal notranslate"><span class="pre">histA</span></code>, <code class="docutils literal notranslate"><span class="pre">histB</span></code>])</p></li>
+<li><p>Which subplots (<code class="docutils literal notranslate"><span class="pre">Axes</span></code> objects) to merge colorbars across (ex. [<code class="docutils literal notranslate"><span class="pre">histA</span></code>, <code class="docutils literal notranslate"><span class="pre">histB</span></code>])</p></li>
 <li><p>Where to place the colorbar (ex. <code class="docutils literal notranslate"><span class="pre">bottom</span></code>)</p></li>
 </ul>
 <div class="cell docutils container">
@@ -1196,7 +1198,7 @@ Read more at the <a class="reference external" href="https://matplotlib.org/stab
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/4df3e0123e189194d46c14ed683d4984d474892c909138e683d70253e72af471.png" src="../../_images/4df3e0123e189194d46c14ed683d4984d474892c909138e683d70253e72af471.png" />
+<img alt="../../_images/79d6e32aa95a194c4e12bacbf65fdbbfffd100b68b5f9d71f50b43403e8a9116.png" src="../../_images/79d6e32aa95a194c4e12bacbf65fdbbfffd100b68b5f9d71f50b43403e8a9116.png" />
 </div>
 </div>
 </div>
@@ -1204,10 +1206,10 @@ Read more at the <a class="reference external" href="https://matplotlib.org/stab
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
-<li><p>You can use features in Matplotlib to add annotations, even math, to your plots</p></li>
+<li><p>You can use features in Matplotlib to add text annotations to your plots, including equations in mathematical notation</p></li>
 <li><p>There are a number of considerations to take into account when choosing your colormap</p></li>
 <li><p>You can create your own colormaps with Matplotlib</p></li>
-<li><p>Various axes in figures can share colorbars</p></li>
+<li><p>Various subplots and corresponding <code class="docutils literal notranslate"><span class="pre">Axes</span></code> objects in a figure can share colorbars</p></li>
 </ul>
 </div>
 <div class="section" id="resources-and-references">
@@ -1216,7 +1218,7 @@ Read more at the <a class="reference external" href="https://matplotlib.org/stab
 <li><p><a class="reference external" href="https://matplotlib.org/stable/api/text_api.html#matplotlib.text.Text.set_math_fontfamily">Matplotlib text documentation</a></p></li>
 <li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.annotate.html">Matplotlib annotation documentation</a></p></li>
 <li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/text/annotations.html#sphx-glr-tutorials-text-annotations-py">Matplotlib’s annotation examples</a></p></li>
-<li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/text/mathtext.html">Writing mathmatical expressions in Matplotlib</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/text/mathtext.html">Writing mathematical expressions in Matplotlib</a></p></li>
 <li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/text_labels_and_annotations/mathtext_examples.html#sphx-glr-gallery-text-labels-and-annotations-mathtext-examples-py">Mathtext Examples</a></p></li>
 <li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/shapes_and_collections/fancybox_demo.html">Drawing fancy boxes with Matplotlib</a></p></li>
 <li><p><a class="reference external" href="https://lnkd.in/dD5fE8V">Plot Types Cheat Sheet</a></p></li>
@@ -1386,7 +1388,7 @@ Read more at the <a class="reference external" href="https://matplotlib.org/stab
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 21 March 2023.
+          Last updated on 27 March 2023.
         </p>
       </div>
     </div>

@@ -769,7 +769,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <hr class="docutils" />
 <div class="section" id="imports">
 <h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>The same as before, we are going to import Matplotlib’s <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> interface as <code class="docutils literal notranslate"><span class="pre">plt</span></code>.</p>
+<p>Just like in the previous tutorial, we are going to import Matplotlib’s <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> interface as <code class="docutils literal notranslate"><span class="pre">plt</span></code>. We must also import <code class="docutils literal notranslate"><span class="pre">numpy</span></code> for working with data arrays.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -781,8 +781,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="histograms">
 <h2>Histograms<a class="headerlink" href="#histograms" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>To make a 1D histogram, we’re going to generate a single vector of numbers.</p>
-<p>We’ll generate these numbers using NumPy’s normal distribution random number generator. For demonstration purposes, we’ve specified the random seed for reproducability.</p>
+<p>We can plot a 1-D histogram using most 1-D data arrays.</p>
+<p>To get the 1-D data array for this example, we generate example data using NumPy’s normal-distribution random-number generator. For demonstration purposes, we’ve specified the random seed for reproducibility. The code for this number generation is as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">npts</span> <span class="o">=</span> <span class="mi">2500</span>
@@ -794,7 +794,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 </div>
-<p>Finally, make a histogtam using <code class="docutils literal notranslate"><span class="pre">plt.hist</span></code>. Here, specifying <code class="docutils literal notranslate"><span class="pre">density=True</span></code> changes the y-axis to be probability instead of count.</p>
+<p>Now that we have our data array, we can make a histogram using <code class="docutils literal notranslate"><span class="pre">plt.hist</span></code>.  In this case, we change the y-axis to represent probability, instead of count; this is performed by setting <code class="docutils literal notranslate"><span class="pre">density=True</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">nbins</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -808,7 +808,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <img alt="../../_images/ce705619ba2c95c26895c11ce7090dad2350a5cdfb38aa2b50bd20dad99ef825.png" src="../../_images/ce705619ba2c95c26895c11ce7090dad2350a5cdfb38aa2b50bd20dad99ef825.png" />
 </div>
 </div>
-<p>Similarly, we can make a 2D histrogram by generating a second random array and using <code class="docutils literal notranslate"><span class="pre">plt.hist2d</span></code>.</p>
+<p>Similarly, we can make a 2-D histogram, by first generating a second 1-D array, and then calling <code class="docutils literal notranslate"><span class="pre">plt.hist2d</span></code> with both 1-D arrays as arguments:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">npts</span><span class="p">)</span>
@@ -824,7 +824,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="pie-charts">
 <h2>Pie Charts<a class="headerlink" href="#pie-charts" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Matplotlib can also be used to plot pie charts with <code class="docutils literal notranslate"><span class="pre">plt.pie</span></code>. The most basic implementation is shown below. The input to <code class="docutils literal notranslate"><span class="pre">plt.pie</span></code> is a 1-D array of wedge “sizes” (e.g. percent values).</p>
+<p>Matplotlib also has the capability to plot pie charts, by way of <code class="docutils literal notranslate"><span class="pre">plt.pie</span></code>. The most basic implementation uses a 1-D array of wedge ‘sizes’ (i.e., percent values), as shown below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
@@ -836,8 +836,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <img alt="../../_images/eb256443880797f004bd047197b62ac22334869a363d8677a9d0f78b7c28f795.png" src="../../_images/eb256443880797f004bd047197b62ac22334869a363d8677a9d0f78b7c28f795.png" />
 </div>
 </div>
-<p>Typically, you’ll see examples where all of the values in the array <code class="docutils literal notranslate"><span class="pre">x</span></code> will sum to 100, but the data provided to the pie chart does NOT have to add up to 100. Any numbers provided will be normalized to <code class="docutils literal notranslate"><span class="pre">sum(x)==1</span></code> by default, although this can be turned off by setting <code class="docutils literal notranslate"><span class="pre">normalize=False</span></code>.</p>
-<p>If you set <code class="docutils literal notranslate"><span class="pre">normalize=False</span></code> and the values of <code class="docutils literal notranslate"><span class="pre">x</span></code> do not sum to 1 AND are less than 1, a partial pie will be plotting. If the values sum to larger than 1, a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> will be raised.</p>
+<p>Typically, you’ll see examples where all of the values in the array <code class="docutils literal notranslate"><span class="pre">x</span></code> will sum to 100, but the data values provided to <code class="docutils literal notranslate"><span class="pre">plt.pie</span></code> do not necessarily have to add up to 100.  The sum of the numbers provided will be normalized to 1, and the individual values will thereby be converted to percentages, regardless of the actual sum of the values.  If this behavior is unwanted or unneeded, you can set <code class="docutils literal notranslate"><span class="pre">normalize=False</span></code>.</p>
+<p>If you set <code class="docutils literal notranslate"><span class="pre">normalize=False</span></code>, and the sum of the values of x is less than 1, then a partial pie chart is plotted. If the values sum to larger than 1, a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> will be raised.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.40</span><span class="p">])</span>
@@ -850,8 +850,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <p>Let’s do a more complicated example.</p>
-<p>Here we create a pie chart with various sizes associated with each color. Labels are derived by capitalizing each color in the array <code class="docutils literal notranslate"><span class="pre">colors</span></code>.</p>
-<p>More interesting is the <code class="docutils literal notranslate"><span class="pre">explode</span></code> input, which allows you to offset each wedge by a fraction of the radius. In this example, each wedge is not offset except for the pink (3rd index).</p>
+<p>Here we create a pie chart with various sizes associated with each color. Labels are derived by capitalizing each color in the array <code class="docutils literal notranslate"><span class="pre">colors</span></code>. Since colors can be specified by strings corresponding to named colors, this allows both the colors and the labels to be set from the same array, reducing code and effort.</p>
+<p>If you want to offset one or more wedges for effect, you can use the <code class="docutils literal notranslate"><span class="pre">explode</span></code> keyword argument.  The value for this argument must be a list of floating-point numbers with the same length as the number of wedges.  The numbers indicate the percentage of offset for each wedge. In this example, each wedge is not offset except for the pink (3rd index).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">]</span>
@@ -872,7 +872,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="animations">
 <h2>Animations<a class="headerlink" href="#animations" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>From Matplotlib’s animation interface, there is one main tool, <code class="docutils literal notranslate"><span class="pre">FuncAnimation</span></code>. See Matplotlib’s full animation documentation <a class="reference external" href="https://matplotlib.org/stable/api/animation_api.html">here</a>.</p>
+<p>Matplotlib offers a single commonly-used animation tool, <code class="docutils literal notranslate"><span class="pre">FuncAnimation</span></code>. This tool must be imported separately through Matplotlib’s animation package, as shown below. You can find more information on animation with Matplotlib at the <a class="reference external" href="https://matplotlib.org/stable/api/animation_api.html">official documentation page</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span>
@@ -889,9 +889,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <p>For this example, let’s create an animated sine wave.</p>
 <div class="section" id="step-1-initial-state">
 <h3>Step 1: Initial State<a class="headerlink" href="#step-1-initial-state" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>In the initial state step, we will define a function called <code class="docutils literal notranslate"><span class="pre">init</span></code> that will define the initial state of the animation plot. Note that this function is technically optional. An example later will omit this explicit initialization step.</p>
-<p>First, we’ll define a figure and axes, then create a line with <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code>. To create the initialization function, we set the line’s data to be empty and then return the line.</p>
-<p>Note that this cell will display empty axes in jupyter notebooks.</p>
+<p>In the initial state step, we will define a function called <code class="docutils literal notranslate"><span class="pre">init</span></code>.  This function will then create the animation plot in its initial state.  However, please note that the successful use of <code class="docutils literal notranslate"><span class="pre">FuncAnimation</span></code> does not technically require such a function; in a later example, creating animations without an initial-state function is demonstrated.</p>
+<p>First, we’ll define <code class="docutils literal notranslate"><span class="pre">Figure</span></code> and <code class="docutils literal notranslate"><span class="pre">Axes</span></code> objects.  After that, we can create a line-plot object (referred to here as a line) with <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code>. To create the initialization function, we set the line’s data to be empty and then return the line.</p>
+<p>Please note, this code block will display a blank plot when run as a Jupyter notebook cell.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
@@ -914,7 +914,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="step-2-animation-progression-function">
 <h3>Step 2: Animation Progression Function<a class="headerlink" href="#step-2-animation-progression-function" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>For each frame in the animation, we need to create a function that takes an index and returns the desired frame in the animation.</p>
+<p>For this step, we create a progression function, which takes an index (usually named <code class="docutils literal notranslate"><span class="pre">n</span></code> or <code class="docutils literal notranslate"><span class="pre">i</span></code>), and returns the corresponding (in other words, <code class="docutils literal notranslate"><span class="pre">n</span></code>-th or <code class="docutils literal notranslate"><span class="pre">i</span></code>-th) frame of the animation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">animate</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
@@ -932,7 +932,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="step-3-using-funcanimation">
 <h3>Step 3: Using <code class="docutils literal notranslate"><span class="pre">FuncAnimation</span></code><a class="headerlink" href="#step-3-using-funcanimation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>The last step is to feed the parts we created to <code class="docutils literal notranslate"><span class="pre">FuncAnimation</span></code>. Note that when using this function, it is important to save the output to a variable, even if you do not intent to use it later, because otherwise it is at risk of being collected by Python’s garbage collector.</p>
+<p>The last step is to feed the parts we created to <code class="docutils literal notranslate"><span class="pre">FuncAnimation</span></code>. Please note, when using the <code class="docutils literal notranslate"><span class="pre">FuncAnimation</span></code> function, it is important to save the output in a variable, even if you do not intend to use this output later.  If you do not, Python’s garbage collector may attempt to save memory by deleting the animation data, and it will be unavailable for later use.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anim</span> <span class="o">=</span> <span class="n">FuncAnimation</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">animate</span><span class="p">,</span> <span class="n">init_func</span><span class="o">=</span><span class="n">init</span><span class="p">,</span> <span class="n">frames</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">blit</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -940,7 +940,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 </div>
-<p>To show the animation in this jupyter notebook, we need to set the rc parameter for animation to <code class="docutils literal notranslate"><span class="pre">html5</span></code>, instead of the default, which is none.</p>
+<p>In order to show the animation in a Jupyter notebook, we have to use the <code class="docutils literal notranslate"><span class="pre">rc</span></code> function. This function must be imported separately, and is used to set specific parameters in Matplotlib. In this case, we need to set the <code class="docutils literal notranslate"><span class="pre">html</span></code> parameter for animation plots to <code class="docutils literal notranslate"><span class="pre">html5</span></code>, instead of the default value of none.  The code for this is written as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rc</span>
@@ -3517,7 +3517,7 @@ bwAAAB1kYXRhAAAAAQAAAABMYXZmNTkuMjcuMTAw
 </div>
 <div class="section" id="saving-an-animation">
 <h3>Saving an Animation<a class="headerlink" href="#saving-an-animation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>To save an animation, use <code class="docutils literal notranslate"><span class="pre">anim.save()</span></code> as shown below. The inputs are the file location (<code class="docutils literal notranslate"><span class="pre">animate.gif</span></code>) and the writer used to save the file. Here the animation writer chosen is <a class="reference external" href="https://pillow.readthedocs.io/en/stable/index.html">Pillow</a>, a library for image processing in Python.</p>
+<p>To save an animation to a file, use the <code class="docutils literal notranslate"><span class="pre">save()</span></code> method of the animation variable, in this case <code class="docutils literal notranslate"><span class="pre">anim.save()</span></code>, as shown below. The arguments are the file name to save the animation to, in this case <code class="docutils literal notranslate"><span class="pre">animate.gif</span></code>, and the writer used to save the file. Here, the animation writer chosen is <a class="reference external" href="https://pillow.readthedocs.io/en/stable/index.html">Pillow</a>, a library for image processing in Python. There are many choices for an animation writer, which are described in detail in the Matplotlib writer documentation. The documentation for the Pillow writer is described on <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.animation.PillowWriter.html">this page</a>; links to other writer documentation pages are on the left side of the Pillow writer documentation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anim</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;animate.gif&#39;</span><span class="p">,</span> <span class="n">writer</span><span class="o">=</span><span class="s1">&#39;pillow&#39;</span><span class="p">);</span>
@@ -3531,14 +3531,14 @@ bwAAAB1kYXRhAAAAAQAAAABMYXZmNTkuMjcuMTAw
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
-<li><p>Matplotlib supports additional plot types.</p></li>
-<li><p>Here we covered histograms and scatter plots.</p></li>
-<li><p>You can animate your plots.</p></li>
+<li><p>Matplotlib supports many different plot types, including the less-commonly-used types described in this section.</p></li>
+<li><p>Some of these lesser-used plot types include histograms and pie charts.</p></li>
+<li><p>This section also covered animation of Matplotlib plots.</p></li>
 </ul>
 </div>
 <div class="section" id="whats-next">
 <h2>What’s Next<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p><a class="reference internal" href="annotations-colorbars-layouts.html"><span class="doc std std-doc">More plotting functionality</span></a> such as annotations, equation rendering, colormaps, and advanced layout.</p>
+<p>The next section introduces <a class="reference internal" href="annotations-colorbars-layouts.html"><span class="doc std std-doc">more plotting functionality</span></a>, such as annotations, equation rendering, colormaps, and advanced layout.</p>
 </div>
 <div class="section" id="additional-resources">
 <h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -3709,7 +3709,7 @@ bwAAAB1kYXRhAAAAAQAAAABMYXZmNTkuMjcuMTAw
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 21 March 2023.
+          Last updated on 27 March 2023.
         </p>
       </div>
     </div>
