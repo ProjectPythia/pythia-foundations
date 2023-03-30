@@ -735,12 +735,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <h2>Cloning and forking<a class="headerlink" href="#cloning-and-forking" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p><em>Cloning</em> and <em>forking</em> are two related terms in the GitHub vernacular
 that, unfortunately, are not always used consistently throughout
-the <em>web-o-sphere</em>. In Project Pythia we use the term <em>clone</em> to mean
+the <em>web-o-sphere</em>. In Project Pythia we use the term <em>clone</em> to refer to
 making a <strong>local</strong> copy of a <strong>remote</strong> repository; the source for
 the copy is a remote repo, and the destination for the copy is your
 local laptop/desktop. When working with GitHub, a <em>fork</em>, on the
-other hand, creates a copy of a GitHub repository on GitHub. I.e.
-both the source and the destination of the <em>fork</em> operations are
+other hand, creates a copy of a GitHub repository on GitHub. In other
+words, both the source and the destination of the <em>fork</em> operations are
 hosted in the cloud on GitHub. Forking is performed via your GitHub
 account. While the forked repository may be owned by anyone, the
 newly created repository will be owned by you. Cloning, on the
@@ -801,7 +801,7 @@ created ORIGIN.</p>
 <p class="admonition-title">Windows users</p>
 <p>While <code class="docutils literal notranslate"><span class="pre">git</span></code> is typically part of a Linux or Mac OS command-line shell, similar functionality must be installed if you are running Windows. Download and install the <a class="reference external" href="https://gitforwindows.org/">Git for Windows</a> package.</p>
 </div>
-<p>Now, you can <code class="docutils literal notranslate"><span class="pre">cd</span></code> into the <code class="docutils literal notranslate"><span class="pre">github-sandbox</span></code> directory which has been created and populated with the exact contents of the <strong>origin</strong>’s repository at the time you cloned it. If you have a Python installation, you could then type:</p>
+<p>Now, you can <code class="docutils literal notranslate"><span class="pre">cd</span></code> into the <code class="docutils literal notranslate"><span class="pre">github-sandbox</span></code> directory which has been created and populated with the exact contents of the <strong>origin</strong>’s repository at the time you cloned it. If you have a Python installation, you could then type</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">sample</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
@@ -809,7 +809,7 @@ created ORIGIN.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hello, Python learners!
 </pre></div>
 </div>
-<p>By virtue of cloning the repo, <em>git</em> automatically sets the URL of the <strong>origin</strong>’s repository on GitHub. You can show this by typing the following:</p>
+<p>By virtue of cloning the repo, <em>git</em> automatically registers the URL of the <strong>origin</strong>’s repository on GitHub. You can show this by typing the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
 </pre></div>
 </div>
@@ -820,23 +820,19 @@ created ORIGIN.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>This link points to where the repository “lives” on GitHub. We will use the term <strong>origin</strong> to refer to this location.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
 <p>We discuss the <code class="docutils literal notranslate"><span class="pre">git</span></code> command-line interface in the <a class="reference internal" href="basic-git.html"><span class="doc std std-doc">Basic version control with git</span></a> lesson.</p>
 </div>
-<p><strong>Congratulations!!</strong> You have now cloned a GitHub repository!</p>
-<p>Now, let’s consider the 3rd scenario for cloning … which involves the releated topic of <em>forking</em>.</p>
+<p><strong>Congratulations!</strong> You have now cloned a GitHub repository!</p>
+<p>Now, let’s consider the 3rd scenario for cloning… which involves the related topic of <em>forking</em>.</p>
 </div>
 <div class="section" id="forking-a-repository">
 <h2>Forking a repository<a class="headerlink" href="#forking-a-repository" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Forking is similar to cloning, but has a bit more involved workflow. Scenarios where forking a repo is indicated include the following:</p>
 <ol class="arabic simple">
 <li><p>You wish to collaborate on projects that are hosted on GitHub, but you are not one of that project’s <em>maintainers</em> (i.e., you do not have <em>write permissions</em> on it).</p></li>
-<li><p>You wish to experiment with changing or adding new features to a project, and do not immediately intend to <em>merge</em> them into the original project’s repo (aka, the <em>base</em> repository).</p></li>
+<li><p>You wish to experiment with changing or adding new features to a project, and do not immediately intend to <em>merge</em> them into the original project’s repo (aka, the <em>upstream</em> repository).</p></li>
 </ol>
-<p>In a fork, you first create a copy of an existing repository, but store it in your own personal GitHub organization (recall that when you create a GitHub account, the <em>organization</em> name is your GitHub user ID).</p>
+<p>In a fork, you create a copy of an existing repository, but store it in your own personal GitHub organization (recall that when you create a GitHub account, the <em>organization</em> name is your GitHub user ID).</p>
 <p>Let’s say we intend to make some changes to the <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">Project Pythia Sandbox</a> repo, that ultimately we’ll submit to the original repository as a <em>Pull request</em>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -848,7 +844,7 @@ created ORIGIN.</p>
 <p>Click on it:</p>
 <img alt="ForkDest" src="../../_images/GitHub_ForkDest.png" />
 <hr class="docutils" />
-<p>You should see your GitHub user id (if you administer any other GitHub organizations, you will see them as well). Click on your user id to complete the <em>fork</em>. After a few seconds, your browser will be redirected to the forked repo, now residing in your personal GitHub organization:</p>
+<p>You should see your GitHub user ID (if you administer any other GitHub organizations, you will see them as well). Click on your user ID to complete the <em>fork</em>. After a few seconds, your browser will be redirected to the forked repo, now residing in your personal GitHub organization:</p>
 <img alt="ForkPost" src="../../_images/GitHub_ForkPost.png" />
 <hr class="docutils" />
 <p>Notice that the <em>Fork</em> button on the upper right has incremented by one, and there is also is a line relating your fork to the original repo:</p>
@@ -859,20 +855,20 @@ created ORIGIN.</p>
 <p>We discuss <em>branches</em> in the <a class="reference internal" href="git-branches.html"><span class="doc std std-doc">Git Branches</span></a> lesson.</p>
 </div>
 <p>You now have a copy (essentially a clone) of the forked repository, which is now owned by you.</p>
-<p>You could, at this point, select one of the files in the repository and use GitHub’s built-in editor to make changes to these text-based files. But the typical use case that leverages the collaborative power of GitHub and its command-line cousin, <em>git</em>, involves <em>cloning</em> your <em>forked</em> copy of the repo to your local computer, where you can then perform your edits, and (in the case of software) test them on your system.</p>
-<p>Cloning your fork is the same as cloning the original repo. Click on the Code button, select the HTTPS protocol, copy the URL to the clipboard, and then run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;URL&gt;</span></code> on your local computer. In this case, you will need to either run this command in a different directory or rename the destination directory with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;URL&gt;</span> <span class="pre">&lt;directory-name&gt;</span></code>, since it will by default use the name of the repo, <code class="docutils literal notranslate"><span class="pre">github-sandbox</span></code>.</p>
+<p>You could, at this point, select one of the files in the repository and use GitHub’s built-in editor to make changes to these text-based files. However, the typical use case that leverages the collaborative power of GitHub and its command-line cousin, <em>git</em>, involves <em>cloning</em> your <em>forked</em> copy of the repo to your local computer, where you can then perform your edits, and (in the case of software) test them on your system.</p>
+<p>Cloning your fork is the same as cloning the original repo. Click on the Code button, select the HTTPS protocol, copy the URL to the clipboard, and then run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;URL&gt;</span></code> on your local computer. In this case, you will need to either run this command in a different directory, or rename the destination directory with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;URL&gt;</span> <span class="pre">&lt;directory-name&gt;</span></code>, since it will by default use the name of the repo, <code class="docutils literal notranslate"><span class="pre">github-sandbox</span></code>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Unlike cloning, forking is not an option supported by the <em>git</em> command-line interface. I.e., <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fork</span></code> is not a valid command.</p>
+<p>Unlike cloning, forking is not an option supported by the <em>git</em> command-line interface. In other words, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fork</span></code> is not a valid command.</p>
 </div>
 <p>Once you’ve cloned the fork to your local machine, try running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code> again. You will see that the <em>origin</em> URL now points to your GitHub account or organization.</p>
-<p><em>The main purpose of cloning and forking a remote repository is so that you can make changes to the contents of those repositories in a safe and version-controller manner.</em> The process of making changes and submitting them as <em>Pull Requests</em> to the original repository is covered in our lesson on <a class="reference internal" href="github-pull-request.html"><span class="doc std std-doc">Opening a Pull Request on GitHub</span></a>, but the workflow is as follows:</p>
+<p><em>The main purpose of cloning and forking a remote repository is so that you can make changes to the contents of those repositories in a safe and version-controlled manner.</em> The process of making changes and submitting them as <em>Pull Requests</em> to the original repository is covered in our lesson on <a class="reference internal" href="github-pull-request.html"><span class="doc std std-doc">Opening a Pull Request on GitHub</span></a>, but the workflow is as follows:</p>
 <ol class="arabic simple">
 <li><p>Edit an existing file or files, and/or create new files.</p></li>
 <li><p>Stage your changes by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>.</p></li>
 <li><p>Commit your changes by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p></li>
 <li><p>(If you created a fork): Push your changes to your <em>fork</em> by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.</p></li>
-<li><p>(If you did not create a fork): Push your changes to the <em>base</em> repo by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>. This assumes you have write permissions on the base repo.</p></li>
+<li><p>(If you did not create a fork): Push your changes to the <em>upstream</em> repository by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>. This assumes you have write permissions on the <em>upstream</em> repository.</p></li>
 <li><p>In GitHub, create a <em>Pull request</em>.</p></li>
 </ol>
 </div>
@@ -883,14 +879,14 @@ created ORIGIN.</p>
 <li><p>The process of making a <strong>local</strong> copy of a GitHub repository is called <em>cloning</em>. The destination for the cloned copy is whatever machine you ran the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> command from.</p></li>
 <li><p><em>Forking</em> a repository also makes a copy of a GitHub repo, but places it in your GitHub organization in the GitHub.com cloud.</p></li>
 <li><p>Forking allows you to modify a remote repo, without affecting the original version.</p></li>
-<li><p>After cloning your fork to your local computer, you can meke changes to your copy, which you can then submit to the original repo as a <a class="reference internal" href="github-pull-request.html"><span class="doc std std-doc"><em>Pull request</em></span></a>.</p></li>
+<li><p>After cloning your fork to your local computer, you can make changes to your copy, which you can then submit to the original repo as a <a class="reference internal" href="github-pull-request.html"><span class="doc std std-doc"><em>Pull request</em></span></a>.</p></li>
 </ul>
 </div>
 <div class="section" id="things-to-try">
 <h2>Things to try<a class="headerlink" href="#things-to-try" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p>Clone another GitHub-hosted repository that is of interest to you.</p></li>
-<li><p>Then try creating a fork of that repository.</p></li>
+<li><p>Try creating a fork of that repository.</p></li>
 </ul>
 <div class="section" id="whats-next">
 <h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
@@ -1065,7 +1061,7 @@ created ORIGIN.</p>
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 27 March 2023.
+          Last updated on 30 March 2023.
         </p>
       </div>
     </div>

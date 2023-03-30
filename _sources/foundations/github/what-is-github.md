@@ -9,7 +9,7 @@
 
 1.  What is GitHub?
 1.  No experience necessary!
-1.  Free- and open-source software (FOSS)
+1.  Free and open-source software (FOSS)
 1.  Version control systems (VCS)
 1.  GitHub = FOSS + VCS + Web
 1.  Register for a free GitHub account
@@ -26,30 +26,30 @@
 
 ## What is GitHub?
 
-[GitHub](https://github.com) is a web-based platform for the dissemination of free- and open-source software.
+[GitHub](https://github.com) is a web-based platform for the dissemination of free and open-source software.
 
 If you are reading this lesson, you are already using GitHub, as that is where Project Pythia hosts its content!
 
 GitHub provides the following:
 
-1. _Version control_ for free- and open-source software and other digital assets
+1. _Version control_ for free and open-source software and other digital assets
 1. Project _discussion forums_
 1. _DevOps_ to facilitate building and testing software
 1. _Bug_ reporting, patching, and tracking
 1. _Documentation_ hosting
 1. An environment that fosters _collaboration_
 
-Although GitHub can host any digital asset, the most common use case for GitHub is for individuals or organizations to house _repositories_ of _free-_ and _open-source software_:
+Although GitHub can host any digital asset, the most common use case for GitHub is for individuals or organizations to house _repositories_ of _free_ and _open-source software_:
 
 ## No experience necessary!
 
 You do not need to be an experienced software developer or be proficient in version control to make use of GitHub! Perhaps, though, you have used a particular package (e.g., Xarray or Matplotlib) and have had questions about its usage, noticed a bug, or had an idea for a new feature for the package! You can participate in a project's development via GitHub the same way you might have interacted with its developers via email in the past.
 
-## Free- and open-source software (FOSS)
+## Free and open-source software (FOSS)
 
-Much of what we term the _scientific Python software ecosystem_ consists of _free- and open-source software_. Often abbreviated as **FOSS**, this means:
+Much of what we term the _scientific Python software ecosystem_ consists of _free and open-source software_. Often abbreviated as **FOSS**, this means:
 
-1.  The software is free-of-charge, and
+1.  The software is free of charge, and
 1.  The various files which contain the _software code_ are publicly available.
 
 ```{admonition} Did you know?
@@ -107,10 +107,10 @@ The above screenshot is from <i>one moment in time</i>. When you visit the Xarra
 While one can freely browse GitHub repositories such as Xarray anonymously, it's necessary to log into a unique (and free) user account in order to take advantage of GitHub's full capabilities, such as:
 
 1. Opening Issues and Pull Requests
-1. Participate in Discussions
-1. Host your own repository
+1. Participating in Discussions
+1. Hosting your own repository
 
-Your next step (if you haven't already) should be to register for your free GitHub account. As with many online services, you will choose a user id, password, and specify an email address to use with your account.
+Your next step (if you haven't already) should be to register for your free GitHub account. As with many online services, you will specify a user ID, password, and email address to use with your account.
 
 To do so, simply point your browser to the [GitHub sign-up page](https://github.com/join):
 

@@ -728,7 +728,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="github-issues.html"><span class="doc std std-doc">Issues and Discussions</span></a></p></td>
-<td><p>Recommeneded</p></td>
+<td><p>Recommended</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="github-cloning-forking.html"><span class="doc std std-doc">Cloning and Forking a Repository</span></a></p></td>
@@ -738,21 +738,21 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </tbody>
 </table>
 <ul class="simple">
-<li><p><strong>Time to learn</strong>: 15 minutes</p></li>
+<li><p><strong>Time to learn</strong>: 35 minutes</p></li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="github-secure-key-generation">
 <h2>GitHub secure key generation<a class="headerlink" href="#github-secure-key-generation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>When you signed up for your free account on <a class="reference external" href="https://github.com">GitHub</a>, you established a <em>user id</em> and its corresponding <em>password</em>. Many of the repositories that GitHub serves are readable from anywhere, not even requiring a GitHub account.</p>
-<p>However, especially when you use the <code class="docutils literal notranslate"><span class="pre">git</span></code> command-line interface to access a GitHub-hosted repo, there are cases when you need to provide an additional set of login credentials, such as:</p>
+<p>When you signed up for your free account on <a class="reference external" href="https://github.com">GitHub</a>, you established a <em>user ID</em> and its corresponding <em>password</em>. Many of the repositories that GitHub serves are readable from anywhere, not even requiring a GitHub account.</p>
+<p>However, especially when you use the git command-line interface to access a GitHub-hosted repo, there are cases when you need to provide an additional set of login credentials. Some of these cases are:</p>
 <ol class="arabic simple">
 <li><p>When you want to clone a <em>private</em>, as opposed to <em>public</em> GitHub repository (<strong>read-access</strong>)</p></li>
 <li><p>When you wish to <em>push</em> to a repo (<strong>write-access</strong>)</p></li>
 </ol>
-<p>For these use-cases, you won’t be able to simply type your GitHub user id and password from the command line. Instead, you need to set up <em>access tokens</em> that live in two places: in your GitHub account, and in your local computer’s file system.</p>
-<p>GitHub supports two means of key-based access: via <em>https</em> and <em>ssh</em>.</p>
-<p>For example, one can clone <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">Project Pythia’s Sandbox repository</a> using one URL for the https protocol:</p>
+<p>For these use-cases, you won’t be able to simply type your GitHub user ID and password from the command line. Instead, you need to set up <em>access tokens</em> that live in two places: in your GitHub account, and in your local computer’s file system.</p>
+<p>GitHub supports two means of key-based access: via <em>https</em>, and via <em>ssh</em>.</p>
+<p>For example, one can clone <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">Project Pythia’s Sandbox repository</a> using a URL for the https protocol:</p>
 <a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_https_URL.png"><img alt="GitHub Clone https" src="../../_images/GitHub_Setup_Advanced_https_URL.png" style="width: 600px;" /></a>
 <hr class="docutils" />
 <p>The URL in this case is <strong>https://github.com/ProjectPythia/github-sandbox.git</strong></p>
@@ -790,7 +790,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <p>In keeping with the social network aspect of GitHub, you can <em>follow</em> particular repositories that are of interest to you. Additionally, once you begin contributing to a repository, you may wish to be notified when Pull Requests are made, Issues are posted, your code review is requested, and so on. While it’s easy to have GitHub email you at the address you used when you registered for your GitHub account, you may wish to avoid email clutter.</p>
 <div class="section" id="email-notifications">
 <h3>Email notifications<a class="headerlink" href="#email-notifications" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>Let’s say you wish to monitor (or <em>watch</em>) the Project Pythia GitHub Sandbox repository and receive emails about it:</p>
+<p>Let’s say you wish to monitor (or <em>watch</em>) the Project Pythia GitHub Sandbox repository and receive emails about it.</p>
 <p>Click on the <strong>Watch</strong> link near the top of the page:</p>
 <a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Watch.png"><img alt="GitHub Watch" src="../../_images/GitHub_Setup_Advanced_Watch.png" style="width: 600px;" /></a>
 <hr class="docutils" />
@@ -805,14 +805,14 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="stop-spamming-me-github">
 <h2>Stop spamming me, GitHub!<a class="headerlink" href="#stop-spamming-me-github" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>It’s easy to become overwhelmed with email from one or more repos that you are following and/or participating in! Instead, you may wish to disable email notifications.
-In order to set you notification settings, go to <strong>https://github/settings/notifications</strong>. You can, for example, uncheck the <strong>Email</strong> boxes to cease receiving notifications that way:</p>
+<p>It’s easy to become overwhelmed with email from one or more repos that you are following and/or participating in! In this case, you may wish to disable email notifications.
+In order to set your notification settings, go to <strong>https://github.com/settings/notifications</strong>. You can, for example, uncheck the <strong>Email</strong> boxes to cease receiving notifications that way:</p>
 <a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notification_Settings.png"><img alt="GitHub Notification Settings" src="../../_images/GitHub_Setup_Advanced_Notification_Settings.png" style="width: 600px;" /></a>
 <hr class="docutils" />
-<p>Instead, get in the habit of clicking on the <em>Notifications</em> icon when logged into GitHub:</p>
+<p>If you turn email notifications off, get in the habit of clicking on the <em>Notifications</em> icon when logged into GitHub:</p>
 <a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notifications.png"><img alt="GitHub Notifications" src="../../_images/GitHub_Setup_Advanced_Notifications.png" style="width: 600px;" /></a>
 <hr class="docutils" />
-<p>You can click on the <em>Notifications</em> icon and scroll through all notifications from repos that you opted into receiving:</p>
+<p>You can click on the <em>Notifications</em> icon and scroll through all notifications from repos that you opted into receiving notifications from:</p>
 <a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notifications_Browser.png"><img alt="GitHub Notification Browser" src="../../_images/GitHub_Setup_Advanced_Notifications_Browser.png" style="width: 600px;" /></a>
 <hr class="docutils" />
 <p>Use the <em>Filter notifications</em> control to display only those that meet certain criteria. For example, say you only wanted to view topics related to the <em>MetPy</em> repo:</p>
@@ -1005,7 +1005,7 @@ In order to set you notification settings, go to <strong>https://github/settings
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 27 March 2023.
+          Last updated on 30 March 2023.
         </p>
       </div>
     </div>

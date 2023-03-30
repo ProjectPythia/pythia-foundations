@@ -724,14 +724,14 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <hr class="docutils" />
 <div class="section" id="what-are-packages">
 <h2>What are Packages?<a class="headerlink" href="#what-are-packages" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>A Python package is a collection of modules, which in turn, are essentially Python scripts that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules.</p>
+<p>A Python package is a collection of modules, which, in turn, are essentially Python scripts that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules.</p>
 <p>Package management is useful because you may want to update a package for one of your projects, but keep it at the same version in other projects to ensure that they continue to run as expected.</p>
 </div>
 <div class="section" id="installing-conda">
 <h2>Installing Conda<a class="headerlink" href="#installing-conda" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>We recommend you install Miniconda. You can do that by following the <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">instructions for you machine</a>.</p>
+<p>We recommend you install Miniconda. You can do that by following the <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">instructions for your machine</a>.</p>
 <p>Miniconda only comes with the <code class="docutils literal notranslate"><span class="pre">conda</span></code> package management system; it is a pared-down version of the full Anaconda Python distribution.</p>
-<p><a class="reference external" href="https://docs.anaconda.com/anaconda/install/">Installing Anaconda</a> takes longer and takes up more disk space, but provides you with more functionality: Jupyter, Spyder (a Python-specific integrated development platform or IDE), as well as other immediately installed packages. The interface of Anaconda is great if you are uncomfortable with the terminal.</p>
+<p><a class="reference external" href="https://docs.anaconda.com/anaconda/install/">Installing Anaconda</a> takes longer and uses up more disk space, but provides you with more functionality, including Spyder (a Python-specific integrated development environment or IDE) and Jupyter, in addition to other immediately installed packages. Also, the interface of Anaconda is great if you are uncomfortable with the terminal.</p>
 <p>We recommend Miniconda for two reasons:</p>
 <ol class="arabic simple">
 <li><p>It’s quicker and takes up less disk space.</p></li>
@@ -741,13 +741,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="creating-a-conda-environment">
 <h2>Creating a Conda Environment<a class="headerlink" href="#creating-a-conda-environment" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>A conda environment is an interoperable collection of specific versions of packages or libraries that you install and use for a specific workflow. The conda package manager takes care of dependencies so everything works together in a predictable way. One huge advantage of using environments is that any changes you make to one environment will not affect your other environments at all, so you are much less likely to “break” something!</p>
+<p>A Conda environment is an interoperable collection of specific versions of packages or libraries that you install and use for a specific workflow. The Conda package manager takes care of dependencies, so everything works together in a predictable way. One huge advantage of using environments is that any changes you make to one environment will not affect your other environments at all, so you are much less likely to “break” something!</p>
 <p>To create a new Conda environment, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--name</span></code> and the name of your environment in your terminal, and then specify any packages that you would like to have installed. For example, to install a Jupyter-ready environment called <code class="docutils literal notranslate"><span class="pre">sample_environment</span></code>, type</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">sample_environment</span> <span class="n">python</span> <span class="n">jupyterlab</span>
 </pre></div>
 </div>
-<p>Once the environment is created, you need to <em>activate</em> it in the current terminal session (see below)</p>
-<p>It is a good idea to create new environments for different projects because since Python is open source, new versions of the tools are released very frequently. Isolated environments help guarantee that your script will use the same versions of packages and libraries and should run the same as you expect it to. Similarly, it is best practice to NOT modify your <code class="docutils literal notranslate"><span class="pre">base</span></code> environment.</p>
+<p>Once the environment is created, you need to <em>activate</em> it in the current terminal session (see below).</p>
+<p>It is a good idea to create a new environment for every project. Because Python is open source, new versions of the tools are released frequently. Isolated environments help guarantee that your scripts use the same versions of packages and libraries to ensure they run as expected. Similarly, it is best practice to NOT modify your <code class="docutils literal notranslate"><span class="pre">base</span></code> environment.</p>
 </div>
 <div class="section" id="useful-conda-commands">
 <h2>Useful Conda commands<a class="headerlink" href="#useful-conda-commands" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -771,13 +771,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Installing a new package into current environment</p></li>
+<li><p>Installing a new package into the current environment</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">somepackage</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Installing a specific version of a package into current environment</p></li>
+<li><p>Installing a specific version of a package into the current environment</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">somepackage</span><span class="o">=</span><span class="mf">0.17</span>
 </pre></div>
@@ -800,13 +800,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">remove</span> <span class="o">--</span><span class="n">name</span> <span class="n">sample_environment</span>
 </pre></div>
 </div>
-<p>Lots more information is in the <a class="reference external" href="https://docs.conda.io/">conda documentation</a> or this handy <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf">conda cheat sheet</a></p>
+<p>You can find lots more information in the <a class="reference external" href="https://docs.conda.io/en/latest/">Conda documentation</a> or this handy <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf">Conda cheat sheet</a>.</p>
 <p>If you’re not a command line user, the Anaconda navigator offers GUI functionality for selecting environments and installing packages.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Conda is a package and environment management system that allows you to quickly install, run, and update packages within your work environment(s). This is important for gathering all of the tools necessary for your workflow. Conda can be managed in the command line or in the Anacond GUI.</p>
+<p>Conda is a package and environment management system that allows you to quickly install, run, and update packages within your work environment(s). This is important for gathering all of the tools necessary for your workflow. Conda can be managed in the command line or in the Anaconda GUI.</p>
 <div class="section" id="whats-next">
 <h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <ul class="simple">
@@ -819,8 +819,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://cheatography.com/davechild/cheat-sheets/linux-command-line/">Linux commands</a></p></li>
-<li><p><a class="reference external" href="https://docs.conda.io/">conda documentation</a></p></li>
-<li><p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf">conda cheat sheet</a></p></li>
+<li><p><a class="reference external" href="https://docs.conda.io/en/latest/">Conda documentation</a></p></li>
+<li><p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf">Conda cheat sheet</a></p></li>
 <li><p><a class="reference external" href="https://docs.anaconda.com/anaconda/install/">Anaconda</a></p></li>
 <li><p><a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a></p></li>
 </ul>
@@ -986,7 +986,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 27 March 2023.
+          Last updated on 30 March 2023.
         </p>
       </div>
     </div>
