@@ -41,7 +41,7 @@ $ conda activate pythia_foundations_env
 $ jupyter lab
 ```
 
-Or you can install the full [Anaconda](https://www.anaconda.com/products/individual), and select **LAUNCH** under the Jupyter panel in the GUI.
+Or you can install the full [Anaconda](https://www.anaconda.com/products/distribution), and select **LAUNCH** under the Jupyter panel in the GUI.
 
 ![Anaconda Navigator](../images/Anaconda.png)
 

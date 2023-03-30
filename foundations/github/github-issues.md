@@ -39,10 +39,10 @@ of _Discussions_.
 
 In the text below we discuss _Issues_ in more detail, followed by
 a discussion on Discussions. Keep in mind that when initiating a
-conversation on GitHub it is often unclear whether something is
+conversation on GitHub, it is often unclear whether something is
 more suited as an _Issue_ or a _Discussion_. We, the creators of
-Project Pythia, struggle ourselves. If you’re not sure, simply pick
-one. Fortunately, the GitHub developers recognized this dilemma and
+Project Pythia, struggle with this ourselves. If you’re not sure, simply pick
+one. Fortunately, the GitHub developers recognized this dilemma, and
 made it easy to convert _Issues_ into _Discussions_ and vice versa.
 
 ## Issues
@@ -63,7 +63,7 @@ Let's now examine [Issue \#144](https://github.com/ProjectPythia/pythia-foundati
 
 As you can see, some broken links were found in one of the Pythia Foundations tutorials, likely because the site being linked recently had its structure changed. An additional comment was added, as well as a label to help filtering/sorting Issues by topic. We then see that this issue was mentioned (by typing the issue number) elsewhere in the repository. In this case, it was mentioned in [Pull Request \#145](https://github.com/ProjectPythia/pythia-foundations/pull/145), which makes the changes to fix the issue. We can also see that the PR has been merged, which means the changes have been incorporated into the main branch of the code.
 
-Like this example, Issues can notify others of bugs or typos, but they can also be used as "calls to action", whether you plan on addressing the issue yourself or are hoping that someone else will be interested in making the changes. Issues [\#97](https://github.com/ProjectPythia/pythia-foundations/issues/97) and [\#98](https://github.com/ProjectPythia/pythia-foundations/issues/98) are examples of this, in which ideas for changes are proposed and then addressed at a later time.
+Like this example, Issues can notify others of bugs or typos, but they can also be used as "calls to action", whether you plan on addressing the issue yourself, or are hoping that someone else will be interested in making the changes. Issues [\#97](https://github.com/ProjectPythia/pythia-foundations/issues/97) and [\#98](https://github.com/ProjectPythia/pythia-foundations/issues/98) are examples of this, in which ideas for changes are proposed and then addressed at a later time.
 
 A new issue can be opened by pressing the "New issue" button on the top right of the Issues page. Depending on the repository, you may be prompted to choose from a template, or you may just see title and text boxes to fill out.
 
@@ -79,7 +79,7 @@ Let's take a look at [Discussion \#156](https://github.com/ProjectPythia/pythia-
 
 This discussion brings up a resource relevant to the repository that could help others, but it is not suggesting a change like an issue would. Other Discussions might include announcements, Q&A, or general thoughts about the repository.
 
-GitHub also makes it simple to reference a Discussion in an Issue (and vice-verse),
+GitHub also makes it simple to reference a Discussion in an Issue (and vice versa),
 which can help provide background and context for a piece of work.
 
 ---
@@ -89,7 +89,7 @@ which can help provide background and context for a piece of work.
 - GitHub provides Issues and Discussions to facilitate collaboration.
 - Issues are specific and actionable, while Discussions are open-ended.
 - If you want to discuss a topic and you're not sure if it is an Issue
-  or a Discussion, just pick one. It will be ok:-)
+  or a Discussion, just pick one. It will be okay. :-)
 
 ### What's Next?
 
