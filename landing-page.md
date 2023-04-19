@@ -2,6 +2,8 @@
 
 ## A community learning resource for Python-based computing in the geosciences
 
+**IGNORE ME**
+
 <img src="images/pretty-earth.png" alt="Pretty Earth" width="600px">
 
 This collection covers the foundational skills everyone needs to get started with scientific computing in the open-source Python ecosystem.
