@@ -873,11 +873,11 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <h2>The pandas <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/dsintro.html#dataframe"><code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a>…<a class="headerlink" href="#the-pandas-dataframe" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>…is a <strong>labeled</strong>, two-dimensional columnar structure, similar to a table, spreadsheet, or the R <code class="docutils literal notranslate"><span class="pre">data.frame</span></code>.</p>
 <p><img alt="dataframe schematic" src="https://github.com/pandas-dev/pandas/raw/main/doc/source/_static/schemas/01_table_dataframe.svg" /></p>
-<p>The <code class="docutils literal notranslate"><span class="pre">columns</span></code> that make up our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be lists, dictionaries, NumPy arrays, pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code>, or many other data types not mentioned here. Within these <code class="docutils literal notranslate"><span class="pre">columns</span></code>, you can have data values of many different data types used in Python and NumPy, including text, numbers, and dates/times. The first column of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, shown in the image above in dark gray, is uniquely referred to as an <code class="docutils literal notranslate"><span class="pre">index</span></code>; this column contains information characterizing each row of our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. Similar to any other <code class="docutils literal notranslate"><span class="pre">column</span></code>, the <code class="docutils literal notranslate"><span class="pre">index</span></code> can label rows by text, numbers, datetime objects, and many other data types.  Datetime objects are a quite popular way to label rows.</p>
-<p>For our first example using Pandas DataFrames, we start by reading in some data in comma-separated value (<code class="docutils literal notranslate"><span class="pre">.csv</span></code>) format.  We retrieve this dataset from the Pythia DATASETS class (imported at the top of this page); however, the dataset was originally contained within the NCDC teleconnections database.  This dataset contains many types of geoscientific data, including El Nino/Southern Oscillation indices.  For more information on this dataset, review the description <a class="reference external" href="https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/">here</a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">columns</span></code> that make up our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be lists, dictionaries, NumPy arrays, pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code>, or many other data types not mentioned here. Within these <code class="docutils literal notranslate"><span class="pre">columns</span></code>, you can have data values of many different data types used in Python and NumPy, including text, numbers, and dates/times. The first column of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, shown in the image above in dark gray, is uniquely referred to as an <code class="docutils literal notranslate"><span class="pre">index</span></code>; this column contains information characterizing each row of our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. Similar to any other <code class="docutils literal notranslate"><span class="pre">column</span></code>, the <code class="docutils literal notranslate"><span class="pre">index</span></code> can label rows by text, numbers, datetime objects, and many other data types. Datetime objects are a quite popular way to label rows.</p>
+<p>For our first example using Pandas DataFrames, we start by reading in some data in comma-separated value (<code class="docutils literal notranslate"><span class="pre">.csv</span></code>) format. We retrieve this dataset from the Pythia DATASETS class (imported at the top of this page); however, the dataset was originally contained within the NCDC teleconnections database. This dataset contains many types of geoscientific data, including El Nino/Southern Oscillation indices. For more information on this dataset, review the description <a class="reference external" href="https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/">here</a>.</p>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Info</p>
-<p>As described above, we are retrieving the datasets for these examples from Project Pythia’s custom library of example data.  In order to retrieve datasets from this library, you must use the statement <code>from pythia_datasets import DATASETS</code>. This is shown and described in the Imports section at the top of this page. The <code>fetch()</code> method of the <code>DATASETS</code> class will automatically download the data file specified as a string argument, in this case <code>enso_data.csv</code>, and cache the file locally, assuming the argument corresponds to a valid Pythia example dataset.  This is illustrated in the following example.</p>
+<p>As described above, we are retrieving the datasets for these examples from Project Pythia’s custom library of example data. In order to retrieve datasets from this library, you must use the statement <code>from pythia_datasets import DATASETS</code>. This is shown and described in the Imports section at the top of this page. The <code>fetch()</code> method of the <code>DATASETS</code> class will automatically download the data file specified as a string argument, in this case <code>enso_data.csv</code>, and cache the file locally, assuming the argument corresponds to a valid Pythia example dataset. This is illustrated in the following example.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -899,7 +899,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 </div>
-<p>If we print out our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, it will render as text by default, in a tabular-style ASCII output, as shown in the following example.  However, if you are using a Jupyter notebook, there exists a better way to print <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code>, as described below.</p>
+<p>If we print out our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, it will render as text by default, in a tabular-style ASCII output, as shown in the following example. However, if you are using a Jupyter notebook, there exists a better way to print <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code>, as described below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -938,7 +938,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 </div>
-<p>As described above, there is a better way to print Pandas <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code>.  If you are using a Jupyter notebook, you can run a code cell containing the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object name, by itself, and it will display a nicely rendered table, as shown below.</p>
+<p>As described above, there is a better way to print Pandas <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code>. If you are using a Jupyter notebook, you can run a code cell containing the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object name, by itself, and it will display a nicely rendered table, as shown below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
@@ -1126,7 +1126,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 </div>
-<p>At the moment, the index column of our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> is not very helpful for humans.  However, Pandas has clever ways to make index columns more human-readable. The next example demonstrates how to use optional keyword arguments to convert <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> index IDs to a human-friendly datetime format.</p>
+<p>At the moment, the index column of our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> is not very helpful for humans. However, Pandas has clever ways to make index columns more human-readable. The next example demonstrates how to use optional keyword arguments to convert <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> index IDs to a human-friendly datetime format.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1321,7 +1321,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 </div>
-<p>Each of our data rows is now helpfully labeled by a datetime-object-like index value; this means that we can now easily identify data values not only by named columns, but also by date labels on rows. This is a sneak preview of the <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code> functionality of Pandas; this functionality enables a large portion of Pandas’ timeseries-related usage. Don’t worry; <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code> will be discussed in full detail later on this page.  In the meantime, let’s look at the columns of data read in from the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file:</p>
+<p>Each of our data rows is now helpfully labeled by a datetime-object-like index value; this means that we can now easily identify data values not only by named columns, but also by date labels on rows. This is a sneak preview of the <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code> functionality of Pandas; this functionality enables a large portion of Pandas’ timeseries-related usage. Don’t worry; <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code> will be discussed in full detail later on this page. In the meantime, let’s look at the columns of data read in from the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
@@ -1339,7 +1339,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="the-pandas-series">
 <h2>The pandas <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/dsintro.html#series"><code class="docutils literal notranslate"><span class="pre">Series</span></code></a>…<a class="headerlink" href="#the-pandas-series" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>…is essentially any one of the columns of our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.  A <code class="docutils literal notranslate"><span class="pre">Series</span></code> also includes the index column from the source <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, in order to provide a label for each value in the <code class="docutils literal notranslate"><span class="pre">Series</span></code>.</p>
+<p>…is essentially any one of the columns of our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. A <code class="docutils literal notranslate"><span class="pre">Series</span></code> also includes the index column from the source <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, in order to provide a label for each value in the <code class="docutils literal notranslate"><span class="pre">Series</span></code>.</p>
 <p><img alt="pandas Series" src="https://github.com/pandas-dev/pandas/raw/main/doc/source/_static/schemas/01_table_series.svg" /></p>
 <p>The pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> is a fast and capable 1-dimensional array of nearly any data type we could want, and it can behave very similarly to a NumPy <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> or a Python <code class="docutils literal notranslate"><span class="pre">dict</span></code>. You can take a look at any of the <code class="docutils literal notranslate"><span class="pre">Series</span></code> that make up your <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, either by using its column name and the Python <code class="docutils literal notranslate"><span class="pre">dict</span></code> notation, or by using dot-shorthand with the column name:</p>
 <div class="cell docutils container">
@@ -1367,7 +1367,7 @@ Name: Nino34, Length: 472, dtype: float64
 </div>
 </div>
 <div class="alert alert-block alert-info">
-<b>Tip:</b> You can also use the dot notation illustrated below to specify a column name, but this syntax is mostly provided for convenience.  For the most part, this notation is interchangeable with the dictionary notation; however, if the column name is not a valid Python identifier (e.g., it starts with a number or space), you cannot use dot notation.</div><div class="cell docutils container">
+<b>Tip:</b> You can also use the dot notation illustrated below to specify a column name, but this syntax is mostly provided for convenience. For the most part, this notation is interchangeable with the dictionary notation; however, if the column name is not a valid Python identifier (e.g., it starts with a number or space), you cannot use dot notation.</div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Nino34</span>
 </pre></div>
@@ -1480,7 +1480,7 @@ Name: Nino34, dtype: float64
 <p class="admonition-title">Info</p>
 <p>Index-based slices are <b>exclusive</b> of the final value, similar to Python’s usual indexing rules.</p>
 </div>
-<p>However, there are many more ways to index a <code class="docutils literal notranslate"><span class="pre">Series</span></code>.  The following example shows a powerful and useful indexing method:</p>
+<p>However, there are many more ways to index a <code class="docutils literal notranslate"><span class="pre">Series</span></code>. The following example shows a powerful and useful indexing method:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="p">[</span><span class="s2">&quot;1982-01-01&quot;</span><span class="p">:</span><span class="s2">&quot;1982-12-01&quot;</span><span class="p">]</span>
@@ -1511,7 +1511,7 @@ Name: Nino34, dtype: float64
 <p class="admonition-title">Info</p>
 <p>As opposed to index-based slices, label-based slices are <b>inclusive</b> of the final value.</p>
 </div>
-<p>If you already have some knowledge of xarray, you will quite likely know how to create <code class="docutils literal notranslate"><span class="pre">slice</span></code> objects by hand.  This can also be used in pandas, as shown below.  If you are completely unfamiliar with xarray, it will be covered on a <a class="reference internal" href="../xarray.html"><span class="doc std std-doc">later Pythia tutorial page</span></a>.</p>
+<p>If you already have some knowledge of xarray, you will quite likely know how to create <code class="docutils literal notranslate"><span class="pre">slice</span></code> objects by hand. This can also be used in pandas, as shown below.  If you are completely unfamiliar with xarray, it will be covered on a <a class="reference internal" href="../xarray.html"><span class="doc std std-doc">later Pythia tutorial page</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="p">[</span><span class="nb">slice</span><span class="p">(</span><span class="s2">&quot;1982-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;1982-12-01&quot;</span><span class="p">)]</span>
@@ -1540,7 +1540,7 @@ Name: Nino34, dtype: float64
 </div>
 <div class="section" id="using-iloc-and-loc-to-index">
 <h3>Using <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> and <code class="docutils literal notranslate"><span class="pre">.loc</span></code> to index<a class="headerlink" href="#using-iloc-and-loc-to-index" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>In this section, we introduce ways to access data that are preferred by Pandas over the methods listed above. When accessing by label, it is preferred to use the <code class="docutils literal notranslate"><span class="pre">.loc</span></code> method, and when accessing by index, the <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> method is preferred. These methods behave similarly to the notation introduced above, but provide more speed, security, and rigor in your value selection.  Using these methods can also help you avoid <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/indexing.html#returning-a-view-versus-a-copy">chained assignment warnings</a> generated by pandas.</p>
+<p>In this section, we introduce ways to access data that are preferred by Pandas over the methods listed above. When accessing by label, it is preferred to use the <code class="docutils literal notranslate"><span class="pre">.loc</span></code> method, and when accessing by index, the <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> method is preferred. These methods behave similarly to the notation introduced above, but provide more speed, security, and rigor in your value selection. Using these methods can also help you avoid <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/indexing.html#returning-a-view-versus-a-copy">chained assignment warnings</a> generated by pandas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
@@ -1673,7 +1673,7 @@ Name: Nino34, dtype: float64
 </div>
 <div class="admonition alert alert-danger">
 <p class="admonition-title">Danger</p>
-<p>Attempting to use <code>Series</code> subsetting with a <code>DataFrame</code> can crash your program.  A proper way to subset a <code>DataFrame</code> is shown below.</p>
+<p>Attempting to use <code>Series</code> subsetting with a <code>DataFrame</code> can crash your program. A proper way to subset a <code>DataFrame</code> is shown below.</p>
 </div>
 <p>When indexing a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, pandas will not assume as readily the intention of your code. In this case, using a row label by itself will not work; <strong>with <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code>, labels are used for identifying columns</strong>.</p>
 <div class="cell docutils container">
@@ -1778,7 +1778,7 @@ Name: Nino34, Length: 472, dtype: float64
 </div>
 </div>
 </div>
-<p>However, subsetting data using this chained-bracket technique is not preferred by Pandas.  As described above, Pandas prefers us to use the <code class="docutils literal notranslate"><span class="pre">.loc</span></code> and <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> methods for subsetting.  In addition, these methods provide a clearer, more efficient way to extract specific data from a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, as illustrated below:</p>
+<p>However, subsetting data using this chained-bracket technique is not preferred by Pandas. As described above, Pandas prefers us to use the <code class="docutils literal notranslate"><span class="pre">.loc</span></code> and <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> methods for subsetting.  In addition, these methods provide a clearer, more efficient way to extract specific data from a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, as illustrated below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;1982-04-01&quot;</span><span class="p">,</span> <span class="s2">&quot;Nino34&quot;</span><span class="p">]</span>
@@ -2335,7 +2335,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Info</p>
-<p>There are certain limitations to these subsetting techniques.  For more information on these limitations, as well as a comparison of <code>DataFrame</code> and <code>Series</code> indexing methods, see the <a href="https://pandas.pydata.org/docs/user_guide/indexing.html">Pandas indexing documentation.</a></p>
+<p>There are certain limitations to these subsetting techniques. For more information on these limitations, as well as a comparison of <code>DataFrame</code> and <code>Series</code> indexing methods, see the <a href="https://pandas.pydata.org/docs/user_guide/indexing.html">Pandas indexing documentation.</a></p>
 </div>
 </div>
 </div>
@@ -2571,7 +2571,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <p>Before, we called <code class="docutils literal notranslate"><span class="pre">.plot()</span></code>, which generated a single line plot. Line plots can be helpful for understanding some types of data, but there are other types of data that can be better understood with different plot types. For example, if your data values form a distribution, you can better understand them using a histogram plot.</p>
-<p>The code for plotting histogram data differs in two ways from the code above for the line plot.  First, two series are being used from the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> instead of one.  Second, after calling the <code class="docutils literal notranslate"><span class="pre">plot</span></code> method, we call an additional method called <code class="docutils literal notranslate"><span class="pre">hist</span></code>, which converts the plot into a histogram.</p>
+<p>The code for plotting histogram data differs in two ways from the code above for the line plot. First, two series are being used from the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> instead of one.  Second, after calling the <code class="docutils literal notranslate"><span class="pre">plot</span></code> method, we call an additional method called <code class="docutils literal notranslate"><span class="pre">hist</span></code>, which converts the plot into a histogram.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Nino12&#39;</span><span class="p">,</span> <span class="s1">&#39;Nino34&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span>
@@ -2593,10 +2593,10 @@ Name: 1982-04-01 00:00:00, dtype: float64
 <img alt="../../_images/904266a60fa20277a68c04250b58399ba77e7658f43f8e391f45f004b7a7b1f9.png" src="../../_images/904266a60fa20277a68c04250b58399ba77e7658f43f8e391f45f004b7a7b1f9.png" />
 </div>
 </div>
-<p>Just like the histogram plot, this box plot indicates a clear difference in the distributions.  Using multiple types of plot in this way can be useful for verifying large datasets. The pandas plotting methods are capable of creating many different types of plots.  To see how to use the plotting methods to generate each type of plot, please review the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">pandas plot documentation</a>.</p>
+<p>Just like the histogram plot, this box plot indicates a clear difference in the distributions. Using multiple types of plot in this way can be useful for verifying large datasets. The pandas plotting methods are capable of creating many different types of plots. To see how to use the plotting methods to generate each type of plot, please review the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">pandas plot documentation</a>.</p>
 <div class="section" id="customize-your-plot">
 <h4>Customize your Plot<a class="headerlink" href="#customize-your-plot" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
-<p>The pandas plotting methods are, in fact, wrappers for similar methods in matplotlib.  This means that you can customize pandas plots by including keyword arguments to the plotting methods.  These keyword arguments, for the most part, are equivalent to their matplotlib counterparts.</p>
+<p>The pandas plotting methods are, in fact, wrappers for similar methods in matplotlib. This means that you can customize pandas plots by including keyword arguments to the plotting methods.  These keyword arguments, for the most part, are equivalent to their matplotlib counterparts.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Nino34</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
@@ -2618,7 +2618,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 <div class="section" id="basic-statistics">
 <h3>Basic Statistics<a class="headerlink" href="#basic-statistics" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>We can garner statistics for a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> by using the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method.  When this method is called on a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, a set of statistics is returned in tabular format.  The columns match those of the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, and the rows indicate different statistics, such as minimum.</p>
+<p>We can garner statistics for a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> by using the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method. When this method is called on a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, a set of statistics is returned in tabular format.  The columns match those of the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, and the rows indicate different statistics, such as minimum.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -2747,7 +2747,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </table>
 </div></div></div>
 </div>
-<p>You can also view specific statistics using corresponding methods.  In this example, we look at the mean values in the entire <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, using the <code class="docutils literal notranslate"><span class="pre">mean</span></code> method.  When such methods are called on the entire <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, a <code class="docutils literal notranslate"><span class="pre">Series</span></code> is returned.  The indices of this <code class="docutils literal notranslate"><span class="pre">Series</span></code> are the column names in the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, and the values are the calculated values (in this case, mean values) for the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> columns.</p>
+<p>You can also view specific statistics using corresponding methods. In this example, we look at the mean values in the entire <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, using the <code class="docutils literal notranslate"><span class="pre">mean</span></code> method.  When such methods are called on the entire <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, a <code class="docutils literal notranslate"><span class="pre">Series</span></code> is returned. The indices of this <code class="docutils literal notranslate"><span class="pre">Series</span></code> are the column names in the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, and the values are the calculated values (in this case, mean values) for the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> columns.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -2784,8 +2784,8 @@ dtype: float64
 </div>
 <div class="section" id="subsetting-using-the-datetime-column">
 <h3>Subsetting Using the Datetime Column<a class="headerlink" href="#subsetting-using-the-datetime-column" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>Slicing is a useful technique for subsetting a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, but there are also other options that can be equally useful.  In this section, some of these additional techniques are covered.</p>
-<p>If your <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> uses datetime values for indices, you can select data from only one month using <code class="docutils literal notranslate"><span class="pre">df.index.month</span></code>.  In this example, we specify the number 1, which only selects data from January.</p>
+<p>Slicing is a useful technique for subsetting a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, but there are also other options that can be equally useful. In this section, some of these additional techniques are covered.</p>
+<p>If your <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> uses datetime values for indices, you can select data from only one month using <code class="docutils literal notranslate"><span class="pre">df.index.month</span></code>. In this example, we specify the number 1, which only selects data from January.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Uses the datetime column</span>
@@ -3278,7 +3278,7 @@ dtype: float64
 </table>
 </div></div></div>
 </div>
-<p>This example shows how to create a new column containing the month portion of the datetime index for each data row.  The value returned by <code class="docutils literal notranslate"><span class="pre">df.index.month</span></code> is used to obtain the data for this new column:</p>
+<p>This example shows how to create a new column containing the month portion of the datetime index for each data row. The value returned by <code class="docutils literal notranslate"><span class="pre">df.index.month</span></code> is used to obtain the data for this new column:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span>
@@ -3286,7 +3286,7 @@ dtype: float64
 </div>
 </div>
 </div>
-<p>This next example illustrates how to use the new month column to calculate average monthly values over the other data columns. First, we use the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> method to group the other columns by the month.  Second, we take the average (mean) to obtain the monthly averages.  Finally, we plot the resulting data as a line plot by simply calling <code class="docutils literal notranslate"><span class="pre">plot()</span></code>.</p>
+<p>This next example illustrates how to use the new month column to calculate average monthly values over the other data columns. First, we use the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> method to group the other columns by the month.  Second, we take the average (mean) to obtain the monthly averages. Finally, we plot the resulting data as a line plot by simply calling <code class="docutils literal notranslate"><span class="pre">plot()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
@@ -3947,7 +3947,7 @@ dtype: float64
 </div>
 <div class="section" id="resampling">
 <h3>Resampling<a class="headerlink" href="#resampling" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>In these examples, we illustrate a process known as resampling.  Using resampling, you can change the frequency of index data values, reducing so-called ‘noise’ in a data plot. This is especially useful when working with timeseries data; plots can be equally effective with resampled data in these cases. The resampling performed in these examples converts monthly values to yearly averages.  This is performed by passing the value ‘1Y’ to the <code class="docutils literal notranslate"><span class="pre">resample</span></code> method.</p>
+<p>In these examples, we illustrate a process known as resampling. Using resampling, you can change the frequency of index data values, reducing so-called ‘noise’ in a data plot. This is especially useful when working with timeseries data; plots can be equally effective with resampled data in these cases. The resampling performed in these examples converts monthly values to yearly averages. This is performed by passing the value ‘1Y’ to the <code class="docutils literal notranslate"><span class="pre">resample</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Nino34</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
@@ -3997,7 +3997,7 @@ dtype: float64
 </div>
 </div>
 </div>
-<p>The following examples instead illustrate a new concept: using such functions with <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code> and <code class="docutils literal notranslate"><span class="pre">Series</span></code>. For the first example, we start by creating a <code class="docutils literal notranslate"><span class="pre">Series</span></code>; in order to do so, we subset the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> by the <code class="docutils literal notranslate"><span class="pre">Nino34</span></code> column.  This has already been done earlier in this page; we do not need to create this <code class="docutils literal notranslate"><span class="pre">Series</span></code> again.  We are using this particular <code class="docutils literal notranslate"><span class="pre">Series</span></code> for a reason: the data values are in degrees Celsius.</p>
+<p>The following examples instead illustrate a new concept: using such functions with <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code> and <code class="docutils literal notranslate"><span class="pre">Series</span></code>. For the first example, we start by creating a <code class="docutils literal notranslate"><span class="pre">Series</span></code>; in order to do so, we subset the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> by the <code class="docutils literal notranslate"><span class="pre">Nino34</span></code> column. This has already been done earlier in this page; we do not need to create this <code class="docutils literal notranslate"><span class="pre">Series</span></code> again. We are using this particular <code class="docutils literal notranslate"><span class="pre">Series</span></code> for a reason: the data values are in degrees Celsius.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nino34_series</span>
@@ -4048,7 +4048,7 @@ Name: Nino34, Length: 472, dtype: float64
 </div>
 </div>
 </div>
-<p>This example illustrates how to use the temperature-conversion function defined above on a <code class="docutils literal notranslate"><span class="pre">Series</span></code> object.  Just as calling the function with a single value returns a single value, calling the function on a <code class="docutils literal notranslate"><span class="pre">Series</span></code> object returns another <code class="docutils literal notranslate"><span class="pre">Series</span></code> object. The function performs the temperature conversion on each data value in the <code class="docutils literal notranslate"><span class="pre">Series</span></code>, and returns a <code class="docutils literal notranslate"><span class="pre">Series</span></code> with all values converted.</p>
+<p>This example illustrates how to use the temperature-conversion function defined above on a <code class="docutils literal notranslate"><span class="pre">Series</span></code> object. Just as calling the function with a single value returns a single value, calling the function on a <code class="docutils literal notranslate"><span class="pre">Series</span></code> object returns another <code class="docutils literal notranslate"><span class="pre">Series</span></code> object. The function performs the temperature conversion on each data value in the <code class="docutils literal notranslate"><span class="pre">Series</span></code>, and returns a <code class="docutils literal notranslate"><span class="pre">Series</span></code> with all values converted.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">convert_degc_to_kelvin</span><span class="p">(</span><span class="n">nino34_series</span><span class="p">)</span>
@@ -4148,7 +4148,7 @@ Name: Nino34, Length: 472, dtype: float64
 </div>
 </div>
 </div>
-<p>As described above, when our temperature-conversion function accepts a <code class="docutils literal notranslate"><span class="pre">Series</span></code> as an argument, it returns a <code class="docutils literal notranslate"><span class="pre">Series</span></code>.  We can directly assign this returned <code class="docutils literal notranslate"><span class="pre">Series</span></code> to a new column in our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, as shown below:</p>
+<p>As described above, when our temperature-conversion function accepts a <code class="docutils literal notranslate"><span class="pre">Series</span></code> as an argument, it returns a <code class="docutils literal notranslate"><span class="pre">Series</span></code>. We can directly assign this returned <code class="docutils literal notranslate"><span class="pre">Series</span></code> to a new column in our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, as shown below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Nino34_degK&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">convert_degc_to_kelvin</span><span class="p">(</span><span class="n">nino34_series</span><span class="p">)</span>
@@ -4180,7 +4180,7 @@ Name: Nino34_degK, Length: 472, dtype: float64
 </div>
 </div>
 </div>
-<p>In this final example, we demonstrate the use of the <code class="docutils literal notranslate"><span class="pre">to_csv</span></code> method to save a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> as a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file.  This example also demonstrates the <code class="docutils literal notranslate"><span class="pre">read_csv</span></code> method, which reads <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files into Pandas <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code>.</p>
+<p>In this final example, we demonstrate the use of the <code class="docutils literal notranslate"><span class="pre">to_csv</span></code> method to save a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> as a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file. This example also demonstrates the <code class="docutils literal notranslate"><span class="pre">read_csv</span></code> method, which reads <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files into Pandas <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;nino_analyzed_output.csv&#39;</span><span class="p">)</span>

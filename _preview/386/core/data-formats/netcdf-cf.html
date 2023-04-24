@@ -804,7 +804,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 <div class="section" id="gridded-data">
 <h2>Gridded Data<a class="headerlink" href="#gridded-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Let’s say we’re working with some numerical weather forecast model output. First, we need to store the data in the netCDF format.  Second, we need to ensure that the metadata follows the Climate and Forecasting conventions.  These steps ensure that a dataset is available to as many scientific data tools as is possible.  The examples in this section illustrate these steps in detail.</p>
+<p>Let’s say we’re working with some numerical weather forecast model output. First, we need to store the data in the netCDF format. Second, we need to ensure that the metadata follows the Climate and Forecasting conventions.  These steps ensure that a dataset is available to as many scientific data tools as is possible. The examples in this section illustrate these steps in detail.</p>
 <p>To start, let’s assume the following about our data:</p>
 <ul class="simple">
 <li><p>There are three spatial dimensions (<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">press</span></code>) and one temporal dimension (<code class="docutils literal notranslate"><span class="pre">times</span></code>).</p></li>
@@ -826,7 +826,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 </div>
-<p>In addition to dimensional arrays, we also need a variable of interest, which holds the data values at each unique dimensional index.  In these examples, this variable is called <code class="docutils literal notranslate"><span class="pre">temps</span></code>, and holds temperature data. Note that the dimensions correspond to the ones we just created above.</p>
+<p>In addition to dimensional arrays, we also need a variable of interest, which holds the data values at each unique dimensional index. In these examples, this variable is called <code class="docutils literal notranslate"><span class="pre">temps</span></code>, and holds temperature data. Note that the dimensions correspond to the ones we just created above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">times</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">press</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
@@ -852,7 +852,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <p class="admonition-title">Danger</p>
 <p>If you open an existing file with <code>‘w’</code> as the second argument, any data already in the file will be overwritten. If you would like to edit the file, or add to it, open it using <code>‘a’</code> as the second argument.</p>
 </div>
-<p>We start the setup of this new netCDF file by creating and adding global attribute metadata.  These particular metadata elements are not required, but are recommended by the CF standard.  In addition, adding these elements to the file is simple, and helps users keep track of the data.  Therefore, it is helpful to add these metadata elements, as shown below:</p>
+<p>We start the setup of this new netCDF file by creating and adding global attribute metadata.  These particular metadata elements are not required, but are recommended by the CF standard.  In addition, adding these elements to the file is simple, and helps users keep track of the data. Therefore, it is helpful to add these metadata elements, as shown below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nc</span><span class="o">.</span><span class="n">Conventions</span> <span class="o">=</span> <span class="s1">&#39;CF-1.7&#39;</span>
@@ -901,7 +901,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
     title: Forecast model run
     institution: Unidata
     source: WRF-1.5
-    history: 2023-04-24 21:30:31.151684 Python
+    history: 2023-04-24 21:42:06.076383 Python
     references: 
     comment: 
     dimensions(sizes): forecast_time(0), x(101), y(67), pressure(7)
@@ -932,7 +932,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 </div>
 <div class="section" id="creating-and-filling-a-variable">
 <h3>Creating and filling a variable<a class="headerlink" href="#creating-and-filling-a-variable" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>Thus far, we have only added basic information to this netCDF dataset; namely, the dataset dimensions and some broad metadata. As described briefly above, variables are used to define data fields in netCDF files.  Here, we create a <code class="docutils literal notranslate"><span class="pre">netCDF4</span> <span class="pre">variable</span></code> to hold a data field; in this case, the forecast air temperature. In order to create this netCDF4 variable, we must specify the data type of the values in the data field.  We also must specify which dimensions contained in the netCDF file are relevant to this data field.  Finally, we can specify whether or not to compress the data using a form of <code class="docutils literal notranslate"><span class="pre">zlib</span></code>.</p>
+<p>Thus far, we have only added basic information to this netCDF dataset; namely, the dataset dimensions and some broad metadata. As described briefly above, variables are used to define data fields in netCDF files. Here, we create a <code class="docutils literal notranslate"><span class="pre">netCDF4</span> <span class="pre">variable</span></code> to hold a data field; in this case, the forecast air temperature. In order to create this netCDF4 variable, we must specify the data type of the values in the data field. We also must specify which dimensions contained in the netCDF file are relevant to this data field. Finally, we can specify whether or not to compress the data using a form of <code class="docutils literal notranslate"><span class="pre">zlib</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temps_var</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span>
@@ -945,7 +945,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 </div>
 </div>
 </div>
-<p>We have now created a netCDF4 variable, but it does not yet define a data field.  In this example, we use Python to associate our temperature data with the new variable:</p>
+<p>We have now created a netCDF4 variable, but it does not yet define a data field. In this example, we use Python to associate our temperature data with the new variable:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temps_var</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">temps</span>
@@ -994,8 +994,8 @@ filling on, default _FillValue of 9.969209968386869e+36 used
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>We can also define metadata for this variable in the form of attributes; some specific attributes are required by the CF conventions. For example, the CF conventions require a <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute to be set for all variables that represent a dimensional quantity.  In addition, the value of this attribute must be parsable by the <a class="reference external" href="https://www.unidata.ucar.edu/software/udunits/">UDUNITS</a> library. In this example, the temperatures are in Kelvin, so we set the units attribute to <code class="docutils literal notranslate"><span class="pre">'Kelvin'</span></code>. Next, we set the <code class="docutils literal notranslate"><span class="pre">long_name</span></code> and <code class="docutils literal notranslate"><span class="pre">standard_name</span></code> attributes, which are recommended for most datasets, but optional. The <code class="docutils literal notranslate"><span class="pre">long_name</span></code> attribute contains a longer and more detailed description of a variable.  On the other hand, the <code class="docutils literal notranslate"><span class="pre">standard_name</span></code> attribute names a variable using descriptive words from a predefined word list contained in the CF conventions. Defining these attributes allows users of your datasets to understand what each variable in a dataset represents. Sometimes, data fields do not have valid data values at every dimension point. In this case, the standard is to use a filler value for these missing data values, and to set the <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> attribute to this filler value. In this case, however, there are no missing values, so the <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> attribute can be set to any unused value, or not set at all.</p>
-<p>There are many different sets of recommendations for attributes on netCDF variables.  For example, here is NASA’s set of recommended attributes:</p>
+<p>We can also define metadata for this variable in the form of attributes; some specific attributes are required by the CF conventions. For example, the CF conventions require a <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute to be set for all variables that represent a dimensional quantity. In addition, the value of this attribute must be parsable by the <a class="reference external" href="https://www.unidata.ucar.edu/software/udunits/">UDUNITS</a> library. In this example, the temperatures are in Kelvin, so we set the units attribute to <code class="docutils literal notranslate"><span class="pre">'Kelvin'</span></code>. Next, we set the <code class="docutils literal notranslate"><span class="pre">long_name</span></code> and <code class="docutils literal notranslate"><span class="pre">standard_name</span></code> attributes, which are recommended for most datasets, but optional. The <code class="docutils literal notranslate"><span class="pre">long_name</span></code> attribute contains a longer and more detailed description of a variable. On the other hand, the <code class="docutils literal notranslate"><span class="pre">standard_name</span></code> attribute names a variable using descriptive words from a predefined word list contained in the CF conventions. Defining these attributes allows users of your datasets to understand what each variable in a dataset represents. Sometimes, data fields do not have valid data values at every dimension point. In this case, the standard is to use a filler value for these missing data values, and to set the <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> attribute to this filler value. In this case, however, there are no missing values, so the <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> attribute can be set to any unused value, or not set at all.</p>
+<p>There are many different sets of recommendations for attributes on netCDF variables. For example, here is NASA’s set of recommended attributes:</p>
 <blockquote>
 <div><p><strong>NASA Dataset Interoperability Recommendations:</strong></p>
 <p>Section 2.2 - Include Basic CF Attributes</p>
@@ -1038,7 +1038,7 @@ filling on, default _FillValue of 9.969209968386869e+36 used
 <div class="section" id="coordinate-variables">
 <h3>Coordinate variables<a class="headerlink" href="#coordinate-variables" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Dimensions in a netCDF file only define size and alignment metadata. In order to properly orient data in time and space, it is necessary to create “coordinate variables”, which define data values along each dimension. A coordinate variable is typically created as a one-dimensional variable, and has the same name as the corresponding dimension.</p>
-<p>To start, we define variables which define our <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinate values. It is recommended to include certain attributes for each coordinate variable. First, you should include a <code class="docutils literal notranslate"><span class="pre">standard_name</span></code>, which allows for associating the variable with projections, among other things. (Projections will be covered in detail later in this page.) Second, you can include an <code class="docutils literal notranslate"><span class="pre">axis</span></code> attribute, which clearly defines the spatial or temporal direction referred to by the coordinate variable.  This next example demonstrates how to set up these attributes:</p>
+<p>To start, we define variables which define our <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinate values. It is recommended to include certain attributes for each coordinate variable. First, you should include a <code class="docutils literal notranslate"><span class="pre">standard_name</span></code>, which allows for associating the variable with projections, among other things. (Projections will be covered in detail later in this page.) Second, you can include an <code class="docutils literal notranslate"><span class="pre">axis</span></code> attribute, which clearly defines the spatial or temporal direction referred to by the coordinate variable. This next example demonstrates how to set up these attributes:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_var</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,))</span>
@@ -1100,7 +1100,7 @@ filling on, default _FillValue of 9.969209968386869e+36 used
 </div>
 </div>
 </div>
-<p>This next example shows the CDL representation of the netCDF file’s variables at this point.  It is clear that much more information is now contained in this representation:</p>
+<p>This next example shows the CDL representation of the netCDF file’s variables at this point. It is clear that much more information is now contained in this representation:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">dimensions</span><span class="p">:</span>
     <span class="n">forecast_time</span> <span class="o">=</span> <span class="n">UNLIMITED</span> <span class="p">(</span><span class="n">currently</span> <span class="mi">13</span><span class="p">)</span> <span class="p">;</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">101</span> <span class="p">;</span>
@@ -1138,7 +1138,7 @@ filling on, default _FillValue of 9.969209968386869e+36 used
 <div class="section" id="auxiliary-coordinates">
 <h3>Auxiliary Coordinates<a class="headerlink" href="#auxiliary-coordinates" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Our data are still not CF-compliant, because they do not contain latitude and longitude information, which is needed to properly locate the data. In order to add location data to a netCDF file, we must create so-called “auxiliary coordinate variables” for latitude and longitude. (In this case, the word “auxiliary” means that the variables are not simple one-dimensional variables.)</p>
-<p>In this next example, we use the <code class="docutils literal notranslate"><span class="pre">Proj</span></code> function, found in the <code class="docutils literal notranslate"><span class="pre">pyproj</span></code> library, to create projections of our coordinates.  We can then use these projections to generate latitude and longitude values for our data.</p>
+<p>In this next example, we use the <code class="docutils literal notranslate"><span class="pre">Proj</span></code> function, found in the <code class="docutils literal notranslate"><span class="pre">pyproj</span></code> library, to create projections of our coordinates. We can then use these projections to generate latitude and longitude values for our data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
@@ -1148,7 +1148,7 @@ filling on, default _FillValue of 9.969209968386869e+36 used
 </div>
 </div>
 </div>
-<p>Now that we have latitude and longitude values, we can create variables for those values.  Both of these variables are two-dimensional; the dimensions in question are <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">x</span></code>. In order to convey that it contains the longitude information, we must set up the longitude variable with a <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute of <code class="docutils literal notranslate"><span class="pre">'degrees_east'</span></code>.  In addition, we can provide further clarity by setting a <code class="docutils literal notranslate"><span class="pre">standard_name</span></code> attribute of <code class="docutils literal notranslate"><span class="pre">'longitude'</span></code>. The case is the same for latitude, except the units are <code class="docutils literal notranslate"><span class="pre">'degrees_north'</span></code> and the <code class="docutils literal notranslate"><span class="pre">standard_name</span></code> is <code class="docutils literal notranslate"><span class="pre">'latitude'</span></code>.</p>
+<p>Now that we have latitude and longitude values, we can create variables for those values. Both of these variables are two-dimensional; the dimensions in question are <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">x</span></code>. In order to convey that it contains the longitude information, we must set up the longitude variable with a <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute of <code class="docutils literal notranslate"><span class="pre">'degrees_east'</span></code>. In addition, we can provide further clarity by setting a <code class="docutils literal notranslate"><span class="pre">standard_name</span></code> attribute of <code class="docutils literal notranslate"><span class="pre">'longitude'</span></code>. The case is the same for latitude, except the units are <code class="docutils literal notranslate"><span class="pre">'degrees_north'</span></code> and the <code class="docutils literal notranslate"><span class="pre">standard_name</span></code> is <code class="docutils literal notranslate"><span class="pre">'latitude'</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lon_var</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">))</span>
@@ -1195,7 +1195,7 @@ filling on, default _FillValue of 9.969209968386869e+36 used
 <div class="section" id="coordinate-system-information">
 <h3>Coordinate System Information<a class="headerlink" href="#coordinate-system-information" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>Since the grid containing our data uses a Lambert conformal projection, adding this information to the dataset’s metadata can clear up some possible confusion. We can most easily add this metadata information by making use of a “grid mapping” variable. A grid mapping variable is a “placeholder” variable containing all required grid-mapping information. Other variables that need to access this information can then reference this placeholder variable in their <code class="docutils literal notranslate"><span class="pre">grid_mapping</span></code> attribute.</p>
-<p>In this example, we create a grid-mapping variable; this new variable is then set up for a Lambert-conformal conic projection on a spherical globe.  By setting this variable’s <code class="docutils literal notranslate"><span class="pre">grid_mapping_name</span></code> attribute, we can indicate which CF-supported grid mapping this variable refers to.  There are additional attributes that can also be set; however, the available options depend on the specific mapping.</p>
+<p>In this example, we create a grid-mapping variable; this new variable is then set up for a Lambert-conformal conic projection on a spherical globe. By setting this variable’s <code class="docutils literal notranslate"><span class="pre">grid_mapping_name</span></code> attribute, we can indicate which CF-supported grid mapping this variable refers to. There are additional attributes that can also be set; however, the available options depend on the specific mapping.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">proj_var</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;lambert_projection&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">())</span>
@@ -1223,7 +1223,7 @@ filling on, default _FillValue of -2147483647 used
 </div>
 </div>
 </div>
-<p>Now that we have created a grid-mapping variable, we can specify the grid mapping by setting the <code class="docutils literal notranslate"><span class="pre">grid_mapping</span> <span class="pre">attribute</span></code> to the variable name.  In this example, we set the <code class="docutils literal notranslate"><span class="pre">grid_mapping</span></code> attribute on the <code class="docutils literal notranslate"><span class="pre">Temperature</span></code> variable:</p>
+<p>Now that we have created a grid-mapping variable, we can specify the grid mapping by setting the <code class="docutils literal notranslate"><span class="pre">grid_mapping</span> <span class="pre">attribute</span></code> to the variable name. In this example, we set the <code class="docutils literal notranslate"><span class="pre">grid_mapping</span></code> attribute on the <code class="docutils literal notranslate"><span class="pre">Temperature</span></code> variable:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temps_var</span><span class="o">.</span><span class="n">grid_mapping</span> <span class="o">=</span> <span class="s1">&#39;lambert_projection&#39;</span>  <span class="c1"># or proj_var.name</span>
@@ -1251,7 +1251,7 @@ filling on, default _FillValue of -2147483647 used
 </div>
 <div class="section" id="cell-bounds">
 <h3>Cell Bounds<a class="headerlink" href="#cell-bounds" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>The use of “bounds” attributes is not required, but highly recommended.  Here is a relevant excerpt from the NASA Dataset Interoperability Recommendations:</p>
+<p>The use of “bounds” attributes is not required, but highly recommended. Here is a relevant excerpt from the NASA Dataset Interoperability Recommendations:</p>
 <blockquote>
 <div><p><strong>NASA Dataset Interoperability Recommendations:</strong></p>
 <p>Section 2.3 - Use CF “bounds” attributes</p>
@@ -1296,7 +1296,7 @@ filling on, default _FillValue of -2147483647 used
 </div>
 <div class="section" id="observational-data">
 <h2>Observational Data<a class="headerlink" href="#observational-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Thus far, we have only worked with data arranged on grids.  One common type of data, called “in-situ” or “observational” data, is usually arranged in other ways. The CF conventions for this type of data are called <em>Conventions for DSG (Discrete Sampling Geometries)</em>.</p>
+<p>Thus far, we have only worked with data arranged on grids. One common type of data, called “in-situ” or “observational” data, is usually arranged in other ways. The CF conventions for this type of data are called <em>Conventions for DSG (Discrete Sampling Geometries)</em>.</p>
 <p>For data that are regularly sampled (e.g., from a vertical profiler site), this is straightforward. For these examples, we will be using vertical profile data from three hypothetical profilers, located in Boulder, Norman, and Albany. These hypothetical profilers report data for every 10 m of altitude, from altitudes of 10 m up to (but not including) 1000 m. This first example illustrates how to set up latitude, longitude, altitude, and other necessary data for these profilers:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1434,7 +1434,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 </div>
 </div>
 </div>
-<p>The auxiliary coordinate variables in this netCDF file are not proper coordinate variables, and are all associated with the <code class="docutils literal notranslate"><span class="pre">station</span></code> dimension. Therefore, the names of these variables must be listed in an attribute called <code class="docutils literal notranslate"><span class="pre">coordinates</span></code>.  The final CDL of the variables, including the <code class="docutils literal notranslate"><span class="pre">coordinates</span></code> attribute, is shown below:</p>
+<p>The auxiliary coordinate variables in this netCDF file are not proper coordinate variables, and are all associated with the <code class="docutils literal notranslate"><span class="pre">station</span></code> dimension. Therefore, the names of these variables must be listed in an attribute called <code class="docutils literal notranslate"><span class="pre">coordinates</span></code>. The final CDL of the variables, including the <code class="docutils literal notranslate"><span class="pre">coordinates</span></code> attribute, is shown below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">variables</span><span class="p">:</span>
     <span class="n">double</span> <span class="n">lon</span><span class="p">(</span><span class="n">station</span><span class="p">)</span> <span class="p">;</span>
       <span class="n">lon</span><span class="p">:</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;degrees_east&quot;</span> <span class="p">;</span>
@@ -1458,7 +1458,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
       <span class="n">temperature</span><span class="p">:</span><span class="n">coordinates</span> <span class="o">=</span> <span class="s2">&quot;lon lat heights time&quot;</span> <span class="p">;</span>
 </pre></div>
 </div>
-<p>These standards for storing DSG data in netCDF files can be used for profiler data, as shown in these examples, as well as timeseries and trajectory data, and any combination of these types of data models. You can also use these standards for datasets with differing amounts of data in each feature, using so-called “ragged” arrays.  For more information on ragged arrays, or other elements of the CF DSG standards, see the <a class="reference external" href="http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/cf-conventions.html#discrete-sampling-geometries">main documentation page</a>, or try some of the <a class="reference external" href="http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/cf-conventions.html#appendix-examples-discrete-geometries">annotated DSG examples</a>.</p>
+<p>These standards for storing DSG data in netCDF files can be used for profiler data, as shown in these examples, as well as timeseries and trajectory data, and any combination of these types of data models. You can also use these standards for datasets with differing amounts of data in each feature, using so-called “ragged” arrays. For more information on ragged arrays, or other elements of the CF DSG standards, see the <a class="reference external" href="http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/cf-conventions.html#discrete-sampling-geometries">main documentation page</a>, or try some of the <a class="reference external" href="http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/cf-conventions.html#appendix-examples-discrete-geometries">annotated DSG examples</a>.</p>
 </div>
 </div>
 <hr class="docutils" />
