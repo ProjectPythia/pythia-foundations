@@ -4,4 +4,4 @@
 This content is under construction!
 ```
 
-This section will contain tutorials on how to interact in Python with data file formats in widespread use in the geosciences, such as NetCDF.
+There are many data file formats used commonly in the geosciences, such as NetCDF and GRIB. This section contains tutorials on how to interact with these files in Python.
