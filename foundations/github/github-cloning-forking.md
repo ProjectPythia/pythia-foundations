@@ -28,12 +28,12 @@
 
 _Cloning_ and _forking_ are two related terms in the GitHub vernacular
 that, unfortunately, are not always used consistently throughout
-the _web-o-sphere_. In Project Pythia we use the term _clone_ to mean
+the _web-o-sphere_. In Project Pythia we use the term _clone_ to refer to
 making a **local** copy of a **remote** repository; the source for
 the copy is a remote repo, and the destination for the copy is your
 local laptop/desktop. When working with GitHub, a _fork_, on the
-other hand, creates a copy of a GitHub repository on GitHub. I.e.
-both the source and the destination of the _fork_ operations are
+other hand, creates a copy of a GitHub repository on GitHub. In other
+words, both the source and the destination of the _fork_ operations are
 hosted in the cloud on GitHub. Forking is performed via your GitHub
 account. While the forked repository may be owned by anyone, the
 newly created repository will be owned by you. Cloning, on the
@@ -115,7 +115,7 @@ Resolving deltas: 100% (3/3), done.
 While `git` is typically part of a Linux or Mac OS command-line shell, similar functionality must be installed if you are running Windows. Download and install the [Git for Windows](https://gitforwindows.org/) package.
 ```
 
-Now, you can `cd` into the `github-sandbox` directory which has been created and populated with the exact contents of the **origin**'s repository at the time you cloned it. If you have a Python installation, you could then type:
+Now, you can `cd` into the `github-sandbox` directory which has been created and populated with the exact contents of the **origin**'s repository at the time you cloned it. If you have a Python installation, you could then type
 
 ```
 python sample.py
@@ -127,7 +127,7 @@ to run the sample Python script. You should see the following output:
 Hello, Python learners!
 ```
 
-By virtue of cloning the repo, _git_ automatically sets the URL of the **origin**'s repository on GitHub. You can show this by typing the following:
+By virtue of cloning the repo, _git_ automatically registers the URL of the **origin**'s repository on GitHub. You can show this by typing the following:
 
 ```
 git remote -v
@@ -141,25 +141,21 @@ origin  git@github.com:ProjectPythia/github-sandbox.git (push)
 ```
 
 ```{tip}
-This link points to where the repository "lives" on GitHub. We will use the term **origin** to refer to this location.
-```
-
-```{tip}
 We discuss the `git` command-line interface in the [Basic version control with git](basic-git) lesson.
 ```
 
-**Congratulations!!** You have now cloned a GitHub repository!
+**Congratulations!** You have now cloned a GitHub repository!
 
-Now, let's consider the 3rd scenario for cloning ... which involves the releated topic of _forking_.
+Now, let's consider the 3rd scenario for cloning... which involves the related topic of _forking_.
 
 ## Forking a repository
 
 Forking is similar to cloning, but has a bit more involved workflow. Scenarios where forking a repo is indicated include the following:
 
 1. You wish to collaborate on projects that are hosted on GitHub, but you are not one of that project's _maintainers_ (i.e., you do not have _write permissions_ on it).
-1. You wish to experiment with changing or adding new features to a project, and do not immediately intend to _merge_ them into the original project's repo (aka, the _base_ repository).
+1. You wish to experiment with changing or adding new features to a project, and do not immediately intend to _merge_ them into the original project's repo (aka, the _upstream_ repository).
 
-In a fork, you first create a copy of an existing repository, but store it in your own personal GitHub organization (recall that when you create a GitHub account, the _organization_ name is your GitHub user ID).
+In a fork, you create a copy of an existing repository, but store it in your own personal GitHub organization (recall that when you create a GitHub account, the _organization_ name is your GitHub user ID).
 
 Let's say we intend to make some changes to the [Project Pythia Sandbox](https://github.com/ProjectPythia/github-sandbox) repo, that ultimately we'll submit to the original repository as a _Pull request_.
 
@@ -179,7 +175,7 @@ Click on it:
 
 ---
 
-You should see your GitHub user id (if you administer any other GitHub organizations, you will see them as well). Click on your user id to complete the _fork_. After a few seconds, your browser will be redirected to the forked repo, now residing in your personal GitHub organization:
+You should see your GitHub user ID (if you administer any other GitHub organizations, you will see them as well). Click on your user ID to complete the _fork_. After a few seconds, your browser will be redirected to the forked repo, now residing in your personal GitHub organization:
 
 <img src="../../images/GitHub_ForkPost.png" alt="ForkPost">
 
@@ -197,23 +193,23 @@ We discuss *branches* in the [Git Branches](git-branches) lesson.
 
 You now have a copy (essentially a clone) of the forked repository, which is now owned by you.
 
-You could, at this point, select one of the files in the repository and use GitHub's built-in editor to make changes to these text-based files. But the typical use case that leverages the collaborative power of GitHub and its command-line cousin, _git_, involves _cloning_ your _forked_ copy of the repo to your local computer, where you can then perform your edits, and (in the case of software) test them on your system.
+You could, at this point, select one of the files in the repository and use GitHub's built-in editor to make changes to these text-based files. However, the typical use case that leverages the collaborative power of GitHub and its command-line cousin, _git_, involves _cloning_ your _forked_ copy of the repo to your local computer, where you can then perform your edits, and (in the case of software) test them on your system.
 
-Cloning your fork is the same as cloning the original repo. Click on the Code button, select the HTTPS protocol, copy the URL to the clipboard, and then run `git clone <URL>` on your local computer. In this case, you will need to either run this command in a different directory or rename the destination directory with `git clone <URL> <directory-name>`, since it will by default use the name of the repo, `github-sandbox`.
+Cloning your fork is the same as cloning the original repo. Click on the Code button, select the HTTPS protocol, copy the URL to the clipboard, and then run `git clone <URL>` on your local computer. In this case, you will need to either run this command in a different directory, or rename the destination directory with `git clone <URL> <directory-name>`, since it will by default use the name of the repo, `github-sandbox`.
 
 ```{tip}
-Unlike cloning, forking is not an option supported by the *git* command-line interface. I.e., `git fork` is not a valid command.
+Unlike cloning, forking is not an option supported by the *git* command-line interface. In other words, `git fork` is not a valid command.
 ```
 
 Once you've cloned the fork to your local machine, try running `git remote -v` again. You will see that the _origin_ URL now points to your GitHub account or organization.
 
-_The main purpose of cloning and forking a remote repository is so that you can make changes to the contents of those repositories in a safe and version-controller manner._ The process of making changes and submitting them as _Pull Requests_ to the original repository is covered in our lesson on [Opening a Pull Request on GitHub](github-pull-request), but the workflow is as follows:
+_The main purpose of cloning and forking a remote repository is so that you can make changes to the contents of those repositories in a safe and version-controlled manner._ The process of making changes and submitting them as _Pull Requests_ to the original repository is covered in our lesson on [Opening a Pull Request on GitHub](github-pull-request), but the workflow is as follows:
 
 1. Edit an existing file or files, and/or create new files.
 1. Stage your changes by running `git add`.
 1. Commit your changes by running `git commit`.
 1. (If you created a fork): Push your changes to your _fork_ by running `git push`.
-1. (If you did not create a fork): Push your changes to the _base_ repo by running `git push`. This assumes you have write permissions on the base repo.
+1. (If you did not create a fork): Push your changes to the _upstream_ repository by running `git push`. This assumes you have write permissions on the _upstream_ repository.
 1. In GitHub, create a _Pull request_.
 
 ---
@@ -223,12 +219,12 @@ _The main purpose of cloning and forking a remote repository is so that you can 
 - The process of making a **local** copy of a GitHub repository is called _cloning_. The destination for the cloned copy is whatever machine you ran the `git clone` command from.
 - _Forking_ a repository also makes a copy of a GitHub repo, but places it in your GitHub organization in the GitHub.com cloud.
 - Forking allows you to modify a remote repo, without affecting the original version.
-- After cloning your fork to your local computer, you can meke changes to your copy, which you can then submit to the original repo as a [_Pull request_](github-pull-request).
+- After cloning your fork to your local computer, you can make changes to your copy, which you can then submit to the original repo as a [_Pull request_](github-pull-request).
 
 ## Things to try
 
 - Clone another GitHub-hosted repository that is of interest to you.
-- Then try creating a fork of that repository.
+- Try creating a fork of that repository.
 
 ### What's Next?
 

@@ -38,7 +38,7 @@ Typically, a GitHub repository will always include the **Issues** and **Pull req
 
 ## What are some examples of repositories?
 
-All of the Python packages covered in this Foundations book have associated GitHub repositories (e.g. [Numpy](https://github.com/numpy/numpy) and [Xarray](https://github.com/pydata/xarray)), as well as [Python itself](https://github.com/python/cpython):
+All of the Python packages covered (e.g. [Numpy](https://github.com/numpy/numpy) and [Xarray](https://github.com/pydata/xarray)) in this Foundations book have associated GitHub repositories, as well as [Python itself](https://github.com/python/cpython):
 
 <img src="../../images/GitHubNumPy.png" alt="NumPy GitHub">
 
@@ -46,28 +46,28 @@ All of the Python packages covered in this Foundations book have associated GitH
 
 <img src="../../images/GitHubPython.png" alt="Python GitHub">
 
-As you can see by the recent timestamps, these repositories are actively changing (<i>and, as mentioned previously, the above screenshots each represent just one specific moment in time</i>); this reflects the adaptability of the [open-source software](https://opensource.org/osd) ecosystem surrounding Python.
+As you can see by the recent timestamps, these repositories are actively changing; this reflects the adaptability of the [open-source software](https://opensource.org/osd) ecosystem surrounding Python.
 
 ```{admonition} Tip
 :class: tip
 Notice that each of the three *Repositories* each exist as part of their own *Organization*. In other words, the NumPy repository exists within the NumPy organization; the Xarray repo exists within the Pydata org, and so forth.
 
-When you [created your own GitHub account](https://foundations.projectpythia.org/foundations/github/what-is-github.html), your user id functions as the *organization*. Any repositories you create (and therefore, *own*) will exist within that org.
+When you [create your own GitHub account](https://foundations.projectpythia.org/foundations/github/what-is-github.html), your user ID functions as the *organization*. Any repositories you create (and therefore, *own*) will exist within that org.
 ```
 
-Another example is this project's [Pythia Foundations repository](https://github.com/ProjectPythia/pythia-foundations), on which this tutorial is stored. It is owned by the [Project Pythia organization](https://github.com/ProjectPythia), which also owns several other repositories that store the files needed to generate <https://projectpythia.org/>, among other things.
+Another example is this project's [Pythia Foundations repository](https://github.com/ProjectPythia/pythia-foundations), on which this tutorial is stored. It is owned by the [Project Pythia organization](https://github.com/ProjectPythia). This organization also owns several other repositories that store the files needed to generate <https://projectpythia.org/>, among other things.
 
 ## GitHub's distributed repositories
 
 Finally, we introduce an important concept that is vital to your
-understanding when working with GitHub. It is both the source of
-GitHub's power, as well as much of its complexity. GitHub repositories
+understanding when working with GitHub. It is the source of GitHub's power, as well
+as much of its complexity. GitHub repositories
 are _distributed_; in the general case, there is more than one
 repository for any project. In fact, repositories can come and go
 at any time, created and deleted as need dictates. Creating new
-repositories from existing ones, synchronizing, and managing them
+repositories from existing ones, synchronizing them, and managing them
 are the topics of later sections. For now, it is only important to
-understand that for a GitHub managed project there is typically one
+understand that or a GitHub-managed project, there is typically one
 "official" repository, often called the "upstream" repository, and it lives on GitHub.com. There may be any
 number of copies of the "official" repository, known as _forks_ (or _origins_,
 if it is owned by you),
