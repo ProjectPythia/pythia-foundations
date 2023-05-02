@@ -1,7 +1,10 @@
-@misc{project_pythia,
-author = "{Project Pythia contributors}",
-title = "Project Pythia Foundations",
-year = "2023",
-url = "https://projectpythia.org/",
-note = "[Online; accessed 01-May-2023]"
-}
+cff-version: 2023.05.01
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Joe
+    given-names: Johnson
+    orcid: https://orcid.org/0000-0000-0000-0000
+title: Project Pythia Foundations: v2023.05.01
+site: ProjectPythia/pythia-foundations: v2023.05.01
+version: v2023.05.01
+date-released: 2023-05-01
