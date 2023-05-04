@@ -1,9 +1,48 @@
 cff-version: 2023.05.01
 message: "If you use this software, please cite it as below."
 authors:
-  - family-names: Joe
-    given-names: Johnson
+  - family-names: Rose
+    given-names: Brian
     orcid: https://orcid.org/0000-0000-0000-0000
-title: Project Pythia Foundations: v2023.05.01
+  - family-names: Kent
+    given-names: Julia
+    orcid: https://orcid.org/0000-0000-0000-0000
+  - family-names: Tyle
+    given-names: Kevin
+    orcid: https://orcid.org/0000-0000-0000-0000
+  - family-names: Clyne
+    given-names: John
+    orcid: https://orcid.org/0000-0000-0000-0000
+  - family-names: Banihirwe
+    given-names: Anderson
+    orcid: https://orcid.org/0000-0000-0000-0000
+  - family-names: Camron
+    given-names: Drew
+    orcid: https://orcid.org/0000-0000-0000-0000
+  - family-names: May
+    given-names: Ryan
+    orcid: https://orcid.org/0000-0000-0000-0000
+  - family-names: Grover
+    given-names: Maxwell
+    orcid: https://orcid.org/0000-0000-0000-0000
+  - family-names: Ford
+    given-names: Ryan
+    orcid: https://orcid.org/0000-0000-0000-0000
+  - family-names: Paul
+    given-names: Kevin
+    orcid: https://orcid.org/0000-0000-0000-0000
+  - family-names: Morley
+    given-names: James
+    orcid: https://orcid.org/0000-0000-0000-0000
+  - family-names: Eroglu
+    given-names: Orhan
+    orcid: https://orcid.org/0000-0000-0000-0000
+  - family-names: Kailyn
+    given-names: Lily
+    orcid: https://orcid.org/0000-0000-0000-0000
+ - family-names: Zacharias
+    given-names: Anissa
+    orcid: https://orcid.org/0000-0000-0000-0000
+title: "Pythia Foundations"
 version: v2023.05.01
 date-released: 2023-05-01
