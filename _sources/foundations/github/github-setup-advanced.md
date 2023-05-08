@@ -190,4 +190,4 @@ In the next section, we will learn the basics of version control using command-l
 
 1. [GitHub Personal Access Token (https)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 1. [GitHub Public/Private Keypair (ssh)](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
-1. [Remotes in GitHub (Carpentries Tutorial)](https://swcarpentry.github.io/git-novice/07-github/index.html)
+1. [Remotes in GitHub (Carpentries Tutorial)](https://swcarpentry.github.io/git-novice/07-github.html)
