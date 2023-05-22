@@ -998,7 +998,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0e07ffc66472c1d86bb42fde37233398754e8ab0c43a8825e9b88a05ebc9bb13.png" src="../../_images/0e07ffc66472c1d86bb42fde37233398754e8ab0c43a8825e9b88a05ebc9bb13.png" />
+<img alt="../../_images/2208fbfeccc9b1164b63950e44960c2688ecd55c0936c9c6ed2c0a1feecb9296.png" src="../../_images/2208fbfeccc9b1164b63950e44960c2688ecd55c0936c9c6ed2c0a1feecb9296.png" />
 </div>
 </div>
 <p>We can change which colormap to use by setting the keyword argument <code class="docutils literal notranslate"><span class="pre">cmap</span> <span class="pre">=</span> <span class="pre">'colormap_name'</span></code> in the plotting function call.  This sets the colormap not only for the plot, but for the colorbar as well.  In this case, we use the <code class="docutils literal notranslate"><span class="pre">magma</span></code> colormap:</p>
@@ -1013,7 +1013,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c98e63fa1513e28f0b9bc6f6e91a38cdf731737bae5e7e7d3b46f83b1f3e434a.png" src="../../_images/c98e63fa1513e28f0b9bc6f6e91a38cdf731737bae5e7e7d3b46f83b1f3e434a.png" />
+<img alt="../../_images/e259069fc84ae8c882c758b1710389f01d985b0bac88d84bd97d4c6e06bc47f7.png" src="../../_images/e259069fc84ae8c882c758b1710389f01d985b0bac88d84bd97d4c6e06bc47f7.png" />
 </div>
 </div>
 </div>
@@ -1032,10 +1032,10 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f6dd97f5e70&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fcd884ac820&gt;
 </pre></div>
 </div>
-<img alt="../../_images/5edbf9f44e040b33936995d5573eecf3b57be88c233cb7e56a2244f4e294ce17.png" src="../../_images/5edbf9f44e040b33936995d5573eecf3b57be88c233cb7e56a2244f4e294ce17.png" />
+<img alt="../../_images/8da650bdb58684f005e54e1b84133a08a6091a921381bb07aa67eb706f5249ea.png" src="../../_images/8da650bdb58684f005e54e1b84133a08a6091a921381bb07aa67eb706f5249ea.png" />
 </div>
 </div>
 <p>You may be wondering why the call to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code> uses the argument <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code>. The explanation is as follows: <code class="docutils literal notranslate"><span class="pre">hist1</span></code> is a tuple returned by <code class="docutils literal notranslate"><span class="pre">hist2d</span></code>, and <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> contains a <code class="docutils literal notranslate"><span class="pre">matplotlib.collections.QuadMesh</span></code> that points to the colormap for the first histogram. To make sure that both histograms are using the same colormap with the same range of values, <code class="docutils literal notranslate"><span class="pre">vmax</span></code> is set to 0.18 for both plots. This ensures that both histograms are using colormaps that represent values from 0 (the default for histograms) to 0.18. Because the same data values are used for both plots, it doesn’t matter whether we pass in <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> or <code class="docutils literal notranslate"><span class="pre">hist2[3]</span></code> to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code>.
@@ -1116,7 +1116,7 @@ You can learn more about this topic by reviewing the <a class="reference externa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/60e87618973521af4f581256b8b1adbf7beb2f413a9d431e2f25a04d31adc3e3.png" src="../../_images/60e87618973521af4f581256b8b1adbf7beb2f413a9d431e2f25a04d31adc3e3.png" />
+<img alt="../../_images/ce0a9787c8106e037a2bbe52b003c05ac579968d454b0edb59162f15b117557b.png" src="../../_images/ce0a9787c8106e037a2bbe52b003c05ac579968d454b0edb59162f15b117557b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1133,7 +1133,7 @@ You can learn more about this topic by reviewing the <a class="reference externa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/94ead91957e1d01d640a87a51b6d9c6ddbd2e6a1533c08b823e41e3427ce5f25.png" src="../../_images/94ead91957e1d01d640a87a51b6d9c6ddbd2e6a1533c08b823e41e3427ce5f25.png" />
+<img alt="../../_images/02df54efcfef2c71a3ea8b55d6ed659ecd17621857a6d6bcdb78b7c8c52d2341.png" src="../../_images/02df54efcfef2c71a3ea8b55d6ed659ecd17621857a6d6bcdb78b7c8c52d2341.png" />
 </div>
 </div>
 <div class="section" id="the-normalize-class">
@@ -1170,7 +1170,7 @@ You can learn more about this topic by reviewing the <a class="reference externa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/7b0d0fe4186b54300420a15a312c5aa3d707a093bf4aa21b23057db8e52a69a4.png" src="../../_images/7b0d0fe4186b54300420a15a312c5aa3d707a093bf4aa21b23057db8e52a69a4.png" />
+<img alt="../../_images/7e58347565c9f6138ce8588bf796d78cacf0f6900584b2481e5acc4b18333879.png" src="../../_images/7e58347565c9f6138ce8588bf796d78cacf0f6900584b2481e5acc4b18333879.png" />
 </div>
 </div>
 <p>You’ll notice there is not a colorbar plotted by default. When constructing the colorbar, we need to specify the following:</p>
@@ -1198,7 +1198,7 @@ You can learn more about this topic by reviewing the <a class="reference externa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/7d1ae161379965f46e148265464a830e263adb41a4c2b837954d26afe07b6c5b.png" src="../../_images/7d1ae161379965f46e148265464a830e263adb41a4c2b837954d26afe07b6c5b.png" />
+<img alt="../../_images/3b4735bbaefc8c3743e42236a2978c0e434186e2be6a2ed3d176e261ad613acd.png" src="../../_images/3b4735bbaefc8c3743e42236a2978c0e434186e2be6a2ed3d176e261ad613acd.png" />
 </div>
 </div>
 </div>
@@ -1388,7 +1388,7 @@ You can learn more about this topic by reviewing the <a class="reference externa
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 8 May 2023.
+          Last updated on 22 May 2023.
         </p>
       </div>
     </div>
