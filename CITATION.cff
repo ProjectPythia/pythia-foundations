@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: 'If you use this software, please cite it as below.'
+message: 'If you use this resource, please cite it as below.'
 authors:
   - family-names: Rose
     given-names: Brian E. J.
@@ -46,3 +46,4 @@ authors:
 title: 'Pythia Foundations'
 version: v2023.05.01
 date-released: 2023-05-01
+doi: 10.5281/zenodo.7884572

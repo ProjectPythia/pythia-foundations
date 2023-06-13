@@ -4,6 +4,7 @@ parts:
   - caption: Preamble
     chapters:
       - file: preamble/how-to-use
+      - file: preamble/how-to-cite
   - caption: Foundational skills
     chapters:
       - file: foundations/overview
