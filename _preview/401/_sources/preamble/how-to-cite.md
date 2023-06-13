@@ -7,4 +7,4 @@ The source code for the book is [released on GitHub](https://github.com/ProjectP
 
 If material in Pythia Foundations is useful in published work, you can cite a specific version of the book as:
 
-| Rose, B. E. J., Kent, J., Tyle, K., Clyne, J., Banihirwe, A., Camron, D., May, R., Grover, M., Ford, R. R., Paul, K., Morley, J., Eroglu, O., Kailyn, L., & Zacharias, A. (2023). Pythia Foundations (Version v2023.05.01) [https://doi.org/10.5281/zenodo.7884572](https://doi.org/10.5281/zenodo.7884572)
+> Rose, B. E. J., Kent, J., Tyle, K., Clyne, J., Banihirwe, A., Camron, D., May, R., Grover, M., Ford, R. R., Paul, K., Morley, J., Eroglu, O., Kailyn, L., & Zacharias, A. (2023). Pythia Foundations (Version v2023.05.01) [https://doi.org/10.5281/zenodo.7884572](https://doi.org/10.5281/zenodo.7884572)
