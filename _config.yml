@@ -13,10 +13,7 @@ exclude_patterns:
 
 execute:
   # See https://jupyterbook.org/content/execute.html
-  execute_notebooks: force
-  #   "auto" should only execute those notebooks that don't have output in all cells.
-  #   "force" : force execution of all notebooks
-  #   "cache": Cache output of notebooks on each build.
+  execute_notebooks: binder
   timeout: 600
   # Cells that are expected to fail (for pedagogical reasons) should set the cell tag `raises-exceptions`
   allow_errors: False
@@ -112,7 +109,7 @@ sphinx:
           icon: fab fa-youtube-square
           type: fontawesome
       launch_buttons:
-        binderhub_url: https://mybinder.org
+        binderhub_url: http://binder.mypythia.org
         notebook_interface: jupyterlab
       extra_navbar: |
         We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
