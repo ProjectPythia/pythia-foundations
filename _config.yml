@@ -112,7 +112,7 @@ sphinx:
           icon: fab fa-youtube-square
           type: fontawesome
       launch_buttons:
-        binderhub_url: https://mybinder.org
+        binderhub_url: https://binder.projectpythia.org
         notebook_interface: jupyterlab
       extra_navbar: |
         We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
