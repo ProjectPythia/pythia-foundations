@@ -61,7 +61,7 @@ chapters. Both are described below.
 ### Interacting with Jupyter Notebooks in the cloud via Binder
 
 The simplest way to interact with a Jupyter Notebook is through
-[Binder](https://mybinder.org/), which enables the execution of a
+[Binder](https://binder.projectpythia.org), which enables the execution of a
 Jupyter Notebook in the cloud. The details of how this works are not
 important for now. All you need to know is how to launch a Pythia
 Foundations book chapter via Binder. Simply navigate your mouse to
