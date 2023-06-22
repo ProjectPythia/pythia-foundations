@@ -4,46 +4,70 @@ authors:
   - family-names: Rose
     given-names: Brian E. J.
     orcid: https://orcid.org/0000-0002-9961-3821
+    website: https://github.com/brian-rose
+    affiliation: University at Albany (State University of New York)
   - family-names: Kent
     given-names: Julia
     orcid: https://orcid.org/0000-0002-5611-8986
+    website: https://github.com/jukent
+    affiliation: UCAR/NCAR
   - family-names: Tyle
     given-names: Kevin
     orcid: https://orcid.org/0000-0001-5249-9665
+    website: https://github.com/ktyle
+    affiliation: University at Albany (State University of New York)
   - family-names: Clyne
     given-names: John
     orcid: https://orcid.org/0000-0003-2788-9017
+    website: https://github.com/clyne
+    affiliation: UCAR/NCAR
   - family-names: Banihirwe
     given-names: Anderson
     orcid: https://orcid.org/0000-0001-6583-571X
+    website: https://github.com/banihirwe
   - family-names: Camron
     given-names: Drew
     orcid: https://orcid.org/0000-0001-7246-6502
+    website: https://github.com/dcamron
+    affiliation: UCAR/Unidata
   - family-names: May
     given-names: Ryan
     orcid: https://orcid.org/0000-0003-2907-038X
+    website: https://github.com/dopplershift
+    affiliation: UCAR/Unidata
   - family-names: Grover
     given-names: Maxwell
     orcid: https://orcid.org/0000-0002-0370-8974
+    website: https://github.com/mgrover1
+    affiliation: Argonne National Laboratory
   - family-names: Ford
     given-names: Robert R.
     orcid: https://orcid.org/0000-0001-5483-4965
+    website: https://github.com/r-ford
+    affiliation: University at Albany (State University of New York)
   - family-names: Paul
     given-names: Kevin
     orcid: https://orcid.org/0000-0001-8155-8038
+    website: https://github.com/kmpaul
+    affiliation: NVIDIA
   - family-names: Morley
     given-names: James
     orcid: https://orcid.org/0009-0005-5193-7981
+    website: https://github.com/jnmorley
   - family-names: Eroglu
     given-names: Orhan
     orcid: https://orcid.org/0000-0003-3099-8775
+    website: https://github.com/erogluorhan
+    affiliation: UCAR/NCAR
   - family-names: Kailyn
     given-names: Lily
     orcid: https://orcid.org/0009-0002-0125-5091
+    website: https://github.com/lkailynncar
+    affiliation: UCAR/NCAR
   - family-names: Zacharias
     given-names: Anissa
     orcid: https://orcid.org/0000-0002-2666-8493
+    website: https://github.com/anissa111
+    affiliation: UCAR/NCAR
 title: 'Pythia Foundations'
 version: v2023.05.01
-date-released: 2023-05-01
-doi: 10.5281/zenodo.7884572
