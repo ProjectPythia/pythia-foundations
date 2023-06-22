@@ -24,7 +24,7 @@ authors:
   - family-names: Banihirwe
     given-names: Anderson
     orcid: https://orcid.org/0000-0001-6583-571X
-    website: https://github.com/andersy005
+    website: https://github.com/banihirwe
   - family-names: Camron
     given-names: Drew
     orcid: https://orcid.org/0000-0001-7246-6502
@@ -71,4 +71,3 @@ authors:
     affiliation: UCAR/NCAR
 title: 'Pythia Foundations'
 version: v2023.05.01
-doi: 10.5281/zenodo.7884571
