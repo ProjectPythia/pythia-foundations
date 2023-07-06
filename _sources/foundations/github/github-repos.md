@@ -67,7 +67,7 @@ repository for any project. In fact, repositories can come and go
 at any time, created and deleted as need dictates. Creating new
 repositories from existing ones, synchronizing them, and managing them
 are the topics of later sections. For now, it is only important to
-understand that or a GitHub-managed project, there is typically one
+understand that for a GitHub-managed project, there is typically one
 "official" repository, often called the "upstream" repository, and it lives on GitHub.com. There may be any
 number of copies of the "official" repository, known as _forks_ (or _origins_,
 if it is owned by you),
