@@ -904,7 +904,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
     title: Forecast model run
     institution: Unidata
     source: WRF-1.5
-    history: 2023-06-24 15:42:29.373449 Python
+    history: 2023-07-06 16:40:36.616372 Python
     references: 
     comment: 
     dimensions(sizes): forecast_time(0), x(101), y(67), pressure(7)
@@ -1158,13 +1158,13 @@ filling on, default _FillValue of 9.969209968386869e+36 used
 <span class="n">lon_var</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">lon</span>
 <span class="n">lon_var</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;degrees_east&#39;</span>
 <span class="n">lon_var</span><span class="o">.</span><span class="n">standard_name</span> <span class="o">=</span> <span class="s1">&#39;longitude&#39;</span>  <span class="c1"># Optional</span>
-<span class="n">lon_var</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;longitude&#39;</span>
+<span class="n">lon_var</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;longitude coordinate&#39;</span>
 
 <span class="n">lat_var</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">))</span>
 <span class="n">lat_var</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">lat</span>
 <span class="n">lat_var</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;degrees_north&#39;</span>
 <span class="n">lat_var</span><span class="o">.</span><span class="n">standard_name</span> <span class="o">=</span> <span class="s1">&#39;latitude&#39;</span>  <span class="c1"># Optional</span>
-<span class="n">lat_var</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;latitude&#39;</span>
+<span class="n">lat_var</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;latitude coordinate&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -1646,7 +1646,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 24 June 2023.
+          Last updated on 6 July 2023.
         </p>
       </div>
     </div>
