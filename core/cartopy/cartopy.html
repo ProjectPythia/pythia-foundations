@@ -885,7 +885,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7f803061d060&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7effd39dfbe0&gt;
 </pre></div>
 </div>
 </div>
@@ -917,7 +917,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7f80304a2740&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7effd394e860&gt;
 </pre></div>
 </div>
 </div>
@@ -987,70 +987,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ax</span><span class="o">.</span><span class="n">stock_img</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">fig</span>
-
-<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/cartopy/mpl/geoaxes.py:1019,</span> in <span class="ni">GeoAxes.stock_img</span><span class="nt">(self, name)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1014</span>     <span class="n">source_proj</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="n">fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;repo_data_dir&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1016</span>                          <span class="s1">&#39;raster&#39;</span><span class="p">,</span> <span class="s1">&#39;natural_earth&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1017</span>                          <span class="s1">&#39;50-natural-earth-1-downsampled.png&#39;</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1019</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="n">fname</span><span class="p">),</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;upper&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1020</span>                        <span class="n">transform</span><span class="o">=</span><span class="n">source_proj</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1021</span>                        <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">])</span>
-<span class="g g-Whitespace">   </span><span class="mi">1022</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1023</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown stock image </span><span class="si">%r</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
-
-<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/cartopy/mpl/geoaxes.py:318,</span> in <span class="ni">_add_transform.&lt;locals&gt;.wrapper</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">313</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Invalid transform: Spherical </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1"> &#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">314</span>                      <span class="s1">&#39;is not supported - consider using &#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">315</span>                      <span class="s1">&#39;PlateCarree/RotatedPole.&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">317</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;transform&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">transform</span>
-<span class="ne">--&gt; </span><span class="mi">318</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/cartopy/mpl/geoaxes.py:1331,</span> in <span class="ni">GeoAxes.imshow</span><span class="nt">(self, img, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1329</span> <span class="kn">from</span> <span class="nn">cartopy.img_transform</span> <span class="kn">import</span> <span class="n">warp_array</span>
-<span class="g g-Whitespace">   </span><span class="mi">1330</span> <span class="n">original_extent</span> <span class="o">=</span> <span class="n">extent</span>
-<span class="ne">-&gt; </span><span class="mi">1331</span> <span class="n">img</span><span class="p">,</span> <span class="n">extent</span> <span class="o">=</span> <span class="n">warp_array</span><span class="p">(</span><span class="n">img</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1332</span>                          <span class="n">source_proj</span><span class="o">=</span><span class="n">transform</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1333</span>                          <span class="n">source_extent</span><span class="o">=</span><span class="n">original_extent</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1334</span>                          <span class="n">target_proj</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">projection</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1335</span>                          <span class="n">target_res</span><span class="o">=</span><span class="n">regrid_shape</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1336</span>                          <span class="n">target_extent</span><span class="o">=</span><span class="n">target_extent</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1337</span>                          <span class="n">mask_extrapolated</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1338</span>                          <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1339</span> <span class="n">alpha</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1340</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-
-<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/cartopy/img_transform.py:192,</span> in <span class="ni">warp_array</span><span class="nt">(array, target_proj, source_proj, target_res, source_extent, target_extent, mask_extrapolated)</span>
-<span class="g g-Whitespace">    </span><span class="mi">186</span> <span class="c1"># XXX Take into account the extents of the original to determine</span>
-<span class="g g-Whitespace">    </span><span class="mi">187</span> <span class="c1"># target_extents?</span>
-<span class="g g-Whitespace">    </span><span class="mi">188</span> <span class="n">target_native_x</span><span class="p">,</span> <span class="n">target_native_y</span><span class="p">,</span> <span class="n">extent</span> <span class="o">=</span> <span class="n">mesh_projection</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">189</span>     <span class="n">target_proj</span><span class="p">,</span> <span class="n">target_res</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">target_res</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">190</span>     <span class="n">x_extents</span><span class="o">=</span><span class="n">target_x_extents</span><span class="p">,</span> <span class="n">y_extents</span><span class="o">=</span><span class="n">target_y_extents</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">192</span> <span class="n">array</span> <span class="o">=</span> <span class="n">regrid</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">source_native_xy</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">source_native_xy</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">193</span>                <span class="n">source_proj</span><span class="p">,</span> <span class="n">target_proj</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">194</span>                <span class="n">target_native_x</span><span class="p">,</span> <span class="n">target_native_y</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">195</span>                <span class="n">mask_extrapolated</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">196</span> <span class="k">return</span> <span class="n">array</span><span class="p">,</span> <span class="n">extent</span>
-
-<span class="nn">File /usr/share/miniconda3/envs/pythia-book-dev/lib/python3.10/site-packages/cartopy/img_transform.py:278,</span> in <span class="ni">regrid</span><span class="nt">(array, source_x_coords, source_y_coords, source_proj, target_proj, target_x_points, target_y_points, mask_extrapolated)</span>
-<span class="g g-Whitespace">    </span><span class="mi">274</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">275</span>     <span class="c1"># Versions of scipy &gt;= v0.16 added the balanced_tree argument,</span>
-<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="c1"># which caused the KDTree to hang with this input.</span>
-<span class="g g-Whitespace">    </span><span class="mi">277</span>     <span class="n">kdtree</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">cKDTree</span><span class="p">(</span><span class="n">xyz</span><span class="p">,</span> <span class="n">balanced_tree</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">278</span>     <span class="n">_</span><span class="p">,</span> <span class="n">indices</span> <span class="o">=</span> <span class="n">kdtree</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">target_xyz</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">indices</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">xyz</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span> <span class="n">indices</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="nn">File _ckdtree.pyx:795,</span> in <span class="ni">scipy.spatial._ckdtree.cKDTree.query</span><span class="nt">()</span>
-
-<span class="ne">ValueError</span>: &#39;x&#39; must be finite, check for nan or inf values
-</pre></div>
-</div>
+<img alt="../../_images/cedcd403574b1a4da611754fd42bf6b165b8c6f822dc3d6f0293e404facd4597.png" src="../../_images/cedcd403574b1a4da611754fd42bf6b165b8c6f822dc3d6f0293e404facd4597.png" />
 </div>
 </div>
 </div>
@@ -1068,6 +1005,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/3d5792234feec41bc1d53c761f5d1b6b529723772e4b6cdfba5f56fbb9e1e59a.png" src="../../_images/3d5792234feec41bc1d53c761f5d1b6b529723772e4b6cdfba5f56fbb9e1e59a.png" />
 </div>
 </div>
 </div>
@@ -1107,6 +1047,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/f15e5a34ed98fe236412f1bd9cd8acc64e0bcd569c7c06f4088e3233e385ff0a.png" src="../../_images/f15e5a34ed98fe236412f1bd9cd8acc64e0bcd569c7c06f4088e3233e385ff0a.png" />
+</div>
 </div>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Info</p>
@@ -1129,6 +1072,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/82af062524018f51120101e6a79930855059ebc0757960507c23b268176b24c6.png" src="../../_images/82af062524018f51120101e6a79930855059ebc0757960507c23b268176b24c6.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1146,6 +1092,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/ca23e937b43bda17611e6fc03fb58db631f0f9ec48a32a5f4a2cc78290e9aec4.png" src="../../_images/ca23e937b43bda17611e6fc03fb58db631f0f9ec48a32a5f4a2cc78290e9aec4.png" />
 </div>
 </div>
 <div class="admonition alert alert-info">
@@ -1192,6 +1141,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;New York and Vicinity&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/2350da468e0aafc840b14986a53fc2d1fadf0666cc90ee622a8e1e00105e6cd7.png" src="../../_images/2350da468e0aafc840b14986a53fc2d1fadf0666cc90ee622a8e1e00105e6cd7.png" />
 </div>
 </div>
 <div class="admonition alert alert-info">
@@ -1251,6 +1203,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/509c90705817ac348925e3a22bcb7158d49e960c9c6314bef388658e0f72aacd.png" src="../../_images/509c90705817ac348925e3a22bcb7158d49e960c9c6314bef388658e0f72aacd.png" />
+</div>
 </div>
 </div>
 <div class="section" id="a-figure-with-two-different-regional-maps">
@@ -1297,6 +1252,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/3888f06f49b43a68a08a89039b581d771054ae22ed348bdd167f04deb15a1786.png" src="../../_images/3888f06f49b43a68a08a89039b581d771054ae22ed348bdd167f04deb15a1786.png" />
+</div>
 </div>
 </div>
 </div>
@@ -1312,6 +1270,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/f28790b92986c53664cd94ddbf27f0047969b83e9e257e3fdcaa799f1f4bf891.png" src="../../_images/f28790b92986c53664cd94ddbf27f0047969b83e9e257e3fdcaa799f1f4bf891.png" />
+</div>
 </div>
 <p>Plotting data on a Cartesian grid is equivalent to plotting data in the PlateCarree projection, where meridians and parallels are all straight lines with constant spacing. As a result of this simplicity, the global datasets we use often begin in the PlateCarree projection.</p>
 <p>Once we create our map again, we can plot these data values as a contour map. We must also specify the <code class="docutils literal notranslate"><span class="pre">transform</span></code> keyword argument. This is an argument to a contour-plotting method that specifies the projection type currently used by our data.  The projection type specified by this argument will be transformed into the projection type specified in the <code class="docutils literal notranslate"><span class="pre">subplot</span></code> method. Let’s plot our data in the Mollweide projection to see how shapes change under a transformation.</p>
@@ -1324,6 +1285,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">dataplot</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/437f45eb897aa23ad39e8dea8db03b632cae1df0733aabfb52f5105748ba4d2c.png" src="../../_images/437f45eb897aa23ad39e8dea8db03b632cae1df0733aabfb52f5105748ba4d2c.png" />
 </div>
 </div>
 </div>
@@ -1512,7 +1476,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 11 July 2023.
+          Last updated on 13 July 2023.
         </p>
       </div>
     </div>
