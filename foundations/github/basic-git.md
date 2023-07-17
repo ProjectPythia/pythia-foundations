@@ -44,7 +44,7 @@ analysis_script_09122021_edit.py
 analysis_script_NEW.py
 ```
 
-A Version Control System (VCS) like git will replace this mess with a _well-ordered and labelled history_ of edits that you can freely browse through, and will greatly simply collaborating with other people on writing new code.
+A Version Control System (VCS) like git will replace this mess with a _well-ordered and labelled history_ of edits that you can freely browse through, and will greatly simplify collaborating with other people on writing new code.
 
 ### What is git?
 
