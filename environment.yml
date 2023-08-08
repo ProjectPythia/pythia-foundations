@@ -15,7 +15,7 @@ dependencies:
   - pyproj
   - pythia-datasets
   - python
-  - scipy
+  - scipy<1.11
   - ffmpeg
   - sqlalchemy<1.4
   - xarray
