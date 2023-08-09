@@ -130,6 +130,8 @@ sphinx:
           url: https://projectpythia.org/resource-gallery.html
         - name: Community
           url: https://projectpythia.org/index.html#join-us
+        - name: Blog
+          url: https://projectpythia.org/blog.html
       footer_logos:
         NCAR: images/logos/NCAR-contemp-logo-blue.svg
         Unidata: images/logos/Unidata_logo_horizontal_1200x300.svg
