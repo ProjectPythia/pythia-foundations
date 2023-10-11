@@ -1442,7 +1442,7 @@ Name: Nino34, Length: 472, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2570/737336773.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2722/737336773.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
   nino34_series[3]
 </pre></div>
 </div>
@@ -1793,7 +1793,7 @@ Name: Nino34, Length: 472, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2570/541596450.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2722/541596450.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
   df[&quot;Nino34&quot;][3]
 </pre></div>
 </div>
@@ -2591,7 +2591,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ae4954a2e3dafba65da6ea4c9d0c47ef4dd166e276c3167ffd19b32a1b0f3b23.png" src="../../_images/ae4954a2e3dafba65da6ea4c9d0c47ef4dd166e276c3167ffd19b32a1b0f3b23.png" />
+<img alt="../../_images/de73899ad8ed622df31e81a962ac12b819e4257c0452ac1c188054925e9781a6.png" src="../../_images/de73899ad8ed622df31e81a962ac12b819e4257c0452ac1c188054925e9781a6.png" />
 </div>
 </div>
 <p>Before, we called <code class="docutils literal notranslate"><span class="pre">.plot()</span></code>, which generated a single line plot. Line plots can be helpful for understanding some types of data, but there are other types of data that can be better understood with different plot types. For example, if your data values form a distribution, you can better understand them using a histogram plot.</p>
@@ -2603,7 +2603,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/7e19d5495940c0adbdd29975be3dff8c8b23bd5881bdca80a1fe0c559d828309.png" src="../../_images/7e19d5495940c0adbdd29975be3dff8c8b23bd5881bdca80a1fe0c559d828309.png" />
+<img alt="../../_images/d4224c88b681e396ff95813af0c38411189a2c57ad77c712e6a68268ecb9d3e4.png" src="../../_images/d4224c88b681e396ff95813af0c38411189a2c57ad77c712e6a68268ecb9d3e4.png" />
 </div>
 </div>
 <p>The histogram plot helped us better understand our data; there are clear differences in the distributions. To even better understand this type of data, it may also be helpful to create a box plot. This can be done using the same line of code, with one change: we call the <code class="docutils literal notranslate"><span class="pre">box</span></code> method instead of <code class="docutils literal notranslate"><span class="pre">hist</span></code>.</p>
@@ -2614,7 +2614,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/a279d1c0e41635648d130b880f476c12b4bd699e2311f0f1db1e4c0fb29853e9.png" src="../../_images/a279d1c0e41635648d130b880f476c12b4bd699e2311f0f1db1e4c0fb29853e9.png" />
+<img alt="../../_images/0cbebcedad9328e9ff2a65e8ce663faec77a3040ea2b7129b85e2beaa8d10de2.png" src="../../_images/0cbebcedad9328e9ff2a65e8ce663faec77a3040ea2b7129b85e2beaa8d10de2.png" />
 </div>
 </div>
 <p>Just like the histogram plot, this box plot indicates a clear difference in the distributions. Using multiple types of plot in this way can be useful for verifying large datasets. The pandas plotting methods are capable of creating many different types of plots. To see how to use the plotting methods to generate each type of plot, please review the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">pandas plot documentation</a>.</p>
@@ -2634,7 +2634,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6dc37d2c1d495e52cb2d6c95854edff74ccf3bc1f5b4e25b17389e1965f48617.png" src="../../_images/6dc37d2c1d495e52cb2d6c95854edff74ccf3bc1f5b4e25b17389e1965f48617.png" />
+<img alt="../../_images/82da9423403141f9144e2b35e5c8b8eee171c16001c55276e0e5ac53c8e5f11b.png" src="../../_images/82da9423403141f9144e2b35e5c8b8eee171c16001c55276e0e5ac53c8e5f11b.png" />
 </div>
 </div>
 <p>Although plotting data can provide a clear visual picture of data values, sometimes a more quantitative look at data is warranted. As elaborated on in the next section, this can be achieved using the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method.  The <code class="docutils literal notranslate"><span class="pre">describe</span></code> method is called on the entire <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, and returns various summarized statistics for each column in the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</p>
@@ -3318,7 +3318,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c4601c390e490f5dbe7cfaa0cfe024da3db6e9f5d9703e5590c05916251f48e0.png" src="../../_images/c4601c390e490f5dbe7cfaa0cfe024da3db6e9f5d9703e5590c05916251f48e0.png" />
+<img alt="../../_images/5dee70b70b02f12aaa9512a2e2c5bb5a1d9afc63d66012cebdc17b60c3195821.png" src="../../_images/5dee70b70b02f12aaa9512a2e2c5bb5a1d9afc63d66012cebdc17b60c3195821.png" />
 </div>
 </div>
 </div>
@@ -3979,7 +3979,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ae4954a2e3dafba65da6ea4c9d0c47ef4dd166e276c3167ffd19b32a1b0f3b23.png" src="../../_images/ae4954a2e3dafba65da6ea4c9d0c47ef4dd166e276c3167ffd19b32a1b0f3b23.png" />
+<img alt="../../_images/de73899ad8ed622df31e81a962ac12b819e4257c0452ac1c188054925e9781a6.png" src="../../_images/de73899ad8ed622df31e81a962ac12b819e4257c0452ac1c188054925e9781a6.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3989,7 +3989,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6ce189e2d9e1611badd2d85dbf550c29a26d309ae1572c1a9ec832183fc9c920.png" src="../../_images/6ce189e2d9e1611badd2d85dbf550c29a26d309ae1572c1a9ec832183fc9c920.png" />
+<img alt="../../_images/d8d6130e0c51218e6816bea39b877ea8435fd33b133380b46a42a1ca13852686.png" src="../../_images/d8d6130e0c51218e6816bea39b877ea8435fd33b133380b46a42a1ca13852686.png" />
 </div>
 </div>
 </div>
@@ -4590,7 +4590,7 @@ Name: Nino34_degK, Length: 472, dtype: float64
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 14 September 2023.
+          Last updated on 11 October 2023.
         </p>
       </div>
     </div>
