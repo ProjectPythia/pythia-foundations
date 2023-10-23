@@ -1,0 +1,1455 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Times and Dates in Python &#8212; Pythia Foundations</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Pandas" href="../pandas.html" />
+    <link rel="prev" title="Datetime" href="../datetime.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-G57FLM9M46"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-G57FLM9M46');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="132">
+    <div class="container-fluid" id="shim"></div>
+    <div class="container-fluid" id="banner"></div>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://projectpythia.org">
+  <img src="../../_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/blog.html">Blog</a>
+  </li>
+  
+  
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ProjectPythia" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/project_pythia" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" rel="noopener" target="_blank" title="YouTube">
+            <span><i class="fab fa-youtube-square"></i></span>
+            <label class="sr-only">YouTube</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    <div class="container-xl">
+      <div class="row">
+        
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../landing-page.html">
+   Pythia Foundations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/how-to-use.html">
+   How to Use This Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/how-to-cite.html">
+   How to Cite This Book
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Foundational skills
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../foundations/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../foundations/why-python.html">
+   Why Python?
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../foundations/getting-started-python.html">
+   Getting Started with Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/quickstart.html">
+     Quickstart: Zero to Python
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../foundations/how-to-run-python.html">
+     Installing and Running Python
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../foundations/terminal.html">
+       Python in the Terminal
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../foundations/jupyter.html">
+       Python in Jupyter
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../foundations/conda.html">
+       Installing and Managing Python with Conda
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../foundations/getting-started-jupyter.html">
+   Getting Started with Jupyter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/jupyterlab.html">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/markdown.html">
+     Formatted Text in the Notebook with Markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../foundations/getting-started-github.html">
+   Getting Started with GitHub
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/what-is-github.html">
+     What is GitHub?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/github-repos.html">
+     GitHub Repositories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/github-issues.html">
+     Issues and Discussions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/github-cloning-forking.html">
+     Cloning and Forking a Repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/github-setup-advanced.html">
+     Configuring Your GitHub Account
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/basic-git.html">
+     Basic Version Control with
+     <em>
+      git
+     </em>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/git-branches.html">
+     Git Branches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/github-pull-request.html">
+     Opening a Pull Request on GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/review-pr.html">
+     Reviewing Pull Requests
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/github-workflows.html">
+     GitHub Workflows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../foundations/github/contribute-to-pythia.html">
+     Contribute to Project Pythia via GitHub
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Core Scientific Python packages
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../numpy.html">
+   NumPy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../numpy/numpy-basics.html">
+     NumPy Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../numpy/intermediate-numpy.html">
+     Intermediate NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../numpy/numpy-broadcasting.html">
+     NumPy Broadcasting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../matplotlib.html">
+   Matplotlib
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matplotlib/matplotlib-basics.html">
+     Matplotlib Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matplotlib/histograms-piecharts-animation.html">
+     Histograms, Pie Charts, and Animations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matplotlib/annotations-colorbars-layouts.html">
+     Annotations, Colorbars, and Advanced Layouts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../cartopy.html">
+   Cartopy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cartopy/cartopy.html">
+     Introduction to Cartopy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../datetime.html">
+   Datetime
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Times and Dates in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../pandas.html">
+   Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../pandas/pandas.html">
+     Introduction to Pandas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data-formats.html">
+   Data Formats
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data-formats/netcdf-cf.html">
+     NetCDF and CF: The Basics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../xarray.html">
+   Xarray
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xarray/xarray-intro.html">
+     Introduction to Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xarray/computation-masking.html">
+     Computations and Masks with Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xarray/enso-xarray.html">
+     Calculating ENSO with Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xarray/dask-arrays-xarray.html">
+     Dask Arrays with Xarray
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/how-to-contribute.html">
+   Pythia Foundations Contributor’s Guide
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/template.html">
+     Project Pythia Notebook Template
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
+or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
+
+</div>
+
+</div>
+
+        
+
+        <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main"><div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/core/datetime/datetime.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ProjectPythia/pythia-foundations"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/datetime/datetime.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/datetime/datetime.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://binder.projectpythia.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/core/datetime/datetime.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> On this page
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports">
+   Imports
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#time-versus-datetime-modules">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Time
+    </span>
+   </code>
+   Versus
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Datetime
+    </span>
+   </code>
+   modules
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-core-terminology">
+     Some core terminology
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#time-module">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       time
+      </span>
+     </code>
+     module
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-unix-time">
+     What is Unix Time?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#datetime-module">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       datetime
+      </span>
+     </code>
+     module
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-and-writing-dates-and-times">
+   Reading and writing dates and times
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parsing-lightning-data-timestamps-with-the-datetime-strptime-method">
+     Parsing lightning data timestamps with the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       datetime.strptime
+      </span>
+     </code>
+     method
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-usage-of-the-datetime-object">
+     Example usage of the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       datetime
+      </span>
+     </code>
+     object
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#controlling-the-output-format-with-strftime">
+       Controlling the output format with
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         strftime()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-simple-query-of-just-the-year">
+       A simple query of just the year:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#see-how-many-days-have-elapsed-since-the-strike">
+       See how many days have elapsed since the strike:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculating-coastal-tides-with-the-timedelta-class">
+   Calculating coastal tides with the
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     timedelta
+    </span>
+   </code>
+   class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dealing-with-time-zones">
+   Dealing with Time Zones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-utc">
+     What is UTC?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#time-zone-naive-versus-time-zone-aware-datetime-objects">
+     Time Zone Naive Versus Time Zone Aware
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       datetime
+      </span>
+     </code>
+     Objects
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#full-time-zone-support-with-the-pytz-module">
+     Full time zone support with the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pytz
+      </span>
+     </code>
+     module
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#print-time-with-a-different-time-zone">
+     Print Time with a Different Time Zone
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#whats-next">
+     What’s Next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resources-and-references">
+   Resources and References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+          <div id="main-content" class="row">
+            <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+              
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="times-and-dates-in-python">
+<h1>Times and Dates in Python<a class="headerlink" href="#times-and-dates-in-python" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<hr class="docutils" />
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Time is an essential component of nearly all geoscience data. Timescales commonly used in science can have many different orders of magnitude, from mere microseconds to millions or even billions of years.  Some of these magnitudes are listed below:</p>
+<ul class="simple">
+<li><p>microseconds for lightning</p></li>
+<li><p>hours for a supercell thunderstorm</p></li>
+<li><p>days for a global weather model</p></li>
+<li><p>millennia and beyond for the earth’s climate</p></li>
+</ul>
+<p>To properly analyze geoscience data, you must have a firm understanding of how to handle time in Python.</p>
+<p>In this notebook, we will:</p>
+<ol class="arabic simple">
+<li><p>Introduce the <a class="reference external" href="https://docs.python.org/3/library/time.html">time</a> and <a class="reference external" href="https://docs.python.org/3/library/datetime.html">datetime</a> modules from the Python Standard Library</p></li>
+<li><p>Look at formatted input and output of dates and times</p></li>
+<li><p>See how we can do simple arithmetic on date and time data, by making use of the <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> object</p></li>
+<li><p>Briefly make use of the <a class="reference external" href="https://pypi.org/project/pytz/">pytz</a> module to handle some thorny time zone issues in Python.</p></li>
+</ol>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concepts</p></th>
+<th class="head"><p>Importance</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../../foundations/quickstart.html"><span class="doc std std-doc">Python Quickstart</span></a></p></td>
+<td><p>Necessary</p></td>
+<td><p>Understanding strings</p></td>
+</tr>
+<tr class="row-odd"><td><p>Basic Python string formatting</p></td>
+<td><p>Helpful</p></td>
+<td><p>Try this <a class="reference external" href="https://realpython.com/python-string-formatting/">Real Python string formatting tutorial</a></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>Time to learn</strong>: 30 minutes</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>For the examples on this page, we import three modules from the Python Standard Library, as well as one third-party module.  The import syntax used here, as well as a discussion on this syntax and an overview of these modules, can be found in the next section.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python Standard Library packages</span>
+<span class="c1"># We&#39;ll discuss below WHY we alias the packages this way</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">time</span> <span class="k">as</span> <span class="nn">tm</span>
+
+<span class="c1"># Third-party package for time zone handling, we&#39;ll discuss below!</span>
+<span class="kn">import</span> <span class="nn">pytz</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="time-versus-datetime-modules">
+<h2><code class="docutils literal notranslate"><span class="pre">Time</span></code> Versus <code class="docutils literal notranslate"><span class="pre">Datetime</span></code> modules<a class="headerlink" href="#time-versus-datetime-modules" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="section" id="some-core-terminology">
+<h3>Some core terminology<a class="headerlink" href="#some-core-terminology" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Every Python installation comes with a Standard Library, which includes many helpful modules; in these examples, we cover the <a class="reference external" href="https://docs.python.org/3/library/time.html">time</a> and <a class="reference external" href="https://docs.python.org/3/library/datetime.html">datetime</a> modules. Unfortunately, the use of dates and times in Python can be disorienting.  There are many different terms used in Python relating to dates and times, and many such terms apply to multiple scopes, such as modules, classes, and functions. For example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code> <strong>module</strong> has a <code class="docutils literal notranslate"><span class="pre">datetime</span></code> <strong>class</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code> <strong>module</strong> has a <code class="docutils literal notranslate"><span class="pre">time</span></code> <strong>class</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code> <strong>module</strong> has a <code class="docutils literal notranslate"><span class="pre">date</span></code> <strong>class</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> <strong>module</strong> has a <code class="docutils literal notranslate"><span class="pre">time</span></code> function, which returns (almost always) <span class="xref myst">Unix time</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code> <strong>class</strong> has a <code class="docutils literal notranslate"><span class="pre">date</span></code> method, which returns a <code class="docutils literal notranslate"><span class="pre">date</span></code> object</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code> <strong>class</strong> has a <code class="docutils literal notranslate"><span class="pre">time</span></code> method, which returns a <code class="docutils literal notranslate"><span class="pre">time</span></code> object</p></li>
+</ul>
+<p>This confusion can be partially alleviated by aliasing our imported modules, we did above:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">import</span> <span class="nn">time</span> <span class="k">as</span> <span class="nn">tm</span>
+</pre></div>
+</div>
+<p>We can now reference the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module (aliased to <code class="docutils literal notranslate"><span class="pre">dt</span></code>) and <code class="docutils literal notranslate"><span class="pre">datetime</span></code> class unambiguously.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pisecond</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2021</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">26</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pisecond</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-03-14 15:09:26
+</pre></div>
+</div>
+</div>
+</div>
+<p>Our variable <code class="docutils literal notranslate"><span class="pre">pisecond</span></code> now stores a particular date and time, which just happens to be <span class="math notranslate nohighlight">\(\pi\)</span>-day 2021 down to the nearest second (3.1415926…).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">now</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1698096596.3003008
+</pre></div>
+</div>
+</div>
+</div>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">now</span></code> holds the current time in seconds since January 1, 1970 00:00 UTC.  For more information on this important, but seemingly esoteric time format, see the section on this page called “<span class="xref myst">What is Unix Time</span>”. In addition, if you are not familiar with UTC, there is a section on this page called “<span class="xref myst">What is UTC</span>”.</p>
+</div>
+<div class="section" id="time-module">
+<h3><code class="docutils literal notranslate"><span class="pre">time</span></code> module<a class="headerlink" href="#time-module" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">time</span></code> module is well-suited for measuring <span class="xref myst">Unix time</span>. For example, when you are calculating how long it takes a Python function to run, you can employ the <code class="docutils literal notranslate"><span class="pre">time()</span></code> function, which can be found in the <code class="docutils literal notranslate"><span class="pre">time</span></code> module, to obtain Unix time before and after the function completes.  You can then take the difference of those two times to determine how long the function was running. (Measuring the runtime of a block of code this way is known as “benchmarking”.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># The sleep function will stop the program for n seconds</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">diff</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The benchmark took </span><span class="si">{</span><span class="n">diff</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The benchmark took 1.000284194946289 seconds
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition alert alert-info">
+<p class="admonition-title">Info</p>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">timeit</span></code> module and the <code class="docutils literal notranslate"><span class="pre">timeit</span></code> Jupyter magic for more accurate benchmarking.  Documentation on these can be found <a href="https://docs.python.org/3/library/timeit.html">here</a>.</p>
+</div>
+</div>
+<div class="section" id="what-is-unix-time">
+<h3>What is Unix Time?<a class="headerlink" href="#what-is-unix-time" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Unix time is an example of system time, which is how a computer tracks the passage of time. Computers do not inherently know human representations of time; as such, they store time as a large binary number, indicating a number of time units after a set date and time.  This is much easier for a computer to keep track of.  In the case of Unix time, the time unit is seconds, and the set date and time is the epoch.  Therefore, Unix time is the number of seconds since the epoch.  The epoch is defined as January 1, 1970 00:00 <span class="xref myst">UTC</span>.  This is quite confusing for humans, but again, computers store time in a way that makes sense for them. It is represented “under the hood” as a <a class="reference external" href="https://en.wikipedia.org/wiki/Floating_point">floating point number</a> which is how computers represent real (ℝ) numbers.</p>
+</div>
+<div class="section" id="datetime-module">
+<h3><code class="docutils literal notranslate"><span class="pre">datetime</span></code> module<a class="headerlink" href="#datetime-module" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module handles time with the Gregorian calendar (the calendar we, as humans, are familiar with); it is independent of Unix time. The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module uses an <span class="xref myst">object-oriented</span> approach; it contains the <code class="docutils literal notranslate"><span class="pre">date</span></code>, <code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">datetime</span></code>, <code class="docutils literal notranslate"><span class="pre">timedelta</span></code>, and <code class="docutils literal notranslate"><span class="pre">tzinfo</span></code> classes.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">date</span></code> class represents the day, month, and year</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> class represents the time of day</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code> class is a combination of the <code class="docutils literal notranslate"><span class="pre">date</span></code> and <code class="docutils literal notranslate"><span class="pre">time</span></code> classes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timedelta</span></code> class represents a time duration</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tzinfo</span></code> class represents time zones, and is an abstract class.</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module is effective for:</p>
+<ul class="simple">
+<li><p>performing date and time arithmetic and calculating time duration</p></li>
+<li><p>reading and writing date and time strings with various formats</p></li>
+<li><p>handling time zones (with the help of third-party libraries)</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">time</span></code> and <code class="docutils literal notranslate"><span class="pre">datetime</span></code> modules overlap in functionality, but in your geoscientific work, you will probably be using the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module more than the <code class="docutils literal notranslate"><span class="pre">time</span></code> module.</p>
+<p>We’ll delve into more details below, but here’s a quick example of writing out our <code class="docutils literal notranslate"><span class="pre">pisecond</span></code> datetime object as a formatted string. Suppose we wanted to write out just the date, and write it in the <em>month/day/year</em> format typically used in the US. We can do this using the <code class="docutils literal notranslate"><span class="pre">strftime()</span></code> method.  This method formats datetime objects using format specifiers.  An example of its usage is shown below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pi day occurred on:&#39;</span><span class="p">,</span> <span class="n">pisecond</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%Y&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pi day occurred on: 03/14/2021
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="reading-and-writing-dates-and-times">
+<h2>Reading and writing dates and times<a class="headerlink" href="#reading-and-writing-dates-and-times" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="section" id="parsing-lightning-data-timestamps-with-the-datetime-strptime-method">
+<h3>Parsing lightning data timestamps with the <code class="docutils literal notranslate"><span class="pre">datetime.strptime</span></code> method<a class="headerlink" href="#parsing-lightning-data-timestamps-with-the-datetime-strptime-method" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>In this example, we are analyzing <a class="reference external" href="https://ghrc.nsstc.nasa.gov/uso/ds_docs/vaiconus/vaiconus_dataset.html">US NLDN lightning data</a>. Here is a sample row of data:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>06/27/07 16:18:21.898 18.739 -88.184 0.0 kA 0 1.0 0.4 2.5 8 1.2 13 G
+</pre></div>
+</div>
+<p>Part of the task involves parsing the <code class="docutils literal notranslate"><span class="pre">06/27/07</span> <span class="pre">16:18:21.898</span></code> time string into a <code class="docutils literal notranslate"><span class="pre">datetime</span></code> object. (Although it is outside the scope of this page’s tutorial, a full description of this lightning data format can be found <a class="reference external" href="https://ghrc.nsstc.nasa.gov/uso/ds_docs/vaiconus/vaiconus_dataset.html#a6">here</a>.) In order to parse this string or others that follow the same format, you will need to employ the <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime.strptime">datetime.strptime()</a> method from the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module. This method takes two arguments:</p>
+<ol class="arabic simple">
+<li><p>the date/time string you wish to parse</p></li>
+<li><p>the format which describes exactly how the date and time are arranged.</p></li>
+</ol>
+<p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior">The full range of formatting options for strftime() and strptime() is described in the Python documentation</a>. In most cases, finding the correct formatting options inherently takes some degree of experimentation to get right. This is a situation where Python shines; you can use the IPython interpreter, or a Jupyter notebook, to quickly test numerous formatting options. Beyond the official documentation, Google and <a class="reference external" href="https://stackoverflow.com/">Stack Overflow</a> are your friends in this process.</p>
+<p>After some trial and error (as described above), you can find that, in this example, the format string <code class="docutils literal notranslate"><span class="pre">'%m/%d/%y</span> <span class="pre">%H:%M:%S.%f'</span></code> will convert the date and time in the data to the correct format.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">strike_time</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s1">&#39;06/27/07 16:18:21.898&#39;</span><span class="p">,</span> <span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%y %H:%M:%S.</span><span class="si">%f</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># print strike_time to see if we have properly parsed our time</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">strike_time</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2007-06-27 16:18:21.898000
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-usage-of-the-datetime-object">
+<h3>Example usage of the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> object<a class="headerlink" href="#example-usage-of-the-datetime-object" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Why did we bother doing this? This is a deceptively simple example; it may appear that we only took the string <code class="docutils literal notranslate"><span class="pre">06/27/07</span> <span class="pre">16:18:21.898</span></code> and reformatted it to <code class="docutils literal notranslate"><span class="pre">2007-06-27</span> <span class="pre">16:18:21.898000</span></code>.</p>
+<p>However, our new variable, <code class="docutils literal notranslate"><span class="pre">strike_time</span></code>, is in fact a <code class="docutils literal notranslate"><span class="pre">datetime</span></code> object that we can manipulate in many useful ways.</p>
+<p>Here are a few quick examples of the advantages of a datetime object:</p>
+<div class="section" id="controlling-the-output-format-with-strftime">
+<h4>Controlling the output format with <code class="docutils literal notranslate"><span class="pre">strftime()</span></code><a class="headerlink" href="#controlling-the-output-format-with-strftime" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+<p>The following example shows how to write out the time only, without a date, in a particular format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">16</span><span class="n">h</span> <span class="mi">18</span><span class="n">m</span> <span class="mi">21</span><span class="n">s</span>
+</pre></div>
+</div>
+<p>We can do this with the <a class="reference external" href="https://docs.python.org/2/library/datetime.html#datetime.date.strftime">datetime.strftime()</a> method, which takes a format identical to the one we employed for <code class="docutils literal notranslate"><span class="pre">strptime()</span></code>. After some trial and error from the IPython interpreter, we arrive at <code class="docutils literal notranslate"><span class="pre">'%Hh</span> <span class="pre">%Mm</span> <span class="pre">%Ss'</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">strike_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Hh %Mm %Ss&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16h 18m 21s
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="a-simple-query-of-just-the-year">
+<h4>A simple query of just the year:<a class="headerlink" href="#a-simple-query-of-just-the-year" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+<p>Here’s a useful shortcut that doesn’t even need a format specifier:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">strike_time</span><span class="o">.</span><span class="n">year</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2007
+</pre></div>
+</div>
+</div>
+</div>
+<p>This works because the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> object stores the data as individual attributes:
+<code class="docutils literal notranslate"><span class="pre">year</span></code>, <code class="docutils literal notranslate"><span class="pre">month</span></code>, <code class="docutils literal notranslate"><span class="pre">day</span></code>, <code class="docutils literal notranslate"><span class="pre">hour</span></code>, <code class="docutils literal notranslate"><span class="pre">minute</span></code>, <code class="docutils literal notranslate"><span class="pre">second</span></code>, <code class="docutils literal notranslate"><span class="pre">microsecond</span></code>.</p>
+</div>
+<div class="section" id="see-how-many-days-have-elapsed-since-the-strike">
+<h4>See how many days have elapsed since the strike:<a class="headerlink" href="#see-how-many-days-have-elapsed-since-the-strike" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+<p>This example shows how to find the number of days since an event; in this case, the lightning strike described earlier:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">strike_time</span><span class="p">)</span><span class="o">.</span><span class="n">days</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5962
+</pre></div>
+</div>
+</div>
+</div>
+<p>The above example illustrates some simple arithmetic with <code class="docutils literal notranslate"><span class="pre">datetime</span></code> objects.  This commonly-used feature will be covered in more detail in the next section.</p>
+</div>
+</div>
+</div>
+<div class="section" id="calculating-coastal-tides-with-the-timedelta-class">
+<h2>Calculating coastal tides with the <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> class<a class="headerlink" href="#calculating-coastal-tides-with-the-timedelta-class" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>In these examples, we will look at current data pertaining to coastal tides during a <a class="reference external" href="http://www.nhc.noaa.gov/surge/">tropical cyclone storm surge</a>.</p>
+<p>The <a class="reference external" href="http://oceanservice.noaa.gov/education/kits/tides/media/supp_tide05.html">lunar day</a> is 24 hours and 50 minutes; there are two low tides and two high tides in that time duration. If we know the time of the current high tide, we can easily calculate the occurrence of the next low and high tides by using the <a class="reference external" href="https://docs.python.org/3/library/datetime.html#timedelta-objects">timedelta class</a>. (In reality, the <em>exact time</em> of tides is influenced by local coastal effects, in addition to the laws of celestial mechanics, but we will ignore that fact for this exercise.)</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> class is initialized by supplying time duration, usually supplied with <a class="reference external" href="https://docs.python.org/3/glossary.html#term-argument">keyword arguments</a>, to clearly express the length of time. The <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> class allows you to perform arithmetic with dates and times using standard operators (i.e., <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>).  You can use these operators with a <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> object, and either another <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> object, a datetime object, or a numeric literal, to obtain objects representing new dates and times.</p>
+<p>This convenient language feature is known as <a class="reference external" href="https://en.wikipedia.org/wiki/Operator_overloading">operator overloading</a>, and is another example of Python offering built-in functionality to make programming easier. (In some other languages, such as Java, you would have to call a method to perform such operations, which significantly obfuscates the code.)</p>
+<p>In addition, you can use these arithmetic operators with two datetime objects, as shown above with <span class="xref myst">lightning-strike data</span>, to create <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> objects. Let’s examine all these features in the following code block.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">high_tide</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">lunar_day</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">tide_duration</span> <span class="o">=</span> <span class="n">lunar_day</span> <span class="o">/</span> <span class="mi">4</span>  <span class="c1"># Here we do some arithmetic on the timedelta object!</span>
+<span class="n">next_low_tide</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">high_tide</span> <span class="o">+</span> <span class="n">tide_duration</span>
+<span class="p">)</span>  <span class="c1"># Here we add a timedelta object to a datetime object</span>
+<span class="n">next_high_tide</span> <span class="o">=</span> <span class="n">high_tide</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">tide_duration</span><span class="p">)</span>  <span class="c1"># and so on</span>
+<span class="n">tide_length</span> <span class="o">=</span> <span class="n">next_high_tide</span> <span class="o">-</span> <span class="n">high_tide</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The time between high and low tide is </span><span class="si">{</span><span class="n">tide_duration</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The current high tide is </span><span class="si">{</span><span class="n">high_tide</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The next low tide is </span><span class="si">{</span><span class="n">next_low_tide</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The next high tide </span><span class="si">{</span><span class="n">next_high_tide</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The tide length is </span><span class="si">{</span><span class="n">tide_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The type of the &#39;tide_length&#39; variable is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">tide_length</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The time between high and low tide is 6:12:30.
+The current high tide is 2016-06-01 04:38:00.
+The next low tide is 2016-06-01 10:50:30.
+The next high tide 2016-06-01 17:03:00.
+The tide length is 12:25:00.
+The type of the &#39;tide_length&#39; variable is &lt;class &#39;datetime.timedelta&#39;&gt;.
+</pre></div>
+</div>
+</div>
+</div>
+<p>To illustrate that the difference of two times yields a <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> object, we can use a built-in Python function called <code class="docutils literal notranslate"><span class="pre">type()</span></code>, which returns the type of its argument.  In the above example, we call <code class="docutils literal notranslate"><span class="pre">type()</span></code> in the last <code class="docutils literal notranslate"><span class="pre">print</span></code> statement, and it returns the type of <code class="docutils literal notranslate"><span class="pre">timedelta</span></code>.</p>
+</div>
+<div class="section" id="dealing-with-time-zones">
+<h2>Dealing with Time Zones<a class="headerlink" href="#dealing-with-time-zones" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Time zones can be a source of confusion and frustration in geoscientific data and in computer programming in general. Core date and time libraries in various programming languages, including Python, inevitably have design flaws, relating to time zones, date and time formatting, and other inherently complex issues.  Third-party libraries are often created to fix the limitations of the core libraries, but this approach is frequently unsuccessful. To avoid time-zone-related issues, it is best to handle data in UTC; if data cannot be handled in UTC, efforts should be made to consistently use the same time zone for all data.  However, this is not always possible; events such as severe weather are expected to be reported in a local time zone, which is not always consistent.</p>
+<div class="section" id="what-is-utc">
+<h3>What is UTC?<a class="headerlink" href="#what-is-utc" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>“<a class="reference external" href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC</a>” is a combination of the French and English abbreviations for Coordinated Universal Time.  It is, in practice, equivalent to Greenwich Mean Time (GMT), the time zone at 0 degrees longitude.  (The prime meridian, 0 degrees longitude, runs through Greenwich, a district of London, England.) In geoscientific data, times are often in UTC, although you should always verify that this is actually true to avoid time zone issues.</p>
+</div>
+<div class="section" id="time-zone-naive-versus-time-zone-aware-datetime-objects">
+<h3>Time Zone Naive Versus Time Zone Aware <code class="docutils literal notranslate"><span class="pre">datetime</span></code> Objects<a class="headerlink" href="#time-zone-naive-versus-time-zone-aware-datetime-objects" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>When you create <code class="docutils literal notranslate"><span class="pre">datetime</span></code> objects in Python, they are “time zone naive”, or, if the subject of time zones is assumed, simply “naive”.  This means that they are unaware of the time zone of the date and time they represent; time zone naive is the opposite of time zone aware. In many situations, you can happily go forward without this detail getting in the way of your work. As the <a class="reference external" href="https://docs.python.org/3/library/datetime.html#aware-and-naive-objects">Python documentation states</a>:</p>
+<blockquote>
+<div><p>Naive objects are easy to understand and to work with, at the cost of ignoring some aspects of reality.</p>
+</div></blockquote>
+<p>However, if you wish to convey time zone information, you will have to make your <code class="docutils literal notranslate"><span class="pre">datetime</span></code> objects time zone aware. The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> library is able to easily convert the time zone to UTC, also converting the object to a time zone aware state, as shown below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naive</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="n">aware</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I am time zone naive </span><span class="si">{</span><span class="n">naive</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I am time zone aware </span><span class="si">{</span><span class="n">aware</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive 2023-10-23 21:29:57.365839.
+I am time zone aware 2023-10-23 21:29:57.365880+00:00.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that <code class="docutils literal notranslate"><span class="pre">aware</span></code> has <code class="docutils literal notranslate"><span class="pre">+00:00</span></code> appended at the end, indicating zero hours offset from UTC.</p>
+<p>Our <code class="docutils literal notranslate"><span class="pre">naive</span></code> object shows the local time on whatever computer was used to run this code. If you’re reading this online, chances are the code was executed on a cloud server that already uses UTC.  If this is the case, <code class="docutils literal notranslate"><span class="pre">naive</span></code> and <code class="docutils literal notranslate"><span class="pre">aware</span></code> will differ only at the microsecond level, due to round-off error.</p>
+<p>In the code above, we used <code class="docutils literal notranslate"><span class="pre">dt.timezone.utc</span></code> to initialize the UTC timezone for our <code class="docutils literal notranslate"><span class="pre">aware</span></code> object. Unfortunately, at this time, the Python Standard Library does not fully support initializing datetime objects with arbitrary time zones; it also does not fully support conversions between time zones for datetime objects.  However, there exist third-party libraries that provide some of this functionality; one such library is covered below.</p>
+</div>
+<div class="section" id="full-time-zone-support-with-the-pytz-module">
+<h3>Full time zone support with the <code class="docutils literal notranslate"><span class="pre">pytz</span></code> module<a class="headerlink" href="#full-time-zone-support-with-the-pytz-module" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>For improved handling of time zones in Python, you will need the third-party <a class="reference external" href="https://pypi.org/project/pytz/">pytz</a> module, whose classes build upon, or, in object-oriented programming terms, inherit from, classes from the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module.</p>
+<p>In this next example, we repeat the above exercise, but this time, we use a method from the <code class="docutils literal notranslate"><span class="pre">pytz</span></code> module to initialize the <code class="docutils literal notranslate"><span class="pre">aware</span></code> object in a different time zone:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naive</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="n">aware</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s1">&#39;US/Mountain&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I am time zone naive: </span><span class="si">{</span><span class="n">naive</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I am time zone aware: </span><span class="si">{</span><span class="n">aware</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive: 2023-10-23 21:29:57.374773.
+I am time zone aware: 2023-10-23 15:29:57.389355-06:00.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">pytz.timezone()</span></code> method takes a time zone string; if this string is formatted correctly, the method returns a <code class="docutils literal notranslate"><span class="pre">tzinfo</span></code> object, which can be used when making a datetime object time zone aware.  This initializes the time zone for the newly aware object to a specific time zone matching the time zone string. The <code class="docutils literal notranslate"><span class="pre">-06:00</span></code> indicates that we are now operating in a time zone six hours behind UTC.</p>
+</div>
+<div class="section" id="print-time-with-a-different-time-zone">
+<h3>Print Time with a Different Time Zone<a class="headerlink" href="#print-time-with-a-different-time-zone" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>If you have data that are in UTC, and wish to convert them to another time zone (in this example, US Mountain Time Zone), you will again need to make use of the <code class="docutils literal notranslate"><span class="pre">pytz</span></code> module.</p>
+<p>First, we will create a new datetime object with the <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime.utcnow">utcnow()</a> method.  Despite the name of this method, the newly created object is time zone naive.  Therefore, we must invoke the object’s <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime.replace">replace()</a> method and specify UTC with a <code class="docutils literal notranslate"><span class="pre">tzinfo</span></code> object in order to make the object time zone aware. As described above, we can use the <code class="docutils literal notranslate"><span class="pre">pytz</span></code> module’s timezone() method to create a new <code class="docutils literal notranslate"><span class="pre">tzinfo</span></code> object, again using the time zone string ‘US/Mountain’ (US Mountain Time Zone). To convert the datetime object <code class="docutils literal notranslate"><span class="pre">utc</span></code> from UTC to Mountain Time, we can then run the <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime.astimezone">astimezone()</a> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">utc</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">pytz</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The UTC time is </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">utc</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%B </span><span class="si">%d</span><span class="s1">, %Y, %-I:%M%p&#39;</span><span class="p">)))</span>
+<span class="n">mountaintz</span> <span class="o">=</span> <span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s2">&quot;US/Mountain&quot;</span><span class="p">)</span>
+<span class="n">ny</span> <span class="o">=</span> <span class="n">utc</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">mountaintz</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The &#39;US/Mountain&#39; time is </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ny</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%B </span><span class="si">%d</span><span class="s1">, %Y, %-I:%M%p&#39;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The UTC time is October 23, 2023, 9:29PM.
+The &#39;US/Mountain&#39; time is October 23, 2023, 3:29PM.
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the above example, we also use the <code class="docutils literal notranslate"><span class="pre">strftime()</span></code> method to format the date and time string in a human-friendly format.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>The Python Standard Library contains several modules for dealing with date and time data. We saw how we can avoid some name ambiguities by aliasing the module names; this can be done with import statements like <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">datetime</span> <span class="pre">as</span> <span class="pre">dt</span></code> and <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">time</span> <span class="pre">as</span> <span class="pre">tm</span></code>. The <code class="docutils literal notranslate"><span class="pre">tm.time()</span></code> method just returns the current <span class="xref myst">Unix time</span> in seconds – which can be useful for measuring elapsed time, but not all that useful for working with geophysical data.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module contains various classes for storing, converting, comparing, and formatting date and time data on the Gregorian calendar. We saw how we can parse data files with date and time strings into <code class="docutils literal notranslate"><span class="pre">dt.datetime</span></code> objects using the <code class="docutils literal notranslate"><span class="pre">dt.datetime.strptime()</span></code> method. We also saw how to perform arithmetic using date and time data; this uses the <code class="docutils literal notranslate"><span class="pre">dt.timedelta</span></code> class to represent intervals of time.</p>
+<p>Finally, we looked at using the third-party <a class="reference external" href="https://pypi.org/project/pytz/">pytz</a> module to handle time zone awareness and conversions.</p>
+<div class="section" id="whats-next">
+<h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>In subsequent tutorials, we will dig deeper into different time and date formats, and discuss how they are handled by important Python modules such as Numpy, Pandas, and Xarray.</p>
+</div>
+</div>
+<div class="section" id="resources-and-references">
+<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>This page was based on and adapted from material in <a class="reference external" href="https://unidata.github.io/python-training/python/times_and_dates/">Unidata’s Python Training</a>.</p>
+<p>For further reading on these modules, take a look at the official documentation for:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/time.html">time</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html">datetime</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/pytz/">pytz</a></p></li>
+</ul>
+<p>For more information on Python string formatting, try:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/string.html">Python string documentation</a></p></li>
+<li><p>RealPython’s <a class="reference external" href="https://realpython.com/python-string-formatting/">string formatting tutorial</a> (nicely written)</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./core/datetime"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../datetime.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Datetime</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../pandas.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Pandas</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </div>
+          </div>
+        </main>
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+<footer class="footer">
+  <div class="container-fluid m-0 p-0">
+  
+    <div class="footer-item">
+    
+  <div class="container-fluid footer-logos">
+    <div class="container-xl">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="NCAR" src="../../_images/NCAR-contemp-logo-blue.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="Unidata" src="../../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="UAlbany" src="../../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    
+<div class="container-fluid footer-menu pt-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>About</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/about.html"
+              >About Project Pythia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://foundations.projectpythia.org/preamble/how-to-use.html"
+              >How to use Pythia Foundations</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#the-project-pythia-team"
+              >The Project Team</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#how-to-cite"
+              >How to Cite</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Give Feedback</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="mailto:projectpythia@ucar.edu">Email us!</a>
+          </li>
+          <li>
+            <a href="https://discourse.pangeo.io/c/education/project-pythia/60s"
+              >Pangeo Discourse</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
+        <h1>Contribute</h1>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://projectpythia.org/contributing.html"
+              >How to contribute to Project Pythia</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/code_of_conduct.html"
+              >Our code of conduct</a
+            >
+          </li>
+          <li>
+            <a href="https://projectpythia.org/#weekly-working-group-meetings"
+              >Join our weekly meetings</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/ProjectPythia"
+              >Join us on GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  
+    <div class="footer-item">
+      <div class="container-fluid footer-info">
+    <div class="container-xl">
+      <div class="d-flex justify-content-center">
+        <p class="py-1 m-0">
+            &copy;&nbsp;2022.
+        
+          By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
+        
+          Last updated on 23 October 2023.
+        </p>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+    <div class="footer-item">
+    <div class="container-fluid footer-extra">
+  <div class="container">
+    <center>
+      Theme by <a href="https://projectpythia.org">Project Pythia</a>. All code
+      in Pythia Foundations is licensed under Apache 2.0. All other non-code
+      content is licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/">
+        Creative Commons BY 4.0 (CC BY 4.0)</a
+      >.
+    </center>
+    <br /><br />
+    <div class="row">
+      <p class="m-0">
+        <img
+          src="../../_static/footer-logo-nsf.png"
+          style="float: left; width: 60px; height: 60px; margin-right: 1rem"
+        />
+        This material is based upon work supported by the National Science
+        Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those
+        of the author(s) and do not necessarily reflect the views of the
+        National Science Foundation.
+      </p>
+    </div>
+  </div>
+</div>
+    </div>
+  
+  </div>
+</footer>
+  </body>
+</html>
