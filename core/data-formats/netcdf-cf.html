@@ -835,6 +835,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2544/2342439358.py:1: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  start = datetime.utcnow().replace(hour=22, minute=0, second=0, microsecond=0)
+</pre></div>
+</div>
+</div>
 </div>
 <p>In addition to dimensional arrays, we also need a variable of interest, which holds the data values at each unique dimensional index. In these examples, this variable is called <code class="docutils literal notranslate"><span class="pre">temps</span></code>, and holds temperature data. Note that the dimensions correspond to the ones we just created above.</p>
 <div class="cell docutils container">
@@ -875,6 +881,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2544/2008125275.py:5: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  nc.history = str(datetime.utcnow()) + &#39; Python&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>This next example shows a plain-text representation of our netCDF file as it exists currently:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">netcdf</span> <span class="n">forecast_model</span> <span class="p">{</span>
@@ -911,7 +923,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
     title: Forecast model run
     institution: Unidata
     source: WRF-1.5
-    history: 2023-10-11 14:13:58.640700 Python
+    history: 2023-10-30 18:28:20.084957 Python
     references: 
     comment: 
     dimensions(sizes): forecast_time(0), x(101), y(67), pressure(7)
@@ -1646,7 +1658,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 11 October 2023.
+          Last updated on 30 October 2023.
         </p>
       </div>
     </div>
