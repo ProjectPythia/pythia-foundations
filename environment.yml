@@ -20,5 +20,6 @@ dependencies:
   - xarray
   - python-graphviz
   - graphviz
+  - setuptools>=69.0.3
   - pip:
       - sphinx-pythia-theme
