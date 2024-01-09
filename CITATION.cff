@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this resource, please cite it as below."
+message: 'If you use this resource, please cite it as below.'
 authors:
   - family-names: Rose
     given-names: Brian E. J.
@@ -69,6 +69,6 @@ authors:
     orcid: https://orcid.org/0000-0002-2666-8493
     website: https://github.com/anissa111
     affiliation: UCAR/NCAR
-title: "Pythia Foundations"
+title: 'Pythia Foundations'
 version: v2023.05.01
 doi: 10.5281/zenodo.7884571

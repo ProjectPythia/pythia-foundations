@@ -3,7 +3,7 @@ name: nightly-build
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *" # Daily “At 00:00”
+    - cron: '0 0 * * *' # Daily “At 00:00”
 
 jobs:
   build:

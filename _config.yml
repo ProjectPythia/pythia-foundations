@@ -5,7 +5,7 @@ title: Pythia Foundations
 author: the <a href="https://projectpythia.org/">Project Pythia</a> Community
 logo: images/logos/pythia_logo-white-rtext.svg
 email: projectpythia@ucar.edu
-copyright: "2022"
+copyright: '2022'
 
 exclude_patterns:
   - README.md
@@ -91,14 +91,14 @@ sphinx:
   config:
     nb_execution_raise_on_error: true # raise exception in build if there are notebook errors (this flag is ignored if building on binder)
     linkcheck_request_headers:
-      "https://docs.github.com/":
+      'https://docs.github.com/':
         User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:24.0) Gecko/20100101 Firefox/24.0
     html_favicon: images/icons/favicon.ico
-    html_last_updated_fmt: "%-d %B %Y"
+    html_last_updated_fmt: '%-d %B %Y'
     html_theme: sphinx_pythia_theme
     html_permalinks_icon: '<i class="fas fa-link"></i>'
     html_theme_options:
-      google_analytics_id: "G-G57FLM9M46"
+      google_analytics_id: 'G-G57FLM9M46'
       home_page_in_toc: true
       repository_url: https://github.com/ProjectPythia/pythia-foundations # Online location of your book
       repository_branch: main # Which branch of the repository should be used when creating links (optional)
