@@ -56,6 +56,7 @@ parts:
       - file: core/pandas
         sections:
           - file: core/pandas/pandas
+          - file: core/pandas/pandas_json
       - file: core/data-formats
         sections:
           - file: core/data-formats/netcdf-cf
