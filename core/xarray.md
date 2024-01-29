@@ -1,4 +1,4 @@
-![xarray Logo](https://docs.xarray.dev/en/stable/_static/Xarray_Logo_RGB_Final.svg 'xarray Logo')
+![xarray Logo](https://docs.xarray.dev/en/stable/_static/Xarray_Logo_RGB_Final.svg "xarray Logo")
 
 # Xarray
 
