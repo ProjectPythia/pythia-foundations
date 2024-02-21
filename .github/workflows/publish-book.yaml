@@ -9,12 +9,12 @@ on:
 
 jobs:
   build:
-    uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
+    uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@try_updated_theme
     with:
       environment_name: pythia-book-dev
 
   deploy:
     needs: build
-    uses: ProjectPythia/cookbook-actions/.github/workflows/deploy-book.yaml@main
+    uses: ProjectPythia/cookbook-actions/.github/workflows/deploy-book.yaml@try_updated_theme
     with:
       cname: foundations.projectpythia.org
