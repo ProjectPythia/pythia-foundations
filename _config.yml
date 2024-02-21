@@ -99,7 +99,7 @@ sphinx:
     html_permalinks_icon: '<i class="fas fa-link"></i>'
     html_theme_options:
       analytics:
-        - google_analytics_id: 'G-G57FLM9M46'
+        google_analytics_id: 'G-G57FLM9M46'
       home_page_in_toc: true
       repository_url: https://github.com/ProjectPythia/pythia-foundations # Online location of your book
       repository_branch: main # Which branch of the repository should be used when creating links (optional)
