@@ -5,7 +5,7 @@ title: Pythia Foundations
 author: the <a href="https://projectpythia.org/">Project Pythia</a> Community
 logo: images/logos/pythia_logo-white-rtext.svg
 email: projectpythia@ucar.edu
-copyright: '2022'
+copyright: '2024'
 
 exclude_patterns:
   - README.md
@@ -106,6 +106,7 @@ sphinx:
       use_issues_button: true
       use_repository_button: true
       use_edit_page_button: true
+      use_fullscreen_button: true
       github_url: https://github.com/ProjectPythia
       twitter_url: https://twitter.com/project_pythia
       icon_links:
