@@ -8,10 +8,10 @@ on:
 jobs:
   build:
     if: ${{ github.repository_owner == 'ProjectPythia' }}
-    uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@try_updated_theme
+    uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
     with:
       environment_name: pythia-book-dev
 
   link-check:
     if: ${{ github.repository_owner == 'ProjectPythia' }}
-    uses: ProjectPythia/cookbook-actions/.github/workflows/link-checker.yaml@try_updated_theme
+    uses: ProjectPythia/cookbook-actions/.github/workflows/link-checker.yaml@main
