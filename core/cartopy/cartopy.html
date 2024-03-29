@@ -1,104 +1,133 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Introduction to Cartopy &#8212; Pythia Foundations</title>
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css?v=e502140d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6f14dede" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-G57FLM9M46"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-G57FLM9M46');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-G57FLM9M46');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'core/cartopy/cartopy';</script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Datetime" href="../datetime.html" />
     <link rel="prev" title="Cartopy" href="../cartopy.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-G57FLM9M46"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-G57FLM9M46');
-                </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="29 March 2024"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="132">
-    <div class="container-fluid" id="shim"></div>
-    <div class="container-fluid" id="banner"></div>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
-
-  <div id="navbar-start">
-    
-    
-
-<a class="navbar-brand" href="https://projectpythia.org">
-  <img src="../../_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
-</a>
-
-
-    
-  </div>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
   
-  <div id="navbar-collapsible" class=" collapse navbar-collapse">
-    <div id="navbar-center" class="mr-auto">
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <div class="pst-scroll-pixel-helper"></div>
+    <header class="bd-header navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+   
+
+<a class="navbar-brand logo" href="https://projectpythia.org">
+  
+  
+  
+  
+  
+    
+    
       
-      <div class="navbar-center-item">
-        <ul id="navbar-main-elements" class="navbar-nav">
+    
+    
+    <img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-light" alt="Pythia Foundations - Home"/>
+    <script>document.write(`<img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark" alt="Pythia Foundations - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
   
   <li class="nav-item">
     
@@ -143,676 +172,326 @@ const thebe_selector_output = ".output, .cell_output"
   </li>
   
   
-</ul>
-      </div>
+</ul></div>
       
     </div>
-
-    <div id="navbar-end">
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/ProjectPythia" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/project_pythia" rel="noopener" target="_blank" title="Twitter">
-            <span><i class="fab fa-twitter-square"></i></span>
-            <label class="sr-only">Twitter</label>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" rel="noopener" target="_blank" title="YouTube">
-            <span><i class="fab fa-youtube-square"></i></span>
-            <label class="sr-only">YouTube</label>
-          </a>
-        </li>
-      </ul>
-      </div>
-      
-    </div>
-  </div>
-</div>
-    </nav>
-    <div class="container-xl">
-      <div class="row">
-        
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
-        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../landing-page.html">
-   Pythia Foundations
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Preamble
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../preamble/how-to-use.html">
-   How to Use This Book
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../preamble/how-to-cite.html">
-   How to Cite This Book
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Foundational skills
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../foundations/overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../foundations/why-python.html">
-   Why Python?
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../foundations/getting-started-python.html">
-   Getting Started with Python
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/quickstart.html">
-     Quickstart: Zero to Python
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../foundations/how-to-run-python.html">
-     Installing and Running Python
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ProjectPythia" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/project_pythia" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-youtube-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">YouTube</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
     </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../foundations/terminal.html">
-       Python in the Terminal
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../foundations/jupyter.html">
-       Python in Jupyter
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../foundations/conda.html">
-       Installing and Managing Python with Conda
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../foundations/getting-started-jupyter.html">
-   Getting Started with Jupyter
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/jupyterlab.html">
-     JupyterLab
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/markdown.html">
-     Formatted Text in the Notebook with Markdown
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../foundations/getting-started-github.html">
-   Getting Started with GitHub
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/what-is-github.html">
-     What is GitHub?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/github-repos.html">
-     GitHub Repositories
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/github-issues.html">
-     Issues and Discussions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/github-cloning-forking.html">
-     Cloning and Forking a Repository
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/github-setup-advanced.html">
-     Configuring Your GitHub Account
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/basic-git.html">
-     Basic Version Control with
-     <em>
-      git
-     </em>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/git-branches.html">
-     Git Branches
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/github-pull-request.html">
-     Opening a Pull Request on GitHub
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/review-pr.html">
-     Reviewing Pull Requests
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/github-workflows.html">
-     GitHub Workflows
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/contribute-to-pythia.html">
-     Contribute to Project Pythia via GitHub
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Core Scientific Python packages
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../numpy.html">
-   NumPy
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../numpy/numpy-basics.html">
-     NumPy Basics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../numpy/intermediate-numpy.html">
-     Intermediate NumPy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../numpy/numpy-broadcasting.html">
-     NumPy Broadcasting
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../matplotlib.html">
-   Matplotlib
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../matplotlib/matplotlib-basics.html">
-     Matplotlib Basics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../matplotlib/histograms-piecharts-animation.html">
-     Histograms, Pie Charts, and Animations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../matplotlib/annotations-colorbars-layouts.html">
-     Annotations, Colorbars, and Advanced Layouts
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../cartopy.html">
-   Cartopy
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Introduction to Cartopy
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../datetime.html">
-   Datetime
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../datetime/datetime.html">
-     Times and Dates in Python
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../pandas.html">
-   Pandas
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../pandas/pandas.html">
-     Introduction to Pandas
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data-formats.html">
-   Data Formats
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../data-formats/netcdf-cf.html">
-     NetCDF and CF: The Basics
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../xarray.html">
-   Xarray
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../xarray/xarray-intro.html">
-     Introduction to Xarray
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../xarray/computation-masking.html">
-     Computations and Masks with Xarray
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../xarray/enso-xarray.html">
-     Calculating ENSO with Xarray
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../xarray/dask-arrays-xarray.html">
-     Dask Arrays with Xarray
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+  
+</div>
+
+    </header>
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+        
+        
+        
+        <div class="bd-sidebar-primary bd-sidebar">
+          
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/blog.html">Blog</a>
+  </li>
+  
+  
+</ul></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ProjectPythia" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/project_pythia" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-youtube-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">YouTube</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../landing-page.html">
+                    Pythia Foundations
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../appendix/how-to-contribute.html">
-   Pythia Foundations Contributor’s Guide
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../appendix/template.html">
-     Project Pythia Notebook Template
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../preamble/how-to-use.html">How to Use This Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preamble/how-to-cite.html">How to Cite This Book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Foundational skills</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../foundations/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../foundations/why-python.html">Why Python?</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../foundations/getting-started-python.html">Getting Started with Python</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/quickstart.html">Quickstart: Zero to Python</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../foundations/how-to-run-python.html">Installing and Running Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../foundations/terminal.html">Python in the Terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../foundations/jupyter.html">Python in Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../foundations/conda.html">Installing and Managing Python with Conda</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../foundations/getting-started-jupyter.html">Getting Started with Jupyter</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/jupyterlab.html">JupyterLab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/markdown.html">Formatted Text in the Notebook with Markdown</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../foundations/getting-started-github.html">Getting Started with GitHub</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/what-is-github.html">What is GitHub?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/github-repos.html">GitHub Repositories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/github-issues.html">Issues and Discussions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/github-cloning-forking.html">Cloning and Forking a Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/github-setup-advanced.html">Configuring Your GitHub Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/basic-git.html">Basic Version Control with <em>git</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/git-branches.html">Git Branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/github-pull-request.html">Opening a Pull Request on GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/review-pr.html">Reviewing Pull Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/github-workflows.html">GitHub Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/contribute-to-pythia.html">Contribute to Project Pythia via GitHub</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Scientific Python packages</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../numpy.html">NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../numpy/numpy-basics.html">NumPy Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../numpy/intermediate-numpy.html">Intermediate NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../numpy/numpy-broadcasting.html">NumPy Broadcasting</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../matplotlib.html">Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib/matplotlib-basics.html">Matplotlib Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib/histograms-piecharts-animation.html">Histograms, Pie Charts, and Animations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib/annotations-colorbars-layouts.html">Annotations, Colorbars, and Advanced Layouts</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../cartopy.html">Cartopy</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Introduction to Cartopy</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../datetime.html">Datetime</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../datetime/datetime.html">Times and Dates in Python</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../pandas.html">Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pandas/pandas.html">Introduction to Pandas</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data-formats.html">Data Formats</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data-formats/netcdf-cf.html">NetCDF and CF: The Basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../xarray.html">Xarray</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../xarray/xarray-intro.html">Introduction to Xarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../xarray/computation-masking.html">Computations and Masks with Xarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../xarray/enso-xarray.html">Calculating ENSO with Xarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../xarray/dask-arrays-xarray.html">Dask Arrays with Xarray</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/how-to-contribute.html">Pythia Foundations Contributor’s Guide</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/template.html">Project Pythia Notebook Template</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
-or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
-
-</div>
-
-</div>
-
-        
-
-        <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main"><div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/core/cartopy/cartopy.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/ProjectPythia/pythia-foundations"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/cartopy/cartopy.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/cartopy/cartopy.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://binder.projectpythia.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/core/cartopy/cartopy.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
 
         </div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> On this page
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#imports">
-   Imports
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-concepts-map-projections-and-geoaxes">
-   Basic concepts: map projections and
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     GeoAxes
-    </span>
-   </code>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extend-matplotlibs-axes-into-georeferenced-geoaxes">
-     Extend Matplotlib’s
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       axes
-      </span>
-     </code>
-     into georeferenced
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       GeoAxes
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-map-with-a-specified-projection">
-     Create a map with a specified projection
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-cartographic-features-to-the-map">
-     Add cartographic features to the map
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#explore-some-of-cartopys-map-projections">
-   Explore some of Cartopy’s map projections
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mollweide-projection-often-used-with-global-satellite-mosaics">
-     Mollweide Projection (often used with global satellite mosaics)
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#add-in-the-cartographic-shapefiles">
-       Add in the cartographic shapefiles
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#add-a-fancy-background-image-to-the-map">
-       Add a fancy background image to the map.
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lambert-azimuthal-equal-area-projection">
-     Lambert Azimuthal Equal Area Projection
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-regional-maps">
-   Create regional maps
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cartopys-set-extent-method">
-     Cartopy’s
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       set_extent
-      </span>
-     </code>
-     method
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-regional-map-centered-over-new-york-state">
-     Create a regional map centered over New York State
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-some-predefined-features">
-     Add some predefined features
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-lower-resolution-shapefiles-from-natural-earth">
-     Use lower-resolution shapefiles from Natural Earth
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-figure-with-two-different-regional-maps">
-     A figure with two different regional maps
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#an-example-of-plotting-data">
-   An example of plotting data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#whats-next">
-   What’s Next?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#resources-and-references">
-   Resources and References
-  </a>
- </li>
-</ul>
+        
+        <main id="main-content" class="bd-main" role="main">
+          
 
-            </nav>
-        </div>
-    </div>
-</div>
-          <div id="main-content" class="row">
-            <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-              
-              <div>
+            <div class="bd-content">
+
+              <div class="bd-article-container">
+
                 
+                  
+                  
+<div id="searchbox"></div>
+                  <article class="bd-article">
+                    
   <a class="reference internal image-reference" href="../../_images/cartopy_logo.png"><img alt="../../_images/cartopy_logo.png" src="../../_images/cartopy_logo.png" style="width: 600px;" /></a>
-<div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-cartopy">
-<h1>Introduction to Cartopy<a class="headerlink" href="#introduction-to-cartopy" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="introduction-to-cartopy">
+<h1>Introduction to Cartopy<a class="headerlink" href="#introduction-to-cartopy" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>The concepts covered in this section include:</p>
 <ol class="arabic simple">
 <li><p>Learning core Cartopy concepts: map projections and <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code></p></li>
@@ -821,10 +500,10 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </ol>
 <p>This tutorial will lead you through some basics of creating maps with specified projections using Cartopy, and adding geographical features (like coastlines and borders) to those maps.</p>
 <p>Plotting data on map projections will be covered in later tutorials.</p>
-</div>
-<div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<table class="colwidths-auto table">
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Concepts</p></th>
 <th class="head"><p>Importance</p></th>
@@ -841,10 +520,10 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <ul class="simple">
 <li><p><strong>Time to learn</strong>: 30 minutes</p></li>
 </ul>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<section id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>Here, we import the main libraries of Cartopy: crs and feature.  In addition, we import numpy, as well as matplotlib’s pyplot interface. Finally, we import a library called warnings, and use it to remove extraneous warnings that Cartopy produces in later examples.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -860,17 +539,17 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="basic-concepts-map-projections-and-geoaxes">
-<h2>Basic concepts: map projections and <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code><a class="headerlink" href="#basic-concepts-map-projections-and-geoaxes" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<div class="section" id="extend-matplotlibs-axes-into-georeferenced-geoaxes">
-<h3>Extend Matplotlib’s <code class="docutils literal notranslate"><span class="pre">axes</span></code> into georeferenced <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code><a class="headerlink" href="#extend-matplotlibs-axes-into-georeferenced-geoaxes" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<section id="basic-concepts-map-projections-and-geoaxes">
+<h2>Basic concepts: map projections and <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code><a class="headerlink" href="#basic-concepts-map-projections-and-geoaxes" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<section id="extend-matplotlibs-axes-into-georeferenced-geoaxes">
+<h3>Extend Matplotlib’s <code class="docutils literal notranslate"><span class="pre">axes</span></code> into georeferenced <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code><a class="headerlink" href="#extend-matplotlibs-axes-into-georeferenced-geoaxes" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>Recall from earlier tutorials that a <em>figure</em> in Matplotlib has two elements: a <code class="docutils literal notranslate"><span class="pre">Figure</span></code> object, and a list of one or more <code class="docutils literal notranslate"><span class="pre">Axes</span></code> objects (subplots).</p>
 <p>Since we imported <code class="docutils literal notranslate"><span class="pre">cartopy.crs</span></code>, we now have access to Cartopy’s <em>Coordinate Reference System</em>, which contains many geographical projections. We can specify one of these projections for an <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object to convert it into a <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code> object. This will effectively <em>georeference</em> the subplot. Examples of converting <code class="docutils literal notranslate"><span class="pre">Axes</span></code> objects into <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code> objects can be found later in this section.</p>
-</div>
-<div class="section" id="create-a-map-with-a-specified-projection">
-<h3>Create a map with a specified projection<a class="headerlink" href="#create-a-map-with-a-specified-projection" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="create-a-map-with-a-specified-projection">
+<h3>Create a map with a specified projection<a class="headerlink" href="#create-a-map-with-a-specified-projection" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>In this example, we’ll create a <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code> object that uses the <code class="docutils literal notranslate"><span class="pre">PlateCarree</span></code> projection.  <code class="docutils literal notranslate"><span class="pre">PlateCarree</span></code> is a global lat-lon map projection in which each point is evenly spaced in terms of degrees.  The name “Plate Carree” is French for “flat square”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -881,7 +560,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/eccc8e19739f62212ee2dfd537c74c8dd8d07d06bd83dffabfdec1464ec22dd6.png" src="../../_images/eccc8e19739f62212ee2dfd537c74c8dd8d07d06bd83dffabfdec1464ec22dd6.png" />
+<img alt="../../_images/27c447537cbad5399d146c4f11ff58614ec828ca7e8599b78fc311b08ce65a92.png" src="../../_images/27c447537cbad5399d146c4f11ff58614ec828ca7e8599b78fc311b08ce65a92.png" />
 </div>
 </div>
 <p>Although the figure seems empty, it has, in fact, been georeferenced using a map projection; this projection is provided by Cartopy’s <code class="docutils literal notranslate"><span class="pre">crs</span></code> (coordinate reference system) class. We can now add in cartographic features, in the form of <em>shapefiles</em>, to our subplot. One such cartographic feature is coastlines, which can be added to our subplot using the callable <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code> method simply called <code class="docutils literal notranslate"><span class="pre">coastlines</span></code>.</p>
@@ -892,7 +571,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7fa45048d760&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7fc030adb410&gt;
 </pre></div>
 </div>
 </div>
@@ -908,12 +587,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0f0e14455a00001416bae4db503c8184add64504a1ce8fef5e23584928e3e642.png" src="../../_images/0f0e14455a00001416bae4db503c8184add64504a1ce8fef5e23584928e3e642.png" />
+<img alt="../../_images/c16aa4493e589d89c13f0aa21282e7b98670c84d558505924abba011a16bece4.png" src="../../_images/c16aa4493e589d89c13f0aa21282e7b98670c84d558505924abba011a16bece4.png" />
 </div>
 </div>
-</div>
-<div class="section" id="add-cartographic-features-to-the-map">
-<h3>Add cartographic features to the map<a class="headerlink" href="#add-cartographic-features-to-the-map" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="add-cartographic-features-to-the-map">
+<h3>Add cartographic features to the map<a class="headerlink" href="#add-cartographic-features-to-the-map" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>Cartopy provides other cartographic features via its <code class="docutils literal notranslate"><span class="pre">features</span></code> class, which was imported at the beginning of this page, under the name <code class="docutils literal notranslate"><span class="pre">cfeature</span></code>. These cartographic features are laid out as data in shapefiles.  The shapefiles are downloaded when their cartographic features are used for the first time in a script or notebook, and they are downloaded from https://www.naturalearthdata.com/. Once downloaded, they “live” in your <code class="docutils literal notranslate"><span class="pre">~/.local/share/cartopy</span></code> directory (note the <code class="docutils literal notranslate"><span class="pre">~</span></code> represents your <i>home</i> directory).</p>
 <p>We can add these features to our subplot via the <code class="docutils literal notranslate"><span class="pre">add_feature</span></code> method; this method allows the definition of attributes using arguments, similar to Matplotlib’s <code class="docutils literal notranslate"><span class="pre">plot</span></code> method. A list of the various Natural Earth shapefiles can be found at https://scitools.org.uk/cartopy/docs/latest/matplotlib/feature_interface.html. In this example, we add borders and U. S. state lines to our subplot:</p>
 <div class="cell docutils container">
@@ -924,7 +603,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7fa42c5147d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7fc001de55b0&gt;
 </pre></div>
 </div>
 </div>
@@ -937,19 +616,19 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/df827be4e21decafad4ddabcb36b560ddf77975046c92e0c788b06e7f3a39c73.png" src="../../_images/df827be4e21decafad4ddabcb36b560ddf77975046c92e0c788b06e7f3a39c73.png" />
+<img alt="../../_images/eb1bf6554ec76db6a72679e2a8e3ef6850c521356a0d19f591d2b44b37312e96.png" src="../../_images/eb1bf6554ec76db6a72679e2a8e3ef6850c521356a0d19f591d2b44b37312e96.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="explore-some-of-cartopys-map-projections">
-<h2>Explore some of Cartopy’s map projections<a class="headerlink" href="#explore-some-of-cartopys-map-projections" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+</section>
+<section id="explore-some-of-cartopys-map-projections">
+<h2>Explore some of Cartopy’s map projections<a class="headerlink" href="#explore-some-of-cartopys-map-projections" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Info</p>
 <p>You can find a list of supported projections in Cartopy, with examples, at <a href="https://scitools.org.uk/cartopy/docs/latest/reference/crs.html">https://scitools.org.uk/cartopy/docs/latest/reference/crs.html</a></p>
 </div>
-<div class="section" id="mollweide-projection-often-used-with-global-satellite-mosaics">
-<h3>Mollweide Projection (often used with global satellite mosaics)<a class="headerlink" href="#mollweide-projection-often-used-with-global-satellite-mosaics" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<section id="mollweide-projection-often-used-with-global-satellite-mosaics">
+<h3>Mollweide Projection (often used with global satellite mosaics)<a class="headerlink" href="#mollweide-projection-often-used-with-global-satellite-mosaics" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>To save typing later, we can define a projection object to store the definition of the map projection.  We can then use this object in the <code class="docutils literal notranslate"><span class="pre">projection</span></code> kwarg of the <code class="docutils literal notranslate"><span class="pre">subplot</span></code> method when creating a <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code> object.  This allows us to use this exact projection in later scripts or Jupyter Notebook cells using simply the object name, instead of repeating the same call to <code class="docutils literal notranslate"><span class="pre">ccrs</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -964,11 +643,11 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Mollweide Projection&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/59f07814ab163c3d36e7976d6f54de9b96aaa812db5c337588af9038032b8da6.png" src="../../_images/59f07814ab163c3d36e7976d6f54de9b96aaa812db5c337588af9038032b8da6.png" />
+<img alt="../../_images/db95459533dd5d0807351887d934ba8cc813a7f8c329182abe9ed6b4876d6073.png" src="../../_images/db95459533dd5d0807351887d934ba8cc813a7f8c329182abe9ed6b4876d6073.png" />
 </div>
 </div>
-<div class="section" id="add-in-the-cartographic-shapefiles">
-<h4>Add in the cartographic shapefiles<a class="headerlink" href="#add-in-the-cartographic-shapefiles" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+<section id="add-in-the-cartographic-shapefiles">
+<h4>Add in the cartographic shapefiles<a class="headerlink" href="#add-in-the-cartographic-shapefiles" title="Link to this heading"><i class="fas fa-link"></i></a></h4>
 <p>This example shows how to add cartographic features to the Mollweide projection defined earlier:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -979,12 +658,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/7d8d48cf45db206defcff430fc943d3f4e36bbc5406c58f7b99992cdd036b128.png" src="../../_images/7d8d48cf45db206defcff430fc943d3f4e36bbc5406c58f7b99992cdd036b128.png" />
+<img alt="../../_images/7558825c4adee1076bbeb2d14a2476f13df00ead464ab0da4102e352f60b744b.png" src="../../_images/7558825c4adee1076bbeb2d14a2476f13df00ead464ab0da4102e352f60b744b.png" />
 </div>
 </div>
-</div>
-<div class="section" id="add-a-fancy-background-image-to-the-map">
-<h4>Add a fancy background image to the map.<a class="headerlink" href="#add-a-fancy-background-image-to-the-map" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+</section>
+<section id="add-a-fancy-background-image-to-the-map">
+<h4>Add a fancy background image to the map.<a class="headerlink" href="#add-a-fancy-background-image-to-the-map" title="Link to this heading"><i class="fas fa-link"></i></a></h4>
 <p>We can also use the <code class="docutils literal notranslate"><span class="pre">stock_img</span></code> method to add a pre-created background to a Mollweide-projection plot:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -994,13 +673,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/be80e8eed5079d0122ca1d7027d495c8b1a06f8f943e51ba1fda985eefbbe32f.png" src="../../_images/be80e8eed5079d0122ca1d7027d495c8b1a06f8f943e51ba1fda985eefbbe32f.png" />
+<img alt="../../_images/3c0378ccaf40372b5b095606c37e1fad383d16c2e034b2c4effc2211dbb6ca9f.png" src="../../_images/3c0378ccaf40372b5b095606c37e1fad383d16c2e034b2c4effc2211dbb6ca9f.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="lambert-azimuthal-equal-area-projection">
-<h3>Lambert Azimuthal Equal Area Projection<a class="headerlink" href="#lambert-azimuthal-equal-area-projection" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+</section>
+<section id="lambert-azimuthal-equal-area-projection">
+<h3>Lambert Azimuthal Equal Area Projection<a class="headerlink" href="#lambert-azimuthal-equal-area-projection" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>This example is similar to the above example set, except it uses a Lambert azimuthal equal-area projection instead:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1014,15 +693,15 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/bb9d09db2d870a6b95e13ceeb9c9789df1cd4caa3f8c1e1f296daf5104ac060d.png" src="../../_images/bb9d09db2d870a6b95e13ceeb9c9789df1cd4caa3f8c1e1f296daf5104ac060d.png" />
+<img alt="../../_images/4393a7a7c2a8c420a46905bae87b62154b4ebc171fc12a657073771d1e8c3d0e.png" src="../../_images/4393a7a7c2a8c420a46905bae87b62154b4ebc171fc12a657073771d1e8c3d0e.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="create-regional-maps">
-<h2>Create regional maps<a class="headerlink" href="#create-regional-maps" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<div class="section" id="cartopys-set-extent-method">
-<h3>Cartopy’s <code class="docutils literal notranslate"><span class="pre">set_extent</span></code> method<a class="headerlink" href="#cartopys-set-extent-method" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+</section>
+<section id="create-regional-maps">
+<h2>Create regional maps<a class="headerlink" href="#create-regional-maps" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<section id="cartopys-set-extent-method">
+<h3>Cartopy’s <code class="docutils literal notranslate"><span class="pre">set_extent</span></code> method<a class="headerlink" href="#cartopys-set-extent-method" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>For this example, let’s create another PlateCarree projection, but this time, we’ll use Cartopy’s <code class="docutils literal notranslate"><span class="pre">set_extent</span></code> method to restrict the map coverage to a North American view. Let’s also choose a lower resolution for coastlines, just to illustrate how one can specify that. In addition, let’s also plot the latitude and longitude lines.</p>
 <p>Natural Earth defines three resolutions for cartographic features, specified as the strings “10m”, “50m”, and “110m”.  Only one resolution can be used at a time, and the higher the number, the less detailed the feature becomes.  You can view the documentation for this functionality at the following reference link: https://www.naturalearthdata.com/downloads/</p>
 <div class="cell docutils container">
@@ -1055,7 +734,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/7b0ddb9cd810bc14b4597da454a7a863fae700517f8e41d63a13358b5980f0ef.png" src="../../_images/7b0ddb9cd810bc14b4597da454a7a863fae700517f8e41d63a13358b5980f0ef.png" />
+<img alt="../../_images/b55d249100a2bdc7e3280cfd1dea91bc290cb9d910dd6283079303233aa5a653.png" src="../../_images/b55d249100a2bdc7e3280cfd1dea91bc290cb9d910dd6283079303233aa5a653.png" />
 </div>
 </div>
 <div class="admonition alert alert-info">
@@ -1080,7 +759,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6a7cd0144f09d514e2818380a8297f426027336840ec6eec9b9bdca27e8352f7.png" src="../../_images/6a7cd0144f09d514e2818380a8297f426027336840ec6eec9b9bdca27e8352f7.png" />
+<img alt="../../_images/787a630e08cdacfc1d2c9cb1d8a375dc7401fe11cc68ddbfb83d66ed54ead36d.png" src="../../_images/787a630e08cdacfc1d2c9cb1d8a375dc7401fe11cc68ddbfb83d66ed54ead36d.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1101,16 +780,16 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/5fde1fb8443854cab4b3d893b2808da7707f6c0ee7a7b36f81ae0d1c4b5a906e.png" src="../../_images/5fde1fb8443854cab4b3d893b2808da7707f6c0ee7a7b36f81ae0d1c4b5a906e.png" />
+<img alt="../../_images/ca3c168e088a66bdd253bbc047009951c904d5cbf8a0d4571c6305084bb34cd9.png" src="../../_images/ca3c168e088a66bdd253bbc047009951c904d5cbf8a0d4571c6305084bb34cd9.png" />
 </div>
 </div>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Info</p>
 <p>Lat/lon labeling for projections other than Mercator and PlateCarree is a recent addition to Cartopy. As you can see, work still needs to be done to improve the placement of labels.</p>
 </div>
-</div>
-<div class="section" id="create-a-regional-map-centered-over-new-york-state">
-<h3>Create a regional map centered over New York State<a class="headerlink" href="#create-a-regional-map-centered-over-new-york-state" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="create-a-regional-map-centered-over-new-york-state">
+<h3>Create a regional map centered over New York State<a class="headerlink" href="#create-a-regional-map-centered-over-new-york-state" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>Here we set the domain, which defines the geographical region to be plotted.  (This is used in the next section in a <code class="docutils literal notranslate"><span class="pre">set_extent</span></code> call.) Since these coordinates are expressed in degrees, they correspond to a PlateCarree projection, even though the map projection is set to LambertConformal.</p>
 <div class="admonition alert alert-warning">
 <p class="admonition-title">Warning</p>
@@ -1129,9 +808,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="add-some-predefined-features">
-<h3>Add some predefined features<a class="headerlink" href="#add-some-predefined-features" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="add-some-predefined-features">
+<h3>Add some predefined features<a class="headerlink" href="#add-some-predefined-features" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>Some cartographical features are predefined as constants in the <code class="docutils literal notranslate"><span class="pre">cartopy.feature</span></code> package. The resolution of these features depends on the amount of geographical area in your map, specified by <code class="docutils literal notranslate"><span class="pre">set_extent</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1150,16 +829,16 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/7127084529a460891bec016dd39647374829fd04325758e5996e559d508678f5.png" src="../../_images/7127084529a460891bec016dd39647374829fd04325758e5996e559d508678f5.png" />
+<img alt="../../_images/e743ced762b36dc652aec550ab42459a6950f2c464d4bc1cb5dacabf63c4b326.png" src="../../_images/e743ced762b36dc652aec550ab42459a6950f2c464d4bc1cb5dacabf63c4b326.png" />
 </div>
 </div>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Note:</p>
 <p>For high-resolution Natural Earth shapefiles such as this, while we could add Cartopy’s <code>OCEAN</code> feature, it currently takes <i>much longer</i> to render on the plot.  You can create your own version of this example, with the <code>OCEAN</code> feature added, to see for yourself how much more rendering time is added. Instead, we take the strategy of first setting the facecolor of the entire subplot to match that of water bodies in Cartopy. When we then layer on the <code>LAND</code> feature, pixels that are not part of the <code>LAND</code> shapefile remain in the <code>water</code> facecolor, which is the same color as the <code>OCEAN</code>.</p>
 </div>
-</div>
-<div class="section" id="use-lower-resolution-shapefiles-from-natural-earth">
-<h3>Use lower-resolution shapefiles from Natural Earth<a class="headerlink" href="#use-lower-resolution-shapefiles-from-natural-earth" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="use-lower-resolution-shapefiles-from-natural-earth">
+<h3>Use lower-resolution shapefiles from Natural Earth<a class="headerlink" href="#use-lower-resolution-shapefiles-from-natural-earth" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>In this example, we create a new map.  This map uses lower-resolution shapefiles from Natural Earth, and also eliminates the plotting of country borders.</p>
 <p>This example requires much more code than previous examples on this page.  First, we must create new objects associated with lower-resolution shapefiles.  This is performed by the <code class="docutils literal notranslate"><span class="pre">NaturalEarthFeature</span></code> method, which is part of the Cartopy <code class="docutils literal notranslate"><span class="pre">feature</span></code> class.  Second, we call <code class="docutils literal notranslate"><span class="pre">add_feature</span></code> to add the new objects to our new map.</p>
 <div class="cell docutils container">
@@ -1211,12 +890,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0ca7787f30e9ce08a77056922f19eca8473d703e95bcca5c475c9b3ed3feea76.png" src="../../_images/0ca7787f30e9ce08a77056922f19eca8473d703e95bcca5c475c9b3ed3feea76.png" />
+<img alt="../../_images/018b9c9355980955d0b7af8b5dce8dc29352de4b0f5926635226fe100e6926c6.png" src="../../_images/018b9c9355980955d0b7af8b5dce8dc29352de4b0f5926635226fe100e6926c6.png" />
 </div>
 </div>
-</div>
-<div class="section" id="a-figure-with-two-different-regional-maps">
-<h3>A figure with two different regional maps<a class="headerlink" href="#a-figure-with-two-different-regional-maps" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="a-figure-with-two-different-regional-maps">
+<h3>A figure with two different regional maps<a class="headerlink" href="#a-figure-with-two-different-regional-maps" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>Finally, let’s create a figure with two subplots. On the first subplot, we’ll repeat the high-resolution New York State map created earlier; on the second, we’ll plot over a different part of the world.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1260,13 +939,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/51b5e84a8c0c7df6dce3be987726f8768b1da58464695399859bf5564b6cb149.png" src="../../_images/51b5e84a8c0c7df6dce3be987726f8768b1da58464695399859bf5564b6cb149.png" />
+<img alt="../../_images/5c6fe44aa8beffd961f4ea23e92678425f6c594544c414fad2869800db106eb5.png" src="../../_images/5c6fe44aa8beffd961f4ea23e92678425f6c594544c414fad2869800db106eb5.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="an-example-of-plotting-data">
-<h2>An example of plotting data<a class="headerlink" href="#an-example-of-plotting-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+</section>
+<section id="an-example-of-plotting-data">
+<h2>An example of plotting data<a class="headerlink" href="#an-example-of-plotting-data" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>First, we’ll create a lat-lon grid and define some data on it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1278,7 +957,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2c83215f88248780d9c66cb55502e8ef6b5449d5ad593f757011fb93d5b54702.png" src="../../_images/2c83215f88248780d9c66cb55502e8ef6b5449d5ad593f757011fb93d5b54702.png" />
+<img alt="../../_images/b7a625225117b054e7344fadd1c2e180d5cc3ce8b88c175aeeaa73dd1fba20ec.png" src="../../_images/b7a625225117b054e7344fadd1c2e180d5cc3ce8b88c175aeeaa73dd1fba20ec.png" />
 </div>
 </div>
 <p>Plotting data on a Cartesian grid is equivalent to plotting data in the PlateCarree projection, where meridians and parallels are all straight lines with constant spacing. As a result of this simplicity, the global datasets we use often begin in the PlateCarree projection.</p>
@@ -1294,26 +973,26 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f2deef91f4aad0edb2bf78e407d39105d02a372d6063d1585d8d1a7cde87d77d.png" src="../../_images/f2deef91f4aad0edb2bf78e407d39105d02a372d6063d1585d8d1a7cde87d77d.png" />
+<img alt="../../_images/38a4c4b18d4b198e275b18de80b91c5cf9023af19fb249eeab47ed37983adc44.png" src="../../_images/38a4c4b18d4b198e275b18de80b91c5cf9023af19fb249eeab47ed37983adc44.png" />
 </div>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p>Cartopy allows for the georeferencing of Matplotlib <code class="docutils literal notranslate"><span class="pre">Axes</span></code> objects.</p></li>
 <li><p>Cartopy’s <code class="docutils literal notranslate"><span class="pre">crs</span></code> class supports a variety of map projections.</p></li>
 <li><p>Cartopy’s <code class="docutils literal notranslate"><span class="pre">feature</span></code> class allows for a variety of cartographic features to be overlaid on a georeferenced plot or subplot.</p></li>
 </ul>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="whats-next">
-<h2>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<section id="whats-next">
+<h2>What’s Next?<a class="headerlink" href="#whats-next" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>In the next notebook, we will delve further into how one can transform data that is defined in one coordinate reference system (<code class="docutils literal notranslate"><span class="pre">crs</span></code>) so it displays properly on a map that uses a different <code class="docutils literal notranslate"><span class="pre">crs</span></code>.</p>
-</div>
-<div class="section" id="resources-and-references">
-<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+<section id="resources-and-references">
+<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://scitools.org.uk/cartopy/docs/latest/">Cartopy Documentation</a></p></li>
 <li><p><a class="reference external" href="https://scitools.org.uk/cartopy/docs/latest/reference/crs.html">Full list of projections in Cartopy</a></p></li>
@@ -1321,8 +1000,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <li><p><a class="reference external" href="https://geocat-examples.readthedocs.io/en/latest/gallery/index.html#map-projections">Map Projections (GeoCAT)</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=ivmd3RluMiw">NCAR xdev Cartopy Tutorial Video</a></p></li>
 </ol>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1344,43 +1023,358 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
-              <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../cartopy.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Cartopy</p>
-        </div>
+                  </article>
+
+                
+                
+
+                
+                
+                  <footer class="prev-next-footer">
+                    
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../cartopy.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Cartopy</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../datetime.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../datetime.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Datetime</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </div>
-          </div>
-        </main>
+                  </footer>
+                
+              </div>
 
-      </div>
+              
+              
+                
+                  <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-concepts-map-projections-and-geoaxes">Basic concepts: map projections and <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extend-matplotlibs-axes-into-georeferenced-geoaxes">Extend Matplotlib’s <code class="docutils literal notranslate"><span class="pre">axes</span></code> into georeferenced <code class="docutils literal notranslate"><span class="pre">GeoAxes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-map-with-a-specified-projection">Create a map with a specified projection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-cartographic-features-to-the-map">Add cartographic features to the map</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-some-of-cartopys-map-projections">Explore some of Cartopy’s map projections</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mollweide-projection-often-used-with-global-satellite-mosaics">Mollweide Projection (often used with global satellite mosaics)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-in-the-cartographic-shapefiles">Add in the cartographic shapefiles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-fancy-background-image-to-the-map">Add a fancy background image to the map.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lambert-azimuthal-equal-area-projection">Lambert Azimuthal Equal Area Projection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-regional-maps">Create regional maps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cartopys-set-extent-method">Cartopy’s <code class="docutils literal notranslate"><span class="pre">set_extent</span></code> method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-regional-map-centered-over-new-york-state">Create a regional map centered over New York State</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-some-predefined-features">Add some predefined features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-lower-resolution-shapefiles-from-natural-earth">Use lower-resolution shapefiles from Natural Earth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-figure-with-two-different-regional-maps">A figure with two different regional maps</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-of-plotting-data">An example of plotting data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whats-next">What’s Next?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources-and-references">Resources and References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+                
+              
+
+
+                
+                <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-
-<footer class="footer">
-  <div class="container-fluid m-0 p-0">
   
-    <div class="footer-item">
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://binder.projectpythia.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/core/cartopy/cartopy.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/pythia-foundations" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/cartopy/cartopy.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/cartopy/cartopy.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/core/cartopy/cartopy.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+            </div>
+
+            <footer class="bd-footer-content">
+              
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
     
+<p class="component-author">
+By the <a href="https://projectpythia.org/">Project Pythia</a> Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 29 March 2024.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+            </footer>
+
+        </main>
+    </div>
+  </div>
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+     
+  
+  
+  
+  
+    <div class="footer-items__start">
+      <div class="container-fluid m-0 p-0">
+      
+        <div class="footer-item">
   <div class="container-fluid footer-logos">
     <div class="container-xl">
       <div class="row d-flex flex-wrap align-items-center">
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="NCAR" src="../../_images/NCAR-contemp-logo-blue.svg" style="width: 100%">
+          <img alt="NCAR" src="../../_images/NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
         </div>
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
           <img alt="Unidata" src="../../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
@@ -1390,11 +1384,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         </div>
       </div>
     </div>
-  </div>
-    </div>
-  
-    <div class="footer-item">
-    
+  </div></div>
+      
+        <div class="footer-item">
 <div class="container-fluid footer-menu pt-4">
   <div class="container">
     <div class="row justify-content-center">
@@ -1464,27 +1456,23 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
       </div>
     </div>
   </div>
-</div>
-    </div>
-  
-    <div class="footer-item">
-      <div class="container-fluid footer-info">
+</div></div>
+      
+        <div class="footer-item">  <div class="container-fluid footer-info">
     <div class="container-xl">
       <div class="d-flex justify-content-center">
         <p class="py-1 m-0">
-            &copy;&nbsp;2022.
+            &copy;&nbsp;2024.
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 9 January 2024.
+          Last updated on 29 March 2024.
         </p>
       </div>
     </div>
-  </div>
-    </div>
-  
-    <div class="footer-item">
-    <div class="container-fluid footer-extra">
+  </div></div>
+      
+        <div class="footer-item"><div class="container-fluid footer-extra">
   <div class="container">
     <center>
       Theme by <a href="https://projectpythia.org">Project Pythia</a>. All code
@@ -1509,10 +1497,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
       </p>
     </div>
   </div>
-</div>
+</div></div>
+      
+      </div>
     </div>
   
-  </div>
-</footer>
+
+  </footer>
   </body>
 </html>

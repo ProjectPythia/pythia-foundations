@@ -1,104 +1,133 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Matplotlib Basics &#8212; Pythia Foundations</title>
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css?v=e502140d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6f14dede" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-G57FLM9M46"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-G57FLM9M46');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-G57FLM9M46');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'core/matplotlib/matplotlib-basics';</script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Histograms, Pie Charts, and Animations" href="histograms-piecharts-animation.html" />
     <link rel="prev" title="Matplotlib" href="../matplotlib.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-G57FLM9M46"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-G57FLM9M46');
-                </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="29 March 2024"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="132">
-    <div class="container-fluid" id="shim"></div>
-    <div class="container-fluid" id="banner"></div>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
-
-  <div id="navbar-start">
-    
-    
-
-<a class="navbar-brand" href="https://projectpythia.org">
-  <img src="../../_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
-</a>
-
-
-    
-  </div>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
   
-  <div id="navbar-collapsible" class=" collapse navbar-collapse">
-    <div id="navbar-center" class="mr-auto">
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <div class="pst-scroll-pixel-helper"></div>
+    <header class="bd-header navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+   
+
+<a class="navbar-brand logo" href="https://projectpythia.org">
+  
+  
+  
+  
+  
+    
+    
       
-      <div class="navbar-center-item">
-        <ul id="navbar-main-elements" class="navbar-nav">
+    
+    
+    <img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-light" alt="Pythia Foundations - Home"/>
+    <script>document.write(`<img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark" alt="Pythia Foundations - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
   
   <li class="nav-item">
     
@@ -143,685 +172,326 @@ const thebe_selector_output = ".output, .cell_output"
   </li>
   
   
-</ul>
-      </div>
+</ul></div>
       
     </div>
-
-    <div id="navbar-end">
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/ProjectPythia" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/project_pythia" rel="noopener" target="_blank" title="Twitter">
-            <span><i class="fab fa-twitter-square"></i></span>
-            <label class="sr-only">Twitter</label>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" rel="noopener" target="_blank" title="YouTube">
-            <span><i class="fab fa-youtube-square"></i></span>
-            <label class="sr-only">YouTube</label>
-          </a>
-        </li>
-      </ul>
-      </div>
-      
-    </div>
-  </div>
-</div>
-    </nav>
-    <div class="container-xl">
-      <div class="row">
-        
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
-        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../landing-page.html">
-   Pythia Foundations
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Preamble
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../preamble/how-to-use.html">
-   How to Use This Book
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../preamble/how-to-cite.html">
-   How to Cite This Book
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Foundational skills
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../foundations/overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../foundations/why-python.html">
-   Why Python?
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../foundations/getting-started-python.html">
-   Getting Started with Python
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/quickstart.html">
-     Quickstart: Zero to Python
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../foundations/how-to-run-python.html">
-     Installing and Running Python
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ProjectPythia" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/project_pythia" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-youtube-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">YouTube</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
     </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../foundations/terminal.html">
-       Python in the Terminal
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../foundations/jupyter.html">
-       Python in Jupyter
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../foundations/conda.html">
-       Installing and Managing Python with Conda
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../foundations/getting-started-jupyter.html">
-   Getting Started with Jupyter
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/jupyterlab.html">
-     JupyterLab
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/markdown.html">
-     Formatted Text in the Notebook with Markdown
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../foundations/getting-started-github.html">
-   Getting Started with GitHub
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/what-is-github.html">
-     What is GitHub?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/github-repos.html">
-     GitHub Repositories
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/github-issues.html">
-     Issues and Discussions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/github-cloning-forking.html">
-     Cloning and Forking a Repository
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/github-setup-advanced.html">
-     Configuring Your GitHub Account
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/basic-git.html">
-     Basic Version Control with
-     <em>
-      git
-     </em>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/git-branches.html">
-     Git Branches
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/github-pull-request.html">
-     Opening a Pull Request on GitHub
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/review-pr.html">
-     Reviewing Pull Requests
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/github-workflows.html">
-     GitHub Workflows
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../foundations/github/contribute-to-pythia.html">
-     Contribute to Project Pythia via GitHub
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Core Scientific Python packages
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../numpy.html">
-   NumPy
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../numpy/numpy-basics.html">
-     NumPy Basics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../numpy/intermediate-numpy.html">
-     Intermediate NumPy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../numpy/numpy-broadcasting.html">
-     NumPy Broadcasting
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../matplotlib.html">
-   Matplotlib
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Matplotlib Basics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="histograms-piecharts-animation.html">
-     Histograms, Pie Charts, and Animations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="annotations-colorbars-layouts.html">
-     Annotations, Colorbars, and Advanced Layouts
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../cartopy.html">
-   Cartopy
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../cartopy/cartopy.html">
-     Introduction to Cartopy
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../datetime.html">
-   Datetime
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../datetime/datetime.html">
-     Times and Dates in Python
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../pandas.html">
-   Pandas
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../pandas/pandas.html">
-     Introduction to Pandas
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data-formats.html">
-   Data Formats
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../data-formats/netcdf-cf.html">
-     NetCDF and CF: The Basics
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../xarray.html">
-   Xarray
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../xarray/xarray-intro.html">
-     Introduction to Xarray
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../xarray/computation-masking.html">
-     Computations and Masks with Xarray
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../xarray/enso-xarray.html">
-     Calculating ENSO with Xarray
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../xarray/dask-arrays-xarray.html">
-     Dask Arrays with Xarray
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+  
+</div>
+
+    </header>
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+        
+        
+        
+        <div class="bd-sidebar-primary bd-sidebar">
+          
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/blog.html">Blog</a>
+  </li>
+  
+  
+</ul></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ProjectPythia" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/project_pythia" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-youtube-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">YouTube</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../landing-page.html">
+                    Pythia Foundations
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../appendix/how-to-contribute.html">
-   Pythia Foundations Contributor’s Guide
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../appendix/template.html">
-     Project Pythia Notebook Template
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../preamble/how-to-use.html">How to Use This Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preamble/how-to-cite.html">How to Cite This Book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Foundational skills</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../foundations/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../foundations/why-python.html">Why Python?</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../foundations/getting-started-python.html">Getting Started with Python</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/quickstart.html">Quickstart: Zero to Python</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../foundations/how-to-run-python.html">Installing and Running Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../foundations/terminal.html">Python in the Terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../foundations/jupyter.html">Python in Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../foundations/conda.html">Installing and Managing Python with Conda</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../foundations/getting-started-jupyter.html">Getting Started with Jupyter</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/jupyterlab.html">JupyterLab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/markdown.html">Formatted Text in the Notebook with Markdown</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../foundations/getting-started-github.html">Getting Started with GitHub</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/what-is-github.html">What is GitHub?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/github-repos.html">GitHub Repositories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/github-issues.html">Issues and Discussions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/github-cloning-forking.html">Cloning and Forking a Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/github-setup-advanced.html">Configuring Your GitHub Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/basic-git.html">Basic Version Control with <em>git</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/git-branches.html">Git Branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/github-pull-request.html">Opening a Pull Request on GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/review-pr.html">Reviewing Pull Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/github-workflows.html">GitHub Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../foundations/github/contribute-to-pythia.html">Contribute to Project Pythia via GitHub</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Scientific Python packages</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../numpy.html">NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../numpy/numpy-basics.html">NumPy Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../numpy/intermediate-numpy.html">Intermediate NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../numpy/numpy-broadcasting.html">NumPy Broadcasting</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../matplotlib.html">Matplotlib</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Matplotlib Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="histograms-piecharts-animation.html">Histograms, Pie Charts, and Animations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="annotations-colorbars-layouts.html">Annotations, Colorbars, and Advanced Layouts</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cartopy.html">Cartopy</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cartopy/cartopy.html">Introduction to Cartopy</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../datetime.html">Datetime</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../datetime/datetime.html">Times and Dates in Python</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../pandas.html">Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pandas/pandas.html">Introduction to Pandas</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data-formats.html">Data Formats</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data-formats/netcdf-cf.html">NetCDF and CF: The Basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../xarray.html">Xarray</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../xarray/xarray-intro.html">Introduction to Xarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../xarray/computation-masking.html">Computations and Masks with Xarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../xarray/enso-xarray.html">Calculating ENSO with Xarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../xarray/dask-arrays-xarray.html">Dask Arrays with Xarray</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/how-to-contribute.html">Pythia Foundations Contributor’s Guide</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/template.html">Project Pythia Notebook Template</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
-or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
-
-</div>
-
-</div>
-
-        
-
-        <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main"><div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/core/matplotlib/matplotlib-basics.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/ProjectPythia/pythia-foundations"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/matplotlib/matplotlib-basics.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/matplotlib/matplotlib-basics.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://binder.projectpythia.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/core/matplotlib/matplotlib-basics.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
 
         </div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> On this page
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#imports">
-   Imports
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generate-test-data-using-numpy">
-   Generate test data using
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     NumPy
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#figure-and-axes">
-   Figure and Axes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-line-plots">
-   Basic Line Plots
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#labels-and-grid-lines">
-   Labels and Grid Lines
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-labels-to-an-axes-object">
-     Adding labels to an
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       Axes
-      </span>
-     </code>
-     object
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-labels-and-a-grid">
-     Adding labels and a grid
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#customizing-colors">
-   Customizing colors
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#subplots">
-   Subplots
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-add-subplot-to-create-two-different-subplots-within-the-figure">
-     Using add_subplot to create two different subplots within the figure
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-titles-to-each-subplot">
-     Adding titles to each subplot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-ax-set-xlim-and-ax-set-ylim-to-control-the-plot-boundaries">
-     Using
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       ax.set_xlim
-      </span>
-     </code>
-     and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       ax.set_ylim
-      </span>
-     </code>
-     to control the plot boundaries
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-sharex-and-sharey-to-share-plot-limits">
-     Using
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       sharex
-      </span>
-     </code>
-     and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       sharey
-      </span>
-     </code>
-     to share plot limits
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#putting-this-all-together">
-     Putting this all together
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scatterplot">
-   Scatterplot
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#displaying-images">
-   Displaying Images
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contour-and-filled-contour-plots">
-   Contour and Filled Contour Plots
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#whats-next">
-   What’s Next?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#resources-and-references">
-   Resources and References
-  </a>
- </li>
-</ul>
+        
+        <main id="main-content" class="bd-main" role="main">
+          
 
-            </nav>
-        </div>
-    </div>
-</div>
-          <div id="main-content" class="row">
-            <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-              
-              <div>
+            <div class="bd-content">
+
+              <div class="bd-article-container">
+
                 
+                  
+                  
+<div id="searchbox"></div>
+                  <article class="bd-article">
+                    
   <p><img alt="Matplotlib logo" src="https://matplotlib.org/stable/_images/sphx_glr_logos2_003.png" /></p>
-<div class="tex2jax_ignore mathjax_ignore section" id="matplotlib-basics">
-<h1>Matplotlib Basics<a class="headerlink" href="#matplotlib-basics" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="matplotlib-basics">
+<h1>Matplotlib Basics<a class="headerlink" href="#matplotlib-basics" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>We will cover the basics of using the Matplotlib library to create plots in Python, including a few different plots available within the library. This page is laid out as follows:</p>
 <ol class="arabic simple">
 <li><p>Why Matplotlib?</p></li>
@@ -834,10 +504,10 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <li><p>Displaying Images</p></li>
 <li><p>Contour and filled contour plots.</p></li>
 </ol>
-</div>
-<div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<table class="colwidths-auto table">
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Concepts</p></th>
 <th class="head"><p>Importance</p></th>
@@ -858,10 +528,10 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <ul class="simple">
 <li><p><strong>Time to Learn</strong>: 30 minutes</p></li>
 </ul>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<section id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>Let’s import the Matplotlib library’s <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> interface; this interface is the simplest way to create new Matplotlib figures. To shorten this long name, we import it as <code class="docutils literal notranslate"><span class="pre">plt</span></code>; this helps keep things short, but clear.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -875,9 +545,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <p class="admonition-title">Info</p>
 <p>Matplotlib is a Python 2-D plotting library.  It is used to produce publication quality figures in a variety of hard-copy formats and interactive environments across platforms.</p>
 </div>
-</div>
-<div class="section" id="generate-test-data-using-numpy">
-<h2>Generate test data using <code class="docutils literal notranslate"><span class="pre">NumPy</span></code><a class="headerlink" href="#generate-test-data-using-numpy" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+<section id="generate-test-data-using-numpy">
+<h2>Generate test data using <code class="docutils literal notranslate"><span class="pre">NumPy</span></code><a class="headerlink" href="#generate-test-data-using-numpy" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>Here, we generate some test data to use for experimenting with plotting:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -941,14 +611,14 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="figure-and-axes">
-<h2>Figure and Axes<a class="headerlink" href="#figure-and-axes" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+<section id="figure-and-axes">
+<h2>Figure and Axes<a class="headerlink" href="#figure-and-axes" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>Now, let’s make our first plot with Matplotlib. Matplotlib has two core objects: the <code class="docutils literal notranslate"><span class="pre">Figure</span></code> and the <code class="docutils literal notranslate"><span class="pre">Axes</span></code>. The <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object is an individual plot, containing an x-axis, a y-axis, labels, etc.; it also contains all of the various methods we might use for plotting. A <code class="docutils literal notranslate"><span class="pre">Figure</span></code> contains one or more <code class="docutils literal notranslate"><span class="pre">Axes</span></code> objects; it also contains methods for saving plots to files (e.g., PNG, SVG), among other similar high-level functionality.  You may find the following diagram helpful:</p>
 <p><img alt="anatomy of a figure" src="https://matplotlib.org/stable/_images/sphx_glr_anatomy_001.png" /></p>
-</div>
-<div class="section" id="basic-line-plots">
-<h2>Basic Line Plots<a class="headerlink" href="#basic-line-plots" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+<section id="basic-line-plots">
+<h2>Basic Line Plots<a class="headerlink" href="#basic-line-plots" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>Let’s create a <code class="docutils literal notranslate"><span class="pre">Figure</span></code> whose dimensions, if printed out on hardcopy, would be 10 inches wide and 6 inches long (assuming a landscape orientation). We then create an <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object, consisting of a single subplot, on the <code class="docutils literal notranslate"><span class="pre">Figure</span></code>. After that, we call the <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object’s <code class="docutils literal notranslate"><span class="pre">plot</span></code> method, using the <code class="docutils literal notranslate"><span class="pre">times</span></code> array for the data along the x-axis (i.e., the independent values), and the <code class="docutils literal notranslate"><span class="pre">temps</span></code> array for the data along the y-axis (i.e., the dependent values).</p>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Info</p>
@@ -968,14 +638,14 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6a57bbb822743a4864d071e867d77878e92dcc564e616c8826f23d8580bfe21b.png" src="../../_images/6a57bbb822743a4864d071e867d77878e92dcc564e616c8826f23d8580bfe21b.png" />
+<img alt="../../_images/0bdae7e9a1a36fc548cb1f0b197ef12e8385d9c0c796d0ea31e7aca6a900c314.png" src="../../_images/0bdae7e9a1a36fc548cb1f0b197ef12e8385d9c0c796d0ea31e7aca6a900c314.png" />
 </div>
 </div>
-</div>
-<div class="section" id="labels-and-grid-lines">
-<h2>Labels and Grid Lines<a class="headerlink" href="#labels-and-grid-lines" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<div class="section" id="adding-labels-to-an-axes-object">
-<h3>Adding labels to an <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object<a class="headerlink" href="#adding-labels-to-an-axes-object" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="labels-and-grid-lines">
+<h2>Labels and Grid Lines<a class="headerlink" href="#labels-and-grid-lines" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<section id="adding-labels-to-an-axes-object">
+<h3>Adding labels to an <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object<a class="headerlink" href="#adding-labels-to-an-axes-object" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>Next, we add x-axis and y-axis labels to our <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object, like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -989,7 +659,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0d4729c735d918925bf223f646ee98beda40a19a166d0268a1e030d4b48f20b6.png" src="../../_images/0d4729c735d918925bf223f646ee98beda40a19a166d0268a1e030d4b48f20b6.png" />
+<img alt="../../_images/9ded3fdb600aa58eb9eb345fc9b08490583832411befb8999349307c13973a23.png" src="../../_images/9ded3fdb600aa58eb9eb345fc9b08490583832411befb8999349307c13973a23.png" />
 </div>
 </div>
 <p>We can also add a title to the plot and increase the font size:</p>
@@ -1002,7 +672,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/9b405acae4878179094304dbbf5c977f029e5a6521ff540fe8d322506bd07a0b.png" src="../../_images/9b405acae4878179094304dbbf5c977f029e5a6521ff540fe8d322506bd07a0b.png" />
+<img alt="../../_images/19d5eb2cdb09fae890add2a7d5beba0a6f407e110c9a719dfbcb15082890a776.png" src="../../_images/19d5eb2cdb09fae890add2a7d5beba0a6f407e110c9a719dfbcb15082890a776.png" />
 </div>
 </div>
 <p>There are many other functions and methods associated with <code class="docutils literal notranslate"><span class="pre">Axes</span></code> objects and labels, but they are too numerous to list here.</p>
@@ -1041,9 +711,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="adding-labels-and-a-grid">
-<h3>Adding labels and a grid<a class="headerlink" href="#adding-labels-and-a-grid" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="adding-labels-and-a-grid">
+<h3>Adding labels and a grid<a class="headerlink" href="#adding-labels-and-a-grid" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>Here, we call <code class="docutils literal notranslate"><span class="pre">plot</span></code> more than once, in order to plot multiple series of temperature data on the same plot.  We also specify the <code class="docutils literal notranslate"><span class="pre">label</span></code> keyword argument to the <code class="docutils literal notranslate"><span class="pre">plot</span></code> method to allow Matplotlib to automatically create legend labels. These legend labels are added via a call to the <code class="docutils literal notranslate"><span class="pre">legend</span></code> method. By utilizing the <code class="docutils literal notranslate"><span class="pre">grid()</span></code> method, we can also add gridlines to our plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1069,13 +739,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/b834cec1482248ec33f3636fcc3108de64a56c6d234b6bc5d12ff5cca0f3f36a.png" src="../../_images/b834cec1482248ec33f3636fcc3108de64a56c6d234b6bc5d12ff5cca0f3f36a.png" />
+<img alt="../../_images/6939d90e143fe058ae811df82744a695cef538a67d5cf738748aa2e271a85a84.png" src="../../_images/6939d90e143fe058ae811df82744a695cef538a67d5cf738748aa2e271a85a84.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="customizing-colors">
-<h2>Customizing colors<a class="headerlink" href="#customizing-colors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+</section>
+<section id="customizing-colors">
+<h2>Customizing colors<a class="headerlink" href="#customizing-colors" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>We’re not restricted to the default look for plot elements.  Most plot elements have style attributes, such as <code class="docutils literal notranslate"><span class="pre">linestyle</span></code> and <code class="docutils literal notranslate"><span class="pre">color</span></code>, that can be modified to customize the look of a plot. For example, the <code class="docutils literal notranslate"><span class="pre">color</span></code> attribute can accept a wide array of color options, including keywords (named colors) like <code class="docutils literal notranslate"><span class="pre">red</span></code> or <code class="docutils literal notranslate"><span class="pre">blue</span></code>, or HTML color codes. Here, we use some different shades of red taken from the Tableau colorset in Matplotlib, by using the <code class="docutils literal notranslate"><span class="pre">tab:red</span></code> option for the color attribute.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1106,12 +776,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/99d10b2a7613bb7f1f46d035904a0dc10e458533d479d347385d528162c60428.png" src="../../_images/99d10b2a7613bb7f1f46d035904a0dc10e458533d479d347385d528162c60428.png" />
+<img alt="../../_images/e384dcfa3d255e233d230901e08981533ea2c118669d8e3289412589af1d6a79.png" src="../../_images/e384dcfa3d255e233d230901e08981533ea2c118669d8e3289412589af1d6a79.png" />
 </div>
 </div>
-</div>
-<div class="section" id="subplots">
-<h2>Subplots<a class="headerlink" href="#subplots" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+<section id="subplots">
+<h2>Subplots<a class="headerlink" href="#subplots" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>The term “subplots” refers to working with multiple plots, or panels, in a figure.</p>
 <p>Here, we create yet another set of test data, in this case dew-point data, to be used in later examples:</p>
 <div class="cell docutils container">
@@ -1123,8 +793,8 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <p>Now, we can use subplots to plot this new data alongside the temperature data.</p>
-<div class="section" id="using-add-subplot-to-create-two-different-subplots-within-the-figure">
-<h3>Using add_subplot to create two different subplots within the figure<a class="headerlink" href="#using-add-subplot-to-create-two-different-subplots-within-the-figure" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<section id="using-add-subplot-to-create-two-different-subplots-within-the-figure">
+<h3>Using add_subplot to create two different subplots within the figure<a class="headerlink" href="#using-add-subplot-to-create-two-different-subplots-within-the-figure" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">.add_subplot()</span></code> method to add subplots to our figure! This method takes the arguments <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">columns,</span> <span class="pre">subplot_number)</span></code>.</p>
 <p>For example, if we want a single row and two columns, we can use the following code block:</p>
 <div class="cell docutils container">
@@ -1142,7 +812,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/fc9cf4f11e730a12e374ff8fef64f3d18744bd6f7879e26b9dc4940c4c3525c9.png" src="../../_images/fc9cf4f11e730a12e374ff8fef64f3d18744bd6f7879e26b9dc4940c4c3525c9.png" />
+<img alt="../../_images/136e1ec4bf3022aaf18975667e5106fe454cd1183c9cfed298254715731ae352.png" src="../../_images/136e1ec4bf3022aaf18975667e5106fe454cd1183c9cfed298254715731ae352.png" />
 </div>
 </div>
 <p>You can also call <code class="docutils literal notranslate"><span class="pre">plot.subplots()</span></code> with the keyword arguments <code class="docutils literal notranslate"><span class="pre">nrows</span></code> (number of rows) and <code class="docutils literal notranslate"><span class="pre">ncols</span></code> (number of columns).  This initializes a new <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object, called <code class="docutils literal notranslate"><span class="pre">ax</span></code>, with the specified number of rows and columns.  This object also contains a 1-D list of subplots, with a size equal to <code class="docutils literal notranslate"><span class="pre">nrows</span></code> x <code class="docutils literal notranslate"><span class="pre">ncols</span></code>.</p>
@@ -1157,12 +827,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/fc9cf4f11e730a12e374ff8fef64f3d18744bd6f7879e26b9dc4940c4c3525c9.png" src="../../_images/fc9cf4f11e730a12e374ff8fef64f3d18744bd6f7879e26b9dc4940c4c3525c9.png" />
+<img alt="../../_images/136e1ec4bf3022aaf18975667e5106fe454cd1183c9cfed298254715731ae352.png" src="../../_images/136e1ec4bf3022aaf18975667e5106fe454cd1183c9cfed298254715731ae352.png" />
 </div>
 </div>
-</div>
-<div class="section" id="adding-titles-to-each-subplot">
-<h3>Adding titles to each subplot<a class="headerlink" href="#adding-titles-to-each-subplot" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="adding-titles-to-each-subplot">
+<h3>Adding titles to each subplot<a class="headerlink" href="#adding-titles-to-each-subplot" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>We can add titles to these plots too; notice that these subplots are titled separately, by calling <code class="docutils literal notranslate"><span class="pre">ax.set_title</span></code> after plotting each subplot:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1181,12 +851,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/645820d79cc8b5e0abbe1381d1b211680c5a1b2d7a640cbcf0e1185d431f5127.png" src="../../_images/645820d79cc8b5e0abbe1381d1b211680c5a1b2d7a640cbcf0e1185d431f5127.png" />
+<img alt="../../_images/a0c7450e65d7cac2935f9fdcb72f2b797df5dfe49f52864ffdb22964f0e3404f.png" src="../../_images/a0c7450e65d7cac2935f9fdcb72f2b797df5dfe49f52864ffdb22964f0e3404f.png" />
 </div>
 </div>
-</div>
-<div class="section" id="using-ax-set-xlim-and-ax-set-ylim-to-control-the-plot-boundaries">
-<h3>Using <code class="docutils literal notranslate"><span class="pre">ax.set_xlim</span></code> and <code class="docutils literal notranslate"><span class="pre">ax.set_ylim</span></code> to control the plot boundaries<a class="headerlink" href="#using-ax-set-xlim-and-ax-set-ylim-to-control-the-plot-boundaries" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="using-ax-set-xlim-and-ax-set-ylim-to-control-the-plot-boundaries">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">ax.set_xlim</span></code> and <code class="docutils literal notranslate"><span class="pre">ax.set_ylim</span></code> to control the plot boundaries<a class="headerlink" href="#using-ax-set-xlim-and-ax-set-ylim-to-control-the-plot-boundaries" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>It is common when plotting data to set the extent (boundaries) of plots, which can be performed by calling <code class="docutils literal notranslate"><span class="pre">.set_xlim</span></code> and <code class="docutils literal notranslate"><span class="pre">.set_ylim</span></code> on the <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object containing the plot or subplot(s):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1208,12 +878,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/30b9a378e6044591566cd907b04911a9e4113fd13e8f7f8a5548c2e5923e5032.png" src="../../_images/30b9a378e6044591566cd907b04911a9e4113fd13e8f7f8a5548c2e5923e5032.png" />
+<img alt="../../_images/5c1f1aeb64a8c77cc21dc16d81eef091768c1117d5795923b4e8fa325630ac0f.png" src="../../_images/5c1f1aeb64a8c77cc21dc16d81eef091768c1117d5795923b4e8fa325630ac0f.png" />
 </div>
 </div>
-</div>
-<div class="section" id="using-sharex-and-sharey-to-share-plot-limits">
-<h3>Using <code class="docutils literal notranslate"><span class="pre">sharex</span></code> and <code class="docutils literal notranslate"><span class="pre">sharey</span></code> to share plot limits<a class="headerlink" href="#using-sharex-and-sharey-to-share-plot-limits" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="using-sharex-and-sharey-to-share-plot-limits">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">sharex</span></code> and <code class="docutils literal notranslate"><span class="pre">sharey</span></code> to share plot limits<a class="headerlink" href="#using-sharex-and-sharey-to-share-plot-limits" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>You may want to have both subplots share the same x/y axis limits.  When setting up a new <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object through a method like <code class="docutils literal notranslate"><span class="pre">add_subplot</span></code>, specify the keyword arguments <code class="docutils literal notranslate"><span class="pre">sharex=ax</span></code> and <code class="docutils literal notranslate"><span class="pre">sharey=ax</span></code>, where <code class="docutils literal notranslate"><span class="pre">ax</span></code> is the <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object with which to share axis limits.</p>
 <p>Let’s take a look at an example:</p>
 <div class="cell docutils container">
@@ -1234,12 +904,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/dfca49338ee9442cff613b5ffd3e9a271b8d6c2e9c2ce6801b6effcb69d85792.png" src="../../_images/dfca49338ee9442cff613b5ffd3e9a271b8d6c2e9c2ce6801b6effcb69d85792.png" />
+<img alt="../../_images/b19b95973cda4cbcca6f9f616039666fbce7f769b68d5af58a033f80d7d6b472.png" src="../../_images/b19b95973cda4cbcca6f9f616039666fbce7f769b68d5af58a033f80d7d6b472.png" />
 </div>
 </div>
-</div>
-<div class="section" id="putting-this-all-together">
-<h3>Putting this all together<a class="headerlink" href="#putting-this-all-together" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="putting-this-all-together">
+<h3>Putting this all together<a class="headerlink" href="#putting-this-all-together" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Info</p>
 <p>If desired, you can move the location of your legend; to do this, specify the <code>loc</code> keyword argument when calling <code>ax.legend()</code>.</p>
@@ -1290,13 +960,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ab74cd30eca07383bd9ede735c9f63978b9ee7d14773def7c1034763d294797d.png" src="../../_images/ab74cd30eca07383bd9ede735c9f63978b9ee7d14773def7c1034763d294797d.png" />
+<img alt="../../_images/e3671e6ea55d81b64f703bf9b159b9c80dbe2a8c85069a7ac6c7016c923956ec.png" src="../../_images/e3671e6ea55d81b64f703bf9b159b9c80dbe2a8c85069a7ac6c7016c923956ec.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="scatterplot">
-<h2>Scatterplot<a class="headerlink" href="#scatterplot" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+</section>
+<section id="scatterplot">
+<h2>Scatterplot<a class="headerlink" href="#scatterplot" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>Some data cannot be plotted accurately as a line plot.  Another type of plot that is popular in science is the marker plot, more commonly known as a scatter plot. A simple scatter plot can be created by setting the <code class="docutils literal notranslate"><span class="pre">linestyle</span></code> to <code class="docutils literal notranslate"><span class="pre">None</span></code>, and specifying a marker type, size, color, etc., like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1314,7 +984,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/3efebf2177b706e2875bc9ac5430082d022fa6897b098ef60313dbef9b637c65.png" src="../../_images/3efebf2177b706e2875bc9ac5430082d022fa6897b098ef60313dbef9b637c65.png" />
+<img alt="../../_images/64c42555fee396b5e458cf4e32eb5ab25d443acbfdd330b0e5156701acbd0f33.png" src="../../_images/64c42555fee396b5e458cf4e32eb5ab25d443acbfdd330b0e5156701acbd0f33.png" />
 </div>
 </div>
 <div class="admonition alert alert-info">
@@ -1337,7 +1007,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/840bb009a73eba48ceab9c6e6974cfaabc472cc24f0ab0a6a532cb0f25876ef4.png" src="../../_images/840bb009a73eba48ceab9c6e6974cfaabc472cc24f0ab0a6a532cb0f25876ef4.png" />
+<img alt="../../_images/35a3be35b2be602f5e875f7c82ea1f5105ace69680a8af324c42cb6df394fe2a.png" src="../../_images/35a3be35b2be602f5e875f7c82ea1f5105ace69680a8af324c42cb6df394fe2a.png" />
 </div>
 </div>
 <p>Let’s put together the following:</p>
@@ -1364,12 +1034,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/71697a02d228da79ee240eccd848c206023da5f1e2c04b19b3ab51759888bb46.png" src="../../_images/71697a02d228da79ee240eccd848c206023da5f1e2c04b19b3ab51759888bb46.png" />
+<img alt="../../_images/d5a358e8b474dfa02f0f6c3786f5c38f24505114bb3cfc13ece809b0e4f43a13.png" src="../../_images/d5a358e8b474dfa02f0f6c3786f5c38f24505114bb3cfc13ece809b0e4f43a13.png" />
 </div>
 </div>
-</div>
-<div class="section" id="displaying-images">
-<h2>Displaying Images<a class="headerlink" href="#displaying-images" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+<section id="displaying-images">
+<h2>Displaying Images<a class="headerlink" href="#displaying-images" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">imshow</span></code> displays the values in an array as colored pixels, similar to a heat map.</p>
 <p>Here, we declare some fake data in a bivariate normal distribution, to illustrate the <code class="docutils literal notranslate"><span class="pre">imshow</span></code> method:</p>
 <div class="cell docutils container">
@@ -1394,12 +1064,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/592eb39ae0b3986218232d563ed2577dc4b154e061b464cdfbf8d3e8e65185d8.png" src="../../_images/592eb39ae0b3986218232d563ed2577dc4b154e061b464cdfbf8d3e8e65185d8.png" />
+<img alt="../../_images/be3f789a7328f97ab49c82ddd90d0d8f36c1ab74c80b57b1e6a3d903aab5743f.png" src="../../_images/be3f789a7328f97ab49c82ddd90d0d8f36c1ab74c80b57b1e6a3d903aab5743f.png" />
 </div>
 </div>
-</div>
-<div class="section" id="contour-and-filled-contour-plots">
-<h2>Contour and Filled Contour Plots<a class="headerlink" href="#contour-and-filled-contour-plots" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+<section id="contour-and-filled-contour-plots">
+<h2>Contour and Filled Contour Plots<a class="headerlink" href="#contour-and-filled-contour-plots" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">contour</span></code> creates contours around data.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">contourf</span></code> creates filled contours around data.</p></li>
@@ -1413,7 +1083,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/90d32337ba3da090b5186720f72279751c3a98c784d75bfdd4efe9c698add139.png" src="../../_images/90d32337ba3da090b5186720f72279751c3a98c784d75bfdd4efe9c698add139.png" />
+<img alt="../../_images/52d2416c5e1792ab9667a1e9f23f136942a830c96e872c1ea1415557b1197221.png" src="../../_images/52d2416c5e1792ab9667a1e9f23f136942a830c96e872c1ea1415557b1197221.png" />
 </div>
 </div>
 <p>After creating contours, we can label the lines using the <code class="docutils literal notranslate"><span class="pre">clabel</span></code> method, like this:</p>
@@ -1426,7 +1096,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2979bf9c30cf889b44d77e4e5081e5415c7e11484abbc9683e69abff430f17f2.png" src="../../_images/2979bf9c30cf889b44d77e4e5081e5415c7e11484abbc9683e69abff430f17f2.png" />
+<img alt="../../_images/3f46c36af2239f3e9cf258a1dba4a096f1aae86e01e630a964d0efe717e96291.png" src="../../_images/3f46c36af2239f3e9cf258a1dba4a096f1aae86e01e630a964d0efe717e96291.png" />
 </div>
 </div>
 <p>As described above, the <code class="docutils literal notranslate"><span class="pre">contourf</span></code> (contour fill) method creates filled contours around data, like this:</p>
@@ -1438,7 +1108,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e32d08822e8fdb13f0cf9d473cc8ea44fd756d97d4ee134d247a8cfcdd931c4b.png" src="../../_images/e32d08822e8fdb13f0cf9d473cc8ea44fd756d97d4ee134d247a8cfcdd931c4b.png" />
+<img alt="../../_images/dba7663f146a0f001d17afb7c9e2f416e7d0277cea9ef9605f5c15a9b4f4798a.png" src="../../_images/dba7663f146a0f001d17afb7c9e2f416e7d0277cea9ef9605f5c15a9b4f4798a.png" />
 </div>
 </div>
 <p>As a final example, let’s create a heatmap figure with contours using the <code class="docutils literal notranslate"><span class="pre">contour</span></code> and <code class="docutils literal notranslate"><span class="pre">imshow</span></code> methods.  First, we use <code class="docutils literal notranslate"><span class="pre">imshow</span></code> to create the heatmap, specifying a colormap using the <code class="docutils literal notranslate"><span class="pre">cmap</span></code> keyword argument.  We then call <code class="docutils literal notranslate"><span class="pre">contour</span></code>, specifying black contours and an interval of 0.5.  Here is the example code, and resulting figure:</p>
@@ -1454,13 +1124,13 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/22b69560de58b1795eb0981617fab9c565d6c7f489ac525bd79c3a0c471a226c.png" src="../../_images/22b69560de58b1795eb0981617fab9c565d6c7f489ac525bd79c3a0c471a226c.png" />
+<img alt="../../_images/c0d3207ce2e4453193e8818f54098163303f26f7d7a9e00328d4790a33de0c14.png" src="../../_images/c0d3207ce2e4453193e8818f54098163303f26f7d7a9e00328d4790a33de0c14.png" />
 </div>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code> can be used to visualize datasets you are working with.</p></li>
 <li><p>You can customize various features such as labels and styles.</p></li>
@@ -1473,21 +1143,21 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="whats-next">
-<h2>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+<section id="whats-next">
+<h2>What’s Next?<a class="headerlink" href="#whats-next" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>In the next section, <a class="reference internal" href="histograms-piecharts-animation.html"><span class="doc std std-doc">more plotting functionality</span></a> is covered, such as histograms, pie charts, and animation.</p>
-</div>
-<div class="section" id="resources-and-references">
-<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+<section id="resources-and-references">
+<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>The goal of this tutorial is to provide an overview of the use of the Matplotlib library. It covers creating simple line plots, but it is by no means comprehensive. For more information, try looking at the following documentation:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://matplotlib.org">Matplotlib documentation</a></p></li>
 <li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/index.html">Matplotlib examples gallery</a></p></li>
 <li><p><a class="reference external" href="https://geocat-examples.readthedocs.io/en/latest/gallery/index.html">GeoCAT examples gallery</a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1509,43 +1179,354 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
-              <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../matplotlib.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Matplotlib</p>
-        </div>
+                  </article>
+
+                
+                
+
+                
+                
+                  <footer class="prev-next-footer">
+                    
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../matplotlib.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Matplotlib</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="histograms-piecharts-animation.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="histograms-piecharts-animation.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Histograms, Pie Charts, and Animations</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </div>
-          </div>
-        </main>
+                  </footer>
+                
+              </div>
 
-      </div>
+              
+              
+                
+                  <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-test-data-using-numpy">Generate test data using <code class="docutils literal notranslate"><span class="pre">NumPy</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-and-axes">Figure and Axes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-line-plots">Basic Line Plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels-and-grid-lines">Labels and Grid Lines</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-to-an-axes-object">Adding labels to an <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-and-a-grid">Adding labels and a grid</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customizing-colors">Customizing colors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subplots">Subplots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-add-subplot-to-create-two-different-subplots-within-the-figure">Using add_subplot to create two different subplots within the figure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-titles-to-each-subplot">Adding titles to each subplot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-ax-set-xlim-and-ax-set-ylim-to-control-the-plot-boundaries">Using <code class="docutils literal notranslate"><span class="pre">ax.set_xlim</span></code> and <code class="docutils literal notranslate"><span class="pre">ax.set_ylim</span></code> to control the plot boundaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-sharex-and-sharey-to-share-plot-limits">Using <code class="docutils literal notranslate"><span class="pre">sharex</span></code> and <code class="docutils literal notranslate"><span class="pre">sharey</span></code> to share plot limits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#putting-this-all-together">Putting this all together</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scatterplot">Scatterplot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#displaying-images">Displaying Images</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contour-and-filled-contour-plots">Contour and Filled Contour Plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whats-next">What’s Next?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources-and-references">Resources and References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+                
+              
+
+
+                
+                <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-
-<footer class="footer">
-  <div class="container-fluid m-0 p-0">
   
-    <div class="footer-item">
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://binder.projectpythia.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/core/matplotlib/matplotlib-basics.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/pythia-foundations" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/pythia-foundations/edit/main/core/matplotlib/matplotlib-basics.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Fcore/matplotlib/matplotlib-basics.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/core/matplotlib/matplotlib-basics.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+            </div>
+
+            <footer class="bd-footer-content">
+              
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
     
+<p class="component-author">
+By the <a href="https://projectpythia.org/">Project Pythia</a> Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 29 March 2024.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+            </footer>
+
+        </main>
+    </div>
+  </div>
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+     
+  
+  
+  
+  
+    <div class="footer-items__start">
+      <div class="container-fluid m-0 p-0">
+      
+        <div class="footer-item">
   <div class="container-fluid footer-logos">
     <div class="container-xl">
       <div class="row d-flex flex-wrap align-items-center">
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="NCAR" src="../../_images/NCAR-contemp-logo-blue.svg" style="width: 100%">
+          <img alt="NCAR" src="../../_images/NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
         </div>
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
           <img alt="Unidata" src="../../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
@@ -1555,11 +1536,9 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         </div>
       </div>
     </div>
-  </div>
-    </div>
-  
-    <div class="footer-item">
-    
+  </div></div>
+      
+        <div class="footer-item">
 <div class="container-fluid footer-menu pt-4">
   <div class="container">
     <div class="row justify-content-center">
@@ -1629,27 +1608,23 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
       </div>
     </div>
   </div>
-</div>
-    </div>
-  
-    <div class="footer-item">
-      <div class="container-fluid footer-info">
+</div></div>
+      
+        <div class="footer-item">  <div class="container-fluid footer-info">
     <div class="container-xl">
       <div class="d-flex justify-content-center">
         <p class="py-1 m-0">
-            &copy;&nbsp;2022.
+            &copy;&nbsp;2024.
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 9 January 2024.
+          Last updated on 29 March 2024.
         </p>
       </div>
     </div>
-  </div>
-    </div>
-  
-    <div class="footer-item">
-    <div class="container-fluid footer-extra">
+  </div></div>
+      
+        <div class="footer-item"><div class="container-fluid footer-extra">
   <div class="container">
     <center>
       Theme by <a href="https://projectpythia.org">Project Pythia</a>. All code
@@ -1674,10 +1649,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
       </p>
     </div>
   </div>
-</div>
+</div></div>
+      
+      </div>
     </div>
   
-  </div>
-</footer>
+
+  </footer>
   </body>
 </html>

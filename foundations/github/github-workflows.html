@@ -1,104 +1,133 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>GitHub Workflows &#8212; Pythia Foundations</title>
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css?v=e502140d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6f14dede" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-G57FLM9M46"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-G57FLM9M46');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-G57FLM9M46');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'foundations/github/github-workflows';</script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Contribute to Project Pythia via GitHub" href="contribute-to-pythia.html" />
     <link rel="prev" title="Reviewing Pull Requests" href="review-pr.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-G57FLM9M46"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-G57FLM9M46');
-                </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="29 March 2024"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="132">
-    <div class="container-fluid" id="shim"></div>
-    <div class="container-fluid" id="banner"></div>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main"><div class="container-xl">
-
-  <div id="navbar-start">
-    
-    
-
-<a class="navbar-brand" href="https://projectpythia.org">
-  <img src="../../_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
-</a>
-
-
-    
-  </div>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
   
-  <div id="navbar-collapsible" class=" collapse navbar-collapse">
-    <div id="navbar-center" class="mr-auto">
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <div class="pst-scroll-pixel-helper"></div>
+    <header class="bd-header navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+   
+
+<a class="navbar-brand logo" href="https://projectpythia.org">
+  
+  
+  
+  
+  
+    
+    
       
-      <div class="navbar-center-item">
-        <ul id="navbar-main-elements" class="navbar-nav">
+    
+    
+    <img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-light" alt="Pythia Foundations - Home"/>
+    <script>document.write(`<img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark" alt="Pythia Foundations - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
   
   <li class="nav-item">
     
@@ -143,636 +172,335 @@ const thebe_selector_output = ".output, .cell_output"
   </li>
   
   
-</ul>
-      </div>
+</ul></div>
       
     </div>
-
-    <div id="navbar-end">
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/ProjectPythia" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/project_pythia" rel="noopener" target="_blank" title="Twitter">
-            <span><i class="fab fa-twitter-square"></i></span>
-            <label class="sr-only">Twitter</label>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" rel="noopener" target="_blank" title="YouTube">
-            <span><i class="fab fa-youtube-square"></i></span>
-            <label class="sr-only">YouTube</label>
-          </a>
-        </li>
-      </ul>
-      </div>
-      
-    </div>
-  </div>
-</div>
-    </nav>
-    <div class="container-xl">
-      <div class="row">
-        
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
-        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../landing-page.html">
-   Pythia Foundations
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Preamble
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../preamble/how-to-use.html">
-   How to Use This Book
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../preamble/how-to-cite.html">
-   How to Cite This Book
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Foundational skills
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../why-python.html">
-   Why Python?
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../getting-started-python.html">
-   Getting Started with Python
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../quickstart.html">
-     Quickstart: Zero to Python
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../how-to-run-python.html">
-     Installing and Running Python
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ProjectPythia" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/project_pythia" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-youtube-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">YouTube</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
     </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../terminal.html">
-       Python in the Terminal
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../jupyter.html">
-       Python in Jupyter
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../conda.html">
-       Installing and Managing Python with Conda
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../getting-started-jupyter.html">
-   Getting Started with Jupyter
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../jupyterlab.html">
-     JupyterLab
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../markdown.html">
-     Formatted Text in the Notebook with Markdown
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../getting-started-github.html">
-   Getting Started with GitHub
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="what-is-github.html">
-     What is GitHub?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="github-repos.html">
-     GitHub Repositories
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="github-issues.html">
-     Issues and Discussions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="github-cloning-forking.html">
-     Cloning and Forking a Repository
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="github-setup-advanced.html">
-     Configuring Your GitHub Account
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="basic-git.html">
-     Basic Version Control with
-     <em>
-      git
-     </em>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="git-branches.html">
-     Git Branches
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="github-pull-request.html">
-     Opening a Pull Request on GitHub
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="review-pr.html">
-     Reviewing Pull Requests
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     GitHub Workflows
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="contribute-to-pythia.html">
-     Contribute to Project Pythia via GitHub
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Core Scientific Python packages
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../core/overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../core/numpy.html">
-   NumPy
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../core/numpy/numpy-basics.html">
-     NumPy Basics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../core/numpy/intermediate-numpy.html">
-     Intermediate NumPy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../core/numpy/numpy-broadcasting.html">
-     NumPy Broadcasting
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../core/matplotlib.html">
-   Matplotlib
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../core/matplotlib/matplotlib-basics.html">
-     Matplotlib Basics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../core/matplotlib/histograms-piecharts-animation.html">
-     Histograms, Pie Charts, and Animations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../core/matplotlib/annotations-colorbars-layouts.html">
-     Annotations, Colorbars, and Advanced Layouts
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../core/cartopy.html">
-   Cartopy
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../core/cartopy/cartopy.html">
-     Introduction to Cartopy
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../core/datetime.html">
-   Datetime
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../core/datetime/datetime.html">
-     Times and Dates in Python
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../core/pandas.html">
-   Pandas
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../core/pandas/pandas.html">
-     Introduction to Pandas
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../core/data-formats.html">
-   Data Formats
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../core/data-formats/netcdf-cf.html">
-     NetCDF and CF: The Basics
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../core/xarray.html">
-   Xarray
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../core/xarray/xarray-intro.html">
-     Introduction to Xarray
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../core/xarray/computation-masking.html">
-     Computations and Masks with Xarray
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../core/xarray/enso-xarray.html">
-     Calculating ENSO with Xarray
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../core/xarray/dask-arrays-xarray.html">
-     Dask Arrays with Xarray
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../appendix/how-to-contribute.html">
-   Pythia Foundations Contributor’s Guide
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../appendix/template.html">
-     Project Pythia Notebook Template
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
-or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
-
+  
 </div>
 
-</div>
-
+    </header>
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
         
-
-        <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main"><div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/foundations/github/github-workflows.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        
+        <div class="bd-sidebar-primary bd-sidebar">
+          
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/blog.html">Blog</a>
+  </li>
+  
+  
+</ul></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ProjectPythia" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/project_pythia" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-youtube-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">YouTube</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../landing-page.html">
+                    Pythia Foundations
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../preamble/how-to-use.html">How to Use This Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preamble/how-to-cite.html">How to Cite This Book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Foundational skills</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why-python.html">Why Python?</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../getting-started-python.html">Getting Started with Python</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html">Quickstart: Zero to Python</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../how-to-run-python.html">Installing and Running Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../terminal.html">Python in the Terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jupyter.html">Python in Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../conda.html">Installing and Managing Python with Conda</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../getting-started-jupyter.html">Getting Started with Jupyter</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jupyterlab.html">JupyterLab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../markdown.html">Formatted Text in the Notebook with Markdown</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../getting-started-github.html">Getting Started with GitHub</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="what-is-github.html">What is GitHub?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="github-repos.html">GitHub Repositories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="github-issues.html">Issues and Discussions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="github-cloning-forking.html">Cloning and Forking a Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="github-setup-advanced.html">Configuring Your GitHub Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-git.html">Basic Version Control with <em>git</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-branches.html">Git Branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="github-pull-request.html">Opening a Pull Request on GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="review-pr.html">Reviewing Pull Requests</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">GitHub Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute-to-pythia.html">Contribute to Project Pythia via GitHub</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Scientific Python packages</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../core/overview.html">Overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../core/numpy.html">NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../core/numpy/numpy-basics.html">NumPy Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/numpy/intermediate-numpy.html">Intermediate NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/numpy/numpy-broadcasting.html">NumPy Broadcasting</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../core/matplotlib.html">Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../core/matplotlib/matplotlib-basics.html">Matplotlib Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/matplotlib/histograms-piecharts-animation.html">Histograms, Pie Charts, and Animations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/matplotlib/annotations-colorbars-layouts.html">Annotations, Colorbars, and Advanced Layouts</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../core/cartopy.html">Cartopy</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../core/cartopy/cartopy.html">Introduction to Cartopy</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../core/datetime.html">Datetime</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../core/datetime/datetime.html">Times and Dates in Python</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../core/pandas.html">Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../core/pandas/pandas.html">Introduction to Pandas</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../core/data-formats.html">Data Formats</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../core/data-formats/netcdf-cf.html">NetCDF and CF: The Basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../core/xarray.html">Xarray</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../core/xarray/xarray-intro.html">Introduction to Xarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/xarray/computation-masking.html">Computations and Masks with Xarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/xarray/enso-xarray.html">Calculating ENSO with Xarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/xarray/dask-arrays-xarray.html">Dask Arrays with Xarray</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/how-to-contribute.html">Pythia Foundations Contributor’s Guide</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/template.html">Project Pythia Notebook Template</a></li>
+</ul>
+</li>
+</ul>
+
     </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/ProjectPythia/pythia-foundations"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Ffoundations/github/github-workflows.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ProjectPythia/pythia-foundations/edit/main/foundations/github/github-workflows.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
 
         </div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> On this page
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   GitHub workflows
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#git-feature-branch-workflow">
-   Git Feature Branch Workflow
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#working-with-the-git-feature-branch-workflow">
-     Working with the Git Feature Branch Workflow
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cloning-the-remote-repository">
-       Cloning the remote repository
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#start-with-the-main-branch">
-       Start with the main branch
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-a-new-branch">
-       Create a new branch
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#make-changes-and-commit">
-       Make changes and commit
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#push-the-feature-branch-to-the-remote-repository">
-       Push the feature branch to the remote repository
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#making-a-pull-request">
-       Making a Pull Request
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#safety-tip-on-synchronization">
-       Safety tip on synchronization
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#forking-workflow">
-   Forking Workflow
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#forking-the-upstream-repository">
-     Forking the upstream repository
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#clone-branch-change-commit-push">
-     Clone, branch, change, commit, push
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Making a Pull Request
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Safety tip on synchronization
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#whats-next">
-     What’s Next?
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
-</ul>
+        
+        <main id="main-content" class="bd-main" role="main">
+          
 
-            </nav>
-        </div>
-    </div>
-</div>
-          <div id="main-content" class="row">
-            <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-              
-              <div>
+            <div class="bd-content">
+
+              <div class="bd-article-container">
+
                 
+                  
+                  
+<div id="searchbox"></div>
+                  <article class="bd-article">
+                    
   <a class="reference internal image-reference" href="../../_images/Git-Logo-2Color.png"><img alt="Git Logo" src="../../_images/Git-Logo-2Color.png" style="width: 400px;" /></a>
-<div class="tex2jax_ignore mathjax_ignore section" id="github-workflows">
-<h1>GitHub Workflows<a class="headerlink" href="#github-workflows" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="github-workflows">
+<h1>GitHub Workflows<a class="headerlink" href="#github-workflows" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
 <p>A workflow is a series of activities or tasks that must be completed sequentially or parallel to achieve the desired outcome. Here we outline two different GitHub workflows that take you through the steps leading up to opening a Pull Request.</p>
-<div class="section" id="overview">
-<h2>Overview:<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<section id="overview">
+<h2>Overview:<a class="headerlink" href="#overview" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <ol class="arabic simple">
 <li><p>GitHub workflows overview</p></li>
 <li><p>Git Feature Branch Workflow</p></li>
 <li><p>Forking workflow</p></li>
 </ol>
-</div>
-<div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<table class="colwidths-auto table">
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Concepts</p></th>
 <th class="head"><p>Importance</p></th>
@@ -817,10 +545,10 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 <ul class="simple">
 <li><p><strong>Time to learn</strong>: 60 minutes</p></li>
 </ul>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="id1">
-<h2>GitHub workflows<a class="headerlink" href="#id1" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<section id="id1">
+<h2>GitHub workflows<a class="headerlink" href="#id1" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>GitHub, together with Git, are powerful tools for managing and
 collaborating on all kinds of digital assets, such as software,
 documentation, and even manuscripts for research papers. Like other
@@ -853,9 +581,9 @@ which the contributor is not authorized (i.e. does not have write
 access) to make changes to the destination repository. We briefly
 describe both workflows below, and include the steps necessary to
 make a PR on each.</p>
-</div>
-<div class="section" id="git-feature-branch-workflow">
-<h2>Git Feature Branch Workflow<a class="headerlink" href="#git-feature-branch-workflow" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+<section id="git-feature-branch-workflow">
+<h2>Git Feature Branch Workflow<a class="headerlink" href="#git-feature-branch-workflow" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>The <strong>Git Feature Branch Workflow</strong> is one of the simplest and oldest
 collaborative workflows that is used for small team projects. The
 key idea behind this workflow, which is also common to the <strong>Forking
@@ -873,8 +601,8 @@ available and in working order.</p>
 <p class="admonition-title">Note</p>
 <p>Avoiding making edits directly on the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch is considered best practice for most workflows and projects!</p>
 </div>
-<div class="section" id="working-with-the-git-feature-branch-workflow">
-<h3>Working with the Git Feature Branch Workflow<a class="headerlink" href="#working-with-the-git-feature-branch-workflow" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<section id="working-with-the-git-feature-branch-workflow">
+<h3>Working with the Git Feature Branch Workflow<a class="headerlink" href="#working-with-the-git-feature-branch-workflow" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>This model assumes a single, remote GitHub repository with a branch
 named <code class="docutils literal notranslate"><span class="pre">main</span></code>, that contains the official version of all of the digital
 assets, along with a history of all of the changes made. When a
@@ -903,8 +631,8 @@ made by the contributor in their local repository, committed, and
 then pushed to the remote using the same processes they used with
 the initial push. Once reviewers are satisfied with the changes, a
 project maintainer can merge the feature branch with <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p>
-<div class="section" id="cloning-the-remote-repository">
-<h4>Cloning the remote repository<a class="headerlink" href="#cloning-the-remote-repository" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+<section id="cloning-the-remote-repository">
+<h4>Cloning the remote repository<a class="headerlink" href="#cloning-the-remote-repository" title="Link to this heading"><i class="fas fa-link"></i></a></h4>
 <p>If you don’t have a local copy of the remote repository, you’ll want
 to create one by <a class="reference internal" href="github-cloning-forking.html"><span class="doc std std-doc">cloning the
 remote</span></a>
@@ -927,9 +655,9 @@ and click on the <code class="docutils literal notranslate"><span class="pre">Co
 <p>Note, we did not specify a <code class="docutils literal notranslate"><span class="pre">local-directory_name</span></code> here, so git will
 use the <code class="docutils literal notranslate"><span class="pre">base</span> <span class="pre">name</span></code> of the <code class="docutils literal notranslate"><span class="pre">repository_url</span></code>, “github-sandbox” as
 the local directory.</p>
-</div>
-<div class="section" id="start-with-the-main-branch">
-<h4>Start with the main branch<a class="headerlink" href="#start-with-the-main-branch" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+</section>
+<section id="start-with-the-main-branch">
+<h4>Start with the main branch<a class="headerlink" href="#start-with-the-main-branch" title="Link to this heading"><i class="fas fa-link"></i></a></h4>
 <p>Continuing with our example above, make sure you are on the main
 branch and that it is up to date with the remote repository main:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">github</span><span class="o">-</span><span class="n">sandbox</span>
@@ -942,10 +670,10 @@ branch and that it is up to date with the remote repository main:</p>
 <span class="n">Already</span> <span class="n">up</span> <span class="n">to</span> <span class="n">date</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>Remember you can read more about <span class="xref myst">GitHub branches</span> in our previous chapter.</p>
-</div>
-<div class="section" id="create-a-new-branch">
-<h4>Create a new branch<a class="headerlink" href="#create-a-new-branch" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+<p>Remember you can read more about <a class="reference internal" href="#github-branches"><span class="xref myst">GitHub branches</span></a> in our previous chapter.</p>
+</section>
+<section id="create-a-new-branch">
+<h4>Create a new branch<a class="headerlink" href="#create-a-new-branch" title="Link to this heading"><i class="fas fa-link"></i></a></h4>
 <p>Create a separate branch for every new capability you work on:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">feature</span>
 </pre></div>
@@ -957,9 +685,9 @@ not in <code class="docutils literal notranslate"><span class="pre">main</span><
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Switched</span> <span class="n">to</span> <span class="n">a</span> <span class="n">new</span> <span class="n">branch</span> <span class="s1">&#39;my-new-feature&#39;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="make-changes-and-commit">
-<h4>Make changes and commit<a class="headerlink" href="#make-changes-and-commit" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+</section>
+<section id="make-changes-and-commit">
+<h4>Make changes and commit<a class="headerlink" href="#make-changes-and-commit" title="Link to this heading"><i class="fas fa-link"></i></a></h4>
 <p>Next, we’ll make changes and commit them to the <code class="docutils literal notranslate"><span class="pre">my-new-feature</span> <span class="pre">branch</span></code> in
 the local git repository.</p>
 <p>Use your favorite editor to edit the file “sample.py”. Add the line:</p>
@@ -1006,9 +734,9 @@ repository:</p>
  1 file changed, 1 insertion(+)
 </pre></div>
 </div>
-</div>
-<div class="section" id="push-the-feature-branch-to-the-remote-repository">
-<h4>Push the feature branch to the remote repository<a class="headerlink" href="#push-the-feature-branch-to-the-remote-repository" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+</section>
+<section id="push-the-feature-branch-to-the-remote-repository">
+<h4>Push the feature branch to the remote repository<a class="headerlink" href="#push-the-feature-branch-to-the-remote-repository" title="Link to this heading"><i class="fas fa-link"></i></a></h4>
 <p>After running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> your changes have been captured in your
 local repository. But most likely only you can see them, and if
 your local file system fails your changes may be lost. To make your
@@ -1042,9 +770,9 @@ to the remote you can simply do:</p>
 is a simple solution: create a GitHub repository owned by you. The
 GitHub Quickstart guide provides an excellent <a class="reference external" href="https://docs.github.com/en/get-started/quickstart/create-a-repo">tutorial</a> on how to
 do this.</p>
-</div>
-<div class="section" id="making-a-pull-request">
-<h4>Making a Pull Request<a class="headerlink" href="#making-a-pull-request" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+</section>
+<section id="making-a-pull-request">
+<h4>Making a Pull Request<a class="headerlink" href="#making-a-pull-request" title="Link to this heading"><i class="fas fa-link"></i></a></h4>
 <p>Finally, after cloning a remote repository, creating a feature
 branch, making your changes, committing them to your local repository,
 and pushing your commits back to the remote repository, you are now
@@ -1064,9 +792,9 @@ navigating to your repo do the following:</p>
 <p>That’s it! You’re done! Sit back and wait for comments from reviewers.
 If changes are requested, simply repeat the steps above. Once your
 PR is merged you’ll receive notification from GitHub.</p>
-</div>
-<div class="section" id="safety-tip-on-synchronization">
-<h4>Safety tip on synchronization<a class="headerlink" href="#safety-tip-on-synchronization" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
+</section>
+<section id="safety-tip-on-synchronization">
+<h4>Safety tip on synchronization<a class="headerlink" href="#safety-tip-on-synchronization" title="Link to this heading"><i class="fas fa-link"></i></a></h4>
 <p>Over time your local repository will diverge from the remote. Before
 starting on a new feature, or if the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch on remote may have
 been updated while you were working on <code class="docutils literal notranslate"><span class="pre">my-new-feature</span></code>, it is a good
@@ -1079,11 +807,11 @@ repository, and then do:</p>
 <span class="n">git</span> <span class="n">merge</span> <span class="n">main</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="forking-workflow">
-<h2>Forking Workflow<a class="headerlink" href="#forking-workflow" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+</section>
+</section>
+<section id="forking-workflow">
+<h2>Forking Workflow<a class="headerlink" href="#forking-workflow" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>The <strong>Git Feature Branch Workflow</strong> described above, along with the
 steps needed to submit a PR, work when you have write access to the
 remote repository. But as we saw, if you don’t have write access
@@ -1115,8 +843,8 @@ a PR when using the <strong>Forking Workflow</strong> is identical to that of th
 <p>Note that steps 2 through 5 are identical to steps 1 through 4 for
 the <strong>Git Feature Branch Workflow</strong>. Hence, here we only discuss the
 first step, and last step.</p>
-<div class="section" id="forking-the-upstream-repository">
-<h3>Forking the upstream repository<a class="headerlink" href="#forking-the-upstream-repository" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<section id="forking-the-upstream-repository">
+<h3>Forking the upstream repository<a class="headerlink" href="#forking-the-upstream-repository" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>GitHub makes it really easy to fork a remote repository. Simply
 navigate your web browser to the upstream repository that you want
 to fork, and click on Fork. GitHub will create a clone of the
@@ -1126,16 +854,16 @@ forked, personal repository. The personal repository is owned by
 you. Any changes made here will not impact the upstream repository
 until you are ready to submit a PR. Let’s try it. Follow
 the steps under Forking a repository <a class="reference internal" href="github-cloning-forking.html"><span class="doc std std-doc">here</span></a>.</p>
-</div>
-<div class="section" id="clone-branch-change-commit-push">
-<h3>Clone, branch, change, commit, push<a class="headerlink" href="#clone-branch-change-commit-push" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="clone-branch-change-commit-push">
+<h3>Clone, branch, change, commit, push<a class="headerlink" href="#clone-branch-change-commit-push" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>The next steps are the same as described above for the <strong>Git Feature
 Branch Workflow</strong>. Clone a local copy of the newly created remote,
 personal repository, create a feature branch, make your changes,
 commit your changes, and push the new branch with your commits to your personal repository.</p>
-</div>
-<div class="section" id="id2">
-<h3>Making a Pull Request<a class="headerlink" href="#id2" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="id2">
+<h3>Making a Pull Request<a class="headerlink" href="#id2" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>Once the new feature branch has been pushed to the contributor’s
 personal repository, a PR can be created that asks the maintainers
 of the upstream repository to merge the contents of the feature
@@ -1154,9 +882,9 @@ performed on the upstream remote:</p>
 <li><p>A PR window should open up. Provide a descriptive title, and any helpful comments that you want to communicate with the reviewers</p></li>
 <li><p>Click on “Create Pull Request” in the PR window.</p></li>
 </ol>
-</div>
-<div class="section" id="id3">
-<h3>Safety tip on synchronization<a class="headerlink" href="#id3" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</section>
+<section id="id3">
+<h3>Safety tip on synchronization<a class="headerlink" href="#id3" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>Just like with the <strong>Git Feature Branch Workflow</strong> model, over time
 your local repository will diverge from the remote(s). Before
 starting on a new feature, or if the main branch on remote may have
@@ -1192,11 +920,11 @@ local repository with the upstream remote by running the following:</p>
 <span class="n">git</span> <span class="n">merge</span> <span class="n">upstream</span><span class="o">/</span><span class="n">main</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p>The steps that lead up to
 the PR depend your GitHub Workflow.</p></li>
@@ -1206,20 +934,20 @@ where everyone has write access to the GitHub repository. The latter
 is commonly used when a developer wishes to contribute to a public GitHub
 project for which they do not have write access to the repository.</p></li>
 </ul>
-<div class="section" id="whats-next">
-<h3>What’s Next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<section id="whats-next">
+<h3>What’s Next?<a class="headerlink" href="#whats-next" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>In the next lesson we will put the <strong>Forking Workflow</strong> to work and show you
 how to use it to <a class="reference internal" href="contribute-to-pythia.html"><span class="doc std std-doc">contribute to Project Pythia</span></a>.</p>
-</div>
-</div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <ol class="arabic simple">
 <li><p>Atlassian’s tutorial on <a class="reference external" href="https://www.atlassian.com/git/tutorials/comparing-workflows">workflows</a></p></li>
 <li><p>GitHub’s <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests">Collaborating with Pull Requests</a></p></li>
 </ol>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1241,43 +969,325 @@ how to use it to <a class="reference internal" href="contribute-to-pythia.html">
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
-              <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="review-pr.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Reviewing Pull Requests</p>
-        </div>
+                  </article>
+
+                
+                
+
+                
+                
+                  <footer class="prev-next-footer">
+                    
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="review-pr.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Reviewing Pull Requests</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="contribute-to-pythia.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="contribute-to-pythia.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Contribute to Project Pythia via GitHub</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </div>
-          </div>
-        </main>
+                  </footer>
+                
+              </div>
 
-      </div>
+              
+              
+                
+                  <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">GitHub workflows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-feature-branch-workflow">Git Feature Branch Workflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-the-git-feature-branch-workflow">Working with the Git Feature Branch Workflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cloning-the-remote-repository">Cloning the remote repository</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#start-with-the-main-branch">Start with the main branch</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-branch">Create a new branch</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#make-changes-and-commit">Make changes and commit</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#push-the-feature-branch-to-the-remote-repository">Push the feature branch to the remote repository</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-pull-request">Making a Pull Request</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#safety-tip-on-synchronization">Safety tip on synchronization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forking-workflow">Forking Workflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forking-the-upstream-repository">Forking the upstream repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-branch-change-commit-push">Clone, branch, change, commit, push</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Making a Pull Request</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Safety tip on synchronization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#whats-next">What’s Next?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+                
+              
+
+
+                
+                <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-
-<footer class="footer">
-  <div class="container-fluid m-0 p-0">
   
-    <div class="footer-item">
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/pythia-foundations" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/pythia-foundations/edit/main/foundations/github/github-workflows.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/pythia-foundations/issues/new?title=Issue%20on%20page%20%2Ffoundations/github/github-workflows.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/foundations/github/github-workflows.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+            </div>
+
+            <footer class="bd-footer-content">
+              
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
     
+<p class="component-author">
+By the <a href="https://projectpythia.org/">Project Pythia</a> Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 29 March 2024.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+            </footer>
+
+        </main>
+    </div>
+  </div>
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+     
+  
+  
+  
+  
+    <div class="footer-items__start">
+      <div class="container-fluid m-0 p-0">
+      
+        <div class="footer-item">
   <div class="container-fluid footer-logos">
     <div class="container-xl">
       <div class="row d-flex flex-wrap align-items-center">
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="NCAR" src="../../_images/NCAR-contemp-logo-blue.svg" style="width: 100%">
+          <img alt="NCAR" src="../../_images/NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
         </div>
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
           <img alt="Unidata" src="../../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
@@ -1287,11 +1297,9 @@ how to use it to <a class="reference internal" href="contribute-to-pythia.html">
         </div>
       </div>
     </div>
-  </div>
-    </div>
-  
-    <div class="footer-item">
-    
+  </div></div>
+      
+        <div class="footer-item">
 <div class="container-fluid footer-menu pt-4">
   <div class="container">
     <div class="row justify-content-center">
@@ -1361,27 +1369,23 @@ how to use it to <a class="reference internal" href="contribute-to-pythia.html">
       </div>
     </div>
   </div>
-</div>
-    </div>
-  
-    <div class="footer-item">
-      <div class="container-fluid footer-info">
+</div></div>
+      
+        <div class="footer-item">  <div class="container-fluid footer-info">
     <div class="container-xl">
       <div class="d-flex justify-content-center">
         <p class="py-1 m-0">
-            &copy;&nbsp;2022.
+            &copy;&nbsp;2024.
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 9 January 2024.
+          Last updated on 29 March 2024.
         </p>
       </div>
     </div>
-  </div>
-    </div>
-  
-    <div class="footer-item">
-    <div class="container-fluid footer-extra">
+  </div></div>
+      
+        <div class="footer-item"><div class="container-fluid footer-extra">
   <div class="container">
     <center>
       Theme by <a href="https://projectpythia.org">Project Pythia</a>. All code
@@ -1406,10 +1410,12 @@ how to use it to <a class="reference internal" href="contribute-to-pythia.html">
       </p>
     </div>
   </div>
-</div>
+</div></div>
+      
+      </div>
     </div>
   
-  </div>
-</footer>
+
+  </footer>
   </body>
 </html>
