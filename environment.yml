@@ -9,7 +9,6 @@ dependencies:
   - nc-time-axis
   - netcdf4
   - numpy
-  - pip
   - pre-commit
   - dask
   - pyproj
@@ -21,5 +20,4 @@ dependencies:
   - python-graphviz
   - graphviz
   - setuptools>=69.0.3
-  - pip:
-    - sphinx-pythia-theme
+  - sphinx-pythia-theme
