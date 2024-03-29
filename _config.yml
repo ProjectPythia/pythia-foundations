@@ -140,7 +140,7 @@ sphinx:
       navbar_end:
         - navbar-icon-links
       footer_logos:
-        NCAR: images/logos/NSF-NCAR_Lockup-UCAR-Dark_102523.png
+        NCAR: images/logos/NSF-NCAR_Lockup-UCAR-Dark_102523.svg
         Unidata: images/logos/Unidata_logo_horizontal_1200x300.svg
         UAlbany: images/logos/UAlbany-A2-logo-purple-gold.svg
       footer_start:
