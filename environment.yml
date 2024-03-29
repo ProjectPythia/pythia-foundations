@@ -22,4 +22,4 @@ dependencies:
   - graphviz
   - setuptools>=69.0.3
   - pip:
-      - git+https://github.com/ProjectPythia/sphinx-pythia-theme.git@theme-update
+    - sphinx-pythia-theme
