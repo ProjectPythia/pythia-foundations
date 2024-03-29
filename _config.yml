@@ -5,7 +5,7 @@ title: Pythia Foundations
 author: the <a href="https://projectpythia.org/">Project Pythia</a> Community
 logo: images/logos/pythia_logo-white-rtext.svg
 email: projectpythia@ucar.edu
-copyright: '2022'
+copyright: '2024'
 
 exclude_patterns:
   - README.md
@@ -98,13 +98,15 @@ sphinx:
     html_theme: sphinx_pythia_theme
     html_permalinks_icon: '<i class="fas fa-link"></i>'
     html_theme_options:
-      google_analytics_id: 'G-G57FLM9M46'
+      analytics:
+        google_analytics_id: 'G-G57FLM9M46'
       home_page_in_toc: true
       repository_url: https://github.com/ProjectPythia/pythia-foundations # Online location of your book
       repository_branch: main # Which branch of the repository should be used when creating links (optional)
       use_issues_button: true
       use_repository_button: true
       use_edit_page_button: true
+      use_fullscreen_button: true
       github_url: https://github.com/ProjectPythia
       twitter_url: https://twitter.com/project_pythia
       icon_links:
@@ -118,7 +120,10 @@ sphinx:
       extra_navbar: |
         We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
         or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
-      logo_link: https://projectpythia.org
+      logo:
+        link: https://projectpythia.org
+      navbar_start:
+        - navbar-logo
       navbar_links:
         - name: Home
           url: https://projectpythia.org
@@ -132,7 +137,14 @@ sphinx:
           url: https://projectpythia.org/index.html#join-us
         - name: Blog
           url: https://projectpythia.org/blog.html
+      navbar_end:
+        - navbar-icon-links
       footer_logos:
-        NCAR: images/logos/NCAR-contemp-logo-blue.svg
+        NCAR: images/logos/NSF-NCAR_Lockup-UCAR-Dark_102523.svg
         Unidata: images/logos/Unidata_logo_horizontal_1200x300.svg
         UAlbany: images/logos/UAlbany-A2-logo-purple-gold.svg
+      footer_start:
+        - footer-logos
+        - footer-menu
+        - footer-info
+        - footer-extra
