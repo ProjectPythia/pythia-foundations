@@ -110,7 +110,7 @@ conda env list
 conda env remove --name sample_environment
 ```
 
-You can find lots more information in the [Conda documentation](https://docs.conda.io/en/latest/) or this handy [Conda cheat sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf).
+You can find lots more information in the [Conda documentation](https://docs.conda.io/en/latest/) or this handy [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf).
 
 If you're not a command line user, the Anaconda navigator offers GUI functionality for selecting environments and installing packages.
 
@@ -129,6 +129,6 @@ Conda is a package and environment management system that allows you to quickly 
 
 - [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
 - [Conda documentation](https://docs.conda.io/en/latest/)
-- [Conda cheat sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
+- [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
 - [Anaconda](https://docs.anaconda.com/anaconda/install/)
 - [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
