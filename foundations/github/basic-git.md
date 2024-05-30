@@ -54,7 +54,10 @@ That's the first thing to understand. GitHub is a web-based platform for hosting
 
 #### A little history and nomenclature
 
-Git has been around [since the mid-2000s](https://en.wikipedia.org/wiki/Git). It was originally written by Linus Torvalds specifically for use in development of the Linux kernel. Git is [FOSS](https://foundations.projectpythia.org/foundations/github/what-is-github.html#free-and-open-source-software-foss) and comes pre-installed on many Linux and Mac OS systems.
+Git has been around [since the mid-2000s](https://en.wikipedia.org/wiki/Git). It was originally written by Linus Torvalds specifically for use in development of the Linux kernel. Git is [FOSS](https://foundations.projectpythia.org/foundations/github/what-is-github.html#free-and-open-source-software-foss) and comes pre-installed on many Linux and Mac OS systems. 
+:::{note}
+Don't have git on your system already? Check out these [installation guides from the Carpentries](https://swcarpentry.github.io/git-novice/#installing-git).
+:::
 
 There are many other VCSs out there. A few that you might encounter in scientific codebases include [Subversion](https://subversion.apache.org), [Mercurial](https://www.mercurial-scm.org), and [CVS](http://cvs.nongnu.org). However, git is overwhelmingly the VCS of choice for open-source projects in the Scientific Python ecosystem these days (as well as among software developers more generally).
 
