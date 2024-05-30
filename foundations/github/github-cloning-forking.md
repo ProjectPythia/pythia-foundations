@@ -110,9 +110,8 @@ Receiving objects: 100% (15/15), 7.41 KiB | 2.47 MiB/s, done.
 Resolving deltas: 100% (3/3), done.
 ```
 
-```{admonition} Windows users
-:class: info
-While `git` is typically part of a Linux or Mac OS command-line shell, similar functionality must be installed if you are running Windows. Download and install the [Git for Windows](https://gitforwindows.org/) package.
+```{note}
+Don't have git on your system already? Check out [these installation guides from the Carpentries](https://carpentries.github.io/workshop-template/install_instructions/#git).
 ```
 
 Now, you can `cd` into the `github-sandbox` directory which has been created and populated with the exact contents of the **origin**'s repository at the time you cloned it. If you have a Python installation, you could then type
