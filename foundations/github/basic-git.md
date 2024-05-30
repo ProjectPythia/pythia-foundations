@@ -54,7 +54,7 @@ That's the first thing to understand. GitHub is a web-based platform for hosting
 
 #### A little history and nomenclature
 
-Git has been around [since the mid-2000s](https://en.wikipedia.org/wiki/Git). It was originally written by Linus Torvalds specifically for use in development of the Linux kernel. Git is [FOSS](https://foundations.projectpythia.org/foundations/github/what-is-github.html#free-and-open-source-software-foss) and comes pre-installed on many Linux and Mac OS systems. 
+Git has been around [since the mid-2000s](https://en.wikipedia.org/wiki/Git). It was originally written by Linus Torvalds specifically for use in development of the Linux kernel. Git is [FOSS](https://foundations.projectpythia.org/foundations/github/what-is-github.html#free-and-open-source-software-foss) and comes pre-installed on many Linux and Mac OS systems.
 :::{note}
 Don't have git on your system already? Check out these [installation guides from the Carpentries](https://swcarpentry.github.io/git-novice/#installing-git).
 :::
