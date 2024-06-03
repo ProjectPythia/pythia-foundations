@@ -410,10 +410,34 @@ The `git diff` command is a powerful comparison tool (and maybe your second new 
 
 - `git status`: see what branch we're on and what state our repo is in.
 - `git checkout`: switch between branches (use the `-b` flag to create a new branch and check it out)
+
+```bash
+    git checkout -b new-branch-name
+    git checkout <unique-code-of-commit>
+    git checkout branch-name
+```
+
 - `git diff`: compare files between current version and last commit (default), between two commits, or between two branches.
+
+```bash
+    git diff commit-one commit-two
+    git diff branch-one..branch-two
+```
+
 - `git add`: stage a file for a commit.
+
+```bash
+    git add file-name
+```
+
 - `git commit`: create a new commit with the staged files.
+
+```bash
+    git commit -m 'message/comment between quotation marks'
+```
+
 - `git log`: see the commit history of our branch.
+  - Press `Q` to exit
 
 ### Some other git commands you'll want to know
 
