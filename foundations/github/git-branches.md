@@ -151,6 +151,7 @@ touch hello.py
     <code>touch</code> is not a Windows native command. You can use <code>type nul > file-name.py</code> to create an empty file instead
 </div>
 
+
 ![Git Status](../../images/6-samplechange.png)
 
 You can check that this file has been created by comparing an `ls` before and after this command, and also with a `git status` that will show your new untracked file.
@@ -281,15 +282,17 @@ This same concept applies to work in a team setting. Multiple authors will have 
 All in all your Git Branching workflow should resemble this flow:
 ![gitworkflow](../../images/gitworkflow.gif)
 
-1. Forking the upstream repository
-1. Creating a local clone of your upstream fork
-1. Creating a new branch
-1. Switching branches
-1. Making a commit
-1. Setting up a remote branch
-1. Merging branches via a PR
-1. Deleting branches
-1. Pulling from upstream
+1. Fork the upstream repository 
+1. Create a local clone of your upstream fork
+1. Create and switch to a new branch in local copy
+1. Make changes
+1. Add and commit changes in branch
+1. Push commits to fork (Set an upstream branch only for first push)
+1. Repeat last three steps as necessary
+1. Merge via Pull Request
+1. Delete branch from clone and fork
+1. Pull upstream changes to fork and clone
+
 
 ---
 
