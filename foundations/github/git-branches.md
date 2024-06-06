@@ -146,6 +146,11 @@ Before we push this branch upstream, let's make some sample changes (like C3 or 
 touch hello.py
 ```
 
+<div class="admonition alert alert-info">
+    <p class="admonition-title" style="font-weight:bold">Note</p>
+    <code>touch</code> is not a Windows native command. You can use <code>type nul > file-name.py</code> to create an empty file instead
+</div>
+
 ![Git Status](../../images/6-samplechange.png)
 
 You can check that this file has been created by comparing an `ls` before and after this command, and also with a `git status` that will show your new untracked file.
@@ -269,7 +274,7 @@ git pull
 
 `git pull` is a combination of `git fetch` and `git merge`. That is it updates the remote tracking branches (`git fetch`) AND updates your current branch with any new commits on the remote tracking branch (`git merge`).
 
-This same concept appplies to work in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository via Pull Requests. It is important for each author to do regular `git pulls` to stay up to date with each other's contributions.
+This same concept applies to work in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository via Pull Requests. It is important for each author to do regular `git pulls` to stay up to date with each other's contributions.
 
 ## Complete Workflow
 
