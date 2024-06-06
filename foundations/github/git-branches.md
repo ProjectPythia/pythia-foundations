@@ -188,7 +188,7 @@ Thankfully, Git provided this command in the previous error message. If you clon
 
 We can see that this worked by doing a `git branch -a`
 
-Notice the new branch called `remotes/origin/newbranch`. And when you do a `git status` you'll see that we are up to date with this new remote branch.
+Notice the new branch called `remotes/origin/branchA`. And when you do a `git status` you'll see that we are up to date with this new remote branch.
 
 ![Git Commit Status](../../images/7-github-branchandstatus.png)
 
