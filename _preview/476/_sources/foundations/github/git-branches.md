@@ -146,10 +146,10 @@ Before we push this branch upstream, let's make some sample changes (like C3 or 
 touch hello.py
 ```
 
-<div class="admonition alert alert-info">
-    <p class="admonition-title" style="font-weight:bold">Note</p>
-    <code>touch</code> is not a Windows native command. You can use <code>type nul > file-name.py</code> to create an empty file instead
-</div>
+```{admonition} Note
+:class: info
+`touch` is not a Windows native command. You can use `type nul > file-name.py` to create an empty file instead.
+```
 
 ![Git Status](../../images/6-samplechange.png)
 
