@@ -281,7 +281,7 @@ This same concept applies to work in a team setting. Multiple authors will have 
 All in all your Git Branching workflow should resemble this flow:
 ![gitworkflow](../../images/gitworkflow.gif)
 
-1. Fork the upstream repository 
+1. Fork the upstream repository
 1. Create a local clone of your upstream fork
 1. Create and switch to a new branch in local copy
 1. Make changes
@@ -291,7 +291,6 @@ All in all your Git Branching workflow should resemble this flow:
 1. Merge via Pull Request
 1. Delete branch from clone and fork
 1. Pull upstream changes to fork and clone
-
 
 ---
 
