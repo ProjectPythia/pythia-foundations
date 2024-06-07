@@ -290,7 +290,7 @@ All in all your Git Branching workflow should resemble this flow:
 1. Repeat last three steps as necessary
 1. Merge into upstream main branch via Pull Request
 1. Delete branch from clone and fork
-1. Pull upstream changes to fork and clone
+1. Pull upstream changes to main branch of fork and clone
 
 ---
 
