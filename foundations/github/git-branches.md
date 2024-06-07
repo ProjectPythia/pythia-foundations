@@ -148,7 +148,7 @@ touch hello.py
 
 ```{admonition} Note
 :class: info
-`touch` is not a Windows native command. You can use `type nul > file-name.py` to create an empty file instead.
+`touch` is not a Windows native command. You can use `type nul > hello.py` to create an empty file instead.
 ```
 
 ![Git Status](../../images/6-samplechange.png)
