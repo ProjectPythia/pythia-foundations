@@ -628,7 +628,7 @@ The above flowchart demonstrates pushing two new local commits (C3 and C4) to th
 </div>
 <div class="info admonition">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">touch</span></code> is not a Windows native command. You can use <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">nul</span> <span class="pre">&gt;</span> <span class="pre">file-name.py</span></code> to create an empty file instead.</p>
+<p><code class="docutils literal notranslate"><span class="pre">touch</span></code> is not a Windows native command. You can use <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">nul</span> <span class="pre">&gt;</span> <span class="pre">hello.py</span></code> to create an empty file instead.</p>
 </div>
 <p><img alt="Git Status" src="../../_images/6-samplechange.png" /></p>
 <p>You can check that this file has been created by comparing an <code class="docutils literal notranslate"><span class="pre">ls</span></code> before and after this command, and also with a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> that will show your new untracked file.</p>
@@ -727,9 +727,9 @@ The above flowchart demonstrates pulling in the upstream changes from Upstream M
 <li><p>Add and commit changes in branch</p></li>
 <li><p>Push commits to fork (Set an upstream branch only for first push)</p></li>
 <li><p>Repeat last three steps as necessary</p></li>
-<li><p>Merge via Pull Request</p></li>
+<li><p>Merge into upstream main branch via Pull Request</p></li>
 <li><p>Delete branch from clone and fork</p></li>
-<li><p>Pull upstream changes to fork and clone</p></li>
+<li><p>Pull upstream changes to main branch of fork and clone</p></li>
 </ol>
 </section>
 <hr class="docutils" />

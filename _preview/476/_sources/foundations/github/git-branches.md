@@ -148,7 +148,7 @@ touch hello.py
 
 ```{admonition} Note
 :class: info
-`touch` is not a Windows native command. You can use `type nul > file-name.py` to create an empty file instead.
+`touch` is not a Windows native command. You can use `type nul > hello.py` to create an empty file instead.
 ```
 
 ![Git Status](../../images/6-samplechange.png)
@@ -288,9 +288,9 @@ All in all your Git Branching workflow should resemble this flow:
 1. Add and commit changes in branch
 1. Push commits to fork (Set an upstream branch only for first push)
 1. Repeat last three steps as necessary
-1. Merge via Pull Request
+1. Merge into upstream main branch via Pull Request
 1. Delete branch from clone and fork
-1. Pull upstream changes to fork and clone
+1. Pull upstream changes to main branch of fork and clone
 
 ---
 
