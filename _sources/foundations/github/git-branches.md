@@ -146,6 +146,11 @@ Before we push this branch upstream, let's make some sample changes (like C3 or 
 touch hello.py
 ```
 
+```{admonition} Note
+:class: info
+`touch` is not a Windows native command. You can use `type nul > hello.py` to create an empty file instead.
+```
+
 ![Git Status](../../images/6-samplechange.png)
 
 You can check that this file has been created by comparing an `ls` before and after this command, and also with a `git status` that will show your new untracked file.
@@ -182,7 +187,7 @@ Thankfully, Git provided this command in the previous error message. If you clon
 
 We can see that this worked by doing a `git branch -a`
 
-Notice the new branch called `remotes/origin/newbranch`. And when you do a `git status` you'll see that we are up to date with this new remote branch.
+Notice the new branch called `remotes/origin/branchA`. And when you do a `git status` you'll see that we are up to date with this new remote branch.
 
 ![Git Commit Status](../../images/7-github-branchandstatus.png)
 
@@ -269,22 +274,23 @@ git pull
 
 `git pull` is a combination of `git fetch` and `git merge`. That is it updates the remote tracking branches (`git fetch`) AND updates your current branch with any new commits on the remote tracking branch (`git merge`).
 
-This same concept appplies to work in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository via Pull Requests. It is important for each author to do regular `git pulls` to stay up to date with each other's contributions.
+This same concept applies to work in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository via Pull Requests. It is important for each author to do regular `git pulls` to stay up to date with each other's contributions.
 
 ## Complete Workflow
 
 All in all your Git Branching workflow should resemble this flow:
 ![gitworkflow](../../images/gitworkflow.gif)
 
-1. Forking the upstream repository
-1. Creating a local clone of your upstream fork
-1. Creating a new branch
-1. Switching branches
-1. Making a commit
-1. Setting up a remote branch
-1. Merging branches via a PR
-1. Deleting branches
-1. Pulling from upstream
+1. Fork the upstream repository
+1. Create a local clone of your upstream fork
+1. Create and switch to a new branch in local copy
+1. Make changes
+1. Add and commit changes in branch
+1. Push commits to fork (Set an upstream branch only for first push)
+1. Repeat last three steps as necessary
+1. Merge into upstream main branch via Pull Request
+1. Delete branch from clone and fork
+1. Pull upstream changes to main branch of fork and clone
 
 ---
 

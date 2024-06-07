@@ -79,7 +79,7 @@
     <link rel="prev" title="Basic Version Control with git" href="basic-git.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="5 June 2024"/>
+    <meta name="docbuild:last-update" content="7 June 2024"/>
   </head>
   
   
@@ -626,6 +626,10 @@ The above flowchart demonstrates pushing two new local commits (C3 and C4) to th
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span>hello.py
 </pre></div>
 </div>
+<div class="info admonition">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">touch</span></code> is not a Windows native command. You can use <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">nul</span> <span class="pre">&gt;</span> <span class="pre">hello.py</span></code> to create an empty file instead.</p>
+</div>
 <p><img alt="Git Status" src="../../_images/6-samplechange.png" /></p>
 <p>You can check that this file has been created by comparing an <code class="docutils literal notranslate"><span class="pre">ls</span></code> before and after this command, and also with a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> that will show your new untracked file.</p>
 <p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> your new file and check the status again.</p>
@@ -646,7 +650,7 @@ The above flowchart demonstrates pushing two new local commits (C3 and C4) to th
 <p>Thankfully, Git provided this command in the previous error message. If you cloned using HTTPS, you will be asked to enter your username and password, as described in <a class="reference external" href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub’s PAT Creation page</a>.</p>
 <p><img alt="Set Upstream" src="../../_images/6d-setupstream.png" /></p>
 <p>We can see that this worked by doing a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-a</span></code></p>
-<p>Notice the new branch called <code class="docutils literal notranslate"><span class="pre">remotes/origin/newbranch</span></code>. And when you do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> you’ll see that we are up to date with this new remote branch.</p>
+<p>Notice the new branch called <code class="docutils literal notranslate"><span class="pre">remotes/origin/branchA</span></code>. And when you do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> you’ll see that we are up to date with this new remote branch.</p>
 <p><img alt="Git Commit Status" src="../../_images/7-github-branchandstatus.png" /></p>
 <p>On future commits you will not have to repeat these steps, as your remote branch will already be established. Simply push with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> to have your remote branch reflect your future local changes.</p>
 </section>
@@ -709,22 +713,23 @@ The above flowchart demonstrates pulling in the upstream changes from Upstream M
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> is a combination of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code>. That is it updates the remote tracking branches (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code>) AND updates your current branch with any new commits on the remote tracking branch (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code>).</p>
-<p>This same concept appplies to work in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository via Pull Requests. It is important for each author to do regular <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pulls</span></code> to stay up to date with each other’s contributions.</p>
+<p>This same concept applies to work in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository via Pull Requests. It is important for each author to do regular <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pulls</span></code> to stay up to date with each other’s contributions.</p>
 </section>
 <section id="complete-workflow">
 <h2>Complete Workflow<a class="headerlink" href="#complete-workflow" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>All in all your Git Branching workflow should resemble this flow:
 <img alt="gitworkflow" src="../../_images/gitworkflow.gif" /></p>
 <ol class="arabic simple">
-<li><p>Forking the upstream repository</p></li>
-<li><p>Creating a local clone of your upstream fork</p></li>
-<li><p>Creating a new branch</p></li>
-<li><p>Switching branches</p></li>
-<li><p>Making a commit</p></li>
-<li><p>Setting up a remote branch</p></li>
-<li><p>Merging branches via a PR</p></li>
-<li><p>Deleting branches</p></li>
-<li><p>Pulling from upstream</p></li>
+<li><p>Fork the upstream repository</p></li>
+<li><p>Create a local clone of your upstream fork</p></li>
+<li><p>Create and switch to a new branch in local copy</p></li>
+<li><p>Make changes</p></li>
+<li><p>Add and commit changes in branch</p></li>
+<li><p>Push commits to fork (Set an upstream branch only for first push)</p></li>
+<li><p>Repeat last three steps as necessary</p></li>
+<li><p>Merge into upstream main branch via Pull Request</p></li>
+<li><p>Delete branch from clone and fork</p></li>
+<li><p>Pull upstream changes to main branch of fork and clone</p></li>
 </ol>
 </section>
 <hr class="docutils" />
@@ -1040,7 +1045,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 5 June 2024.
+  Last updated on 7 June 2024.
   <br/>
 </p>
   </div>
@@ -1169,7 +1174,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 5 June 2024.
+          Last updated on 7 June 2024.
         </p>
       </div>
     </div>
