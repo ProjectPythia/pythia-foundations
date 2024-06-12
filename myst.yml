@@ -1,0 +1,24 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  title: Pythia Foundations
+  github: https://github.com/projectpythia-mystmd/pythia-foundations
+  author: 
+    - Project Pythia Community
+  copyright: '2024'
+
+
+site:
+  options:
+    logo: images/logos/pythia_logo-white-rtext.svg
+  nav:
+    - title: Home
+      url: https://projectpythia.org
+    - title: Foundations
+      url: https://foundations.projectpythia.org
+    - title: Cookbooks
+      url: https://cookbooks.projectpythia.org
+    - title: Resources
+      url: https://projectpythia.org/resource-gallery.html
+    - title: Community
+      url: https://projectpythia.org/index.html#join-us
