@@ -8,3 +8,8 @@ project:
   author:
     - Project Pythia Community
   copyright: '2024'
+  abbreviations:
+    FOSS: Free and open-source software
+    VCS: Version control system
+    FTP: File transfer protocol
+    TCP: Transmission Control Protocol

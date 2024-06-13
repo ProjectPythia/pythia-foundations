@@ -4,7 +4,7 @@
 
 ## Overview
 
-Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s).
+{term}`conda` is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s).
 
 Here we will cover:
 
@@ -28,6 +28,8 @@ Here we will cover:
 A Python package is a collection of modules, which, in turn, are essentially Python scripts that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules.
 
 Package management is useful because you may want to update a package for one of your projects, but keep it at the same version in other projects to ensure that they continue to run as expected.
+
+(installing-conda)=
 
 ## Installing Conda
 
@@ -132,3 +134,18 @@ Conda is a package and environment management system that allows you to quickly 
 - [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
 - [Anaconda](https://docs.anaconda.com/anaconda/install/)
 - [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+
+## Glossary
+
+:::{glossary}
+Conda
+: Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). To install `conda`, we recommend {term}`miniconda`.
+: See [Conda documentation](https://docs.conda.io/en/latest/) and the [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/)
+
+Miniconda
+: [Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a free minimal installer for {term}`conda`. Miniconda only comes with the {term}`conda` package management system; it is a pared-down version of the full Anaconda Python distribution.
+: See @installing-conda.
+
+Python Package
+: A Python package is a collection of modules, which, in turn, are essentially Python scripts that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules. You can install Python packages with {term}`conda`.
+:::
