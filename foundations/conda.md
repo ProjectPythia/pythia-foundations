@@ -60,57 +60,59 @@ Once the environment is created, you need to _activate_ it in the current termin
 
 It is a good idea to create a new environment for every project. Because Python is open source, new versions of the tools are released frequently. Isolated environments help guarantee that your scripts use the same versions of packages and libraries to ensure they run as expected. Similarly, it is best practice to NOT modify your `base` environment.
 
+(conda-commands)=
+
 ## Useful Conda commands
 
-Some other Conda commands that you will find useful include:
+Some other {term}`Conda` commands that you will find useful include:
 
 - Activating a specific environment
 
-```
-conda activate sample_environment
-```
+  ```
+  conda activate sample_environment
+  ```
 
 - Deactivating the current environment
 
-```
-conda deactivate
-```
+  ```
+  conda deactivate
+  ```
 
 - Checking what packages/versions are installed in the current environment
 
-```
-conda list
-```
+  ```
+  conda list
+  ```
 
 - Installing a new package into the current environment
 
-```
-conda install somepackage
-```
+  ```
+  conda install somepackage
+  ```
 
 - Installing a specific version of a package into the current environment
 
-```
-conda install somepackage=0.17
-```
+  ```
+  conda install somepackage=0.17
+  ```
 
 - Updating all packages in the current environment to the latest versions
 
-```
-conda update --all
-```
+  ```
+  conda update --all
+  ```
 
 - Checking what conda environments you have
 
-```
-conda env list
-```
+  ```
+  conda env list
+  ```
 
 - Deleting an environment
 
-```
-conda env remove --name sample_environment
-```
+  ```
+  conda env remove --name sample_environment
+  ```
 
 You can find lots more information in the [Conda documentation](https://docs.conda.io/en/latest/) or this handy [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf).
 
@@ -140,7 +142,7 @@ Conda is a package and environment management system that allows you to quickly 
 :::{glossary}
 Conda
 : Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). To install `conda`, we recommend {term}`miniconda`.
-: See [Conda documentation](https://docs.conda.io/en/latest/) and the [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/)
+: See [Conda documentation](https://docs.conda.io/en/latest/) and the [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/) and @conda-commands in the context of ProjectPythia.
 
 Miniconda
 : [Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a free minimal installer for {term}`conda`. Miniconda only comes with the {term}`conda` package management system; it is a pared-down version of the full Anaconda Python distribution.
