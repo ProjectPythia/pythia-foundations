@@ -8,6 +8,8 @@ project:
   author:
     - Project Pythia Community
   copyright: '2024'
+  jupyter:
+    lite: true
   abbreviations:
     FOSS: Free and open-source software
     VCS: Version control system
