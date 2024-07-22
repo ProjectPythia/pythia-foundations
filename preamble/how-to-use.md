@@ -96,7 +96,7 @@ can be done with two commands from the terminal, one to create the
 environment and one to activate it:
 
 ```
-conda env create --force -f https://raw.githubusercontent.com/ProjectPythia/pythia-foundations/main/environment.yml
+conda env create --yes -f https://raw.githubusercontent.com/ProjectPythia/pythia-foundations/main/environment.yml
 conda activate pythia-book-dev
 ```
 
