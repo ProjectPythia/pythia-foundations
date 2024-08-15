@@ -90,7 +90,6 @@ jupyter lab —browser=chrome
     </ul>
 </div>
 
-
 ## Saving your notebook and exiting
 
 When you are done with your work, it is time to save and exit.
