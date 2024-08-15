@@ -81,6 +81,15 @@ jupyter lab —browser=chrome
 
 **Congratulations!** You have just set up your first Python environment and run your first Python code in a Jupyter notebook.
 
+<div class="admonition alert alert-info">
+    <p class="admonition-title" style="font-weight:bold">Info</p>
+    There are a few code-syntax differences between running Python in a Jupyter notebook and a script:
+    <ul>
+        <li>In a Python script, to print a variable to the terminal, you need to call <code>print([THING YOU WANT TO PRINT])</code>, whereas in Jupyter, you can simply have the last line of a code cell be <code>[THING YOU WANT TO PRINT]</code>.</li>
+        <li>Similarly with plots, in Python, you have to call <code>plt.show()</code> to display your plot, but plots are shown automatically in Jupyter.</li>
+    </ul>
+</div>
+
 ## Saving your notebook and exiting
 
 When you are done with your work, it is time to save and exit.
