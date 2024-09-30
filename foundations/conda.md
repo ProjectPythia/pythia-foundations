@@ -41,7 +41,7 @@ We recommend Miniforge for these reasons:
 
 1. It's quicker and takes up less disk space.
 2. It encourages you to install only the packages you need in reproducible isolated environments for specific projects. This is generally a more robust way to work with open source tools.
-3. It uses `conda-forge` as the default channel for packages. 
+3. It uses `conda-forge` as the default channel for packages.
 
 Once you have `conda` via the Miniconda installer, the next step is to create an environment and install packages.
 
