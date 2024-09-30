@@ -24,7 +24,7 @@ You'd like to learn to run Python in a Jupyter session. Here we will cover:
 
 To run a Jupyter session, you will need to install some necessary packages into your Conda environment.
 
-Install `miniconda` by following the [instructions for your machine](https://docs.conda.io/en/latest/miniconda.html).
+Install `miniforge` by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
 
 [Learn more about Conda here](conda.md)
 
@@ -41,11 +41,7 @@ $ conda activate pythia_foundations_env
 $ jupyter lab
 ```
 
-Or you can install the full [Anaconda](https://www.anaconda.com/products/distribution), and select **LAUNCH** under the Jupyter panel in the GUI.
-
-![Anaconda Navigator](../images/Anaconda.png)
-
-In both methods, a new window should open automatically in your default browser. You can change the browser when launching from the terminal with (for example):
+A new window should open automatically in your default browser. You can change the browser when launching from the terminal with (for example):
 
 ```
 jupyter lab —browser=chrome
@@ -121,4 +117,5 @@ Jupyter notebooks are a free, open-source, interactive tool running inside a web
 
 ## Resources and References
 
-- [Anaconda](https://www.anaconda.com/products/distribution)
+- [conda-forge](https://conda-forge.org)
+- [Miniforge Releases](https://conda-forge.org/miniforge/)

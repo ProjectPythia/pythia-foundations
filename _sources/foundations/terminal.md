@@ -21,7 +21,7 @@ You'd like to learn to run Python in the terminal. Here we will cover:
 
 ## Installing Python in the Terminal
 
-If you are running Python in the terminal, it is best to install Miniconda. You can do that by following the [instructions for your machine](https://docs.conda.io/en/latest/miniconda.html).
+If you are running Python in the terminal, it is best to install Miniforge. You can do that by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
 
 [Learn more about Conda here](conda.md)
 
