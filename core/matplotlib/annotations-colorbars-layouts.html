@@ -739,7 +739,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/bb292e78306b54405c27ce1ab047e2a178e81db3b349c7504d3f6d974fc14aa8.png" src="../../_images/bb292e78306b54405c27ce1ab047e2a178e81db3b349c7504d3f6d974fc14aa8.png" />
+<img alt="../../_images/0f00f86a64c2541f62e2cfe65a324e4ecf2fb631e4578f22f9e19c217e28fcc3.png" src="../../_images/0f00f86a64c2541f62e2cfe65a324e4ecf2fb631e4578f22f9e19c217e28fcc3.png" />
 </div>
 </div>
 <p>We can change which colormap to use by setting the keyword argument <code class="docutils literal notranslate"><span class="pre">cmap</span> <span class="pre">=</span> <span class="pre">'colormap_name'</span></code> in the plotting function call.  This sets the colormap not only for the plot, but for the colorbar as well.  In this case, we use the <code class="docutils literal notranslate"><span class="pre">magma</span></code> colormap:</p>
@@ -754,7 +754,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c63b78685e55324601c5a9dfb9d8094b92dec3f37690b4210a92cf35858d3f3e.png" src="../../_images/c63b78685e55324601c5a9dfb9d8094b92dec3f37690b4210a92cf35858d3f3e.png" />
+<img alt="../../_images/76504b3ac59456e4a87daebc4532c0a850e50dd3d6f35f506a4064bad3491287.png" src="../../_images/76504b3ac59456e4a87daebc4532c0a850e50dd3d6f35f506a4064bad3491287.png" />
 </div>
 </div>
 </section>
@@ -773,10 +773,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f06194abb10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f97ac628e10&gt;
 </pre></div>
 </div>
-<img alt="../../_images/dae67d08b16916dd8813f6a7b9742279ddfd9ca3eb3738846eb4747c09e4cd6e.png" src="../../_images/dae67d08b16916dd8813f6a7b9742279ddfd9ca3eb3738846eb4747c09e4cd6e.png" />
+<img alt="../../_images/4d0d35f769f429a5ea91c9aa45e629f43f1f4f408382c9da5a98239dc37805a2.png" src="../../_images/4d0d35f769f429a5ea91c9aa45e629f43f1f4f408382c9da5a98239dc37805a2.png" />
 </div>
 </div>
 <p>You may be wondering why the call to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code> uses the argument <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code>. The explanation is as follows: <code class="docutils literal notranslate"><span class="pre">hist1</span></code> is a tuple returned by <code class="docutils literal notranslate"><span class="pre">hist2d</span></code>, and <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> contains a <code class="docutils literal notranslate"><span class="pre">matplotlib.collections.QuadMesh</span></code> that points to the colormap for the first histogram. To make sure that both histograms are using the same colormap with the same range of values, <code class="docutils literal notranslate"><span class="pre">vmax</span></code> is set to 0.18 for both plots. This ensures that both histograms are using colormaps that represent values from 0 (the default for histograms) to 0.18. Because the same data values are used for both plots, it doesn’t matter whether we pass in <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> or <code class="docutils literal notranslate"><span class="pre">hist2[3]</span></code> to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code>.
@@ -857,7 +857,7 @@ You can learn more about this topic by reviewing the <a class="reference externa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/fa47216ef9f551f1ad685ad7cfda26fe2c780f1c4a609444caa2ac4bf660f795.png" src="../../_images/fa47216ef9f551f1ad685ad7cfda26fe2c780f1c4a609444caa2ac4bf660f795.png" />
+<img alt="../../_images/bce48c4e3990a5e76d1566cc5c5d9f3b7a7eda17af9bb9aeb9bc9c87caef2b23.png" src="../../_images/bce48c4e3990a5e76d1566cc5c5d9f3b7a7eda17af9bb9aeb9bc9c87caef2b23.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -874,7 +874,7 @@ You can learn more about this topic by reviewing the <a class="reference externa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f9e785ae6800ad4271f64d3d6c8c94d32cc0592f5ed6640cc6738d2639468a49.png" src="../../_images/f9e785ae6800ad4271f64d3d6c8c94d32cc0592f5ed6640cc6738d2639468a49.png" />
+<img alt="../../_images/0762fc01a25d91abb019d9f6ac79b0dbbeb86d33bb2c258b309363e6e37a8675.png" src="../../_images/0762fc01a25d91abb019d9f6ac79b0dbbeb86d33bb2c258b309363e6e37a8675.png" />
 </div>
 </div>
 <section id="the-normalize-class">
@@ -911,7 +911,7 @@ You can learn more about this topic by reviewing the <a class="reference externa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ff437eb4eb5828627784d4439eea7b0aa68aa6efd37af2c07718122db2fd09f1.png" src="../../_images/ff437eb4eb5828627784d4439eea7b0aa68aa6efd37af2c07718122db2fd09f1.png" />
+<img alt="../../_images/f439a1afba62b375ad1b25dbf27d1d39c2ed1bb503a5c12724418ae75419e8bc.png" src="../../_images/f439a1afba62b375ad1b25dbf27d1d39c2ed1bb503a5c12724418ae75419e8bc.png" />
 </div>
 </div>
 <p>You’ll notice there is not a colorbar plotted by default. When constructing the colorbar, we need to specify the following:</p>
@@ -939,13 +939,13 @@ You can learn more about this topic by reviewing the <a class="reference externa
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2695/1337655102.py:12: UserWarning: Adding colorbar to a different Figure &lt;Figure size 640x480 with 4 Axes&gt; than &lt;Figure size 640x480 with 3 Axes&gt; which fig.colorbar is called on.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2531/1337655102.py:12: UserWarning: Adding colorbar to a different Figure &lt;Figure size 640x480 with 4 Axes&gt; than &lt;Figure size 640x480 with 3 Axes&gt; which fig.colorbar is called on.
   fig.colorbar(histA[3], ax=[axdict[&#39;A&#39;], axdict[&#39;B&#39;]], location=&#39;bottom&#39;)
-/tmp/ipykernel_2695/1337655102.py:13: UserWarning: Adding colorbar to a different Figure &lt;Figure size 640x480 with 5 Axes&gt; than &lt;Figure size 640x480 with 3 Axes&gt; which fig.colorbar is called on.
+/tmp/ipykernel_2531/1337655102.py:13: UserWarning: Adding colorbar to a different Figure &lt;Figure size 640x480 with 5 Axes&gt; than &lt;Figure size 640x480 with 3 Axes&gt; which fig.colorbar is called on.
   fig.colorbar(histC[3], ax=[axdict[&#39;C&#39;]], location=&#39;right&#39;);
 </pre></div>
 </div>
-<img alt="../../_images/d1de26d28194445dd7ed7be74f88f291c558168196c5158492e311e9d39a6da1.png" src="../../_images/d1de26d28194445dd7ed7be74f88f291c558168196c5158492e311e9d39a6da1.png" />
+<img alt="../../_images/fb5f0476934049c6dd748f964b166b2ce190dacd0207f28cd696fdd7b1da7e9e.png" src="../../_images/fb5f0476934049c6dd748f964b166b2ce190dacd0207f28cd696fdd7b1da7e9e.png" />
 </div>
 </div>
 </section>
