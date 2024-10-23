@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
@@ -37,10 +39,11 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6f14dede" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -81,7 +84,8 @@
     <link rel="prev" title="Datetime" href="../datetime.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="9 October 2024"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="23 October 2024"/>
   </head>
   
   
@@ -120,7 +124,7 @@
     
     
     <img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-light" alt="Pythia Foundations - Home"/>
-    <script>document.write(`<img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark" alt="Pythia Foundations - Home"/>`);</script>
+    <img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark pst-js-only" alt="Pythia Foundations - Home"/>
   
   
 </a></div>
@@ -361,7 +365,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -599,7 +602,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1728500418.673208
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1729711732.1285927
 </pre></div>
 </div>
 </div>
@@ -620,7 +623,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The benchmark took 1.0001788139343262 seconds
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The benchmark took 1.0002615451812744 seconds
 </pre></div>
 </div>
 </div>
@@ -749,7 +752,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6314
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6328
 </pre></div>
 </div>
 </div>
@@ -761,7 +764,7 @@
 <section id="calculating-coastal-tides-with-the-timedelta-class">
 <h2>Calculating coastal tides with the <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> class<a class="headerlink" href="#calculating-coastal-tides-with-the-timedelta-class" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>In these examples, we will look at current data pertaining to coastal tides during a <a class="reference external" href="http://www.nhc.noaa.gov/surge/">tropical cyclone storm surge</a>.</p>
-<p>The <a class="reference external" href="http://oceanservice.noaa.gov/education/kits/tides/media/supp_tide05.html">lunar day</a> is 24 hours and 50 minutes; there are two low tides and two high tides in that time duration. If we know the time of the current high tide, we can easily calculate the occurrence of the next low and high tides by using the <a class="reference external" href="https://docs.python.org/3/library/datetime.html#timedelta-objects">timedelta class</a>. (In reality, the <em>exact time</em> of tides is influenced by local coastal effects, in addition to the laws of celestial mechanics, but we will ignore that fact for this exercise.)</p>
+<p>The <a class="reference external" href="https://tidesandcurrents.noaa.gov/glossary.html#lunarday">lunar day</a> is 24 hours and 50 minutes; there are two low tides and two high tides in that time duration. If we know the time of the current high tide, we can easily calculate the occurrence of the next low and high tides by using the <a class="reference external" href="https://docs.python.org/3/library/datetime.html#timedelta-objects">timedelta class</a>. (In reality, the <em>exact time</em> of tides is influenced by local coastal effects, in addition to the laws of celestial mechanics, but we will ignore that fact for this exercise.)</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> class is initialized by supplying time duration, usually supplied with <a class="reference external" href="https://docs.python.org/3/glossary.html#term-argument">keyword arguments</a>, to clearly express the length of time. The <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> class allows you to perform arithmetic with dates and times using standard operators (i.e., <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>).  You can use these operators with a <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> object, and either another <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> object, a datetime object, or a numeric literal, to obtain objects representing new dates and times.</p>
 <p>This convenient language feature is known as <a class="reference external" href="https://en.wikipedia.org/wiki/Operator_overloading">operator overloading</a>, and is another example of Python offering built-in functionality to make programming easier. (In some other languages, such as Java, you would have to call a method to perform such operations, which significantly obfuscates the code.)</p>
 <p>In addition, you can use these arithmetic operators with two datetime objects, as shown above with <a class="reference internal" href="#See-how-many-days-have-elapsed-since-the-strike:"><span class="xref myst">lightning-strike data</span></a>, to create <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> objects. Let’s examine all these features in the following code block.</p>
@@ -821,8 +824,8 @@ The type of the &#39;tide_length&#39; variable is &lt;class &#39;datetime.timede
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive 2024-10-09 19:00:19.708685.
-I am time zone aware 2024-10-09 19:00:19.708710+00:00.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive 2024-10-23 19:28:53.164603.
+I am time zone aware 2024-10-23 19:28:53.164628+00:00.
 </pre></div>
 </div>
 </div>
@@ -845,8 +848,8 @@ I am time zone aware 2024-10-09 19:00:19.708710+00:00.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive: 2024-10-09 19:00:19.712746.
-I am time zone aware: 2024-10-09 13:00:19.722717-06:00.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive: 2024-10-23 19:28:53.168910.
+I am time zone aware: 2024-10-23 13:28:53.179101-06:00.
 </pre></div>
 </div>
 </div>
@@ -868,8 +871,8 @@ I am time zone aware: 2024-10-09 13:00:19.722717-06:00.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The UTC time is October 09, 2024, 7:00PM.
-The &#39;US/Mountain&#39; time is October 09, 2024, 1:00PM.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The UTC time is October 23, 2024, 7:28PM.
+The &#39;US/Mountain&#39; time is October 23, 2024, 1:28PM.
 </pre></div>
 </div>
 </div>
@@ -1190,24 +1193,16 @@ The &#39;US/Mountain&#39; time is October 09, 2024, 1:00PM.
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -1245,7 +1240,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 9 October 2024.
+  Last updated on 23 October 2024.
   <br/>
 </p>
   </div>
@@ -1262,8 +1257,8 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   </div>
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
      
@@ -1374,7 +1369,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 9 October 2024.
+          Last updated on 23 October 2024.
         </p>
       </div>
     </div>

@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
@@ -37,10 +39,11 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6f14dede" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -81,7 +84,8 @@
     <link rel="prev" title="Intermediate NumPy" href="intermediate-numpy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="9 October 2024"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="23 October 2024"/>
   </head>
   
   
@@ -120,7 +124,7 @@
     
     
     <img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-light" alt="Pythia Foundations - Home"/>
-    <script>document.write(`<img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark" alt="Pythia Foundations - Home"/>`);</script>
+    <img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark pst-js-only" alt="Pythia Foundations - Home"/>
   
   
 </a></div>
@@ -361,7 +365,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -1077,7 +1080,7 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([20.2, 19.3, 24.3, 22.6, 19.4, 21.5, 10.2, 21.7, 25.8, 14. ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([19.8, 22.2, 17.4, 22.5, 18.9, 15.1, 18.4, 27.1, 20.5, 17.3])
 </pre></div>
 </div>
 </div>
@@ -1100,8 +1103,8 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.        , 21.26666667, 22.06666667, 22.1       , 21.16666667,
-       17.03333333, 17.8       , 19.23333333, 20.5       ,  0.        ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.        , 19.8       , 20.7       , 19.6       , 18.83333333,
+       17.46666667, 20.2       , 22.        , 21.63333333,  0.        ])
 </pre></div>
 </div>
 </div>
@@ -1115,8 +1118,8 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([21.26666667, 22.06666667, 22.1       , 21.16666667, 17.03333333,
-       17.8       , 19.23333333, 20.5       ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([19.8       , 20.7       , 19.6       , 18.83333333, 17.46666667,
+       20.2       , 22.        , 21.63333333])
 </pre></div>
 </div>
 </div>
@@ -1129,7 +1132,7 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([20.2, 19.3, 24.3, 22.6, 19.4, 21.5, 10.2, 21.7, 25.8, 14. ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([19.8, 22.2, 17.4, 22.5, 18.9, 15.1, 18.4, 27.1, 20.5, 17.3])
 </pre></div>
 </div>
 </div>
@@ -1148,14 +1151,14 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[20.2, 19.3, 24.3],
-       [19.3, 24.3, 22.6],
-       [24.3, 22.6, 19.4],
-       [22.6, 19.4, 21.5],
-       [19.4, 21.5, 10.2],
-       [21.5, 10.2, 21.7],
-       [10.2, 21.7, 25.8],
-       [21.7, 25.8, 14. ]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[19.8, 22.2, 17.4],
+       [22.2, 17.4, 22.5],
+       [17.4, 22.5, 18.9],
+       [22.5, 18.9, 15.1],
+       [18.9, 15.1, 18.4],
+       [15.1, 18.4, 27.1],
+       [18.4, 27.1, 20.5],
+       [27.1, 20.5, 17.3]])
 </pre></div>
 </div>
 </div>
@@ -1168,8 +1171,8 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([21.26666667, 22.06666667, 22.1       , 21.16666667, 17.03333333,
-       17.8       , 19.23333333, 20.5       ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([19.8       , 20.7       , 19.6       , 18.83333333, 17.46666667,
+       20.2       , 22.        , 21.63333333])
 </pre></div>
 </div>
 </div>
@@ -1183,14 +1186,14 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[  20.2,   19.3, 2000. ],
-       [  19.3, 2000. ,   22.6],
-       [2000. ,   22.6,   19.4],
-       [  22.6,   19.4,   21.5],
-       [  19.4,   21.5,   10.2],
-       [  21.5,   10.2,   21.7],
-       [  10.2,   21.7,   25.8],
-       [  21.7,   25.8,   14. ]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[  19.8,   22.2, 2000. ],
+       [  22.2, 2000. ,   22.5],
+       [2000. ,   22.5,   18.9],
+       [  22.5,   18.9,   15.1],
+       [  18.9,   15.1,   18.4],
+       [  15.1,   18.4,   27.1],
+       [  18.4,   27.1,   20.5],
+       [  27.1,   20.5,   17.3]])
 </pre></div>
 </div>
 </div>
@@ -1217,13 +1220,13 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[7, 8, 7, ..., 7, 6, 6],
-       [7, 7, 7, ..., 6, 6, 7],
-       [6, 7, 7, ..., 7, 7, 7],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[8, 6, 7, ..., 7, 7, 6],
+       [7, 7, 7, ..., 6, 7, 7],
+       [7, 7, 7, ..., 7, 7, 6],
        ...,
-       [8, 6, 7, ..., 7, 6, 7],
-       [8, 7, 7, ..., 6, 7, 8],
-       [6, 7, 7, ..., 6, 6, 6]])
+       [7, 6, 6, ..., 8, 6, 7],
+       [7, 7, 7, ..., 8, 7, 7],
+       [8, 6, 7, ..., 7, 6, 6]])
 </pre></div>
 </div>
 </div>
@@ -1248,13 +1251,13 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[737.5, 700. , 737.5, ..., 737.5, 775. , 775. ],
-       [737.5, 737.5, 737.5, ..., 775. , 775. , 737.5],
-       [775. , 737.5, 737.5, ..., 737.5, 737.5, 737.5],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[700. , 775. , 737.5, ..., 737.5, 737.5, 775. ],
+       [737.5, 737.5, 737.5, ..., 775. , 737.5, 737.5],
+       [737.5, 737.5, 737.5, ..., 737.5, 737.5, 775. ],
        ...,
-       [700. , 775. , 737.5, ..., 737.5, 775. , 737.5],
-       [700. , 737.5, 737.5, ..., 775. , 737.5, 700. ],
-       [775. , 737.5, 737.5, ..., 775. , 775. , 775. ]])
+       [737.5, 775. , 775. , ..., 700. , 775. , 737.5],
+       [737.5, 737.5, 737.5, ..., 700. , 737.5, 737.5],
+       [700. , 775. , 737.5, ..., 737.5, 775. , 775. ]])
 </pre></div>
 </div>
 </div>
@@ -1283,19 +1286,19 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-12.73764959, -10.88954847, -12.02766339, ...,  -9.57930629,
-         -8.52407584,  -8.30317617],
-       [-11.56234951,  -9.35673611, -12.0735739 , ...,  -7.98822913,
-         -4.92875157,  -8.62974567],
-       [ -6.70499924, -12.23705803,  -7.4489524 , ...,  -8.0200734 ,
-        -11.38534142, -13.55519112],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-12.9523416 ,  -6.20915146, -11.6283289 , ..., -11.40653516,
+        -10.16355674, -10.38603911],
+       [-10.77882127, -11.5226108 ,  -8.60505937, ...,  -9.08035306,
+        -10.37790944, -12.56499156],
+       [-10.96433061,  -8.48951214,  -8.87012224, ..., -13.24238212,
+        -10.53550136,  -8.83270012],
        ...,
-       [ -9.94358513, -11.07275183,  -9.27829024, ...,  -7.29428092,
-        -13.22344756, -13.04811727],
-       [-13.68596601, -10.65494871,  -8.88605932, ..., -10.34628389,
-         -9.86702162,  -8.53541082],
-       [ -7.61596756,  -9.54933709, -12.49250425, ...,  -9.11885742,
-         -9.38346102,  -5.8175044 ]])
+       [-12.69686469,  -8.73965982,  -9.93506476, ..., -12.47131949,
+         -9.66617141,  -7.18541459],
+       [ -8.31411267,  -8.9017754 , -13.79392408, ..., -13.20181123,
+         -9.91710179, -11.08648589],
+       [-11.11683966,  -7.20387888, -10.21816627, ...,  -4.99636715,
+         -6.44448164,  -9.58134519]])
 </pre></div>
 </div>
 </div>
@@ -1339,19 +1342,19 @@ f_i - f_{i+1} - f_{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-12.73764959, -10.88954847, -12.02766339, ...,  -9.57930629,
-         -8.52407584,  -8.30317617],
-       [-11.56234951,  -9.35673611, -12.0735739 , ...,  -7.98822913,
-         -4.92875157,  -8.62974567],
-       [ -6.70499924, -12.23705803,  -7.4489524 , ...,  -8.0200734 ,
-        -11.38534142, -13.55519112],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-12.9523416 ,  -6.20915146, -11.6283289 , ..., -11.40653516,
+        -10.16355674, -10.38603911],
+       [-10.77882127, -11.5226108 ,  -8.60505937, ...,  -9.08035306,
+        -10.37790944, -12.56499156],
+       [-10.96433061,  -8.48951214,  -8.87012224, ..., -13.24238212,
+        -10.53550136,  -8.83270012],
        ...,
-       [ -9.94358513, -11.07275183,  -9.27829024, ...,  -7.29428092,
-        -13.22344756, -13.04811727],
-       [-13.68596601, -10.65494871,  -8.88605932, ..., -10.34628389,
-         -9.86702162,  -8.53541082],
-       [ -7.61596756,  -9.54933709, -12.49250425, ...,  -9.11885742,
-         -9.38346102,  -5.8175044 ]])
+       [-12.69686469,  -8.73965982,  -9.93506476, ..., -12.47131949,
+         -9.66617141,  -7.18541459],
+       [ -8.31411267,  -8.9017754 , -13.79392408, ..., -13.20181123,
+         -9.91710179, -11.08648589],
+       [-11.11683966,  -7.20387888, -10.21816627, ...,  -4.99636715,
+         -6.44448164,  -9.58134519]])
 </pre></div>
 </div>
 </div>
@@ -1663,24 +1666,16 @@ f_i - f_{i+1} - f_{i-1}
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -1718,7 +1713,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 9 October 2024.
+  Last updated on 23 October 2024.
   <br/>
 </p>
   </div>
@@ -1735,8 +1730,8 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   </div>
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
      
@@ -1847,7 +1842,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 9 October 2024.
+          Last updated on 23 October 2024.
         </p>
       </div>
     </div>
