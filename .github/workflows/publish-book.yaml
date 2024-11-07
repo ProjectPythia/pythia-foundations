@@ -16,5 +16,3 @@ jobs:
   deploy:
     needs: build
     uses: ProjectPythia/cookbook-actions/.github/workflows/deploy-book.yaml@main
-    with:
-      cname: foundations.projectpythia.org
