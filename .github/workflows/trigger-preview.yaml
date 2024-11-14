@@ -18,7 +18,6 @@ jobs:
       artifact_name: book-zip-${{ needs.find-pull-request.outputs.number }}
       destination_dir: _preview/${{ needs.find-pull-request.outputs.number }} # deploy to subdirectory labeled with PR number
       is_preview: "true"
-      cname: foundations.projectpythia.org
 
   preview-comment:
     needs: find-pull-request
