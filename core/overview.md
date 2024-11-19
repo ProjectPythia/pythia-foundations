@@ -98,8 +98,8 @@ Increasingly, these individuals and groups
 are formally packaging and releasing their code for use within their community.
 For instance, Andrew Dawson (an atmospheric scientist at Oxford)
 does a lot of EOF analysis and manipulation of wind data,
-so he has released his [eofs](https://ajdawson.github.io/eofs/latest/)
-and [windspharm](https://ajdawson.github.io/windspharm/latest/) libraries
+so he has released his [eofs](https://ajdawson.github.io/eofs/)
+and [windspharm](https://ajdawson.github.io/windspharm/) libraries
 (which are able to handle data arrays from NumPy or Xarray).
 Similarly, a group at the Atmospheric Radiation Measurement (ARM) Climate Research Facility
 have released their Python ARM Radar Toolkit ([Py-ART](http://arm-doe.github.io/pyart/))
