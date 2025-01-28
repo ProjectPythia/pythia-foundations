@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,10 +27,10 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -40,10 +40,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6f14dede" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -83,7 +83,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="19 November 2024"/>
+    <meta name="docbuild:last-update" content="28 January 2025"/>
   </head>
   
   
@@ -473,9 +473,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
         </div>
@@ -538,8 +543,8 @@
 <p>Just like in the previous tutorial, we are going to import Matplotlib’s <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> interface as <code class="docutils literal notranslate"><span class="pre">plt</span></code>. We must also import <code class="docutils literal notranslate"><span class="pre">numpy</span></code> for working with data arrays.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </pre></div>
 </div>
 </div>
@@ -571,7 +576,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e9ac2f5a6cee9b739419ee469968effe5ed156b6e707e1f7474f47ad7afe9232.png" src="../../_images/e9ac2f5a6cee9b739419ee469968effe5ed156b6e707e1f7474f47ad7afe9232.png" />
+<img alt="../../_images/ac588ebd77527d77ad04462b3dfa4e1fb4b7b12e50ac4d0c3b8c1e5199fbe557.png" src="../../_images/ac588ebd77527d77ad04462b3dfa4e1fb4b7b12e50ac4d0c3b8c1e5199fbe557.png" />
 </div>
 </div>
 <p>Similarly, we can make a 2-D histogram, by first generating a second 1-D array, and then calling <code class="docutils literal notranslate"><span class="pre">plt.hist2d</span></code> with both 1-D arrays as arguments:</p>
@@ -584,7 +589,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/5412ac18299c5f3e5c89bc52a92255b35cf82a417991bcad96c71504c0b5f12e.png" src="../../_images/5412ac18299c5f3e5c89bc52a92255b35cf82a417991bcad96c71504c0b5f12e.png" />
+<img alt="../../_images/5a7e7f64ed18927b5bcc64d941aa4705737f739d1e30f525589f3fdfe2bfcbce.png" src="../../_images/5a7e7f64ed18927b5bcc64d941aa4705737f739d1e30f525589f3fdfe2bfcbce.png" />
 </div>
 </div>
 </section>
@@ -599,7 +604,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/5468c9a6afbfb1506cb7db1ab273fc0cb95f7ae70b67903ac2eabb81033821c8.png" src="../../_images/5468c9a6afbfb1506cb7db1ab273fc0cb95f7ae70b67903ac2eabb81033821c8.png" />
+<img alt="../../_images/240607317ce12ff9997e75a7203d6a27dc6c7110ebd31a888c8fce45cd6b956b.png" src="../../_images/240607317ce12ff9997e75a7203d6a27dc6c7110ebd31a888c8fce45cd6b956b.png" />
 </div>
 </div>
 <p>Typically, you’ll see examples where all of the values in the array <code class="docutils literal notranslate"><span class="pre">x</span></code> will sum to 100, but the data values provided to <code class="docutils literal notranslate"><span class="pre">plt.pie</span></code> do not necessarily have to add up to 100.  The sum of the numbers provided will be normalized to 1, and the individual values will thereby be converted to percentages, regardless of the actual sum of the values.  If this behavior is unwanted or unneeded, you can set <code class="docutils literal notranslate"><span class="pre">normalize=False</span></code>.</p>
@@ -612,7 +617,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6cbd4e16ace1739c28a53b88e12e862bf235830ab92734488ea4d4bcd6c985b3.png" src="../../_images/6cbd4e16ace1739c28a53b88e12e862bf235830ab92734488ea4d4bcd6c985b3.png" />
+<img alt="../../_images/7488ba134718511c1a86ad5509a3861f03ef76042e3af2feea4208b72ea3c673.png" src="../../_images/7488ba134718511c1a86ad5509a3861f03ef76042e3af2feea4208b72ea3c673.png" />
 </div>
 </div>
 <p>Let’s do a more complicated example.</p>
@@ -632,7 +637,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/41b11f068fc9097917362c5ef332327da18a443f2e785d37ac290ca298ca1950.png" src="../../_images/41b11f068fc9097917362c5ef332327da18a443f2e785d37ac290ca298ca1950.png" />
+<img alt="../../_images/abde05fc1f7acb154dad2ef0cf0ce9e5419f693cebf943fcb2d90e815c0d3e15.png" src="../../_images/abde05fc1f7acb154dad2ef0cf0ce9e5419f693cebf943fcb2d90e815c0d3e15.png" />
 </div>
 </div>
 </section>
@@ -641,7 +646,7 @@
 <p>Matplotlib offers a single commonly-used animation tool, <code class="docutils literal notranslate"><span class="pre">FuncAnimation</span></code>. This tool must be imported separately through Matplotlib’s animation package, as shown below. You can find more information on animation with Matplotlib at the <a class="reference external" href="https://matplotlib.org/stable/api/animation_api.html">official documentation page</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.animation</span><span class="w"> </span><span class="kn">import</span> <span class="n">FuncAnimation</span>
 </pre></div>
 </div>
 </div>
@@ -667,14 +672,14 @@
 <span class="p">(</span><span class="n">line</span><span class="p">,)</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([],</span> <span class="p">[])</span>
 
 
-<span class="k">def</span> <span class="nf">init</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">init</span><span class="p">():</span>
     <span class="n">line</span><span class="o">.</span><span class="n">set_data</span><span class="p">([],</span> <span class="p">[])</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">line</span><span class="p">,)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f045d79a8e22579a2ea90f5ab9b45a893265dcc25fd025ca1e95c2d2abdf6bc0.png" src="../../_images/f045d79a8e22579a2ea90f5ab9b45a893265dcc25fd025ca1e95c2d2abdf6bc0.png" />
+<img alt="../../_images/0f39dec893484989dded285850a0e55f1727b9b4edceafd78b5802bd7f8e4902.png" src="../../_images/0f39dec893484989dded285850a0e55f1727b9b4edceafd78b5802bd7f8e4902.png" />
 </div>
 </div>
 </section>
@@ -683,7 +688,7 @@
 <p>For this step, we create a progression function, which takes an index (usually named <code class="docutils literal notranslate"><span class="pre">n</span></code> or <code class="docutils literal notranslate"><span class="pre">i</span></code>), and returns the corresponding (in other words, <code class="docutils literal notranslate"><span class="pre">n</span></code>-th or <code class="docutils literal notranslate"><span class="pre">i</span></code>-th) frame of the animation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">animate</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">animate</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
 
     <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="n">i</span><span class="p">))</span>
@@ -709,7 +714,7 @@
 <p>In order to show the animation in a Jupyter notebook, we have to use the <code class="docutils literal notranslate"><span class="pre">rc</span></code> function. This function must be imported separately, and is used to set specific parameters in Matplotlib. In this case, we need to set the <code class="docutils literal notranslate"><span class="pre">html</span></code> parameter for animation plots to <code class="docutils literal notranslate"><span class="pre">html5</span></code>, instead of the default value of none.  The code for this is written as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rc</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">rc</span>
 
 <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;animation&#39;</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="s1">&#39;html5&#39;</span><span class="p">)</span>
 
@@ -3630,7 +3635,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 19 November 2024.
+  Last updated on 28 January 2025.
   <br/>
 </p>
   </div>
@@ -3647,8 +3652,8 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   </div>
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
      
@@ -3759,7 +3764,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 19 November 2024.
+          Last updated on 28 January 2025.
         </p>
       </div>
     </div>

@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,10 +27,10 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -40,10 +40,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6f14dede" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -83,7 +83,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="19 November 2024"/>
+    <meta name="docbuild:last-update" content="28 January 2025"/>
   </head>
   
   
@@ -473,9 +473,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
         </div>
@@ -537,8 +542,8 @@
 <p>You will often see the nickname <code class="docutils literal notranslate"><span class="pre">pd</span></code> used as an abbreviation for pandas in the import statement, just like <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is often imported as <code class="docutils literal notranslate"><span class="pre">np</span></code>. We also import the <code class="docutils literal notranslate"><span class="pre">DATASETS</span></code> class from <code class="docutils literal notranslate"><span class="pre">pythia_datasets</span></code>, which allows us to use example datasets created for Pythia.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">pythia_datasets</span> <span class="kn">import</span> <span class="n">DATASETS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pythia_datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">DATASETS</span>
 </pre></div>
 </div>
 </div>
@@ -1107,7 +1112,7 @@ Name: Nino34, Length: 472, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2701/737336773.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2849/737336773.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
   nino34_series[3]
 </pre></div>
 </div>
@@ -1341,7 +1346,7 @@ Name: Nino34, dtype: float64
 <span class="g g-Whitespace">   </span><span class="mi">3809</span>         <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">casted_key</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">3810</span>     <span class="p">):</span>
 <span class="g g-Whitespace">   </span><span class="mi">3811</span>         <span class="k">raise</span> <span class="n">InvalidIndexError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">3812</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="ne">-&gt; </span><span class="mi">3812</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
 <span class="g g-Whitespace">   </span><span class="mi">3813</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
 <span class="g g-Whitespace">   </span><span class="mi">3814</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
 <span class="g g-Whitespace">   </span><span class="mi">3815</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
@@ -1426,7 +1431,7 @@ Name: Nino34, Length: 472, dtype: float64
 <span class="g g-Whitespace">   </span><span class="mi">3809</span>         <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">casted_key</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">3810</span>     <span class="p">):</span>
 <span class="g g-Whitespace">   </span><span class="mi">3811</span>         <span class="k">raise</span> <span class="n">InvalidIndexError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">3812</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="ne">-&gt; </span><span class="mi">3812</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
 <span class="g g-Whitespace">   </span><span class="mi">3813</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
 <span class="g g-Whitespace">   </span><span class="mi">3814</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
 <span class="g g-Whitespace">   </span><span class="mi">3815</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
@@ -1458,7 +1463,7 @@ Name: Nino34, Length: 472, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2701/541596450.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2849/541596450.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
   df[&quot;Nino34&quot;][3]
 </pre></div>
 </div>
@@ -2256,7 +2261,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/cfc78d273393b33270876a39994cace2c06c5b98073b41f3c2dd7eb12364693f.png" src="../../_images/cfc78d273393b33270876a39994cace2c06c5b98073b41f3c2dd7eb12364693f.png" />
+<img alt="../../_images/56e9558280e22d125f2458bf98587418f1d5138a4546cf3f6797a5bab364d828.png" src="../../_images/56e9558280e22d125f2458bf98587418f1d5138a4546cf3f6797a5bab364d828.png" />
 </div>
 </div>
 <p>Before, we called <code class="docutils literal notranslate"><span class="pre">.plot()</span></code>, which generated a single line plot. Line plots can be helpful for understanding some types of data, but there are other types of data that can be better understood with different plot types. For example, if your data values form a distribution, you can better understand them using a histogram plot.</p>
@@ -2268,7 +2273,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/49280830b927f11dcf80829e35b65474c2fcf2959f5f0685edb76b1626a9ba9f.png" src="../../_images/49280830b927f11dcf80829e35b65474c2fcf2959f5f0685edb76b1626a9ba9f.png" />
+<img alt="../../_images/c502748740ff7aa34fa5f89a6b984c1f7258357ab878f0c313476aa68efc7d89.png" src="../../_images/c502748740ff7aa34fa5f89a6b984c1f7258357ab878f0c313476aa68efc7d89.png" />
 </div>
 </div>
 <p>The histogram plot helped us better understand our data; there are clear differences in the distributions. To even better understand this type of data, it may also be helpful to create a box plot. This can be done using the same line of code, with one change: we call the <code class="docutils literal notranslate"><span class="pre">box</span></code> method instead of <code class="docutils literal notranslate"><span class="pre">hist</span></code>.</p>
@@ -2279,7 +2284,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/3769577fe2c009e0e13ec475284c0f075cd721b9e24cadcc7e52ea6ad18b401f.png" src="../../_images/3769577fe2c009e0e13ec475284c0f075cd721b9e24cadcc7e52ea6ad18b401f.png" />
+<img alt="../../_images/6e669c136fd12e67942f69cfdc2fa891158ff986d2dbe49214ac189b836e156b.png" src="../../_images/6e669c136fd12e67942f69cfdc2fa891158ff986d2dbe49214ac189b836e156b.png" />
 </div>
 </div>
 <p>Just like the histogram plot, this box plot indicates a clear difference in the distributions. Using multiple types of plot in this way can be useful for verifying large datasets. The pandas plotting methods are capable of creating many different types of plots. To see how to use the plotting methods to generate each type of plot, please review the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">pandas plot documentation</a>.</p>
@@ -2299,7 +2304,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2706c90ca7d84627ccec28509ac4a3ed0136c6dc4dd93491c6dd5a93505e3c5f.png" src="../../_images/2706c90ca7d84627ccec28509ac4a3ed0136c6dc4dd93491c6dd5a93505e3c5f.png" />
+<img alt="../../_images/879cd3e167a35c08d10187e1b7e67739880684010e12776332f98dd2b4a7321d.png" src="../../_images/879cd3e167a35c08d10187e1b7e67739880684010e12776332f98dd2b4a7321d.png" />
 </div>
 </div>
 <p>Although plotting data can provide a clear visual picture of data values, sometimes a more quantitative look at data is warranted. As elaborated on in the next section, this can be achieved using the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method.  The <code class="docutils literal notranslate"><span class="pre">describe</span></code> method is called on the entire <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, and returns various summarized statistics for each column in the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</p>
@@ -2983,7 +2988,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/3932a2a89bfe1a28c36e993e6c5de82711414e71ebe48236cbc6af7df64c90b5.png" src="../../_images/3932a2a89bfe1a28c36e993e6c5de82711414e71ebe48236cbc6af7df64c90b5.png" />
+<img alt="../../_images/d00929fce3a600b97a30c0558687189573217453d71280e04c1f7c211080198b.png" src="../../_images/d00929fce3a600b97a30c0558687189573217453d71280e04c1f7c211080198b.png" />
 </div>
 </div>
 </section>
@@ -3644,7 +3649,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/cfc78d273393b33270876a39994cace2c06c5b98073b41f3c2dd7eb12364693f.png" src="../../_images/cfc78d273393b33270876a39994cace2c06c5b98073b41f3c2dd7eb12364693f.png" />
+<img alt="../../_images/56e9558280e22d125f2458bf98587418f1d5138a4546cf3f6797a5bab364d828.png" src="../../_images/56e9558280e22d125f2458bf98587418f1d5138a4546cf3f6797a5bab364d828.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3654,11 +3659,11 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2701/233158901.py:1: FutureWarning: &#39;Y&#39; is deprecated and will be removed in a future version, please use &#39;YE&#39; instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2849/233158901.py:1: FutureWarning: &#39;Y&#39; is deprecated and will be removed in a future version, please use &#39;YE&#39; instead.
   df.Nino34.resample(&#39;1Y&#39;).mean().plot();
 </pre></div>
 </div>
-<img alt="../../_images/2b100929fda5b3e758376b5fadd5a27ef14f2ddfd6c511eced12041ec4fcb283.png" src="../../_images/2b100929fda5b3e758376b5fadd5a27ef14f2ddfd6c511eced12041ec4fcb283.png" />
+<img alt="../../_images/30849770be909b06052a0793029ddae8ea677f9ec98c57360d894f1976061297.png" src="../../_images/30849770be909b06052a0793029ddae8ea677f9ec98c57360d894f1976061297.png" />
 </div>
 </div>
 </section>
@@ -3667,7 +3672,7 @@ dtype: float64
 <p>One of the most commonly used features in Pandas is the performing of calculations to multiple data values in a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> simultaneously. Let’s first look at a familiar concept: a function that converts single values.  The following example uses such a function to convert temperature values from degrees Celsius to Kelvin.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_degc_to_kelvin</span><span class="p">(</span><span class="n">temperature_degc</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">convert_degc_to_kelvin</span><span class="p">(</span><span class="n">temperature_degc</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts from degrees celsius to Kelvin</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -4435,7 +4440,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 19 November 2024.
+  Last updated on 28 January 2025.
   <br/>
 </p>
   </div>
@@ -4452,8 +4457,8 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   </div>
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
      
@@ -4564,7 +4569,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 19 November 2024.
+          Last updated on 28 January 2025.
         </p>
       </div>
     </div>
