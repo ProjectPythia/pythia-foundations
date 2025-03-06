@@ -75,6 +75,5 @@ Python can be run on many different platforms. You may choose where to run Pytho
 - [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
 - [Spyder](https://www.spyder-ide.org)
 - [Anaconda](https://www.anaconda.com/products/distribution)
-- [Matlab](https://www.mathworks.com/products/matlab.html)
 - [PyCharm](https://www.jetbrains.com/pycharm/)
 - [Visual Studio Code](https://code.visualstudio.com)
