@@ -16,19 +16,17 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
@@ -39,11 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6f14dede" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -82,8 +79,7 @@
     <link rel="prev" title="Cloning and Forking a Repository" href="github-cloning-forking.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="4 February 2025"/>
+    <meta name="docbuild:last-update" content="6 March 2025"/>
   </head>
   
   
@@ -122,7 +118,7 @@
     
     
     <img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-light" alt="Pythia Foundations - Home"/>
-    <img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark pst-js-only" alt="Pythia Foundations - Home"/>
+    <script>document.write(`<img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark" alt="Pythia Foundations - Home"/>`);</script>
   
   
 </a></div>
@@ -363,6 +359,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -473,14 +470,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
         </div>
@@ -499,7 +491,8 @@
 <div id="searchbox"></div>
                   <article class="bd-article">
                     
-  <a class="reference internal image-reference" href="../../_images/GitHub-logo.png"><img alt="GitHub Logo" src="../../_images/GitHub-logo.png" style="width: 400px;" /></a>
+  <a class="reference internal image-reference" href="../../_images/GitHub-logo.png"><img alt="GitHub Logo" src="../../_images/GitHub-logo.png" style="width: 400px;" />
+</a>
 <section class="tex2jax_ignore mathjax_ignore" id="configuring-your-github-account">
 <h1>Configuring Your GitHub Account<a class="headerlink" href="#configuring-your-github-account" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
 <section id="overview">
@@ -554,11 +547,13 @@
 <p>For these use-cases, you won’t be able to simply type your GitHub user ID and password from the command line. Instead, you need to set up <em>access tokens</em> that live in two places: in your GitHub account, and in your local computer’s file system.</p>
 <p>GitHub supports two means of key-based access: via <em>https</em>, and via <em>ssh</em>.</p>
 <p>For example, one can clone <a class="reference external" href="https://github.com/ProjectPythia/github-sandbox">Project Pythia’s Sandbox repository</a> using a URL for the https protocol:</p>
-<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_https_URL.png"><img alt="GitHub Clone https" src="../../_images/GitHub_Setup_Advanced_https_URL.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_https_URL.png"><img alt="GitHub Clone https" src="../../_images/GitHub_Setup_Advanced_https_URL.png" style="width: 600px;" />
+</a>
 <hr class="docutils" />
 <p>The URL in this case is <strong>https://github.com/ProjectPythia/github-sandbox.git</strong></p>
 <p>Similarly, if you click on the <strong>SSH</strong> tab:</p>
-<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_ssh_URL.png"><img alt="GitHub Clone ssh" src="../../_images/GitHub_Setup_Advanced_ssh_URL.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_ssh_URL.png"><img alt="GitHub Clone ssh" src="../../_images/GitHub_Setup_Advanced_ssh_URL.png" style="width: 600px;" />
+</a>
 <hr class="docutils" />
 <p>Here, the URL is <strong>git&#64;github.com:ProjectPythia/github-sandbox.git</strong></p>
 </section>
@@ -593,13 +588,16 @@
 <h3>Email notifications<a class="headerlink" href="#email-notifications" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>Let’s say you wish to monitor (or <em>watch</em>) the Project Pythia GitHub Sandbox repository and receive emails about it.</p>
 <p>Click on the <strong>Watch</strong> link near the top of the page:</p>
-<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Watch.png"><img alt="GitHub Watch" src="../../_images/GitHub_Setup_Advanced_Watch.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Watch.png"><img alt="GitHub Watch" src="../../_images/GitHub_Setup_Advanced_Watch.png" style="width: 600px;" />
+</a>
 <hr class="docutils" />
 <p>You can then select what type of notifications you wish to receive. For example, you may want to receive <em>all notifications</em> related to that repo:</p>
-<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Watch_All_Activity.png"><img alt="GitHub Watch All Activity" src="../../_images/GitHub_Setup_Advanced_Watch_All_Activity.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Watch_All_Activity.png"><img alt="GitHub Watch All Activity" src="../../_images/GitHub_Setup_Advanced_Watch_All_Activity.png" style="width: 600px;" />
+</a>
 <hr class="docutils" />
 <p>You will then receive email at the address you used when you signed up for GitHub whenever activity occurs on that repo.</p>
-<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Unwatch.png"><img alt="GitHub Unwatch" src="../../_images/GitHub_Setup_Advanced_Unwatch.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Unwatch.png"><img alt="GitHub Unwatch" src="../../_images/GitHub_Setup_Advanced_Unwatch.png" style="width: 600px;" />
+</a>
 <hr class="docutils" />
 <p>You can stop watching that repo by just clicking on the now-labeled <em>Unwatch</em> link again, and choosing <em>Participating and &#64;mentions</em> to toggle it back to <em>Unwatch</em>.</p>
 </section>
@@ -608,22 +606,27 @@
 <h2>Stop spamming me, GitHub!<a class="headerlink" href="#stop-spamming-me-github" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <p>It’s easy to become overwhelmed with email from one or more repos that you are following and/or participating in! In this case, you may wish to disable email notifications.
 In order to set your notification settings, go to <strong>https://github.com/settings/notifications</strong>. You can, for example, uncheck the <strong>Email</strong> boxes to cease receiving notifications that way:</p>
-<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notification_Settings.png"><img alt="GitHub Notification Settings" src="../../_images/GitHub_Setup_Advanced_Notification_Settings.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notification_Settings.png"><img alt="GitHub Notification Settings" src="../../_images/GitHub_Setup_Advanced_Notification_Settings.png" style="width: 600px;" />
+</a>
 <hr class="docutils" />
 <p>If you turn email notifications off, get in the habit of clicking on the <em>Notifications</em> icon when logged into GitHub:</p>
-<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notifications.png"><img alt="GitHub Notifications" src="../../_images/GitHub_Setup_Advanced_Notifications.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notifications.png"><img alt="GitHub Notifications" src="../../_images/GitHub_Setup_Advanced_Notifications.png" style="width: 600px;" />
+</a>
 <hr class="docutils" />
 <p>You can click on the <em>Notifications</em> icon and scroll through all notifications from repos that you opted into receiving notifications from:</p>
-<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notifications_Browser.png"><img alt="GitHub Notification Browser" src="../../_images/GitHub_Setup_Advanced_Notifications_Browser.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notifications_Browser.png"><img alt="GitHub Notification Browser" src="../../_images/GitHub_Setup_Advanced_Notifications_Browser.png" style="width: 600px;" />
+</a>
 <hr class="docutils" />
 <p>Use the <em>Filter notifications</em> control to display only those that meet certain criteria. For example, say you only wanted to view topics related to the <em>MetPy</em> repo:</p>
-<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notification_Filter.png"><img alt="GitHub Notification Filter" src="../../_images/GitHub_Setup_Advanced_Notification_Filter.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notification_Filter.png"><img alt="GitHub Notification Filter" src="../../_images/GitHub_Setup_Advanced_Notification_Filter.png" style="width: 600px;" />
+</a>
 <hr class="docutils" />
 <div class="tip admonition">
 <p class="admonition-title">Tip:</p>
 <p>In the list of notifications, you can unsubscribe as shown below.</p>
 </div>
-<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notifications_Unsubscribe.png"><img alt="GitHub Notification Unsubscribe" src="../../_images/GitHub_Setup_Advanced_Notifications_Unsubscribe.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/GitHub_Setup_Advanced_Notifications_Unsubscribe.png"><img alt="GitHub Notification Unsubscribe" src="../../_images/GitHub_Setup_Advanced_Notifications_Unsubscribe.png" style="width: 600px;" />
+</a>
 </section>
 <hr class="docutils" />
 <section id="summary">
@@ -883,16 +886,24 @@ In order to set your notification settings, go to <strong>https://github.com/set
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -930,7 +941,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 4 February 2025.
+  Last updated on 6 March 2025.
   <br/>
 </p>
   </div>
@@ -947,8 +958,8 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   </div>
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
      
@@ -1059,7 +1070,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 4 February 2025.
+          Last updated on 6 March 2025.
         </p>
       </div>
     </div>

@@ -48,7 +48,7 @@ We highly encourage the use of Jupyter notebooks: a free, open-source, interacti
 
 ### Other IDEs
 
-If you code in other languages, you might already have a favorite IDE that will work just as well in Python. [Spyder](https://www.spyder-ide.org) is a Python specific IDE that comes with the [Anaconda download](https://www.anaconda.com/products/distribution). It is perhaps the most familiar IDE if you are coming from languages such as [Matlab](https://www.mathworks.com/products/matlab.html) that have a language specific platform and display a list of variables. [PyCharm](https://www.jetbrains.com/pycharm/) and [Visual Studio Code](https://code.visualstudio.com) are also popular IDEs. Many IDEs offer support for terminal execution, scripts, and Jupyter display. To learn about your specific IDE, visit its official documentation.
+If you code in other languages, you might already have a favorite IDE that will work just as well in Python. [Spyder](https://www.spyder-ide.org) is a Python specific IDE that comes with the [Anaconda download](https://www.anaconda.com/products/distribution). It is perhaps the most familiar IDE if you are coming from languages such as Matlab that have a language specific platform and display a list of variables. [PyCharm](https://www.jetbrains.com/pycharm/) and [Visual Studio Code](https://code.visualstudio.com) are also popular IDEs. Many IDEs offer support for terminal execution, scripts, and Jupyter display. To learn about your specific IDE, visit its official documentation.
 
 _We recommend eventually learning how to develop and run Python code in each of these platforms._
 
@@ -75,6 +75,5 @@ Python can be run on many different platforms. You may choose where to run Pytho
 - [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
 - [Spyder](https://www.spyder-ide.org)
 - [Anaconda](https://www.anaconda.com/products/distribution)
-- [Matlab](https://www.mathworks.com/products/matlab.html)
 - [PyCharm](https://www.jetbrains.com/pycharm/)
 - [Visual Studio Code](https://code.visualstudio.com)

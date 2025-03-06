@@ -16,19 +16,17 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
@@ -39,11 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6f14dede" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -82,8 +79,7 @@
     <link rel="prev" title="Pandas" href="../pandas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="4 February 2025"/>
+    <meta name="docbuild:last-update" content="6 March 2025"/>
   </head>
   
   
@@ -122,7 +118,7 @@
     
     
     <img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-light" alt="Pythia Foundations - Home"/>
-    <img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark pst-js-only" alt="Pythia Foundations - Home"/>
+    <script>document.write(`<img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark" alt="Pythia Foundations - Home"/>`);</script>
   
   
 </a></div>
@@ -363,6 +359,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -473,14 +470,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
         </div>
@@ -554,7 +546,7 @@
 <p>…is a <strong>labeled</strong>, two-dimensional columnar structure, similar to a table, spreadsheet, or the R <code class="docutils literal notranslate"><span class="pre">data.frame</span></code>.</p>
 <p><img alt="dataframe schematic" src="https://github.com/pandas-dev/pandas/raw/main/doc/source/_static/schemas/01_table_dataframe.svg" /></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">columns</span></code> that make up our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be lists, dictionaries, NumPy arrays, pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code>, or many other data types not mentioned here. Within these <code class="docutils literal notranslate"><span class="pre">columns</span></code>, you can have data values of many different data types used in Python and NumPy, including text, numbers, and dates/times. The first column of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, shown in the image above in dark gray, is uniquely referred to as an <code class="docutils literal notranslate"><span class="pre">index</span></code>; this column contains information characterizing each row of our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. Similar to any other <code class="docutils literal notranslate"><span class="pre">column</span></code>, the <code class="docutils literal notranslate"><span class="pre">index</span></code> can label rows by text, numbers, datetime objects, and many other data types. Datetime objects are a quite popular way to label rows.</p>
-<p>For our first example using Pandas DataFrames, we start by reading in some data in comma-separated value (<code class="docutils literal notranslate"><span class="pre">.csv</span></code>) format. We retrieve this dataset from the Pythia DATASETS class (imported at the top of this page); however, the dataset was originally contained within the NCDC teleconnections database. This dataset contains many types of geoscientific data, including El Nino/Southern Oscillation indices. For more information on this dataset, review the description <a class="reference external" href="https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/">here</a>.</p>
+<p>For our first example using Pandas DataFrames, we start by reading in some data in comma-separated value (<code class="docutils literal notranslate"><span class="pre">.csv</span></code>) format. We retrieve this dataset from the Pythia <code class="docutils literal notranslate"><span class="pre">DATASETS</span></code> class (imported at the top of this page); however, the dataset was originally contained within the NCDC teleconnections database. This dataset contains many types of geoscientific data, including El Nino/Southern Oscillation (ENSO) indices. See <a class="reference external" href="https://www.ncei.noaa.gov/access/monitoring/enso/sst">here</a> for more information on these indices and the underlying data.</p>
 <div class="admonition alert alert-info">
 <p class="admonition-title">Info</p>
 <p>As described above, we are retrieving the datasets for these examples from Project Pythia’s custom library of example data. In order to retrieve datasets from this library, you must use the statement <code>from pythia_datasets import DATASETS</code>. This is shown and described in the Imports section at the top of this page. The <code>fetch()</code> method of the <code>DATASETS</code> class will automatically download the data file specified as a string argument, in this case <code>enso_data.csv</code>, and cache the file locally, assuming the argument corresponds to a valid Pythia example dataset. This is illustrated in the following example.</p>
@@ -1112,7 +1104,7 @@ Name: Nino34, Length: 472, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2839/737336773.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2920/737336773.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
   nino34_series[3]
 </pre></div>
 </div>
@@ -1463,7 +1455,7 @@ Name: Nino34, Length: 472, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2839/541596450.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2920/541596450.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
   df[&quot;Nino34&quot;][3]
 </pre></div>
 </div>
@@ -2261,7 +2253,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/56e9558280e22d125f2458bf98587418f1d5138a4546cf3f6797a5bab364d828.png" src="../../_images/56e9558280e22d125f2458bf98587418f1d5138a4546cf3f6797a5bab364d828.png" />
+<img alt="../../_images/67ad2eb3b4053abdc8bca90e0ba0dd6c8294a715d38845e94aa5709ff3278a36.png" src="../../_images/67ad2eb3b4053abdc8bca90e0ba0dd6c8294a715d38845e94aa5709ff3278a36.png" />
 </div>
 </div>
 <p>Before, we called <code class="docutils literal notranslate"><span class="pre">.plot()</span></code>, which generated a single line plot. Line plots can be helpful for understanding some types of data, but there are other types of data that can be better understood with different plot types. For example, if your data values form a distribution, you can better understand them using a histogram plot.</p>
@@ -2273,7 +2265,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c502748740ff7aa34fa5f89a6b984c1f7258357ab878f0c313476aa68efc7d89.png" src="../../_images/c502748740ff7aa34fa5f89a6b984c1f7258357ab878f0c313476aa68efc7d89.png" />
+<img alt="../../_images/6f2a6df23d3111128fa021d357fc0bda7d8eedaa23094545799d1c9d7cb0cdf6.png" src="../../_images/6f2a6df23d3111128fa021d357fc0bda7d8eedaa23094545799d1c9d7cb0cdf6.png" />
 </div>
 </div>
 <p>The histogram plot helped us better understand our data; there are clear differences in the distributions. To even better understand this type of data, it may also be helpful to create a box plot. This can be done using the same line of code, with one change: we call the <code class="docutils literal notranslate"><span class="pre">box</span></code> method instead of <code class="docutils literal notranslate"><span class="pre">hist</span></code>.</p>
@@ -2284,7 +2276,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6e669c136fd12e67942f69cfdc2fa891158ff986d2dbe49214ac189b836e156b.png" src="../../_images/6e669c136fd12e67942f69cfdc2fa891158ff986d2dbe49214ac189b836e156b.png" />
+<img alt="../../_images/58974d19f24cf14f7588430ad9cc76119cf739b98d47f414cf76b1c54e851a2c.png" src="../../_images/58974d19f24cf14f7588430ad9cc76119cf739b98d47f414cf76b1c54e851a2c.png" />
 </div>
 </div>
 <p>Just like the histogram plot, this box plot indicates a clear difference in the distributions. Using multiple types of plot in this way can be useful for verifying large datasets. The pandas plotting methods are capable of creating many different types of plots. To see how to use the plotting methods to generate each type of plot, please review the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">pandas plot documentation</a>.</p>
@@ -2304,7 +2296,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/879cd3e167a35c08d10187e1b7e67739880684010e12776332f98dd2b4a7321d.png" src="../../_images/879cd3e167a35c08d10187e1b7e67739880684010e12776332f98dd2b4a7321d.png" />
+<img alt="../../_images/de0b918c6380397381a98149d2b5fb19344bb02f14c88b9cbe3b97e19618381d.png" src="../../_images/de0b918c6380397381a98149d2b5fb19344bb02f14c88b9cbe3b97e19618381d.png" />
 </div>
 </div>
 <p>Although plotting data can provide a clear visual picture of data values, sometimes a more quantitative look at data is warranted. As elaborated on in the next section, this can be achieved using the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method.  The <code class="docutils literal notranslate"><span class="pre">describe</span></code> method is called on the entire <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, and returns various summarized statistics for each column in the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</p>
@@ -2988,7 +2980,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d00929fce3a600b97a30c0558687189573217453d71280e04c1f7c211080198b.png" src="../../_images/d00929fce3a600b97a30c0558687189573217453d71280e04c1f7c211080198b.png" />
+<img alt="../../_images/25216194e75b031e5326e04fccbe39692cee8a128c989ef00cc7d6ceaabbfed5.png" src="../../_images/25216194e75b031e5326e04fccbe39692cee8a128c989ef00cc7d6ceaabbfed5.png" />
 </div>
 </div>
 </section>
@@ -3649,7 +3641,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/56e9558280e22d125f2458bf98587418f1d5138a4546cf3f6797a5bab364d828.png" src="../../_images/56e9558280e22d125f2458bf98587418f1d5138a4546cf3f6797a5bab364d828.png" />
+<img alt="../../_images/67ad2eb3b4053abdc8bca90e0ba0dd6c8294a715d38845e94aa5709ff3278a36.png" src="../../_images/67ad2eb3b4053abdc8bca90e0ba0dd6c8294a715d38845e94aa5709ff3278a36.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3659,11 +3651,11 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2839/233158901.py:1: FutureWarning: &#39;Y&#39; is deprecated and will be removed in a future version, please use &#39;YE&#39; instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2920/233158901.py:1: FutureWarning: &#39;Y&#39; is deprecated and will be removed in a future version, please use &#39;YE&#39; instead.
   df.Nino34.resample(&#39;1Y&#39;).mean().plot();
 </pre></div>
 </div>
-<img alt="../../_images/30849770be909b06052a0793029ddae8ea677f9ec98c57360d894f1976061297.png" src="../../_images/30849770be909b06052a0793029ddae8ea677f9ec98c57360d894f1976061297.png" />
+<img alt="../../_images/1a4c639b12eac24104c764fd6c8d5001c3890b211500d2d29d2be500b3b9f3d2.png" src="../../_images/1a4c639b12eac24104c764fd6c8d5001c3890b211500d2d29d2be500b3b9f3d2.png" />
 </div>
 </div>
 </section>
@@ -4105,7 +4097,7 @@ Name: Nino34_degK, Length: 472, dtype: float64
 <section id="resources-and-references">
 <h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <ol class="arabic simple">
-<li><p><a class="reference external" href="https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/">NOAA NCDC ENSO Dataset Used in this Example</a></p></li>
+<li><p><a class="reference external" href="https://www.ncei.noaa.gov/access/monitoring/enso/sst">ENSO data used in this example</a></p></li>
 <li><p><a class="reference external" href="https://pandas.pydata.org/docs/getting_started/index.html#getting-started">Getting Started with Pandas</a></p></li>
 <li><p><a class="reference external" href="https://pandas.pydata.org/docs/user_guide/index.html#user-guide">Pandas User Guide</a></p></li>
 </ol>
@@ -4393,16 +4385,24 @@ Name: Nino34_degK, Length: 472, dtype: float64
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -4440,7 +4440,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 4 February 2025.
+  Last updated on 6 March 2025.
   <br/>
 </p>
   </div>
@@ -4457,8 +4457,8 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   </div>
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
      
@@ -4569,7 +4569,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 4 February 2025.
+          Last updated on 6 March 2025.
         </p>
       </div>
     </div>

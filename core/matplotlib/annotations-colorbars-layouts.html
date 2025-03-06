@@ -16,19 +16,17 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
@@ -39,11 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6f14dede" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -84,8 +81,7 @@
     <link rel="prev" title="Histograms, Pie Charts, and Animations" href="histograms-piecharts-animation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="4 February 2025"/>
+    <meta name="docbuild:last-update" content="6 March 2025"/>
   </head>
   
   
@@ -124,7 +120,7 @@
     
     
     <img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-light" alt="Pythia Foundations - Home"/>
-    <img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark pst-js-only" alt="Pythia Foundations - Home"/>
+    <script>document.write(`<img src="../../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark" alt="Pythia Foundations - Home"/>`);</script>
   
   
 </a></div>
@@ -365,6 +361,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -475,14 +472,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
         </div>
@@ -571,7 +563,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/fe9b1df2585a267469fded37b1be1e4893539e01425a83b13efd161e6d192fb9.png" src="../../_images/fe9b1df2585a267469fded37b1be1e4893539e01425a83b13efd161e6d192fb9.png" />
+<img alt="../../_images/af757d199c94eb793ffe3b7abca7c3fcd14dfc114d3e379a90167d3e89f8906e.png" src="../../_images/af757d199c94eb793ffe3b7abca7c3fcd14dfc114d3e379a90167d3e89f8906e.png" />
 </div>
 </div>
 </section>
@@ -587,7 +579,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/bca4bdd83f7053142c2f07375d863d8241eb4190ddc466bbd16603acae367864.png" src="../../_images/bca4bdd83f7053142c2f07375d863d8241eb4190ddc466bbd16603acae367864.png" />
+<img alt="../../_images/5b0c8e7360e90f36c08fb9a92b309f6282e88f44c0fca5c7b7f1e962bc0afd51.png" src="../../_images/5b0c8e7360e90f36c08fb9a92b309f6282e88f44c0fca5c7b7f1e962bc0afd51.png" />
 </div>
 </div>
 </section>
@@ -616,7 +608,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/a6c292daad9ed5a528478b1f570fa44c0195abbf71381d8a0290ff194f22156b.png" src="../../_images/a6c292daad9ed5a528478b1f570fa44c0195abbf71381d8a0290ff194f22156b.png" />
+<img alt="../../_images/0c741f8a2e80bd9909cf22cd544b2769a2679f21c55aa95d27b258fb4d224b13.png" src="../../_images/0c741f8a2e80bd9909cf22cd544b2769a2679f21c55aa95d27b258fb4d224b13.png" />
 </div>
 </div>
 <p>As you can see, the equation was correctly rendered in the plot above. However, the equation appears quite small.  We can increase the size of the text using the <code class="docutils literal notranslate"><span class="pre">fontsize</span></code> keyword argument, and center the equation using the <code class="docutils literal notranslate"><span class="pre">ha</span></code> (horizontal alignment) keyword argument.</p>
@@ -632,7 +624,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/a32ad683f944aaea9904af21e7e2d3bbb6d0d08499e03abb67edc8fc238009f7.png" src="../../_images/a32ad683f944aaea9904af21e7e2d3bbb6d0d08499e03abb67edc8fc238009f7.png" />
+<img alt="../../_images/9ff84e995e2e2a53239174ce8f6e80a56b6e5ce655ef0ee8750f7f1cc4e03ce9.png" src="../../_images/9ff84e995e2e2a53239174ce8f6e80a56b6e5ce655ef0ee8750f7f1cc4e03ce9.png" />
 </div>
 </div>
 <section id="add-a-box-around-the-text">
@@ -668,7 +660,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c3d12727387b523c276b6df34d632700c244e66e45186ef37aefd27b8c9ac70f.png" src="../../_images/c3d12727387b523c276b6df34d632700c244e66e45186ef37aefd27b8c9ac70f.png" />
+<img alt="../../_images/be6e4e6112f603ec9e9d9250c7d4a575a48b6df0550fc23fad68414a2bdb833c.png" src="../../_images/be6e4e6112f603ec9e9d9250c7d4a575a48b6df0550fc23fad68414a2bdb833c.png" />
 </div>
 </div>
 </section>
@@ -744,7 +736,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/07849c266c49b3ad0d43917944ab8465f6f73611247f14e2005743aafa49d115.png" src="../../_images/07849c266c49b3ad0d43917944ab8465f6f73611247f14e2005743aafa49d115.png" />
+<img alt="../../_images/5328e893952471d43c28e717847d1c4e8a72d971f5c67ddebe41273b14cc146d.png" src="../../_images/5328e893952471d43c28e717847d1c4e8a72d971f5c67ddebe41273b14cc146d.png" />
 </div>
 </div>
 <p>We can change which colormap to use by setting the keyword argument <code class="docutils literal notranslate"><span class="pre">cmap</span> <span class="pre">=</span> <span class="pre">'colormap_name'</span></code> in the plotting function call.  This sets the colormap not only for the plot, but for the colorbar as well.  In this case, we use the <code class="docutils literal notranslate"><span class="pre">magma</span></code> colormap:</p>
@@ -759,7 +751,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/84a757854e9edd9848fbc99ed809e97149baf659f8ae81d5f32d2b163116f7e3.png" src="../../_images/84a757854e9edd9848fbc99ed809e97149baf659f8ae81d5f32d2b163116f7e3.png" />
+<img alt="../../_images/7578d74d3a2d8e1454d15124c904d197f128e714c5a4b95bbcc5ead52ee172c4.png" src="../../_images/7578d74d3a2d8e1454d15124c904d197f128e714c5a4b95bbcc5ead52ee172c4.png" />
 </div>
 </div>
 </section>
@@ -778,10 +770,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f834650da10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f0af730a9d0&gt;
 </pre></div>
 </div>
-<img alt="../../_images/3109b627535d227c3e6a601ecf46a31c18cf399c7a7dbc53f1967402aff7d287.png" src="../../_images/3109b627535d227c3e6a601ecf46a31c18cf399c7a7dbc53f1967402aff7d287.png" />
+<img alt="../../_images/8606011e3a7af2fc37974c0932c1e1000c8f33b52d7526ded50dd519089a292c.png" src="../../_images/8606011e3a7af2fc37974c0932c1e1000c8f33b52d7526ded50dd519089a292c.png" />
 </div>
 </div>
 <p>You may be wondering why the call to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code> uses the argument <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code>. The explanation is as follows: <code class="docutils literal notranslate"><span class="pre">hist1</span></code> is a tuple returned by <code class="docutils literal notranslate"><span class="pre">hist2d</span></code>, and <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> contains a <code class="docutils literal notranslate"><span class="pre">matplotlib.collections.QuadMesh</span></code> that points to the colormap for the first histogram. To make sure that both histograms are using the same colormap with the same range of values, <code class="docutils literal notranslate"><span class="pre">vmax</span></code> is set to 0.18 for both plots. This ensures that both histograms are using colormaps that represent values from 0 (the default for histograms) to 0.18. Because the same data values are used for both plots, it doesn’t matter whether we pass in <code class="docutils literal notranslate"><span class="pre">hist1[3]</span></code> or <code class="docutils literal notranslate"><span class="pre">hist2[3]</span></code> to <code class="docutils literal notranslate"><span class="pre">fig.colorbar</span></code>.
@@ -808,7 +800,7 @@ You can learn more about this topic by reviewing the <a class="reference externa
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.98, &#39;Shared colormaps on data with different ranges&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/473bd4ffad390cf92bf1c0beb54729dee8d329a507f098b3df75353c4d2fd5d6.png" src="../../_images/473bd4ffad390cf92bf1c0beb54729dee8d329a507f098b3df75353c4d2fd5d6.png" />
+<img alt="../../_images/5099383254ab7f6d450c4c2ce446cbe205d8cb16c646c3fe2c5ce16cd7aeaeb2.png" src="../../_images/5099383254ab7f6d450c4c2ce446cbe205d8cb16c646c3fe2c5ce16cd7aeaeb2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -826,7 +818,7 @@ You can learn more about this topic by reviewing the <a class="reference externa
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.98, &#39;Using the contourf output from the data with a wider range&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/19c4f2dcfcb0e341c4a4110457a5dc1bd91902d9d5473da7773dc859604c905f.png" src="../../_images/19c4f2dcfcb0e341c4a4110457a5dc1bd91902d9d5473da7773dc859604c905f.png" />
+<img alt="../../_images/a1664ed5c7a734c67ec2ea75eb4fbd18b89325ef5038235b4833ae3068297b36.png" src="../../_images/a1664ed5c7a734c67ec2ea75eb4fbd18b89325ef5038235b4833ae3068297b36.png" />
 </div>
 </div>
 </section>
@@ -862,7 +854,7 @@ You can learn more about this topic by reviewing the <a class="reference externa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/3903336df34611c5005c3acef02b037251ca96ea4902788fe99a97465a19dc75.png" src="../../_images/3903336df34611c5005c3acef02b037251ca96ea4902788fe99a97465a19dc75.png" />
+<img alt="../../_images/aa3428c615bc27e245698e3a6aafd6736cfe0dd87d22a5ecf28a90bae9d33ae9.png" src="../../_images/aa3428c615bc27e245698e3a6aafd6736cfe0dd87d22a5ecf28a90bae9d33ae9.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -879,7 +871,7 @@ You can learn more about this topic by reviewing the <a class="reference externa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c8178fd23b8e5fe68449b18dfee76da4356fbc09b9c2761d1f934e5c238e44e5.png" src="../../_images/c8178fd23b8e5fe68449b18dfee76da4356fbc09b9c2761d1f934e5c238e44e5.png" />
+<img alt="../../_images/adf281202dcbc42c2d9768b4dcb4dec873594150f008c6e48b98a27c6a06a36c.png" src="../../_images/adf281202dcbc42c2d9768b4dcb4dec873594150f008c6e48b98a27c6a06a36c.png" />
 </div>
 </div>
 <section id="the-normalize-class">
@@ -916,7 +908,7 @@ You can learn more about this topic by reviewing the <a class="reference externa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0d451bcabe36dea8ad062bffc43f23647b0d10fae68322801d51ef1e86f869ab.png" src="../../_images/0d451bcabe36dea8ad062bffc43f23647b0d10fae68322801d51ef1e86f869ab.png" />
+<img alt="../../_images/2ca4f5e636547029e5ed2ad3220a676f5a99036b1366f5698cc89ea934e73209.png" src="../../_images/2ca4f5e636547029e5ed2ad3220a676f5a99036b1366f5698cc89ea934e73209.png" />
 </div>
 </div>
 <p>You’ll notice there is not a colorbar plotted by default. When constructing the colorbar, we need to specify the following:</p>
@@ -944,13 +936,13 @@ You can learn more about this topic by reviewing the <a class="reference externa
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2675/1337655102.py:12: UserWarning: Adding colorbar to a different Figure &lt;Figure size 640x480 with 4 Axes&gt; than &lt;Figure size 640x480 with 3 Axes&gt; which fig.colorbar is called on.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2758/1337655102.py:12: UserWarning: Adding colorbar to a different Figure &lt;Figure size 640x480 with 4 Axes&gt; than &lt;Figure size 640x480 with 3 Axes&gt; which fig.colorbar is called on.
   fig.colorbar(histA[3], ax=[axdict[&#39;A&#39;], axdict[&#39;B&#39;]], location=&#39;bottom&#39;)
-/tmp/ipykernel_2675/1337655102.py:13: UserWarning: Adding colorbar to a different Figure &lt;Figure size 640x480 with 5 Axes&gt; than &lt;Figure size 640x480 with 3 Axes&gt; which fig.colorbar is called on.
+/tmp/ipykernel_2758/1337655102.py:13: UserWarning: Adding colorbar to a different Figure &lt;Figure size 640x480 with 5 Axes&gt; than &lt;Figure size 640x480 with 3 Axes&gt; which fig.colorbar is called on.
   fig.colorbar(histC[3], ax=[axdict[&#39;C&#39;]], location=&#39;right&#39;);
 </pre></div>
 </div>
-<img alt="../../_images/4361a1f868de717ef2d1c5e49fa60da867e89d0c22bd737e6babb34896d3209f.png" src="../../_images/4361a1f868de717ef2d1c5e49fa60da867e89d0c22bd737e6babb34896d3209f.png" />
+<img alt="../../_images/3564dc00e8a79edd1abb5a61d82cf25f5c356233d4fc013c3bb959e27d1794ec.png" src="../../_images/3564dc00e8a79edd1abb5a61d82cf25f5c356233d4fc013c3bb959e27d1794ec.png" />
 </div>
 </div>
 </section>
@@ -1256,16 +1248,24 @@ You can learn more about this topic by reviewing the <a class="reference externa
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -1303,7 +1303,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 4 February 2025.
+  Last updated on 6 March 2025.
   <br/>
 </p>
   </div>
@@ -1320,8 +1320,8 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   </div>
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
      
@@ -1432,7 +1432,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 4 February 2025.
+          Last updated on 6 March 2025.
         </p>
       </div>
     </div>
