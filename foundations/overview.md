@@ -1,8 +1,10 @@
 # Overview
 
-This section contains cross-referenced tutorial material for foundational computing skills that one needs in order to work effectively with the open-source Scientific Python stack.
+![Foundations Infographic](../images/ProjectPythia_Foundations_Infographic_v4.jpg)
 
-Familiarizing yourself with these topics first will allow a new user to get the most out the Python-specific material in the [Core Scientific Python Packages](../core/overview) section of the book!
+This **Foundational Skills** section of the book contains cross-referenced tutorial material for computing skills that one needs in order to work effectively with the open-source Scientific Python stack.
+
+Familiarizing yourself with these topics first will allow you to get the most out the Python-specific material in the [Core Scientific Python Packages](../core/overview) section of the book!
 
 ## Topics
 
