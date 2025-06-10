@@ -1,5 +1,9 @@
 # Overview
 
+![Foundations Infographic](../images/ProjectPythia_Foundations_Infographic_v4.jpg)
+
+You've made it to the **Core Packages** section of the book!
+
 As you might know by now that Python is a programming language. To make your job easier, developers of this programming language provide users like you with libraries (or packages). Core libraries will help you with fundamental numerical functions, and high-level libraries will help you efficiently analyze and visualize your data. Some of these libraries are used all across the Python community, while others are domain-specific. Read below to learn more about core and high-level libraries, and domain-specific libraries of the geoscience community. We suggest that new users start with the [Foundational Skills](../foundations/overview) section in order to get the most out of the tutorials below.
 
 ## Core libraries
@@ -105,11 +109,9 @@ Similarly, a group at the Atmospheric Radiation Measurement (ARM) Climate Resear
 have released their Python ARM Radar Toolkit ([Py-ART](http://arm-doe.github.io/pyart/))
 for analysing weather radar data.
 
-There are too many domain specific libraries to mention here,
-but online resources such as the
-[Python for Atmosphere and Ocean Science (PyAOS) package index](https://pyaos.github.io/packages/)
-attempt to keep track of the domain-specific libraries in their field.
-Also check out the [Pythia Resource Gallery](https://projectpythia.org/resource-gallery.html) and try filtering by domain.
+A great place to start learning about use-cases for domain-specific libraries across the geosciences is the [Pythia Cookbook Gallery](https://cookbooks.projectpythia.org). Also check out the [Pythia Resource Gallery](https://projectpythia.org/resource-gallery.html) and try filtering by domain. The [Python for Atmosphere and Ocean Science (PyAOS) package index](https://pyaos.github.io/packages/)
+attempt to keep track of the domain-specific libraries in these subfiels.
+
 
 ## Tutorials
 
