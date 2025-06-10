@@ -33,16 +33,17 @@ Package management is useful because you may want to update a package for one of
 
 ## Installing Conda
 
-We recommend you install Miniconda. You can do that by following the [instructions for your machine](https://docs.conda.io/en/latest/miniconda.html).
+We recommend you install Miniforge. You can do that by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
 
-Miniconda only comes with the `conda` package management system; it is a pared-down version of the full Anaconda Python distribution.
+Miniforge uses the `conda` package management system and is based on Miniconda, which is a pared-down version of the full Anaconda Python distribution.
 
 [Installing Anaconda](https://docs.anaconda.com/anaconda/install/) takes longer and uses up more disk space, but provides you with more functionality, including Spyder (a Python-specific integrated development environment or IDE) and Jupyter, in addition to other immediately installed packages. Also, the interface of Anaconda is great if you are uncomfortable with the terminal.
 
-We recommend Miniconda for two reasons:
+We recommend Miniforge for these reasons:
 
 1. It's quicker and takes up less disk space.
 2. It encourages you to install only the packages you need in reproducible isolated environments for specific projects. This is generally a more robust way to work with open source tools.
+3. It uses `conda-forge` as the default channel for packages, which is our recommended way to get up-to-date, interoperable packages..
 
 Once you have `conda` via the Miniconda installer, the next step is to create an environment and install packages.
 

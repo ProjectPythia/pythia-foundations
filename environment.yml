@@ -13,13 +13,13 @@ dependencies:
   - dask
   - pyproj
   - pythia-datasets
-  - python
+  - python<3.12 # Waiting on https://github.com/jupyter/jupyter_events/issues/99
   - scipy
   - ffmpeg
   - xarray
   - python-graphviz
   - graphviz
-  - setuptools>=69.0.3
+  - setuptools
   - sphinx-pythia-theme
   - mystmd
   - nodejs
