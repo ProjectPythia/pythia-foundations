@@ -19,7 +19,7 @@ dependencies:
   - xarray
   - python-graphviz
   - graphviz
-  - setuptools>=69.0.3
+  - setuptools
   - sphinx-pythia-theme
   - mystmd
   - nodejs

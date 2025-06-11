@@ -1,9 +1,14 @@
 # How to Use This Book
 
-## Preamble
+![Foundations Infographic](../images/ProjectPythia_Foundations_Infographic_v4.jpg)
 
-Pythia Foundations is intended to educate the reader on the essentials
-for using the Scientific Python Ecosystem (SPE): a collection of
+## Overview
+
+Pythia Foundations is a geoscience-flavored introduction to essential tools in the Scientific Python Ecosystem (SPE) and [Pangeo](https://pangeo.io) stack. It covers the foundational knowledge that's needed to get started with Python in the computational geosciences, as well as to become an effective citizen-practitioner in key open geoscience software ecosystems. The intended audience is anyone from undergraduate students through established geoscientists who are relatively new to working in Python. The tutorials in this book also serve as references and prerequisites for the more advanced and domain-specific content in the [Pythia Cookbook Gallery](https://cookbooks.projectpythia.org).
+
+## What's included
+
+The Scientific Python Ecosystem (SPE) is a collection of
 open source Python packages that support analysis, manipulation,
 and visualization of scientific data. While Project Pythia is focused
 on the geoscience communities, the material contained in Pythia
@@ -96,7 +101,7 @@ can be done with two commands from the terminal, one to create the
 environment and one to activate it:
 
 ```
-conda env create --force -f https://raw.githubusercontent.com/ProjectPythia/pythia-foundations/main/environment.yml
+conda env create --yes -f https://raw.githubusercontent.com/ProjectPythia/pythia-foundations/main/environment.yml
 conda activate pythia-book-dev
 ```
 
