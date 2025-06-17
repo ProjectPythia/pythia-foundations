@@ -6,6 +6,7 @@ jobs:
   build:
     uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
     with:
-      environment_name: pythia-book-dev
+      build_command: 'myst build --execute --html'
       artifact_name: book-zip-${{ github.event.number }}
+      base_url: '/${{ github.event.repository.name }}/_preview/${{ github.event.number }}'
       # Other input options are possible, see ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml
