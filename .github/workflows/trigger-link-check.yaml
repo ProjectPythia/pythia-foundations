@@ -4,4 +4,4 @@ on:
 
 jobs:
   link-check:
-    uses: ProjectPythia/cookbook-actions/.github/workflows/link-checker.yaml@main
+    uses: brian-rose/cookbook-actions/.github/workflows/link-checker.yaml@micromamba
