@@ -1,0 +1,16 @@
+name: publish-book
+
+on:
+  # Trigger the workflow on push to main branch
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: brian-rose/cookbook-actions/.github/workflows/build-book.yaml@myst-defaults
+
+  deploy:
+    needs: build
+    uses: ProjectPythia/cookbook-actions/.github/workflows/deploy-book.yaml@main
