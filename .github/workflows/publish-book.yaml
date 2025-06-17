@@ -9,10 +9,7 @@ on:
 
 jobs:
   build:
-    uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
-    with:
-      build_command: 'myst build --execute --html'
-
+    uses: brian-rose/cookbook-actions/.github/workflows/build-book.yaml@myst-defaults
 
   deploy:
     needs: build
