@@ -15,3 +15,74 @@ project:
     VCS: Version control system
     FTP: File transfer protocol
     TCP: Transmission Control Protocol
+  toc:
+    - file: landing-page.md
+    - title: Preamble
+      children:
+        - file: preamble/how-to-use.md
+        - file: preamble/how-to-cite.md
+    - title: Foundational skills
+      children:
+        - file: foundations/overview.md
+        - file: foundations/why-python.md
+        - file: foundations/getting-started-python.md
+          children:
+            - file: foundations/quickstart.ipynb
+            - file: foundations/how-to-run-python.md
+              children:
+                - file: foundations/terminal.md
+                - file: foundations/jupyter.md
+                - file: foundations/conda.md
+        - file: foundations/getting-started-jupyter.ipynb
+          children:
+            - file: foundations/jupyterlab.ipynb
+            - file: foundations/markdown.md
+        - file: foundations/getting-started-github.md
+          children:
+            - file: foundations/github/what-is-github.md
+            - file: foundations/github/github-repos.md
+            - file: foundations/github/github-issues.md
+            - file: foundations/github/github-cloning-forking.md
+            - file: foundations/github/github-setup-advanced.md
+            - file: foundations/github/basic-git.md
+            - file: foundations/github/git-branches.md
+            - file: foundations/github/github-pull-request.md
+            - file: foundations/github/review-pr.md
+            - file: foundations/github/github-workflows.md
+            - file: foundations/github/contribute-to-pythia.md
+    - title: Core Scientific Python packages
+      children:
+        - file: core/overview.md
+        - file: core/numpy.md
+          children:
+            - file: core/numpy/numpy-basics.ipynb
+            - file: core/numpy/intermediate-numpy.ipynb
+            - file: core/numpy/numpy-broadcasting.ipynb
+        - file: core/matplotlib.md
+          children:
+            - file: core/matplotlib/matplotlib-basics.ipynb
+            - file: core/matplotlib/histograms-piecharts-animation.ipynb
+            - file: core/matplotlib/annotations-colorbars-layouts.ipynb
+        - file: core/cartopy.md
+          children:
+            - file: core/cartopy/cartopy.ipynb
+        - file: core/datetime.md
+          children:
+            - file: core/datetime/datetime.ipynb
+        - file: core/pandas.md
+          children:
+            - file: core/pandas/pandas.ipynb
+        - file: core/data-formats.md
+          children:
+            - file: core/data-formats/netcdf-cf.ipynb
+        - file: core/xarray.md
+          children:
+            - file: core/xarray/xarray-intro.ipynb
+            - file: core/xarray/computation-masking.ipynb
+            - file: core/xarray/enso-xarray.ipynb
+            - file: core/xarray/dask-arrays-xarray.ipynb
+    - title: Appendix
+      children:
+        - file: appendix/how-to-contribute.md
+          children:
+            - file: appendix/template.ipynb
