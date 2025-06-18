@@ -1,9 +1,9 @@
+# Opening a Pull Request on GitHub
+
 ```{image} ../../images/GitHub-logo.png
 :alt: GitHub Logo
 :width: 400px
 ```
-
-# Opening a Pull Request on GitHub
 
 A Pull Request, aka a "merge request," is an event that occurs when a project contributor begins the process of merging new code changes from a feature branch with the main project repository.
 

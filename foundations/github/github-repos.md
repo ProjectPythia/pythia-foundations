@@ -1,9 +1,9 @@
+# GitHub Repositories
+
 ```{image} ../../images/GitHub-logo.png
 :alt: GitHub Logo
 :width: 400px
 ```
-
-# GitHub Repositories
 
 ## Overview:
 
