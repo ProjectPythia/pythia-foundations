@@ -4,7 +4,7 @@ on:
 
 jobs:
   build:
-    uses: brian-rose/cookbook-actions/.github/workflows/build-book.yaml@myst-defaults
+    uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@myst-defaults
     with:
       artifact_name: book-zip-${{ github.event.number }}
       base_url: '/_preview/${{ github.event.number }}'
