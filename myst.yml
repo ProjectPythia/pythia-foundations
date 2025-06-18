@@ -15,6 +15,8 @@ project:
     VCS: Version control system
     FTP: File transfer protocol
     TCP: Transmission Control Protocol
+  settings:
+    allowDangerousHtml: true
   toc:
     - file: landing-page.md
     - title: Preamble
