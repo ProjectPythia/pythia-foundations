@@ -1,10 +1,10 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 extends:
-  - https://raw.githubusercontent.com/projectpythia-mystmd/pythia-config/main/pythia.yml
+  - https://raw.githubusercontent.com/projectpythia/pythia-config/main/pythia.yml
 project:
   title: Pythia Foundations
-  github: https://github.com/projectpythia-mystmd/pythia-foundations
+  github: https://github.com/projectpythia/pythia-foundations
   author:
     - Project Pythia Community
   copyright: '2024'
