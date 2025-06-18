@@ -3,7 +3,6 @@ channels:
   - conda-forge
 dependencies:
   - cartopy
-  - jupyter-book
   - jupyterlab
   - matplotlib
   - nc-time-axis
@@ -19,7 +18,5 @@ dependencies:
   - xarray
   - python-graphviz
   - graphviz
-  - setuptools
-  - sphinx-pythia-theme
   - mystmd
   - nodejs
