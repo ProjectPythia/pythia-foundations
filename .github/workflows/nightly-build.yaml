@@ -9,8 +9,6 @@ jobs:
   build:
     if: ${{ github.repository_owner == 'ProjectPythia' }}
     uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
-    with:
-      build_command: 'myst build --execute --html'
 
   link-check:
     if: ${{ github.repository_owner == 'ProjectPythia' }}
