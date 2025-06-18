@@ -9,6 +9,8 @@ jobs:
   build:
     if: ${{ github.repository_owner == 'ProjectPythia' }}
     uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
+    with:
+      base_url: ''
 
   link-check:
     if: ${{ github.repository_owner == 'ProjectPythia' }}
