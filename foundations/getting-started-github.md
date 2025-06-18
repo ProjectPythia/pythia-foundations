@@ -2,7 +2,7 @@
 
 ```{image} ../images/GitHub-logo.png
 :alt: GitHub Logo
-:width: 600px
+:width: 400px
 ```
 
 Python and Jupyter are cool technologies, but they only scratch the surface of why you might want to adopt Python for your geoscience workflow.
