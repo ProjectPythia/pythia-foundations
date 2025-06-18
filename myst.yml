@@ -53,12 +53,12 @@ project:
     - title: Core Scientific Python packages
       children:
         - file: core/overview.md
-        - file: core/numpy
+        - file: core/numpy.md
           children:
             - file: core/numpy/numpy-basics.ipynb
             - file: core/numpy/intermediate-numpy.ipynb
             - file: core/numpy/numpy-broadcasting.ipynb
-        - file: core/matplotlib
+        - file: core/matplotlib.md
           children:
             - file: core/matplotlib/matplotlib-basics.ipynb
             - file: core/matplotlib/histograms-piecharts-animation.ipynb
