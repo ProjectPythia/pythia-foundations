@@ -1,6 +1,6 @@
 # NumPy
 
-:::{img} https://github.com/numpy/numpy/raw/main/branding/logo/primary/numpylogo.svg 
+:::{img} https://github.com/numpy/numpy/raw/main/branding/logo/primary/numpylogo.svg
 :alt: NumPy Logo
 :width: 250
 :::
