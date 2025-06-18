@@ -11,7 +11,7 @@ jobs:
   build:
     uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
     with:
-      environment_name: pythia-book-dev
+        base_url: ''
 
   deploy:
     needs: build

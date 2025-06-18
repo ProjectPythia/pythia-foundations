@@ -3,7 +3,6 @@ channels:
   - conda-forge
 dependencies:
   - cartopy
-  - jupyter-book
   - jupyterlab
   - matplotlib
   - nc-time-axis
@@ -13,11 +12,11 @@ dependencies:
   - dask
   - pyproj
   - pythia-datasets
-  - python<3.12 # Waiting on https://github.com/jupyter/jupyter_events/issues/99
+  - python
   - scipy
   - ffmpeg
   - xarray
   - python-graphviz
   - graphviz
-  - setuptools
-  - sphinx-pythia-theme
+  - mystmd
+  - nodejs
