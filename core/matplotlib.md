@@ -1,6 +1,6 @@
-![Matplotlib logo](https://matplotlib.org/stable/_images/sphx_glr_logos2_003.png)
-
 # Matplotlib
+
+![Matplotlib logo](https://matplotlib.org/stable/_images/sphx_glr_logos2_003.png)
 
 [Matplotlib](https://matplotlib.org) is the go-to library for plotting within Python. Numerous packages and libraries build off of Matplotlib, making it the de facto standard Python plotting package. If you were to learn a single plotting tool to keep in your toolbox, this is it.
 

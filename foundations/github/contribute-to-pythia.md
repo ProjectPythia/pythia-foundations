@@ -1,9 +1,9 @@
+# Contribute to Project Pythia via GitHub
+
 ```{image} ../../images/GitHub-logo.png
 :alt: GitHub Logo
 :width: 400px
 ```
-
-# Contribute to Project Pythia via GitHub
 
 ## Overview:
 

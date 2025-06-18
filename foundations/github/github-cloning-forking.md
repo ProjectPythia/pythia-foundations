@@ -1,9 +1,9 @@
+# Cloning and Forking a Repository
+
 ```{image} ../../images/GitHub-logo.png
 :alt: GitHub Logo
 :width: 400px
 ```
-
-# Cloning and Forking a Repository
 
 ## Overview:
 

@@ -1,9 +1,9 @@
+# Basic Version Control with _git_
+
 ```{image} ../../images/Git-Logo-2Color.png
 :alt: Git Logo
 :width: 400px
 ```
-
-# Basic Version Control with _git_
 
 ## Overview:
 

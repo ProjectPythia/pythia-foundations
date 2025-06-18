@@ -1,9 +1,9 @@
+# Configuring Your GitHub Account
+
 ```{image} ../../images/GitHub-logo.png
 :alt: GitHub Logo
 :width: 400px
 ```
-
-# Configuring Your GitHub Account
 
 ## Overview:
 

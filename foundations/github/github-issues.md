@@ -1,9 +1,9 @@
+# Issues and Discussions
+
 ```{image} ../../images/GitHub-logo.png
 :alt: GitHub Logo
 :width: 400px
 ```
-
-# Issues and Discussions
 
 ## Overview:
 
