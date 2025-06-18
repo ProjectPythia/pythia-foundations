@@ -20,6 +20,6 @@ This collection covers the foundational skills everyone needs to get started wit
 ```{image} https://raw.githubusercontent.com/pangeo-data/pangeo/master/docs/_static/small_e_logo_cropped.png
 :alt: Pangeo logo
 :width: 80px
-``` 
+```
 ````
 _Brought to you by [Project Pythia](https://projectpythia.org), the education working group for [Pangeo](https://pangeo.io)_
