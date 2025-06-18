@@ -1,1 +1,1 @@
-import{a}from"/pythia-foundations/_preview/515/build/_shared/chunk-B5U35EIM.js";import"/pythia-foundations/_preview/515/build/_shared/chunk-DZADZCIM.js";import"/pythia-foundations/_preview/515/build/_shared/chunk-2NH4LW52.js";export default a();
+import{a}from"/_preview/515/build/_shared/chunk-B5U35EIM.js";import"/_preview/515/build/_shared/chunk-DZADZCIM.js";import"/_preview/515/build/_shared/chunk-2NH4LW52.js";export default a();
