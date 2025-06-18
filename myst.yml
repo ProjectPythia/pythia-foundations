@@ -86,6 +86,3 @@ project:
         - file: appendix/how-to-contribute.md
           children:
             - file: appendix/template.ipynb
-  jupyter:
-      binder:
-        repo: projectpythia/pythia-foundations
