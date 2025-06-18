@@ -20,5 +20,4 @@ This collection covers the foundational skills everyone needs to get started wit
 :alt: Pangeo logo
 :width: 80px
 ```
-_Brought to you by [Project Pythia](https://projectpythia.org), the education working group for [Pangeo](https://pangeo.io)_ 
-
+_Brought to you by [Project Pythia](https://projectpythia.org), the education working group for [Pangeo](https://pangeo.io)_
