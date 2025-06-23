@@ -2,10 +2,17 @@
 title: 'Pythia Foundations: A community learning resource for Python-based computing in the geosciences'
 tags:
   - Python
-#   - astronomy
-#   - dynamics
-#   - galactic dynamics
-#   - milky way
+  - Geoscience
+  - Jupyter
+  - GitHub
+  - Numpy
+  - Matplotlib
+  - Cartopy
+  - Datetime
+  - Pandas
+  - Netcdf
+  - Xarray
+  - Dask
 authors:
   - name: Brian E. J. Rose
     orcid: 0000-0002-9961-3821
