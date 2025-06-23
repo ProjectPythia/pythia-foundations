@@ -63,6 +63,8 @@ observe instantly how results change.
 There are two ways that you can execute the Pythia Foundations book
 chapters. Both are described below.
 
+![Annotated Pythia Foundations home page](../images/foundations_diagram.png)
+
 ### Interacting with Jupyter Notebooks in the cloud via Binder
 
 The simplest way to interact with a Jupyter Notebook is through
@@ -71,7 +73,7 @@ Jupyter Notebook in the cloud. The details of how this works are not
 important for now. All you need to know is how to launch a Pythia
 Foundations book chapter via Binder. Simply navigate your mouse to
 the top right corner of the book chapter you are viewing and click
-on the rocket ship icon (see the image at the end of this page), and a text box will appear.
+on the rocket ship icon (see the screenshot above), and a text box will appear.
 Type or paste the Pythia Binder link (`https://binder.projectpythia.org`) and click "Launch".
 After a moment you should be presented with a
 notebook that you can interact with. You’ll be able to execute code
@@ -129,11 +131,9 @@ A local Jupyter Notebook server should open in your web browser.
 Simply open the .ipynb file using the Notebook server’s file browser
 and you are good to go. If you want to work with many Pythia Foundations
 notebooks, you might want to “clone the site”
-and download all of the notebooks. First, click on the GitHub icon (see figure below)
+and download all of the notebooks. First, click on the GitHub icon (see the screenshot above)
 to open the Pythia Foundations GitHub repository.
 Then follow the instructions in our Getting Started with GitHub
 [guide](https://foundations.projectpythia.org/foundations/getting-started-github.html#)
 for cloning a repository. The steps used above for configuring your
 Conda environment should work for this method as well.
-
-![Annotated Pythia Foundations home page](../images/foundations_diagram.png)
