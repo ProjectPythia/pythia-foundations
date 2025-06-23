@@ -1,7 +1,5 @@
 # How to Use This Book
 
-![Foundations Infographic](../images/ProjectPythia_Foundations_Infographic_v4.jpg)
-
 ## Overview
 
 Pythia Foundations is a geoscience-flavored introduction to essential tools in the Scientific Python Ecosystem (SPE) and [Pangeo](https://pangeo.io) stack. It covers the foundational knowledge that's needed to get started with Python in the computational geosciences, as well as to become an effective citizen-practitioner in key open geoscience software ecosystems. The intended audience is anyone from undergraduate students through established geoscientists who are relatively new to working in Python. The tutorials in this book also serve as references and prerequisites for the more advanced and domain-specific content in the [Pythia Cookbook Gallery](https://cookbooks.projectpythia.org).
@@ -17,7 +15,7 @@ aspiring scientists, working in any number of disciplines. Pythia
 Foundations makes very few assumptions about the experience level
 of the reader other than having a background in math or science,
 and being comfortable using a computer, including the command line
-terminal (i.e. the [Unix shell](https://en.wikipedia.org/wiki/Unix_shell)).
+terminal (i.e., the [Unix shell](https://en.wikipedia.org/wiki/Unix_shell)).
 Prior programming experience is not required.
 
 Lastly, in addition to the Python language and a number of fundamental
@@ -32,7 +30,7 @@ results.
 ## Organization of Pythia Foundations
 
 Pythia Foundations is organized into two main sections as seen in
-the sidebar on the left: Foundational Skills, and Core Scientific
+the sidebar on the left and the schematic below: Foundational Skills, and Core Scientific
 Python Packages. The first, Foundational Skills, covers essential
 material that all users of Project Pythia are expected to feel
 comfortable with in order to make the most of the rest of the Project
@@ -41,6 +39,8 @@ what we believe are the most important and fundamental packages
 in the Scientific Python Ecosystem. These packages serve as the
 building blocks for many of the more geoscience focused components
 of the Scientific Python Ecosystem.
+
+![Foundations Infographic](../images/ProjectPythia_Foundations_Infographic_v4.jpg)
 
 ## Running Pythia Foundations examples
 
@@ -63,6 +63,8 @@ observe instantly how results change.
 There are two ways that you can execute the Pythia Foundations book
 chapters. Both are described below.
 
+![Annotated Pythia Foundations home page](../images/foundations_diagram.png)
+
 ### Interacting with Jupyter Notebooks in the cloud via Binder
 
 The simplest way to interact with a Jupyter Notebook is through
@@ -71,8 +73,9 @@ Jupyter Notebook in the cloud. The details of how this works are not
 important for now. All you need to know is how to launch a Pythia
 Foundations book chapter via Binder. Simply navigate your mouse to
 the top right corner of the book chapter you are viewing and click
-on the rocket ship icon, (see figure below), and be sure to select
-“Launch Binder”. After a moment you should be presented with a
+on the rocket ship icon (see the screenshot above), and a text box will appear.
+Type or paste the Pythia Binder link (`https://binder.projectpythia.org`) and click "Launch".
+After a moment you should be presented with a
 notebook that you can interact with. You’ll be able to execute code
 and even change the example programs. At first the code cells
 have no output, until you execute them by pressing
@@ -83,11 +86,11 @@ Jupyter](https://foundations.projectpythia.org/foundations/getting-started-jupyt
 ### Interacting with Jupyter Books locally
 
 Sometimes it may make more sense to download a book chapter and run
-it on your local laptop or PC. Perhaps you want to co-opt a book
+it on your local laptop or PC. Perhaps you want to co-opt a notebook
 for your own purposes, or load your own local data. Downloading an
 individual chapter is trivial: click on the download icon, also
 located in the top right corner of the book chapter you are viewing,
-and select “.ipynb”.
+and click on the filename that appears.
 
 That was the easy part. Getting the notebook to execute locally may
 take a little more work. The book was created to run in a particular
@@ -128,11 +131,9 @@ A local Jupyter Notebook server should open in your web browser.
 Simply open the .ipynb file using the Notebook server’s file browser
 and you are good to go. If you want to work with many Pythia Foundations
 notebooks, you might want to “clone the site”
-and download all of the notebooks. First click on the Pythia
-Foundations GitHub icon (see figure below) and select repository.
+and download all of the notebooks. First, click on the GitHub icon (see the screenshot above)
+to open the Pythia Foundations GitHub repository.
 Then follow the instructions in our Getting Started with GitHub
 [guide](https://foundations.projectpythia.org/foundations/getting-started-github.html#)
 for cloning a repository. The steps used above for configuring your
 Conda environment should work for this method as well.
-
-![Annotated Pythia Foundations home page](../images/foundations_diagram.png)
