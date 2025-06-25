@@ -48,18 +48,14 @@ To build the book locally, run the following:
 
 ```bash
 conda activate pythia-book-dev
-jupyter-book build .
+myst start --execute
 ```
 
-Finally, you can view the book by opening the file `_build/html/index.html` with your favorite web browser. On most platforms you can simply run:
-
-```bash
-open _build/html/index.html
-```
+Finally, you can view the book by opening the localhost link that should be generated in your terminal.
 
 ### Keeping your dev environment up to date
 
-It's good practice to update the packages in your `pythia-book-dev` conda environment frequently to their latest versions, especially if it's been a while since you used it. If the `jupyter-book build .` command above generates error messages, that is a good indication that your conda environment may be out of date.
+It's good practice to update the packages in your `pythia-book-dev` conda environment frequently to their latest versions, especially if it's been a while since you used it. If the `myst start --execute` command above generates error messages, that is a good indication that your conda environment may be out of date.
 
 To update all packages in the currently activated environment to their latest versions, do this:
 
@@ -67,4 +63,4 @@ To update all packages in the currently activated environment to their latest ve
 conda update --all
 ```
 
-[pythia contributor's guide]: https://projectpythia.org/contributing.html
+[pythia contributor's guide]: https://projectpythia.org/pythia-contributing.html
