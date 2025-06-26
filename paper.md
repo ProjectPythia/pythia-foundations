@@ -53,8 +53,6 @@ authors:
   - name: Anissa Zacharias
     orcid: 0000-0002-2666-8493
     affiliation: 4
-  - name: Author Without ORCID
-    affiliation: 2
 affiliations:
  - name: Department of Atmospheric and Environmental Sciences, University at Albany (State University of New York)
    index: 1
