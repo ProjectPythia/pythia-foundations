@@ -88,3 +88,7 @@ project:
         - file: appendix/how-to-contribute.md
           children:
             - file: appendix/template.ipynb
+
+site:
+  parts:
+    footer: footer.md
