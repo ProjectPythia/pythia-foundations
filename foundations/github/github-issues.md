@@ -26,7 +26,7 @@
 
 GitHub provides two different, but related mechanisms for communicating
 within a repository about a project: _Issues_ and _Discussions_.
-Issues are more like “todo” items; they are task-focused. For example, Issues
+Issues are more like “to-do” items; they are task-focused. For example, Issues
 are often used to report and track bugs, request new features, or
 perhaps note a performance problem. Ultimately, the maintainers of
 a project may resolve the issue by fixing the bug, adding the
