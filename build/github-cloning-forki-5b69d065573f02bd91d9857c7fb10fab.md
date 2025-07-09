@@ -232,5 +232,5 @@ In the next lesson, you will set some configurations on your GitHub account that
 
 ## References
 
-1. [Cloning vs Forking (GitHub Support)](https://github.community/t/the-difference-between-forking-and-cloning-a-repository/10189)
-1. [What the Fork?(GitHub Community)](https://github.community/t/what-the-fork/10187)
+1. [Cloning vs Forking (GitHub Support)](https://github.com/orgs/community/discussions/35849)
+1. [Working With Forks (GitHub Docs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks)
