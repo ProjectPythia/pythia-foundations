@@ -441,33 +441,140 @@ dl.xr-attrs {
   filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
   stroke-width: 0.8px;
 }
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt; Size: 47MB
-Dimensions:    (time: 180, d2: 2, lat: 180, lon: 360)
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;tos&#x27; (time: 180, lat: 180, lon: 360)&gt; Size: 47MB
+dask.array&lt;open_dataset-tos, shape=(180, 180, 360), dtype=float32, chunksize=(1, 180, 360), chunktype=numpy.ndarray&gt;
 Coordinates:
-  * time       (time) object 1kB 2000-01-15 12:00:00 ... 2014-12-15 12:00:00
-  * lat        (lat) float64 1kB -89.5 -88.5 -87.5 -86.5 ... 86.5 87.5 88.5 89.5
-  * lon        (lon) float64 3kB 0.5 1.5 2.5 3.5 4.5 ... 356.5 357.5 358.5 359.5
-Dimensions without coordinates: d2
-Data variables:
-    time_bnds  (time, d2) object 3kB ...
-    lat_bnds   (lat, d2) float64 3kB ...
-    lon_bnds   (lon, d2) float64 6kB ...
-    tos        (time, lat, lon) float32 47MB ...
-    areacello  (lat, lon) float64 518kB ...
-Attributes: (12/45)
-    Conventions:            CF-1.7 CMIP-6.2
-    activity_id:            CMIP
-    branch_method:          standard
-    branch_time_in_child:   674885.0
-    branch_time_in_parent:  219000.0
-    case_id:                972
-    ...                     ...
-    sub_experiment_id:      none
-    table_id:               Omon
-    tracking_id:            hdl:21.14100/2975ffd3-1d7b-47e3-961a-33f212ea4eb2
-    variable_id:            tos
-    variant_info:           CMIP6 20th century experiments (1850-2014) with C...
-    variant_label:          r11i1p1f1</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-e98f498b-b7e0-4baf-9f82-9c7748468af3' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-e98f498b-b7e0-4baf-9f82-9c7748468af3' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 180</li><li><span>d2</span>: 2</li><li><span class='xr-has-index'>lat</span>: 180</li><li><span class='xr-has-index'>lon</span>: 360</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-a2bae582-4392-41d9-99b4-79b82e4a8190' class='xr-section-summary-in' type='checkbox'  checked><label for='section-a2bae582-4392-41d9-99b4-79b82e4a8190' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>2000-01-15 12:00:00 ... 2014-12-...</div><input id='attrs-9d4ac4b1-e5c7-4914-acb2-803908ee68cf' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9d4ac4b1-e5c7-4914-acb2-803908ee68cf' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-aa1fc143-cc56-4728-87d0-5e2de51cd249' class='xr-var-data-in' type='checkbox'><label for='data-aa1fc143-cc56-4728-87d0-5e2de51cd249' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>T</dd><dt><span>bounds :</span></dt><dd>time_bnds</dd><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>title :</span></dt><dd>time</dd><dt><span>type :</span></dt><dd>double</dd></dl></div><div class='xr-var-data'><pre>array([cftime.DatetimeNoLeap(2000, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+  * time     (time) object 1kB 2000-01-15 12:00:00 ... 2014-12-15 12:00:00
+  * lat      (lat) float64 1kB -89.5 -88.5 -87.5 -86.5 ... 86.5 87.5 88.5 89.5
+  * lon      (lon) float64 3kB 0.5 1.5 2.5 3.5 4.5 ... 356.5 357.5 358.5 359.5
+Attributes: (12/19)
+    cell_measures:  area: areacello
+    cell_methods:   area: mean where sea time: mean
+    comment:        Model data on the 1x1 grid includes values in all cells f...
+    description:    This may differ from &quot;surface temperature&quot; in regions of ...
+    frequency:      mon
+    id:             tos
+    ...             ...
+    time_label:     time-mean
+    time_title:     Temporal mean
+    title:          Sea Surface Temperature
+    type:           real
+    units:          degC
+    variable_id:    tos</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'tos'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 180</li><li><span class='xr-has-index'>lat</span>: 180</li><li><span class='xr-has-index'>lon</span>: 360</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-fabf1682-2953-4ec3-9ec1-e86d755761e6' class='xr-array-in' type='checkbox' checked><label for='section-fabf1682-2953-4ec3-9ec1-e86d755761e6' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1, 180, 360), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
+    <tr>
+        <td>
+            <table style="border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <td> </td>
+                        <th> Array </th>
+                        <th> Chunk </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th> Bytes </th>
+                        <td> 44.49 MiB </td>
+                        <td> 253.12 kiB </td>
+                    </tr>
+                    
+                    <tr>
+                        <th> Shape </th>
+                        <td> (180, 180, 360) </td>
+                        <td> (1, 180, 360) </td>
+                    </tr>
+                    <tr>
+                        <th> Dask graph </th>
+                        <td colspan="2"> 180 chunks in 2 graph layers </td>
+                    </tr>
+                    <tr>
+                        <th> Data type </th>
+                        <td colspan="2"> float32 numpy.ndarray </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td>
+        <svg width="215" height="145" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="10" y1="0" x2="45" y2="35" style="stroke-width:2" />
+  <line x1="10" y1="60" x2="45" y2="95" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="10" y1="0" x2="10" y2="60" style="stroke-width:2" />
+  <line x1="11" y1="1" x2="11" y2="61" />
+  <line x1="13" y1="3" x2="13" y2="63" />
+  <line x1="15" y1="5" x2="15" y2="65" />
+  <line x1="17" y1="7" x2="17" y2="67" />
+  <line x1="19" y1="9" x2="19" y2="69" />
+  <line x1="20" y1="10" x2="20" y2="70" />
+  <line x1="22" y1="12" x2="22" y2="72" />
+  <line x1="24" y1="14" x2="24" y2="74" />
+  <line x1="26" y1="16" x2="26" y2="76" />
+  <line x1="28" y1="18" x2="28" y2="78" />
+  <line x1="30" y1="20" x2="30" y2="80" />
+  <line x1="32" y1="22" x2="32" y2="82" />
+  <line x1="34" y1="24" x2="34" y2="84" />
+  <line x1="35" y1="25" x2="35" y2="85" />
+  <line x1="37" y1="27" x2="37" y2="87" />
+  <line x1="39" y1="29" x2="39" y2="89" />
+  <line x1="41" y1="31" x2="41" y2="91" />
+  <line x1="43" y1="33" x2="43" y2="93" />
+  <line x1="45" y1="35" x2="45" y2="95" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="10.0,0.0 45.294117647058826,35.294117647058826 45.294117647058826,95.29411764705883 10.0,60.0" style="fill:#8B4903A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="10" y1="0" x2="130" y2="0" style="stroke-width:2" />
+  <line x1="11" y1="1" x2="131" y2="1" />
+  <line x1="13" y1="3" x2="133" y2="3" />
+  <line x1="15" y1="5" x2="135" y2="5" />
+  <line x1="17" y1="7" x2="137" y2="7" />
+  <line x1="19" y1="9" x2="139" y2="9" />
+  <line x1="20" y1="10" x2="140" y2="10" />
+  <line x1="22" y1="12" x2="142" y2="12" />
+  <line x1="24" y1="14" x2="144" y2="14" />
+  <line x1="26" y1="16" x2="146" y2="16" />
+  <line x1="28" y1="18" x2="148" y2="18" />
+  <line x1="30" y1="20" x2="150" y2="20" />
+  <line x1="32" y1="22" x2="152" y2="22" />
+  <line x1="34" y1="24" x2="154" y2="24" />
+  <line x1="35" y1="25" x2="155" y2="25" />
+  <line x1="37" y1="27" x2="157" y2="27" />
+  <line x1="39" y1="29" x2="159" y2="29" />
+  <line x1="41" y1="31" x2="161" y2="31" />
+  <line x1="43" y1="33" x2="163" y2="33" />
+  <line x1="45" y1="35" x2="165" y2="35" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="10" y1="0" x2="45" y2="35" style="stroke-width:2" />
+  <line x1="130" y1="0" x2="165" y2="35" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="10.0,0.0 130.0,0.0 165.29411764705884,35.294117647058826 45.294117647058826,35.294117647058826" style="fill:#8B4903A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="45" y1="35" x2="165" y2="35" style="stroke-width:2" />
+  <line x1="45" y1="95" x2="165" y2="95" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="45" y1="35" x2="45" y2="95" style="stroke-width:2" />
+  <line x1="165" y1="35" x2="165" y2="95" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="45.294117647058826,35.294117647058826 165.29411764705884,35.294117647058826 165.29411764705884,95.29411764705883 45.294117647058826,95.29411764705883" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="105.294118" y="115.294118" font-size="1.0rem" font-weight="100" text-anchor="middle" >360</text>
+  <text x="185.294118" y="65.294118" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,185.294118,65.294118)">180</text>
+  <text x="17.647059" y="97.647059" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,17.647059,97.647059)">180</text>
+</svg>
+        </td>
+    </tr>
+</table></div></div></li><li class='xr-section-item'><input id='section-866d86f1-380c-47fd-9094-b59ddad5e2b9' class='xr-section-summary-in' type='checkbox'  checked><label for='section-866d86f1-380c-47fd-9094-b59ddad5e2b9' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>2000-01-15 12:00:00 ... 2014-12-...</div><input id='attrs-665e563d-9c61-47bb-a716-495841b6f07b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-665e563d-9c61-47bb-a716-495841b6f07b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2d337aa4-d663-4c24-8fb1-f46ef8a2811d' class='xr-var-data-in' type='checkbox'><label for='data-2d337aa4-d663-4c24-8fb1-f46ef8a2811d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>T</dd><dt><span>bounds :</span></dt><dd>time_bnds</dd><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>title :</span></dt><dd>time</dd><dt><span>type :</span></dt><dd>double</dd></dl></div><div class='xr-var-data'><pre>array([cftime.DatetimeNoLeap(2000, 1, 15, 12, 0, 0, 0, has_year_zero=True),
        cftime.DatetimeNoLeap(2000, 2, 14, 0, 0, 0, 0, has_year_zero=True),
        cftime.DatetimeNoLeap(2000, 3, 15, 12, 0, 0, 0, has_year_zero=True),
        cftime.DatetimeNoLeap(2000, 4, 15, 0, 0, 0, 0, has_year_zero=True),
@@ -647,7 +754,7 @@ Attributes: (12/45)
        cftime.DatetimeNoLeap(2014, 10, 15, 12, 0, 0, 0, has_year_zero=True),
        cftime.DatetimeNoLeap(2014, 11, 15, 0, 0, 0, 0, has_year_zero=True),
        cftime.DatetimeNoLeap(2014, 12, 15, 12, 0, 0, 0, has_year_zero=True)],
-      dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-89.5 -88.5 -87.5 ... 88.5 89.5</div><input id='attrs-580cd45b-a2d4-4f9d-8d65-cc1b9723c83e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-580cd45b-a2d4-4f9d-8d65-cc1b9723c83e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2db584e8-9e7e-4e14-8b6b-75d1018e84d0' class='xr-var-data-in' type='checkbox'><label for='data-2db584e8-9e7e-4e14-8b6b-75d1018e84d0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>Y</dd><dt><span>bounds :</span></dt><dd>lat_bnds</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>array([-89.5, -88.5, -87.5, -86.5, -85.5, -84.5, -83.5, -82.5, -81.5, -80.5,
+      dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-89.5 -88.5 -87.5 ... 88.5 89.5</div><input id='attrs-85fc18d3-aa51-4365-8604-b1d701ffa06b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-85fc18d3-aa51-4365-8604-b1d701ffa06b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-435ac373-482d-40a2-b9bb-fbbab6437508' class='xr-var-data-in' type='checkbox'><label for='data-435ac373-482d-40a2-b9bb-fbbab6437508' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>Y</dd><dt><span>bounds :</span></dt><dd>lat_bnds</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>array([-89.5, -88.5, -87.5, -86.5, -85.5, -84.5, -83.5, -82.5, -81.5, -80.5,
        -79.5, -78.5, -77.5, -76.5, -75.5, -74.5, -73.5, -72.5, -71.5, -70.5,
        -69.5, -68.5, -67.5, -66.5, -65.5, -64.5, -63.5, -62.5, -61.5, -60.5,
        -59.5, -58.5, -57.5, -56.5, -55.5, -54.5, -53.5, -52.5, -51.5, -50.5,
@@ -664,7 +771,7 @@ Attributes: (12/45)
         50.5,  51.5,  52.5,  53.5,  54.5,  55.5,  56.5,  57.5,  58.5,  59.5,
         60.5,  61.5,  62.5,  63.5,  64.5,  65.5,  66.5,  67.5,  68.5,  69.5,
         70.5,  71.5,  72.5,  73.5,  74.5,  75.5,  76.5,  77.5,  78.5,  79.5,
-        80.5,  81.5,  82.5,  83.5,  84.5,  85.5,  86.5,  87.5,  88.5,  89.5])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.5 1.5 2.5 ... 357.5 358.5 359.5</div><input id='attrs-3c0205c0-9750-4bae-acbc-cbe865bb9c44' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-3c0205c0-9750-4bae-acbc-cbe865bb9c44' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b10a330d-6a94-4614-a426-02c0ab19ffc4' class='xr-var-data-in' type='checkbox'><label for='data-b10a330d-6a94-4614-a426-02c0ab19ffc4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>X</dd><dt><span>bounds :</span></dt><dd>lon_bnds</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>array([  0.5,   1.5,   2.5, ..., 357.5, 358.5, 359.5], shape=(360,))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-7591d338-ca39-4b79-841f-2177e0c1a48b' class='xr-section-summary-in' type='checkbox'  checked><label for='section-7591d338-ca39-4b79-841f-2177e0c1a48b' class='xr-section-summary' >Data variables: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>time_bnds</span></div><div class='xr-var-dims'>(time, d2)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-d066b872-1e59-43c6-a7a0-3ae7543e0e97' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-d066b872-1e59-43c6-a7a0-3ae7543e0e97' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-51230587-21a5-4d44-9058-6eee2aee3cd4' class='xr-var-data-in' type='checkbox'><label for='data-51230587-21a5-4d44-9058-6eee2aee3cd4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[360 values with dtype=object]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lat_bnds</span></div><div class='xr-var-dims'>(lat, d2)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-7358ce32-9231-4393-b549-07a5a782b3b8' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7358ce32-9231-4393-b549-07a5a782b3b8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-29917ee8-cfde-478f-b0bc-95b370c14fa6' class='xr-var-data-in' type='checkbox'><label for='data-29917ee8-cfde-478f-b0bc-95b370c14fa6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude bounds</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>[360 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lon_bnds</span></div><div class='xr-var-dims'>(lon, d2)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-6f92b05f-961c-4533-b99b-2ea4df622d15' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6f92b05f-961c-4533-b99b-2ea4df622d15' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6b115e29-5f36-49e4-87e9-e9991146e417' class='xr-var-data-in' type='checkbox'><label for='data-6b115e29-5f36-49e4-87e9-e9991146e417' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude bounds</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>[720 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>tos</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e65c2144-3b8d-4419-925b-4e796294bd1d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e65c2144-3b8d-4419-925b-4e796294bd1d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2a61d9a1-1491-4c36-9ce2-d5c14ef0c7c9' class='xr-var-data-in' type='checkbox'><label for='data-2a61d9a1-1491-4c36-9ce2-d5c14ef0c7c9' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>cell_measures :</span></dt><dd>area: areacello</dd><dt><span>cell_methods :</span></dt><dd>area: mean where sea time: mean</dd><dt><span>comment :</span></dt><dd>Model data on the 1x1 grid includes values in all cells for which ocean cells on the native grid cover more than 52.5 percent of the 1x1 grid cell. This 52.5 percent cutoff was chosen to produce ocean surface area on the 1x1 grid as close as possible to ocean surface area on the native grid, while not introducing fractional cell coverage.</dd><dt><span>description :</span></dt><dd>This may differ from &quot;surface temperature&quot; in regions of sea ice or floating ice shelves. For models using conservative temperature as the prognostic field, they should report the top ocean layer as surface potential temperature, which is the same as surface in situ temperature.</dd><dt><span>frequency :</span></dt><dd>mon</dd><dt><span>id :</span></dt><dd>tos</dd><dt><span>long_name :</span></dt><dd>Sea Surface Temperature</dd><dt><span>mipTable :</span></dt><dd>Omon</dd><dt><span>out_name :</span></dt><dd>tos</dd><dt><span>prov :</span></dt><dd>Omon ((isd.003))</dd><dt><span>realm :</span></dt><dd>ocean</dd><dt><span>standard_name :</span></dt><dd>sea_surface_temperature</dd><dt><span>time :</span></dt><dd>time</dd><dt><span>time_label :</span></dt><dd>time-mean</dd><dt><span>time_title :</span></dt><dd>Temporal mean</dd><dt><span>title :</span></dt><dd>Sea Surface Temperature</dd><dt><span>type :</span></dt><dd>real</dd><dt><span>units :</span></dt><dd>degC</dd><dt><span>variable_id :</span></dt><dd>tos</dd></dl></div><div class='xr-var-data'><pre>[11664000 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>areacello</span></div><div class='xr-var-dims'>(lat, lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-4c352daa-98f7-4bc0-aec9-3aa2c6f529ab' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4c352daa-98f7-4bc0-aec9-3aa2c6f529ab' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-cf45cc26-8e60-4494-a082-3588bf6d7946' class='xr-var-data-in' type='checkbox'><label for='data-cf45cc26-8e60-4494-a082-3588bf6d7946' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>cell_methods :</span></dt><dd>area: sum</dd><dt><span>comment :</span></dt><dd>TAREA</dd><dt><span>description :</span></dt><dd>Cell areas for any grid used to report ocean variables and variables which are requested as used on the model ocean grid (e.g. hfsso, which is a downward heat flux from the atmosphere interpolated onto the ocean grid). These cell areas should be defined to enable exact calculation of global integrals (e.g., of vertical fluxes of energy at the surface and top of the atmosphere).</dd><dt><span>frequency :</span></dt><dd>fx</dd><dt><span>id :</span></dt><dd>areacello</dd><dt><span>long_name :</span></dt><dd>Grid-Cell Area for Ocean Variables</dd><dt><span>mipTable :</span></dt><dd>Ofx</dd><dt><span>out_name :</span></dt><dd>areacello</dd><dt><span>prov :</span></dt><dd>Ofx ((isd.003))</dd><dt><span>realm :</span></dt><dd>ocean</dd><dt><span>standard_name :</span></dt><dd>cell_area</dd><dt><span>time_label :</span></dt><dd>None</dd><dt><span>time_title :</span></dt><dd>No temporal dimensions ... fixed field</dd><dt><span>title :</span></dt><dd>Grid-Cell Area for Ocean Variables</dd><dt><span>type :</span></dt><dd>real</dd><dt><span>units :</span></dt><dd>m2</dd><dt><span>variable_id :</span></dt><dd>areacello</dd></dl></div><div class='xr-var-data'><pre>[64800 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-2b30f232-34cd-4628-8e1a-d6152b706e14' class='xr-section-summary-in' type='checkbox'  ><label for='section-2b30f232-34cd-4628-8e1a-d6152b706e14' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-f944dc0c-e345-4414-97c7-3b7103aa8293' class='xr-index-data-in' type='checkbox'/><label for='index-f944dc0c-e345-4414-97c7-3b7103aa8293' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(CFTimeIndex([2000-01-15 12:00:00, 2000-02-14 00:00:00, 2000-03-15 12:00:00,
+        80.5,  81.5,  82.5,  83.5,  84.5,  85.5,  86.5,  87.5,  88.5,  89.5])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.5 1.5 2.5 ... 357.5 358.5 359.5</div><input id='attrs-57a18321-0c70-4562-ae6b-326675954635' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-57a18321-0c70-4562-ae6b-326675954635' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e7d03981-4023-4708-b995-c137e11aa875' class='xr-var-data-in' type='checkbox'><label for='data-e7d03981-4023-4708-b995-c137e11aa875' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>X</dd><dt><span>bounds :</span></dt><dd>lon_bnds</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>array([  0.5,   1.5,   2.5, ..., 357.5, 358.5, 359.5], shape=(360,))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-0f7dc7f8-9532-4784-a6c9-6e29a18888ee' class='xr-section-summary-in' type='checkbox'  ><label for='section-0f7dc7f8-9532-4784-a6c9-6e29a18888ee' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-8c6c1a04-6609-4ac2-b35c-912db1e25c45' class='xr-index-data-in' type='checkbox'/><label for='index-8c6c1a04-6609-4ac2-b35c-912db1e25c45' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(CFTimeIndex([2000-01-15 12:00:00, 2000-02-14 00:00:00, 2000-03-15 12:00:00,
              2000-04-15 00:00:00, 2000-05-15 12:00:00, 2000-06-15 00:00:00,
              2000-07-15 12:00:00, 2000-08-15 12:00:00, 2000-09-15 00:00:00,
              2000-10-15 12:00:00,
@@ -673,10 +780,10 @@ Attributes: (12/45)
              2014-06-15 00:00:00, 2014-07-15 12:00:00, 2014-08-15 12:00:00,
              2014-09-15 00:00:00, 2014-10-15 12:00:00, 2014-11-15 00:00:00,
              2014-12-15 12:00:00],
-            dtype=&#x27;object&#x27;, length=180, calendar=&#x27;noleap&#x27;, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-45590e4e-40b8-4d20-9916-f8e31cd5d126' class='xr-index-data-in' type='checkbox'/><label for='index-45590e4e-40b8-4d20-9916-f8e31cd5d126' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-89.5, -88.5, -87.5, -86.5, -85.5, -84.5, -83.5, -82.5, -81.5, -80.5,
+            dtype=&#x27;object&#x27;, length=180, calendar=&#x27;noleap&#x27;, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-b79e6575-a6c6-4751-8a10-e4b09a618a7d' class='xr-index-data-in' type='checkbox'/><label for='index-b79e6575-a6c6-4751-8a10-e4b09a618a7d' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-89.5, -88.5, -87.5, -86.5, -85.5, -84.5, -83.5, -82.5, -81.5, -80.5,
        ...
         80.5,  81.5,  82.5,  83.5,  84.5,  85.5,  86.5,  87.5,  88.5,  89.5],
-      dtype=&#x27;float64&#x27;, name=&#x27;lat&#x27;, length=180))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-8463d416-00b5-4a74-8737-2258cc5be52c' class='xr-index-data-in' type='checkbox'/><label for='index-8463d416-00b5-4a74-8737-2258cc5be52c' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.5,   1.5,   2.5,   3.5,   4.5,   5.5,   6.5,   7.5,   8.5,   9.5,
+      dtype=&#x27;float64&#x27;, name=&#x27;lat&#x27;, length=180))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-12c0c731-2d8d-41ba-b3fc-ccb210ff907c' class='xr-index-data-in' type='checkbox'/><label for='index-12c0c731-2d8d-41ba-b3fc-ccb210ff907c' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.5,   1.5,   2.5,   3.5,   4.5,   5.5,   6.5,   7.5,   8.5,   9.5,
        ...
        350.5, 351.5, 352.5, 353.5, 354.5, 355.5, 356.5, 357.5, 358.5, 359.5],
-      dtype=&#x27;float64&#x27;, name=&#x27;lon&#x27;, length=360))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-0163961a-3bf7-478b-945a-993c90a2e3f4' class='xr-section-summary-in' type='checkbox'  ><label for='section-0163961a-3bf7-478b-945a-993c90a2e3f4' class='xr-section-summary' >Attributes: <span>(45)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.7 CMIP-6.2</dd><dt><span>activity_id :</span></dt><dd>CMIP</dd><dt><span>branch_method :</span></dt><dd>standard</dd><dt><span>branch_time_in_child :</span></dt><dd>674885.0</dd><dt><span>branch_time_in_parent :</span></dt><dd>219000.0</dd><dt><span>case_id :</span></dt><dd>972</dd><dt><span>cesm_casename :</span></dt><dd>b.e21.BHIST.f09_g17.CMIP6-historical.011</dd><dt><span>contact :</span></dt><dd>cesm_cmip6@ucar.edu</dd><dt><span>creation_date :</span></dt><dd>2019-04-02T04:44:58Z</dd><dt><span>data_specs_version :</span></dt><dd>01.00.29</dd><dt><span>experiment :</span></dt><dd>Simulation of recent past (1850 to 2014). Impose changing conditions (consistent with observations). Should be initialised from a point early enough in the pre-industrial control run to ensure that the end of all the perturbed runs branching from the end of this historical run end before the end of the control. Only one ensemble member is requested but modelling groups are strongly encouraged to submit at least three ensemble members of their CMIP historical simulation. </dd><dt><span>experiment_id :</span></dt><dd>historical</dd><dt><span>external_variables :</span></dt><dd>areacello</dd><dt><span>forcing_index :</span></dt><dd>1</dd><dt><span>frequency :</span></dt><dd>mon</dd><dt><span>further_info_url :</span></dt><dd>https://furtherinfo.es-doc.org/CMIP6.NCAR.CESM2.historical.none.r11i1p1f1</dd><dt><span>grid :</span></dt><dd>ocean data regridded from native gx1v7 displaced pole grid (384x320 latxlon) to 180x360 latxlon using conservative regridding</dd><dt><span>grid_label :</span></dt><dd>gr</dd><dt><span>initialization_index :</span></dt><dd>1</dd><dt><span>institution :</span></dt><dd>National Center for Atmospheric Research, Climate and Global Dynamics Laboratory, 1850 Table Mesa Drive, Boulder, CO 80305, USA</dd><dt><span>institution_id :</span></dt><dd>NCAR</dd><dt><span>license :</span></dt><dd>CMIP6 model data produced by &lt;The National Center for Atmospheric Research&gt; is licensed under a Creative Commons Attribution-[]ShareAlike 4.0 International License (https://creativecommons.org/licenses/). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file)[]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.</dd><dt><span>mip_era :</span></dt><dd>CMIP6</dd><dt><span>model_doi_url :</span></dt><dd>https://doi.org/10.5065/D67H1H0V</dd><dt><span>nominal_resolution :</span></dt><dd>1x1 degree</dd><dt><span>parent_activity_id :</span></dt><dd>CMIP</dd><dt><span>parent_experiment_id :</span></dt><dd>piControl</dd><dt><span>parent_mip_era :</span></dt><dd>CMIP6</dd><dt><span>parent_source_id :</span></dt><dd>CESM2</dd><dt><span>parent_time_units :</span></dt><dd>days since 0001-01-01 00:00:00</dd><dt><span>parent_variant_label :</span></dt><dd>r1i1p1f1</dd><dt><span>physics_index :</span></dt><dd>1</dd><dt><span>product :</span></dt><dd>model-output</dd><dt><span>realization_index :</span></dt><dd>11</dd><dt><span>realm :</span></dt><dd>ocean</dd><dt><span>source :</span></dt><dd>CESM2 (2017): atmosphere: CAM6 (0.9x1.25 finite volume grid; 288 x 192 longitude/latitude; 32 levels; top level 2.25 mb); ocean: POP2 (320x384 longitude/latitude; 60 levels; top grid cell 0-10 m); sea_ice: CICE5.1 (same grid as ocean); land: CLM5 0.9x1.25 finite volume grid; 288 x 192 longitude/latitude; 32 levels; top level 2.25 mb); aerosol: MAM4 (0.9x1.25 finite volume grid; 288 x 192 longitude/latitude; 32 levels; top level 2.25 mb); atmoschem: MAM4 (0.9x1.25 finite volume grid; 288 x 192 longitude/latitude; 32 levels; top level 2.25 mb); landIce: CISM2.1; ocnBgchem: MARBL (320x384 longitude/latitude; 60 levels; top grid cell 0-10 m)</dd><dt><span>source_id :</span></dt><dd>CESM2</dd><dt><span>source_type :</span></dt><dd>AOGCM BGC</dd><dt><span>sub_experiment :</span></dt><dd>none</dd><dt><span>sub_experiment_id :</span></dt><dd>none</dd><dt><span>table_id :</span></dt><dd>Omon</dd><dt><span>tracking_id :</span></dt><dd>hdl:21.14100/2975ffd3-1d7b-47e3-961a-33f212ea4eb2</dd><dt><span>variable_id :</span></dt><dd>tos</dd><dt><span>variant_info :</span></dt><dd>CMIP6 20th century experiments (1850-2014) with CAM6, interactive land (CLM5), coupled ocean (POP2) with biogeochemistry (MARBL), interactive sea ice (CICE5.1), and non-evolving land ice (CISM2.1)</dd><dt><span>variant_label :</span></dt><dd>r11i1p1f1</dd></dl></div></li></ul></div></div>
+      dtype=&#x27;float64&#x27;, name=&#x27;lon&#x27;, length=360))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-8f39e864-f050-4bf6-868f-f50378076a33' class='xr-section-summary-in' type='checkbox'  ><label for='section-8f39e864-f050-4bf6-868f-f50378076a33' class='xr-section-summary' >Attributes: <span>(19)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>cell_measures :</span></dt><dd>area: areacello</dd><dt><span>cell_methods :</span></dt><dd>area: mean where sea time: mean</dd><dt><span>comment :</span></dt><dd>Model data on the 1x1 grid includes values in all cells for which ocean cells on the native grid cover more than 52.5 percent of the 1x1 grid cell. This 52.5 percent cutoff was chosen to produce ocean surface area on the 1x1 grid as close as possible to ocean surface area on the native grid, while not introducing fractional cell coverage.</dd><dt><span>description :</span></dt><dd>This may differ from &quot;surface temperature&quot; in regions of sea ice or floating ice shelves. For models using conservative temperature as the prognostic field, they should report the top ocean layer as surface potential temperature, which is the same as surface in situ temperature.</dd><dt><span>frequency :</span></dt><dd>mon</dd><dt><span>id :</span></dt><dd>tos</dd><dt><span>long_name :</span></dt><dd>Sea Surface Temperature</dd><dt><span>mipTable :</span></dt><dd>Omon</dd><dt><span>out_name :</span></dt><dd>tos</dd><dt><span>prov :</span></dt><dd>Omon ((isd.003))</dd><dt><span>realm :</span></dt><dd>ocean</dd><dt><span>standard_name :</span></dt><dd>sea_surface_temperature</dd><dt><span>time :</span></dt><dd>time</dd><dt><span>time_label :</span></dt><dd>time-mean</dd><dt><span>time_title :</span></dt><dd>Temporal mean</dd><dt><span>title :</span></dt><dd>Sea Surface Temperature</dd><dt><span>type :</span></dt><dd>real</dd><dt><span>units :</span></dt><dd>degC</dd><dt><span>variable_id :</span></dt><dd>tos</dd></dl></div></li></ul></div></div>
