@@ -15,7 +15,7 @@
 
 <!-- UAlbany Logo - Light Mode -->
 ````{div}
-:class: flex flex-1 min-w-0 h-64 md:h-80 items-center justify-center dark:hidden 
+:class: flex flex-1 min-w-0 h-64 md:h-80 items-center justify-center dark:hidden
 ```{image} https://raw.githubusercontent.com/Christian-Kofi-Okyere/pythia-config/main/logos/UAlbanyMark_F_S02A_HEX_Gold_Black.png
 :alt: UAlbany Logo (Light)
 :align: center
