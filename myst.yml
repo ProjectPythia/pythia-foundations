@@ -88,3 +88,10 @@ project:
         - file: appendix/how-to-contribute.md
           children:
             - file: appendix/template.ipynb
+site:
+  options:
+    logo: images/logos/pythia_logo-white-rtext.svg
+    folders: true
+
+  parts:
+    footer: footer.md
