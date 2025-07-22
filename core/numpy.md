@@ -5,7 +5,7 @@
 :width: 250
 :::
 
-This section contains tutorials on array computing with [NumPy](https://numpy.org).
+This section contains tutorials on array computing with [NumPy](https://numpy.org) {cite:p}`harris2020array`.
 
 ---
 
