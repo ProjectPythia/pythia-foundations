@@ -1,6 +1,6 @@
 # Cartopy
 
-This section contains tutorials on plotting maps with [Cartopy](https://scitools.org.uk/cartopy/docs/latest/); it is cross-referenced with tutorials on [Xarray](xarray) and [Matplotlib](matplotlib).
+This section contains tutorials on plotting maps with [Cartopy](https://scitools.org.uk/cartopy/docs/latest/) {cite:p}`Cartopy`; it is cross-referenced with tutorials on [Xarray](xarray) and [Matplotlib](matplotlib).
 
 ---
 
