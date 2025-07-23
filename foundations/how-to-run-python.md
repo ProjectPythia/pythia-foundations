@@ -13,7 +13,7 @@ This section provides an overview of different ways to run Python code, and quic
 
 | Concepts                                                                         | Importance | Notes |
 | -------------------------------------------------------------------------------- | ---------- | ----- |
-| [Why Python?](https://foundations.projectpythia.org/foundations/why-python.html) | Helpful    |       |
+| [Why Python?](https://foundations.projectpythia.org/foundations/why-python) | Helpful    |       |
 
 - **Time to learn**: 20 minutes
 

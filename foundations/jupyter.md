@@ -14,7 +14,7 @@ You'd like to learn to run Python in a Jupyter session. Here we will cover:
 
 | Concepts                                                                                                  | Importance | Notes |
 | --------------------------------------------------------------------------------------------------------- | ---------- | ----- |
-| [Installing and Running Python](https://foundations.projectpythia.org/foundations/how-to-run-python.html) | Helpful    |       |
+| [Installing and Running Python](https://foundations.projectpythia.org/foundations/how-to-run-python) | Helpful    |       |
 
 - **Time to learn**: 20 minutes
 

@@ -29,11 +29,11 @@
 
 ---
 
-Now that you have become more familiar with how to use Git and GitHub, you might have an idea or some material that you want to contribute to Project Pythia! The [Project Pythia Contributor's Guide](https://projectpythia.org/contributing.html) describes the steps required to submit a PR to any of Project Pythia's repos. Here, we will go through an example of submitting a PR to `pythia-foundations`.
+Now that you have become more familiar with how to use Git and GitHub, you might have an idea or some material that you want to contribute to Project Pythia! The [Project Pythia Contributor's Guide](https://projectpythia.org/contributing) describes the steps required to submit a PR to any of Project Pythia's repos. Here, we will go through an example of submitting a PR to `pythia-foundations`.
 
 ## Suggest a change
 
-One simple way to contribute is to fix a typo or suggest a change to one of the tutorials. For example, in the [Computations and Masks with Xarray tutorial](https://foundations.projectpythia.org/core/xarray/computation-masking.html), let's suggest a clarification that the sea surface temperature is called `tos` in the dataset we are using.
+One simple way to contribute is to fix a typo or suggest a change to one of the tutorials. For example, in the [Computations and Masks with Xarray tutorial](https://foundations.projectpythia.org/core/xarray/computation-masking), let's suggest a clarification that the sea surface temperature is called `tos` in the dataset we are using.
 
 <img src="../../images/GitHubContrXarray.png" alt="Computations and Masks with Xarray">
 
@@ -41,7 +41,7 @@ We could open an issue to suggest this change in order to get feedback on the id
 
 ## Make the edits
 
-We will follow the [Forking Workflow](https://foundations.projectpythia.org/foundations/github/github-workflows.html#forking-workflow) described in the previous section of this tutorial, assuming `pythia-foundations` has already been forked:
+We will follow the [Forking Workflow](https://foundations.projectpythia.org/foundations/github/github-workflows#forking-workflow) described in the previous section of this tutorial, assuming `pythia-foundations` has already been forked:
 
 - Create a new branch with a descriptive name
 - Make the changes and commit them locally
@@ -78,7 +78,7 @@ Now, going to our remote repo on GitHub, forked from `pythia-foundations`, we se
 
 <img src="../../images/GitHubContrFork.png" alt="GitHub Forked Repo">
 
-Project Pythia has an automated reviewer system: when a PR is created, two members of the organization will be randomly chosen to review it. If your PR is not immediately ready to be approved and merged, open it as a draft to delay the review process. As shown in this [Git Branches section](https://foundations.projectpythia.org/foundations/github/git-branches.html#merging-branches), the "Draft pull request" button is found using the arrow on the "Create pull request" button.
+Project Pythia has an automated reviewer system: when a PR is created, two members of the organization will be randomly chosen to review it. If your PR is not immediately ready to be approved and merged, open it as a draft to delay the review process. As shown in this [Git Branches section](https://foundations.projectpythia.org/foundations/github/git-branches#merging-branches), the "Draft pull request" button is found using the arrow on the "Create pull request" button.
 
 Let's add the `content` tag and open this one as a draft for now:
 
