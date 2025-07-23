@@ -2,7 +2,7 @@
 
 ![xarray Logo](https://docs.xarray.dev/en/stable/_static/Xarray_Logo_RGB_Final.svg "xarray Logo")
 
-This section contains tutorials on using [Xarray][xarray home]. Xarray is used widely in the geosciences and beyond for analysis of gridded N-dimensional datasets.
+This section contains tutorials on using [Xarray][xarray home]. Xarray {cite:p}`hoyer2017xarray` is used widely in the geosciences and beyond for analysis of gridded N-dimensional datasets.
 
 ---
 
