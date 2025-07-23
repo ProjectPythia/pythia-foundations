@@ -96,7 +96,7 @@ That was the easy part. Getting the notebook to execute locally may
 take a little more work. The book was created to run in a particular
 Python environment, managed with Conda. If you don't have a up-to-date
 version of Conda on your machine, you'll want to install one. A brief
-introduction to installing Conda is available [here](https://foundations.projectpythia.org/foundations/cond).
+introduction to installing Conda is available [here](https://foundations.projectpythia.org/foundations/conda).
 
 Once you've installed Conda you will need to create and activate a Conda environment
 that is compatible with Pythia Foundation's notebooks. This
