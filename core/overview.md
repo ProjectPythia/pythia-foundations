@@ -109,7 +109,7 @@ Similarly, a group at the Atmospheric Radiation Measurement (ARM) Climate Resear
 have released their Python ARM Radar Toolkit ([Py-ART](http://arm-doe.github.io/pyart/))
 for analysing weather radar data.
 
-A great place to start learning about use-cases for domain-specific libraries across the geosciences is the [Pythia Cookbook Gallery](https://cookbooks.projectpythia.org). Also check out the [Pythia Resource Gallery](https://projectpythia.org/resource-gallery.html) and try filtering by domain. The [Python for Atmosphere and Ocean Science (PyAOS) package index](https://pyaos.github.io/packages/)
+A great place to start learning about use-cases for domain-specific libraries across the geosciences is the [Pythia Cookbook Gallery](https://cookbooks.projectpythia.org). Also check out the [Pythia Resource Gallery](https://projectpythia.org/resource-gallery) and try filtering by domain. The [Python for Atmosphere and Ocean Science (PyAOS) package index](https://pyaos.github.io/packages/)
 attempt to keep track of the domain-specific libraries in these subfiels.
 
 

@@ -59,4 +59,4 @@ To update all packages in the currently activated environment to their latest ve
 conda update --all
 ```
 
-[Contributing to Project Pythia]: https://projectpythia.org/contributing.html
+[Contributing to Project Pythia]: https://projectpythia.org/contributing

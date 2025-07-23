@@ -81,7 +81,7 @@ and even change the example programs. At first the code cells
 have no output, until you execute them by pressing
 {kbd}`Shift`\+{kbd}`Enter`. Complete details on how to interact with
 a live Jupyter notebook are described in [Getting Started with
-Jupyter](https://foundations.projectpythia.org/foundations/getting-started-jupyter.html).
+Jupyter](https://foundations.projectpythia.org/foundations/getting-started-jupyter).
 
 ### Interacting with Jupyter Books locally
 
@@ -96,7 +96,7 @@ That was the easy part. Getting the notebook to execute locally may
 take a little more work. The book was created to run in a particular
 Python environment, managed with Conda. If you don't have a up-to-date
 version of Conda on your machine, you'll want to install one. A brief
-introduction to installing Conda is available [here](https://foundations.projectpythia.org/foundations/conda.html).
+introduction to installing Conda is available [here](https://foundations.projectpythia.org/foundations/cond).
 
 Once you've installed Conda you will need to create and activate a Conda environment
 that is compatible with Pythia Foundation's notebooks. This
@@ -114,7 +114,7 @@ need to activate _pythia-book-dev_ if
 it is not currently active, for example if you open up a new
 terminal window, or deactivate _pythia-book-dev_ explicitly with
 the `conda` command. Again, more information on Conda can be
-found [here](https://foundations.projectpythia.org/foundations/conda.html).
+found [here](https://foundations.projectpythia.org/foundations/conda).
 
 Now that your _pythia-book-dev_ environment is activated,
 change your working directory to the
@@ -134,6 +134,6 @@ notebooks, you might want to “clone the site”
 and download all of the notebooks. First, click on the GitHub icon (see the screenshot above)
 to open the Pythia Foundations GitHub repository.
 Then follow the instructions in our Getting Started with GitHub
-[guide](https://foundations.projectpythia.org/foundations/getting-started-github.html#)
+[guide](https://foundations.projectpythia.org/foundations/getting-started-github)
 for cloning a repository. The steps used above for configuring your
 Conda environment should work for this method as well.
