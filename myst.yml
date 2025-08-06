@@ -90,3 +90,7 @@ project:
         - file: appendix/how-to-contribute.md
           children:
             - file: appendix/template.ipynb
+
+site:
+  options:
+    analytics_google: G-G57FLM9M46 # Measurement ID or Tracking ID
