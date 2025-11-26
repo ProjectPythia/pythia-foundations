@@ -16,7 +16,7 @@
 
 | Concepts                                                   | Importance  | Notes                        |
 | ---------------------------------------------------------- | ----------- | ---------------------------- |
-| [What is GitHub?](what-is-github)                          | Necessary   | GitHub user account required |
+| [What is GitHub?](#what-is-github)                         | Necessary   | GitHub user account required |
 | [GitHub Repositories](github-repos)                        | Necessary   |                              |
 | [Issues and Discussions](github-issues)                    | Recommended |                              |
 | [Cloning and Forking a Repository](github-cloning-forking) | Recommended |                              |

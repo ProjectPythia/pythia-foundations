@@ -15,7 +15,7 @@
 
 | Concepts                                      | Importance  | Notes |
 | --------------------------------------------- | ----------- | ----- |
-| [What is GitHub](what-is-github)              | Necessary   |       |
+| [What is GitHub](#what-is-github)             | Necessary   |       |
 | [GitHub Repositories](github-repos)           | Necessary   |       |
 | [Cloning and Forking](github-cloning-forking) | Necessary   |       |
 | [Basic Version Control with _git_](basic-git) | Necessary   |       |
@@ -23,7 +23,7 @@
 | [Branches](git-branches)                      | Necessary   |       |
 | [Pull Requests](github-pull-request)          | Necessary   |       |
 | [Reviewing Pull Requests](review-pr)          | Recommended |       |
-| [GitHub Workflows](git-workflow)              | Necessary   |       |
+| [GitHub Workflows](#gh-workflows)             | Necessary   |       |
 
 - **Time to learn**: 30 minutes
 

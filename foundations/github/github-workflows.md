@@ -1,3 +1,4 @@
+(gh-workflows)=
 # GitHub Workflows
 
 ```{image} ../../images/Git-Logo-2Color.png
@@ -17,7 +18,7 @@ A workflow is a series of activities or tasks that must be completed sequentiall
 
 | Concepts                                      | Importance  | Notes |
 | --------------------------------------------- | ----------- | ----- |
-| [What is GitHub](what-is-github)              | Necessary   |       |
+| [What is GitHub](#what-is-github)             | Necessary   |       |
 | [GitHub Repositories](github-repos)           | Necessary   |       |
 | [Cloning and Forking](github-cloning-forking) | Necessary   |       |
 | [Basic Version Control with _git_](basic-git) | Necessary   |       |
@@ -118,7 +119,7 @@ then pushed to the remote using the same processes they used with
 the initial push. Once reviewers are satisfied with the changes, a
 project maintainer can merge the feature branch with `main`.
 
-##### Cloning the remote repository
+#### Cloning the remote repository
 
 If you don’t have a local copy of the remote repository, you’ll want
 to create one by [cloning the
@@ -148,7 +149,7 @@ Note, we did not specify a `local-directory_name` here, so git will
 use the `base name` of the `repository_url`, "github-sandbox" as
 the local directory.
 
-##### Start with the main branch
+#### Start with the main branch
 
 Continuing with our example above, make sure you are on the main
 branch and that it is up to date with the remote repository main:
@@ -168,7 +169,7 @@ Already up to date.
 
 Remember you can read more about [GitHub branches](github-branches) in our previous chapter.
 
-##### Create a new branch
+#### Create a new branch
 
 Create a separate branch for every new capability you work on:
 
@@ -185,7 +186,7 @@ not in `main`. The output should look something like:
 Switched to a new branch 'my-new-feature'
 ```
 
-##### Make changes and commit
+#### Make changes and commit
 
 Next, we'll make changes and commit them to the `my-new-feature branch` in
 the local git repository.
@@ -245,7 +246,7 @@ After a successful commit you should see a message like:
  1 file changed, 1 insertion(+)
 ```
 
-##### Push the feature branch to the remote repository
+#### Push the feature branch to the remote repository
 
 After running `git commit` your changes have been captured in your
 local repository. But most likely only you can see them, and if
@@ -287,7 +288,7 @@ is a simple solution: create a GitHub repository owned by you. The
 GitHub Quickstart guide provides an excellent [tutorial](https://docs.github.com/en/get-started/quickstart/create-a-repo) on how to
 do this.
 
-##### Making a Pull Request
+#### Making a Pull Request
 
 Finally, after cloning a remote repository, creating a feature
 branch, making your changes, committing them to your local repository,
@@ -309,7 +310,7 @@ That’s it! You’re done! Sit back and wait for comments from reviewers.
 If changes are requested, simply repeat the steps above. Once your
 PR is merged you’ll receive notification from GitHub.
 
-##### Safety tip on synchronization
+#### Safety tip on synchronization
 
 Over time your local repository will diverge from the remote. Before
 starting on a new feature, or if the `main` branch on remote may have
