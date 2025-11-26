@@ -1,4 +1,3 @@
-(what-is-github)=
 # What is GitHub?
 
 ```{image} ../../images/GitHub-logo.png

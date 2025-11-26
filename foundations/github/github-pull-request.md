@@ -148,7 +148,7 @@ The steps leading up to creating your PR depend on your workflow. The main diffe
 the contributor now, for the Feature Workflow, navigates to the upstream, remote
 repository, not a personal remote fork, and initiates the PR there.
 
-We will cover [GitHub Workflows](#gh-workflows) in greater detail in the next chapter.
+We will cover [GitHub Workflows](github-workflows.md) in greater detail in the next chapter.
 
 ---
 
