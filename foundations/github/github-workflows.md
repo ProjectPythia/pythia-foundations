@@ -167,7 +167,7 @@ Already on 'main'
 Already up to date.
 ```
 
-Remember you can read more about [GitHub branches](github-branches) in our previous chapter.
+Remember you can read more about [Git branches](git-branches.md) in our previous chapter.
 
 #### Create a new branch
 
@@ -417,8 +417,8 @@ git remote -v
 
 This should produce an output that looks similar to the following:
 
-origin https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
-origin https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+`origin https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)`
+`origin https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)`
 
 Next, specify a new remote upstream repository that will be synced with the fork.
 

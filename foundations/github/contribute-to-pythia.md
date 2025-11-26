@@ -13,17 +13,17 @@
 
 ## Prerequisites
 
-| Concepts                                      | Importance  | Notes |
-| --------------------------------------------- | ----------- | ----- |
-| [What is GitHub](#what-is-github)             | Necessary   |       |
-| [GitHub Repositories](github-repos)           | Necessary   |       |
-| [Cloning and Forking](github-cloning-forking) | Necessary   |       |
-| [Basic Version Control with _git_](basic-git) | Necessary   |       |
-| [Issues and Discussions](github-issues)       | Recommended |       |
-| [Branches](git-branches)                      | Necessary   |       |
-| [Pull Requests](github-pull-request)          | Necessary   |       |
-| [Reviewing Pull Requests](review-pr)          | Recommended |       |
-| [GitHub Workflows](#gh-workflows)             | Necessary   |       |
+| Concepts                                         | Importance  | Notes |
+| ------------------------------------------------ | ----------- | ----- |
+| [What is GitHub](what-is-github.md)              | Necessary   |       |
+| [GitHub Repositories](github-repos.md)           | Necessary   |       |
+| [Cloning and Forking](github-cloning-forking.md) | Necessary   |       |
+| [Basic Version Control with _git_](basic-git.md) | Necessary   |       |
+| [Issues and Discussions](github-issues.md)       | Recommended |       |
+| [Branches](git-branches.md)                      | Necessary   |       |
+| [Pull Requests](github-pull-request.md)          | Necessary   |       |
+| [Reviewing Pull Requests](review-pr.md)          | Recommended |       |
+| [GitHub Workflows](github-workflows.md)          | Necessary   |       |
 
 - **Time to learn**: 30 minutes
 

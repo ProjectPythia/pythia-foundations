@@ -20,14 +20,14 @@ Git "branches" are an important component of many Git and GitHub workflows. If y
 
 ## Prerequisites
 
-| Concepts                                                   | Importance  | Notes                        |
-| ---------------------------------------------------------- | ----------- | ---------------------------- |
-| [What is GitHub?](#what-is-github)                         | Necessary   | GitHub user account required |
-| [GitHub Repositories](github-repos)                        | Necessary   |                              |
-| [Issues and Discussions](github-issues)                    | Recommended |                              |
-| [Cloning and Forking a Repository](github-cloning-forking) | Necessary   |                              |
-| [Configuring your GitHub Account](github-setup-advanced)   | Recommended |                              |
-| [Basic Version Control with _git_](basic-git)              | Necessary   |                              |
+| Concepts                                                      | Importance  | Notes                        |
+| ------------------------------------------------------------- | ----------- | ---------------------------- |
+| [What is GitHub?](what-is-github.md)                          | Necessary   | GitHub user account required |
+| [GitHub Repositories](github-repos.md)                        | Necessary   |                              |
+| [Issues and Discussions](github-issues.md)                    | Recommended |                              |
+| [Cloning and Forking a Repository](github-cloning-forking.md) | Necessary   |                              |
+| [Configuring your GitHub Account](github-setup-advanced.md)   | Recommended |                              |
+| [Basic Version Control with _git_](basic-git.md)              | Necessary   |                              |
 
 - **Time to learn**: 30 minutes
 
@@ -43,7 +43,7 @@ These branches can live on your computer (local) or on GitHub (remote). They are
 
 ```{admonition} Pull Requests
 :class: info
-We will cover [Pull Requests]((github-pull-request)) more in-depthly in the next section.
+We will cover [Pull Requests](github-pull-request.md) more in-depthly in the next section.
 ```
 
 One rule of thumb is for each development feature to have its own development branch until that feature is ready to be added to the upstream (remote) codebase. This allows you to compartmentalize your Pull Requests so that smaller working changes can be merged upstream independently of one another. For example, you might have a complete or near-complete feature on its own branch with an open Pull Request awaiting review. While you wait for feedback from the team before merging it, you can still work on a second feature on a second branch without affecting your first feature's Pull Request. **We encourage you to always do your work in a designated branch.**
@@ -301,7 +301,7 @@ All in all your Git Branching workflow should resemble this flow:
 
 ### What's Next?
 
-[Opening a Pull Request on GitHub](github-pull-request)
+[Opening a Pull Request on GitHub](github-pull-request.md)
 
 ## Resources and references
 

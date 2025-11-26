@@ -13,10 +13,10 @@
 
 ## Prerequisites
 
-| Concepts                            | Importance | Notes |
-| ----------------------------------- | ---------- | ----- |
-| [What is GitHub?](#what-is-github)  | Necessary  |       |
-| [GitHub Repositories](github-repos) | Necessary  |       |
+| Concepts                               | Importance | Notes |
+| -------------------------------------- | ---------- | ----- |
+| [What is GitHub?](what-is-github.md)   | Necessary  |       |
+| [GitHub Repositories](github-repos.md) | Necessary  |       |
 
 - **Time to learn**: 5 minutes
 
