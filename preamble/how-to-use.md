@@ -45,8 +45,10 @@ of the Scientific Python Ecosystem.
 ## Running Pythia Foundations examples
 
 All of the content in Pythia Foundations is authored in Markdown
-and presented in the form of [Jupyter
-Notebook](https://jupyterbook.org/intro.html) “chapters”. The power
+and presented in the form of a [Jupyter
+Book](https://jupyterbook.org)(@https://doi.org/10.25080/hwcj9957) with
+“chapters” written as MyST Markdown documents or Jupyter Notebooks
+(@https://doi.org/10.3233/978-1-61499-649-1-87). The power
 of Jupyter Notebooks is that they can contain both static text and
 executable code that you can interact with. When you navigate to a
 book chapter such as [Matplotlib
