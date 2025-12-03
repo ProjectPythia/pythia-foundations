@@ -20,10 +20,10 @@ From the [Matplotlib documentation](https://matplotlib.org), "Matplotlib is a co
 
 Currently, Pythia Foundations provides a basic introduction to Matplotlib, as well as:
 
-- Histograms
-- Piecharts
-- Animations
-- Annotations
-- Colorbars
-- Contour plots
-- Customizing layouts
+- [Histograms](#histograms)
+- [Piecharts](#pie-charts)
+- [Animations](#animations)
+- [Annotations](#adding-annotations)
+- [Colormaps](#colormap-overview)
+- [Contour plots](#contour-and-filled-contour-plots)
+- [Customizing layouts](#mosaic-subplots)
