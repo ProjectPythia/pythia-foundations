@@ -8,7 +8,7 @@ description: Glossary of terms used in Pythia Foundations.
 [Binder](https://jupyter.org/binder)
 : An open-source service that allows users to create sharable, interactive computing environments from {term}`Jupyter Notebooks` and other repositories. Binder can reproduce a computational environment directly from a GitHub repository, providing a seamless way to share and interact with code and data.
 
-: The public service to run Binder is on <https://mybinder.org>, which is running {term}`BinderHub`. ProjectPythia 
+: The public service to run Binder is on <https://mybinder.org>, which is running {term}`BinderHub`. ProjectPythia
 
 BinderHub
 : The underlying technology and infrastructure that powers {term}`Binder`. BinderHub deploys and manages the interactive computing environments for {term}`Jupyter Notebooks`, ensuring that users can access and share reproducible computational work.
@@ -44,4 +44,3 @@ Miniforge
 Python package
 : A Python package is a collection of modules, which, in turn, are essentially Python scripts that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules. You can install Python packages with {term}`conda`.
 :::
-

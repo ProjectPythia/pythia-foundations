@@ -137,4 +137,3 @@ Conda is a package and environment management system that allows you to quickly 
 - [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
 - [Anaconda](https://docs.anaconda.com/anaconda/install/)
 - [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-
