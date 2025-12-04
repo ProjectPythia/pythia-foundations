@@ -15,17 +15,26 @@ project:
       url: https://binder.projectpythia.org
       repo: projectpythia/pythia-foundations
   abbreviations:
-    FOSS: Free and open-source software
-    VCS: Version control system
-    FTP: File transfer protocol
+    API: application programming interface
+    FOSS: free and open-source software
+    FTP: File Transfer Protocol
+    HTTP: Hypertext Transfer Protocol
+    ID: identifier
+    IDL: Interactive Data Language
+    NCAR: NSF National Center for Atmospheric Research
+    NCL: NCAR Command Language
+    NSF: U.S. National Science Foundation
+    PR: pull request
+    SSH: Secure Shell Protocol
     TCP: Transmission Control Protocol
+    VCS: version control system
   toc:
     - file: landing-page.md
     - title: Preamble
       children:
         - file: preamble/how-to-use.md
         - file: preamble/how-to-cite.md
-    - title: Foundational skills
+    - title: Foundational Skills
       children:
         - file: foundations/overview.md
         - file: foundations/why-python.md
@@ -54,7 +63,7 @@ project:
             - file: foundations/github/review-pr.md
             - file: foundations/github/github-workflows.md
             - file: foundations/github/contribute-to-pythia.md
-    - title: Core Scientific Python packages
+    - title: Core Scientific Python Packages
       children:
         - file: core/overview.md
         - file: core/numpy.md
@@ -87,6 +96,7 @@ project:
             - file: core/xarray/dask-arrays-xarray.ipynb
     - title: Appendix
       children:
+        - file: appendix/glossary.md
         - file: appendix/how-to-contribute.md
           children:
             - file: appendix/template.ipynb
