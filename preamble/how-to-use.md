@@ -30,8 +30,10 @@ results.
 ## Organization of Pythia Foundations
 
 Pythia Foundations is organized into two main sections as seen in
-the sidebar on the left and the schematic below: Foundational Skills, and Core Scientific
-Python Packages. The first, Foundational Skills, covers essential
+the sidebar on the left and the schematic below:
+[Foundational Skills](https://foundations.projectpythia.org/foundations/overview/),
+and [Core Scientific Python Packages](https://foundations.projectpythia.org/core/overview/).
+The first, Foundational Skills, covers essential
 material that all users of Project Pythia are expected to feel
 comfortable with in order to make the most of the rest of the Project
 Pythia content. The second, Core Scientific Python Packages, covers
