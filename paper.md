@@ -35,6 +35,9 @@ authors:
   - name: Katelyn FitzGerald
     orcid: 0000-0003-4184-1917
     affiliation: 4
+  - name: Brittany Freeman
+    orcid: 0009-0006-2806-1149
+    affiliation: 1
   - name: Maxwell A. Grover
     orcid: 0000-0002-0370-8974
     affiliation: 5
