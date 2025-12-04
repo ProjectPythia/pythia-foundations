@@ -138,17 +138,3 @@ Conda is a package and environment management system that allows you to quickly 
 - [Anaconda](https://docs.anaconda.com/anaconda/install/)
 - [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 
-## Glossary
-
-:::{glossary}
-Conda
-: Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). To install `conda`, we recommend {term}`miniconda`.
-: See [Conda documentation](https://docs.conda.io/en/latest/) and the [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/) and @conda-commands in the context of ProjectPythia.
-
-Miniconda
-: [Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a free minimal installer for {term}`conda`. Miniconda only comes with the {term}`conda` package management system; it is a pared-down version of the full Anaconda Python distribution.
-: See @installing-conda.
-
-Python Package
-: A Python package is a collection of modules, which, in turn, are essentially Python scripts that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules. You can install Python packages with {term}`conda`.
-:::
