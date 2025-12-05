@@ -5,7 +5,7 @@ extends:
 project:
   title: Pythia Foundations
   github: https://github.com/projectpythia/pythia-foundations
-  bibtex_bibfiles:
+  bibliography:
     - references.bib
   author:
     - Project Pythia Community
