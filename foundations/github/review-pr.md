@@ -19,15 +19,15 @@ This tutorial covers the following topics:
 
 ## Prerequisites
 
-| Concepts                                      | Importance  | Notes |
-| --------------------------------------------- | ----------- | ----- |
-| [What is GitHub](what-is-github)              | Necessary   |       |
-| [GitHub Repositories](github-repos)           | Necessary   |       |
-| [Cloning and Forking](github-cloning-forking) | Necessary   |       |
-| [Basic Version Control with _git_](basic-git) | Necessary   |       |
-| [Issues and Discussions](github-issues)       | Recommended |       |
-| [Branches](git-branches)                      | Necessary   |       |
-| [Pull Requests](github-pull-request)          | Necessary   |       |
+| Concepts                                         | Importance  | Notes |
+| ------------------------------------------------ | ----------- | ----- |
+| [What is GitHub](what-is-github.md)              | Necessary   |       |
+| [GitHub Repositories](github-repos.md)           | Necessary   |       |
+| [Cloning and Forking](github-cloning-forking.md) | Necessary   |       |
+| [Basic Version Control with _git_](basic-git.md) | Necessary   |       |
+| [Issues and Discussions](github-issues.md)       | Recommended |       |
+| [Branches](git-branches.md)                      | Necessary   |       |
+| [Pull Requests](github-pull-request.md)          | Necessary   |       |
 
 - **Time to learn**: 30 minutes
 
@@ -118,7 +118,7 @@ There are specific elements of PRs that are more commonly prioritized during a r
 
 ### What's Next?
 
-The next tutorial will cover standards and other details about [GitHub Workflows](github-workflows).
+The next tutorial will cover standards and other details about [GitHub Workflows](github-workflows.md).
 
 ## Resources and References
 

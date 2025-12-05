@@ -5,7 +5,7 @@ extends:
 project:
   title: Pythia Foundations
   github: https://github.com/projectpythia/pythia-foundations
-  bibtex_bibfiles:
+  bibliography:
     - references.bib
   author:
     - Project Pythia Community
@@ -14,6 +14,8 @@ project:
     binder:
       url: https://binder.projectpythia.org
       repo: projectpythia/pythia-foundations
+  settings:
+    output_matplotlib_strings: remove
   abbreviations:
     FOSS: Free and open-source software
     VCS: Version control system

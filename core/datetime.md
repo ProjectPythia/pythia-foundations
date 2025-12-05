@@ -11,4 +11,4 @@ When this chapter is fully built out, it will include a comprehensive guide to d
 - [Numpy `datetime64`](https://numpy.org/doc/stable/reference/arrays.datetime.html) (for efficient vectorized date and time operations)
 - [cftime library](https://unidata.github.io/cftime/) (for dealing with dates and times in non-standard calendars)
 
-These tutorials will be cross-referenced with other tutorials on time-related topics, such as dealing with timeseries data in [Pandas](pandas) and [Xarray](xarray).
+These tutorials will be cross-referenced with other tutorials on time-related topics, such as dealing with timeseries data in [Pandas](pandas.md) and [Xarray](xarray.md).
