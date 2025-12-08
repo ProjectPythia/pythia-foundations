@@ -14,6 +14,6 @@ From the [Xarray website][xarray home]:
 >
 > Xarray is inspired by and borrows heavily from pandas, the popular data analysis package focused on labelled tabular data. It is particularly tailored to working with netCDF files, which were the source of xarray’s data model, and integrates tightly with dask for parallel computing.
 
-You should have a basic familiarity with [Numpy arrays](numpy) prior to working through the Xarray notebooks presented here.
+You should have a basic familiarity with [Numpy arrays](numpy.md) prior to working through the Xarray notebooks presented here.
 
 [xarray home]: http://xarray.pydata.org/en/stable/

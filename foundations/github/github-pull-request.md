@@ -16,14 +16,14 @@ A Pull Request, aka a "merge request," is an event that occurs when a project co
 
 ## Prerequisites
 
-| Concepts                                      | Importance  | Notes |
-| --------------------------------------------- | ----------- | ----- |
-| [What is GitHub](what-is-github)              | Necessary   |       |
-| [GitHub Repositories](github-repos)           | Necessary   |       |
-| [Cloning and Forking](github-cloning-forking) | Necessary   |       |
-| [Basic Version Control with _git_](basic-git) | Necessary   |       |
-| [Issues and Discussions](github-issues)       | Recommended |       |
-| [Branches](git-branches)                      | Necessary   |       |
+| Concepts                                         | Importance  | Notes |
+| ------------------------------------------------ | ----------- | ----- |
+| [What is GitHub](what-is-github.md)              | Necessary   |       |
+| [GitHub Repositories](github-repos.md)           | Necessary   |       |
+| [Cloning and Forking](github-cloning-forking.md) | Necessary   |       |
+| [Basic Version Control with _git_](basic-git.md) | Necessary   |       |
+| [Issues and Discussions](github-issues.md)       | Recommended |       |
+| [Branches](git-branches.md)                      | Necessary   |       |
 
 - **Time to learn**: 60 minutes
 
@@ -70,7 +70,7 @@ closes the PR.
 
 ## Opening a Pull Request
 
-The demonstration is a continuation from the [GitHub Branches chapter](github-branches). Here, we will move from your local terminal to GitHub.
+The demonstration is a continuation from the [Git Branches chapter](git-branches.md). Here, we will move from your local terminal to GitHub.
 
 ### Navigate to Your Fork
 
@@ -148,7 +148,7 @@ The steps leading up to creating your PR depend on your workflow. The main diffe
 the contributor now, for the Feature Workflow, navigates to the upstream, remote
 repository, not a personal remote fork, and initiates the PR there.
 
-We will cover [GitHub Workflows](github-workflows) in greater detail in the next chapter.
+We will cover [GitHub Workflows](github-workflows.md) in greater detail in the next chapter.
 
 ---
 
@@ -162,7 +162,7 @@ We will cover [GitHub Workflows](github-workflows) in greater detail in the next
 
 ### What's Next?
 
-In the next lesson we will learn more about [Reviewing Pull Requests](review-pr).
+In the next lesson we will learn more about [Reviewing Pull Requests](review-pr.md).
 
 ## References
 
