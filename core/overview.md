@@ -115,10 +115,10 @@ attempt to keep track of the domain-specific libraries in these subfiels.
 
 ## Tutorials
 
-- [NumPy](numpy): Core package for array computing, the workhorse of the Scientific Python stack
-- [Matplotlib](matplotlib): Basic plotting
-- [Cartopy](cartopy): Plotting on map projections
-- [Datetime](datetime): Dealing with time and calendar data
-- [Pandas](pandas): Working with labeled tabular data
-- [Data formats](data-formats): Working with common geoscience data formats
-- [Xarray](xarray): Working with gridded and labeled N-dimensional data
+- [NumPy](numpy.md): Core package for array computing, the workhorse of the Scientific Python stack
+- [Matplotlib](matplotlib.md): Basic plotting
+- [Cartopy](cartopy.md): Plotting on map projections
+- [Datetime](datetime.md): Dealing with time and calendar data
+- [Pandas](pandas.md): Working with labeled tabular data
+- [Data formats](data-formats.md): Working with common geoscience data formats
+- [Xarray](xarray.md): Working with gridded and labeled N-dimensional data
