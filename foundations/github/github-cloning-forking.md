@@ -13,12 +13,12 @@
 
 ## Prerequisites
 
-| Concepts                                | Importance  | Notes                        |
-| --------------------------------------- | ----------- | ---------------------------- |
-| [What is GitHub?](what-is-github)       | Necessary   | GitHub user account required |
-| [GitHub Repositories](github-repos)     | Necessary   |                              |
-| [Issues and Discussions](github-issues) | Recommended |                              |
-| Command-line shell                      | Helpful     |                              |
+| Concepts                                   | Importance  | Notes                        |
+| ------------------------------------------ | ----------- | ---------------------------- |
+| [What is GitHub?](what-is-github.md)       | Necessary   | GitHub user account required |
+| [GitHub Repositories](github-repos.md)     | Necessary   |                              |
+| [Issues and Discussions](github-issues.md) | Recommended |                              |
+| Command-line shell                         | Helpful     |                              |
 
 - **Time to learn**: 30 minutes
 
