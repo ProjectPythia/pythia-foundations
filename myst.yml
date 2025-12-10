@@ -27,6 +27,7 @@ project:
     NCL: NCAR Command Language
     NSF: U.S. National Science Foundation
     PR: pull request
+    SPE: Scientific Python Ecosystem
     SSH: Secure Shell Protocol
     TCP: Transmission Control Protocol
     VCS: version control system
