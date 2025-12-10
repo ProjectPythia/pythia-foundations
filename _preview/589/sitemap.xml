@@ -146,6 +146,9 @@
     <loc>http://localhost:3000/core/xarray/dask-arrays-xarray</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/appendix/glossary</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/appendix/how-to-contribute</loc>
   </url>
   <url>
