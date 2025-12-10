@@ -18,19 +18,20 @@ project:
     output_matplotlib_strings: remove
   abbreviations:
     API: application programming interface
-    FOSS: free and open-source software
+    DOI: Digital Object Identifier
+    FOSS: Free and Open-Source Software
     FTP: File Transfer Protocol
     HTTP: Hypertext Transfer Protocol
-    ID: identifier
+    ID: Identifier
     IDL: Interactive Data Language
     NCAR: NSF National Center for Atmospheric Research
     NCL: NCAR Command Language
     NSF: U.S. National Science Foundation
-    PR: pull request
+    PR: Pull Request
     SPE: Scientific Python Ecosystem
     SSH: Secure Shell Protocol
     TCP: Transmission Control Protocol
-    VCS: version control system
+    VCS: Version Control System
   toc:
     - file: landing-page.md
     - title: Preamble
