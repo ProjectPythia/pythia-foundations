@@ -12,12 +12,12 @@
 
 ## Prerequisites
 
-| Concepts                                                   | Importance  | Notes                        |
-| ---------------------------------------------------------- | ----------- | ---------------------------- |
-| [What is GitHub?](what-is-github)                          | Necessary   | GitHub user account required |
-| [GitHub Repositories](github-repos)                        | Necessary   |                              |
-| [Issues and Discussions](github-issues)                    | Recommended |                              |
-| [Cloning and Forking a Repository](github-cloning-forking) | Recommended |                              |
+| Concepts                                                      | Importance  | Notes                        |
+| ------------------------------------------------------------- | ----------- | ---------------------------- |
+| [What is GitHub?](what-is-github.md)                          | Necessary   | GitHub user account required |
+| [GitHub Repositories](github-repos.md)                        | Necessary   |                              |
+| [Issues and Discussions](github-issues.md)                    | Recommended |                              |
+| [Cloning and Forking a Repository](github-cloning-forking.md) | Recommended |                              |
 
 - **Time to learn**: 35 minutes
 
@@ -124,7 +124,7 @@ You will then receive email at the address you used when you signed up for GitHu
 
 ---
 
-You can stop watching that repo by just clicking on the now-labeled _Unwatch_ link again, and choosing _Participating and @mentions_ to toggle it back to _Unwatch_.
+You can stop watching that repo by just clicking on the now-labeled _Unwatch_ link again, and choosing _Participating and \@mentions_ to toggle it back to _Unwatch_.
 
 ## Stop spamming me, GitHub!
 

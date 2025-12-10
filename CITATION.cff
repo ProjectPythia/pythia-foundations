@@ -40,11 +40,19 @@ authors:
     orcid: https://orcid.org/0000-0002-0370-8974
     website: https://github.com/mgrover1
     affiliation: Argonne National Laboratory
+  - family-names: FitzGerald
+    given-names: Katelyn
+    orcid: https://orcid.org/0000-0003-4184-1917
+    affiliation: UCAR/NCAR
   - family-names: Ford
     given-names: Robert R.
     orcid: https://orcid.org/0000-0001-5483-4965
     website: https://github.com/r-ford
     affiliation: University at Albany (State University of New York)
+  - family-names: Freeman
+    given-names: Brittany
+    orcid: https://orcid.org/0009-0006-2806-1149
+    affilitation: University at Albany (State University of New York)
   - family-names: Paul
     given-names: Kevin
     orcid: https://orcid.org/0000-0001-8155-8038
