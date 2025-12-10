@@ -17,7 +17,7 @@ project:
   settings:
     output_matplotlib_strings: remove
   abbreviations:
-    API: application programming interface
+    API: Application Programming Interface
     DOI: Digital Object Identifier
     FOSS: Free and Open-Source Software
     FTP: File Transfer Protocol
