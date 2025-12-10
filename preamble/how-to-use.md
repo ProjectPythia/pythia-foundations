@@ -31,8 +31,8 @@ results.
 
 Pythia Foundations is organized into two main sections as seen in
 the sidebar on the left and the schematic below:
-[Foundational Skills](https://foundations.projectpythia.org/foundations/overview/),
-and [Core Scientific Python Packages](https://foundations.projectpythia.org/core/overview/).
+[Foundational Skills](../foundations/overview/),
+and [Core Scientific Python Packages](../core/overview/).
 The first, Foundational Skills, covers essential
 material that all users of Project Pythia are expected to feel
 comfortable with in order to make the most of the rest of the Project
@@ -48,7 +48,7 @@ of the Scientific Python Ecosystem.
 
 All of the content in Pythia Foundations is authored in Markdown
 and presented in the form of [Jupyter
-Notebook](https://jupyterbook.org/intro.html) “chapters”. The power
+Notebook](https://jupyter.org) “chapters”. The power
 of Jupyter Notebooks is that they can contain both static text and
 executable code that you can interact with. When you navigate to a
 book chapter such as [Matplotlib
