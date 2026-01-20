@@ -19,5 +19,4 @@ dependencies:
   - python-graphviz
   - graphviz
   - mystmd
-  - nodejs
   - jupyterlab-myst
