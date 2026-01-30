@@ -1,0 +1,839 @@
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in notebooks */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+  line-height: 1.6;
+  padding-bottom: 4px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.xr-header {
+  border-bottom: solid 1px var(--xr-border-color);
+  margin-bottom: 4px;
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-obj-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type,
+.xr-group-box-contents > label {
+  color: var(--xr-font-color2);
+  display: block;
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item > input,
+.xr-group-box-contents > input,
+.xr-array-wrap > input {
+  display: block;
+  opacity: 0;
+  height: 0;
+  margin: 0;
+}
+
+.xr-section-item > input + label,
+.xr-var-item > input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item > input:enabled + label,
+.xr-var-item > input:enabled + label,
+.xr-array-wrap > input:enabled + label,
+.xr-group-box-contents > input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item > input:focus-visible + label,
+.xr-var-item > input:focus-visible + label,
+.xr-array-wrap > input:focus-visible + label,
+.xr-group-box-contents > input:focus-visible + label {
+  outline: auto;
+}
+
+.xr-section-item > input:enabled + label:hover,
+.xr-var-item > input:enabled + label:hover,
+.xr-array-wrap > input:enabled + label:hover,
+.xr-group-box-contents > input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.xr-section-summary > em {
+  font-weight: normal;
+}
+
+.xr-span-grid {
+  grid-column-end: -1;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.3em;
+}
+
+.xr-group-box-contents > input:checked + label > span {
+  display: inline-block;
+  padding-left: 0.6em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details,
+.xr-group-box-contents > label {
+  padding-top: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  grid-column: 1 / -1;
+  margin-top: 4px;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in ~ .xr-section-details {
+  display: none;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-children {
+  display: inline-grid;
+  grid-template-columns: 100%;
+  grid-column: 1 / -1;
+  padding-top: 4px;
+}
+
+.xr-group-box {
+  display: inline-grid;
+  grid-template-columns: 0px 30px auto;
+}
+
+.xr-group-box-vline {
+  grid-column-start: 1;
+  border-right: 0.2em solid;
+  border-color: var(--xr-border-color);
+  width: 0px;
+}
+
+.xr-group-box-hline {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  height: 1em;
+  width: 26px;
+  border-bottom: 0.2em solid;
+  border-color: var(--xr-border-color);
+}
+
+.xr-group-box-contents {
+  grid-column-start: 3;
+  padding-bottom: 4px;
+}
+
+.xr-group-box-contents > label::before {
+  content: "📂";
+  padding-right: 0.3em;
+}
+
+.xr-group-box-contents > input:checked + label::before {
+  content: "📁";
+}
+
+.xr-group-box-contents > input:checked + label {
+  padding-bottom: 0px;
+}
+
+.xr-group-box-contents > input:checked ~ .xr-sections {
+  display: none;
+}
+
+.xr-group-box-contents > input + label > span {
+  display: none;
+}
+
+.xr-group-box-ellipsis {
+  font-size: 1.4em;
+  font-weight: 900;
+  color: var(--xr-font-color2);
+  letter-spacing: 0.15em;
+  cursor: default;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;tos&#x27; (time: 180, lat: 180, lon: 360)&gt; Size: 47MB
+dask.array&lt;open_dataset-tos, shape=(180, 180, 360), dtype=float32, chunksize=(90, 180, 360), chunktype=numpy.ndarray&gt;
+Coordinates:
+  * time     (time) object 1kB 2000-01-15 12:00:00 ... 2014-12-15 12:00:00
+  * lat      (lat) float64 1kB -89.5 -88.5 -87.5 -86.5 ... 86.5 87.5 88.5 89.5
+  * lon      (lon) float64 3kB 0.5 1.5 2.5 3.5 4.5 ... 356.5 357.5 358.5 359.5
+Attributes: (12/19)
+    cell_measures:  area: areacello
+    cell_methods:   area: mean where sea time: mean
+    comment:        Model data on the 1x1 grid includes values in all cells f...
+    description:    This may differ from &quot;surface temperature&quot; in regions of ...
+    frequency:      mon
+    id:             tos
+    ...             ...
+    time_label:     time-mean
+    time_title:     Temporal mean
+    title:          Sea Surface Temperature
+    type:           real
+    units:          degC
+    variable_id:    tos</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-obj-name'>&#x27;tos&#x27;</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 180</li><li><span class='xr-has-index'>lat</span>: 180</li><li><span class='xr-has-index'>lon</span>: 360</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-6d7ac773-31a6-47aa-be64-daa15aae2d20' class='xr-array-in' type='checkbox' checked><label for='section-6d7ac773-31a6-47aa-be64-daa15aae2d20' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(90, 180, 360), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
+    <tr>
+        <td>
+            <table style="border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <td> </td>
+                        <th> Array </th>
+                        <th> Chunk </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <th> Bytes </th>
+                        <td> 44.49 MiB </td>
+                        <td> 22.25 MiB </td>
+                    </tr>
+                    
+                    <tr>
+                        <th> Shape </th>
+                        <td> (180, 180, 360) </td>
+                        <td> (90, 180, 360) </td>
+                    </tr>
+                    <tr>
+                        <th> Dask graph </th>
+                        <td colspan="2"> 2 chunks in 2 graph layers </td>
+                    </tr>
+                    <tr>
+                        <th> Data type </th>
+                        <td colspan="2"> float32 numpy.ndarray </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td>
+        <svg width="215" height="145" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="10" y1="0" x2="45" y2="35" style="stroke-width:2" />
+  <line x1="10" y1="60" x2="45" y2="95" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="10" y1="0" x2="10" y2="60" style="stroke-width:2" />
+  <line x1="27" y1="17" x2="27" y2="77" />
+  <line x1="45" y1="35" x2="45" y2="95" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="10.0,0.0 45.294117647058826,35.294117647058826 45.294117647058826,95.29411764705883 10.0,60.0" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="10" y1="0" x2="130" y2="0" style="stroke-width:2" />
+  <line x1="27" y1="17" x2="147" y2="17" />
+  <line x1="45" y1="35" x2="165" y2="35" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="10" y1="0" x2="45" y2="35" style="stroke-width:2" />
+  <line x1="130" y1="0" x2="165" y2="35" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="10.0,0.0 130.0,0.0 165.29411764705884,35.294117647058826 45.294117647058826,35.294117647058826" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="45" y1="35" x2="165" y2="35" style="stroke-width:2" />
+  <line x1="45" y1="95" x2="165" y2="95" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="45" y1="35" x2="45" y2="95" style="stroke-width:2" />
+  <line x1="165" y1="35" x2="165" y2="95" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="45.294117647058826,35.294117647058826 165.29411764705884,35.294117647058826 165.29411764705884,95.29411764705883 45.294117647058826,95.29411764705883" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="105.29411764705884" y="115.29411764705883" font-size="1.0rem" font-weight="100" text-anchor="middle" >360</text>
+  <text x="185.29411764705884" y="65.29411764705883" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,185.29411764705884,65.29411764705883)">180</text>
+  <text x="17.647058823529413" y="97.64705882352942" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,17.647058823529413,97.64705882352942)">180</text>
+</svg>
+        </td>
+    </tr>
+</table></div></div></li><li class='xr-section-item'><input id='section-267f19b0-e265-48f1-8753-5cc85dba3262' class='xr-section-summary-in' type='checkbox' checked /><label for='section-267f19b0-e265-48f1-8753-5cc85dba3262' class='xr-section-summary' title='Expand/collapse section'>Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>2000-01-15 12:00:00 ... 2014-12-...</div><input id='attrs-049c022b-7bc8-4fa3-9159-f76f081b5cf9' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-049c022b-7bc8-4fa3-9159-f76f081b5cf9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a195a871-5360-4a78-b1c6-36f85a2a9960' class='xr-var-data-in' type='checkbox'><label for='data-a195a871-5360-4a78-b1c6-36f85a2a9960' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>T</dd><dt><span>bounds :</span></dt><dd>time_bnds</dd><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>title :</span></dt><dd>time</dd><dt><span>type :</span></dt><dd>double</dd></dl></div><div class='xr-var-data'><pre>array([cftime.DatetimeNoLeap(2000, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2000, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2000, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2000, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2000, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2000, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2000, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2000, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2000, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2000, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2000, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2000, 12, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2001, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2001, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2001, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2001, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2001, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2001, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2001, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2001, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2001, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2001, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2001, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2001, 12, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2002, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2002, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2002, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2002, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2002, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2002, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2002, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2002, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2002, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2002, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2002, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2002, 12, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2003, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2003, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2003, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2003, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2003, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2003, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2003, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2003, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2003, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2003, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2003, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2003, 12, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2004, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2004, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2004, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2004, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2004, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2004, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2004, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2004, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2004, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2004, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2004, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2004, 12, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2005, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2005, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2005, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2005, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2005, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2005, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2005, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2005, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2005, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2005, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2005, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2005, 12, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2006, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2006, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2006, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2006, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2006, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2006, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2006, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2006, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2006, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2006, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2006, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2006, 12, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2007, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2007, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2007, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2007, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2007, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2007, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2007, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2007, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2007, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2007, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2007, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2007, 12, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2008, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2008, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2008, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2008, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2008, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2008, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2008, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2008, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2008, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2008, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2008, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2008, 12, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2009, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2009, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2009, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2009, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2009, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2009, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2009, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2009, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2009, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2009, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2009, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2009, 12, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2010, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2010, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2010, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2010, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2010, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2010, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2010, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2010, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2010, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2010, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2010, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2010, 12, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2011, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2011, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2011, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2011, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2011, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2011, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2011, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2011, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2011, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2011, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2011, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2011, 12, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2012, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2012, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2012, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2012, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2012, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2012, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2012, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2012, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2012, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2012, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2012, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2012, 12, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2013, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2013, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2013, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2013, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2013, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2013, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2013, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2013, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2013, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2013, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2013, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2013, 12, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2014, 1, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2014, 2, 14, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2014, 3, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2014, 4, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2014, 5, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2014, 6, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2014, 7, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2014, 8, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2014, 9, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2014, 10, 15, 12, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2014, 11, 15, 0, 0, 0, 0, has_year_zero=True),
+       cftime.DatetimeNoLeap(2014, 12, 15, 12, 0, 0, 0, has_year_zero=True)],
+      dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-89.5 -88.5 -87.5 ... 88.5 89.5</div><input id='attrs-d267b582-c950-444e-83a5-b1a40862e47a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d267b582-c950-444e-83a5-b1a40862e47a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3ebe019c-9206-42fe-98ae-e6c94acf8596' class='xr-var-data-in' type='checkbox'><label for='data-3ebe019c-9206-42fe-98ae-e6c94acf8596' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>Y</dd><dt><span>bounds :</span></dt><dd>lat_bnds</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>array([-89.5, -88.5, -87.5, -86.5, -85.5, -84.5, -83.5, -82.5, -81.5, -80.5,
+       -79.5, -78.5, -77.5, -76.5, -75.5, -74.5, -73.5, -72.5, -71.5, -70.5,
+       -69.5, -68.5, -67.5, -66.5, -65.5, -64.5, -63.5, -62.5, -61.5, -60.5,
+       -59.5, -58.5, -57.5, -56.5, -55.5, -54.5, -53.5, -52.5, -51.5, -50.5,
+       -49.5, -48.5, -47.5, -46.5, -45.5, -44.5, -43.5, -42.5, -41.5, -40.5,
+       -39.5, -38.5, -37.5, -36.5, -35.5, -34.5, -33.5, -32.5, -31.5, -30.5,
+       -29.5, -28.5, -27.5, -26.5, -25.5, -24.5, -23.5, -22.5, -21.5, -20.5,
+       -19.5, -18.5, -17.5, -16.5, -15.5, -14.5, -13.5, -12.5, -11.5, -10.5,
+        -9.5,  -8.5,  -7.5,  -6.5,  -5.5,  -4.5,  -3.5,  -2.5,  -1.5,  -0.5,
+         0.5,   1.5,   2.5,   3.5,   4.5,   5.5,   6.5,   7.5,   8.5,   9.5,
+        10.5,  11.5,  12.5,  13.5,  14.5,  15.5,  16.5,  17.5,  18.5,  19.5,
+        20.5,  21.5,  22.5,  23.5,  24.5,  25.5,  26.5,  27.5,  28.5,  29.5,
+        30.5,  31.5,  32.5,  33.5,  34.5,  35.5,  36.5,  37.5,  38.5,  39.5,
+        40.5,  41.5,  42.5,  43.5,  44.5,  45.5,  46.5,  47.5,  48.5,  49.5,
+        50.5,  51.5,  52.5,  53.5,  54.5,  55.5,  56.5,  57.5,  58.5,  59.5,
+        60.5,  61.5,  62.5,  63.5,  64.5,  65.5,  66.5,  67.5,  68.5,  69.5,
+        70.5,  71.5,  72.5,  73.5,  74.5,  75.5,  76.5,  77.5,  78.5,  79.5,
+        80.5,  81.5,  82.5,  83.5,  84.5,  85.5,  86.5,  87.5,  88.5,  89.5])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.5 1.5 2.5 ... 357.5 358.5 359.5</div><input id='attrs-05938981-950d-4154-a519-bcd864ceda8d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-05938981-950d-4154-a519-bcd864ceda8d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b9af49d4-8536-4c73-b54d-84cd430149bc' class='xr-var-data-in' type='checkbox'><label for='data-b9af49d4-8536-4c73-b54d-84cd430149bc' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>X</dd><dt><span>bounds :</span></dt><dd>lon_bnds</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>array([  0.5,   1.5,   2.5, ..., 357.5, 358.5, 359.5], shape=(360,))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-524fc6f8-262e-4519-aea8-d45f93db2b94' class='xr-section-summary-in' type='checkbox' /><label for='section-524fc6f8-262e-4519-aea8-d45f93db2b94' class='xr-section-summary' title='Expand/collapse section'>Attributes: <span>(19)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>cell_measures :</span></dt><dd>area: areacello</dd><dt><span>cell_methods :</span></dt><dd>area: mean where sea time: mean</dd><dt><span>comment :</span></dt><dd>Model data on the 1x1 grid includes values in all cells for which ocean cells on the native grid cover more than 52.5 percent of the 1x1 grid cell. This 52.5 percent cutoff was chosen to produce ocean surface area on the 1x1 grid as close as possible to ocean surface area on the native grid, while not introducing fractional cell coverage.</dd><dt><span>description :</span></dt><dd>This may differ from &quot;surface temperature&quot; in regions of sea ice or floating ice shelves. For models using conservative temperature as the prognostic field, they should report the top ocean layer as surface potential temperature, which is the same as surface in situ temperature.</dd><dt><span>frequency :</span></dt><dd>mon</dd><dt><span>id :</span></dt><dd>tos</dd><dt><span>long_name :</span></dt><dd>Sea Surface Temperature</dd><dt><span>mipTable :</span></dt><dd>Omon</dd><dt><span>out_name :</span></dt><dd>tos</dd><dt><span>prov :</span></dt><dd>Omon ((isd.003))</dd><dt><span>realm :</span></dt><dd>ocean</dd><dt><span>standard_name :</span></dt><dd>sea_surface_temperature</dd><dt><span>time :</span></dt><dd>time</dd><dt><span>time_label :</span></dt><dd>time-mean</dd><dt><span>time_title :</span></dt><dd>Temporal mean</dd><dt><span>title :</span></dt><dd>Sea Surface Temperature</dd><dt><span>type :</span></dt><dd>real</dd><dt><span>units :</span></dt><dd>degC</dd><dt><span>variable_id :</span></dt><dd>tos</dd></dl></div></li></ul></div></div>
