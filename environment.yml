@@ -18,6 +18,5 @@ dependencies:
   - xarray
   - python-graphviz
   - graphviz
-  - mystmd
-  - nodejs
+  - mystmd>=1.6.0
   - jupyterlab-myst
