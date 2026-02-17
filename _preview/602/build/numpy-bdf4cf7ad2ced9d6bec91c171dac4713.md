@@ -15,8 +15,8 @@ From the [NumPy documentation](https://numpy.org/doc/stable/user/whatisnumpy.htm
 
 NumPy's position at the center of the scientific Python ecosystem means that all users should start here in their learning journey through the core scientific packages.
 
-In [NumPy Basics](numpy-basics), you will learn to create, perform basic operations on, and index and slice NumPy arrays.
+In [NumPy Basics](numpy-basics), you will get an introduction to NumPy arrays, including how to create and perform basic operations on them, as well as the basics of indexing and slicing arrays.
 
-[Intermediate NumPy](intermediate-numpy) covers additional concepts related to indexing and slicing arrays,
+[Intermediate NumPy](intermediate-numpy) covers additional concepts related to indexing and slicing multidimensional arrays,
 and [NumPy Broadcasting](numpy-broadcasting) introduces the way NumPy treats arithmetic on arrays of different
 shapes, which can help make your code more efficient by avoiding loops.
