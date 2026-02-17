@@ -17,6 +17,6 @@ NumPy's position at the center of the scientific Python ecosystem means that all
 
 In [NumPy Basics](numpy-basics), you will get an introduction to NumPy arrays, including how to create and perform basic operations on them, as well as the basics of indexing and slicing arrays.
 
-[Intermediate NumPy](intermediate-numpy) covers additional concepts related to indexing and slicing arrays,
+[Intermediate NumPy](intermediate-numpy) covers additional concepts related to indexing and slicing multidimensional arrays,
 and [NumPy Broadcasting](numpy-broadcasting) introduces the way NumPy treats arithmetic on arrays of different
 shapes, which can help make your code more efficient by avoiding loops.
