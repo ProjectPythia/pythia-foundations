@@ -2,7 +2,11 @@
 
 ## A community learning resource for Python-based computing in the geosciences
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7884571.svg)](https://doi.org/10.5281/zenodo.7884571) [![status](https://jose.theoj.org/papers/6ad4fe1df16342a33f750b43772c1b15/status.svg)](https://jose.theoj.org/papers/6ad4fe1df16342a33f750b43772c1b15)
+:::{figure}
+:class: grid grid-cols-2 items-end gap-4
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7884571.svg)](https://doi.org/10.5281/zenodo.7884571)
+[![status](https://jose.theoj.org/papers/6ad4fe1df16342a33f750b43772c1b15/status.svg)](https://jose.theoj.org/papers/6ad4fe1df16342a33f750b43772c1b15)
+:::
 
 :::{image} images/pretty-earth.png
 :alt: Pretty Earth
