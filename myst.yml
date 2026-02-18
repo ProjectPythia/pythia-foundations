@@ -9,6 +9,7 @@ project:
     - references.bib
   author:
     - Project Pythia Community
+  doi: https://doi.org/10.5281/zenodo.7884571
   copyright: '2024'
   jupyter:
     binder:
