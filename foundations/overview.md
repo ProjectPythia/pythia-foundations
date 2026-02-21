@@ -11,4 +11,4 @@ Familiarizing yourself with these topics first will allow you to get the most ou
 - [Why Python?](why-python): A brief preamble about Python's distinguishing features.
 - [Getting started with Python](getting-started-python): A quickstart Python example, followed by detailed tutorials on how to install and run Python on your own system.
 - [Getting started with Jupyter](getting-started-jupyter): All about the Jupyter ecosystem, which provides tools and environments for interactive, reproducible computing with Python.
-- [Getting started with GitHub](getting-started-github): Learn about the collaboration tools (GitHub) and version control software (git) that enables the open-source community.
+- [Getting started with GitHub](getting-started-github): Learn about the collaboration tools (GitHub) and version control software (Git) that enable the open-source community.

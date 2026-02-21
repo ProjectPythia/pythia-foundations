@@ -41,7 +41,7 @@ We could open an issue to suggest this change in order to get feedback on the id
 
 ## Make the edits
 
-We will follow the [Forking Workflow](https://foundations.projectpythia.org/foundations/github/github-workflows#forking-workflow) described in the previous section of this tutorial, assuming `pythia-foundations` has already been forked:
+We will follow the [forking workflow](#forking-workflow) described in the previous section of this tutorial, assuming `pythia-foundations` has already been forked:
 
 - Create a new branch with a descriptive name
 - Make the changes and commit them locally
