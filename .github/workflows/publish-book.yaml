@@ -12,7 +12,6 @@ jobs:
     uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
     with:
         base_url: ''
-        build_command: 'myst build --execute --html --strict'
 
   deploy:
     needs: build
