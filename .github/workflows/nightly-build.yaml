@@ -19,3 +19,5 @@ jobs:
   link-check:
     if: ${{ github.repository_owner == 'ProjectPythia' }}
     uses: ProjectPythia/cookbook-actions/.github/workflows/link-checker.yaml@main
+    with:
+      build_command: 'myst build --check-links --strict'

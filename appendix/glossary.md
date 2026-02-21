@@ -15,7 +15,7 @@ BinderHub
 
 Conda
 : Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). To install `conda`, we recommend {term}`miniconda`.
-: See [Conda documentation](https://docs.conda.io/en/latest/) and the [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/) and @conda-commands in the context of Project Pythia.
+: See [Conda documentation](https://docs.conda.io/en/latest/), particularly the [Conda cheat sheet](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html), and @conda-commands in the context of Project Pythia.
 
 Jupyter Notebooks
 : The Jupyter Notebook software is an open-source web application that allows you to create and share Jupyter Notebooks (`*.ipynb` files). Jupyter Notebooks contain executable code, LaTeX equations, visualizations (e.g., plots, pictures), and narrative text. The code does not have to just be Python, other languages such as Julia or R are supported as well. Jupyter Notebooks are celebrated for their interactive output that allows movement between code, code output, explanations, and more code - similar to how scientists think and solve problems. Jupyter Notebooks can be thought of as a living, runnable publication and make for a great presentation platform. See also {term}`Jupyter Kernels`, {term}`Jupyter Lab`, {term}`Jupyter Hub`, {term}`Binder`, and {term}`BinderHub`.
