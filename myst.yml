@@ -7,7 +7,11 @@ project:
   github: https://github.com/projectpythia/pythia-foundations
   bibliography:
     - references.bib
-  author:
+  authors:
+    - brian-rose
+    - clyne
+    - ktyle
+    - dcamron
     - Project Pythia Community
   doi: https://doi.org/10.5281/zenodo.7884571
   copyright: '2024'
