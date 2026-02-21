@@ -7,9 +7,9 @@
 
 ## Overview:
 
-1. What are Issues and Discussions?
-1. Examine an existing Issue
-1. Examine an existing Discussion
+1. What are issues and discussions?
+1. Examine an existing issue
+1. Examine an existing discussion
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@
 
 ---
 
-## What are Issues and Discussions?
+## What are issues and discussions?
 
 GitHub provides two different, but related mechanisms for communicating
 within a repository about a project: _Issues_ and _Discussions_.

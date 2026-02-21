@@ -43,7 +43,7 @@ These branches can live on your computer (local) or on GitHub (remote). They are
 
 ```{admonition} Pull Requests
 :class: info
-We will cover [Pull Requests](github-pull-request.md) more in-depthly in the next section.
+We will cover [pull requests](github-pull-request.md) in more depth in the next section.
 ```
 
 One rule of thumb is for each development feature to have its own development branch until that feature is ready to be added to the upstream (remote) codebase. This allows you to compartmentalize your Pull Requests so that smaller working changes can be merged upstream independently of one another. For example, you might have a complete or near-complete feature on its own branch with an open Pull Request awaiting review. While you wait for feedback from the team before merging it, you can still work on a second feature on a second branch without affecting your first feature's Pull Request. **We encourage you to always do your work in a designated branch.**

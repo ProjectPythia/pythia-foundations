@@ -13,12 +13,21 @@
 
 ## Prerequisites
 
+<<<<<<< Updated upstream
 | Concepts                                   | Importance  | Notes                        |
 | ------------------------------------------ | ----------- | ---------------------------- |
 | [What is GitHub?](what-is-github.md)       | Necessary   | GitHub user account required |
 | [GitHub Repositories](github-repos.md)     | Necessary   |                              |
 | [Issues and Discussions](github-issues.md) | Recommended |                              |
 | Command-line shell                         | Helpful     |                              |
+=======
+| Concepts                                                      | Importance  | Notes                        |
+| ------------------------------------------------------------- | ----------- | ---------------------------- |
+| [What is GitHub?](what-is-github.md)                          | Necessary   | GitHub user account required |
+| [GitHub Repositories](github-repos.md)                        | Necessary   |                              |
+| [Issues and Discussions](github-issues.md)                    | Recommended |                              |
+| [The Unix Shell](https://swcarpentry.github.io/shell-novice/) | Helpful     | Or equivalent                |
+>>>>>>> Stashed changes
 
 - **Time to learn**: 30 minutes
 

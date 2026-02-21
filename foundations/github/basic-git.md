@@ -1,15 +1,15 @@
-# Basic Version Control with _git_
+# Basic Version Control with Git
 
 ```{image} ../../images/Git-Logo-2Color.png
 :alt: Git Logo
 :width: 400px
 ```
 
-## Overview:
+## Overview
 
 1. The need for version control
-1. Basic git usage
-1. Making your first git commit
+1. Basic Git usage
+1. Making your first Git commit
 1. Viewing and comparing across the commit history
 
 ## Prerequisites
@@ -26,11 +26,11 @@
 
 ---
 
-## About version control and git
+## About version control and Git
 
 ### What is version control (and why should we care)?
 
-[Version Control](https://en.wikipedia.org/wiki/Version_control) refers generally to systems for managing changes to documents or files. Version control systems let us keep track of what changes were made to a file, when they were made, and by whom. If you've ever used "Tracked changes" on a Word document with multiple authors, then you've seen a form of version control in action (though NOT one that is well suited to working with computer code!).
+[Version control](https://en.wikipedia.org/wiki/Version_control) refers generally to systems for managing changes to documents or files. Version control systems let us keep track of what changes were made to a file, when they were made, and by whom. If you've ever used "Track Changes" in a Word document with multiple authors, then you've seen a form of version control in action (though NOT one that is well suited to working with computer code!).
 
 The need for version control is particularly acute when _working with computer code_, where small changes to the text can have huge impacts on the results of running the code.
 
@@ -44,21 +44,21 @@ analysis_script_09122021_edit.py
 analysis_script_NEW.py
 ```
 
-A Version Control System (VCS) like git will replace this mess with a _well-ordered and labelled history_ of edits that you can freely browse through, and will greatly simplify collaborating with other people on writing new code.
+A version control system (VCS) like Git will replace this mess with a _well-ordered and labelled history_ of edits that you can freely browse through, and will greatly simplify collaborating with other people on writing new code.
 
-### What is git?
+### What is Git?
 
 #### Git is not GitHub
 
-That's the first thing to understand. GitHub is a web-based platform for hosting code and collaborating with other people. On the other hand, **git is a command-line Version Control System (VCS)** that you can download and install. It runs on your local computer as well as under the hood on GitHub. You need to understand something about version control with git in order to use many of GitHub's collaboration features.
+That's the first thing to understand. GitHub is a web-based platform for hosting code and collaborating with other people. On the other hand, **Git is a command-line version control system (VCS)** that you can download and install. It runs on your local computer as well as under the hood on GitHub. You need to understand something about version control with Git in order to use many of GitHub's collaboration features.
 
 #### A little history and nomenclature
 
-Git has been around [since the mid-2000s](https://en.wikipedia.org/wiki/Git). It was originally written by Linus Torvalds specifically for use in development of the Linux kernel. Git is [FOSS](https://foundations.projectpythia.org/foundations/github/what-is-github#free-and-open-source-software-foss) and comes pre-installed on many Linux and Mac OS systems.
+Git has been around [since the mid-2000s](https://en.wikipedia.org/wiki/Git). It was originally written by Linus Torvalds specifically for use in development of the Linux kernel. Git is [FOSS](https://foundations.projectpythia.org/foundations/github/what-is-github#free-and-open-source-software-foss) and comes pre-installed on many Linux and macOS systems.
 
-There are many other VCSs out there. A few that you might encounter in scientific codebases include [Subversion](https://subversion.apache.org), [Mercurial](https://www.mercurial-scm.org), and [CVS](https://en.wikipedia.org/wiki/Concurrent_Versions_System). However, git is overwhelmingly the VCS of choice for open-source projects in the Scientific Python ecosystem these days (as well as among software developers more generally).
+There are many other VCSs out there. A few that you might encounter in scientific codebases include [Subversion](https://subversion.apache.org), [Mercurial](https://www.mercurial-scm.org), and [CVS](https://en.wikipedia.org/wiki/Concurrent_Versions_System). However, Git is overwhelmingly the VCS of choice for open-source projects in the scientific Python ecosystem these days (as well as among software developers more generally).
 
-There is no universally agreed-upon meaning of the name "git". From the [git project's own README file](https://github.com/git/git/blob/master/README.md):
+There is no universally agreed-upon meaning of the name "git". From the [Git project's own README file](https://github.com/git/git/blob/master/README.md):
 
 > The name "git" was given by Linus Torvalds when he wrote the very first version. He described the tool as "the stupid content tracker" and the name as (depending on your mood):
 >
@@ -69,7 +69,7 @@ There is no universally agreed-upon meaning of the name "git". From the [git pro
 
 #### Git is a distributed VCS
 
-Aside from being free and widely deployed, an important distinguishing feature of git is that it is a distributed Version Control System. Essentially this means that every git directory on every computer is a complete independent repository with complete history.
+Aside from being free and widely deployed, an important distinguishing feature of git is that it is a distributed version control system. Essentially this means that every git directory on every computer is a complete independent repository with complete history.
 
 When we cloned the [`github-sandbox`](https://github.com/ProjectPythia/github-sandbox) repository back in the [Cloning and Forking](github-cloning-forking) section, we not only copied the current repository files but also the entire revision history of the repo.
 
@@ -463,9 +463,9 @@ We'll cover many of these in subsequent sections.
 
 ### What's Next?
 
-Next we'll explore the concept of branching in git repositories in more detail, including how to merge changes made on one branch into another branch.
+Next we'll explore the concept of branching in Git repositories in more detail, including how to merge changes made on one branch into another branch.
 
-## References
+## Additional Resources
 
-1. [Official git documentation](https://git-scm.com/doc)
-1. [The Software Carpentries beginner lessons on git](https://swcarpentry.github.io/git-novice/)
+- [Git documentation](https://git-scm.com/doc)
+- [Software Carpentry: Version Control with Git](https://swcarpentry.github.io/git-novice/)
