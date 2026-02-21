@@ -8,4 +8,5 @@ jobs:
     with:
       artifact_name: book-zip-${{ github.event.number }}
       base_url: '/_preview/${{ github.event.number }}'
+      build_command: 'myst build --execute --html --strict'
       # Other input options are possible, see ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml
