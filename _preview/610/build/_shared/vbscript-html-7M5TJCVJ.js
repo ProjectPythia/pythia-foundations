@@ -1,1 +1,0 @@
-import{c as t}from"/_preview/610/build/_shared/chunk-OZE3FFNP.js";var i=t((a,n)=>{function e(s){return{name:"VBScript in HTML",subLanguage:"xml",contains:[{begin:"<%",end:"%>",subLanguage:"vbscript"}]}}n.exports=e});export default i();
