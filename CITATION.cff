@@ -1,82 +1,75 @@
 cff-version: 1.2.0
-message: "If you use this resource, please cite it as below."
+message: Please cite the following works when using this project.
+title: Pythia Foundations
 authors:
   - family-names: Rose
     given-names: Brian E. J.
-    orcid: https://orcid.org/0000-0002-9961-3821
-    website: https://github.com/brian-rose
-    affiliation: University at Albany (State University of New York)
+    affiliation: University at Albany (SUNY)
+    orcid: 0000-0002-9961-3821
+    email: brose@albany.edu
+    website: https://brian-rose.github.io
   - family-names: Kent
     given-names: Julia
-    orcid: https://orcid.org/0000-0002-5611-8986
-    website: https://github.com/jukent
-    affiliation: UCAR/NCAR
+    affiliation: NSF National Center for Atmospheric Research
+    orcid: 0000-0002-5611-8986
   - family-names: Tyle
     given-names: Kevin
-    orcid: https://orcid.org/0000-0001-5249-9665
-    website: https://github.com/ktyle
-    affiliation: University at Albany (State University of New York)
+    affiliation: University at Albany (SUNY)
+    orcid: 0000-0001-5249-9665
   - family-names: Clyne
     given-names: John
-    orcid: https://orcid.org/0000-0003-2788-9017
-    website: https://github.com/clyne
-    affiliation: UCAR/NCAR
+    affiliation: NSF National Center for Atmospheric Research
+    orcid: 0000-0003-2788-9017
   - family-names: Banihirwe
     given-names: Anderson
-    orcid: https://orcid.org/0000-0001-6583-571X
-    website: https://github.com/andersy005
+    affiliation: CarbonPlan
+    orcid: 0000-0001-6583-571X
   - family-names: Camron
     given-names: Drew
-    orcid: https://orcid.org/0000-0001-7246-6502
-    website: https://github.com/dcamron
-    affiliation: UCAR/Unidata
+    affiliation: NSF Unidata
+    orcid: 0000-0001-7246-6502
   - family-names: May
     given-names: Ryan
-    orcid: https://orcid.org/0000-0003-2907-038X
-    website: https://github.com/dopplershift
-    affiliation: UCAR/Unidata
+    affiliation: NSF Unidata
+    orcid: 0000-0003-2907-038X
   - family-names: Grover
     given-names: Maxwell
-    orcid: https://orcid.org/0000-0002-0370-8974
-    website: https://github.com/mgrover1
     affiliation: Argonne National Laboratory
+    orcid: 0000-0002-0370-8974
   - family-names: FitzGerald
     given-names: Katelyn
-    orcid: https://orcid.org/0000-0003-4184-1917
-    affiliation: UCAR/NCAR
+    affiliation: NSF National Center for Atmospheric Research
+    orcid: 0000-0003-4184-1917
   - family-names: Ford
     given-names: Robert R.
-    orcid: https://orcid.org/0000-0001-5483-4965
-    website: https://github.com/r-ford
-    affiliation: University at Albany (State University of New York)
-  - family-names: Freeman
-    given-names: Brittany
-    orcid: https://orcid.org/0009-0006-2806-1149
-    affilitation: University at Albany (State University of New York)
+    affiliation: University at Albany (SUNY)
+    orcid: 0000-0001-5483-4965
+  - family-names: undefined
+    given-names: ''
   - family-names: Paul
     given-names: Kevin
-    orcid: https://orcid.org/0000-0001-8155-8038
-    website: https://github.com/kmpaul
-    affiliation: NVIDIA
-  - family-names: Morley
-    given-names: James
-    orcid: https://orcid.org/0009-0005-5193-7981
-    website: https://github.com/jnmorley
+    affiliation: NVIDIA Corporation
+    orcid: 0000-0001-8155-8038
   - family-names: Eroglu
     given-names: Orhan
-    orcid: https://orcid.org/0000-0003-3099-8775
-    website: https://github.com/erogluorhan
-    affiliation: UCAR/NCAR
+    affiliation: NSF National Center for Atmospheric Research
+    orcid: 0000-0003-3099-8775
   - family-names: Kailyn
     given-names: Lily
-    orcid: https://orcid.org/0009-0002-0125-5091
-    website: https://github.com/lkailynncar
-    affiliation: UCAR/NCAR
+    affiliation: NSF National Center for Atmospheric Research
+    orcid: 0009-0002-0125-5091
   - family-names: Zacharias
     given-names: Anissa
-    orcid: https://orcid.org/0000-0002-2666-8493
-    website: https://github.com/anissa111
-    affiliation: UCAR/NCAR
-title: "Pythia Foundations"
-version: v2023.05.01
-doi: 10.5281/zenodo.7884571
+    affiliation: NSF National Center for Atmospheric Research
+    orcid: 0000-0002-2666-8493
+  - family-names: Morley
+    given-names: James
+    orcid: 0009-0005-5193-7981
+  - family-names: Community
+    given-names: The Project Pythia
+identifiers:
+  - type: doi
+    value: https://doi.org/10.5281/zenodo.7884571
+license: CC-BY-4.0
+license-url: https://creativecommons.org/licenses/by/4.0/
+repository: https://github.com/projectpythia/pythia-foundations

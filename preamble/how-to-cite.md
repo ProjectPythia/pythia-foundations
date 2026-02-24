@@ -16,11 +16,11 @@ authors:
     - erogluorhan
     - lkailynncar
     - anissa111
-    - name: James Morley
-      id: jnmorley
-      orcid: https://orcid.org/0009-0005-5193-7981
-      website: https://github.com/jnmorley
-    - The Project Pythia Community
+    - jnmorley
+    - name: The Project Pythia Community
+exports:
+    - format: cff
+      title: Pythia Foundations
 ---
 
 # How to Cite This Book
