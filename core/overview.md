@@ -49,7 +49,7 @@ These high-levels libraries aren’t as flexible
 but they can do common tasks with far less effort.
 
 The most popular high-level data science library is undoubtedly [Pandas](http://pandas.pydata.org/).
-The key advance offered by Pandas is the concept of the DataFrame, which is a labeled array:
+The key advance offered by Pandas is the concept of the DataFrame, a two-dimensional labeled array:
 
 ![Pandas DataFrame schematic](https://github.com/pandas-dev/pandas/blob/c8e8651a1b9d45eb45a3f6cf7fad4c0152cc84bb/doc/source/_static/schemas/01_table_dataframe.svg)
 
