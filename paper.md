@@ -41,6 +41,9 @@ authors:
   - name: Maxwell A. Grover
     orcid: 0000-0002-0370-8974
     affiliation: 5
+  - name: Lily Kailyn
+    orcid: 0009-0002-0125-5091
+    affiliation: 4
   - name: Julia Kent
     orcid: 0000-0002-5611-8986
     affiliation: 4
