@@ -164,6 +164,6 @@ We will cover [Git workflows](git-workflows.md) in greater detail in the next ch
 
 In the next lesson we will learn more about [Reviewing Pull Requests](review-pr.md).
 
-## References
+## Additional Resources
 
 1. GitHub's [Collaborating with Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)

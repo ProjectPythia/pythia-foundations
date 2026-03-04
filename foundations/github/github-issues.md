@@ -95,6 +95,6 @@ which can help provide background and context for a piece of work.
 
 We will work through cloning and forking an example repository.
 
-## References
+## Additional Resources
 
 1. [What is GitHub Discussions? A complete guide](https://resources.github.com/devops/process/planning/discussions/)

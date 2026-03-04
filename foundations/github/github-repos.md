@@ -99,6 +99,6 @@ the various repos is shown in the image below.
 
 We will further explore Issues and Discussions.
 
-## References
+## Additional Resources
 
 1. [GitHub's quickstart guide](https://docs.github.com/en/get-started/quickstart)
