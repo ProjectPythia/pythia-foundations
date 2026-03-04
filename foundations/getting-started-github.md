@@ -11,13 +11,13 @@ This section will introduce GitHub, the de facto standard platform for collabora
 
 We will walk users through these topics:
 
-- [What is GitHub](github/what-is-github), and how to create your free account
-- [What are GitHub Repositories](github/github-repos), and what are some Python-specific examples?
-- [Issues and Discussions](github/github-issues) on GitHub: what they're for and how to participate
-- [Cloning and Forking a Repository](github/github-cloning-forking) (and what's the difference?)
-- [Detailed GitHub Configuration](github/github-setup-advanced), including how to set up secure permissions and notifications
-- [Basic Version Control with Git](github/basic-git): why you may need it, and how to get started
-- [What is a Git Branch?](github/git-branches)
-- [What's a Pull Request](github/github-pull-request), and how do you open one?
-- [Git Workflows](github/git-workflows), recommended practices for collaborative work
+- [What is GitHub?](github/what-is-github), and how to create your free account
+- [What are GitHub repositories](github/github-repos), and what are some Python-specific examples?
+- [Issues and discussions](github/github-issues) on GitHub: what they're for and how to participate
+- [Cloning and forking a repository](github/github-cloning-forking) (and what's the difference?)
+- [Detailed GitHub configuration](github/github-setup-advanced), including how to set up secure permissions and notifications
+- [Basic version control with Git](github/basic-git): why you may need it, and how to get started
+- [What is a Git branch?](github/git-branches)
+- [What's a pull request](github/github-pull-request), and how do you open one?
+- [Git workflows](github/git-workflows), recommended practices for collaborative work
 - [Contributing to Project Pythia via GitHub](github/contribute-to-pythia)
