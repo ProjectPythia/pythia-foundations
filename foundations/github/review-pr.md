@@ -118,11 +118,7 @@ There are specific elements of PRs that are more commonly prioritized during a r
 
 ### What's Next?
 
-<<<<<<< Updated upstream
-The next tutorial will cover standards and other details about [GitHub Workflows](github-workflows.md).
-=======
 The next tutorial will cover standards and other details about [Git workflows](git-workflows.md).
->>>>>>> Stashed changes
 
 ## Resources and References
 
