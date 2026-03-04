@@ -87,7 +87,7 @@ Linus Torvalds, the original developer (and still the lead maintainer) of **Linu
 
 ```{admonition} Stay tuned!
 :class: tip
-We will discuss version control and the use of **Git** via the command line later in [Basic Version Control with Git](basic-git.md).
+We discuss version control and the use of **Git** via the command line later in [Basic Version Control with Git](basic-git.md).
 ```
 
 ## FOSS + VCS + Web = GitHub
@@ -133,5 +133,5 @@ In the next lesson, we will explore [GitHub repositories](github-repos.md).
 ## Additional Resources
 
 - [GitHub documentation](https://docs.github.com/)
+- [GitHub website](https://github.com/)
 - [GitHub Wikipedia page](wiki:GitHub)
-- [Git website](https://git-scm.com/)
