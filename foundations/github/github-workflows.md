@@ -15,29 +15,16 @@ A workflow is a series of activities or tasks that must be completed sequentiall
 
 ## Prerequisites
 
-<<<<<<< Updated upstream
 | Concepts                                         | Importance  | Notes |
 | ------------------------------------------------ | ----------- | ----- |
 | [What is GitHub](what-is-github.md)              | Necessary   |       |
 | [GitHub Repositories](github-repos.md)           | Necessary   |       |
 | [Cloning and Forking](github-cloning-forking.md) | Necessary   |       |
-| [Basic Version Control with _git_](basic-git.md) | Necessary   |       |
+| [Basic Version Control with Git](basic-git.md)   | Necessary   |       |
 | [Issues and Discussions](github-issues.md)       | Recommended |       |
 | [Branches](git-branches.md)                      | Necessary   |       |
 | [Pull Requests](github-pull-request.md)          | Necessary   |       |
 | [Reviewing Pull Requests](review-pr.md)          | Recommended |       |
-=======
-| Concepts                                      | Importance  | Notes |
-| --------------------------------------------- | ----------- | ----- |
-| [What is GitHub](what-is-github)              | Necessary   |       |
-| [GitHub Repositories](github-repos)           | Necessary   |       |
-| [Cloning and Forking](github-cloning-forking) | Necessary   |       |
-| [Basic Version Control with Git](basic-git)   | Necessary   |       |
-| [Issues and Discussions](github-issues)       | Recommended |       |
-| [Branches](git-branches)                      | Necessary   |       |
-| [Pull Requests](github-pull-request)          | Necessary   |       |
-| [Reviewing Pull Requests](review-pr)          | Recommended |       |
->>>>>>> Stashed changes
 
 - **Time to learn**: 60 minutes
 
@@ -67,8 +54,8 @@ A typical sequence of workflow steps consists of the following:
 The sequence of steps
 outlined above provides a general framework for submitting a PR.
 But the precise set of steps is highly dependent on the choice of
-workflow for a given project. In this chapter we describe Pull
-Requests for two commonly used workflows: The **Git Feature Branch
+workflow for a given project. In this chapter we describe pull
+requests for two commonly used workflows: The **Git Feature Branch
 Workflow** and the **Forking Workflow**. The former is simpler and often
 used by teams when everyone on the team is an authorized contributor
 to the destination repository. I.e. all of the contributors have
@@ -391,7 +378,7 @@ Branch Workflow**. Clone a local copy of the newly created remote,
 personal repository, create a feature branch, make your changes,
 commit your changes, and push the new branch with your commits to your personal repository.
 
-### Making a Pull Request
+### Making a pull request
 
 Once the new feature branch has been pushed to the contributor’s
 personal repository, a PR can be created that asks the maintainers
@@ -465,7 +452,7 @@ git merge upstream/main
 
 - The steps that lead up to
   the PR depend your chosen workflow.
-- Two commonly used worflows include the **Branch Workflow** and the
+- Two commonly used workflows include the **Feature Branch Workflow** and the
   **Forking Workflow**. The former is appropriate for teams of collaborators
   where everyone has write access to the GitHub repository. The latter
   is commonly used when a developer wishes to contribute to a public GitHub
