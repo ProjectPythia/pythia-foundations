@@ -35,6 +35,18 @@ project:
     TCP: Transmission Control Protocol
     VCS: Version Control System
 
+  error_rules:
+    - rule: link-resolves
+      severity: ignore
+      keys:
+        - 'https://doi.org/**'
+        - 'https://zenodo.org/**'
+        - 'https://pangeo.io'
+    - rule: doi-link-valid
+      severity: ignore
+      keys:
+        - 'https://zenodo.org/**'   # also suppress the DOI validation error
+
   toc:
     - file: landing-page.md
     - title: Preamble
