@@ -42,6 +42,7 @@ project:
         - 'https://doi.org/**'
         - 'https://zenodo.org/**'
         - 'https://pangeo.io'
+        - 'https://jupyterbook.org/'
     - rule: doi-link-valid
       severity: ignore
       keys:
