@@ -23,7 +23,7 @@
 | [Branches](git-branches.md)                      | Necessary   |       |
 | [Pull Requests](github-pull-request.md)          | Necessary   |       |
 | [Reviewing Pull Requests](review-pr.md)          | Recommended |       |
-| [GitHub Workflows](github-workflows.md)          | Necessary   |       |
+| [GitHub Workflows](git-workflows.md)             | Necessary   |       |
 
 - **Time to learn**: 30 minutes
 

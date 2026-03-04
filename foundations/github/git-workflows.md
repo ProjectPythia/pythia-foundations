@@ -325,6 +325,7 @@ git checkout my-new-feature
 git merge main
 ```
 
+(forking-workflow)=
 ## Forking Workflow
 
 The **Git Feature Branch Workflow** described above, along with the
