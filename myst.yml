@@ -71,7 +71,7 @@ project:
             - file: foundations/github/git-branches.md
             - file: foundations/github/github-pull-request.md
             - file: foundations/github/review-pr.md
-            - file: foundations/github/github-workflows.md
+            - file: foundations/github/git-workflows.md
             - file: foundations/github/contribute-to-pythia.md
     - title: Core Scientific Python Packages
       children:
