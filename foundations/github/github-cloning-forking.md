@@ -45,7 +45,7 @@ the original without taking explicit action (e.g. performing a
 _push_ or submitting a _pull request_, the topics of later sections
 in this guide).
 
-Cloning and forking are often used together (more on this later).
+Cloning and forking are often used together.
 The illustration below demonstrates the process of forking a
 remote repository (UPSTREAM), followed by cloning the newly
 created ORIGIN.
