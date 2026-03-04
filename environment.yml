@@ -20,3 +20,4 @@ dependencies:
   - graphviz
   - mystmd>=1.6.0
   - jupyterlab-myst
+  - pytz
