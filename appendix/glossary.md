@@ -51,7 +51,7 @@ GitHub
 : A web platform for collaborative software development.
 
 issue
-: A common feature of collaborative development platforms such as GitHub used to track bugs, request features, and manage work related for a specific repository.
+: A common feature of collaborative development platforms such as {term}`GitHub` used to track bugs, request features, and manage work related for a specific repository.
 
 Jupyter Notebooks
 : The Jupyter Notebook software is an open-source web application that allows you to create and share Jupyter Notebooks (`*.ipynb` files). Jupyter Notebooks contain executable code, LaTeX equations, visualizations (e.g., plots, pictures), and narrative text. The code does not have to just be Python, other languages such as Julia or R are supported as well. Jupyter Notebooks are celebrated for their interactive output that allows movement between code, code output, explanations, and more code - similar to how scientists think and solve problems. Jupyter Notebooks can be thought of as a living, runnable publication and make for a great presentation platform. See also {term}`Jupyter Kernels`, {term}`Jupyter Lab`, {term}`Jupyter Hub`, {term}`Binder`, and {term}`BinderHub`.
