@@ -1,16 +1,16 @@
-# GitHub Workflows
+# Git Workflows
 
 ```{image} ../../images/Git-Logo-2Color.png
 :alt: Git Logo
 :width: 400px
 ```
 
-A workflow is a series of activities or tasks that must be completed sequentially or parallel to achieve the desired outcome. Here we outline two different GitHub workflows that take you through the steps leading up to opening a Pull Request.
+A workflow is a series of activities or tasks that must be completed sequentially or parallel to achieve the desired outcome. Here we outline two different Git workflows that take you through the steps leading up to opening a pull request.
 
 ## Overview:
 
-1. GitHub workflows overview
-1. Git Feature Branch Workflow
+1. Overview of Git workflows
+1. Feature branch workflow
 1. Forking workflow
 
 ## Prerequisites
@@ -20,7 +20,7 @@ A workflow is a series of activities or tasks that must be completed sequentiall
 | [What is GitHub](what-is-github.md)              | Necessary   |       |
 | [GitHub Repositories](github-repos.md)           | Necessary   |       |
 | [Cloning and Forking](github-cloning-forking.md) | Necessary   |       |
-| [Basic Version Control with _git_](basic-git.md) | Necessary   |       |
+| [Basic Version Control with Git](basic-git.md)   | Necessary   |       |
 | [Issues and Discussions](github-issues.md)       | Recommended |       |
 | [Branches](git-branches.md)                      | Necessary   |       |
 | [Pull Requests](github-pull-request.md)          | Necessary   |       |
@@ -30,9 +30,9 @@ A workflow is a series of activities or tasks that must be completed sequentiall
 
 ---
 
-## GitHub workflows
+## Git workflows
 
-GitHub, together with Git, are powerful tools for managing and
+GitHub, together with Git, is a powerful tool for managing and
 collaborating on all kinds of digital assets, such as software,
 documentation, and even manuscripts for research papers. Like other
 complex software environments, often these tools can be employed
@@ -54,8 +54,8 @@ A typical sequence of workflow steps consists of the following:
 The sequence of steps
 outlined above provides a general framework for submitting a PR.
 But the precise set of steps is highly dependent on the choice of
-workflow for a given project. In this chapter we describe Pull
-Requests for two commonly used workflows: The **Git Feature Branch
+workflow for a given project. In this chapter we describe pull
+requests for two commonly used workflows: The **Git Feature Branch
 Workflow** and the **Forking Workflow**. The former is simpler and often
 used by teams when everyone on the team is an authorized contributor
 to the destination repository. I.e. all of the contributors have
@@ -325,6 +325,7 @@ git checkout my-new-feature
 git merge main
 ```
 
+(forking-workflow)=
 ## Forking Workflow
 
 The **Git Feature Branch Workflow** described above, along with the
@@ -378,7 +379,7 @@ Branch Workflow**. Clone a local copy of the newly created remote,
 personal repository, create a feature branch, make your changes,
 commit your changes, and push the new branch with your commits to your personal repository.
 
-### Making a Pull Request
+### Making a pull request
 
 Once the new feature branch has been pushed to the contributor’s
 personal repository, a PR can be created that asks the maintainers
@@ -451,8 +452,8 @@ git merge upstream/main
 ## Summary
 
 - The steps that lead up to
-  the PR depend your GitHub Workflow.
-- Two commonly used GitHub Worflows are **Git Feature Branch Workflow** and
+  the PR depend your chosen workflow.
+- Two commonly used workflows include the **Feature Branch Workflow** and the
   **Forking Workflow**. The former is appropriate for teams of collaborators
   where everyone has write access to the GitHub repository. The latter
   is commonly used when a developer wishes to contribute to a public GitHub
@@ -463,7 +464,7 @@ git merge upstream/main
 In the next lesson we will put the **Forking Workflow** to work and show you
 how to use it to [contribute to Project Pythia](contribute-to-pythia).
 
-## References
+## Additional Resources
 
-1. Atlassian's tutorial on [workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
-1. GitHub's [Collaborating with Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
+- Atlassian's tutorial on [workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
+- GitHub's [Collaborating with Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)

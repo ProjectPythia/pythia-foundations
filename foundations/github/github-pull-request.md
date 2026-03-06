@@ -138,7 +138,7 @@ To someone with write permissions on the repository, the ability to merge will l
 
 However, this PR will NOT be merged, as the GitHub-Sandbox repository is intended to be static.
 
-## GitHub Workflows
+## Git Workflows
 
 The above demonstration is an example of the Git **Forking Workflow**, because we forked the [GitHub Sandbox repository](https://github.com/ProjectPythia/github-sandbox) before making our feature branches. This is most common when you do NOT have write-access to the upstream repository.
 
@@ -148,7 +148,7 @@ The steps leading up to creating your PR depend on your workflow. The main diffe
 the contributor now, for the Feature Workflow, navigates to the upstream, remote
 repository, not a personal remote fork, and initiates the PR there.
 
-We will cover [GitHub Workflows](github-workflows.md) in greater detail in the next chapter.
+We will cover [Git workflows](git-workflows.md) in greater detail in the next chapter.
 
 ---
 
@@ -158,12 +158,12 @@ We will cover [GitHub Workflows](github-workflows.md) in greater detail in the n
   that you have made to one repository are integrated (merged) into
   another repository.
 - The steps that lead up to
-  the PR depend your GitHub Workflow.
+  the PR depend your Git workflow.
 
 ### What's Next?
 
 In the next lesson we will learn more about [Reviewing Pull Requests](review-pr.md).
 
-## References
+## Additional Resources
 
 1. GitHub's [Collaborating with Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)

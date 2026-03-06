@@ -20,6 +20,7 @@ project:
     output_matplotlib_strings: remove
   abbreviations:
     API: Application Programming Interface
+    CVS: Concurrent Versions System
     DOI: Digital Object Identifier
     FOSS: Free and Open-Source Software
     FTP: File Transfer Protocol
@@ -32,7 +33,9 @@ project:
     PR: Pull Request
     SPE: Scientific Python Ecosystem
     SSH: Secure Shell Protocol
+    SVN: Apache Subversion
     TCP: Transmission Control Protocol
+    URL: Uniform Resource Locator
     VCS: Version Control System
 
   toc:
@@ -68,7 +71,7 @@ project:
             - file: foundations/github/git-branches.md
             - file: foundations/github/github-pull-request.md
             - file: foundations/github/review-pr.md
-            - file: foundations/github/github-workflows.md
+            - file: foundations/github/git-workflows.md
             - file: foundations/github/contribute-to-pythia.md
     - title: Core Scientific Python Packages
       children:

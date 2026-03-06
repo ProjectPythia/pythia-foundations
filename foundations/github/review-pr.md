@@ -47,10 +47,10 @@ To start the review process, navigate to the right sidebar menu that appears whe
 
 ```{admonition} Did you know?
 :class: info
-It is possible to automate this process with a `CODEOWNERS` file and [GitHub actions](https://docs.github.com/en/actions).
+It is possible to automate this process with a [`CODEOWNERS`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) file.
 ```
 
-To learn more about any topic relating to requesting a PR review, including topics such as CODEOWNERS files, please review the official [Requesting a Pull Request Review Documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review).
+To learn more about requesting a PR review, please review the official [GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review).
 
 ## Ways to View a Pull Request
 
@@ -118,7 +118,7 @@ There are specific elements of PRs that are more commonly prioritized during a r
 
 ### What's Next?
 
-The next tutorial will cover standards and other details about [GitHub Workflows](github-workflows.md).
+The next tutorial will cover standards and other details about [Git workflows](git-workflows.md).
 
 ## Resources and References
 
