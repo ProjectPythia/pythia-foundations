@@ -90,7 +90,7 @@ origin
 : The name for the default remote repository where you plan to publish commits.
 
 pull
-: A Git command used to download and integrate changes into your local repository.
+: A {term}`Git` command used to download and integrate changes into your local repository.
 
 pull request
 : A mechanism to propose code changes to be merged into a repository
