@@ -96,7 +96,7 @@ pull request
 : A mechanism to propose code changes to be merged into a repository
 
 push
-: A Git command to upload local commits to a remote repository.
+: A {term}`Git` command to upload local commits to a remote repository.
 
 Python package
 : A Python package is a collection of modules, which, in turn, are essentially Python scripts that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules. You can install Python packages with {term}`conda`.
