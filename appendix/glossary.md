@@ -87,7 +87,7 @@ Miniforge
 : The NCAR Command Language (NCL) is an interpreted language designed specifically for scientific data analysis and visualization.
 
 origin
-: The name for the default remote repository where you plan to publish commits.
+: The name for the default remote {term}`Git` repository where you plan to publish commits.
 
 pull
 : A {term}`Git` command used to download and integrate changes into your local repository.
