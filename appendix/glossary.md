@@ -93,7 +93,7 @@ pull
 : A {term}`Git` command used to download and integrate changes into your local repository.
 
 pull request
-: A mechanism to propose code changes to be merged into a repository
+: A mechanism to propose code changes to be merged into a repository.
 
 push
 : A {term}`Git` command to upload local commits to a remote repository.
