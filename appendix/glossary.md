@@ -105,7 +105,7 @@ repository
 : A storage space containing all of the files and revision history for a software project. Also known as a repo.
 
 remote
-: A repository hosted on a server such as GitHub.
+: A repository hosted on a server such as {term}`GitHub`.
 
 upstream
 : The project repository from which a fork was created.
