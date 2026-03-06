@@ -45,7 +45,7 @@ Forking Workflow
 : A collaborative development workflow where new development takes place on forked repositories rather than the main project repository.
 
 Git
-: A popular, distributed version control system.
+: A popular, distributed {term}`version control system`.
 
 GitHub
 : A web platform for collaborative software development.
