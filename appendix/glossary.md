@@ -6,7 +6,7 @@ description: Glossary of terms used in Pythia Foundations.
 :::{glossary}
 
 branch
-: A separate workspace to make and track changes without impacting other branches of the code repository.
+: A separate workspace to make and track changes without impacting other branches of the code {term}`repository`.
 
 [Binder](https://jupyter.org/binder)
 : An open-source service that allows users to create sharable, interactive computing environments from {term}`Jupyter Notebooks` and other repositories. Binder can reproduce a computational environment directly from a {term}`GitHub` repository, providing a seamless way to share and interact with code and data.
