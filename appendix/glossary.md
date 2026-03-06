@@ -71,7 +71,7 @@ Linux
 : A free and open-souce operating system based on [Unix](wiki:Unix).
 
 local
-: Refering to something, such as a Git repository, on your computer rather than a remote server.
+: Refering to something, such as a {term}`Git` repository, on your computer rather than a remote server.
 
 merge
 : A specific type of commit that combines changes from two branches.
