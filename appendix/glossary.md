@@ -33,13 +33,13 @@ DevOps
 : The integration and automation of practices and processes for software development and operations.
 
 discussions
-: An optional feature of GitHub repositories that allows for things like sharing project related announcements, gauging opinions through polls, hosting planning discussions, and Q&A.
+: An optional feature of {term}`GitHub` repositories that allows for things like sharing project related announcements, gauging opinions through polls, hosting planning discussions, and Q&A.
 
 Feature Branch Workflow
 : A collaborative development workflow where new development takes place on dedicated branches rather than the main branch.
 
 fork
-: A copy of another project hosted on a collaborative development platform such as GitHub.
+: A copy of another project hosted on a collaborative development platform such as {term}`GitHub`.
 
 Forking Workflow
 : A collaborative development workflow where new development takes place on forked repositories rather than the main project repository.
