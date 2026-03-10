@@ -35,6 +35,22 @@ project:
     TCP: Transmission Control Protocol
     VCS: Version Control System
 
+  error_rules:
+    - rule: link-resolves
+      severity: ignore
+      keys:
+        - 'https://doi.org/**'
+        - 'https://zenodo.org/**'
+        - 'https://pangeo.io'
+        - 'https://jupyterbook.org/'
+        - 'https://github.com/alan-turing-institute/the-turing-way/blob/master/book/templates/chapter-template/chapter-landing-page.md'
+        - 'https://github.com/numpy/numpy/blob/main/doc/source/_static/numpylogo.svg'
+        - 'https://github.com/git/git/blob/master/README.md'
+    - rule: doi-link-valid
+      severity: ignore
+      keys:
+        - 'https://zenodo.org/**'   # also suppress the DOI validation error
+
   toc:
     - file: landing-page.md
     - title: Preamble
