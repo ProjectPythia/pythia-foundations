@@ -468,3 +468,6 @@ how to use it to [contribute to Project Pythia](contribute-to-pythia).
 
 - Atlassian's tutorial on [workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
 - GitHub's [Collaborating with Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
+- The INTERSECT section on [Git Workflows](https://intersect-training.org/collaborative-git/git-workflows.html)
+- GitHub's description of [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow)
+- 

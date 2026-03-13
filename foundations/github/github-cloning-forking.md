@@ -231,5 +231,5 @@ In the next lesson, you will set some configurations on your GitHub account that
 
 ## Additional Resources
 
-1. [Cloning and Forking (GitHub Support)](https://github.com/orgs/community/discussions/35849)
-1. [Working with Forks (GitHub Docs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks)
+- [GitHub Cloning and Forking (GitHub Support)](https://github.com/orgs/community/discussions/35849)
+- [Working with Forks (GitHub Docs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks)

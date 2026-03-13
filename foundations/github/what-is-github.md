@@ -39,7 +39,7 @@ GitHub provides the following:
 1. _Documentation_ hosting
 1. An environment that fosters _collaboration_
 
-Although GitHub can host any digital asset, the most common use case for GitHub is for individuals or organizations to house _repositories_ of software.
+Although GitHub can host any digital asset, the most common use case for GitHub is for individuals or organizations to house {term}`repositories <repository>` of software.
 
 ## No experience necessary!
 
@@ -74,7 +74,7 @@ Types of community input may include the following:
 
 ## Version control systems (VCS)
 
-We will discuss version control in more detail later in this series, but the need to track and manage changes to a project, especially one that involves software, has long been known. Over the years, FOSS developers have used VCS such as [CVS](wiki:Concurrent_Versions_System), [SVN](wiki:Apache_Subversion), and most recently, [Git](wiki:Git). All of these systems are _command-line tools_.
+We will discuss version control in more detail later in this series, but the need to track and manage changes to a project, especially one that involves software, has long been known. Over the years, FOSS developers have used VCS such as [CVS](wiki:Concurrent_Versions_System), [SVN](wiki:Apache_Subversion), and most recently, [Git](wiki:Git). All of these systems are {term}`command-line tools`.
 
 ## FOSS and VCS on the Internet
 

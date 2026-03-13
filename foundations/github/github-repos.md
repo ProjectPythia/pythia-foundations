@@ -11,9 +11,9 @@
 
 ## Prerequisites
 
-| Concepts                                                                                        | Importance | Notes |
-| ----------------------------------------------------------------------------------------------- | ---------- | ----- |
-| [What is GitHub?](https://foundations.projectpythia.org/foundations/github/what-is-github) | Necessary  |       |
+| Concepts                                 | Importance | Notes |
+| -----------------------------------------| ---------- | ----- |
+| [What is GitHub?](what-is-github.md)     | Necessary  |       |
 
 - **Time to learn**: 15 minutes
 
@@ -38,7 +38,7 @@ Typically, a GitHub repository will always include the **Issues** and **Pull req
 
 ## What are some examples of repositories?
 
-All of the Python packages covered (e.g. [Numpy](https://github.com/numpy/numpy) and [Xarray](https://github.com/pydata/xarray)) in this Foundations book have associated GitHub repositories, as well as [Python itself](https://github.com/python/cpython):
+All of the Python packages covered (e.g. [NumPy](https://github.com/numpy/numpy) and [Xarray](https://github.com/pydata/xarray)) in this Foundations book have associated GitHub repositories, as well as [Python itself](https://github.com/python/cpython):
 
 <img src="../../images/GitHubNumPy.png" alt="NumPy GitHub">
 
@@ -91,14 +91,15 @@ the various repos is shown in the image below.
 
 ## Summary
 
-- GitHub's Repositories are collections of files.
-- Issues, Discussions, and Pull requests can be used to collaborate within a repository.
-- A GitHub _Organization_ contains _Repositories_.
+- GitHub's {term}`repositories <repository>` are collections of files.
+- {term}`Issues <issue>`, {term}`discussions`, and {term}`pull requests <pull request>` can be used to collaborate within a repository.
+- A GitHub _organization_ contains _repositories_.
 
 ### What's Next?
 
-We will further explore Issues and Discussions.
+We will further explore [issues and discussions](github-issues.md).
 
 ## Additional Resources
 
-1. [GitHub's quickstart guide](https://docs.github.com/en/get-started/quickstart)
+- [GitHub's Quickstart Guide](https://docs.github.com/en/get-started/start-your-journey)
+- [The Turing Way's chapter on Getting Started with GitHub](https://book.the-turing-way.org/collaboration/github-novice/)

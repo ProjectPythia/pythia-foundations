@@ -472,4 +472,6 @@ Next we'll explore the concept of branching in Git repositories in more detail, 
 ## Additional Resources
 
 - [Git documentation](https://git-scm.com/doc)
+- [Git Cheat Sheet](https://git-scm.com/cheat-sheet) 
 - [Software Carpentry: Version Control with Git](https://swcarpentry.github.io/git-novice/)
+- GitHub's [Git Guides](https://github.com/git-guides)
