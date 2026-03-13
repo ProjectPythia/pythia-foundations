@@ -30,6 +30,7 @@ project:
     NCAR: NSF National Center for Atmospheric Research
     NCL: NCAR Command Language
     NSF: U.S. National Science Foundation
+    NVIDIA: null
     PR: Pull Request
     SPE: Scientific Python Ecosystem
     SSH: Secure Shell Protocol
