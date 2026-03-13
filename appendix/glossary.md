@@ -22,6 +22,9 @@ checkout
 clone
 : A {term}`Git` command used to create a local copy of a remote repository.
 
+command-line tools
+: Text-based programs that users interact via the terminal application or command line.
+
 commit
 : A snapshot of your Git repository at a specific time.
 
