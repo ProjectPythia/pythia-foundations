@@ -5,9 +5,6 @@ description: Glossary of terms used in Pythia Foundations.
 
 :::{glossary}
 
-branch
-: A separate workspace to make and track changes without impacting other branches of the code {term}`repository`.
-
 [Binder](https://jupyter.org/binder)
 : An open-source service that allows users to create sharable, interactive computing environments from {term}`Jupyter Notebooks` and other repositories. Binder can reproduce a computational environment directly from a {term}`GitHub` repository, providing a seamless way to share and interact with code and data.
 
@@ -16,6 +13,12 @@ branch
 BinderHub
 : The underlying technology and infrastructure that powers {term}`Binder`. BinderHub deploys and manages the interactive computing environments for {term}`Jupyter Notebooks`, ensuring that users can access and share reproducible computational work.
 
+branch
+: A separate workspace to make and track changes without impacting other branches of the code {term}`repository`.
+
+bug
+: An error or flaw in software.
+
 checkout
 : A {term}`Git` command used to change branches.
 
@@ -23,7 +26,7 @@ clone
 : A {term}`Git` command used to create a local copy of a remote repository.
 
 command-line tools
-: Text-based programs that users interact via the terminal application or command line.
+: Text-based programs that users interact with via the terminal application or command line.
 
 commit
 : A snapshot of your Git repository at a specific time.
@@ -38,6 +41,9 @@ DevOps
 discussions
 : An optional feature of {term}`GitHub` repositories that allows for things like sharing project related announcements, gauging opinions through polls, hosting planning discussions, and Q&A.
 
+documentation
+: Software documentation is descriptive content (e.g., text, images, videos) that is either embedded in the software code or distributed alongside the corresponding software.
+
 Feature Branch Workflow
 : A collaborative development workflow where new development takes place on dedicated branches rather than the main branch.
 
@@ -46,6 +52,9 @@ fork
 
 Forking Workflow
 : A collaborative development workflow where new development takes place on forked repositories rather than the main project repository.
+
+free and open-source software
+: Software that is free of charge and where the underlying code is publicly available.
 
 Git
 : A popular, distributed {term}`version control system`.
@@ -112,6 +121,9 @@ remote
 
 upstream
 : The project repository from which a fork was created.
+
+version control
+: A software practice for tracking and managing changes to code and other information stored in {term}`repositories <repository>`
 
 version control system
 : Software tools that track and manage changes to project code and files over time.
