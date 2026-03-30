@@ -17,10 +17,10 @@
 | Concepts                                                      | Importance  | Notes                        |
 | ------------------------------------------------------------- | ----------- | ---------------------------- |
 | [What is GitHub?](what-is-github.md)                          | Necessary   | GitHub user account required |
-| [GitHub Repositories](github-repos.md)                        | Necessary   |                              |
-| [Issues and Discussions](github-issues.md)                    | Recommended |                              |
-| [Cloning and Forking a Repository](github-cloning-forking.md) | Recommended |                              |
-| [Configuring your GitHub Account](github-setup-advanced.md)   | Recommended |                              |
+| [GitHub repositories](github-repos.md)                        | Necessary   |                              |
+| [GitHub Issues and Discussions](github-issues.md)             | Recommended |                              |
+| [Cloning and forking a repository](github-cloning-forking.md) | Recommended |                              |
+| [Configuring your GitHub account](github-setup-advanced.md)   | Recommended |                              |
 
 - **Time to learn**: 45 minutes
 
@@ -457,21 +457,21 @@ We'll cover many of these in subsequent sections.
 
 ## Summary
 
-- Version control is an important tool for working with code files (or anything that is saved as plain text).
-- git is the most common version control software in use today.
+- {term}`Version control` is an important tool for working with code files (or anything that is saved as plain text).
+- {term}`Git` is the most common {term}`version control system` in use today.
 - `git status` is your new best friend because it gives you a quick view into what's going on in a git repository.
-- Every branch of a git repository has a history which is a series of numbered and labelled commits.
+- Every branch of a Git repository has a history which is a series of numbered and labelled commits.
 - You can view this history with `git log`
 - Making a new commit is a two-step process with `git add` and `git commit`.
 - Commits are non-destructive, meaning you can always go back in time to previous commits.
 
-### What's Next?
+### What's next?
 
-Next we'll explore the concept of branching in Git repositories in more detail, including how to merge changes made on one branch into another branch.
+Next we'll explore the [concept of branching](git-branches.md) in Git repositories in more detail, including how to merge changes made on one branch into another branch.
 
-## Additional Resources
+## Additional resources
 
 - [Git documentation](https://git-scm.com/doc)
 - [Git Cheat Sheet](https://git-scm.com/cheat-sheet) 
-- [Software Carpentry: Version Control with Git](https://swcarpentry.github.io/git-novice/)
-- GitHub's [Git Guides](https://github.com/git-guides)
+- [Software Carpentry's lesson: Version Control with Git](https://swcarpentry.github.io/git-novice/)
+- [GitHub's Git Guides](https://github.com/git-guides)

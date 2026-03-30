@@ -7,7 +7,7 @@
 
 ## Overview:
 
-1. Explore GitHub Repositories
+1. Explore GitHub repositories
 
 ## Prerequisites
 
@@ -28,8 +28,8 @@ GitHub gives the following explanation of a [repository](https://docs.github.com
 In short, it is a _collection of files_. Each GitHub repository has an _owner_, which could be an individual or an organization. Repositories can also be set to _public_ or _private_, determining who can see and interact with it. While a repository can simply store files, GitHub is designed with **collaboration** in mind. Three key collaborative tools in GitHub are:
 
 1. **Issues**: report a bug, plan improvements, or provide feedback to others working on the repository.
-1. **Discussions**: post ideas or other conversations that are not as specific or actionable as an **Issue**.
-1. **Pull requests**: We will go into the specifics later, but a **Pull request** allows a user to _propose a change_ to any of the files within a repository.
+1. **Discussions**: post ideas or other conversations that are not as specific or actionable as an issue.
+1. **Pull requests**: We will go into the specifics later, but a pull request allows a user to _propose a change_ to any of the files within a repository.
 
 ```{admonition} Tip
 :class: tip
@@ -38,7 +38,7 @@ Typically, a GitHub repository will always include the **Issues** and **Pull req
 
 ## What are some examples of repositories?
 
-All of the Python packages covered (e.g. [NumPy](https://github.com/numpy/numpy) and [Xarray](https://github.com/pydata/xarray)) in this Foundations book have associated GitHub repositories, as well as [Python itself](https://github.com/python/cpython):
+All of the Python packages covered (e.g. [NumPy](https://github.com/numpy/numpy) and [Xarray](https://github.com/pydata/xarray)) in this Foundations book have associated GitHub repositories, as well as [Python](https://github.com/python/cpython) itself:
 
 <img src="../../images/GitHubNumPy.png" alt="NumPy GitHub">
 
@@ -50,7 +50,7 @@ As you can see by the recent timestamps, these repositories are actively changin
 
 ```{admonition} Tip
 :class: tip
-Notice that each of the three *Repositories* each exist as part of their own *Organization*. In other words, the NumPy repository exists within the NumPy organization; the Xarray repo exists within the Pydata org, and so forth.
+Notice that each of the three *repositories* each exist as part of their own *organization*. In other words, the NumPy repository exists within the NumPy organization; the Xarray repo exists within the PyData org, and so forth.
 
 When you [create your own GitHub account](https://foundations.projectpythia.org/foundations/github/what-is-github), your user ID functions as the *organization*. Any repositories you create (and therefore, *own*) will exist within that org.
 ```
@@ -84,7 +84,7 @@ the various repos is shown in the image below.
 ## Things to try:
 
 1. Browse the [NumPy](https://github.com/numpy/numpy), [Xarray](https://github.com/pydata/xarray), [Python](https://github.com/python/cpython), and [Pythia Foundations](https://github.com/ProjectPythia/pythia-foundations) repos.
-1. Browse the organizations (e.g., [Pydata](https://github.com/pydata)) which house the repos within.
+1. Browse the organizations (e.g., [PyData](https://github.com/pydata)) which house the repos within.
 1. Check out GitHub's ["Create a repo"](https://docs.github.com/en/get-started/quickstart/create-a-repo) tutorial to learn how to create your own repository!
 
 ---
@@ -93,13 +93,13 @@ the various repos is shown in the image below.
 
 - GitHub's {term}`repositories <repository>` are collections of files.
 - {term}`Issues <issue>`, {term}`discussions`, and {term}`pull requests <pull request>` can be used to collaborate within a repository.
-- A GitHub _organization_ contains _repositories_.
+- A GitHub organization contains {term}`repositories <repository>`.
 
-### What's Next?
+### What's next?
 
 We will further explore [issues and discussions](github-issues.md).
 
-## Additional Resources
+## Additional resources
 
 - [GitHub's Quickstart Guide](https://docs.github.com/en/get-started/start-your-journey)
-- [The Turing Way's chapter on Getting Started with GitHub](https://book.the-turing-way.org/collaboration/github-novice/)
+- [The Turing Way's chapter: Getting Started with GitHub](https://book.the-turing-way.org/collaboration/github-novice/)

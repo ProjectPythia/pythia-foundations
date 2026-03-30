@@ -1,43 +1,43 @@
-# Reviewing Pull Requests
+# Reviewing pull requests
 
 ```{image} ../../images/GitHub-logo.png
 :alt: GitHub Logo
 :width: 400px
 ```
 
-Pull Requests (PRs) are typically reviewed by collaborators before being merged in to the main project branch. Many people feel overwhelmed, or feel as though their skills are lacking, when asked to perform their first PR review. If you find yourself in this or a similar situation, the examples in this tutorial can be quite helpful. With the help of this tutorial, anyone can quickly learn the basics of reviewing PRs, which can boost collaboration and productivity in any project hosted on GitHub. This tutorial also contains useful tips on how to effectively review a PR in many different situations.
+Pull requests (PRs) are typically reviewed by collaborators before being merged in to the main project branch. Many people feel overwhelmed, or feel as though their skills are lacking, when asked to perform their first PR review. If you find yourself in this or a similar situation, the examples in this tutorial can be quite helpful. With the help of this tutorial, anyone can quickly learn the basics of reviewing PRs, which can boost collaboration and productivity in any project hosted on GitHub. This tutorial also contains useful tips on how to effectively review a PR in many different situations.
 
 ## Overview:
 
 This tutorial covers the following topics:
 
-1. What is a Pull Request Review?
-1. Requesting Pull Request Reviews
-1. Ways to View a Pull Request
-1. Providing a Pull Request Review
-1. What to Look for When Reviewing
+1. What is a pull request review?
+1. Requesting pull request reviews
+1. Ways to view a pull request
+1. Providing a pull request review
+1. What to look for when reviewing
 
 ## Prerequisites
 
 | Concepts                                         | Importance  | Notes |
 | ------------------------------------------------ | ----------- | ----- |
 | [What is GitHub](what-is-github.md)              | Necessary   |       |
-| [GitHub Repositories](github-repos.md)           | Necessary   |       |
-| [Cloning and Forking](github-cloning-forking.md) | Necessary   |       |
-| [Basic Version Control with _git_](basic-git.md) | Necessary   |       |
-| [Issues and Discussions](github-issues.md)       | Recommended |       |
-| [Branches](git-branches.md)                      | Necessary   |       |
-| [Pull Requests](github-pull-request.md)          | Necessary   |       |
+| [GitHub repositories](github-repos.md)           | Necessary   |       |
+| [Cloning and rorking](github-cloning-forking.md) | Necessary   |       |
+| [Basic version control with Git](basic-git.md)   | Necessary   |       |
+| [GitHub Issues and Discussions](github-issues.md)| Recommended |       |
+| [Git branches](git-branches.md)                  | Necessary   |       |
+| [Pull requests](github-pull-request.md)          | Necessary   |       |
 
 - **Time to learn**: 30 minutes
 
 ---
 
-## What is a Pull Request Review?
+## What is a pull request review?
 
-A PR Review is an opportunity for a team member to look through proposed file changes and request changes before merging these changes into the primary project branch (usually called "main"), or another important project branch. The reviewer may attempt to acquire information about the content of the PR by asking precise questions. They may also suggest edits to the content, either explicitly, such as changes to specific lines of code, or implicitly, such as a request for more detailed documentation. Before the PR is merged, the author of the PR content should attempt to satisfy all requests in the review. In fact, if the branch being updated by the PR has active protections, the author may be required to satisfy some such requests.
+A PR review is an opportunity for a team member to look through proposed file changes and request changes before merging these changes into the primary project branch (usually called "main"), or another important project branch. The reviewer may attempt to acquire information about the content of the PR by asking precise questions. They may also suggest edits to the content, either explicitly, such as changes to specific lines of code, or implicitly, such as a request for more detailed documentation. Before the PR is merged, the author of the PR content should attempt to satisfy all requests in the review. In fact, if the branch being updated by the PR has active protections, the author may be required to satisfy some such requests.
 
-## Requesting Pull Request Reviews
+## Requesting pull request reviews
 
 Most people learning GitHub are confused about when to request review on a PR they create. The answer is that review should be requested when a PR is (or is likely) ready to merge into the primary project branch (or another important project branch).
 
@@ -52,7 +52,7 @@ It is possible to automate this process with a [`CODEOWNERS`](https://docs.githu
 
 To learn more about requesting a PR review, please review the official [GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review).
 
-## Ways to View a Pull Request
+## Ways to view a pull request
 
 If you are unfamiliar with the process of reviewing a PR, the material in this tutorial section will describe the process in detail. The first step to reviewing a PR is to review the files changed by the PR. However, before reviewing the changed files, it is very helpful to view these files in a meaningful way.
 
@@ -68,7 +68,7 @@ Another popular way to easily view any type of PR content is to locally check ou
 
 As described above, there are many ways to view changed files in a GitHub PR, including local clones, GitHub action previews, and services such as ReviewNB. However, these services may not detail the changes to the files listed in the PR; therefore, the "Files Changed" tab should be the main resource for deciding where to focus a review.
 
-## Providing a Pull Request Review
+## Providing a pull request review
 
 There are many ways to provide a PR review. The most basic of these is to comment on specific lines. This type of review can be performed through the "Files Changed" tab. By clicking on the "+" icon next to a line of code, the reviewer can provide a comment, and either start a new review, or simply link the comment to the line of code.
 
@@ -92,7 +92,7 @@ If the review is more complex than simple edits to specific lines of code, you c
 
 After providing review text in the comment box, and selecting a review type, make sure to click on the "Submit Review" button to finish the review.
 
-## What to Look for When Reviewing
+## What to look for when reviewing
 
 There are specific elements of PRs that are more commonly prioritized during a review. To address these elements, most reviewers perform the following tasks:
 
@@ -113,15 +113,15 @@ There are specific elements of PRs that are more commonly prioritized during a r
 
 ## Summary
 
-- PR Reviews safeguard the primary project branch (and other important project branches) in a GitHub repository. These reviews require contributors in a repository to perform a detailed examination of changes to code and other files. The files remain unchanged until these examinations are finished.
+- PR reviews safeguard the primary project branch (and other important project branches) in a GitHub repository. These reviews require contributors in a repository to perform a detailed examination of changes to code and other files. The files remain unchanged until these examinations are finished.
 - There exist certain standards pertaining to PR reviews; in addition to following these standards, it is important to provide detail on the basis of your review.
 
-### What's Next?
+### What's next?
 
 The next tutorial will cover standards and other details about [Git workflows](git-workflows.md).
 
-## Resources and References
+## Additional resources
 
-1. GitHub's tutorial on [Collaborating with Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
-2. GitHub's tutorial on [Requesting a Pull Request Review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review)
-3. GitHub's tutorial on [Checking Out Pull Requests Locally](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/checking-out-pull-requests-locally)
+- [GitHub's documentation section: Collaborating with Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
+- [GitHub's documentation section: Requesting a Pull Request Review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review)
+- [GitHub's documentation section: Checking Out Pull Requests Locally](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/checking-out-pull-requests-locally)

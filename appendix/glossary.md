@@ -119,6 +119,9 @@ repository
 remote
 : A repository hosted on a server such as {term}`GitHub`.
 
+scientific Python ecosystem
+: A collection of open source Python packages that support analysis, manipulation, and visualization of scientific data.
+
 upstream
 : The project repository from which a fork was created.
 

@@ -9,25 +9,25 @@ Git "branches" are an important component of many Git and GitHub workflows. If y
 
 ## Overview:
 
-1. What are Git Branches
-1. Creating a New Branch
-1. Switching Branches
-1. Setting up a Remote Branch
-1. Merging Branches
-1. Deleting Branches
-1. Updating Your Branches
-1. Complete Workflow
+1. What are Git branches
+1. Creating a new branch
+1. Switching branches
+1. Setting up a remote branch
+1. Merging branches
+1. Deleting branches
+1. Updating your branches
+1. Complete workflow
 
 ## Prerequisites
 
 | Concepts                                                      | Importance  | Notes                        |
 | ------------------------------------------------------------- | ----------- | ---------------------------- |
 | [What is GitHub?](what-is-github.md)                          | Necessary   | GitHub user account required |
-| [GitHub Repositories](github-repos.md)                        | Necessary   |                              |
-| [Issues and Discussions](github-issues.md)                    | Recommended |                              |
-| [Cloning and Forking a Repository](github-cloning-forking.md) | Necessary   |                              |
-| [Configuring your GitHub Account](github-setup-advanced.md)   | Recommended |                              |
-| [Basic Version Control with _git_](basic-git.md)              | Necessary   |                              |
+| [GitHub repositories](github-repos.md)                        | Necessary   |                              |
+| [GitHub Issues and Discussions](github-issues.md)             | Recommended |                              |
+| [Cloning and forking a repository](github-cloning-forking.md) | Necessary   |                              |
+| [Configuring your GitHub account](github-setup-advanced.md)   | Recommended |                              |
+| [Basic version control with Git](basic-git.md)                | Necessary   |                              |
 
 - **Time to learn**: 30 minutes
 
@@ -39,16 +39,16 @@ Git branches allow for non-linear or differing revision histories of a repositor
 
 Branching is one of git's methods for helping with collaborative document editing, much like "change tracking" in Google Docs or Microsoft Word. It enables multiple people to edit copies of the same document content, while reducing or managing edit collisions, and with the ultimate aim of merging everyone's changes together later. It also allows the same person to edit multiple copies of the same document, but with different intentions. Some reasons for wanting to split your repository into multiple paths (i.e. branches) is to experiment with different methods of solving a problem (before deciding which method will ultimately be merged) and to work on different problems within the same codebase (without confusing which code changes are relevant to which problem).
 
-These branches can live on your computer (local) or on GitHub (remote). They are brought together through Git _pushes_, _pulls_, _merges_, and _Pull Requests_. _Pushing_ is how you transfer changes from your local repository to a remote repository. _Pulling_ is how you fetch upstream changes into your branch. _Merging_ is how you piece the forked history back together again (i.e. join two branches). And _Pull Requests_ are how you suggest the changes you've made on your branch to the upstream codebase.
+These branches can live on your computer (local) or on GitHub (remote). They are brought together through Git _pushes_, _pulls_, _merges_, and _pull requests_. _Pushing_ is how you transfer changes from your local repository to a remote repository. _pulling_ is how you fetch upstream changes into your branch. _Merging_ is how you piece the forked history back together again (i.e. join two branches). And _pull requests_ are how you suggest the changes you've made on your branch to the upstream codebase.
 
-```{admonition} Pull Requests
+```{admonition} Pull requests
 :class: info
 We will cover [pull requests](github-pull-request.md) in more depth in the next section.
 ```
 
-One rule of thumb is for each development feature to have its own development branch until that feature is ready to be added to the upstream (remote) codebase. This allows you to compartmentalize your Pull Requests so that smaller working changes can be merged upstream independently of one another. For example, you might have a complete or near-complete feature on its own branch with an open Pull Request awaiting review. While you wait for feedback from the team before merging it, you can still work on a second feature on a second branch without affecting your first feature's Pull Request. **We encourage you to always do your work in a designated branch.**
+One rule of thumb is for each development feature to have its own development branch until that feature is ready to be added to the upstream (remote) codebase. This allows you to compartmentalize your pull requests so that smaller working changes can be merged upstream independently of one another. For example, you might have a complete or near-complete feature on its own branch with an open pull request awaiting review. While you wait for feedback from the team before merging it, you can still work on a second feature on a second branch without affecting your first feature's pull request. **We encourage you to always do your work in a designated branch.**
 
-## Creating a New Branch
+## Creating a new branch
 
 ```{admonition} Have you forked the repository?
 :class: info
@@ -74,7 +74,7 @@ git status
 
 You will see that you are already on a branch called "main". And that this branch is up-to-date with "origin/main" and has nothing to commit.
 
-```{admonition} The Main Branch
+```{admonition} The main branch
 :class: info
 Historically, the `main` branch was called the `master` branch. The name change was relatively recent, so all of your GitHub repositories may not reflect this yet. See instructions to change your branch name at [Github's Branch Renaming documentation](https://github.com/github/renaming).
 ```
@@ -115,7 +115,7 @@ git branch
 
 This will display the current and the new branch. You'll notice that current or active branch, indicated by the "\*" is still the `main` branch. Thus, any changes we make to the contents of our local repository will still be made on `main`. We will need to switch branches to work in the new branch, `branchA`.
 
-## Switching Branches
+## Switching branches
 
 To switch branches use the command `git checkout` as in:
 
@@ -133,7 +133,7 @@ git status
 
 Notice that `git status` doesn't say anything about being up-to-date, as before. This is because this branch only exists locally, not in our upstream GitHub fork.
 
-## Setting up a Remote Branch
+## Setting up a remote branch
 
 While your clone lives locally on your laptop, a remote branch exists on your GitHub server. You have to tell GitHub about your local branch before these changes are reflected remotely in your upstream fork.
 
@@ -193,7 +193,7 @@ Notice the new branch called `remotes/origin/branchA`. And when you do a `git st
 
 On future commits you will not have to repeat these steps, as your remote branch will already be established. Simply push with `git push` to have your remote branch reflect your future local changes.
 
-## Merging Branches
+## Merging branches
 
 Merging is how you bring your split branches of a repository back together again.
 
@@ -215,12 +215,12 @@ git merge branchB
 
 If there were competing edits in the 2 branches that Git cannot automatically resolve, a **merge conflict** occurs. This typically happens if edits are to the same line in different commits. Conflicts can be [resolved in the command line](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) or in your GUI of choice (such as Visual Studio Code).
 
-A **Pull Request** is essentially a merge that happens on an upstream remote. We will continue this demonstration and cover the specifics of merging via a [Pull Request](github-pull-request) more thoroughly in the next section.
+A **pull request** is essentially a merge that happens on an upstream remote. We will continue this demonstration and cover the specifics of merging via a {term}`pull request` more thoroughly in the next section.
 
 ![PR](../../images/pullrequest.gif)
-The above flowchart demonstrates a simple Pull Request where the upstream main repository has accepted the changes from the feature branch of your fork. The latest commit to the Upstream Main repository is now C4. Your Feature branch can now be safely deleted.
+The above flowchart demonstrates a simple pull request where the upstream main repository has accepted the changes from the feature branch of your fork. The latest commit to the Upstream Main repository is now C4. Your feature branch can now be safely deleted.
 
-## Deleting Branches
+## Deleting branches
 
 After the feature you worked on has been completed and merged, you may want to delete your branch.
 ![deletebranch](../../images/deletingbranch.gif)
@@ -249,16 +249,16 @@ as in
 git push origin --delete jukent/branchA
 ```
 
-## Updating Your Branches
+## Updating your branches
 
 Previously, we showed you how to merge branches together, combining the changes from two different branches into one. Afterwards you deleted your feature branch `branchA`. Your local clone and fork of your `main` branch have now both need to pull from the upstream repository.
 
 ![pull](../../images/pulling.gif)
-The above flowchart demonstrates pulling in the upstream changes from Upstream Main after a Pull Request has been merged, first into your fork and then into your clone. Before continuing to work, with new commits on the feature branch, it is best to pull in the upstream changes.
+The above flowchart demonstrates pulling in the upstream changes from upstream main after a pull request has been merged, first into your fork and then into your clone. Before continuing to work, with new commits on the feature branch, it is best to pull in the upstream changes.
 
 In this example, all of the changes to the branches were local and made by a single person, you. In a collaborative environment, other contributors may be making changes to their own feature branches (or main branch), which will ultimately be pushed up to the remote repository. Either way, your branches will become stale and need to be refreshed. The more time that passes by, the more likely this is to happen, particularly for an active GitHub repository. Here we show you how to sync your branches with the upstream branches.
 
-Once a Pull Request has been merged, you will find that these upstream changes are not automatically included in your fork or your other branches. In order to include the changes from the upstream main branch, you will need to do a `git pull`.
+Once a pull request has been merged, you will find that these upstream changes are not automatically included in your fork or your other branches. In order to include the changes from the upstream main branch, you will need to do a `git pull`.
 
 First check if there are any upstream changes:
 
@@ -274,9 +274,9 @@ git pull
 
 `git pull` is a combination of `git fetch` and `git merge`. That is it updates the remote tracking branches (`git fetch`) AND updates your current branch with any new commits on the remote tracking branch (`git merge`).
 
-This same concept applies to work in a team setting. Multiple authors will have their own feature branches that merge into the same Upstream Main repository via Pull Requests. It is important for each author to do regular `git pulls` to stay up to date with each other's contributions.
+This same concept applies to work in a team setting. Multiple authors will have their own feature branches that merge into the same upstream main repository via pull requests. It is important for each author to do regular `git pulls` to stay up to date with each other's contributions.
 
-## Complete Workflow
+## Complete workflow
 
 All in all your Git Branching workflow should resemble this flow:
 ![gitworkflow](../../images/gitworkflow.gif)
@@ -288,7 +288,7 @@ All in all your Git Branching workflow should resemble this flow:
 1. Add and commit changes in branch
 1. Push commits to fork (Set an upstream branch only for first push)
 1. Repeat last three steps as necessary
-1. Merge into upstream main branch via Pull Request
+1. Merge into upstream main branch via pull request
 1. Delete branch from clone and fork
 1. Pull upstream changes to main branch of fork and clone
 
@@ -296,15 +296,15 @@ All in all your Git Branching workflow should resemble this flow:
 
 ## Summary
 
-- Git Branches allow you to independently work on different features of a project via differing revision histories of a repository.
-- A useful workflow is to create a new branch locally, switch to it and set up a remote branch. During your revision, push to your upstream branch and pull from main as often as necessary. Then suggest your edits via a Pull Request and, if desired, delete your branch after the merge.
+- Git {term}`branches <branch>` allow you to independently work on different features of a project via differing revision histories of a repository.
+- A useful workflow is to create a new branch locally, switch to it and set up a remote branch. During your revision, push to your upstream branch and pull from main as often as necessary. Then suggest your edits via a pull request and, if desired, delete your branch after the merge.
 
-### What's Next?
+### What's next?
 
-[Opening a Pull Request on GitHub](github-pull-request.md)
+[Opening a pull request on GitHub](github-pull-request.md)
 
-## Additional Resources
+## Additional resources
 
-- [GitHub.com Help Documentation (GitHub Docs)](https://docs.github.com/en)
-- [Xdev Python Tutorial Seminar Series - Github (Kevin Paul)](https://www.youtube.com/watch?v=fYkPn0Nttlg)
-- [Resolving a Merge Conflict Using the Command Line (GitHub Docs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
+- [GitHub documentation](https://docs.github.com/en)
+- [Xdev Python Tutorial Seminar Series: GitHub](https://www.youtube.com/watch?v=fYkPn0Nttlg)
+- [GitHub documentation section: Resolving a Merge Conflict Using the Command Line](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)

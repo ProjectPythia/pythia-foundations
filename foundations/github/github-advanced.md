@@ -13,7 +13,8 @@ This content is under construction!
 
 | Concepts              | Importance | Notes |
 | --------------------- | ---------- | ----- |
-| Prior GitHub Sections | Necessary  |       |
+| Concept 1             | Necessary  |       |
+| Concept 2             | Necessary  |       |
 
 - **Time to learn**: 30 minutes
 
@@ -28,11 +29,11 @@ This content is under construction!
 - Sum 1
 - Sum 2
 
-### What's Next?
+### What's next?
 
 End of GitHub content
 
-## References
+## Additional resources
 
-1. Ref 1
-1. Ref 2
+- Ref 1
+- Ref 2

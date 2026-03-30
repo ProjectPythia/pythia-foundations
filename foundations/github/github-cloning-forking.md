@@ -16,9 +16,9 @@
 | Concepts                                                      | Importance  | Notes                        |
 | ------------------------------------------------------------- | ----------- | ---------------------------- |
 | [What is GitHub?](what-is-github.md)                          | Necessary   | GitHub user account required |
-| [GitHub Repositories](github-repos.md)                        | Necessary   |                              |
-| [Issues and Discussions](github-issues.md)                    | Recommended |                              |
-| [The Unix Shell](https://swcarpentry.github.io/shell-novice/) | Helpful     | Or equivalent                |
+| [GitHub repositories](github-repos.md)                        | Necessary   |                              |
+| [GitHub Issues and Discussions](github-issues.md)             | Recommended |                              |
+| [Unix shell](https://swcarpentry.github.io/shell-novice/)     | Helpful     | Or equivalent                |
 
 - **Time to learn**: 30 minutes
 
@@ -202,7 +202,7 @@ Unlike cloning, forking is not an option supported by the *Git* command-line int
 
 Once you've cloned the fork to your local machine, try running `git remote -v` again. You will see that the _origin_ URL now points to your GitHub account or organization.
 
-_The main purpose of cloning and forking a remote repository is so that you can make changes to the contents of those repositories in a safe and version-controlled manner._ The process of making changes and submitting them as _pull requests_ to the original repository is covered in our lesson on [Opening a Pull Request on GitHub](github-pull-request), but the workflow is as follows:
+_The main purpose of cloning and forking a remote repository is so that you can make changes to the contents of those repositories in a safe and version-controlled manner._ The process of making changes and submitting them as _pull requests_ to the original repository is covered in our lesson on [opening a pull request in GitHub](github-pull-request), but the workflow is as follows:
 
 1. Edit an existing file or files, and/or create new files.
 1. Stage your changes by running `git add`.
@@ -215,8 +215,8 @@ _The main purpose of cloning and forking a remote repository is so that you can 
 
 ## Summary
 
-- The process of making a **local** copy of a GitHub repository is called _cloning_. The destination for the cloned copy is whatever machine you ran the `git clone` command from.
-- _Forking_ a repository also makes a copy of a GitHub repo, but places it in your GitHub organization in the GitHub.com cloud.
+- The process of making a **local** copy of a GitHub repository is called {term}`cloning <clone>`. The destination for the cloned copy is whatever machine you ran the `git clone` command from.
+- {term}`Forking <fork>` a repository also makes a copy of a GitHub repo, but places it in your GitHub organization in the GitHub.com cloud.
 - Forking allows you to modify a remote repo, without affecting the original version.
 - After cloning your fork to your local computer, you can make changes to your copy, which you can then submit to the original repo as a pull request.
 
@@ -225,11 +225,11 @@ _The main purpose of cloning and forking a remote repository is so that you can 
 - Clone another GitHub-hosted repository that is of interest to you.
 - Try creating a fork of that repository.
 
-### What's Next?
+### What's next?
 
-In the next lesson, you will set some configurations on your GitHub account that enable uploads (aka _pushes_) from your local computer to GitHub. You will also configure notifications on your GitHub account.
+In the [next lesson](github-setup-advanced.md), you will set some configurations on your GitHub account that enable uploads (aka _pushes_) from your local computer to GitHub. You will also configure notifications on your GitHub account.
 
-## Additional Resources
+## Additional resources
 
-- [GitHub Cloning and Forking (GitHub Support)](https://github.com/orgs/community/discussions/35849)
-- [Working with Forks (GitHub Docs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks)
+- [GitHub community discussion: Cloning and Forking Repositories on GitHub](https://github.com/orgs/community/discussions/35849)
+- [GitHub documentation section: Working with Forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks)

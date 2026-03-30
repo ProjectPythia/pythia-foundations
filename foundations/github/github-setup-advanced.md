@@ -15,7 +15,7 @@
 | Concepts                                                      | Importance  | Notes                        |
 | ------------------------------------------------------------- | ----------- | ---------------------------- |
 | [What is GitHub?](what-is-github.md)                          | Necessary   | GitHub user account required |
-| [GitHub Repositories](github-repos.md)                        | Necessary   |                              |
+| [GitHub repositories](github-repos.md)                        | Necessary   |                              |
 | [Issues and Discussions](github-issues.md)                    | Recommended |                              |
 | [Cloning and Forking a Repository](github-cloning-forking.md) | Recommended |                              |
 
@@ -184,10 +184,10 @@ In the list of notifications, you can unsubscribe as shown below.
 
 ### What's Next?
 
-In the next section, we will learn the basics of version control using command-line `git`.
+In the next section, we will learn the basics of version control using [Git on the command-line](basic-git.md).
 
 ## Additional Resources
 
-1. [GitHub Personal Access Token (HTTPS)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-1. [GitHub Public/Private Keypair (SSH)](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
-1. [Software Carpentry: Remotes in GitHub](https://swcarpentry.github.io/git-novice/07-github.html)
+- [GitHub documentation section: Managing Your Personal Access Tokens (HTTPS)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+- [GitHub documentation section: Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+- [Software Carpentry's section: Remotes in GitHub](https://swcarpentry.github.io/git-novice/07-github.html)

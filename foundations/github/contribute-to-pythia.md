@@ -9,27 +9,27 @@
 
 1. Suggest a change
 2. Make the edits
-3. Create a Pull Request
+3. Create a pull request
 
 ## Prerequisites
 
-| Concepts                                         | Importance  | Notes |
-| ------------------------------------------------ | ----------- | ----- |
-| [What is GitHub](what-is-github.md)              | Necessary   |       |
-| [GitHub Repositories](github-repos.md)           | Necessary   |       |
-| [Cloning and Forking](github-cloning-forking.md) | Necessary   |       |
-| [Basic Version Control with _git_](basic-git.md) | Necessary   |       |
-| [Issues and Discussions](github-issues.md)       | Recommended |       |
-| [Branches](git-branches.md)                      | Necessary   |       |
-| [Pull Requests](github-pull-request.md)          | Necessary   |       |
-| [Reviewing Pull Requests](review-pr.md)          | Recommended |       |
-| [GitHub Workflows](git-workflows.md)             | Necessary   |       |
+| Concepts                                                       | Importance  | Notes |
+| -------------------------------------------------------------- | ----------- | ----- |
+| [What is GitHub?](what-is-github.md)                           | Necessary   |       |
+| [GitHub repositories](github-repos.md)                         | Necessary   |       |
+| [Cloning and forking a repository](github-cloning-forking.md)  | Necessary   |       |
+| [Basic version control with Git](basic-git.md)                 | Necessary   |       |
+| [GitHub Issues and Discussions](github-issues.md)              | Recommended |       |
+| [Git branches](git-branches.md)                                | Necessary   |       |
+| [Opening a pull request on GitHub](github-pull-request.md)     | Necessary   |       |
+| [Reviewing pull requests](review-pr.md)                        | Recommended |       |
+| [Git workflows](git-workflows.md)                              | Necessary   |       |
 
 - **Time to learn**: 30 minutes
 
 ---
 
-Now that you have become more familiar with how to use Git and GitHub, you might have an idea or some material that you want to contribute to Project Pythia! The [Project Pythia Contributor's Guide](https://projectpythia.org/contributing) describes the steps required to submit a PR to any of Project Pythia's repos. Here, we will go through an example of submitting a PR to `pythia-foundations`.
+Now that you have become more familiar with how to use Git and GitHub, you might have an idea or some material that you want to contribute to Project Pythia! The [Project Pythia Contributor's Guide](https://projectpythia.org/contributing) describes the steps required to submit a PR to any of Project Pythia's repos. Here, we will go through an example of submitting a PR to the `pythia-foundations` repository.
 
 ## Suggest a change
 
@@ -72,7 +72,7 @@ Then pushing to our remote aliased `origin`:
 git push origin clarify-sst-tos
 ```
 
-## Create a Pull Request
+## Create a pull request
 
 Now, going to our remote repo on GitHub, forked from `pythia-foundations`, we see that recent changes have been made. By clicking on the "Compare & pull request" button, we can open a PR, proposing that our changes be merged into the main branch of `ProjectPythia/pythia-foundations`.
 
@@ -94,4 +94,9 @@ Once it is ready, click "Ready for review" to take it out of draft mode. Now we 
 
 ## Summary
 
-- You can contribute to Project Pythia by suggesting edits or adding content with a Pull Request
+- You can contribute to Project Pythia by suggesting edits or adding content with a {term}`pull request`.
+
+## Additional resources
+
+- [Pythia Foundations Contributor Guide](../../appendix/how-to-contribute.md)
+- [GitHub documentation section: Contributing to Open Source](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-open-source)
