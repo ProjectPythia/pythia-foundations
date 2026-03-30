@@ -472,6 +472,6 @@ Next we'll explore the [concept of branching](git-branches.md) in Git repositori
 ## Additional resources
 
 - [Git documentation](https://git-scm.com/doc)
-- [Git Cheat Sheet](https://git-scm.com/cheat-sheet) 
+- [Git Cheat Sheet](https://git-scm.com/cheat-sheet)
 - [Software Carpentry's lesson: Version Control with Git](https://swcarpentry.github.io/git-novice/)
 - [GitHub's Git Guides](https://github.com/git-guides)

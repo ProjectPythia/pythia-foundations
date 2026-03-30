@@ -469,4 +469,4 @@ how to use it to [contribute to Project Pythia](contribute-to-pythia).
 - [Atlassian's tutorial: Comparing Git Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
 - [GitHub's documentation section: Collaborating with Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
 - [INTERSECT training section: Git Workflows](https://intersect-training.org/collaborative-git/git-workflows.html)
-- [GitHub documentation section: GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow) 
+- [GitHub documentation section: GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow)
