@@ -13,7 +13,6 @@ dependencies:
   - pyproj
   - pythia-datasets
   - python
-  - pytz
   - scipy
   - ffmpeg
   - xarray
