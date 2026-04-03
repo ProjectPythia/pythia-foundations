@@ -15,7 +15,7 @@ We then turn our attention to the [Jupyter ecosystem](getting-started-jupyter), 
 Finally we offer a comprehensive set of [tutorials on git and GitHub](getting-started-github), including how to get started with a [free GitHub account](github/what-is-github) (and why you would want to), how to make use of GitHub's collaboration features like [Issues and Discussions](github/github-issues), an introduction to
 [version control with git](github/basic-git), and more!
 
-The ultimate goal of [GitHub section of the book](getting-started-github) is to empower you the reader to make your own contributions to open source projects through [Pull Requests on GitHub](github/github-pull-request), including specific guidance on [making contributions to Project Pythia](github/contribute-to-pythia).
+The ultimate goal of the [GitHub section of the book](getting-started-github) is to empower you, the reader, to make your own contributions to open source projects through [Pull Requests on GitHub](github/github-pull-request), including specific guidance on [making contributions to Project Pythia](github/contribute-to-pythia).
 
 [Fork](github/github-cloning-forking) away!
 
