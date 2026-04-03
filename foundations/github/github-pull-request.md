@@ -1,37 +1,37 @@
-# Opening a Pull Request on GitHub
+# Opening a pull request on GitHub
 
 ```{image} ../../images/GitHub-logo.png
 :alt: GitHub Logo
 :width: 400px
 ```
 
-A Pull Request, aka a "merge request," is an event that occurs when a project contributor begins the process of merging new code changes from a feature branch with the main project repository.
+A pull request, aka a "merge request," is an event that occurs when a project contributor begins the process of merging new code changes from a feature branch with the main project repository.
 
 ## Overview:
 
-1. What is a Pull Request?
-1. Opening a Pull Request
-1. Pull Request Features
-1. GitHub Workflows
+1. What is a pull request?
+1. Opening a pull request
+1. Pull request features
+1. GitHub workflows
 
 ## Prerequisites
 
 | Concepts                                         | Importance  | Notes |
 | ------------------------------------------------ | ----------- | ----- |
 | [What is GitHub](what-is-github.md)              | Necessary   |       |
-| [GitHub Repositories](github-repos.md)           | Necessary   |       |
-| [Cloning and Forking](github-cloning-forking.md) | Necessary   |       |
-| [Basic Version Control with _git_](basic-git.md) | Necessary   |       |
-| [Issues and Discussions](github-issues.md)       | Recommended |       |
-| [Branches](git-branches.md)                      | Necessary   |       |
+| [GitHub repositories](github-repos.md)           | Necessary   |       |
+| [Cloning and forking](github-cloning-forking.md) | Necessary   |       |
+| [Basic version control with Git](basic-git.md)   | Necessary   |       |
+| [GitHub Issues and Discussions](github-issues.md)| Recommended |       |
+| [Git branches](git-branches.md)                  | Necessary   |       |
 
 - **Time to learn**: 60 minutes
 
 ---
 
-## What is a Pull Request?
+## What is a pull request?
 
-A Pull Request (PR) is a formal mechanism for requesting that changes
+A pull request (PR) is a formal mechanism for requesting that changes
 that you have made to one repository are integrated (merged) into
 another repository. Typically, the changes are reviewed by the
 maintainers of the destination repository, potentially triggering
@@ -68,11 +68,11 @@ the changes, and any suggested revisions are made, the project
 maintainer merges the feature into the destination repository and
 closes the PR.
 
-## Opening a Pull Request
+## Opening a pull request
 
 The demonstration is a continuation from the [Git Branches chapter](git-branches.md). Here, we will move from your local terminal to GitHub.
 
-### Navigate to Your Fork
+### Navigate to your fork
 
 Go to your fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox). One fast way to get to your fork, is to click the "fork" button and then follow the link underneath the message, "You've already forked github-sandbox."
 
@@ -80,7 +80,7 @@ When you've navigated to your fork, you should see a message box alerting you th
 
 ![GitHub](../../images/8-github.png)
 
-### Switch Branches
+### Switch branches
 
 If you click on the branch `main` you'll see the list of these branches.
 
@@ -92,7 +92,7 @@ There you can click on the branch `branchA` to switch branches.
 
 Here you will see the message, "This branch is 1 commit ahead of ProjectPythia:main." Next to this message you'll see either the option to "Contribute" (which opens a Pull Request) or "Fetch Upstream" (which pulls in changes from the original repository). And just above your files you'll see your most recent commit.
 
-### Open a Draft Pull Request
+### Open a draft pull request
 
 Click on the "Open pull request" button under the "Contribute" drop-down.
 
@@ -120,7 +120,7 @@ Once you've clicked "Draft Pull Request," you will be directed to the page of yo
 
 ![Draft PR](../../images/16-draft.png)
 
-## Pull Request Features
+## Pull request features
 
 Now let's look at the features and discussions in an open (draft) PR.
 Clicking "Files Changed" allows you to see all of the changes that would be merged with this PR.
@@ -138,32 +138,32 @@ To someone with write permissions on the repository, the ability to merge will l
 
 However, this PR will NOT be merged, as the GitHub-Sandbox repository is intended to be static.
 
-## GitHub Workflows
+## Git workflows
 
-The above demonstration is an example of the Git **Forking Workflow**, because we forked the [GitHub Sandbox repository](https://github.com/ProjectPythia/github-sandbox) before making our feature branches. This is most common when you do NOT have write-access to the upstream repository.
+The above demonstration is an example of a **forking workflow**, because we forked the [GitHub Sandbox repository](https://github.com/ProjectPythia/github-sandbox) before making our feature branches. This is most common when you do NOT have write-access to the upstream repository.
 
-This differs from the **Feature Workflow**, where all contributors work on a single, remote GitHub repository in specific feature branches. This is common when all contributors DO have write-access to the upstream repository.
+This differs from a **branching workflow**, where all contributors work on a single, remote GitHub repository in specific feature branches. This is common when all contributors DO have write-access to the upstream repository.
 
 The steps leading up to creating your PR depend on your workflow. The main difference in creating the PR is that
-the contributor now, for the Feature Workflow, navigates to the upstream, remote
+the contributor now, for the branching workflow, navigates to the upstream, remote
 repository, not a personal remote fork, and initiates the PR there.
 
-We will cover [GitHub Workflows](github-workflows.md) in greater detail in the next chapter.
+We will cover [Git workflows](git-workflows.md) in greater detail in the next chapter.
 
 ---
 
 ## Summary
 
-- A Pull Request (PR) is a formal mechanism for requesting that changes
-  that you have made to one repository are integrated (merged) into
+- A {term}`pull request` (PR) is a formal mechanism for requesting that changes
+  that you have made to one repository are integrated ({term}`merged <merge>`) into
   another repository.
 - The steps that lead up to
-  the PR depend your GitHub Workflow.
+  the PR depend your Git workflow.
 
-### What's Next?
+### What's next?
 
-In the next lesson we will learn more about [Reviewing Pull Requests](review-pr.md).
+In the next lesson we will learn more about [reviewing pull requests](review-pr.md).
 
-## References
+## Additional resources
 
-1. GitHub's [Collaborating with Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
+- [GitHub documentation section: Collaborating with Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
