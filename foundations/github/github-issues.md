@@ -49,17 +49,28 @@ made it easy to convert _issues_ into _discussions_ and vice versa.
 
 To get started, let's take a look at the [Issues page](https://github.com/ProjectPythia/pythia-foundations/issues) of Project Pythia's `pythia-foundations` repository:
 
-<img src="../../images/GitHubPythiaIssues.png" alt="Pythia Issues">
+```{image} ../../images/GitHubPythiaIssues.png
+:alt: Pythia Issues
+```
 
 By default, it shows all open issues, but we can see all [closed issues](https://github.com/ProjectPythia/pythia-foundations/issues?q=is%3Aissue+is%3Aclosed) by clicking "Closed".
 
-<img src="../../images/GitHubPythiaIssuesClosed.png" alt="Pythia Closed Issues">
+```{image} ../../images/GitHubPythiaIssuesClosed.png
+:alt: Pythia Closed Issues
+```
 
 Issues, discussions, and pull requests are all numbered for easy reference. By opening, resolving, and then closing an issue, we are leaving behind a searchable public record of what the issue was, why we thought it was important, and how we resolved it. This is great for project management, since it gets old Issues out of the way without actually deleting them.
 
+
+```{note}
+The screenshots here represent a moment in time for the Pythia Foundations repository! When you visit the current [Issues page](https://github.com/ProjectPythia/pythia-foundations/issues), you will see a different list of open issues.
+```
+
 Let's now examine [issue \#144](https://github.com/ProjectPythia/pythia-foundations/issues/144).
 
-<img src="../../images/GitHubPythiaIssue144.png" alt="Pythia Issue 144">
+```{image} ../../images/GitHubPythiaIssue144.png
+:alt: Pythia Issue 144
+```
 
 As you can see, some broken links were found in one of the Pythia Foundations tutorials, likely because the site being linked recently had its structure changed. An additional comment was added, as well as a label to help filtering/sorting Issues by topic. We then see that this issue was mentioned (by typing the issue number) elsewhere in the repository. In this case, it was mentioned in [pull request \#145](https://github.com/ProjectPythia/pythia-foundations/pull/145), which makes the changes to fix the issue. We can also see that the PR has been merged, which means the changes have been incorporated into the main branch of the code.
 
@@ -71,11 +82,15 @@ A new issue can be opened by pressing the "New issue" button on the top right of
 
 Discussions, on the other hand, are more open-ended and do not _necessarily_ suggest a change or addition to the repository. Here is the [discussions page for Pythia Foundations](https://github.com/ProjectPythia/pythia-foundations/discussions):
 
-<img src="../../images/GitHubPythiaDisc.png" alt="Pythia Foundations Discussions">
+```{image} ../../images/GitHubPythiaDisc.png
+:alt: Pythia Foundations Discussions
+```
 
 Let's take a look at [discussion \#156](https://github.com/ProjectPythia/pythia-foundations/discussions/156).
 
-<img src="../../images/GitHubPythiaDisc156.png" alt="Pythia Discussion 156">
+```{image} ../../images/GitHubPythiaDisc156.png
+:alt: Pythia Discussion 156
+```
 
 This discussion brings up a resource relevant to the repository that could help others, but it is not suggesting a change like an issue would. Other discussions might include announcements, Q&A, or general thoughts about the repository.
 
