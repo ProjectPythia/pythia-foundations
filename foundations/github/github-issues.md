@@ -76,7 +76,7 @@ Let's now examine [issue \#546](https://github.com/ProjectPythia/pythia-foundati
 :alt: Pythia Issue 546
 ```
 
-As you can see, there was some discussion about the need to add more citations for the Python packages used through the Foundations book, with some links to examples and documentation. A particular person was tagged as being "assigned" to the issue, which some collaborative projects use to keep track of who is working on what. Some labels were also added to the issue to help filtering/sorting by topic. 
+As you can see, there was some discussion about the need to add more citations for the Python packages used through the Foundations book, with some links to examples and documentation. A particular person was tagged as being "assigned" to the issue, which some collaborative projects use to keep track of who is working on what. Some labels were also added to the issue to help filtering/sorting by topic.
 
 A typical feature of GitHub issues is the use of cross-references to link related topics. In this case, we can see that some work was done in [pull request \#548](https://github.com/ProjectPythia/pythia-foundations/pull/548) that partially resolved the issue. We can also see that the issue was mentioned again in [pull request \#565](https://github.com/ProjectPythia/pythia-foundations/pull/565), and that both of these pull requests were _merged_. This means that the changes have been incorporated into the main branch of the code (we'll talk more about pull requests in a [later chapter](github-pull-request)). The issue was closed because the team members decided that those changes were sufficient to address the original problem.
 
