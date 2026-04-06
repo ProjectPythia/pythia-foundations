@@ -86,7 +86,7 @@ which can help provide background and context for a piece of work.
 
 ## Summary
 
-- GitHub provides the {term} `Issues <issue>` and {term}`Discussions` features to facilitate collaboration.
+- GitHub provides the {term}`Issues <issue>` and {term}`Discussions` features to facilitate collaboration.
 - Issues are specific and actionable, while discussions are open-ended.
 - If you want to discuss a topic and you're not sure if it is an issue
   or a discussion, just pick one. It will be okay. :-)
