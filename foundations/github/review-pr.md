@@ -43,7 +43,10 @@ Most people learning GitHub are confused about when to request review on a PR th
 
 To start the review process, navigate to the right sidebar menu that appears when viewing your PR. Then, under "Reviewers", select the gear icon, and then select or enter a GitHub user's ID for whom you would like to approve your work. If the files listed in the PR are owned or recently edited by specific reviewers, GitHub may automatically suggest the user IDs of those reviewers.
 
-<img src="../../images/review-request.png" alt="Request Reviews" width="600"><br/>
+```{image} ../../images/review-request.png
+:alt: Request Reviews
+:width: 600
+```<br/>
 
 ```{admonition} Did you know?
 :class: info
@@ -58,7 +61,9 @@ If you are unfamiliar with the process of reviewing a PR, the material in this t
 
 The first useful way to view changed files in a PR is through the PR's "Files Changed" tab. On this tab, added content is displayed in green, while removed content is displayed in red.
 
-<img src="../../images/review-fileschanged.png" alt="Reviewing Files Changed"><br/>
+```{image} ../../images/review-fileschanged.png
+:alt: Reviewing Files Changed
+```<br/>
 
 This method of viewing changed files works well for most types of code; however, if the code is designed to be rendered as a webpage, Jupyter Notebook, or other similar format, a different method of viewing is recommended.
 
@@ -72,17 +77,24 @@ As described above, there are many ways to view changed files in a GitHub PR, in
 
 There are many ways to provide a PR review. The most basic of these is to comment on specific lines. This type of review can be performed through the "Files Changed" tab. By clicking on the "+" icon next to a line of code, the reviewer can provide a comment, and either start a new review, or simply link the comment to the line of code.
 
-<img src="../../images/review-inline.png" alt="Inline Reviews"><br/>
+```{image} ../../images/review-inline.png
+:alt: Inline Reviews
+```<br/>
 
 If the review consists mainly of comments relevant to specific lines of code, this review method is preferred.
 
 If you are the reviewer, and the review consists mainly of small edits that you can perform yourself, this is also the preferred review method. To start one of these small edits, open a comment on the line of code to be edited, as described above. You can then suggest the edit by clicking on the "+-" icon, circled in red in the screenshot below. This icon automatically populates the comment box with the line of code and formats it with Markdown. You must replace the line of code in the comment box with the edited version, then link the comment or start a new review as described above.<br/>
 
-<img src="../../images/suggestion.png" alt="Review Suggestions" width="600"> <br/>
+```{image} ../../images/suggestion.png
+:alt: Review Suggestions
+:width: 600
+``` <br/>
 
 If the review is more complex than simple edits to specific lines of code, you can find more detailed reviewing tools in the Review Changes menu in the top right. This menu contains a comment box, as well as options for specific types of review. These options are described in detail after the informational screenshot below.
 
-<img src="../../images/review-approve.png" alt="Approving Review"><br/>
+```{image} ../../images/review-approve.png
+:alt: Approving Review
+```<br/>
 
 - The "Comment" option allows the reviewer to provide simple comments or questions on the PR before the review is finished and the PR merged. Please note that comments and questions that may hinder the PR merge process should not be handled in this way.
 
