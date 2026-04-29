@@ -120,6 +120,10 @@ conda env create --yes -f https://raw.githubusercontent.com/ProjectPythia/pythia
 conda activate pythia-book-dev
 ```
 
+:::{note}
+The list of packages required to run all of Foundations can be viewed by following the [link to the `environment.yml` file above](https://raw.githubusercontent.com/ProjectPythia/pythia-foundations/main/environment.yml).
+:::
+
 You should only need to create the environment once (run the first
 command above). But if you download another notebook later, you will
 need to activate _pythia-book-dev_ if

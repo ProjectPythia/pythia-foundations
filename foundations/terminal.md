@@ -23,7 +23,9 @@ You'd like to learn to run Python in the terminal. Here we will cover:
 
 If you are running Python in the terminal, it is best to install Miniforge. You can do that by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
 
-[Learn more about Conda here](conda.md)
+:::{seealso}
+More details about Conda will be provided in a later section ([Installing and Managing Python with Conda](conda.md)). For now, we will introduce its basic functionality.
+:::
 
 Then create a Conda environment with Python installed by typing the following into your terminal:
 
@@ -61,7 +63,7 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
    $ touch mysci.py
    ```
 
-5. And now that you've set up our workspace, edit the `mysci.py` script using your favorite text editor (e.g., nano):
+5. And now that you've set up our workspace, edit the `mysci.py` script using your favorite text editor (e.g., [nano](wiki:GNU_nano):
 
    ```
    $ nano mysci.py
@@ -75,8 +77,8 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
 
 7. Save your file and exit the editor. How to do this is dependent on your chosen text editor.
 
-   - In Vim, revert to command mode by pressing `esc`. Then, the command is `:wq`.
-   - In Nano it is {kbd}`Ctrl`\+{kbd}`O` to save and {kbd}`Ctrl`\+{kbd}`X` to exit (where you will be prompted if you want to save it, if modified).
+   - In [Vim](wiki:Vim_(text_editor)), revert to command mode by pressing `esc`. Then, the command is `:wq`.
+   - In nano it is {kbd}`Ctrl`\+{kbd}`O` to save and {kbd}`Ctrl`\+{kbd}`X` to exit (where you will be prompted if you want to save it, if modified).
 
 8. In the terminal, execute your script:
 

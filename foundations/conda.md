@@ -4,7 +4,7 @@
 
 ## Overview
 
-{term}`conda` is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s).
+{term}`Conda` is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s).
 
 Here we will cover:
 
@@ -29,6 +29,8 @@ A Python package is a collection of modules, which, in turn, are essentially Pyt
 
 Package management is useful because you may want to update a package for one of your projects, but keep it at the same version in other projects to ensure that they continue to run as expected.
 
+In Foundations, we use {term}`Conda`, but there are a few other ways to manage packages that you may have encountered before. [pip](https://pip.pypa.io/en/stable/) is probably the most popular option for installing Python packages, which can be used in combination with [venv](https://docs.python.org/3/library/venv.html) for creating isolated environments. We recommend against pip here due to the prevalence of dependencies on compiled libraries in geoscience workflows. Newer options include [pixi](https://pixi.prefix.dev/latest/) and [uv](https://docs.astral.sh/uv/).
+
 (installing-conda)=
 
 ## Installing Conda
@@ -37,13 +39,19 @@ We recommend you install Miniforge. You can do that by following the [instructio
 
 Miniforge uses the `conda` package management system and is based on Miniconda, which is a pared-down version of the full Anaconda Python distribution.
 
-[Installing Anaconda](https://docs.anaconda.com/anaconda/install/) takes longer and uses up more disk space, but provides you with more functionality, including Spyder (a Python-specific integrated development environment or IDE) and Jupyter, in addition to other immediately installed packages. Also, the interface of Anaconda is great if you are uncomfortable with the terminal.
 
-We recommend Miniforge for these reasons:
+
+[Installing Anaconda](https://docs.anaconda.com/anaconda/install/) takes longer and uses up more disk space, but provides you with more functionality, including Spyder (a Python-specific integrated development environment or IDE) and Jupyter, in addition to other immediately installed packages.
+
+:::{important}
+As of 2024, [Anaconda updated their Terms of Service](https://www.anaconda.com/blog/update-on-anacondas-terms-of-service-for-academia-and-research) such that a commercial license may be required, depending on your situation.
+:::
+
+In addition to the potential licensing issue, we recommend Miniforge for these reasons:
 
 1. It's quicker and takes up less disk space.
 2. It encourages you to install only the packages you need in reproducible isolated environments for specific projects. This is generally a more robust way to work with open source tools.
-3. It uses `conda-forge` as the default channel for packages, which is our recommended way to get up-to-date, interoperable packages..
+3. It uses `conda-forge` as the default channel for packages, which is our recommended way to get up-to-date, interoperable packages.
 
 Once you have `conda` via the Miniconda installer, the next step is to create an environment and install packages.
 

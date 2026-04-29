@@ -24,11 +24,15 @@ You'd like to learn to run Python in a Jupyter session. Here we will cover:
 
 ## Installing Python in Jupyter
 
+As mentioned in the [Overview](overview.md), [Jupyter](https://jupyter.org/) is a set of tools for interactive computing. Instead of [writing Python (`.py`) files and running them in the terminal](terminal.md), we will now write code in a Jupyter Notebook using the JupyterLab interface.
 To run a Jupyter session, you will need to install some necessary packages into your {term}`Conda` environment.
+
+:::{seealso}
+More details about JupyterLab will be provided in a later section ([JupyterLab](jupyterlab.ipynb)). For now, we will introduce its basic functionality.
+:::
 
 Install `miniforge` by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
 
-[Learn more about Conda here](conda.md)
 
 Next, create a {term}`Conda` environment with {term}`Jupyter Lab` installed. In the terminal, type:
 
