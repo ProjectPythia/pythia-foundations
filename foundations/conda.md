@@ -49,7 +49,7 @@ A few reasons why we recommend installing Miniforge:
 3. It uses `conda-forge` as the default channel for packages, which is our recommended way to get up-to-date, interoperable packages.
 
 Once you have `conda` via the Miniconda installer, the next step is to create an environment and install packages.
-:::{note} 
+:::{note}
 Users looking for a full-featured commercially licensed and supported Python environment manager should take a look at [Anaconda](https://www.anaconda.com/), which may be [free for academic usage](https://www.anaconda.com/blog/update-on-anacondas-terms-of-service-for-academia-and-research).
 
 The conda package manager and our recommended Miniforge installation are open source and free for all users.
