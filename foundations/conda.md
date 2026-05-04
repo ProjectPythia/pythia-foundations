@@ -35,7 +35,9 @@ In Foundations, we use {term}`Conda`, but there are a few other ways to manage p
 
 ## Installing Conda
 
-We recommend you install Miniforge. You can do that by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
+We recommend you start by installing [Miniforge](https://github.com/conda-forge/miniforge). This is a specific version of the {term}Conda package manager pre-configured to work with the `conda-forge` package repository -- our recommended source for most of the packages you will need. 
+
+You can install Miniforge by following the [instructions for your machine](https://github.com/conda-forge/miniforge#install).
 
 Miniforge uses the `conda` package management system and is based on Miniconda, which is a pared-down version of the full Anaconda Python distribution.
 
