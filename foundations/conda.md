@@ -23,24 +23,31 @@ Here we will cover:
 
 ---
 
-## What are Packages?
+## Packages and Package Managers
 
 A Python package is a collection of modules, which, in turn, are essentially Python scripts that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules.
 
 Many geoscience workflows tend to rely on relatively complex collections of Python packages and compiled libraries. Frequent updates to packages can also cause conflicts to arise between incompatible versions. For these reasons, it is often best to create tailored computing environments for each project. Keeping track of package dependencies and versions, and keeping incompatible environments isolated from each other, is the job of a package manager!
 
-In Foundations, we use {term}`Conda`, but there are a few other ways to manage packages that you may have encountered before. [pip](https://pip.pypa.io/en/stable/) is probably the most popular option for installing Python packages, which can be used in combination with [venv](https://docs.python.org/3/library/venv.html) for creating isolated environments. We recommend against pip here due to the prevalence of dependencies on compiled libraries in geoscience workflows. Newer options include [pixi](https://pixi.prefix.dev/latest/) and [uv](https://docs.astral.sh/uv/).
+You may have encountered a few different package managers in the Python world:
+
+- [pip](https://pip.pypa.io/en/stable/) is the most common method for installing Python packages, which can be used in combination with [venv](https://docs.python.org/3/library/venv.html) for creating isolated environments.
+- [pixi](https://pixi.prefix.dev/latest/) and [uv](https://docs.astral.sh/uv/) are newer options that are gaining popularity&mdash;well worth exploring for the adventurous learner!
+- {term}`Conda` is widely used for scientific computing, and this is what we recommend.
+
+A key advantage of {term}`Conda` over pip is that it manages all types of package requirements, not just Python packages. The most reliable source of up-to-date, interoperable scientific packages are found in the community-maintained `conda-forge` repository (see below).
+
+:::{tip} TL;DR
+We strongly recommend using {term}`Conda` to install and manage Python and all your complex project-specific software.
+:::
 
 (installing-conda)=
 
 ## Installing Conda
 
-We recommend you start by installing [Miniforge](https://github.com/conda-forge/miniforge). This is a specific version of the {term}Conda package manager pre-configured to work with the `conda-forge` package repository -- our recommended source for most of the packages you will need.
+We recommend you start by installing [Miniforge](https://github.com/conda-forge/miniforge). This is a specific version of the {term}Conda package manager pre-configured to work with the `conda-forge` package repository&mdash;our recommended source for most of the packages you will need.
 
 You can install Miniforge by following the [instructions for your machine](https://github.com/conda-forge/miniforge#install).
-
-
-
 
 A few reasons why we recommend installing Miniforge:
 
@@ -49,10 +56,11 @@ A few reasons why we recommend installing Miniforge:
 3. It uses `conda-forge` as the default channel for packages, which is our recommended way to get up-to-date, interoperable packages.
 
 Once you have `conda` via the Miniconda installer, the next step is to create an environment and install packages.
+
 :::{note}
 Users looking for a full-featured commercially licensed and supported Python environment manager should take a look at [Anaconda](https://www.anaconda.com/), which may be [free for academic usage](https://www.anaconda.com/blog/update-on-anacondas-terms-of-service-for-academia-and-research).
 
-The conda package manager and our recommended Miniforge installation are open source and free for all users.
+The Conda package manager and our recommended Miniforge installation are open source and free for all users.
 :::
 ## Creating a Conda Environment
 
