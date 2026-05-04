@@ -43,7 +43,7 @@ Miniforge uses the `conda` package management system and is based on Miniconda, 
 
 
 
-In addition to the potential licensing issue, we recommend Miniforge for these reasons:
+A few reasons why we recommend installing Miniforge:
 
 1. It's quicker and takes up less disk space.
 2. It encourages you to install only the packages you need in reproducible isolated environments for specific projects. This is generally a more robust way to work with open source tools.
