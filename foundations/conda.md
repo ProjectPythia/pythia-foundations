@@ -27,7 +27,7 @@ Here we will cover:
 
 A Python package is a collection of modules, which, in turn, are essentially Python scripts that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules.
 
-Package management is useful because you may want to update a package for one of your projects, but keep it at the same version in other projects to ensure that they continue to run as expected.
+Many geoscience workflows tend to rely on relatively complex collections of Python packages and compiled libraries. Frequent updates to packages can also cause conflicts to arise between incompatible versions. For these reasons, it is often best to create tailored computing environments for each project. Keeping track of package dependencies and versions, and keeping incompatible environments isolated from each other, is the job of a package manager!
 
 In Foundations, we use {term}`Conda`, but there are a few other ways to manage packages that you may have encountered before. [pip](https://pip.pypa.io/en/stable/) is probably the most popular option for installing Python packages, which can be used in combination with [venv](https://docs.python.org/3/library/venv.html) for creating isolated environments. We recommend against pip here due to the prevalence of dependencies on compiled libraries in geoscience workflows. Newer options include [pixi](https://pixi.prefix.dev/latest/) and [uv](https://docs.astral.sh/uv/).
 
