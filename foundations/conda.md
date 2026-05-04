@@ -43,12 +43,6 @@ Miniforge uses the `conda` package management system and is based on Miniconda, 
 
 
 
-[Installing Anaconda](https://docs.anaconda.com/anaconda/install/) takes longer and uses up more disk space, but provides you with more functionality, including Spyder (a Python-specific integrated development environment or IDE) and Jupyter, in addition to other immediately installed packages.
-
-:::{important}
-As of 2024, [Anaconda updated their Terms of Service](https://www.anaconda.com/blog/update-on-anacondas-terms-of-service-for-academia-and-research) such that a commercial license may be required, depending on your situation.
-:::
-
 In addition to the potential licensing issue, we recommend Miniforge for these reasons:
 
 1. It's quicker and takes up less disk space.
