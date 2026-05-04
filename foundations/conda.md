@@ -45,7 +45,7 @@ Miniforge uses the `conda` package management system and is based on Miniconda, 
 
 A few reasons why we recommend installing Miniforge:
 
-1. It's quicker and takes up less disk space.
+1. It's free, lightweight, and won't interfere with other installations on your computer.
 2. It encourages you to install only the packages you need in reproducible isolated environments for specific projects. This is generally a more robust way to work with open source tools.
 3. It uses `conda-forge` as the default channel for packages, which is our recommended way to get up-to-date, interoperable packages.
 
