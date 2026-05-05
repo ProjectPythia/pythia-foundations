@@ -8,7 +8,7 @@
 
 Here we will cover:
 
-1.  What are packages?
+1.  Packages and package managers
 2.  Installing Conda
 3.  Creating a Conda environment
 4.  Useful Conda commands
@@ -45,7 +45,7 @@ We strongly recommend using {term}`Conda` to install and manage Python and all y
 
 ## Installing Conda
 
-We recommend you start by installing [Miniforge](https://github.com/conda-forge/miniforge). This is a specific version of the {term}Conda package manager pre-configured to work with the `conda-forge` package repository&mdash;our recommended source for most of the packages you will need.
+We recommend you start by installing [Miniforge](https://github.com/conda-forge/miniforge). This is a specific version of the {term}`Conda` package manager pre-configured to work with the `conda-forge` package repository&mdash;our recommended source for most of the packages you will need.
 
 You can install Miniforge by following the [instructions for your machine](https://github.com/conda-forge/miniforge#install).
 
@@ -132,13 +132,14 @@ Some other {term}`Conda` commands that you will find useful include:
 
 You can find lots more information in the [Conda documentation](https://docs.conda.io/en/latest/) or this handy [Conda cheat sheet](https://docs.conda.io/projects/conda/en/stable/user-guide/cheatsheet.html#cheatsheet).
 
-If you're not a command line user, the Anaconda navigator offers GUI functionality for selecting environments and installing packages.
 
 ---
 
 ## Summary
 
-Conda is a package and environment management system that allows you to quickly install, run, and update packages within your work environment(s). This is important for gathering all of the tools necessary for your workflow. Conda can be managed in the command line or in the Anaconda GUI.
+{term}`Conda` is a package and environment management system that allows you to quickly install, run, and update packages within your work environment(s). This is important for gathering all of the tools necessary for your workflow. 
+
+We recommend installing {term}`Conda` via [Miniforge](https://github.com/conda-forge/miniforge) and using it manage packages in your terminal with the `conda` command.
 
 ### What's Next?
 
