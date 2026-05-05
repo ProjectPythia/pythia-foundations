@@ -137,7 +137,7 @@ You can find lots more information in the [Conda documentation](https://docs.con
 
 ## Summary
 
-{term}`Conda` is a package and environment management system that allows you to quickly install, run, and update packages within your work environment(s). This is important for gathering all of the tools necessary for your workflow. 
+{term}`Conda` is a package and environment management system that allows you to quickly install, run, and update packages within your work environment(s). This is important for gathering all of the tools necessary for your workflow.
 
 We recommend installing {term}`Conda` via [Miniforge](https://github.com/conda-forge/miniforge) and using it manage packages in your terminal with the `conda` command.
 
