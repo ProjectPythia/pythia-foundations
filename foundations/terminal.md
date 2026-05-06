@@ -72,7 +72,7 @@ On Windows, open **Miniforge Prompt**. On a Mac or Linux machine, open **Termina
    type nul > mysci.py
    ```
 
-6. And now that you've set up our workspace, edit the `mysci.py` script using your favorite text editor (e.g., [nano](wiki:GNU_nano)):
+5. And now that you've set up our workspace, edit the `mysci.py` script using your favorite text editor (e.g., [nano](wiki:GNU_nano)):
 
    ```
    $ nano mysci.py
@@ -83,19 +83,19 @@ On Windows, open **Miniforge Prompt**. On a Mac or Linux machine, open **Termina
    notepad mysci.py
    ```
 
-8. Change the script to include the classic first command: printing, "Hello, world!".
+6. Change the script to include the classic first command: printing, "Hello, world!".
 
    ```python
    print("Hello, world!")
    ```
 
-9. Save your file and exit the editor. How to do this is dependent on your chosen text editor.
+7. Save your file and exit the editor. How to do this is dependent on your chosen text editor.
 
    - In [Vim](wiki:Vim_(text_editor)), revert to command mode by pressing `esc`. Then, the command is `:wq`.
    - In nano it is {kbd}`Ctrl`\+{kbd}`O` to save and {kbd}`Ctrl`\+{kbd}`X` to exit (where you will be prompted if you want to save it, if modified).
    - In Notepad, {kbd}`Ctrl`\+{kbd}`S` and close the window.
 
-10. In the terminal, execute your script:
+8. In the terminal, execute your script:
 
    ```
    $ python mysci.py
