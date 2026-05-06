@@ -38,17 +38,17 @@ In general, it is always best to test your programs in the same environment in w
 
 For learners who are familiar with basic [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/) and text editors (such as Vim or Nano), running Python in the terminal is the quickest route straight to learning Python syntax without the covering the bells and whistles of a new platform. If you are running Python on a supercomputer, through an HTTP request or SSH tunneling, you might want to consider learning in the terminal.
 
-[How to Run Python in the Terminal](terminal.md)
+[Learn how to Run Python in the Terminal here.](terminal.md)
 
 ### Jupyter Notebooks
 
 We highly encourage the use of Jupyter notebooks: a free, open-source, interactive tool running inside a web browser that allows you to run Python code in "cells." This means that your workflow can alternate between code, output, and even Markdown-formatted explanatory sections that create an easy-to-follow analysis or "computational narrative" from start to finish. Jupyter notebooks are a great option for presentations or learning tools. For these reasons, Jupyter is very popular among scientists. Most lessons in this book will be taught via Jupyter notebooks.
 
-[How to Run Python in a Jupyter Session](jupyter.md)
+[Learn how to Run Python in a Jupyter Session here.](jupyter.md)
 
 ### Other IDEs
 
-If you code in other languages, you might already have a favorite IDE that will work just as well in Python. [Spyder](https://www.spyder-ide.org) is a Python specific IDE that comes with the [Anaconda download](https://www.anaconda.com/products/distribution). It is perhaps the most familiar IDE if you are coming from languages such as Matlab that have a language specific platform and display a list of variables. [PyCharm](https://www.jetbrains.com/pycharm/) and [Visual Studio Code](https://code.visualstudio.com) are also popular IDEs. Many IDEs offer support for terminal execution, scripts, and Jupyter display. To learn about your specific IDE, visit its official documentation.
+If you code in other languages, you might already have a favorite IDE that will work just as well in Python. [Spyder](https://www.spyder-ide.org) is a Python-specific IDE that [can be installed](https://docs.spyder-ide.org/current/installation.html) alongside [Miniforge](https://conda-forge.org/download/). It is perhaps the most familiar IDE if you are coming from languages such as Matlab that have a language-specific platform and display a list of variables. [PyCharm](https://www.jetbrains.com/pycharm/) and [Visual Studio Code](https://code.visualstudio.com) are also popular IDEs. Many IDEs offer support for terminal execution, scripts, and Jupyter display. To learn about your specific IDE, visit its official documentation.
 
 _We recommend eventually learning how to develop and run Python code in each of these platforms._
 
@@ -56,7 +56,7 @@ _We recommend eventually learning how to develop and run Python code in each of 
 
 Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). Conda is a vital component of the Python ecosystem. Understanding it is important, regardless of the platform you chose to run your Python code.
 
-[Learn more about Conda here](conda.md)
+[Learn more about Conda here.](conda.md)
 
 ---
 
@@ -68,7 +68,7 @@ Python can be run on many different platforms. You may choose where to run Pytho
 
 - [How to Run Python in the Terminal](terminal.md)
 - [How to Run Python in a Jupyter Session](jupyter.md)
-- [Learn more about Conda here](conda.md)
+- [Installing and Managing Python with Conda](conda.md)
 
 ## Resources and References
 

@@ -45,9 +45,13 @@ We strongly recommend using {term}`Conda` to install and manage Python and all y
 
 ## Installing Conda
 
-We recommend you start by installing [Miniforge](https://github.com/conda-forge/miniforge). This is a specific version of the {term}`Conda` package manager pre-configured to work with the `conda-forge` package repository&mdash;our recommended source for most of the packages you will need.
+We recommend you start by [installing](https://conda-forge.org/download/) [Miniforge](https://github.com/conda-forge/miniforge). This is a specific version of the {term}`Conda` package manager pre-configured to work with the `conda-forge` package repository&mdash;our recommended source for most of the packages you will need.
 
 You can install Miniforge by following the [instructions for your machine](https://github.com/conda-forge/miniforge#install).
+
+:::{tip}For Windows users
+When [installing Miniforge using the Windows installer](https://conda-forge.org/download/), make sure to check "Create start menu shortcuts (supported packages only)". Then in your start menu or search box, you will find the "Miniforge Prompt", where you will enter commands.
+:::
 
 A few reasons why we recommend installing Miniforge:
 
@@ -62,6 +66,7 @@ Users looking for a full-featured commercially licensed and supported Python env
 
 The Conda package manager and our recommended Miniforge installation are open source and free for all users.
 :::
+
 ## Creating a Conda Environment
 
 A Conda environment is an interoperable collection of specific versions of packages or libraries that you install and use for a specific workflow. The Conda package manager takes care of dependencies, so everything works together in a predictable way. One huge advantage of using environments is that any changes you make to one environment will not affect your other environments at all, so you are much less likely to "break" something!
