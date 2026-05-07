@@ -137,7 +137,17 @@ Some other {term}`Conda` commands that you will find useful include:
 
 You can find lots more information in the [Conda documentation](https://docs.conda.io/en/latest/) or this handy [Conda cheat sheet](https://docs.conda.io/projects/conda/en/stable/user-guide/cheatsheet.html#cheatsheet).
 
+:::{tip} What if the package you need is not available from `conda-forge`?
+If the package you are trying use (let's call it `my_package` only mentions `pip install my_package` in its docs, or you tried `conda install my_package` and conda couldn't find it, it is likely that this package is not available via the `conda-forge` channel.
 
+As a plan B, after activating your custom conda environment you can install using pip like this:
+```
+conda install pip
+pip install my_package
+```
+
+Things can go wrong with managing package version dependencies this way, so it's best to do this only when necessary, and only in isolated environments. See more info [here in the conda docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#pip-in-env).
+:::
 ---
 
 ## Summary
