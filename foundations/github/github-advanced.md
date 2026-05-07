@@ -33,7 +33,7 @@ This content is under construction!
 
 End of GitHub content
 
-## Additional resources
+## Additional Resources
 
 - Ref 1
 - Ref 2

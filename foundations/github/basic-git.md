@@ -469,7 +469,7 @@ We'll cover many of these in subsequent sections.
 
 Next we'll explore the [concept of branching](git-branches.md) in Git repositories in more detail, including how to merge changes made on one branch into another branch.
 
-## Additional resources
+## Additional Resources
 
 - [Git documentation](https://git-scm.com/doc)
 - [Git Cheat Sheet](https://git-scm.com/cheat-sheet)

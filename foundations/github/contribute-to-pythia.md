@@ -106,7 +106,7 @@ Once it is ready, click "Ready for review" to take it out of draft mode. Now we 
 
 - You can contribute to Project Pythia by suggesting edits or adding content with a {term}`pull request`.
 
-## Additional resources
+## Additional Resources
 
 - [Pythia Foundations Contributor Guide](../../appendix/how-to-contribute.md)
 - [GitHub documentation section: Contributing to Open Source](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-open-source)

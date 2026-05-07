@@ -303,7 +303,7 @@ All in all your Git Branching workflow should resemble this flow:
 
 [Opening a pull request on GitHub](github-pull-request.md)
 
-## Additional resources
+## Additional Resources
 
 - [GitHub documentation](https://docs.github.com/en)
 - [Xdev Python Tutorial Seminar Series: GitHub](https://www.youtube.com/watch?v=fYkPn0Nttlg)

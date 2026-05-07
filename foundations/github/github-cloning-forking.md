@@ -245,7 +245,7 @@ _The main purpose of cloning and forking a remote repository is so that you can 
 
 In the [next lesson](github-setup-advanced.md), you will set some configurations on your GitHub account that enable uploads (aka _pushes_) from your local computer to GitHub. You will also configure notifications on your GitHub account.
 
-## Additional resources
+## Additional Resources
 
 - [GitHub community discussion: Cloning and Forking Repositories on GitHub](https://github.com/orgs/community/discussions/35849)
 - [GitHub documentation section: Working with Forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks)

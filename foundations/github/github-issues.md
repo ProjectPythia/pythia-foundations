@@ -120,7 +120,7 @@ which can help provide background and context for a piece of work.
 
 We will work through [cloning and forking](github-cloning-forking.md) an example repository.
 
-## Additional resources
+## Additional Resources
 
 - [GitHub Discussions documentation](https://resources.github.com/devops/process/planning/discussions/)
 - [GitHub Issues documentation](https://docs.github.com/en/issues)

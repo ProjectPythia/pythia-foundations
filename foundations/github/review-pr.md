@@ -132,7 +132,7 @@ There are specific elements of PRs that are more commonly prioritized during a r
 
 The next tutorial will cover standards and other details about [Git workflows](git-workflows.md).
 
-## Additional resources
+## Additional Resources
 
 - [GitHub's documentation section: Collaborating with Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
 - [GitHub's documentation section: Requesting a Pull Request Review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review)
