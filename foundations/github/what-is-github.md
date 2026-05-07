@@ -134,7 +134,7 @@ While GitHub offers paid options, a free account is typically all that is needed
 
 In the next lesson, we will explore [GitHub repositories](github-repos.md).
 
-## Additional Resources
+## Additional resources
 
 - [GitHub documentation](https://docs.github.com/)
 - [GitHub website](https://github.com/)

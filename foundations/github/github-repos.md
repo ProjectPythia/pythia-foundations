@@ -105,7 +105,7 @@ the various repos is shown in the image below.
 
 We will further explore [issues and discussions](github-issues.md).
 
-## Additional Resources
+## Additional resources
 
 - [GitHub's Quickstart Guide](https://docs.github.com/en/get-started/start-your-journey)
 - [The Turing Way's chapter: Getting Started with GitHub](https://book.the-turing-way.org/collaboration/github-novice/)

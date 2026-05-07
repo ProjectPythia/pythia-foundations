@@ -186,7 +186,7 @@ In the list of notifications, you can unsubscribe as shown below.
 
 In the next section, we will learn the basics of version control using [Git on the command-line](basic-git.md).
 
-## Additional Resources
+## Additional resources
 
 - [GitHub documentation section: Managing Your Personal Access Tokens (HTTPS)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 - [GitHub documentation section: Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)

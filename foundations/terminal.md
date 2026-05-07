@@ -97,6 +97,6 @@ Running Python in the terminal is a good option if you are familiar with Linux c
 - [How to Run Python in a Jupyter Session](jupyter.md)
 - [Learn more about Conda here](conda.md)
 
-## Additional Resources
+## Additional resources
 
 - [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)

@@ -464,7 +464,7 @@ git merge upstream/main
 In the next lesson we will put the **forking workflow** to work and show you
 how to use it to [contribute to Project Pythia](contribute-to-pythia).
 
-## Additional Resources
+## Additional resources
 
 - [Atlassian's tutorial: Comparing Git Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
 - [GitHub's documentation section: Collaborating with Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)

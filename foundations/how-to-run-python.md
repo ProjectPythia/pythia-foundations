@@ -70,7 +70,7 @@ Python can be run on many different platforms. You may choose where to run Pytho
 - [How to Run Python in a Jupyter Session](jupyter.md)
 - [Learn more about Conda here](conda.md)
 
-## Additional Resources
+## Additional resources
 
 - [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
 - [Spyder](https://www.spyder-ide.org)
