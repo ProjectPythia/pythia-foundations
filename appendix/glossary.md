@@ -66,18 +66,18 @@ issue
 : A common feature of collaborative development platforms such as {term}`GitHub` used to track bugs, request features, and manage work related for a specific repository.
 
 Jupyter Notebooks
-: The Jupyter Notebook software is an open-source web application that allows you to create and share Jupyter Notebooks (`*.ipynb` files). Jupyter Notebooks contain executable code, LaTeX equations, visualizations (e.g., plots, pictures), and narrative text. The code does not have to just be Python, other languages such as Julia or R are supported as well. Jupyter Notebooks are celebrated for their interactive output that allows movement between code, code output, explanations, and more code - similar to how scientists think and solve problems. Jupyter Notebooks can be thought of as a living, runnable publication and make for a great presentation platform. See also {term}`Jupyter Kernels`, {term}`Jupyter Lab`, {term}`Jupyter Hub`, {term}`Binder`, and {term}`BinderHub`.
+: The Jupyter Notebook software is an open-source web application that allows you to create and share Jupyter Notebooks (`*.ipynb` files). Jupyter Notebooks contain executable code, LaTeX equations, visualizations (e.g., plots, pictures), and narrative text. The code does not have to just be Python, other languages such as Julia or R are supported as well. Jupyter Notebooks are celebrated for their interactive output that allows movement between code, code output, explanations, and more code - similar to how scientists think and solve problems. Jupyter Notebooks can be thought of as a living, runnable publication and make for a great presentation platform. See also {term}`Jupyter Kernels`, {term}`JupyterLab`, {term}`JupyterHub`, {term}`Binder`, and {term}`BinderHub`.
 
 Jupyter Kernels
 : Software engines and their environments (e.g., conda environments) that execute the code contained in {term}`Jupyter Notebooks`.
 
-Jupyter Lab
-: A popular web application on which users can create and write their {term}`Jupyter Notebooks`, as well as explore data, install software, etc. You can find more information on running Jupyter Lab [here](https://jupyter.org/install).
+JupyterLab
+: A popular web application on which users can create and write their {term}`Jupyter Notebooks`, as well as explore data, install software, etc. You can find more information on running JupyterLab [here](https://jupyter.org/install).
 
 : See @installing-python-in-jupyter for more.
 
-Jupyter Hub
-: A web-based platform that authenticates users and launches {term}`Jupyter Lab` applications for users on remote systems.
+JupyterHub
+: A web-based platform that authenticates users and launches {term}`JupyterLab` applications for users on remote systems.
 
 Linux
 : A free and open-souce operating system based on [Unix](wiki:Unix).
