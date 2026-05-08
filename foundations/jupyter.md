@@ -24,11 +24,11 @@ You'd like to learn to run Python in a Jupyter session. Here we will cover:
 
 ## Installing Python in Jupyter
 
-As mentioned in the [Overview](overview.md), [Jupyter](https://jupyter.org/) is a set of tools for interactive computing. Instead of [writing Python (`.py`) files and running them in the terminal](terminal.md), we will now write code in a Jupyter Notebook using the JupyterLab interface.
+As mentioned in the [Overview](overview.md), [Jupyter](https://jupyter.org/) is a set of tools for interactive computing. Instead of [writing Python (`.py`) files and running them in the terminal](terminal.md), we will now write code in a {term}`Jupyter Notebook` using the {term}`JupyterLab` interface.
 To run a Jupyter session, you will need to install some necessary packages into your {term}`Conda` environment.
 
 :::{seealso}
-More details about JupyterLab will be provided in a later section ([JupyterLab](jupyterlab.ipynb)). For now, we will introduce its basic functionality.
+More details about {term}`JupyterLab` will be provided in a later section ([JupyterLab](jupyterlab.ipynb)). For now, we will introduce its basic functionality.
 :::
 
 Install Miniforge by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
@@ -70,7 +70,7 @@ jupyter lab —browser=chrome
 
    This will open a new launcher window where you can select a Python kernel under the "Notebooks" heading for your project. _You should see "Python 3" as in the screenshot above._ Depending on the details of your system, you might see some additional buttons with different kernels.
 
-   Selecting a kernel will open a Jupyter notebook instance and add an untitled file to the left sidebar navigator, which you can then rename to `mysci.ipynb`.
+   Selecting a kernel will open a {term}`Jupyter Notebook` instance and add an untitled file to the left sidebar navigator, which you can then rename to `mysci.ipynb`.
 
    Select "Python 3" to use the Python version you just installed in the `pythia_foundations_env` conda environment.
 
@@ -114,7 +114,7 @@ Alternatively you can simultaneously shutdown and exit the Jupyter session by ty
 
 ## Summary
 
-Jupyter notebooks are a free, open-source, interactive tool running inside a web browser that allows you to run Python code in "cells." To run a Jupyter session you will need to install `jupyterlab` into your Conda environment. Jupyter sessions need to be shutdown, not just exited.
+{term}`Jupyter Notebook`s are a free, open-source, interactive tool running inside a web browser that allows you to run Python code in "cells." To run a Jupyter session you will need to install `jupyterlab` into your Conda environment. Jupyter sessions need to be shutdown, not just exited.
 
 ### What's Next?
 
