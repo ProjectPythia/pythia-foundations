@@ -24,11 +24,18 @@ You'd like to learn to run Python in a Jupyter session. Here we will cover:
 
 ## Installing Python in Jupyter
 
+As mentioned in the [Overview](overview.md), [Jupyter](https://jupyter.org/) is a set of tools for interactive computing. Instead of [writing Python (`.py`) files and running them in the terminal](terminal.md), we will now write code in a Jupyter Notebook using the JupyterLab interface.
 To run a Jupyter session, you will need to install some necessary packages into your {term}`Conda` environment.
 
-Install `miniforge` by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
+:::{seealso}
+More details about JupyterLab will be provided in a later section ([JupyterLab](jupyterlab.ipynb)). For now, we will introduce its basic functionality.
+:::
 
-[Learn more about Conda here](conda.md)
+Install Miniforge by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
+
+:::{tip}For Windows users
+When [installing Miniforge using the Windows installer](https://conda-forge.org/download/), make sure to check "Create start menu shortcuts (supported packages only)". Then in your start menu or search box, you will find the "Miniforge Prompt", where you will enter commands.
+:::
 
 Next, create a {term}`Conda` environment with {term}`Jupyter Lab` installed. In the terminal, type:
 
@@ -51,13 +58,13 @@ jupyter lab —browser=chrome
 
 ## Running Python in Jupyter
 
-1. With your Conda environment activated and Jupyter session launched (see above), create a directory to store our work. Let's call it `pythia-foundations`.
+1. With your Conda environment activated and Jupyter session launched (see above), create a directory to store our work. Let's call it `pythia_foundations`.
 
    ![Jupyter GUI](../images/jupyter_gui.png)
 
    You can do this in the GUI left sidebar by clicking the new-folder icon. If you prefer to use the command line, you can access a terminal by clicking the icon under the "Other" heading in the Launcher.
 
-2. Create a new `mysci.ipynb` file within the `pythia-foundations` folder:
+2. Create a new `mysci.ipynb` file within the `pythia_foundations` folder:
 
    Do this in the GUI on the left sidebar by clicking the "+" icon.
 

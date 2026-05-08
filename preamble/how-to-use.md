@@ -2,7 +2,15 @@
 
 ## Overview
 
-Pythia Foundations is a geoscience-flavored introduction to essential tools in the Scientific Python Ecosystem (SPE) and [Pangeo](https://pangeo.io) stack. It covers the foundational knowledge that's needed to get started with Python in the computational geosciences, as well as to become an effective citizen-practitioner in key open geoscience software ecosystems. The intended audience is anyone from undergraduate students through established geoscientists who are relatively new to working in Python. The tutorials in this book also serve as references and prerequisites for the more advanced and domain-specific content in the [Pythia Cookbook Gallery](https://cookbooks.projectpythia.org).
+Pythia Foundations is a geoscience-flavored introduction to essential
+tools in the Scientific Python Ecosystem (SPE) and [Pangeo](https://pangeo.io)
+stack. It covers the foundational knowledge that's needed to get started
+with Python in the computational geosciences, as well as to become an
+effective citizen-practitioner in key open geoscience software ecosystems.
+The intended audience is anyone from undergraduate students through
+established geoscientists who are relatively new to working in Python.
+The tutorials in this book also serve as references and prerequisites
+for the more advanced and domain-specific content in the [Pythia Cookbook Gallery](https://cookbooks.projectpythia.org).
 
 ## What's included
 
@@ -111,6 +119,10 @@ environment and one to activate it:
 conda env create --yes -f https://raw.githubusercontent.com/ProjectPythia/pythia-foundations/main/environment.yml
 conda activate pythia-book-dev
 ```
+
+:::{note}
+The list of packages required to run all of Foundations can be viewed by following the [link to the `environment.yml` file above](https://raw.githubusercontent.com/ProjectPythia/pythia-foundations/main/environment.yml).
+:::
 
 You should only need to create the environment once (run the first
 command above). But if you download another notebook later, you will
