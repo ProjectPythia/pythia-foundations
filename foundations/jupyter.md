@@ -115,7 +115,7 @@ Jupyter notebooks are a free, open-source, interactive tool running inside a web
 - [Learn more about Conda here](conda.md)
 - [Getting Started with Jupyter](getting-started-jupyter)
 
-## Resources and References
+## Additional resources
 
 - [conda-forge](https://conda-forge.org)
 - [Miniforge Releases](https://conda-forge.org/miniforge/)

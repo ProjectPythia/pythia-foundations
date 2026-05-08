@@ -130,7 +130,7 @@ Conda is a package and environment management system that allows you to quickly 
 - [How to Run Python in the Terminal](terminal.md)
 - [How to Run Python in a Jupyter Session](jupyter.md)
 
-## Resources and References
+## Additional resources
 
 - [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
 - [Conda documentation](https://docs.conda.io/en/latest/)
