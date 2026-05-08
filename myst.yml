@@ -78,6 +78,7 @@ project:
         - file: foundations/getting-started-jupyter.ipynb
           children:
             - file: foundations/jupyterlab.ipynb
+            - file: foundations/jupyterlab-notebooks.ipynb
             - file: foundations/markdown.md
         - file: foundations/getting-started-github.md
           children:
