@@ -25,7 +25,7 @@ You'd like to learn to run Python in a Jupyter session. Here we will cover:
 ## Installing Python in Jupyter
 
 As mentioned in the [Overview](overview.md), [Jupyter](https://jupyter.org/) is a set of tools for interactive computing. Instead of [writing Python (`.py`) files and running them in the terminal](terminal.md), we will now write code in a Jupyter Notebook using the JupyterLab interface.
-To run a Jupyter session, you will need to install some necessary packages into your {term}`Conda` environment.
+To run a Jupyter session, you will need to install some necessary packages into your {term}`conda` environment.
 
 :::{seealso}
 More details about JupyterLab will be provided in a later section ([JupyterLab](jupyterlab.ipynb)). For now, we will introduce its basic functionality.
@@ -37,7 +37,7 @@ Install Miniforge by following the [instructions for your machine](https://githu
 When [installing Miniforge using the Windows installer](https://conda-forge.org/download/), make sure to check "Create start menu shortcuts (supported packages only)". Then in your start menu or search box, you will find the "Miniforge Prompt", where you will enter commands.
 :::
 
-Next, create a {term}`Conda` environment with {term}`Jupyter Lab` installed. In the terminal, type:
+Next, create a {term}`conda` environment with {term}`Jupyter Lab` installed. In the terminal, type:
 
 ```
 $ conda create --name pythia_foundations_env jupyterlab
@@ -58,7 +58,7 @@ jupyter lab —browser=chrome
 
 ## Running Python in Jupyter
 
-1. With your Conda environment activated and Jupyter session launched (see above), create a directory to store our work. Let's call it `pythia_foundations`.
+1. With your conda environment activated and Jupyter session launched (see above), create a directory to store our work. Let's call it `pythia_foundations`.
 
    ![Jupyter GUI](../images/jupyter_gui.png)
 
@@ -114,12 +114,12 @@ Alternatively you can simultaneously shutdown and exit the Jupyter session by ty
 
 ## Summary
 
-Jupyter notebooks are a free, open-source, interactive tool running inside a web browser that allows you to run Python code in "cells." To run a Jupyter session you will need to install `jupyterlab` into your Conda environment. Jupyter sessions need to be shutdown, not just exited.
+Jupyter notebooks are a free, open-source, interactive tool running inside a web browser that allows you to run Python code in "cells." To run a Jupyter session you will need to install `jupyterlab` into your conda environment. Jupyter sessions need to be shutdown, not just exited.
 
 ### What's next?
 
 - [How to Run Python in the Terminal](terminal.md)
-- [Learn more about Conda here](conda.md)
+- [Learn more about conda here](conda.md)
 - [Getting Started with Jupyter](getting-started-jupyter)
 
 ## Additional resources

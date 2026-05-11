@@ -106,11 +106,11 @@ and click on the filename that appears.
 
 That was the easy part. Getting the notebook to execute locally may
 take a little more work. The book was created to run in a particular
-Python environment, managed with Conda. If you don't have a up-to-date
-version of Conda on your machine, you'll want to install one. A brief
-introduction to installing Conda is available [here](https://foundations.projectpythia.org/foundations/conda).
+Python environment, managed with conda. If you don't have a up-to-date
+version of conda on your machine, you'll want to install one. A brief
+introduction to installing conda is available [here](https://foundations.projectpythia.org/foundations/conda).
 
-Once you've installed Conda you will need to create and activate a Conda environment
+Once you've installed conda you will need to create and activate a conda environment
 that is compatible with Pythia Foundation's notebooks. This
 can be done with two commands from the terminal, one to create the
 environment and one to activate it:
@@ -129,7 +129,7 @@ command above). But if you download another notebook later, you will
 need to activate _pythia-book-dev_ if
 it is not currently active, for example if you open up a new
 terminal window, or deactivate _pythia-book-dev_ explicitly with
-the `conda` command. Again, more information on Conda can be
+the `conda` command. Again, more information on conda can be
 found [here](https://foundations.projectpythia.org/foundations/conda).
 
 Now that your _pythia-book-dev_ environment is activated,
@@ -152,4 +152,4 @@ to open the Pythia Foundations GitHub repository.
 Then follow the instructions in our Getting Started with GitHub
 [guide](https://foundations.projectpythia.org/foundations/getting-started-github)
 for cloning a repository. The steps used above for configuring your
-Conda environment should work for this method as well.
+conda environment should work for this method as well.

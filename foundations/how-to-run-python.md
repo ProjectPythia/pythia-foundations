@@ -7,7 +7,7 @@
 This section provides an overview of different ways to run Python code, and quickstart guides for:
 
 1.  Choosing a Python platform
-2.  Installing and managing Python with Conda
+2.  Installing and managing Python with conda
 
 ## Prerequisites
 
@@ -52,11 +52,11 @@ If you code in other languages, you might already have a favorite IDE that will 
 
 _We recommend eventually learning how to develop and run Python code in each of these platforms._
 
-## Installing and managing Python with Conda
+## Installing and managing Python with conda
 
 Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). Conda is a vital component of the Python ecosystem. Understanding it is important, regardless of the platform you chose to run your Python code.
 
-[Learn more about Conda here.](conda.md)
+[Learn more about conda here.](conda.md)
 
 ---
 
@@ -68,7 +68,7 @@ Python can be run on many different platforms. You may choose where to run Pytho
 
 - [How to Run Python in the Terminal](terminal.md)
 - [How to Run Python in a Jupyter Session](jupyter.md)
-- [Installing and Managing Python with Conda](conda.md)
+- [Installing and Managing Python with conda](conda.md)
 
 ## Additional resources
 

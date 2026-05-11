@@ -28,10 +28,10 @@ When [installing Miniforge using the Windows installer](https://conda-forge.org/
 :::
 
 :::{seealso}
-More details about Conda are provided in a later section ([Installing and Managing Python with Conda](conda.md)). For now, we will introduce its basic functionality.
+More details about conda are provided in a later section ([Installing and Managing Python with conda](conda.md)). For now, we will introduce its basic functionality.
 :::
 
-Then create a Conda environment with Python installed by typing the following into your terminal:
+Then create a conda environment with Python installed by typing the following into your terminal:
 
 ```
 $ conda create --name pythia_test_env python
@@ -43,7 +43,7 @@ You can test this by running `python` in the command line.
 
 On Windows, open **Miniforge Prompt**. On a Mac or Linux machine, open **Terminal**.
 
-1. Activate your Conda environment:
+1. Activate your conda environment:
 
    ```
    $ conda activate pythia_test_env
@@ -112,7 +112,7 @@ Running Python in the terminal is a good option if you are familiar with Linux c
 ### What's next?
 
 - [How to Run Python in a Jupyter Session](jupyter.md)
-- [Learn more about Conda here](conda.md)
+- [Learn more about conda here](conda.md)
 
 ## Additional resources
 
