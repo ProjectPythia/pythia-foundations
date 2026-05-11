@@ -116,7 +116,7 @@ Alternatively you can simultaneously shutdown and exit the Jupyter session by ty
 
 Jupyter notebooks are a free, open-source, interactive tool running inside a web browser that allows you to run Python code in "cells." To run a Jupyter session you will need to install `jupyterlab` into your Conda environment. Jupyter sessions need to be shutdown, not just exited.
 
-### What's Next?
+### What's next?
 
 - [How to Run Python in the Terminal](terminal.md)
 - [Learn more about Conda here](conda.md)

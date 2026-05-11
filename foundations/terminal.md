@@ -109,7 +109,7 @@ On Windows, open **Miniforge Prompt**. On a Mac or Linux machine, open **Termina
 
 Running Python in the terminal is a good option if you are familiar with Linux commands or scripting on a supercomputer. It requires the use of a text editor.
 
-### What's Next?
+### What's next?
 
 - [How to Run Python in a Jupyter Session](jupyter.md)
 - [Learn more about Conda here](conda.md)

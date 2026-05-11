@@ -1,4 +1,4 @@
-# Git workflows
+# Git Workflows
 
 ```{image} ../../images/Git-Logo-2Color.png
 :alt: Git Logo

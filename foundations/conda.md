@@ -23,7 +23,7 @@ Here we will cover:
 
 ---
 
-## Packages and Package Managers
+## Packages and package managers
 
 A Python package is a collection of modules, which, in turn, are essentially Python scripts that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules.
 
@@ -67,7 +67,7 @@ Users looking for a full-featured commercially licensed and supported Python env
 The Conda package manager and our recommended Miniforge installation are open source and free for all users.
 :::
 
-## Creating a Conda Environment
+## Creating a Conda environment
 
 A Conda environment is an interoperable collection of specific versions of packages or libraries that you install and use for a specific workflow. The Conda package manager takes care of dependencies, so everything works together in a predictable way. One huge advantage of using environments is that any changes you make to one environment will not affect your other environments at all, so you are much less likely to "break" something!
 
@@ -157,7 +157,7 @@ Things can go wrong with managing package version dependencies this way, so it's
 
 We recommend installing {term}`Conda` via [Miniforge](https://github.com/conda-forge/miniforge) and using it manage packages in your terminal with the `conda` command.
 
-### What's Next?
+### What's next?
 
 - [How to Run Python in the Terminal](terminal.md)
 - [How to Run Python in a Jupyter Session](jupyter.md)
