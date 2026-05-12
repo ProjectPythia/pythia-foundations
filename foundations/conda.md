@@ -35,7 +35,7 @@ You may have encountered a few different package managers in the Python world:
 - [pixi](https://pixi.prefix.dev/latest/) and [uv](https://docs.astral.sh/uv/) are newer options that are gaining popularity&mdash;well worth exploring for the adventurous learner!
 - {term}`conda` is widely used for scientific computing, and this is what we recommend.
 
-A key advantage of {term}`conda` over pip is that it manages all types of package requirements, not just Python packages. The most reliable source of up-to-date, interoperable scientific packages are found in the community-maintained `conda-forge` repository (see below).
+A key advantage of {term}`conda` over pip is that it manages all types of package requirements, not just Python packages. The most reliable source of up-to-date, interoperable scientific packages are found in the community-maintained {term}`conda-forge` repository (see below).
 
 :::{tip} TL;DR
 We strongly recommend using {term}`conda` to install and manage Python and all your complex project-specific software.
@@ -45,7 +45,7 @@ We strongly recommend using {term}`conda` to install and manage Python and all y
 
 ## Installing conda
 
-We recommend you start by [installing](https://conda-forge.org/download/) [Miniforge](https://github.com/conda-forge/miniforge). This is a specific version of the {term}`conda` package manager pre-configured to work with the `conda-forge` package repository&mdash;our recommended source for most of the packages you will need.
+We recommend you start by [installing](https://conda-forge.org/download/) [Miniforge](https://github.com/conda-forge/miniforge). This is a specific version of the {term}`conda` package manager pre-configured to work with the {term}`conda-forge` package repository&mdash;our recommended source for most of the packages you will need.
 
 You can install Miniforge by following the [instructions for your machine](https://github.com/conda-forge/miniforge#install).
 
@@ -57,14 +57,14 @@ A few reasons why we recommend installing Miniforge:
 
 1. It's free, lightweight, and won't interfere with other installations on your computer.
 2. It encourages you to install only the packages you need in reproducible isolated environments for specific projects. This is generally a more robust way to work with open source tools.
-3. It uses `conda-forge` as the default channel for packages, which is our recommended way to get up-to-date, interoperable packages.
+3. It uses {term}`conda-forge` as the default channel for packages, which is our recommended way to get up-to-date, interoperable packages.
 
-Once you have `conda` via the Miniconda installer, the next step is to create an environment and install packages.
+Once you have {term}`conda` via the {term}`Miniforge` installer, the next step is to create an environment and install packages.
 
 :::{note}
 Users looking for a full-featured commercially licensed and supported Python environment manager should take a look at [Anaconda](https://www.anaconda.com/), which may be [free for academic usage](https://www.anaconda.com/blog/update-on-anacondas-terms-of-service-for-academia-and-research).
 
-The conda package manager and our recommended Miniforge installation are open source and free for all users.
+The conda package manager and our recommended Miniforge installation are open source, community-supported and free for all users.
 :::
 
 ## Creating a conda environment
@@ -137,8 +137,8 @@ Some other {term}`conda` commands that you will find useful include:
 
 You can find lots more information in the [conda documentation](https://docs.conda.io/en/latest/) or this handy [conda cheat sheet](https://docs.conda.io/projects/conda/en/stable/user-guide/cheatsheet.html#cheatsheet).
 
-:::{tip} What if the package you need is not available from `conda-forge`?
-If the package you are trying to use (`somepackage` in these examples) only mentions `pip install somepackage` in its docs, or you tried `conda install somepackage` and conda couldn't find it, it is likely that this package is not available via the `conda-forge` channel.
+:::{tip} What if the package you need is not available from {term}`conda-forge`?
+If the package you are trying to use (`somepackage` in these examples) only mentions `pip install somepackage` in its docs, or you tried `conda install somepackage` and conda couldn't find it, it is likely that this package is not available via the {term}`conda-forge` channel.
 
 As a plan B, after activating your custom conda environment you can install using pip like this:
 ```
@@ -167,5 +167,5 @@ We recommend installing {term}`conda` via [Miniforge](https://github.com/conda-f
 - [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
 - [conda documentation](https://docs.conda.io/en/latest/)
 - [conda cheat sheet](https://docs.conda.io/projects/conda/en/stable/user-guide/cheatsheet.html#cheatsheet)
-- [Anaconda](https://docs.anaconda.com/anaconda/install/)
-- [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+- [Miniforge](https://github.com/conda-forge/miniforge)
+- [conda-forge](https://conda-forge.org)
