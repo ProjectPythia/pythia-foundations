@@ -1,4 +1,4 @@
-# Installing and Managing Python with conda
+# Installing and Managing Python with Conda
 
 ---
 
