@@ -21,7 +21,7 @@ You'd like to learn to run Python in the terminal. Here we will cover:
 
 ## Installing Python in the Terminal
 
-If you are running Python in the terminal, it is best to install Miniforge. You can do that by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
+If you are running Python in the terminal, it is best to install {term}`Miniforge`. You can do that by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
 
 :::{tip}For Windows users
 When [installing Miniforge using the Windows installer](https://conda-forge.org/download/), make sure to check "Create start menu shortcuts (supported packages only)". Then in your start menu or search box, you will find the "Miniforge Prompt", where you will enter commands.
@@ -31,7 +31,7 @@ When [installing Miniforge using the Windows installer](https://conda-forge.org/
 More details about conda are provided in a later section ([Installing and Managing Python with conda](conda.md)). For now, we will introduce its basic functionality.
 :::
 
-Then create a conda environment with Python installed by typing the following into your terminal:
+Then create a {term}`conda` environment with Python installed by typing the following into your terminal:
 
 ```
 $ conda create --name pythia_test_env python
