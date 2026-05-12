@@ -32,7 +32,7 @@ commit
 : A snapshot of your Git repository at a specific time.
 
 conda
-: Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). To install conda, we recommend {term}`miniforge`.
+: Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). To install conda, we recommend {term}`Miniforge`.
 : See [conda documentation](https://docs.conda.io/en/latest/), particularly the [conda cheat sheet](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html), and @conda-commands in the context of Project Pythia.
 
 conda-forge
