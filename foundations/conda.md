@@ -4,14 +4,14 @@
 
 ## Overview
 
-{term}`Conda` is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s).
+Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s).
 
 Here we will cover:
 
 1.  Packages and package managers
-2.  Installing Conda
-3.  Creating a Conda environment
-4.  Useful Conda commands
+2.  Installing conda
+3.  Creating a conda environment
+4.  Useful conda commands
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Here we will cover:
 
 ---
 
-## Packages and Package Managers
+## Packages and package managers
 
 A Python package is a collection of modules, which, in turn, are essentially Python scripts that contain published functionality. There are Python packages for data input, data analysis, data visualization, etc. Each package offers a unique toolset and may have its own unique syntax rules.
 
@@ -33,19 +33,19 @@ You may have encountered a few different package managers in the Python world:
 
 - [pip](https://pip.pypa.io/en/stable/) is the most common method for installing Python packages, which can be used in combination with [venv](https://docs.python.org/3/library/venv.html) for creating isolated environments.
 - [pixi](https://pixi.prefix.dev/latest/) and [uv](https://docs.astral.sh/uv/) are newer options that are gaining popularity&mdash;well worth exploring for the adventurous learner!
-- {term}`Conda` is widely used for scientific computing, and this is what we recommend.
+- {term}`conda` is widely used for scientific computing, and this is what we recommend.
 
-A key advantage of {term}`Conda` over pip is that it manages all types of package requirements, not just Python packages. The most reliable source of up-to-date, interoperable scientific packages are found in the community-maintained `conda-forge` repository (see below).
+A key advantage of {term}`conda` over pip is that it manages all types of package requirements, not just Python packages. The most reliable source of up-to-date, interoperable scientific packages are found in the community-maintained `conda-forge` repository (see below).
 
 :::{tip} TL;DR
-We strongly recommend using {term}`Conda` to install and manage Python and all your complex project-specific software.
+We strongly recommend using {term}`conda` to install and manage Python and all your complex project-specific software.
 :::
 
 (installing-conda)=
 
-## Installing Conda
+## Installing conda
 
-We recommend you start by [installing](https://conda-forge.org/download/) [Miniforge](https://github.com/conda-forge/miniforge). This is a specific version of the {term}`Conda` package manager pre-configured to work with the `conda-forge` package repository&mdash;our recommended source for most of the packages you will need.
+We recommend you start by [installing](https://conda-forge.org/download/) [Miniforge](https://github.com/conda-forge/miniforge). This is a specific version of the {term}`conda` package manager pre-configured to work with the `conda-forge` package repository&mdash;our recommended source for most of the packages you will need.
 
 You can install Miniforge by following the [instructions for your machine](https://github.com/conda-forge/miniforge#install).
 
@@ -64,14 +64,14 @@ Once you have `conda` via the Miniconda installer, the next step is to create an
 :::{note}
 Users looking for a full-featured commercially licensed and supported Python environment manager should take a look at [Anaconda](https://www.anaconda.com/), which may be [free for academic usage](https://www.anaconda.com/blog/update-on-anacondas-terms-of-service-for-academia-and-research).
 
-The Conda package manager and our recommended Miniforge installation are open source and free for all users.
+The conda package manager and our recommended Miniforge installation are open source and free for all users.
 :::
 
-## Creating a Conda Environment
+## Creating a conda environment
 
-A Conda environment is an interoperable collection of specific versions of packages or libraries that you install and use for a specific workflow. The Conda package manager takes care of dependencies, so everything works together in a predictable way. One huge advantage of using environments is that any changes you make to one environment will not affect your other environments at all, so you are much less likely to "break" something!
+A conda environment is an interoperable collection of specific versions of packages or libraries that you install and use for a specific workflow. The conda package manager takes care of dependencies, so everything works together in a predictable way. One huge advantage of using environments is that any changes you make to one environment will not affect your other environments at all, so you are much less likely to "break" something!
 
-To create a new Conda environment, type `conda create --name` and the name of your environment in your terminal, and then specify any packages that you would like to have installed. For example, to install a Jupyter-ready environment called `sample_environment`, type
+To create a new conda environment, type `conda create --name` and the name of your environment in your terminal, and then specify any packages that you would like to have installed. For example, to install a Jupyter-ready environment called `sample_environment`, type
 
 ```
 conda create --name sample_environment python jupyterlab
@@ -83,9 +83,9 @@ It is a good idea to create a new environment for every project. Because Python 
 
 (conda-commands)=
 
-## Useful Conda commands
+## Useful conda commands
 
-Some other {term}`Conda` commands that you will find useful include:
+Some other {term}`conda` commands that you will find useful include:
 
 - Activating a specific environment
 
@@ -135,7 +135,7 @@ Some other {term}`Conda` commands that you will find useful include:
   conda env remove --name sample_environment
   ```
 
-You can find lots more information in the [Conda documentation](https://docs.conda.io/en/latest/) or this handy [Conda cheat sheet](https://docs.conda.io/projects/conda/en/stable/user-guide/cheatsheet.html#cheatsheet).
+You can find lots more information in the [conda documentation](https://docs.conda.io/en/latest/) or this handy [conda cheat sheet](https://docs.conda.io/projects/conda/en/stable/user-guide/cheatsheet.html#cheatsheet).
 
 :::{tip} What if the package you need is not available from `conda-forge`?
 If the package you are trying to use (`somepackage` in these examples) only mentions `pip install somepackage` in its docs, or you tried `conda install somepackage` and conda couldn't find it, it is likely that this package is not available via the `conda-forge` channel.
@@ -146,18 +146,18 @@ conda install pip
 pip install somepackage
 ```
 
-Things can go wrong with managing package version dependencies this way, so it's best to do this only when necessary, and only in isolated environments. See more info [here in the Conda docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#pip-in-env).
+Things can go wrong with managing package version dependencies this way, so it's best to do this only when necessary, and only in isolated environments. See more info [here in the conda docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#pip-in-env).
 :::
 
 ---
 
 ## Summary
 
-{term}`Conda` is a package and environment management system that allows you to quickly install, run, and update packages within your work environment(s). This is important for gathering all of the tools necessary for your workflow.
+Conda is a package and environment management system that allows you to quickly install, run, and update packages within your work environment(s). This is important for gathering all of the tools necessary for your workflow.
 
-We recommend installing {term}`Conda` via [Miniforge](https://github.com/conda-forge/miniforge) and using it manage packages in your terminal with the `conda` command.
+We recommend installing {term}`conda` via [Miniforge](https://github.com/conda-forge/miniforge) and using it manage packages in your terminal with the `conda` command.
 
-### What's Next?
+### What's next?
 
 - [How to Run Python in the Terminal](terminal.md)
 - [How to Run Python in a Jupyter Session](jupyter.md)
@@ -165,7 +165,7 @@ We recommend installing {term}`Conda` via [Miniforge](https://github.com/conda-f
 ## Additional resources
 
 - [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
-- [Conda documentation](https://docs.conda.io/en/latest/)
-- [Conda cheat sheet](https://docs.conda.io/projects/conda/en/stable/user-guide/cheatsheet.html#cheatsheet)
+- [conda documentation](https://docs.conda.io/en/latest/)
+- [conda cheat sheet](https://docs.conda.io/projects/conda/en/stable/user-guide/cheatsheet.html#cheatsheet)
 - [Anaconda](https://docs.anaconda.com/anaconda/install/)
 - [Miniconda](https://docs.conda.io/en/latest/miniconda.html)

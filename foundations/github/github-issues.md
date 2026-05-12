@@ -22,7 +22,7 @@
 
 ---
 
-## What are GitHub Issues and Discussions?
+## What are GitHub issues and discussions?
 
 GitHub provides two different, but related mechanisms for communicating
 within a repository about a project: _issues_ and _discussions_.

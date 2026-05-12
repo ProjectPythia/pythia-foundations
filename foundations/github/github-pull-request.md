@@ -1,4 +1,4 @@
-# Opening a pull request on GitHub
+# Opening a Pull Request on GitHub
 
 ```{image} ../../images/GitHub-logo.png
 :alt: GitHub Logo

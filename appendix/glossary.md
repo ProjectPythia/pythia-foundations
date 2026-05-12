@@ -31,9 +31,9 @@ command-line tools
 commit
 : A snapshot of your Git repository at a specific time.
 
-Conda
+conda
 : Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). To install `conda`, we recommend {term}`miniconda`.
-: See [Conda documentation](https://docs.conda.io/en/latest/), particularly the [Conda cheat sheet](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html), and @conda-commands in the context of Project Pythia.
+: See [conda documentation](https://docs.conda.io/en/latest/), particularly the [conda cheat sheet](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html), and @conda-commands in the context of Project Pythia.
 
 DevOps
 : The integration and automation of practices and processes for software development and operations.
@@ -89,7 +89,7 @@ merge
 : A specific type of commit that combines changes from two branches.
 
 Miniconda
-: [Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a free minimal installer for {term}`Conda`. Miniconda only comes with the {term}`Conda` package management system; it is a pared-down version of the full Anaconda Python distribution.
+: [Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a free minimal installer for {term}`conda`. Miniconda only comes with the {term}`conda` package management system; it is a pared-down version of the full Anaconda Python distribution.
 : See @installing-conda.
 
 Miniforge
