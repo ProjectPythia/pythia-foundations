@@ -2,7 +2,7 @@
 
 Markdown is a simple, human-readable text language used extensively in Jupyter notebooks, on GitHub, and elsewhere. Markdown lets us write readable plain text that can rendered as nicely styled text on web pages and other media, with headings, links, and other formatting.
 
-Project Pythia uses [MyST Markdown](https://mystmd.org/), which is an extension of [CommonMark](https://commonmark.org/), which is in turn an implementation of [Markdown](wiki:Markdown). 
+Project Pythia uses [MyST Markdown](https://mystmd.org/), which is an extension of [CommonMark](https://commonmark.org/), which is in turn an implementation of [Markdown](wiki:Markdown).
 In fact the page you are reading right now was written in Markdown! See the [source on GitHub here](https://github.com/ProjectPythia/pythia-foundations/blob/main/foundations/markdown.md).
 
 Markdown was briefly mentioned in the previous section in the context of Jupyter notebooks. Here we provide a list of recommended resources for learning more.
