@@ -21,38 +21,44 @@ You'd like to learn to run Python in the terminal. Here we will cover:
 
 ## Installing Python in the Terminal
 
-If you are running Python in the terminal, it is best to install Miniforge. You can do that by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
+If you are running Python in the terminal, it is best to install {term}`Miniforge`. You can do that by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
 
-[Learn more about Conda here](conda.md)
+:::{tip}For Windows users
+When [installing Miniforge using the Windows installer](https://conda-forge.org/download/), make sure to check "Create start menu shortcuts (supported packages only)". Then in your start menu or search box, you will find the "Miniforge Prompt", where you will enter commands.
+:::
 
-Then create a Conda environment with Python installed by typing the following into your terminal:
+:::{seealso}
+More details about conda are provided in a later section ([Installing and Managing Python with conda](conda.md)). For now, we will introduce its basic functionality.
+:::
+
+Then create a {term}`conda` environment with Python installed by typing the following into your terminal:
 
 ```
-$ conda create --name pythia_foundations_env python
+$ conda create --name pythia_test_env python
 ```
 
 You can test this by running `python` in the command line.
 
 ## Running Python in the Terminal
 
-On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **Terminal**.
+On Windows, open **Miniforge Prompt**. On a Mac or Linux machine, open **Terminal**.
 
-1. Activate your Conda environment:
-
-   ```
-   $ conda activate pythia_foundations_env
-   ```
-
-2. Create a directory to store our work. Let's call it `pythia-foundations`.
+1. Activate your conda environment:
 
    ```
-   $ mkdir pythia-foundations
+   $ conda activate pythia_test_env
+   ```
+
+2. Create a directory to store our work. Let's call it `pythia_test`.
+
+   ```
+   $ mkdir pythia_test
    ```
 
 3. Go into the directory:
 
    ```
-   $ cd pythia-foundations
+   $ cd pythia_test
    ```
 
 4. Create a new Python file:
@@ -60,11 +66,21 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
    ```
    $ touch mysci.py
    ```
+   On Windows:
 
-5. And now that you've set up our workspace, edit the `mysci.py` script using your favorite text editor (e.g., nano):
+   ```
+   type nul > mysci.py
+   ```
+
+5. And now that you've set up our workspace, edit the `mysci.py` script using your favorite text editor (e.g., [nano](wiki:GNU_nano)):
 
    ```
    $ nano mysci.py
+   ```
+    On Windows, a quick option is to edit on Notepad:
+
+   ```
+   notepad mysci.py
    ```
 
 6. Change the script to include the classic first command: printing, "Hello, world!".
@@ -75,8 +91,9 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
 
 7. Save your file and exit the editor. How to do this is dependent on your chosen text editor.
 
-   - In Vim, revert to command mode by pressing `esc`. Then, the command is `:wq`.
-   - In Nano it is {kbd}`Ctrl`\+{kbd}`O` to save and {kbd}`Ctrl`\+{kbd}`X` to exit (where you will be prompted if you want to save it, if modified).
+   - In [Vim](wiki:Vim_(text_editor)), revert to command mode by pressing `esc`. Then, the command is `:wq`.
+   - In nano it is {kbd}`Ctrl`\+{kbd}`O` to save and {kbd}`Ctrl`\+{kbd}`X` to exit (where you will be prompted if you want to save it, if modified).
+   - In Notepad, {kbd}`Ctrl`\+{kbd}`S` and close the window.
 
 8. In the terminal, execute your script:
 
@@ -92,11 +109,11 @@ On Windows, open **Anaconda Prompt**. On a Mac or Linux machine, simply open **T
 
 Running Python in the terminal is a good option if you are familiar with Linux commands or scripting on a supercomputer. It requires the use of a text editor.
 
-### What's Next?
+### What's next?
 
 - [How to Run Python in a Jupyter Session](jupyter.md)
-- [Learn more about Conda here](conda.md)
+- [Learn more about conda here](conda.md)
 
-## Resources and References
+## Additional resources
 
 - [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)

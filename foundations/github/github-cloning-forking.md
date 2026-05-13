@@ -66,25 +66,33 @@ We'll use a very basic repo that is part of the [Project Pythia organization](ht
 
 First, point your browser to <https://github.com/ProjectPythia/github-sandbox>:
 
-<img src="../../images/GitHub_SandboxRepo.png" alt="SandboxRepo">
+```{image} ../../images/GitHub_SandboxRepo.png
+:alt: SandboxRepo
+```
 
 ---
 
 We see that in the repository, there exists five files. Above the list of files is this row:
 
-<img src="../../images/GitHub_RepoTools.png" alt="RepoTools">
+```{image} ../../images/GitHub_RepoTools.png
+:alt: RepoTools
+```
 
 ---
 
 Click on the green **Code** button to the right:
 
-<img src="../../images/GitHub_CodeClone.png" alt="CodeClone">
+```{image} ../../images/GitHub_CodeClone.png
+:alt: CodeClone
+```
 
 ---
 
 Select the **HTTPS** option, and click on the copy-to-clipboard icon:
 
-<img src="../../images/GitHub_CodeCloneHTTPS.png" alt="CodeCloneHTTPS">
+```{image} ../../images/GitHub_CodeCloneHTTPS.png
+:alt: CodeCloneHTTPS
+```
 
 ---
 
@@ -164,25 +172,33 @@ Be sure you have logged into GitHub at this time!
 
 Notice at the top right of the screen, there is a _Fork_ button:
 
-<img src="../../images/GitHub_Fork.png" alt="Fork">
+```{image} ../../images/GitHub_Fork.png
+:alt: Fork
+```
 
 ---
 
 Click on it:
 
-<img src="../../images/GitHub_ForkDest.png" alt="ForkDest">
+```{image} ../../images/GitHub_ForkDest.png
+:alt: ForkDest
+```
 
 ---
 
 You should see your GitHub user ID (if you administer any other GitHub organizations, you will see them as well). Click on your user ID to complete the _fork_. After a few seconds, your browser will be redirected to the forked repo, now residing in your personal GitHub organization:
 
-<img src="../../images/GitHub_ForkPost.png" alt="ForkPost">
+```{image} ../../images/GitHub_ForkPost.png
+:alt: ForkPost
+```
 
 ---
 
 Notice that the _Fork_ button on the upper right has incremented by one, and there is also is a line relating your fork to the original repo:
 
-<img src="../../images/GitHub_ForkBranch.png" alt="ForkBranch">
+```{image} ../../images/GitHub_ForkBranch.png
+:alt: ForkBranch
+```
 
 ---
 

@@ -9,7 +9,7 @@ If you need to comment on anything in Pythia Foundations you feel needs work, yo
 
 To quickly provide feedback about minor issues without the use of GitHub, you can also use this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link).
 
-## Contributing a new Jupyter Notebook
+## Contributing a new Jupyter notebook
 
 If you'd like to contribute a Jupyter Notebook to these materials, please reference our [template](template) viewable on the next page. This template is available to you in `appendix/template.ipynb` if you've cloned the [source repository](https://github.com/ProjectPythia/pythia-foundations), or available as a download [directly from GitHub](https://github.com/ProjectPythia/pythia-foundations/raw/main/appendix/template.ipynb).
 

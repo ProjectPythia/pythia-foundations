@@ -26,6 +26,7 @@ project:
     FTP: File Transfer Protocol
     HTTP: Hypertext Transfer Protocol
     ID: Identifier
+    IDE: Integrated Development Environment
     IDL: Interactive Data Language
     NCAR: NSF National Center for Atmospheric Research
     NCL: NCAR Command Language

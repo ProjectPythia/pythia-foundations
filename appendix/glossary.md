@@ -31,9 +31,12 @@ command-line tools
 commit
 : A snapshot of your Git repository at a specific time.
 
-Conda
-: Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). To install `conda`, we recommend {term}`miniconda`.
-: See [Conda documentation](https://docs.conda.io/en/latest/), particularly the [Conda cheat sheet](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html), and @conda-commands in the context of Project Pythia.
+conda
+: Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). To install conda, we recommend {term}`Miniforge`.
+: See [conda documentation](https://docs.conda.io/en/latest/), particularly the [conda cheat sheet](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html), and @conda-commands in the context of Project Pythia.
+
+conda-forge
+: conda-forge is a large, community-organized collection of software packages that can be installed on a wide variety of computing platforms via the {term}`conda` package manager. It is our recommended installation source for Python itself as well as most packages in the {term}`scientific Python ecosystem`.
 
 DevOps
 : The integration and automation of practices and processes for software development and operations.
@@ -88,12 +91,9 @@ local
 merge
 : A specific type of commit that combines changes from two branches.
 
-Miniconda
-: [Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a free minimal installer for {term}`Conda`. Miniconda only comes with the {term}`Conda` package management system; it is a pared-down version of the full Anaconda Python distribution.
-: See @installing-conda.
-
 Miniforge
-: Miniforge is the community driven and more permissively licensed minimal installer.
+: [Miniforge](https://github.com/conda-forge/miniforge) is a free minimal installer for {term}`conda`. Miniforge includes the {term}`conda` package management system, and is pre-configued to install packages from the {term}`conda-forge` repository. Miniforge is community-driven and permissively licensed.
+: See @installing-conda.
 
 [NCL](https://www.ncl.ucar.edu/)
 : The NCAR Command Language (NCL) is an interpreted language designed specifically for scientific data analysis and visualization.
@@ -120,7 +120,7 @@ remote
 : A repository hosted on a server such as {term}`GitHub`.
 
 scientific Python ecosystem
-: A collection of open source Python packages that support analysis, manipulation, and visualization of scientific data.
+: A collection of open source {term}`Python package`s that support analysis, manipulation, and visualization of scientific data.
 
 upstream
 : The project repository from which a fork was created.

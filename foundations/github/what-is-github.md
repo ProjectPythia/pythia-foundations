@@ -1,4 +1,4 @@
-# What is GitHub?
+# What Is GitHub?
 
 ```{image} ../../images/GitHub-logo.png
 :alt: GitHub Logo
@@ -96,7 +96,9 @@ Perhaps the most popular web-based platform that uses Git for FOSS VCS is {term}
 
 For example, here is a screenshot from [Xarray's repo on GitHub](https://github.com/pydata/xarray):
 
-<img src="../../images/XarrayGithub.png" alt="Xarray GitHub">
+```{image} ../../images/XarrayGithub.png
+:alt: Xarray GitHub
+```
 
 ```{note}
 The above screenshot is from <i>one moment in time</i>. When you visit the Xarray GitHub link above, it will no doubt look different!
@@ -114,7 +116,9 @@ Your next step (if you haven't already) should be to register for your free GitH
 
 To do so, simply point your browser to the [GitHub sign-up page](https://github.com/join):
 
-<img src="../../images/GitHubJoin.png" alt="GitHub Signup">
+```{image} ../../images/GitHubJoin.png
+:alt: GitHub Signup
+```
 
 While GitHub offers paid options, a free account is typically all that is needed!
 

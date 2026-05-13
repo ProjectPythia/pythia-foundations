@@ -182,11 +182,11 @@ In the list of notifications, you can unsubscribe as shown below.
 - GitHub uses **secure tokens** to enable _write_ (and sometimes _read_) _access_ to GitHub repositories.
 - You can opt-in to notifications on a repo. The default, which can be easily changed, is to receive email.
 
-### What's Next?
+### What's next?
 
 In the next section, we will learn the basics of version control using [Git on the command-line](basic-git.md).
 
-## Additional Resources
+## Additional resources
 
 - [GitHub documentation section: Managing Your Personal Access Tokens (HTTPS)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 - [GitHub documentation section: Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)

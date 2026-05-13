@@ -40,11 +40,17 @@ Typically, a GitHub repository will always include the **Issues** and **Pull req
 
 All of the Python packages covered (e.g. [NumPy](https://github.com/numpy/numpy) and [Xarray](https://github.com/pydata/xarray)) in this Foundations book have associated GitHub repositories, as well as [Python](https://github.com/python/cpython) itself:
 
-<img src="../../images/GitHubNumPy.png" alt="NumPy GitHub">
+```{image} ../../images/GitHubNumPy.png
+:alt: NumPy GitHub
+```
 
-<img src="../../images/GitHubXarray.png" alt="Xarray GitHub">
+```{image} ../../images/GitHubXarray.png
+:alt: Xarray GitHub
+```
 
-<img src="../../images/GitHubPython.png" alt="Python GitHub">
+```{image} ../../images/GitHubPython.png
+:alt: Python GitHub
+```
 
 As you can see by the recent timestamps, these repositories are actively changing; this reflects the adaptability of the [open-source software](https://opensource.org/osd) ecosystem surrounding Python.
 
