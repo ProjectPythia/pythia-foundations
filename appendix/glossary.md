@@ -88,6 +88,9 @@ Linux
 local
 : Refering to something, such as a {term}`Git` repository, on your computer rather than a remote server.
 
+Markdown
+: A simple, human-readable text language used extensively in {term}`Jupyter Notebooks`, on {term}`GitHub` and other code repositories, and elsewhere on the Internet (e.g., forums and blogs). Markdown lets us write readable plain text that can rendered as nicely styled text on web pages and other media, with headings, links, and other formatting.
+
 merge
 : A specific type of commit that combines changes from two branches.
 
