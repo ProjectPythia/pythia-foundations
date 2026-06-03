@@ -1,6 +1,6 @@
 # Datetime
 
-This section contains a basic tutorial on dealing with times and calendars in scientific Python using the standard Python library known as [datetime](https://docs.python.org/3/library/datetime.html).
+This section contains a basic tutorial on dealing with dates and times in scientific Python using a module from the Python standard library known as [datetime](https://docs.python.org/3/library/datetime.html).
 
 Other time libraries used in the geosciences include:
 
