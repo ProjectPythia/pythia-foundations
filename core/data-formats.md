@@ -1,7 +1,3 @@
 # Data Formats
 
-```{note}
-This content is under construction!
-```
-
-There are many data file formats used commonly in the geosciences, such as NetCDF and GRIB. This section contains tutorials on how to interact with these files in Python.
+Geoscientific data are commonly stored in self-describing files that are readable on multiple computing platforms and programming languages (including Python). This section contains a tutorial on the widely-used netCDF data format.
