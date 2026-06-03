@@ -4,7 +4,8 @@ This section contains tutorials on using [pandas](https://pandas.pydata.org) for
 
 ---
 
-From the [official documentation](https://pandas.pydata.org/), Pandas {cite:p}`reback2020pandas` "is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language."
+From the [official documentation](https://pandas.pydata.org/), Pandas {cite:p}`reback2020pandas` is
+> a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language.
 
 Pandas is a very powerful library for working with tabular data (e.g., spreadsheets, comma-separated-value files, or database printouts; all of these are quite common for geoscientific data). It allows us to use labels for our data; this, in turn, allows us to write expressive and robust code to manipulate the data.
 
