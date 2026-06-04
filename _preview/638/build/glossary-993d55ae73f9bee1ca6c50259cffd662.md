@@ -69,7 +69,7 @@ issue
 : A common feature of collaborative development platforms such as {term}`GitHub` used to track bugs, request features, and manage work related for a specific repository.
 
 Jupyter Notebook
-: Jupyter Notebooks (`*.ipynb` files) are computational narrative documents that can contain executable code, LaTeX equations, visualizations (e.g., plots, pictures), and richly formatted text. The code does not have to just be Python, other languages such as Julia or R are supported as well. Jupyter Notebooks are celebrated for their interactive output that allows movement between code, code output, explanations, and more code - similar to how scientists think and solve problems. Jupyter Notebooks can be thought of as a living, runnable publication and make for a great presentation platform. See also {term}`Jupyter Kernels`, {term}`JupyterLab`, {term}`JupyterHub`, {term}`Binder`, and {term}`BinderHub`.
+: Jupyter Notebooks (`*.ipynb` files) are computational narrative documents that can contain executable code, LaTeX equations, visualizations (e.g., plots, pictures), and richly formatted text. The code does not have to just be Python, other languages such as Julia or R are supported as well. Jupyter Notebooks are celebrated for their interactive output that allows movement between code, code output, explanations, and more code — similar to how scientists think and solve problems. Jupyter Notebooks can be thought of as a living, runnable publication and make for a great presentation platform. See also {term}`Jupyter Kernels`, {term}`JupyterLab`, {term}`JupyterHub`, {term}`Binder`, and {term}`BinderHub`.
 
 Jupyter Kernels
 : Software engines and their environments (e.g., conda environments) that execute the code contained in a {term}`Jupyter Notebook`.
