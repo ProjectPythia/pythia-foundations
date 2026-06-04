@@ -37,7 +37,7 @@ Install Miniforge by following the [instructions for your machine](https://githu
 When [installing Miniforge using the Windows installer](https://conda-forge.org/download/), make sure to check "Create start menu shortcuts (supported packages only)". Then in your start menu or search box, you will find the "Miniforge Prompt", where you will enter commands.
 :::
 
-Next, create a {term}`conda` environment with {term}`Jupyter Lab` installed. In the terminal, type:
+Next, create a {term}`conda` environment with {term}`JupyterLab` installed. In the terminal, type:
 
 ```
 $ conda create --name pythia_foundations_env jupyterlab

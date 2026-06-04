@@ -6,12 +6,12 @@ description: Glossary of terms used in Pythia Foundations.
 :::{glossary}
 
 [Binder](https://jupyter.org/binder)
-: An open-source service that allows users to create sharable, interactive computing environments from {term}`Jupyter Notebooks` and other repositories. Binder can reproduce a computational environment directly from a {term}`GitHub` repository, providing a seamless way to share and interact with code and data.
+: An open-source service that allows users to create sharable, interactive computing environments from {term}`Jupyter Notebook`s and other repositories. Binder can reproduce a computational environment directly from a {term}`GitHub` repository, providing a seamless way to share and interact with code and data.
 
 : The public service to run Binder is on <https://mybinder.org>, which is running {term}`BinderHub`. The Binder links on most Project Pythia pages point to <https://binder.projectpythia.org>, which is a Pythia-specific implementation of {term}`BinderHub` running on the NSF-supported [Jetstream2](https://jetstream-cloud.org/) cloud computing service.
 
 BinderHub
-: The underlying technology and infrastructure that powers {term}`Binder`. BinderHub deploys and manages the interactive computing environments for {term}`Jupyter Notebooks`, ensuring that users can access and share reproducible computational work.
+: The underlying technology and infrastructure that powers {term}`Binder`. BinderHub deploys and manages the interactive computing environments for {term}`Jupyter Notebook`s, ensuring that users can access and share reproducible computational work.
 
 branch
 : A separate workspace to make and track changes without impacting other branches of the code {term}`repository`.
@@ -89,7 +89,7 @@ local
 : Refering to something, such as a {term}`Git` repository, on your computer rather than a remote server.
 
 Markdown
-: A simple, human-readable text language used extensively in {term}`Jupyter Notebooks`, on {term}`GitHub` and other code repositories, and elsewhere on the Internet (e.g., forums and blogs). Markdown lets us write readable plain text that can rendered as nicely styled text on web pages and other media, with headings, links, and other formatting.
+: A simple, human-readable text language used extensively in {term}`Jupyter Notebook`s, on {term}`GitHub` and other code repositories, and elsewhere on the Internet (e.g., forums and blogs). Markdown lets us write readable plain text that can rendered as nicely styled text on web pages and other media, with headings, links, and other formatting.
 
 merge
 : A specific type of commit that combines changes from two branches.
