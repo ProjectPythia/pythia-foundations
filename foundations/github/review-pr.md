@@ -1,4 +1,4 @@
-# Reviewing pull requests
+# Reviewing Pull Requests
 
 ```{image} ../../images/GitHub-logo.png
 :alt: GitHub Logo

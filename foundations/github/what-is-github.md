@@ -1,4 +1,4 @@
-# What is GitHub?
+# What Is GitHub?
 
 ```{image} ../../images/GitHub-logo.png
 :alt: GitHub Logo

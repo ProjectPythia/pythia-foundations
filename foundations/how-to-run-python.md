@@ -7,7 +7,7 @@
 This section provides an overview of different ways to run Python code, and quickstart guides for:
 
 1.  Choosing a Python platform
-2.  Installing and managing Python with Conda
+2.  Installing and managing Python with conda
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ This section provides an overview of different ways to run Python code, and quic
 
 ---
 
-## Choosing a Python Platform
+## Choosing a Python platform
 
 There is no single official platform for the Python language. Here we provide a brief rundown of 3 popular platforms:
 
@@ -40,7 +40,7 @@ For learners who are familiar with basic [Linux commands](https://cheatography.c
 
 [Learn how to Run Python in the Terminal here.](terminal.md)
 
-### Jupyter Notebooks
+### Jupyter notebooks
 
 We highly encourage the use of Jupyter notebooks: a free, open-source, interactive tool running inside a web browser that allows you to run Python code in "cells." This means that your workflow can alternate between code, output, and even Markdown-formatted explanatory sections that create an easy-to-follow analysis or "computational narrative" from start to finish. Jupyter notebooks are a great option for presentations or learning tools. For these reasons, Jupyter is very popular among scientists. Most lessons in this book will be taught via Jupyter notebooks.
 
@@ -52,11 +52,11 @@ If you code in other languages, you might already have a favorite IDE that will 
 
 _We recommend eventually learning how to develop and run Python code in each of these platforms._
 
-## Installing and managing Python with Conda
+## Installing and managing Python with conda
 
 Conda is an open-source, cross-platform, language-agnostic package manager and environment management system that allows you to quickly install, run, and update packages within your work environment(s). Conda is a vital component of the Python ecosystem. Understanding it is important, regardless of the platform you chose to run your Python code.
 
-[Learn more about Conda here.](conda.md)
+[Learn more about conda here.](conda.md)
 
 ---
 
@@ -64,11 +64,11 @@ Conda is an open-source, cross-platform, language-agnostic package manager and e
 
 Python can be run on many different platforms. You may choose where to run Python based on a number of factors. The tutorials in this book will be formatted as Jupyter Notebooks.
 
-### What's Next?
+### What's next?
 
 - [How to Run Python in the Terminal](terminal.md)
 - [How to Run Python in a Jupyter Session](jupyter.md)
-- [Installing and Managing Python with Conda](conda.md)
+- [Installing and Managing Python with conda](conda.md)
 
 ## Additional resources
 

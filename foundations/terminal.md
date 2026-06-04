@@ -21,17 +21,17 @@ You'd like to learn to run Python in the terminal. Here we will cover:
 
 ## Installing Python in the Terminal
 
-If you are running Python in the terminal, it is best to install Miniforge. You can do that by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
+If you are running Python in the terminal, it is best to install {term}`Miniforge`. You can do that by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
 
 :::{tip}For Windows users
 When [installing Miniforge using the Windows installer](https://conda-forge.org/download/), make sure to check "Create start menu shortcuts (supported packages only)". Then in your start menu or search box, you will find the "Miniforge Prompt", where you will enter commands.
 :::
 
 :::{seealso}
-More details about Conda are provided in a later section ([Installing and Managing Python with Conda](conda.md)). For now, we will introduce its basic functionality.
+More details about conda are provided in a later section ([Installing and Managing Python with conda](conda.md)). For now, we will introduce its basic functionality.
 :::
 
-Then create a Conda environment with Python installed by typing the following into your terminal:
+Then create a {term}`conda` environment with Python installed by typing the following into your terminal:
 
 ```
 $ conda create --name pythia_test_env python
@@ -43,7 +43,7 @@ You can test this by running `python` in the command line.
 
 On Windows, open **Miniforge Prompt**. On a Mac or Linux machine, open **Terminal**.
 
-1. Activate your Conda environment:
+1. Activate your conda environment:
 
    ```
    $ conda activate pythia_test_env
@@ -109,10 +109,10 @@ On Windows, open **Miniforge Prompt**. On a Mac or Linux machine, open **Termina
 
 Running Python in the terminal is a good option if you are familiar with Linux commands or scripting on a supercomputer. It requires the use of a text editor.
 
-### What's Next?
+### What's next?
 
 - [How to Run Python in a Jupyter Session](jupyter.md)
-- [Learn more about Conda here](conda.md)
+- [Learn more about conda here](conda.md)
 
 ## Additional resources
 
