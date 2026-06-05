@@ -19,7 +19,9 @@ Here we will cover:
 | --------------------------------------------------------------------------------------------------------- | ---------- | ----- |
 | [Installing and Running Python](how-to-run-python.md)                                                     | Helpful    |       |
 
-- **Time to learn**: 20 minutes
+:::{tip} Time to learn
+20 minutes
+:::
 
 ---
 
