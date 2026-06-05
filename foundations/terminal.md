@@ -20,7 +20,7 @@ If you're more interested in jumping into {term}`Jupyter Notebook`s, feel free t
 
 ---
 
-## Installing Python with Miniforge: quickstart 
+## Installing Python with Miniforge: quickstart
 
 If you are running Python in the terminal, it is best to install {term}`Miniforge`. You can do that by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
 

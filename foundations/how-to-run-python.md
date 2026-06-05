@@ -4,7 +4,7 @@
 
 ## Overview
 
-This section provides a brief overview of different ways to run Python code, including in the terminal, in a {term}`Jupyter Notebook`, and in an IDE (integrated development environment). 
+This section provides a brief overview of different ways to run Python code, including in the terminal, in a {term}`Jupyter Notebook`, and in an IDE (integrated development environment).
 
 ## Prerequisites
 
