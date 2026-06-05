@@ -3,7 +3,7 @@
 ## Overview
 
 Pythia Foundations is a geoscience-flavored introduction to essential
-tools in the Scientific Python Ecosystem (SPE) and [Pangeo](https://pangeo.io)
+tools in the {term}`scientific Python ecosystem` (SPE) and [Pangeo](https://pangeo.io)
 stack. It covers the foundational knowledge that's needed to get started
 with Python in the computational geosciences, as well as to become an
 effective citizen-practitioner in key open geoscience software ecosystems.
@@ -14,7 +14,7 @@ for the more advanced and domain-specific content in the [Pythia Cookbook Galler
 
 ## What's included
 
-The Scientific Python Ecosystem (SPE) is a collection of
+The {term}`scientific Python ecosystem` is a collection of
 open source Python packages that support analysis, manipulation,
 and visualization of scientific data. While Project Pythia is focused
 on the geoscience communities, the material contained in Pythia
@@ -29,8 +29,8 @@ Prior programming experience is not required.
 Lastly, in addition to the Python language and a number of fundamental
 scientific Python packages, Pythia Foundations covers two topics
 that we believe are essential
-to effectively using the SPE: GitHub, for sharing workflows and
-managing code; and Jupyter Notebooks, the technology by which all
+to effectively using the SPE: {term}`GitHub`, for sharing workflows and
+managing code; and {term}`Jupyter Notebook`s, the technology by which all
 Pythia Foundations material is presented and which is quickly
 becoming a standard format for scientific communication of computational
 results.
@@ -39,8 +39,8 @@ results.
 
 Pythia Foundations is organized into two main sections as seen in
 the sidebar on the left and the schematic below:
-[Foundational Skills](../foundations/overview/),
-and [Core Scientific Python Packages](../core/overview/).
+[Foundational Skills](../foundations/overview.md),
+and [Core Scientific Python Packages](../core/overview.md).
 The first, Foundational Skills, covers essential
 material that all users of Project Pythia are expected to feel
 comfortable with in order to make the most of the rest of the Project
@@ -93,7 +93,7 @@ and even change the example programs. At first the code cells
 have no output, until you execute them by pressing
 {kbd}`Shift`\+{kbd}`Enter`. Complete details on how to interact with
 a live Jupyter notebook are described in [Getting Started with
-Jupyter](https://foundations.projectpythia.org/foundations/getting-started-jupyter).
+Jupyter](../foundations/getting-started-jupyter.ipynb).
 
 ### Interacting with Jupyter Books locally
 
@@ -108,7 +108,7 @@ That was the easy part. Getting the notebook to execute locally may
 take a little more work. The book was created to run in a particular
 Python environment, managed with conda. If you don't have a up-to-date
 version of conda on your machine, you'll want to install one. A brief
-introduction to installing conda is available [here](https://foundations.projectpythia.org/foundations/conda).
+introduction to installing conda is available [here](../foundations/conda.md).
 
 Once you've installed conda you will need to create and activate a conda environment
 that is compatible with Pythia Foundation's notebooks. This
@@ -130,7 +130,7 @@ need to activate _pythia-book-dev_ if
 it is not currently active, for example if you open up a new
 terminal window, or deactivate _pythia-book-dev_ explicitly with
 the `conda` command. Again, more information on conda can be
-found [here](https://foundations.projectpythia.org/foundations/conda).
+found [here](../foundations/conda.md).
 
 Now that your _pythia-book-dev_ environment is activated,
 change your working directory to the
@@ -150,6 +150,6 @@ notebooks, you might want to “clone the site”
 and download all of the notebooks. First, click on the GitHub icon (see the screenshot above)
 to open the Pythia Foundations GitHub repository.
 Then follow the instructions in our Getting Started with GitHub
-[guide](https://foundations.projectpythia.org/foundations/getting-started-github)
+[guide](../foundations/getting-started-github.md)
 for cloning a repository. The steps used above for configuring your
 conda environment should work for this method as well.
