@@ -21,18 +21,18 @@ This short chapter introduces the four main components of the Jupyter ecosystem:
 
 ### Jupyter notebooks
 
-The {term}`Jupyter Notebook` software [@https://doi.org/10.3233/978-1-61499-649-1-87] is an open-source web application that allows you to create and share notebook files (`*.ipynb` files). Jupyter Notebooks contain executable code, LaTeX equations, visualizations (e.g., plots, pictures), and narrative text. The code does not have to just be Python, other languages such as Julia or R are supported as well. 
+The {term}`Jupyter Notebook` software [@https://doi.org/10.3233/978-1-61499-649-1-87] is an open-source web application that allows you to create and share notebook files (`*.ipynb` files). Jupyter Notebooks contain executable code, LaTeX equations, visualizations (e.g., plots, pictures), and narrative text. The code does not have to just be Python, other languages such as Julia or R are supported as well.
 
 Jupyter Notebooks are celebrated for their interactive output that allows movement between code, code output, explanations, and more code - similar to how scientists think and solve problems. Jupyter Notebooks can be thought of as a living, runnable publication and make for a great presentation platform.
 
 ### Jupyter kernels
-Software engines and their environments (e.g., {term}`conda` environments) that execute the code contained in {term}`Jupyter Notebook`s. 
+Software engines and their environments (e.g., {term}`conda` environments) that execute the code contained in {term}`Jupyter Notebook`s.
 
-The kernel is where your Python code is interpreted and the outputs are generated, which may be either on your local computer or a remote host (see below). 
+The kernel is where your Python code is interpreted and the outputs are generated, which may be either on your local computer or a remote host (see below).
 
 ### JupyterLab
 
-A popular web application on which users can create and execute {term}`Jupyter Notebook` files, as well as explore data, install software, etc. 
+A popular web application on which users can create and execute {term}`Jupyter Notebook` files, as well as explore data, install software, etc.
 See the [next section](jupyterlab.ipynb) for more guidance on getting started with JupyterLab
 
 ### JupyterHub
