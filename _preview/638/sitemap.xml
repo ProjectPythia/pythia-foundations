@@ -38,6 +38,9 @@
     <loc>http://localhost:3000/foundations/getting-started-jupyter</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/foundations/jupyter-components</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/foundations/jupyterlab</loc>
   </url>
   <url>
