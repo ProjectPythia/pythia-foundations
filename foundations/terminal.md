@@ -4,22 +4,23 @@
 
 ## Overview
 
-You'd like to learn to run Python in the terminal. Here we will cover:
+You'd like to learn to run Python in the terminal. You also want to jump right in with some installation quick-start guidance before reading through our detailed chapter on [Installing and Managing Python with Conda](conda.md). This chapter is for you!
 
-1.  Installing Python in the terminal
-2.  Running Python code in the terminal
+If you're more interested in jumping into {term}`Jupyter Notebook`s, feel free to skip ahead to the [next chapter](jupyter.md).
 
 ## Prerequisites
 
 | Concepts                                                                                                  | Importance | Notes |
 | --------------------------------------------------------------------------------------------------------- | ---------- | ----- |
-| [Installing and Running Python](how-to-run-python.md) | Helpful    |       |
+| [Choosing a Python Platform](how-to-run-python.md) | Helpful    |       |
 
-- **Time to learn**: 20 minutes
+:::{tip} Time to learn
+20 minutes
+:::
 
 ---
 
-## Installing Python in the Terminal
+## Installing Python with Miniforge: quickstart 
 
 If you are running Python in the terminal, it is best to install {term}`Miniforge`. You can do that by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
 
@@ -34,7 +35,7 @@ More details about conda are provided in a later section ([Installing and Managi
 Then create a {term}`conda` environment with Python installed by typing the following into your terminal:
 
 ```
-$ conda create --name pythia_test_env python
+conda create --name pythia_test_env python
 ```
 
 You can test this by running `python` in the command line.
@@ -46,25 +47,25 @@ On Windows, open **Miniforge Prompt**. On a Mac or Linux machine, open **Termina
 1. Activate your conda environment:
 
    ```
-   $ conda activate pythia_test_env
+   conda activate pythia_test_env
    ```
 
 2. Create a directory to store our work. Let's call it `pythia_test`.
 
    ```
-   $ mkdir pythia_test
+   mkdir pythia_test
    ```
 
 3. Go into the directory:
 
    ```
-   $ cd pythia_test
+   cd pythia_test
    ```
 
 4. Create a new Python file:
 
    ```
-   $ touch mysci.py
+   touch mysci.py
    ```
    On Windows:
 
@@ -75,7 +76,7 @@ On Windows, open **Miniforge Prompt**. On a Mac or Linux machine, open **Termina
 5. And now that you've set up our workspace, edit the `mysci.py` script using your favorite text editor (e.g., [nano](wiki:GNU_nano)):
 
    ```
-   $ nano mysci.py
+   nano mysci.py
    ```
     On Windows, a quick option is to edit on Notepad:
 
@@ -98,7 +99,7 @@ On Windows, open **Miniforge Prompt**. On a Mac or Linux machine, open **Termina
 8. In the terminal, execute your script:
 
    ```
-   $ python mysci.py
+   python mysci.py
    ```
 
 **Congratulations!** You have just set up your first Python environment and run your first Python script in the terminal.

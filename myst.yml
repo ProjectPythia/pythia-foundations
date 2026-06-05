@@ -71,10 +71,9 @@ project:
           children:
             - file: foundations/quickstart.ipynb
             - file: foundations/how-to-run-python.md
-              children:
-                - file: foundations/terminal.md
-                - file: foundations/jupyter.md
-                - file: foundations/conda.md
+            - file: foundations/terminal.md
+            - file: foundations/jupyter.md
+            - file: foundations/conda.md
         - file: foundations/getting-started-jupyter.md
           children:
             - file: foundations/jupyter-components.md
