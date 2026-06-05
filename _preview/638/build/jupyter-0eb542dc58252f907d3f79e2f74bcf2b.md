@@ -25,7 +25,7 @@ You'd like to learn to run Python in a Jupyter session. Here we will cover:
 ## Installing Python in Jupyter
 
 As mentioned in the [Overview](overview.md), [Jupyter](https://jupyter.org/) is a set of tools for interactive computing. Instead of [writing Python (`.py`) files and running them in the terminal](terminal.md), we will now write code in a {term}`Jupyter Notebook` using the {term}`JupyterLab` interface.
-To run a Jupyter session, you will need to install some necessary packages into your {term}`Conda` environment.
+To run a Jupyter session, you will need to install some necessary packages into your {term}`conda` environment.
 
 :::{seealso}
 More details about {term}`JupyterLab` will be provided in a later section ([JupyterLab](jupyterlab.ipynb)). For now, we will introduce its basic functionality.
@@ -114,7 +114,7 @@ Alternatively you can simultaneously shutdown and exit the Jupyter session by ty
 
 ## Summary
 
-{term}`Jupyter Notebook`s are a free, open-source, interactive tool running inside a web browser that allows you to run Python code in "cells." To run a Jupyter session you will need to install `jupyterlab` into your Conda environment. Jupyter sessions need to be shutdown, not just exited.
+{term}`Jupyter Notebook`s are a free, open-source, interactive tool running inside a web browser that allows you to run Python code in "cells." To run a Jupyter session you will need to install `jupyterlab` into your {term}`conda` environment. Jupyter sessions need to be shutdown, not just exited.
 
 ### What's next?
 
