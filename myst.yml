@@ -75,8 +75,9 @@ project:
                 - file: foundations/terminal.md
                 - file: foundations/jupyter.md
                 - file: foundations/conda.md
-        - file: foundations/getting-started-jupyter.ipynb
+        - file: foundations/getting-started-jupyter.md
           children:
+            - file: foundations/jupyter-components.md
             - file: foundations/jupyterlab.ipynb
             - file: foundations/jupyterlab-notebooks.ipynb
             - file: foundations/markdown.md

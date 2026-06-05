@@ -10,7 +10,7 @@ Familiarizing yourself with these topics first will allow you to get the most ou
 
 This section starts with a discussion about [why we use the Python language](why-python). From there, our [Zero to Python quickstart guide](quickstart) gives an interactive tour of Python for those migrating from other programming languages, followed by a detailed [installation guide](how-to-run-python) showcasing some different ways to install the necessary software and run Python code on various platforms.
 
-We then turn our attention to the [Jupyter ecosystem](getting-started-jupyter), a set of tools for interactive and reproducible computing that is very widely used in the geosciences. This includes a tutorial on running and editing notebooks in [JupyterLab](jupyterlab), which is our recommended way to interact with most of the content in Pythia Foundations and the [Pythia Cookbooks](https://cookbooks.projectpythia.org).
+We then turn our attention to the [Jupyter ecosystem](getting-started-jupyter), a set of tools for interactive and reproducible computing that is very widely used in the geosciences. This includes a tutorial on running and editing [notebooks in JupyterLab](jupyterlab-notebooks.ipynb), which is our recommended way to interact with most of the content in Pythia Foundations and the [Pythia Cookbooks](https://cookbooks.projectpythia.org).
 
 Finally we offer a comprehensive set of [tutorials on git and GitHub](getting-started-github), including how to get started with a [free GitHub account](github/what-is-github) (and why you would want to), how to make use of GitHub's collaboration features like [Issues and Discussions](github/github-issues), an introduction to
 [version control with git](github/basic-git), and more!

@@ -120,7 +120,7 @@ Alternatively you can simultaneously shutdown and exit the Jupyter session by ty
 
 - [How to Run Python in the Terminal](terminal.md)
 - [Learn more about conda here](conda.md)
-- [Getting Started with Jupyter](getting-started-jupyter.ipynb)
+- [Getting Started with Jupyter](getting-started-jupyter.md)
 
 ## Additional resources
 

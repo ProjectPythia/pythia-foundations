@@ -92,8 +92,7 @@ notebook that you can interact with. You’ll be able to execute code
 and even change the example programs. At first the code cells
 have no output, until you execute them by pressing
 {kbd}`Shift`\+{kbd}`Enter`. Complete details on how to interact with
-a live Jupyter notebook are described in [Getting Started with
-Jupyter](../foundations/getting-started-jupyter.ipynb).
+a live Jupyter notebook are described in [Running Notebooks in JupyterLab](../foundations/jupyterlab-notebooks.ipynb).
 
 ### Interacting with Jupyter Books locally
 
