@@ -2,6 +2,8 @@
 
 ## A community learning resource for Python-based computing in the geosciences
 
+Hello World!
+
 :::{image} images/pretty-earth.png
 :alt: Pretty Earth
 :width: 600px
