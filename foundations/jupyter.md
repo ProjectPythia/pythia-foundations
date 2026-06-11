@@ -8,7 +8,7 @@ You'd like to learn to run Python in a {term}`Jupyter Notebook`, and you want to
 
 Here we will show you how to install and launch a {term}`JupyterLab` session on your computer, create and edit your first notebook with Python code, then save your work and exit.
 
-After this quickstart guide, we'll give more details in [Installing and Managing Python with Conda](conda.md) and our entire section on [Getting Started with Jupyter](getting-started-jupyter.md). 
+After this quickstart guide, we'll give more details in [Installing and Managing Python with Conda](conda.md) and our entire section on [Getting Started with Jupyter](getting-started-jupyter.md).
 
 ## Prerequisites
 
