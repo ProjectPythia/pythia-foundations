@@ -53,7 +53,7 @@ jupyter lab
 A new window should open automatically in your default browser. You can change the browser when launching from the terminal with (for example):
 
 ```
-jupyter lab —browser=chrome
+jupyter lab --browser google-chrome
 ```
 
 ## Running Python in Jupyter
