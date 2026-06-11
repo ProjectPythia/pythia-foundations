@@ -12,7 +12,7 @@ This section provides a brief overview of different ways to run Python code, inc
 | -------------------------------------------------------------------------------- | ---------- | ----- |
 | [Why Python?](why-python.md) | Helpful    |       |
 
-:::{tip} Time to learn
+:::{tip icon=false} ⏱️ Time to learn
 5 minutes
 :::
 ---

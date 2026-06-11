@@ -14,7 +14,7 @@ Here we will show you how to install and launch a {term}`JupyterLab` session on 
 | --------------------------------------------------------------------------------------------------------- | ---------- | ----- |
 | [Choosing a Python Platform](how-to-run-python.md) | Helpful    |       |
 
-:::{tip} Time to learn
+:::{tip icon=false} ⏱️ Time to learn
 20 minutes
 :::
 

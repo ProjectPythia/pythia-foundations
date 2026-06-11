@@ -12,7 +12,7 @@ This short chapter introduces the four main components of the Jupyter ecosystem:
 | --- | --- | --- |
 | [Installing and Running Python: Python in Jupyter](jupyter.md) | Helpful | |
 
-:::{tip} Time to learn
+:::{tip icon=false} ⏱️ Time to learn
 10 minutes
 :::
 ---
