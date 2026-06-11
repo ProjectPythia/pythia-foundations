@@ -4,9 +4,9 @@
 
 ## Overview
 
-You'd like to learn to run Python in the terminal. You also want to jump right in with some installation quick-start guidance before reading through our detailed chapter on [Installing and Managing Python with Conda](conda.md). This chapter is for you!
+You'd like to learn to run Python in the terminal, and you want to get up and running quickly. This chapter is for you!
 
-If you're more interested in jumping into {term}`Jupyter Notebook`s, feel free to skip ahead to the [next chapter](jupyter.md).
+If you're more interested in jumping into {term}`Jupyter Notebook`s, feel free to skip ahead to the [next chapter](jupyter.md). We also have a detailed chapter on [Installing and Managing Python with Conda](conda.md) coming up.
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ If you're more interested in jumping into {term}`Jupyter Notebook`s, feel free t
 | --------------------------------------------------------------------------------------------------------- | ---------- | ----- |
 | [Choosing a Python Platform](how-to-run-python.md) | Helpful    |       |
 
-:::{tip} Time to learn
+:::{tip icon=false} ⏱️ Time to learn
 20 minutes
 :::
 
