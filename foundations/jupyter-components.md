@@ -21,7 +21,7 @@ This short chapter introduces the four main components of the Jupyter ecosystem:
 
 ### Jupyter notebooks
 
-The {term}`Jupyter Notebook` software [@https://doi.org/10.3233/978-1-61499-649-1-87] is an open-source web application that allows you to create and share notebook files (`*.ipynb` files). Jupyter Notebooks contain executable code, LaTeX equations, visualizations (e.g., plots, pictures), and narrative text. The code does not have to just be Python, other languages such as Julia or R are supported as well.
+Tbe {term}`Jupyter Notebook` [@https://doi.org/10.3233/978-1-61499-649-1-87] is an open-source format for computational narrative documents (`*.ipynb` files). Jupyter Notebooks contain executable code, LaTeX equations, visualizations (e.g., plots, pictures), and narrative text. The code is not limited to just Python, other languages such as Julia or R are supported as well.
 
 Jupyter Notebooks are celebrated for their interactive output that allows movement between code, code output, explanations, and more code - similar to how scientists think and solve problems. Jupyter Notebooks can be thought of as a living, runnable publication and make for a great presentation platform.
 
