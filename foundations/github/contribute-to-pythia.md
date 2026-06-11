@@ -33,7 +33,7 @@ Now that you have become more familiar with how to use Git and GitHub, you might
 
 ## Suggest a change
 
-One simple way to contribute is to fix a typo or suggest a change to one of the tutorials. For example, in the [Computations and Masks with Xarray tutorial](https://foundations.projectpythia.org/core/xarray/computation-masking), let's suggest a clarification that the sea surface temperature is called `tos` in the dataset we are using.
+One simple way to contribute is to fix a typo or suggest a change to one of the tutorials. For example, in the [Computations and Masks with Xarray tutorial](../../core/xarray/computation-masking), let's suggest a clarification that the sea surface temperature is called `tos` in the dataset we are using.
 
 ```{image} ../../images/GitHubContrXarray.png
 :alt: Computations and Masks with Xarray
@@ -84,7 +84,7 @@ Now, going to our remote repo on GitHub, forked from `pythia-foundations`, we se
 :alt: GitHub Forked Repo
 ```
 
-Project Pythia has an automated reviewer system: when a PR is created, two members of the organization will be randomly chosen to review it. If your PR is not immediately ready to be approved and merged, open it as a draft to delay the review process. As shown in this [Git Branches section](https://foundations.projectpythia.org/foundations/github/git-branches#merging-branches), the "Draft pull request" button is found using the arrow on the "Create pull request" button.
+Project Pythia has an automated reviewer system: when a PR is created, two members of the organization will be randomly chosen to review it. If your PR is not immediately ready to be approved and merged, open it as a draft to delay the review process. As shown in this [Git branches section](git-branches.md#merging-branches), the "Draft pull request" button is found using the arrow on the "Create pull request" button.
 
 Let's add the `content` tag and open this one as a draft for now:
 

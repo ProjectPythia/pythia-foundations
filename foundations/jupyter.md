@@ -4,56 +4,58 @@
 
 ## Overview
 
-You'd like to learn to run Python in a Jupyter session. Here we will cover:
+You'd like to learn to run Python in a {term}`Jupyter Notebook`, and you want to get up and running quickly. This chapter is for you!
 
-1.  Installing Python in Jupyter
-2.  Running Python code in Jupyter
-3.  Saving your notebook and exiting
+Here we will show you how to install and launch a {term}`JupyterLab` session on your computer, create and edit your first notebook with Python code, then save your work and exit.
+
+After this quickstart guide, we'll give more details in [Installing and Managing Python with Conda](conda.md) and our entire section on [Getting Started with Jupyter](getting-started-jupyter.md).
 
 ## Prerequisites
 
 | Concepts                                                                                                  | Importance | Notes |
 | --------------------------------------------------------------------------------------------------------- | ---------- | ----- |
-| [Installing and Running Python](https://foundations.projectpythia.org/foundations/how-to-run-python) | Helpful    |       |
+| [Choosing a Python Platform](how-to-run-python.md) | Helpful    |       |
 
-- **Time to learn**: 20 minutes
+:::{tip icon=false} ⏱️ Time to learn
+20 minutes
+:::
 
 ---
 
 (installing-python-in-jupyter)=
 
-## Installing Python in Jupyter
+## Installing Python with Jupyter: quickstart
 
-As mentioned in the [Overview](overview.md), [Jupyter](https://jupyter.org/) is a set of tools for interactive computing. Instead of [writing Python (`.py`) files and running them in the terminal](terminal.md), we will now write code in a Jupyter Notebook using the JupyterLab interface.
+As mentioned in the [Pythia Foundations Overview](overview.md), [Jupyter](https://jupyter.org/) is a set of tools for interactive computing. Instead of [writing Python (`.py`) files and running them in the terminal](terminal.md), we will now write code in a {term}`Jupyter Notebook` using the {term}`JupyterLab` interface.
 To run a Jupyter session, you will need to install some necessary packages into your {term}`conda` environment.
 
 :::{seealso}
-More details about JupyterLab will be provided in a later section ([JupyterLab](jupyterlab.ipynb)). For now, we will introduce its basic functionality.
+We'll give many more details about the Jupyter ecosystem of tools, including {term}`JupyterLab` and {term}`Jupyter Notebook`s, in [Getting Started with Jupyter](getting-started-jupyter.md). For now, we will introduce its basic functionality.
 :::
 
-Install Miniforge by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
+Install Miniforge by following the [instructions for your machine](https://github.com/conda-forge/miniforge). If you already did this while following through [Python in the Terminal](terminal.md), you are all set.
 
 :::{tip}For Windows users
 When [installing Miniforge using the Windows installer](https://conda-forge.org/download/), make sure to check "Create start menu shortcuts (supported packages only)". Then in your start menu or search box, you will find the "Miniforge Prompt", where you will enter commands.
 :::
 
-Next, create a {term}`conda` environment with {term}`Jupyter Lab` installed. In the terminal, type:
+Next, create a {term}`conda` environment with {term}`JupyterLab` installed. In the terminal, type:
 
 ```
-$ conda create --name pythia_foundations_env jupyterlab
+conda create --name pythia_foundations_env jupyterlab
 ```
 
-Test that you have installed everything correctly by first activating your environment and then launching a {term}`Jupyter Lab` session:
+Test that you have installed everything correctly by first activating your environment and then launching a {term}`JupyterLab` session:
 
 ```
-$ conda activate pythia_foundations_env
-$ jupyter lab
+conda activate pythia_foundations_env
+jupyter lab
 ```
 
 A new window should open automatically in your default browser. You can change the browser when launching from the terminal with (for example):
 
 ```
-jupyter lab —browser=chrome
+jupyter lab --browser google-chrome
 ```
 
 ## Running Python in Jupyter
@@ -70,7 +72,7 @@ jupyter lab —browser=chrome
 
    This will open a new launcher window where you can select a Python kernel under the "Notebooks" heading for your project. _You should see "Python 3" as in the screenshot above._ Depending on the details of your system, you might see some additional buttons with different kernels.
 
-   Selecting a kernel will open a Jupyter notebook instance and add an untitled file to the left sidebar navigator, which you can then rename to `mysci.ipynb`.
+   Selecting a kernel will open a {term}`Jupyter Notebook` instance and add an untitled file to the left sidebar navigator, which you can then rename to `mysci.ipynb`.
 
    Select "Python 3" to use the Python version you just installed in the `pythia_foundations_env` conda environment.
 
@@ -114,13 +116,13 @@ Alternatively you can simultaneously shutdown and exit the Jupyter session by ty
 
 ## Summary
 
-Jupyter notebooks are a free, open-source, interactive tool running inside a web browser that allows you to run Python code in "cells." To run a Jupyter session you will need to install `jupyterlab` into your conda environment. Jupyter sessions need to be shutdown, not just exited.
+{term}`Jupyter Notebook`s are a free, open-source, interactive tool running inside a web browser that allows you to run Python code in "cells." To run a Jupyter session you will need to install `jupyterlab` into your conda environment. Jupyter sessions need to be shutdown, not just exited.
 
 ### What's next?
 
 - [How to Run Python in the Terminal](terminal.md)
 - [Learn more about conda here](conda.md)
-- [Getting Started with Jupyter](getting-started-jupyter)
+- [Getting Started with Jupyter](getting-started-jupyter.md)
 
 ## Additional resources
 

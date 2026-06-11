@@ -6,12 +6,12 @@ description: Glossary of terms used in Pythia Foundations.
 :::{glossary}
 
 [Binder](https://jupyter.org/binder)
-: An open-source service that allows users to create sharable, interactive computing environments from {term}`Jupyter Notebooks` and other repositories. Binder can reproduce a computational environment directly from a {term}`GitHub` repository, providing a seamless way to share and interact with code and data.
+: An open-source service that allows users to create sharable, interactive computing environments from {term}`Jupyter Notebook`s and other repositories. Binder can reproduce a computational environment directly from a {term}`GitHub` repository, providing a seamless way to share and interact with code and data.
 
 : The public service to run Binder is on <https://mybinder.org>, which is running {term}`BinderHub`. The Binder links on most Project Pythia pages point to <https://binder.projectpythia.org>, which is a Pythia-specific implementation of {term}`BinderHub` running on the NSF-supported [Jetstream2](https://jetstream-cloud.org/) cloud computing service.
 
 BinderHub
-: The underlying technology and infrastructure that powers {term}`Binder`. BinderHub deploys and manages the interactive computing environments for {term}`Jupyter Notebooks`, ensuring that users can access and share reproducible computational work.
+: The underlying technology and infrastructure that powers {term}`Binder`. BinderHub deploys and manages the interactive computing environments for {term}`Jupyter Notebook`s, ensuring that users can access and share reproducible computational work.
 
 branch
 : A separate workspace to make and track changes without impacting other branches of the code {term}`repository`.
@@ -68,19 +68,19 @@ GitHub
 issue
 : A common feature of collaborative development platforms such as {term}`GitHub` used to track bugs, request features, and manage work related for a specific repository.
 
-Jupyter Notebooks
-: The Jupyter Notebook software is an open-source web application that allows you to create and share Jupyter Notebooks (`*.ipynb` files). Jupyter Notebooks contain executable code, LaTeX equations, visualizations (e.g., plots, pictures), and narrative text. The code does not have to just be Python, other languages such as Julia or R are supported as well. Jupyter Notebooks are celebrated for their interactive output that allows movement between code, code output, explanations, and more code - similar to how scientists think and solve problems. Jupyter Notebooks can be thought of as a living, runnable publication and make for a great presentation platform. See also {term}`Jupyter Kernels`, {term}`Jupyter Lab`, {term}`Jupyter Hub`, {term}`Binder`, and {term}`BinderHub`.
+Jupyter Notebook
+: Jupyter Notebooks (`*.ipynb` files) are computational narrative documents that can contain executable code, LaTeX equations, visualizations (e.g., plots, pictures), and richly formatted text. The code is not limited to just Python, other languages such as Julia or R are supported as well. Jupyter Notebooks are celebrated for their interactive output that allows movement between code, code output, explanations, and more code — similar to how scientists think and solve problems. Jupyter Notebooks can be thought of as a living, runnable publication and make for a great presentation platform. See also {term}`Jupyter Kernels`, {term}`JupyterLab`, {term}`JupyterHub`, {term}`Binder`, and {term}`BinderHub`.
 
 Jupyter Kernels
-: Software engines and their environments (e.g., conda environments) that execute the code contained in {term}`Jupyter Notebooks`.
+: Software engines and their environments (e.g., conda environments) that execute the code contained in a {term}`Jupyter Notebook`.
 
-Jupyter Lab
-: A popular web application on which users can create and write their {term}`Jupyter Notebooks`, as well as explore data, install software, etc. You can find more information on running Jupyter Lab [here](https://jupyter.org/install).
+JupyterLab
+: A popular web application on which users can create and execute {term}`Jupyter Notebook` files, as well as explore data, install software, etc. You can find more information on running JupyterLab [here](https://jupyter.org/install).
 
 : See @installing-python-in-jupyter for more.
 
-Jupyter Hub
-: A web-based platform that authenticates users and launches {term}`Jupyter Lab` applications for users on remote systems.
+JupyterHub
+: A web-based platform that authenticates users and launches {term}`JupyterLab` applications for users on remote systems.
 
 Linux
 : A free and open-souce operating system based on [Unix](wiki:Unix).
@@ -89,7 +89,7 @@ local
 : Refering to something, such as a {term}`Git` repository, on your computer rather than a remote server.
 
 Markdown
-: A simple, human-readable text language used extensively in {term}`Jupyter Notebooks`, on {term}`GitHub` and other code repositories, and elsewhere on the Internet (e.g., forums and blogs). Markdown lets us write readable plain text that can rendered as nicely styled text on web pages and other media, with headings, links, and other formatting.
+: A simple, human-readable text language used extensively in {term}`Jupyter Notebook`s, on {term}`GitHub` and other code repositories, and elsewhere on the Internet (e.g., forums and blogs). Markdown lets us write readable plain text that can rendered as nicely styled text on web pages and other media, with headings, links, and other formatting.
 
 merge
 : A specific type of commit that combines changes from two branches.
