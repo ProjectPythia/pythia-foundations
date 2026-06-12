@@ -20,4 +20,4 @@ You should have a basic familiarity with [Numpy arrays](numpy.md) prior to worki
 3 hours
 :::
 
-[xarray home]: http://xarray.pydata.org/en/stable/
+[xarray home]: https://docs.xarray.dev/en/stable/
