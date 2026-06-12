@@ -74,7 +74,7 @@ greatly simplifies the code development process (read: less lines of code).
 
 One of the limitations of Pandas
 is that it’s only able to handle one- or two-dimensional (i.e. tabular) data arrays.
-The [Xarray](http://xarray.pydata.org/) library was therefore created
+The [Xarray](https://docs.xarray.dev/) library was therefore created
 to extend the labelled array concept to N-dimensional arrays:
 
 ![Xarray Dataset schematic](https://github.com/pydata/xarray/blob/5f670a74392e3b625dba283c75c6dc2a43be808b/doc/_static/dataset-diagram.png)
