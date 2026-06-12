@@ -22,3 +22,7 @@ We cover the following topics:
 - [Reviewing pull requests](github/review-pr) on GitHub
 - [Git workflows](github/git-workflows), recommended practices for collaborative work
 - [Contributing](github/contribute-to-pythia) to Project Pythia via GitHub
+
+:::{note icon=false} ⏱️ Time to learn (cumulative)
+6 hours
+:::

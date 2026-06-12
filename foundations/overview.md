@@ -26,3 +26,7 @@ The ultimate goal of the [GitHub section of the book](getting-started-github) is
 - [Getting started with Python](getting-started-python): A quickstart Python example, followed by detailed tutorials on how to install and run Python on your own system.
 - [Getting started with Jupyter](getting-started-jupyter): All about the Jupyter ecosystem, which provides tools and environments for interactive, reproducible computing with Python.
 - [Getting started with GitHub](getting-started-github): Learn about the collaboration tools (GitHub) and version control software (Git) that enable the open-source community.
+
+:::{note icon=false} ⏱️ Time to learn (cumulative)
+10 hours
+:::

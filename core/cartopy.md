@@ -18,3 +18,7 @@ From the [Cartopy website](https://cartopy.readthedocs.io):
 Before working through the Cartopy notebooks in this section of Pythia Foundations, you should first have a basic knowledge of [Matplotlib](matplotlib.md).
 
 In addition, please note that the geographic-features library used by Cartopy makes use of shapefiles directly served by [Natural Earth](https://www.naturalearthdata.com/).
+
+:::{note icon=false} ⏱️ Time to learn (cumulative)
+40 minutes
+:::

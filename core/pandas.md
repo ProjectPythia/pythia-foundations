@@ -10,3 +10,7 @@ From the [official documentation](https://pandas.pydata.org/), Pandas {cite:p}`r
 Pandas is a very powerful library for working with tabular data (e.g., spreadsheets, comma-separated-value files, or database printouts; all of these are quite common for geoscientific data). It allows us to use labels for our data; this, in turn, allows us to write expressive and robust code to manipulate the data.
 
 Key features of Pandas are the abilities to read in tabular data and to slice and dice data, as well as exploratory analysis tools native to the library.
+
+:::{note icon=false} ⏱️ Time to learn (cumulative)
+1 hour
+:::

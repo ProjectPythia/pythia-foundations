@@ -27,3 +27,7 @@ Currently, Pythia Foundations provides a basic introduction to Matplotlib, as we
 - [Colormaps](#colormap-overview)
 - [Contour plots](#contour-and-filled-contour-plots)
 - [Customizing layouts](#mosaic-subplots)
+
+:::{note icon=false} ⏱️ Time to learn (cumulative)
+2 hours
+:::

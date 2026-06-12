@@ -6,6 +6,14 @@ You've made it to the **Core Packages** section of the book!
 
 As you might know by now that Python is a programming language. To make your job easier, developers of this programming language provide users like you with libraries (or packages). Core libraries will help you with fundamental numerical functions, and high-level libraries will help you efficiently analyze and visualize your data. Some of these libraries are used all across the Python community, while others are domain-specific. Read below to learn more about core and high-level libraries, and domain-specific libraries of the geoscience community. We suggest that new users start with the [Foundational Skills](../foundations/overview) section in order to get the most out of the tutorials below.
 
+:::{tip icon=false} ⏱️ Time to learn (this page)
+20 minutes
+:::
+
+:::{note icon=false} ⏱️ Time to learn (cumulative)
+11 hours
+:::
+
 ## Core libraries
 
 Most geoscience data analysis involves working with numerical arrays.
