@@ -20,7 +20,9 @@
 | [GitHub Issues and Discussions](github-issues.md)             | Recommended |                              |
 | [Unix shell](https://swcarpentry.github.io/shell-novice/)     | Helpful     | Or equivalent                |
 
-- **Time to learn**: 30 minutes
+:::{tip icon=false} ⏱️ Time to learn
+30 minutes
+:::
 
 ---
 

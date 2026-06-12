@@ -29,7 +29,9 @@ Git "branches" are an important component of many Git and GitHub workflows. If y
 | [Configuring your GitHub account](github-setup-advanced.md)   | Recommended |                              |
 | [Basic version control with Git](basic-git.md)                | Necessary   |                              |
 
-- **Time to learn**: 30 minutes
+:::{tip icon=false} ⏱️ Time to learn
+30 minutes
+:::
 
 ---
 

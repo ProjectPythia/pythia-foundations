@@ -18,7 +18,9 @@
 | [What is GitHub?](what-is-github.md)   | Necessary  |       |
 | [GitHub repositories](github-repos.md) | Necessary  |       |
 
-- **Time to learn**: 5 minutes
+:::{tip icon=false} ⏱️ Time to learn
+5 minutes
+:::
 
 ---
 

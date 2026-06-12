@@ -22,7 +22,9 @@
 | [Cloning and forking a repository](github-cloning-forking.md) | Recommended |                              |
 | [Configuring your GitHub account](github-setup-advanced.md)   | Recommended |                              |
 
-- **Time to learn**: 45 minutes
+:::{tip icon=false} ⏱️ Time to learn
+45 minutes
+:::
 
 ---
 

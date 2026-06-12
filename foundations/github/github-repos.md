@@ -15,7 +15,9 @@
 | -----------------------------------------| ---------- | ----- |
 | [What is GitHub?](what-is-github.md)     | Necessary  |       |
 
-- **Time to learn**: 15 minutes
+:::{tip icon=false} ⏱️ Time to learn
+15 minutes
+:::
 
 ---
 

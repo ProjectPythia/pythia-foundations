@@ -26,7 +26,9 @@ A workflow is a series of activities or tasks that must be completed sequentiall
 | [Pull requests](github-pull-request.md)          | Necessary   |       |
 | [Reviewing pull requests](review-pr.md)          | Recommended |       |
 
-- **Time to learn**: 60 minutes
+:::{tip icon=false} ⏱️ Time to learn
+60 minutes
+:::
 
 ---
 

@@ -29,7 +29,9 @@ This tutorial covers the following topics:
 | [Git branches](git-branches.md)                  | Necessary   |       |
 | [Pull requests](github-pull-request.md)          | Necessary   |       |
 
-- **Time to learn**: 30 minutes
+:::{tip icon=false} ⏱️ Time to learn
+30 minutes
+:::
 
 ---
 
