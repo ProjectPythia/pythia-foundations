@@ -20,3 +20,7 @@ In [NumPy Basics](./numpy/numpy-basics), you will get an introduction to NumPy a
 [Intermediate NumPy](./numpy/intermediate-numpy) covers additional concepts related to indexing and slicing multidimensional arrays,
 and [NumPy Broadcasting](./numpy/numpy-broadcasting) introduces the way NumPy treats arithmetic on arrays of different
 shapes, which can help make your code more efficient by avoiding loops.
+
+:::{note icon=false} ⏱️ Time to learn (cumulative)
+1 hour 30 minutes
+:::

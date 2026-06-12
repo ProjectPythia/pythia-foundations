@@ -25,7 +25,9 @@
 | [Reviewing pull requests](review-pr.md)                        | Recommended |       |
 | [Git workflows](git-workflows.md)                              | Necessary   |       |
 
-- **Time to learn**: 30 minutes
+:::{tip icon=false} ⏱️ Time to learn
+30 minutes
+:::
 
 ---
 

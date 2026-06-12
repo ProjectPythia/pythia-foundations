@@ -19,7 +19,9 @@
 | [Issues and Discussions](github-issues.md)                    | Recommended |                              |
 | [Cloning and Forking a Repository](github-cloning-forking.md) | Recommended |                              |
 
-- **Time to learn**: 35 minutes
+:::{tip icon=false} ⏱️ Time to learn
+35 minutes
+:::
 
 ---
 

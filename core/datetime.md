@@ -8,3 +8,7 @@ Other time libraries used in the geosciences include:
 - [cftime library](https://unidata.github.io/cftime/) (for dealing with dates and times in non-standard calendars)
 
 The Python packages that are commonly used for timeseries data in the geosciences such as [Pandas](pandas.md) and [Xarray](xarray.md) leverage these libraries.
+
+:::{note icon=false} ⏱️ Time to learn (cumulative)
+40 minutes
+:::

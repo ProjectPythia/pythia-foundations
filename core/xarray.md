@@ -16,4 +16,8 @@ From the [Xarray website][xarray home]:
 
 You should have a basic familiarity with [Numpy arrays](numpy.md) prior to working through the Xarray notebooks presented here.
 
+:::{note icon=false} ⏱️ Time to learn (cumulative)
+3 hours
+:::
+
 [xarray home]: http://xarray.pydata.org/en/stable/

@@ -1,5 +1,10 @@
 # How to Use This Book
 
+
+:::{tip icon=false} ⏱️ Time to learn
+20 minutes
+:::
+
 ## Overview
 
 Pythia Foundations is a geoscience-flavored introduction to essential
@@ -51,6 +56,19 @@ building blocks for many of the more geoscience focused components
 of the Scientific Python Ecosystem.
 
 ![Foundations Infographic](../images/ProjectPythia_Foundations_Infographic_v4.jpg)
+
+## _Time to learn_ guidance
+
+Each individual chapter includes a time-to-learn estimate in a green callout box near the top of the page.
+These typically range from 10 minutes up to one hour per page.
+
+We also include cumulative learning times for each section on its overview page in a blue box. **For the entire book**, we estimate a total learning time of:
+
+:::{note icon=false} ⏱️ Time to learn (cumulative)
+22 hours
+:::
+
+These are meant to be helpful estimates for planning purposes but are not based on any rigorous data. Your mileage may vary.
 
 ## Running Pythia Foundations examples
 

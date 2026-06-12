@@ -8,6 +8,10 @@ Python can be compared to other high-level, interpreted, object-oriented languag
 
 Want to know what these terms mean for you and your work? Read on!
 
+:::{tip icon=false} ⏱️ Time to learn
+10 minutes
+:::
+
 ## High-level languages
 
 Other high-level languages include [MATLAB](wiki:MATLAB), [IDL](wiki:IDL_(programming_language)), and {term}`NCL`. The advantage of high-level languages is that they provide built-in functions, data structures, and other utilities that are commonly used, which means it takes less code to get real work done. The disadvantage of high-level languages is that they tend to obscure the low-level considerations such as memory use, how many floating-point operations are happening, and other information related to performance. [C](wiki:C_(programming_language)), [C++](wiki:C%2B%2B), and [Fortran](wiki:Fortran) are all examples of lower-level languages. The "higher" the level of language, the more computing fundamentals are abstracted.

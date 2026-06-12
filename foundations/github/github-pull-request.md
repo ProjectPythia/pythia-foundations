@@ -25,7 +25,9 @@ A pull request, aka a "merge request," is an event that occurs when a project co
 | [GitHub Issues and Discussions](github-issues.md)| Recommended |       |
 | [Git branches](git-branches.md)                  | Necessary   |       |
 
-- **Time to learn**: 60 minutes
+:::{tip icon=false} ⏱️ Time to learn
+60 minutes
+:::
 
 ---
 
