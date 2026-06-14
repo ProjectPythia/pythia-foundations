@@ -7,12 +7,9 @@
 
 ## Overview
 
-1.  What is GitHub?
-1.  No experience necessary!
-1.  Free and open-source software (FOSS)
-1.  Version control systems (VCS)
-1.  GitHub = FOSS + VCS + Web
-1.  Register for a free GitHub account
+If you're new to GitHub, start here!
+
+In this chapter we will first address the question "What is GitHub?", and then take a dive through some terminology around Free and open-source software (FOSS) and Version control systems (VCS). At the end of the chapter we'll nudge you to create you free GitHub account if you haven't done so already.
 
 ## Prerequisites
 

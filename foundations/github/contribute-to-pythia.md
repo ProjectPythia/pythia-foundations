@@ -5,11 +5,9 @@
 :width: 400px
 ```
 
-## Overview:
+## Overview
 
-1. Suggest a change
-2. Make the edits
-3. Create a pull request
+Now that you have become more familiar with how to use {term}`Git` and {term}`GitHub`, you might have an idea or some material that you want to contribute to Project Pythia! The [Project Pythia Contributor's Guide](https://projectpythia.org/contributing) describes the steps required to submit a PR to any of Project Pythia's repos. Here, we will go through an example of creating and submitting a PR to the `pythia-foundations` repository, i.e., the source code for the pages you are browsing right now!
 
 ## Prerequisites
 
@@ -30,8 +28,6 @@
 :::
 
 ---
-
-Now that you have become more familiar with how to use Git and GitHub, you might have an idea or some material that you want to contribute to Project Pythia! The [Project Pythia Contributor's Guide](https://projectpythia.org/contributing) describes the steps required to submit a PR to any of Project Pythia's repos. Here, we will go through an example of submitting a PR to the `pythia-foundations` repository.
 
 ## Suggest a change
 

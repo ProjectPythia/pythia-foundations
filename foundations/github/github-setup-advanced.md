@@ -7,8 +7,7 @@
 
 ## Overview:
 
-1. Configure your GitHub account for secure logins via SSH and/or HTTPS
-1. Set up notifications on repositories you own or follow
+Before we dive into using GitHub to make changes to repositories, we need to take some steps to make sure your GitHub account is set up with appropriate security credentials. Later in this chapter we will also address notification settings so you get only your desired amount of email traffic from GitHub. 
 
 ## Prerequisites
 
