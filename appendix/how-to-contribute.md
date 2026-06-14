@@ -5,7 +5,7 @@ may be found in the [Contributing to Project Pythia](https://projectpythia.org/c
 
 As GitHub {term}`pull request`s are an important part of contributing to Pythia, this guide will cross-reference tutorials from our chapters on [Getting Started with GitHub](../foundations/getting-started-github.md).
 
-A quick and easy way to find the Pythia Foundations source repository on GitHub while you are browsing the book is to look for the GitHub Octocat logo near the top right of each page. This will link directly to our [main source repository on GitHub](https://github.com/ProjectPythia/pythia-foundations). 
+A quick and easy way to find the Pythia Foundations source repository on GitHub while you are browsing the book is to look for the GitHub Octocat logo near the top right of each page. This will link directly to our [main source repository on GitHub](https://github.com/ProjectPythia/pythia-foundations).
 
 In order to [open issues](../foundations/github/github-issues.md) or create [pull requests](../foundations/github/github-pull-request.md) to suggest changes, you must have a [free GitHub account](../foundations/github/what-is-github.md). This guide is strictly for Pythia Foundations; for general Project Pythia contribution guidelines, see the main guide for [Contributing to Project Pythia](https://projectpythia.org/contributing).
 
