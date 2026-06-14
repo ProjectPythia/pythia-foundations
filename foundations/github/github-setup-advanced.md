@@ -7,7 +7,7 @@
 
 ## Overview:
 
-Before we dive into using GitHub to make changes to repositories, we need to take some steps to make sure your GitHub account is set up with appropriate security credentials. Later in this chapter we will also address notification settings so you get only your desired amount of email traffic from GitHub. 
+Before we dive into using GitHub to make changes to repositories, we need to take some steps to make sure your GitHub account is set up with appropriate security credentials. Later in this chapter we will also address notification settings so you get only your desired amount of email traffic from GitHub.
 
 ## Prerequisites
 

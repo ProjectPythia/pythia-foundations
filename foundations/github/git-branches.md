@@ -7,7 +7,7 @@
 
 ## Overview
 
-Git **branches** are an important component of many {term}`Git` and {term}`GitHub` workflows. If you plan to use GitHub to manage your own resources, or contribute to a GitHub hosted project, it is essential to have a basic understanding of what branches are and how to use them. For example, the best practices for a simple workflow for suggesting changes to a GitHub repository are: create your own {term}`fork` of the repository, make a {term}`branch` from your fork where your changes are made, and then suggest these changes move to the upstream repository with a {term}`pull request`. 
+Git **branches** are an important component of many {term}`Git` and {term}`GitHub` workflows. If you plan to use GitHub to manage your own resources, or contribute to a GitHub hosted project, it is essential to have a basic understanding of what branches are and how to use them. For example, the best practices for a simple workflow for suggesting changes to a GitHub repository are: create your own {term}`fork` of the repository, make a {term}`branch` from your fork where your changes are made, and then suggest these changes move to the upstream repository with a {term}`pull request`.
 
 This chapter assumes you have read the prior GitHub content, are at least somewhat familiar with Git commands and the vocabulary ({term}`clone`, {term}`fork`, {term}`merge`, {term}`pull request`), and that you have already created your own fork of the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox) hosted by Project Pythia.
 
