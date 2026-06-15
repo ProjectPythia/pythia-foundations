@@ -9,7 +9,7 @@
 
 If you're new to GitHub, start here!
 
-In this chapter we will first address the question "What is GitHub?", and then take a dive through some terminology around Free and open-source software (FOSS) and Version control systems (VCS). At the end of the chapter we'll nudge you to create you free GitHub account if you haven't done so already.
+In this chapter we will first address the question "What is GitHub?" and then take a dive through some terminology around free and open-source software (FOSS) and version control systems (VCS). At the end of the chapter we'll nudge you to create a free GitHub account if you haven't done so already.
 
 ## Prerequisites
 
