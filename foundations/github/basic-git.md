@@ -7,7 +7,7 @@
 
 ## Overview
 
-Now that we've covered some basic GitHub features and configured your account appropriately, it's time to take a deeper dive in {term}`version control` and {term}`Git`, our recommended VCS. We'll discuss the need for version control, explain the relationship between Git (the VCS software) and GitHub (the web-based code-hosting and collaboration platform).
+Now that we've covered some basic GitHub features and configured your account appropriately, it's time to take a deeper dive in {term}`version control` and {term}`Git`, our recommended VCS. We'll discuss the need for version control and explain the relationship between Git (the VCS software) and GitHub (the web-based code-hosting and collaboration platform).
 
 We'll then lead you through some basic Git usage, including making your first Git commit (registering changes to source code) and viewing / comparing across the commit history of a repository.
 
