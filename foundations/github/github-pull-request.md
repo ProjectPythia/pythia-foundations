@@ -9,7 +9,7 @@
 
 A {term}`pull request`, aka a "merge request," is an event that occurs when a project contributor begins the process of merging new code changes from a feature branch with the main project repository. It's the key collaboration method by which new changes to a code repository get proposed, discussed, revised, and eventually accepted.
 
-In this chapter we'll discuss pull requests (PRs) is in more detail. We'll walk you through opening your first PR and look at some of the features you can access on GitHub. The last section on Git workflows will give a sneak peek at a subject that we cover in more detail in a later chapter.
+In this chapter we'll discuss pull requests (PRs) in more detail. We'll walk you through opening your first PR and look at some of the features you can access on GitHub. The last section on Git workflows will give a sneak peek at a subject that we cover in more detail in a later chapter.
 
 ## Prerequisites
 
