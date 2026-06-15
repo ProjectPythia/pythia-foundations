@@ -7,7 +7,7 @@
 
 ## Overview
 
-Content on GitHub is organized around **repositories**. This chapter will introduce the structure of a typical repository, and encourage you to get oriented by browsing through the source code repositories and organization pages on GitHub for some commonly used packages.
+Content on GitHub is organized around **repositories**. This chapter will introduce the structure of a typical repository and encourage you to get oriented by browsing through the source code repositories and organization pages on GitHub for some commonly used packages.
 
 ## Prerequisites
 
