@@ -47,13 +47,13 @@ discussions
 documentation
 : Software documentation is descriptive content (e.g., text, images, videos) that is either embedded in the software code or distributed alongside the corresponding software.
 
-Feature Branch Workflow
+feature branch workflow
 : A collaborative development workflow where new development takes place on dedicated branches rather than the main branch.
 
 fork
 : A copy of another project hosted on a collaborative development platform such as {term}`GitHub`.
 
-Forking Workflow
+forking workflow
 : A collaborative development workflow where new development takes place on forked repositories rather than the main project repository.
 
 free and open-source software
