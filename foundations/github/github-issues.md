@@ -5,11 +5,9 @@
 :width: 400px
 ```
 
-## Overview:
+## Overview
 
-1. What are GitHub Issues and Discussions?
-1. Examine an existing issue
-1. Examine an existing discussion
+In this chapter we will introduce some of the communication (or social networking) features of a GitHub repository: **issues** and **discussions**. We will illustrate these with real examples from Project Pythia's collaborative work.
 
 ## Prerequisites
 

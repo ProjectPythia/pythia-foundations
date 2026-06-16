@@ -5,13 +5,11 @@
 :width: 400px
 ```
 
-A workflow is a series of activities or tasks that must be completed sequentially or parallel to achieve the desired outcome. Here we outline two different Git workflows that take you through the steps leading up to opening a pull request.
+## Overview
 
-## Overview:
+A workflow is a series of activities or tasks that must be completed sequentially or parallel to achieve the desired outcome. Here we explain and walk you through two different {term}`Git` workflows that take you through the steps leading up to opening a {term}`pull request`: the {term}`feature branch workflow` and the {term}`forking workflow`.
 
-1. Overview of Git workflows
-1. Feature branch workflow
-1. Forking workflow
+Understanding these two workflows (and how they differ from each other) is very helpful for contributing to collaborative open source projects.
 
 ## Prerequisites
 

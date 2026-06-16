@@ -5,9 +5,9 @@
 :width: 400px
 ```
 
-Pull requests (PRs) are typically reviewed by collaborators before being merged in to the main project branch. Many people feel overwhelmed, or feel as though their skills are lacking, when asked to perform their first PR review. If you find yourself in this or a similar situation, the examples in this tutorial can be quite helpful. With the help of this tutorial, anyone can quickly learn the basics of reviewing PRs, which can boost collaboration and productivity in any project hosted on GitHub. This tutorial also contains useful tips on how to effectively review a PR in many different situations.
+## Overview
 
-## Overview:
+Pull requests (PRs) are typically reviewed by collaborators before being merged in to the main project branch. Many people feel overwhelmed, or feel as though their skills are lacking, when asked to perform their first PR review. If you find yourself in this or a similar situation, the examples in this tutorial can be quite helpful. With the help of this tutorial, anyone can quickly learn the basics of reviewing PRs, which can boost collaboration and productivity in any project hosted on GitHub. This tutorial also contains useful tips on how to effectively review a PR in many different situations.
 
 This tutorial covers the following topics:
 

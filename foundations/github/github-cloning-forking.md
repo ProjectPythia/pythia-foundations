@@ -7,9 +7,7 @@
 
 ## Overview:
 
-1. Cloning and forking a Git repository
-1. Cloning a repository
-1. Forking a repository
+In this chapter we'll start to introduce how GitHub is used to collaborate on source code. We'll define **cloning** and **forking**, which are two different ways to make independent copies of a source repository. We'll try to be careful to distinguish between the two and explain the circumstances in which each is useful. This will be very helpful for understanding the multi-user collaboration workflows that we describe later in the section on [Git Workflows](git-workflows.md).
 
 ## Prerequisites
 
