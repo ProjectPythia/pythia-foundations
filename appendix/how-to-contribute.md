@@ -61,7 +61,7 @@ To add, change, or update the author list, edit the frontmatter of the [markdown
 
 The file `CITATION.cff` that lives [at the root of the repository](https://github.com/ProjectPythia/pythia-foundations/blob/main/CITATION.cff) is interpreted by GitHub, Zenodo, and other services. It should be regenerated any time there is a change in author metadata.
 
-```{attention}
+```{caution}
 To avoid multiple sources of truth on authorship, do not edit `CITATION.cff` directly!
 
 Instead, use MyST to regenerate this file automatically.
