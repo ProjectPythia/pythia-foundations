@@ -51,6 +51,28 @@ myst start --execute
 
 Finally, you can view the book by opening the localhost link that should be generated in your terminal.
 
+### Updating the list of authors
+
+The full author list for Pythia Foundations is displayed on the [How to Cite page](../preamble/how-to-cite.md).
+
+To add, change, or update the author list, edit the frontmatter of the [markdown source file for that page](https://github.com/ProjectPythia/pythia-foundations/blob/main/preamble/how-to-cite.md). We typically identify authors using an `id` tag that matches the author's GitHub username. The source of truth for these author `id` keys is maintained upstream in a [project-wide configuration file](https://github.com/ProjectPythia/pythia-config/blob/main/pythia.yml). See [the MyST docs on authors](https://mystmd.org/guide/frontmatter#frontmatter-authors) for more guidance on author metadata.
+
+#### The `CITATION.cff` file
+
+The file `CITATION.cff` that lives [at the root of the repository](https://github.com/ProjectPythia/pythia-foundations/blob/main/CITATION.cff) is interpreted by GitHub, Zenodo, and other services. It should be regenerated any time there is a change in author metadata.
+
+```{caution}
+To avoid multiple sources of truth on authorship, do not edit `CITATION.cff` directly!
+
+Instead, use MyST to regenerate this file automatically.
+```
+
+To regenerate `CITATION.cff`, simply run this command from the root of the `pythia-foundations` repository:
+```bash
+myst build preamble/how-to-cite.md --cff
+```
+The updated `CITATION.cff` can then be committed to a branch and a pull request can be opened as usual.
+
 ### Keeping your dev environment up to date
 
 It's good practice to update the packages in your `pythia-book-dev` conda environment frequently to their latest versions, especially if it's been a while since you used it. If the `myst start --execute` command above generates error messages, that is a good indication that your conda environment may be out of date.
