@@ -44,8 +44,10 @@ authors:
     given-names: Robert R.
     affiliation: University at Albany (SUNY)
     orcid: 0000-0001-5483-4965
-  - family-names: undefined
-    given-names: ''
+  - family-names: Freeman
+    given-names: Brittany
+    affiliation: University at Albany (SUNY)
+    orcid: 0009-0006-2806-1149
   - family-names: Paul
     given-names: Kevin
     affiliation: NVIDIA Corporation
