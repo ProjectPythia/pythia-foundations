@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
+    uses: brian-rose/cookbook-actions/.github/workflows/build-book.yaml@new-binder
     with:
         base_url: ''
 
