@@ -87,7 +87,6 @@ git remote -v
 ```
 
 ![Git Remote](../../images/2-gitremote.png)
-../../images/1-gitstatus.png
 
 We are set up to pull (denoted as 'fetch' in the output above) and push from the same remote repository.
 
