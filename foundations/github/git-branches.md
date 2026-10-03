@@ -52,7 +52,11 @@ One rule of thumb is for each development feature to have its own development br
 Having forked (NOT just cloned) the [GitHub Sandbox Repository](https://github.com/ProjectPythia/github-sandbox) is essential for following the steps in this book chapter. See the chapter on [GitHub Cloning and Forking](github-cloning-forking.md).
 ```
 
-![branching](../../images/branching.gif)
+```{image} ../../images/branching.gif
+:width: 100%
+:align: center
+```
+
 The above flowchart demonstrates forking a remote repository, labeled "Upstream", creating a local copy, labeled "Clone", creating a new branch, "branchA", and adding two commits, C3 and C4, to "branchA" of the local clone of the forked repository. Different commits can be added to different branches in any order without depending on or knowing about each other.
 
 From your terminal, navigate to your local clone of your `Github-Sandbox` Repository fork:
@@ -134,7 +138,10 @@ Notice that `git status` doesn't say anything about being up-to-date, as before.
 
 While your clone lives locally on your laptop, a remote branch exists on your GitHub server. You have to tell GitHub about your local branch before these changes are reflected remotely in your upstream fork.
 
-![pushing](../../images/pushing.gif)
+```{image} ../../images/pushing.gif
+:width: 100%
+:align: center
+```
 The above flowchart demonstrates pushing two new local commits (C3 and C4) to the corresponding remote branch. Before the push, the changes from these commits exist ONLY locally and are not represented on your upstream GitHub repository. After the push, everything is up-to-date.
 
 Before we push this branch upstream, let's make some sample changes (like C3 or C4) by creating a new empty file, with the ending ".py".
@@ -214,13 +221,19 @@ If there were competing edits in the 2 branches that Git cannot automatically re
 
 A **pull request** is essentially a merge that happens on an upstream remote. We will continue this demonstration and cover the specifics of merging via a {term}`pull request` more thoroughly in the next section.
 
-![PR](../../images/pullrequest.gif)
+```{image} ../../images/pullrequest.gif
+:width: 100%
+:align: center
+```
 The above flowchart demonstrates a simple pull request where the upstream main repository has accepted the changes from the feature branch of your fork. The latest commit to the Upstream Main repository is now C4. Your feature branch can now be safely deleted.
 
 ## Deleting branches
 
 After the feature you worked on has been completed and merged, you may want to delete your branch.
-![deletebranch](../../images/deletingbranch.gif)
+```{image} ../../images/deletingbranch.gif
+:width: 100%
+:align: center
+```
 
 To do this locally, you must first switch back to `main` or any non-target branch. Then you can enter
 
@@ -250,7 +263,10 @@ git push origin --delete jukent/branchA
 
 Previously, we showed you how to merge branches together, combining the changes from two different branches into one. Afterwards you deleted your feature branch `branchA`. Your local clone and fork of your `main` branch have now both need to pull from the upstream repository.
 
-![pull](../../images/pulling.gif)
+```{image} ../../images/pulling.gif
+:width: 100%
+:align: center
+```
 The above flowchart demonstrates pulling in the upstream changes from upstream main after a pull request has been merged, first into your fork and then into your clone. Before continuing to work, with new commits on the feature branch, it is best to pull in the upstream changes.
 
 In this example, all of the changes to the branches were local and made by a single person, you. In a collaborative environment, other contributors may be making changes to their own feature branches (or main branch), which will ultimately be pushed up to the remote repository. Either way, your branches will become stale and need to be refreshed. The more time that passes by, the more likely this is to happen, particularly for an active GitHub repository. Here we show you how to sync your branches with the upstream branches.
@@ -276,7 +292,10 @@ This same concept applies to work in a team setting. Multiple authors will have 
 ## Complete workflow
 
 All in all your Git Branching workflow should resemble this flow:
-![gitworkflow](../../images/gitworkflow.gif)
+```{image} ../../images/gitworkflow.gif
+:width: 100%
+:align: center
+```
 
 1. Fork the upstream repository
 1. Create a local clone of your upstream fork
