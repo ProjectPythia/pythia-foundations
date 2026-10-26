@@ -105,6 +105,16 @@ Subsets of the book contents have been modified and repackaged for various works
 # Computational infrastructure
 The book is deployed as an easy-to-navigate website using JupyterBook [@jupyterbook_2020] and MyST-MD [@mystmd_2025], including “one-click” Binder links to interactive versions of every chapter. It features complete reproducibility: source materials are stored in a GitHub repository as unexecuted Jupyter notebooks, and all content is recreated in a bespoke computational environment during nightly builds and whenever the book pages are re-rendered. A full preview of the executed and rendered book is created whenever a change is proposed via a Pull Request. Development of the novel notebook publishing infrastructure enabling this full reproducibility was driven by the Pythia team’s need to collaborate on a large computational document. The build-and-preview automation that our team developed while authoring Foundations is now in wide use by the community of Cookbook creators. The automation notably includes the ability to route notebook execution through the same Binder environment offered to users, guaranteeing that the output of the automated builds are identical to those that users see when running code examples interactively.
 
+# Project Pythia's story
+
+Project Pythia was launched in 2020 with funding from NSF EarthCube. It brought together scientists, software engineers, and educators from NSF NCAR, NSF Unidata, and the University at Albany with a mission to help geoscientists do their science more effectively, centered on the Pangeo ecosystem of tools. The Pythia team recognized a need for a critical mass of relevant, high-quality training material that is up to date and "just works" for users who may have been frustrated with the widespread obsolescence of uncurated notebooks found through online searches. 
+
+- building a self-sustaining community of user-contributors
+- investing in training around open-source practices
+- hackathons
+
+Pythia Foundations was first released in 2022, continuously updated.
+
 # Future plans
 Pythia Foundations is a living document and is receiving continuous updates [@cockett_continuous_2024] and improvements, both from the core author team and the broader community of user-contributors. On the content side, Project Pythia is simultaneously fostering a growing collection of more advanced and domain-specific tutorials in our crowd-sourced community Cookbook gallery, with explicit links to prerequisites from Foundations. We anticipate periodic reviews of the Cookbook collection to identify cross-cutting content that should be abstracted back to Foundations, e.g., common data access patterns or analysis workflows.
 
