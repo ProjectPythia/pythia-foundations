@@ -107,7 +107,7 @@ The book is deployed as an easy-to-navigate website using JupyterBook [@jupyterb
 
 # Project Pythia's story
 
-Project Pythia was launched in 2020 with funding from NSF EarthCube. It brought together scientists, software engineers, and educators from NSF NCAR, NSF Unidata, and the University at Albany with a mission to help geoscientists do their science more effectively, centered on the Pangeo ecosystem of tools. The Pythia team recognized a need for a critical mass of relevant, high-quality training material that is up to date and "just works" for users who may have been frustrated with the widespread obsolescence of uncurated notebooks found through online searches. 
+Project Pythia was launched in 2020 with funding from NSF EarthCube. It brought together scientists, software engineers, and educators from NSF NCAR, NSF Unidata, and the University at Albany with a mission to help geoscientists do their science more effectively, centered on the Pangeo ecosystem of tools. The Pythia team recognized a need for a critical mass of relevant, high-quality training material that is up to date and "just works" for users who may have been frustrated with the widespread obsolescence of uncurated notebooks found through online searches.
 
 - building a self-sustaining community of user-contributors
 - investing in training around open-source practices
