@@ -20,7 +20,7 @@ repos:
       - id: blackdoc
 
   - repo: https://github.com/PyCQA/flake8
-    rev: 7.4.1
+    rev: 7.5.0
     hooks:
       - id: flake8
 
@@ -29,12 +29,12 @@ repos:
     hooks:
       - id: seed-isort-config
   - repo: https://github.com/PyCQA/isort
-    rev: 10.0.0b1
+    rev: 10.0.0b2
     hooks:
       - id: isort
 
   - repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.9.1
+    rev: 1.10.0
     hooks:
       - id: nbqa-black
         additional_dependencies: [black]
