@@ -83,4 +83,14 @@ To update all packages in the currently activated environment to their latest ve
 conda update --all
 ```
 
+## Reproducing exact execution environments
+
+Sometimes, especially for debugging purposes, it can be helpful to recreate the exact set of packages used to generate the published book. We distribute a [conda-lock file](https://conda.github.io/conda-lock/) with each versioned release for this purpose _(as of late 2026)_.
+
+If you have `conda-lock` installed in your development environment, you can recreate the most recently released environment by running this command from the root of the `pythia-foundations` repository:
+```bash
+conda-lock install -n pythia-book-dev conda-lock.yml
+```
+which should work on most common platforms.
+
 [Contributing to Project Pythia]: https://projectpythia.org/contributing
